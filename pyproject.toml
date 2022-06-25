@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "nfcli"
+version = "0.1.0"
+description = "Nebulous: Fleet CLI. View fleet files and convert them into images."
+authors = ["Jaghaimo <1764586+jaghaimo@users.noreply.github.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Pillow = "^9.1.1"
+xmltodict = "^0.13.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
