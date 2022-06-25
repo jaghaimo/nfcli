@@ -1,4 +1,4 @@
-from typing import List, OrderedDict
+from typing import List, Optional, OrderedDict
 
 import xmltodict
 
@@ -9,6 +9,16 @@ def load_path(path: str) -> str:
     with open(path, "r") as f:
         return f.read()
 
+def clean_string(name: str, recursive: Optional[bool] = False) -> str:
+    prefixes = ["Stock/"]
+    for prefix in prefixes:
+        if name.startswith(prefix):
+            name = name[len(prefix):]
+            if recursive:
+                clean_string(name, recursive)
+
+    return name
+
 def parse_content(content_data: OrderedDict) -> List[str]:
     content = []
     all_loads = []
@@ -17,7 +27,7 @@ def parse_content(content_data: OrderedDict) -> List[str]:
             all_loads += content_data[key]["MagSaveData"]
 
     for load in all_loads:
-        name = load["MunitionKey"]
+        name = clean_string(load["MunitionKey"])
         quantity = load["Quantity"]
         content.append(f"{name} x {quantity}")
 
@@ -25,13 +35,14 @@ def parse_content(content_data: OrderedDict) -> List[str]:
 
 def parse_socket(socket_data: OrderedDict) -> Socket:
     content = []
+    name = clean_string(socket_data["ComponentName"])
     if "ComponentData" in socket_data:
         content = parse_content(socket_data["ComponentData"])
 
-    return Socket(socket_data["ComponentName"], content)
+    return Socket(name, content)
 
 def parse_ship(ship_data: OrderedDict) -> Ship:
-    ship = Ship(ship_data["Name"], ship_data["Cost"], ship_data["HullType"])
+    ship = Ship(ship_data["Name"], ship_data["Cost"], clean_string(ship_data["HullType"]))
     for socket_data in ship_data["SocketMap"]["HullSocket"]:
         socket = parse_socket(socket_data)
         ship.add_socket(socket)
