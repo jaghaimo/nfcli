@@ -7,9 +7,6 @@ def print_contents(contents: List[str]):
     for content in contents:
         print(f"   {content}")
 
-    if contents:
-        print("")
-
 def print_sockets(sockets: List[Socket]):
     for socket in sockets:
         symbol = "+" if socket.contents else "-"
@@ -21,7 +18,6 @@ def print_ship(ship: Ship):
     print(f"Ship Hull: {ship.hull}")
     print(f"Ship Cost: {ship.cost}")
     if ship.sockets:
-        print("")
         print_sockets(ship.sockets)
     print("")
 
