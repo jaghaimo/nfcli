@@ -38,7 +38,6 @@ def main() -> int:
     fleet = parse_input(args.input_fleet)
     print_fleet(fleet)
     for idx, ship in enumerate(fleet.ships):
-        print_ship(ship)
         write_ship(ship, args.output_prefix + str(idx))
 
 
