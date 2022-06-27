@@ -48,7 +48,7 @@ def parse_ship(ship_data: OrderedDict) -> Ship:
 
 def parse_input(input_fleet: str) -> Fleet:
     xml_data = load_path(input_fleet)
-    xmld = xmltodict.parse(xml_data)
+    xmld = xmltodict.parse(xml_data, force_list="MagSaveData")
     fleet_data = xmld.get("Fleet")
     fleet = Fleet(fleet_data["Name"], fleet_data["TotalPoints"], fleet_data["FactionKey"])
     for ship_data in fleet_data["Ships"]["Ship"]:

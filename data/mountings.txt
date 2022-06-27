@@ -19,8 +19,8 @@ MLS-3 Launcher
 VLS1-23 Launcher
 VLS2-16 Launcher
 # Weapons - Point Defense
-Mk20 Defender PDT
-Mk25 Rebound PDT
+Mk20 'Defender' PDT
+Mk25 'Rebound' PDT
 Mk90 'Aurora' PDT
 # Weapons - Projectile
 Mk61 Cannon
