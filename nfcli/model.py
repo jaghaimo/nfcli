@@ -1,11 +1,15 @@
 from __future__ import annotations
 
-from copy import deepcopy
-from typing import List, MutableSequence
+from typing import List
 
+
+class Content():
+    def __init__(self, name: str, quantity: int) -> None:
+        self.name = name
+        self.quantity = quantity
 
 class Socket():
-    def __init__(self, name: str, contents: List[str]) -> None:
+    def __init__(self, name: str, contents: List[Content]) -> None:
         self.name = name
         self.contents = contents
 

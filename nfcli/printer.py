@@ -1,30 +1,33 @@
 from typing import List
 
+from rich.columns import Columns
+from rich.console import Console
+from rich.padding import Padding
+from rich.tree import Tree
+
 from nfcli.model import Fleet, Ship, Socket
 
 
-def print_contents(contents: List[str]):
-    for content in contents:
-        print(f"   {content}")
+def add_components(tree: Tree, socket: Socket):
+    for content in socket.contents:
+        tree.add(f"{content.name} x{content.quantity}")
 
-def print_sockets(sockets: List[Socket]):
+
+def add_sockets(tree: Tree, sockets: List[Socket]):
     for socket in sockets:
-        symbol = "+" if socket.contents else "-"
-        print(f" {symbol} {socket.name}")
-        print_contents(socket.contents)
+        subtree = tree.add(socket.name)
+        add_components(subtree, socket)
 
-def print_ship(ship: Ship):
-    print("")
-    print(f"Ship Name: {ship.name}")
-    print(f"Ship Hull: {ship.hull}")
-    print(f"Ship Cost: {ship.cost}")
-    if ship.sockets:
-        print_sockets(ship.sockets)
+def get_ship(ship: Ship):
+    tree = Tree(f"[yellow]{ship.name}[/yellow] [white]({ship.cost} points)[/white]")
+    add_sockets(tree, ship.sockets)
+    return tree
 
 def print_fleet(fleet: Fleet):
-    print(f"Fleet Name: {fleet.name}")
-    print(f"Fleet Faction: {fleet.faction}")
-    print(f"Fleet Points: {fleet.points}")
-    for ship in fleet.ships:
-        print_ship(ship)
+    console = Console()
+    console.print()
+    console.print(f"Fleet Name: [cyan]{fleet.name}[/cyan]")
+    console.print(f"Total points: [cyan]{fleet.points}[/cyan]")
+    ships = [Padding(get_ship(ship), (1,2)) for ship in fleet.ships]
+    console.print(Columns(ships))
 

@@ -4,23 +4,19 @@ from pathlib import Path
 from typing import Dict
 
 from nfcli.parser import parse_input
-from nfcli.printer import print_fleet, print_ship
-from nfcli.writer import write_ship
+from nfcli.printer import print_fleet
+from nfcli.writer import write_fleet
 
 DESC = """Command line interface for converting Nebulous: Fleet Command fleet files into Record Sheet images."""
 
 def get_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=DESC)
     parser.add_argument("-d", "--debug", action="store_true", help="enable debug mode")
-    parser.add_argument(
-        "-i", "--input-fleet", type=str, required=True, help="fleet file to convert"
-    )
-    parser.add_argument(
-        "-o", "--output-prefix", type=str, default="", help="output file prefix"
-    )
-    parser.add_argument(
-        "-f", "--format", type=str, default="png", help="image format"
-    )
+    parser.add_argument("-f", "--format", type=str, default="png", help="image format")
+    parser.add_argument("-i", "--input-fleet", type=str, required=True, help="fleet file to convert") 
+    parser.add_argument("-o", "--output-prefix", type=str, default="", help="output file prefix")
+    parser.add_argument("-p", "--print", action="store_true", help="print output to console")
+    parser.add_argument("-w", "--write", action="store_true", help="write output to a file")
     return parser
 
 def parse_args() -> Dict:
@@ -36,9 +32,10 @@ def parse_args() -> Dict:
 def main() -> int:
     args = parse_args()
     fleet = parse_input(args.input_fleet)
-    print_fleet(fleet)
-    for idx, ship in enumerate(fleet.ships):
-        write_ship(ship, args.output_prefix + str(idx))
+    if args.print:
+        print_fleet(fleet)
+    if args.write:
+        write_fleet(fleet, args.output_prefix)
 
 
 if __name__ == "__main__":

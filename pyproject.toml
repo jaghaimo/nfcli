@@ -8,6 +8,7 @@ authors = ["Jaghaimo <1764586+jaghaimo@users.noreply.github.com>"]
 python = "^3.8"
 Pillow = "^9.1.1"
 xmltodict = "^0.13.0"
+rich = "^12.4.4"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

@@ -2,7 +2,7 @@ from typing import List, Optional, OrderedDict
 
 import xmltodict
 
-from nfcli.model import Fleet, Ship, Socket
+from nfcli.model import Content, Fleet, Ship, Socket
 
 
 def load_path(path: str) -> str:
@@ -29,7 +29,7 @@ def parse_content(content_data: OrderedDict) -> List[str]:
     for load in all_loads:
         name = clean_string(load["MunitionKey"])
         quantity = load["Quantity"]
-        content.append(f"{name} x {quantity}")
+        content.append(Content(name, quantity))
 
     return content
 
