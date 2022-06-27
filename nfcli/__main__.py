@@ -17,7 +17,7 @@ def get_parser() -> argparse.ArgumentParser:
     parser.add_argument("-i", "--input-fleet", type=str, required=True, help="fleet file to convert") 
     parser.add_argument("-o", "--output-prefix", type=str, default="", help="output file prefix")
     parser.add_argument("-p", "--print", action="store_true", help="print output to console")
-    parser.add_argument("-s", "--style", type=str, default="default", help="printer style: column")
+    parser.add_argument("-s", "--style", type=str, default="panel", help="printer style: column, panel (default)")
     parser.add_argument("-w", "--write", action="store_true", help="write output to a file")
     return parser
 
@@ -36,7 +36,7 @@ def main() -> int:
     init_database()
     fleet = parse_input(args.input_fleet)
     if args.print:
-        printer = printer_factory("default")
+        printer = printer_factory(args.style)
         printer.print(fleet)
     if args.write:
         write_fleet(fleet, args.output_prefix)
