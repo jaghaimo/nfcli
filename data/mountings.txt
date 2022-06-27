@@ -1,0 +1,35 @@
+# Communication
+CR10 Antenna
+CR70 Antenna
+# EWar
+E15 'Masquerade' Signature Booster
+E55 'Spotlight' Illuminator
+E57 'Floodlight' Illuminator
+E70 'Interruption' Jammer
+E71 'Hangup' Jammer
+E90 'Blanket' Jammer
+# Sensors
+ES22 'Pinard' Electronic Support Module
+RF101 'Bullseye' Radar
+# Weapons - Energy
+Mk610 Beam Turret
+# Weapons - Missile
+MLS-2 Launcher
+MLS-3 Launcher
+VLS1-23 Launcher
+VLS2-16 Launcher
+# Weapons - Point Defense
+Mk20 Defender PDT
+Mk25 Rebound PDT
+Mk90 'Aurora' PDT
+# Weapons - Projectile
+Mk61 Cannon
+Mk62 Cannon
+Mk64 Cannon
+Mk66 Cannon
+Mk68 Cannon
+Mk81 Railgun
+Mk82 Railgun
+# Weapons - Spinal
+Mk550 Mass Driver
+Mk600 Beam Cannon

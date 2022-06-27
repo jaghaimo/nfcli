@@ -1,0 +1,39 @@
+# Communications
+Supplementary Radio Amplifiers
+# Damage Control
+Launcher Deluge System
+Magazine Sprinklers
+# Engineering
+Redundant Reactor Failsafes
+Reinforced Thruster Nozzles
+Small Reactor Booster
+# EWar
+Signature Scrambler
+# Powerplant
+FR3300 Micro Reactor
+FR4800 Reactor
+# Propulusion
+FM200 Drive
+FM200R Drive
+FM230 'Whiplash' Drive
+FM240 'Dragonfly' Drive
+FM280 'Raider' Drive
+FM30X 'Prowler' Drive
+FM500 Drive
+FM500R Drive
+FM530 'Whiplash' Drive
+FM540 'Dragonfly' Drive
+FM580 'Raider' Drive
+# Sensors
+Adaptive Radar Receiver
+RM50 'Parallax' Radar
+RS35 'Frontline' Radar
+RS41 'Spyglass' Radar
+Track Correlator
+# Weapon Support
+Actively Cooled Amplifiers
+Ammunition Elevators
+Energy Regulator
+Focused Particle Accelerator
+Mount Gyros
+Small Energy Regulator

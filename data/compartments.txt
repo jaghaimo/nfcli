@@ -1,0 +1,25 @@
+# Command
+Auxiliary Steering
+Basic CIC
+Citadel CIC
+Reinforced CIC
+# Crew
+Battle Dressing Station
+Berthing
+# Damage Control
+Damage Control Central
+Large DC Locker
+Rapid DC Locker
+Reinforced DC Locker
+Small DC Locker
+Small Workshop
+# Engineering
+Plant Control Center
+# Intelligence
+Analysis Annex
+Intelligence Center
+# Storage
+Bulk Magazine
+Reinforced Magazine
+# Weapon Support
+Gun Plotting Center

@@ -2,12 +2,9 @@ from typing import List, Optional, OrderedDict
 
 import xmltodict
 
+from nfcli import load_path
 from nfcli.model import Content, Fleet, Ship, Socket
 
-
-def load_path(path: str) -> str:
-    with open(path, "r") as f:
-        return f.read()
 
 def clean_string(name: str, recursive: Optional[bool] = False) -> str:
     prefixes = ["Stock/"]
@@ -19,7 +16,7 @@ def clean_string(name: str, recursive: Optional[bool] = False) -> str:
 
     return name
 
-def parse_content(content_data: OrderedDict) -> List[str]:
+def parse_content(content_data: OrderedDict) -> List[Content]:
     content = []
     all_loads = []
     for key in ["MissileLoad", "Load"]:

@@ -2,6 +2,7 @@ import argparse
 import logging
 from pathlib import Path
 from typing import Dict
+from nfcli.database import init_database
 
 from nfcli.parser import parse_input
 from nfcli.printer import print_fleet
@@ -31,6 +32,7 @@ def parse_args() -> Dict:
 
 def main() -> int:
     args = parse_args()
+    init_database()
     fleet = parse_input(args.input_fleet)
     if args.print:
         print_fleet(fleet)
