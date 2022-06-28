@@ -38,10 +38,13 @@ class ColumnPrinter(FleetPrinter):
         self.add_sockets(tree, ship.invalid, "white")
         return Padding(tree, (0, 1))
 
+    def get_title(self, fleet: Fleet) -> Text:
+        ship_or_ships = "ships" if len(fleet.ships) > 1 else "ship"
+        return Text(f"Fleet '{fleet.name}' is composed of {len(fleet.ships)} {ship_or_ships} and costs {fleet.points} points\n", style="i")
+
     def print(self, fleet: Fleet):
         self.console.print()
-        ship_or_ships = "ships" if len(fleet.ships) > 1 else "ship"
-        title = Text(f"Fleet '{fleet.name}' is composed of {len(fleet.ships)} {ship_or_ships} and costs {fleet.points} points\n", style="i")
+        title = self.get_title(fleet)
         ships = [self.get_ship(ship) for ship in fleet.ships]
         self.console.print(Columns(ships, title=title, equal=True))
 
@@ -58,17 +61,20 @@ class StackPrinter(FleetPrinter):
     def get_ship(self, ship: Ship, width: int):
         props_colors = [("mountings", "red"), ("compartments", "green"), ("modules", "blue")]
         sockets = [self.get_sockets(ship, prop, color) for (prop, color) in props_colors]
-        return Columns(sockets, title=f"'{ship.name}', a {ship.cost} points {ship.hull}", width=width)
+        return Columns(sockets, title=f"'{ship.name}', a {ship.cost} points {ship.hull}", width=width, padding=(0, 0))
 
     def print(self, fleet: Fleet):
         self.console.print()
+        self.console.print(Panel(f"Fleet name: [cyan]{fleet.name}[/cyan]\nTotal cost: [cyan]{fleet.points} points[/cyan]\nNumber of ships: [cyan]{len(fleet.ships)}[/cyan]"))
         for ship in fleet.ships:
             self.console.print(self.get_ship(ship, self.column_width))
+
+
 
 def printer_factory(printer: str, num_of_ships: int):
     console = Console()
     if printer == "auto":
-        style = "stack" if console.width < num_of_ships * 40 - 1 else "column"
+        style = "stack" if console.width < num_of_ships * 33 else "column"
         return printer_factory(style, num_of_ships)
 
     if printer == "column":
