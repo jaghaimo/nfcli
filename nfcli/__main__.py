@@ -3,8 +3,9 @@ import logging
 from pathlib import Path
 from typing import Dict
 
+from nfcli import load_path
 from nfcli.database import init_database
-from nfcli.parser import parse_input
+from nfcli.parser import parse_fleet
 from nfcli.printer import printer_factory
 from nfcli.writer import write_fleet
 
@@ -53,7 +54,8 @@ def parse_args() -> Dict:
 def main() -> int:
     args = parse_args()
     init_database()
-    fleet = parse_input(args.input_fleet)
+    xml_data = load_path(args.input_fleet)
+    fleet = parse_fleet(xml_data)
     if args.print:
         printer = printer_factory(args.style, len(fleet.ships))
         printer.print(fleet)

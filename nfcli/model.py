@@ -52,7 +52,7 @@ class Fleet:
         self.name = name
         self.points = points
         self.faction = faction
-        self.ships = []
+        self.ships = []  # type: List[Ship]
 
     def add_ship(self, ship: Ship) -> None:
         self.ships.append(ship)

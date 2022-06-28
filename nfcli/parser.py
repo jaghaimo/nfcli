@@ -3,7 +3,6 @@ from typing import List, Optional, OrderedDict
 
 import xmltodict
 
-from nfcli import load_path
 from nfcli.model import Content, Fleet, Ship, Socket
 
 
@@ -53,14 +52,14 @@ def parse_ship(ship_data: OrderedDict) -> Ship:
     return ship
 
 
-def parse_input(input_fleet: str) -> Fleet:
-    xml_data = load_path(input_fleet)
+def parse_fleet(xml_data: str) -> Fleet:
     xmld = xmltodict.parse(xml_data, force_list="MagSaveData")
     fleet_data = xmld.get("Fleet")
     fleet = Fleet(
         fleet_data["Name"], fleet_data["TotalPoints"], fleet_data["FactionKey"]
     )
     for ship_data in fleet_data["Ships"]["Ship"]:
+        logging.info("Parsing ship data")
         ship = parse_ship(ship_data)
         fleet.add_ship(ship)
 
