@@ -29,9 +29,12 @@ class FleetPrinter(ABC):
             subtree = tree.add(f"{socket.name} ", style=color)
             self.add_components(subtree, socket)
 
+
 class ColumnPrinter(FleetPrinter):
     def get_ship(self, ship: Ship) -> RenderableType:
-        tree = Tree(Text(f" {ship.name} \n {ship.hull} \n {ship.cost} points ", style="r"))
+        tree = Tree(
+            Text(f" {ship.name} \n {ship.hull} \n {ship.cost} points ", style="r")
+        )
         self.add_sockets(tree, ship.mountings, "red")
         self.add_sockets(tree, ship.compartments, "green")
         self.add_sockets(tree, ship.modules, "blue")
@@ -40,13 +43,17 @@ class ColumnPrinter(FleetPrinter):
 
     def get_title(self, fleet: Fleet) -> Text:
         ship_or_ships = "ships" if len(fleet.ships) > 1 else "ship"
-        return Text(f"Fleet '{fleet.name}' is composed of {len(fleet.ships)} {ship_or_ships} and costs {fleet.points} points\n", style="i")
+        return Text(
+            f"Fleet '{fleet.name}' is composed of {len(fleet.ships)} {ship_or_ships} and costs {fleet.points} points\n",
+            style="i",
+        )
 
     def print(self, fleet: Fleet):
         self.console.print()
         title = self.get_title(fleet)
         ships = [self.get_ship(ship) for ship in fleet.ships]
         self.console.print(Columns(ships, title=title, equal=True))
+
 
 class StackPrinter(FleetPrinter):
     def __init__(self, column_width: int, console: Console) -> None:
@@ -59,16 +66,30 @@ class StackPrinter(FleetPrinter):
         return Padding(tree, (1, 1))
 
     def get_ship(self, ship: Ship, width: int):
-        props_colors = [("mountings", "red"), ("compartments", "green"), ("modules", "blue")]
-        sockets = [self.get_sockets(ship, prop, color) for (prop, color) in props_colors]
-        return Columns(sockets, title=f"'{ship.name}', a {ship.cost} points {ship.hull}", width=width, padding=(0, 0))
+        props_colors = [
+            ("mountings", "red"),
+            ("compartments", "green"),
+            ("modules", "blue"),
+        ]
+        sockets = [
+            self.get_sockets(ship, prop, color) for (prop, color) in props_colors
+        ]
+        return Columns(
+            sockets,
+            title=f"'{ship.name}', a {ship.cost} points {ship.hull}",
+            width=width,
+            padding=(0, 0),
+        )
 
     def print(self, fleet: Fleet):
         self.console.print()
-        self.console.print(Panel(f"Fleet name: [cyan]{fleet.name}[/cyan]\nTotal cost: [cyan]{fleet.points} points[/cyan]\nNumber of ships: [cyan]{len(fleet.ships)}[/cyan]"))
+        self.console.print(
+            Panel(
+                f"Fleet name: [cyan]{fleet.name}[/cyan]\nTotal cost: [cyan]{fleet.points} points[/cyan]\nNumber of ships: [cyan]{len(fleet.ships)}[/cyan]"
+            )
+        )
         for ship in fleet.ships:
             self.console.print(self.get_ship(ship, self.column_width))
-
 
 
 def printer_factory(printer: str, num_of_ships: int):
