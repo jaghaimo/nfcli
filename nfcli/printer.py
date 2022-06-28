@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 from typing import List
 
 from rich.columns import Columns
-from rich.console import Console, Group, RenderableType
+from rich.console import Console, RenderableType
 from rich.padding import Padding
 from rich.panel import Panel
 from rich.text import Text
@@ -44,7 +44,7 @@ class ColumnPrinter(FleetPrinter):
     def get_title(self, fleet: Fleet) -> Text:
         ship_or_ships = "ships" if len(fleet.ships) > 1 else "ship"
         return Text(
-            f"Fleet '{fleet.name}' is composed of {len(fleet.ships)} {ship_or_ships} and costs {fleet.points} points\n",
+            f"Fleet '{fleet.name}' is composed of {len(fleet.ships)} {ship_or_ships} and costs {fleet.points} points",
             style="i",
         )
 
@@ -63,7 +63,7 @@ class StackPrinter(FleetPrinter):
     def get_sockets(self, ship: Ship, prop: str, color: str):
         tree = Tree(Text(f" {prop.title()} ", style="r"))
         self.add_sockets(tree, getattr(ship, prop), color)
-        return Padding(tree, (1, 1))
+        return Padding(tree, (0, 1, 1, 1))
 
     def get_ship(self, ship: Ship, width: int):
         props_colors = [
@@ -96,6 +96,7 @@ def printer_factory(printer: str, num_of_ships: int):
     console = Console()
     if printer == "auto":
         style = "stack" if console.width < num_of_ships * 33 else "column"
+        style = style if num_of_ships > 3 else "stack"
         return printer_factory(style, num_of_ships)
 
     if printer == "column":
