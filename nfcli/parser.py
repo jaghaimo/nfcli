@@ -1,3 +1,4 @@
+import logging
 from typing import List, Optional, OrderedDict
 
 import xmltodict
@@ -20,7 +21,7 @@ def parse_content(content_data: OrderedDict) -> List[Content]:
     content = []
     all_loads = []
     for key in ["MissileLoad", "Load"]:
-        if key in content_data:
+        if key in content_data and content_data[key]:
             all_loads += content_data[key]["MagSaveData"]
 
     for load in all_loads:
