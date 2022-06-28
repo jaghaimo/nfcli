@@ -82,12 +82,12 @@ class StackPrinter(FleetPrinter):
         )
 
     def print(self, fleet: Fleet):
-        self.console.print()
         self.console.print(
             Panel(
                 f"Fleet name: [cyan]{fleet.name}[/cyan]\nTotal cost: [cyan]{fleet.points} points[/cyan]\nNumber of ships: [cyan]{len(fleet.ships)}[/cyan]"
             )
         )
+        self.console.print()
         for ship in fleet.ships:
             self.console.print(self.get_ship(ship, self.column_width))
 

@@ -2,7 +2,9 @@
 
 Simple CLI tool to pretty print fleet files (XML) to console written in Python.
 
-![Starter - TF Ash](images/tf-ash.png)
+![Starter - TF Ash - column view](images/tf-ash.png)
+
+![Starter - TF Oak - stack view](images/tf-oak.png)
 
 ## Requirements, Installation and Execution
 
