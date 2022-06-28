@@ -7,7 +7,7 @@ from nfcli import load_path
 from nfcli.database import init_database
 from nfcli.parser import parse_fleet
 from nfcli.printer import printer_factory
-from nfcli.writer import write_fleet
+from nfcli.writer import determine_output_file, write_fleet
 
 DESC = """Command line interface for converting Nebulous: Fleet Command fleet files into Record Sheet images."""
 
@@ -15,12 +15,8 @@ DESC = """Command line interface for converting Nebulous: Fleet Command fleet fi
 def get_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=DESC)
     parser.add_argument("-d", "--debug", action="store_true", help="enable debug mode")
-    parser.add_argument("-f", "--format", type=str, default="png", help="image format")
     parser.add_argument(
         "-i", "--input-fleet", type=str, required=True, help="fleet file to convert"
-    )
-    parser.add_argument(
-        "-o", "--output-prefix", type=str, default="", help="output file prefix"
     )
     parser.add_argument(
         "-p", "--print", action="store_true", help="print output to console"
@@ -43,11 +39,6 @@ def parse_args() -> Dict:
     args = parser.parse_args()
     if args.debug:
         logging.basicConfig(level=logging.DEBUG)
-    if not args.output_prefix:
-        args.output_prefix = Path(args.input_fleet).stem
-        logging.debug(
-            f"Setting output prefix based on input fleet: {args.output_prefix}"
-        )
     return args
 
 
@@ -60,7 +51,8 @@ def main() -> int:
         printer = printer_factory(args.style, len(fleet.ships))
         printer.print(fleet)
     if args.write:
-        write_fleet(fleet, args.output_prefix)
+        output_file = determine_output_file(args.input_fleet)
+        write_fleet(fleet, output_file)
 
 
 if __name__ == "__main__":

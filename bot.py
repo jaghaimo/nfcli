@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 from nfcli.database import init_database
 from nfcli.parser import parse_fleet
-from nfcli.writer import write_fleet
+from nfcli.writer import determine_output_file, write_fleet
 
 load_dotenv()
 init_database()
@@ -36,7 +36,8 @@ async def on_message(message: discord.Message):
         logging.info(f"Converting {fleet_file}")
         input = await fleet_file.read()
         fleet = parse_fleet(input)
-        png_file = write_fleet(fleet, fleet_file.filename)
+        png_file = determine_output_file(fleet_file.filename)
+        write_fleet(fleet, png_file)
         converted_files += [
             discord.File(open(png_file, "rb"), filename=png_file, spoiler=True)
         ]

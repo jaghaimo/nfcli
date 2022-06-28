@@ -58,8 +58,8 @@ def parse_fleet(xml_data: str) -> Fleet:
     fleet = Fleet(
         fleet_data["Name"], fleet_data["TotalPoints"], fleet_data["FactionKey"]
     )
-    for ship_data in fleet_data["Ships"]["Ship"]:
-        logging.info("Parsing ship data")
+    for idx, ship_data in enumerate(fleet_data["Ships"]["Ship"]):
+        logging.info(f"Parsing ship #{str(idx)}")
         ship = parse_ship(ship_data)
         fleet.add_ship(ship)
 
