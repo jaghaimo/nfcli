@@ -13,7 +13,8 @@ Until the application is packaged and released, you will need to use code from t
 Clone this repository, or download it as an archive. The minimal requirements are:
 
 - Python 3.8+
-- Poetry
+- Poetry (dependency manager)
+- libcairo2 (system library)
 
 To install, run:
 
@@ -33,3 +34,11 @@ If unsure, run:
 ```sh
 python3 -m nfcli -h
 ```
+
+## Running the bot
+
+- Create a new Application via <https://discord.com/developers/applications>
+- Configure `Bot` section and generate a `TOKEN`
+- Invite the bot to your server
+- Edit `.env.dist` and save it as `.env`
+- Run `python3 bot.py` and enjoy your new bot
