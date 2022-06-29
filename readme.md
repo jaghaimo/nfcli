@@ -15,6 +15,7 @@ Clone this repository, or download it as an archive. The minimal requirements ar
 - Python 3.8+
 - Poetry (dependency manager)
 - libcairo2 (system library)
+- Recommended: fonts-firacode
 
 To install, run:
 
