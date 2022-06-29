@@ -1,6 +1,6 @@
 import logging
 import math
-from abc import ABC
+from abc import ABC, abstractmethod
 from typing import List, Optional
 
 from rich.columns import Columns
@@ -25,9 +25,11 @@ class FleetPrinter(ABC):
             self.print_title(fleet)
 
     def print_title(self, fleet: Fleet):
-        columns_that_fit = min(math.floor(self.console.width / self.column_width), len(fleet.ships))
+        columns_that_fit = min(
+            math.floor(self.console.width / self.column_width), self.get_max_columns(fleet)
+        )
         desired_width = self.column_width * columns_that_fit
-        self.console.print(Panel(self.get_title(fleet).plain, width=desired_width, style="i"))
+        self.console.print(Panel(self.get_title(fleet), width=desired_width, style="i"))
 
     def add_components(self, tree: Tree, socket: Socket):
         for content in socket.contents:
@@ -45,6 +47,10 @@ class FleetPrinter(ABC):
             style="i",
         )
 
+    @abstractmethod
+    def get_max_columns(self, fleet: Fleet):
+        raise NotImplemented
+
 
 class ColumnPrinter(FleetPrinter):
     def get_ship(self, ship: Ship) -> RenderableType:
@@ -54,6 +60,9 @@ class ColumnPrinter(FleetPrinter):
         self.add_sockets(tree, ship.modules, "blue")
         self.add_sockets(tree, ship.invalid, "white")
         return Padding(tree, (0, 1))
+
+    def get_max_columns(self, fleet: Fleet):
+        return len(fleet.ships)
 
     def print(self, fleet: Fleet):
         super().print(fleet)
@@ -74,12 +83,16 @@ class StackPrinter(FleetPrinter):
             ("modules", "blue"),
         ]
         sockets = [self.get_sockets(ship, prop, color) for (prop, color) in props_colors]
+        a_or_an = "an" if ship.hull[0] == "A" else "a"
         return Columns(
             sockets,
-            title=f"'{ship.name}' is a {ship.hull} that costs {ship.cost} points",
+            title=f"'{ship.name}' is {a_or_an} {ship.hull} that costs {ship.cost} points",
             width=width,
             padding=(0, 0),
         )
+
+    def get_max_columns(self, fleet: Fleet):
+        return STACK_COLUMNS
 
     def print(self, fleet: Fleet):
         super().print(fleet)
