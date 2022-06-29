@@ -58,5 +58,8 @@ def parse_fleet(xml_data: str) -> Fleet:
         logging.info(f"Parsing ship #{str(idx)}")
         ship = parse_ship(ship_data)
         fleet.add_ship(ship)
+        if idx == 9:
+            logging.warn("Stopping after parsing 10 ships")
+            break
 
     return fleet
