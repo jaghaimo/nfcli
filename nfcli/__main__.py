@@ -47,7 +47,7 @@ def main() -> int:
         printer = printer_factory(args.style, len(fleet.ships))
         printer.print(fleet)
     if args.write:
-        output_file = determine_output_file(args.input_fleet)
+        output_file = determine_output_file(args.input_fleet, ".png")
         write_fleet(fleet, output_file)
 
 
