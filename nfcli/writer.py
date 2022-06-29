@@ -1,3 +1,4 @@
+import math
 import os
 import tempfile
 from pathlib import Path
@@ -33,7 +34,11 @@ def get_printer(num_of_ships: int) -> Tuple[int, Type[FleetPrinter]]:
     if num_of_ships < 4:
         return (STACK_COLUMNS * COLUMN_WIDTH, StackPrinter)
 
-    return (num_of_ships * COLUMN_WIDTH, ColumnPrinter)
+    width = num_of_ships * COLUMN_WIDTH
+    if num_of_ships > 5:
+        width = math.ceil(num_of_ships / 2) * COLUMN_WIDTH
+
+    return (width, ColumnPrinter)
 
 
 def write_fleet(fleet: Fleet, png_file: str):
