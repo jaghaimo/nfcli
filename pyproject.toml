@@ -14,8 +14,8 @@ use_parentheses = true
 
 [tool.poetry]
 name = "nfcli"
-version = "0.1.0"
-description = "Nebulous: Fleet CLI. View fleet files and convert them into images."
+version = "0.2.0"
+description = "A CLI tool to pretty print fleet files to console."
 authors = ["Jaghaimo <1764586+jaghaimo@users.noreply.github.com>"]
 
 [tool.poetry.dependencies]

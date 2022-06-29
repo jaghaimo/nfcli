@@ -1,6 +1,6 @@
 # Neboulous Fleet CLI
 
-Simple CLI tool to pretty print fleet files (XML) to console written in Python.
+A CLI tool to pretty print fleet files to console. Can write output as image, and provides a Discord bot on top.
 
 ![Starter - TF Ash - column view](images/tf-ash.png)
 

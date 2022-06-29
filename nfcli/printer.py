@@ -1,26 +1,28 @@
 import logging
 import math
-from abc import ABC, abstractmethod
+from abc import ABC
 from typing import List, Optional
 
 from rich.columns import Columns
-from rich.console import Console, RenderableType, TextType
+from rich.console import Console, RenderableType
 from rich.padding import Padding
 from rich.panel import Panel
 from rich.text import Text
 from rich.tree import Tree
 
+from nfcli import COLUMN_WIDTH, STACK_COLUMNS
 from nfcli.model import Fleet, Ship, Socket
 
 
 class FleetPrinter(ABC):
-    def __init__(self, column_width: int, console: Console) -> None:
+    def __init__(self, column_width: int, console: Console, no_title: Optional[bool] = False):
         self.column_width = column_width
         self.console = console
+        self.no_title = no_title
 
-    @abstractmethod
     def print(self, fleet: Fleet):
-        raise NotImplemented
+        if not self.no_title:
+            self.print_title(fleet)
 
     def print_title(self, fleet: Fleet):
         columns_that_fit = min(math.floor(self.console.width / self.column_width), len(fleet.ships))
@@ -54,16 +56,12 @@ class ColumnPrinter(FleetPrinter):
         return Padding(tree, (0, 1))
 
     def print(self, fleet: Fleet):
-        self.print_title(fleet)
+        super().print(fleet)
         ships = [self.get_ship(ship) for ship in fleet.ships]
         self.console.print(Columns(ships, width=self.column_width, padding=(0, 0)))
 
 
 class StackPrinter(FleetPrinter):
-    def __init__(self, column_width: int, console: Console, no_title: Optional[bool] = False):
-        super().__init__(column_width, console)
-        self.no_title = no_title
-
     def get_sockets(self, ship: Ship, prop: str, color: str):
         tree = Tree(Text(f" {prop.title()} ", style="r"))
         self.add_sockets(tree, getattr(ship, prop), color)
@@ -84,8 +82,7 @@ class StackPrinter(FleetPrinter):
         )
 
     def print(self, fleet: Fleet):
-        if not self.no_title:
-            self.print_title(fleet)
+        super().print(fleet)
         for ship in fleet.ships:
             self.console.print(self.get_ship(ship, self.column_width))
 
@@ -93,19 +90,19 @@ class StackPrinter(FleetPrinter):
 def printer_factory(printer: str, num_of_ships: int):
     console = Console()
     if printer == "auto":
-        style = "stack" if console.width < num_of_ships * 33 else "column"
+        style = "stack" if console.width < num_of_ships * COLUMN_WIDTH else "column"
         style = style if num_of_ships > 3 else "stack"
         return printer_factory(style, num_of_ships)
 
     if printer == "column":
         logging.debug("Returning ColumnPrinter")
-        column_width = min(40, console.width)
+        column_width = min(COLUMN_WIDTH, console.width)
         return ColumnPrinter(column_width, console)
 
     if printer == "stack":
         logging.debug("Returning StackPrinter")
-        console.size = (min(120, console.width), console.height)
-        column_width = int(console.width / 3)
+        console.size = (min(STACK_COLUMNS * COLUMN_WIDTH, console.width), console.height)
+        column_width = int(console.width / STACK_COLUMNS)
         return StackPrinter(column_width, console)
 
     logging.warn(f"Unknown printer requested, returning 'auto'")

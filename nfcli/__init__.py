@@ -1,4 +1,7 @@
-__version__ = "0.1.0"
+__version__ = "0.2.0"
+
+STACK_COLUMNS = 3
+COLUMN_WIDTH = 40
 
 
 def load_path(path: str) -> str:

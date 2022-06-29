@@ -1,13 +1,14 @@
 import os
 import tempfile
 from pathlib import Path
-from typing import List, TextIO
+from typing import List, TextIO, Tuple, Type
 
 import cairosvg
 from rich.console import Console
 
+from nfcli import COLUMN_WIDTH, STACK_COLUMNS
 from nfcli.model import Fleet
-from nfcli.printer import ColumnPrinter, StackPrinter
+from nfcli.printer import ColumnPrinter, FleetPrinter, StackPrinter
 
 
 def close_all(open_files: List[TextIO]):
@@ -28,11 +29,18 @@ def get_temp_filename(ext: str) -> str:
     return tempfile.mktemp() + ext
 
 
+def get_printer(num_of_ships: int) -> Tuple[int, Type[FleetPrinter]]:
+    if num_of_ships < 4:
+        return (STACK_COLUMNS * COLUMN_WIDTH, StackPrinter)
+
+    return (num_of_ships * COLUMN_WIDTH, ColumnPrinter)
+
+
 def write_fleet(fleet: Fleet, png_file: str):
-    console = Console(width=120, record=True)
-    printer = StackPrinter(38, console, no_title=True)
+    width, printer_class = get_printer(len(fleet.ships))
+    console = Console(width=width, record=True)
+    printer = printer_class(COLUMN_WIDTH, console, no_title=True)
     printer.print(fleet)
-    title_printer = ColumnPrinter(38, console)
-    title = title_printer.get_title(fleet).plain
+    title = printer.get_title(fleet).plain
     svg_content = console.export_svg(title=title, clear=True)
     cairosvg.svg2png(bytestring=svg_content, write_to=png_file)
