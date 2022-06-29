@@ -1,4 +1,5 @@
 import logging
+import math
 from abc import ABC, abstractmethod
 from typing import List, Optional
 
@@ -22,7 +23,8 @@ class FleetPrinter(ABC):
         raise NotImplemented
 
     def print_title(self, fleet: Fleet):
-        desired_width = min(self.column_width * len(fleet.ships), self.console.width)
+        columns_that_fit = min(math.floor(self.console.width / self.column_width), len(fleet.ships))
+        desired_width = self.column_width * columns_that_fit
         self.console.print(Panel(self.get_title(fleet).plain, width=desired_width, style="i"))
 
     def add_components(self, tree: Tree, socket: Socket):
@@ -41,17 +43,15 @@ class FleetPrinter(ABC):
             style="i",
         )
 
+
 class ColumnPrinter(FleetPrinter):
     def get_ship(self, ship: Ship) -> RenderableType:
-        tree = Tree(
-            Text(f" {ship.name} \n {ship.hull} \n {ship.cost} points ", style="r")
-        )
+        tree = Tree(Text(f" {ship.name} \n {ship.hull} \n {ship.cost} points ", style="r"))
         self.add_sockets(tree, ship.mountings, "red")
         self.add_sockets(tree, ship.compartments, "green")
         self.add_sockets(tree, ship.modules, "blue")
         self.add_sockets(tree, ship.invalid, "white")
         return Padding(tree, (0, 1))
-
 
     def print(self, fleet: Fleet):
         self.print_title(fleet)
@@ -75,9 +75,7 @@ class StackPrinter(FleetPrinter):
             ("compartments", "green"),
             ("modules", "blue"),
         ]
-        sockets = [
-            self.get_sockets(ship, prop, color) for (prop, color) in props_colors
-        ]
+        sockets = [self.get_sockets(ship, prop, color) for (prop, color) in props_colors]
         return Columns(
             sockets,
             title=f"'{ship.name}' is a {ship.hull} that costs {ship.cost} points",
@@ -107,7 +105,7 @@ def printer_factory(printer: str, num_of_ships: int):
     if printer == "stack":
         logging.debug("Returning StackPrinter")
         console.size = (min(120, console.width), console.height)
-        column_width = int(console.width / 3) 
+        column_width = int(console.width / 3)
         return StackPrinter(column_width, console)
 
     logging.warn(f"Unknown printer requested, returning 'auto'")

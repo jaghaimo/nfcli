@@ -1,4 +1,7 @@
+import os
+import tempfile
 from pathlib import Path
+from typing import List, TextIO
 
 import cairosvg
 from rich.console import Console
@@ -7,8 +10,23 @@ from nfcli.model import Fleet
 from nfcli.printer import ColumnPrinter, StackPrinter
 
 
-def determine_output_file(input_fleet: str) -> str:
-    return Path(input_fleet).stem + ".png"
+def close_all(open_files: List[TextIO]):
+    for open_file in open_files:
+        open_file.close()
+
+
+def delete_all(filenames: str):
+    for filename in filenames:
+        os.unlink(filename)
+
+
+def determine_output_file(input_fleet: str, ext: str) -> str:
+    return Path(input_fleet).stem + ext
+
+
+def get_temp_filename(ext: str) -> str:
+    return tempfile.mktemp() + ext
+
 
 def write_fleet(fleet: Fleet, png_file: str):
     console = Console(width=120, record=True)

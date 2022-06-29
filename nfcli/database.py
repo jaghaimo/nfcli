@@ -20,9 +20,7 @@ class Database:
 
     def is_invalid(self, name: str) -> bool:
         checks = (
-            int(self.is_mounting(name))
-            + int(self.is_compartment(name))
-            + int(self.is_module(name))
+            int(self.is_mounting(name)) + int(self.is_compartment(name)) + int(self.is_module(name))
         )
         return checks != 1
 

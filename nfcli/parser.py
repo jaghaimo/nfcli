@@ -42,9 +42,7 @@ def parse_socket(socket_data: OrderedDict) -> Socket:
 
 
 def parse_ship(ship_data: OrderedDict) -> Ship:
-    ship = Ship(
-        ship_data["Name"], ship_data["Cost"], clean_string(ship_data["HullType"])
-    )
+    ship = Ship(ship_data["Name"], ship_data["Cost"], clean_string(ship_data["HullType"]))
     for socket_data in ship_data["SocketMap"]["HullSocket"]:
         socket = parse_socket(socket_data)
         ship.add_socket(socket)
@@ -55,9 +53,7 @@ def parse_ship(ship_data: OrderedDict) -> Ship:
 def parse_fleet(xml_data: str) -> Fleet:
     xmld = xmltodict.parse(xml_data, force_list="MagSaveData")
     fleet_data = xmld.get("Fleet")
-    fleet = Fleet(
-        fleet_data["Name"], fleet_data["TotalPoints"], fleet_data["FactionKey"]
-    )
+    fleet = Fleet(fleet_data["Name"], fleet_data["TotalPoints"], fleet_data["FactionKey"])
     for idx, ship_data in enumerate(fleet_data["Ships"]["Ship"]):
         logging.info(f"Parsing ship #{str(idx)}")
         ship = parse_ship(ship_data)

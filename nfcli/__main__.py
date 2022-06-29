@@ -18,9 +18,7 @@ def get_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "-i", "--input-fleet", type=str, required=True, help="fleet file to convert"
     )
-    parser.add_argument(
-        "-p", "--print", action="store_true", help="print output to console"
-    )
+    parser.add_argument("-p", "--print", action="store_true", help="print output to console")
     parser.add_argument(
         "-s",
         "--style",
@@ -28,9 +26,7 @@ def get_parser() -> argparse.ArgumentParser:
         default="auto",
         help="printer style: auto (default), column, stack",
     )
-    parser.add_argument(
-        "-w", "--write", action="store_true", help="write output to a file"
-    )
+    parser.add_argument("-w", "--write", action="store_true", help="write output to a file")
     return parser
 
 
