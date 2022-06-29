@@ -38,7 +38,7 @@ def get_printer(num_of_ships: int) -> Tuple[int, Type[FleetPrinter]]:
 
 def write_fleet(fleet: Fleet, png_file: str):
     width, printer_class = get_printer(len(fleet.ships))
-    console = Console(width=width, record=True)
+    console = Console(width=width, record=True, color_system="truecolor", force_terminal=True)
     printer = printer_class(COLUMN_WIDTH, console, no_title=True)
     printer.print(fleet)
     title = printer.get_title(fleet).plain
