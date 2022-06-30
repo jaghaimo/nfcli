@@ -14,7 +14,7 @@ use_parentheses = true
 
 [tool.poetry]
 name = "nfcli"
-version = "0.2.0"
+version = "0.3.0"
 description = "A CLI tool to pretty print fleet files to console."
 authors = ["Jaghaimo <1764586+jaghaimo@users.noreply.github.com>"]
 
@@ -27,7 +27,6 @@ python-dotenv = "^0.20.0"
 CairoSVG = "^2.5.2"
 
 [tool.poetry.dev-dependencies]
-pytest = "^5.2"
 black = "^22.6.0"
 
 [build-system]
