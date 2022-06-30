@@ -6,14 +6,8 @@ import discord
 from dotenv import load_dotenv
 
 from nfcli.database import init_database
-from nfcli.parser import parse_fleet
-from nfcli.writer import (
-    close_all,
-    delete_all,
-    determine_output_file,
-    get_temp_filename,
-    write_fleet,
-)
+from nfcli.parser import parse_any
+from nfcli.writer import close_all, delete_all, determine_output_file, get_temp_filename
 
 load_dotenv()
 init_database()
@@ -35,16 +29,17 @@ async def on_message(message: discord.Message):
     if message.author == client.user:
         return
 
+    ship_files = [file for file in message.attachments if file.filename.endswith("ship")]
     fleet_files = [file for file in message.attachments if file.filename.endswith("fleet")]
-    converted_files = []  # type: List[discord.File]
-    tmp_files = []  # type: List[str]
-    for fleet_file in fleet_files:
-        logging.info(f"Converting {fleet_file}")
-        input = await fleet_file.read()
-        fleet = parse_fleet(input)
-        png_file = determine_output_file(fleet_file.filename, ".png")
+    converted_files: List[discord.File] = []
+    tmp_files: List[str] = []
+    for file in ship_files + fleet_files:
+        logging.info(f"Converting {file}")
+        xml_data = await file.read()
+        png_file = determine_output_file(file.filename, ".png")
         tmp_file = get_temp_filename(".png")
-        write_fleet(fleet, tmp_file)
+        entity = parse_any(file.filename, xml_data)
+        entity.write(tmp_file)
         converted_files.append(discord.File(open(tmp_file, "rb"), filename=png_file))
         tmp_files.append(tmp_file)
 
