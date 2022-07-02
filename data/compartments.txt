@@ -1,25 +1,25 @@
 # Command
-Auxiliary Steering
-Basic CIC
-Citadel CIC
-Reinforced CIC
+Stock/Auxiliary Steering
+Stock/Basic CIC
+Stock/Citadel CIC
+Stock/Reinforced CIC
 # Crew
-Battle Dressing Station
-Berthing
+Stock/Battle Dressing Station
+Stock/Berthing
 # Damage Control
-Damage Control Central
-Large DC Locker
-Rapid DC Locker
-Reinforced DC Locker
-Small DC Locker
-Small Workshop
+Stock/Damage Control Central
+Stock/Large DC Locker
+Stock/Rapid DC Locker
+Stock/Reinforced DC Locker
+Stock/Small DC Locker
+Stock/Small Workshop
 # Engineering
-Plant Control Center
+Stock/Plant Control Center
 # Intelligence
-Analysis Annex
-Intelligence Center
+Stock/Analysis Annex
+Stock/Intelligence Center
 # Storage
-Bulk Magazine
-Reinforced Magazine
+Stock/Bulk Magazine
+Stock/Reinforced Magazine
 # Weapon Support
-Gun Plotting Center
+Stock/Gun Plotting Center

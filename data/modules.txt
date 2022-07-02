@@ -1,39 +1,39 @@
 # Communications
-Supplementary Radio Amplifiers
+Stock/Supplementary Radio Amplifiers
 # Damage Control
-Launcher Deluge System
-Magazine Sprinklers
+Stock/Launcher Deluge System
+Stock/Magazine Sprinklers
 # Engineering
-Redundant Reactor Failsafes
-Reinforced Thruster Nozzles
-Small Reactor Booster
+Stock/Redundant Reactor Failsafes
+Stock/Reinforced Thruster Nozzles
+Stock/Small Reactor Booster
 # EWar
-Signature Scrambler
+Stock/Signature Scrambler
 # Powerplant
-FR3300 Micro Reactor
-FR4800 Reactor
+Stock/FR3300 Micro Reactor
+Stock/FR4800 Reactor
 # Propulusion
-FM200 Drive
-FM200R Drive
-FM230 'Whiplash' Drive
-FM240 'Dragonfly' Drive
-FM280 'Raider' Drive
-FM30X 'Prowler' Drive
-FM500 Drive
-FM500R Drive
-FM530 'Whiplash' Drive
-FM540 'Dragonfly' Drive
-FM580 'Raider' Drive
+Stock/FM200 Drive
+Stock/FM200R Drive
+Stock/FM230 'Whiplash' Drive
+Stock/FM240 'Dragonfly' Drive
+Stock/FM280 'Raider' Drive
+Stock/FM30X 'Prowler' Drive
+Stock/FM500 Drive
+Stock/FM500R Drive
+Stock/FM530 'Whiplash' Drive
+Stock/FM540 'Dragonfly' Drive
+Stock/FM580 'Raider' Drive
 # Sensors
-Adaptive Radar Receiver
-RM50 'Parallax' Radar
-RS35 'Frontline' Radar
-RS41 'Spyglass' Radar
-Track Correlator
+Stock/Adaptive Radar Receiver
+Stock/RM50 'Parallax' Radar
+Stock/RS35 'Frontline' Radar
+Stock/RS41 'Spyglass' Radar
+Stock/Track Correlator
 # Weapon Support
-Actively Cooled Amplifiers
-Ammunition Elevators
-Energy Regulator
-Focused Particle Accelerator
-Mount Gyros
-Small Energy Regulator
+Stock/Actively Cooled Amplifiers
+Stock/Ammunition Elevators
+Stock/Energy Regulator
+Stock/Focused Particle Accelerator
+Stock/Mount Gyros
+Stock/Small Energy Regulator

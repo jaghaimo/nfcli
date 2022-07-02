@@ -33,15 +33,18 @@ class Content:
 
 
 class Socket:
-    def __init__(self, name: str, contents: List[Content]) -> None:
+    def __init__(self, key: str, name: str, contents: List[Content]) -> None:
+        self.key = key
         self.name = name
         self.contents = contents
 
 
 class Ship(Printable, Writeable):
-    def __init__(self, name: str, cost: int, hull: str) -> None:
+    def __init__(self, name: str, cost: int, number: int, symbol_option: int, hull: str) -> None:
         self.name = name
         self.cost = cost
+        self.number = number
+        self.symbol_option = symbol_option
         self.hull = hull
         self.sockets: List[Socket] = []
 

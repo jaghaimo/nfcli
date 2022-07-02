@@ -1,20 +1,9 @@
 import logging
-from typing import List, Optional, OrderedDict
+from typing import List, OrderedDict
 
 import xmltodict
 
 from nfcli.model import Content, Fleet, Ship, ShipFleetType, Socket
-
-
-def clean_string(name: str, recursive: Optional[bool] = False) -> str:
-    prefixes = ["Stock/"]
-    for prefix in prefixes:
-        if name.startswith(prefix):
-            name = name[len(prefix) :]
-            if recursive:
-                clean_string(name, recursive)
-
-    return name
 
 
 def get_content(content_data: OrderedDict) -> List[Content]:
@@ -25,24 +14,27 @@ def get_content(content_data: OrderedDict) -> List[Content]:
             all_loads += content_data[key]["MagSaveData"]
 
     for load in all_loads:
-        name = clean_string(load["MunitionKey"])
-        quantity = load["Quantity"]
-        content.append(Content(name, quantity))
+        content.append(Content(load["MunitionKey"], load["Quantity"]))
 
     return content
 
 
 def get_socket(socket_data: OrderedDict) -> Socket:
     content = []
-    name = clean_string(socket_data["ComponentName"])
     if "ComponentData" in socket_data:
         content = get_content(socket_data["ComponentData"])
 
-    return Socket(name, content)
+    return Socket(socket_data["Key"], socket_data["ComponentName"], content)
 
 
 def get_ship(ship_data: OrderedDict) -> Ship:
-    ship = Ship(ship_data["Name"], ship_data["Cost"], clean_string(ship_data["HullType"]))
+    ship = Ship(
+        ship_data["Name"],
+        ship_data["Cost"],
+        ship_data["Number"],
+        ship_data["SymbolOption"],
+        ship_data["HullType"],
+    )
     for socket_data in ship_data["SocketMap"]["HullSocket"]:
         socket = get_socket(socket_data)
         ship.add_socket(socket)
