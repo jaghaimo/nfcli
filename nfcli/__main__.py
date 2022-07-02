@@ -5,7 +5,7 @@ from typing import Dict
 
 from nfcli import load_path
 from nfcli.database import init_database
-from nfcli.importer import update
+from nfcli.updater import update
 from nfcli.parser import parse_any
 from nfcli.printer import printer_factory
 from nfcli.writer import determine_output_file

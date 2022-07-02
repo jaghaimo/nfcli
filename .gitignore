@@ -4,3 +4,4 @@
 .env
 /*.png
 /*.svg
+data/*.json
