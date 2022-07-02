@@ -6,11 +6,14 @@ from urllib.request import urlopen, urlretrieve
 from zipfile import ZipFile
 
 GITLAB = "https://gitlab.com/"
+COMPONENT_DATA = "bmgolley/nebulousfleetmanager/-/raw/main/nfm/shipcomponentdata.json?inline=false"
 SHIP_DATA = "bmgolley/nebulousfleetmanager/-/raw/main/nfm/shipdata.json?inline=false"
 WIKI_DATA = "nebfltcom/data/-/archive/main/data-main.zip?path=wiki"
 
 
-def update_ship_data():
+def update_manager_data():
+    logging.debug("Downloading component_data.json")
+    urlretrieve(GITLAB + COMPONENT_DATA, "data/component_data.json")
     logging.debug("Downloading ship_data.json")
     urlretrieve(GITLAB + SHIP_DATA, "data/ship_data.json")
 
@@ -30,5 +33,5 @@ def update_wiki_data():
 
 
 def update():
-    update_ship_data()
+    update_manager_data()
     update_wiki_data()

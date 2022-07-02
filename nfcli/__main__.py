@@ -1,13 +1,11 @@
 import argparse
 import logging
-from pathlib import Path
 from typing import Dict
 
 from nfcli import load_path
-from nfcli.database import init_database
-from nfcli.updater import update
 from nfcli.parser import parse_any
 from nfcli.printer import printer_factory
+from nfcli.updater import update
 from nfcli.writer import determine_output_file
 
 DESC = """Command line interface for converting Nebulous: Fleet Command fleet and ship files to images."""
@@ -44,7 +42,6 @@ def parse_args() -> Dict:
 
 
 def main() -> int:
-    init_database()
     args = parse_args()
     if args.input:
         xml_data = load_path(args.input)

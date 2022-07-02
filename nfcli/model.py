@@ -10,6 +10,15 @@ if TYPE_CHECKING:
     from nfcli.printer import FleetPrinter, StackPrinter
 
 
+class Named:
+    def __init__(self, name: str) -> None:
+        self._name = name
+
+    @property
+    def name(self):
+        return db.get_name(self._name)
+
+
 class Printable:
     @abstractproperty
     def title(self) -> str:
@@ -26,30 +35,34 @@ class Writeable:
         raise NotImplemented
 
 
-class Content:
+class Content(Named):
     def __init__(self, name: str, quantity: int) -> None:
-        self.name = name
+        super().__init__(name)
         self.quantity = quantity
 
 
-class Socket:
+class Socket(Named):
     def __init__(self, key: str, name: str, contents: List[Content]) -> None:
+        super().__init__(name)
         self.key = key
-        self.name = name
         self.contents = contents
 
 
-class Ship(Printable, Writeable):
+class Ship(Named, Printable, Writeable):
     def __init__(self, name: str, cost: int, number: int, symbol_option: int, hull: str) -> None:
-        self.name = name
+        super().__init__(name)
         self.cost = cost
         self.number = number
         self.symbol_option = symbol_option
-        self.hull = hull
+        self._hull = hull
         self.sockets: List[Socket] = []
 
     def add_socket(self, socket: Socket) -> None:
         self.sockets.append(socket)
+
+    @property
+    def hull(self) -> str:
+        return db.get_name(self._hull)
 
     @property
     def title(self) -> str:
@@ -73,7 +86,7 @@ class Ship(Printable, Writeable):
         return self.filter_sockets(db.is_invalid)
 
     def filter_sockets(self, check: Callable) -> List[Socket]:
-        return [socket for socket in self.sockets if check(socket.name)]
+        return [socket for socket in self.sockets if check(socket._name)]
 
     def print(self, printer: "StackPrinter"):
         renderable = printer.get_ship(self, no_ship_title=True)
@@ -83,9 +96,9 @@ class Ship(Printable, Writeable):
         write_ship(self, filename)
 
 
-class Fleet(Printable, Writeable):
+class Fleet(Named, Printable, Writeable):
     def __init__(self, name: str, points: int, faction: str):
-        self.name = name
+        super().__init__(name)
         self.points = points
         self.faction = faction
         self.ships: List[Ship] = []

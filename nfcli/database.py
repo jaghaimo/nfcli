@@ -1,22 +1,48 @@
-from typing import Set
+import json
+from typing import Dict
 
-from nfcli import load_path
+KEY_SLOT = "slot"
+
+SOCKET_MOUNT = "mount"
+SOCKET_COMPARTMENT = "compartment"
+SOCKET_MODULE = "module"
+SOCKET_AMMO = "ammo"
+SOCKET_UNKNOWN = "unknown"
 
 
 class Database:
     def __init__(self) -> None:
-        self.mountings = set()
-        self.compartments = set()
-        self.modules = set()
+        # NEBFLTCOM Data (unused)
+        self.components = dict()
+        self.ships = dict()
+        # Nebulous Fleet Manager
+        self.component_data = self.load_json("data/component_data.json")
+        self.ship_data = self.load_json("data/ship_data.json")
+
+    def load_json(self, path_to_file: str) -> Dict:
+        with open(path_to_file, "r") as f:
+            return json.load(f)
+
+    def get_name(self, name: str) -> str:
+        return name.split("/")[-1]
+
+    def get_type(self, name: str) -> str:
+        try:
+            return self.component_data.get(name).get(KEY_SLOT)
+        except AttributeError:
+            return SOCKET_UNKNOWN
 
     def is_mounting(self, name: str) -> bool:
-        return name in self.mountings
+        return self.get_type(name) == SOCKET_MOUNT
 
     def is_compartment(self, name: str) -> bool:
-        return name in self.compartments
+        return self.get_type(name) == SOCKET_COMPARTMENT
 
     def is_module(self, name: str) -> bool:
-        return name in self.modules
+        return self.get_type(name) == SOCKET_MODULE
+
+    def is_ammo(self, name: str) -> bool:
+        return self.get_type(name) == SOCKET_AMMO
 
     def is_invalid(self, name: str) -> bool:
         checks = (
@@ -26,18 +52,3 @@ class Database:
 
 
 db = Database()
-
-
-def add_from_path(path: str, set_to_add: Set):
-    characters = load_path(path)
-    lines = characters.split("\n")
-    for line in lines:
-        if line.startswith("#"):
-            continue
-        set_to_add.add(line)
-
-
-def init_database():
-    add_from_path("data/mountings.txt", db.mountings)
-    add_from_path("data/compartments.txt", db.compartments)
-    add_from_path("data/modules.txt", db.modules)

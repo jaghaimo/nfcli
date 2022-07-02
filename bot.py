@@ -5,12 +5,10 @@ from typing import List
 import discord
 from dotenv import load_dotenv
 
-from nfcli.database import init_database
 from nfcli.parser import parse_any
 from nfcli.writer import close_all, delete_all, determine_output_file, get_temp_filename
 
 load_dotenv()
-init_database()
 TOKEN = os.getenv("DISCORD_TOKEN")
 
 client = discord.Client()

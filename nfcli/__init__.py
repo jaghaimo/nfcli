@@ -1,4 +1,4 @@
-__version__ = "0.3.0"
+__version__ = "0.4.0"
 
 STACK_COLUMNS = 3
 COLUMN_WIDTH = 40
