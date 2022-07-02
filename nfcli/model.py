@@ -42,10 +42,19 @@ class Content(Named):
 
 
 class Socket(Named):
-    def __init__(self, key: str, name: str, contents: List[Content]) -> None:
+    def __init__(self, hull: str, key: str, name: str, contents: List[Content]) -> None:
         super().__init__(name)
+        self._hull = hull
         self.key = key
         self.contents = contents
+
+    @property
+    def slot_name(self) -> str:
+        return db.get_socket_attr(self._hull, self.key, "name")
+
+    @property
+    def slot_size(self) -> List:
+        return db.get_socket_attr(self._hull, self.key, "size")
 
 
 class Ship(Named, Printable, Writeable):

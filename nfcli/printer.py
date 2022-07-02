@@ -32,7 +32,9 @@ class FleetPrinter(ABC):
 
     def add_sockets(self, tree: Tree, sockets: List["Socket"], color: str):
         for socket in sockets:
-            subtree = tree.add(f"{socket.name} ", style=color)
+            slot_size = "x".join([str(size) for size in socket.slot_size])
+            slot_info = f"{socket.slot_name} [{slot_size}]"
+            subtree = tree.add(f"{socket.name} \n[dim]{slot_info}[/dim] ", style=color)
             self.add_components(subtree, socket)
 
 

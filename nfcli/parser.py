@@ -19,24 +19,25 @@ def get_content(content_data: OrderedDict) -> List[Content]:
     return content
 
 
-def get_socket(socket_data: OrderedDict) -> Socket:
+def get_socket(hull: str, socket_data: OrderedDict) -> Socket:
     content = []
     if "ComponentData" in socket_data:
         content = get_content(socket_data["ComponentData"])
 
-    return Socket(socket_data["Key"], socket_data["ComponentName"], content)
+    return Socket(hull, socket_data["Key"], socket_data["ComponentName"], content)
 
 
 def get_ship(ship_data: OrderedDict) -> Ship:
+    hull = ship_data["HullType"]
     ship = Ship(
         ship_data["Name"],
         ship_data["Cost"],
         ship_data["Number"],
         ship_data["SymbolOption"],
-        ship_data["HullType"],
+        hull,
     )
     for socket_data in ship_data["SocketMap"]["HullSocket"]:
-        socket = get_socket(socket_data)
+        socket = get_socket(hull, socket_data)
         ship.add_socket(socket)
 
     return ship
