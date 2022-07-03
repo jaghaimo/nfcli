@@ -1,7 +1,12 @@
 __version__ = "0.4.0"
 
+from rich.style import Style
+from rich.theme import Theme
+
 STACK_COLUMNS = 3
 COLUMN_WIDTH = 40
+
+nfc_theme = Theme({"orange": "#e14b00", "grey": "#474946"})
 
 
 def load_path(path: str) -> str:

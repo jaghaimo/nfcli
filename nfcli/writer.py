@@ -1,4 +1,3 @@
-import math
 import os
 import tempfile
 from pathlib import Path
@@ -7,7 +6,7 @@ from typing import TYPE_CHECKING, List, TextIO
 import cairosvg
 from rich.console import Console
 
-from nfcli import COLUMN_WIDTH
+from nfcli import COLUMN_WIDTH, nfc_theme
 from nfcli.printer import FleetPrinter, determine_printer
 
 if TYPE_CHECKING:
@@ -34,7 +33,7 @@ def get_temp_filename(ext: str) -> str:
 
 def get_printer(num_of_ships: int) -> FleetPrinter:
     width, printer = determine_printer(num_of_ships)
-    console = Console(width=width, record=True, color_system="standard", force_terminal=True)
+    console = Console(width=width, record=True, theme=nfc_theme, force_terminal=True)
     console.set_alt_screen(True)
     return printer(COLUMN_WIDTH, console, no_title=True)
 

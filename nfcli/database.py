@@ -33,7 +33,11 @@ class Database:
         return SOCKET_UNKNOWN.title()
 
     def load_json(self, path_to_file: str) -> Dict:
-        with open(path_to_file, "r") as f:
+        try:
+            f = open(path_to_file, "r")
+        except EnvironmentError:
+            return {}
+        else:
             return json.load(f)
 
     def get_name(self, name: str) -> str:

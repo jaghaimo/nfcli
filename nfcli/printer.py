@@ -4,13 +4,14 @@ from abc import ABC
 from typing import TYPE_CHECKING, List, Optional, Tuple, Type
 
 from rich.columns import Columns
-from rich.console import Console, RenderableType
+from rich.console import Console, Group, RenderableType
 from rich.padding import Padding
 from rich.panel import Panel
+from rich.rule import Rule
 from rich.text import Text
 from rich.tree import Tree
 
-from nfcli import COLUMN_WIDTH, STACK_COLUMNS
+from nfcli import COLUMN_WIDTH, STACK_COLUMNS, nfc_theme
 
 if TYPE_CHECKING:
     from nfcli.model import Fleet, Ship, ShipFleetType, Socket
@@ -28,24 +29,40 @@ class FleetPrinter(ABC):
 
     def add_components(self, tree: Tree, socket: "Socket"):
         for content in socket.contents:
-            tree.add(f"{content.name} [yellow]x{content.quantity}[/yellow] ", style="i")
+            tree.add(f"{content.name} x{content.quantity} ", style="i d")
 
-    def add_sockets(self, tree: Tree, sockets: List["Socket"], color: str):
+    def get_sockets(
+        self, title: str, sockets: List["Socket"], color: Optional[str] = "white"
+    ) -> Group:
+        elements = [Rule(Text(f"{title}", style="orange"), style="orange")]
         for socket in sockets:
-            slot_size = "x".join([str(size) for size in socket.slot_size])
-            slot_info = f"{socket.slot_name} [{slot_size}]"
-            subtree = tree.add(f"{socket.name} \n[dim]{slot_info}[/dim] ", style=color)
-            self.add_components(subtree, socket)
+            slot_split = socket.slot_name.split(" ")
+            slot_name = slot_split[-1]
+            just_size = 7 if int(slot_name) < 10 else 6
+            slot_size = "x".join([str(size) for size in socket.slot_size]).rjust(just_size)
+            slot_info = f"[orange]{slot_name}[/orange] [grey]{slot_size}[/grey]"
+            tree = Tree(
+                Text.from_markup(f"{slot_info} {socket.name}", overflow="ignore"),
+                style=color,
+                guide_style="dim",
+            )
+            self.add_components(tree, socket)
+            elements.append(tree)
+        if not sockets:
+            elements.append("[grey]" + "<EMPTY>".center(self.column_width) + "[/grey]")
+        return Group(*elements)
 
 
 class ColumnPrinter(FleetPrinter):
     def get_ship(self, ship: "Ship") -> RenderableType:
-        tree = Tree(Text(f" {ship.name} \n {ship.hull} \n {ship.cost} points ", style="r"))
-        self.add_sockets(tree, ship.mountings, "red")
-        self.add_sockets(tree, ship.compartments, "green")
-        self.add_sockets(tree, ship.modules, "blue")
-        self.add_sockets(tree, ship.invalid, "white")
-        return Padding(tree, (0, 1))
+        line1 = ship.name.center(self.column_width)
+        line2 = f"{ship.hull} ({ship.cost})".center(self.column_width)
+        text = f"\n[b]{line1}[/b]\n{line2}"
+        mountings = self.get_sockets("Mountings", ship.mountings)
+        compartments = self.get_sockets("Compartments", ship.compartments)
+        modules = self.get_sockets("Modules", ship.modules)
+        group = Group(text, mountings, compartments, modules)
+        return Padding(group, (0, 1))
 
     def print(self, fleet: "Fleet"):
         super().print(fleet)
@@ -54,25 +71,14 @@ class ColumnPrinter(FleetPrinter):
 
 
 class StackPrinter(FleetPrinter):
-    def get_sockets(self, ship: "Ship", prop: str, color: str):
-        tree = Tree(Text(f" {prop.title()} ", style="r"))
-        self.add_sockets(tree, getattr(ship, prop), color)
-        return Padding(tree, (0, 1, 1, 1))
-
     def get_ship(self, ship: "Ship", no_ship_title: Optional[bool] = False) -> RenderableType:
-        props_colors = [
-            ("mountings", "red"),
-            ("compartments", "green"),
-            ("modules", "blue"),
+        props = ["mountings", "compartments", "modules"]
+        sockets = [
+            Padding(self.get_sockets(prop.title(), getattr(ship, prop)), (0, 1)) for prop in props
         ]
-        sockets = [self.get_sockets(ship, prop, color) for (prop, color) in props_colors]
-        title = None if no_ship_title else ship.title
-        return Columns(
-            sockets,
-            title=title,
-            width=self.column_width,
-            padding=(0, 0),
-        )
+        if not no_ship_title:
+            self.console.print("\n" + ship.title.center(self.console.width), highlight=False)
+        return Columns(sockets, width=self.column_width, padding=(0, 0))
 
     def print(self, fleet: "Fleet"):
         super().print(fleet)
@@ -92,7 +98,7 @@ def determine_printer(num_of_ships: int) -> Tuple[int, Type[FleetPrinter]]:
 
 
 def fleet_printer_factory(printer: str, num_of_ships: int):
-    console = Console()
+    console = Console(theme=nfc_theme)
     if printer == "auto":
         style = "stack" if console.width < num_of_ships * COLUMN_WIDTH else "column"
         style = style if num_of_ships > 3 else "stack"

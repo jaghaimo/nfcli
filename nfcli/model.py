@@ -76,7 +76,7 @@ class Ship(Named, Printable, Writeable):
     @property
     def title(self) -> str:
         a_or_an = "an" if self.hull[0] == "A" else "a"
-        return f"'{self.name}' is {a_or_an} {self.hull} that costs {self.cost} points"
+        return f"[b]{self.name}[/b] is {a_or_an} {self.hull} that costs {self.cost} points"
 
     @property
     def mountings(self) -> List[Socket]:
