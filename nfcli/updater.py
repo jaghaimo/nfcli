@@ -6,8 +6,8 @@ from urllib.request import urlopen, urlretrieve
 from zipfile import ZipFile
 
 GITLAB = "https://gitlab.com/"
-COMPONENT_DATA = "bmgolley/nebulousfleetmanager/-/raw/main/nfm/shipcomponentdata.json?inline=false"
-SHIP_DATA = "bmgolley/nebulousfleetmanager/-/raw/main/nfm/shipdata.json?inline=false"
+COMPONENT_DATA = "jaghaimo/nebulousfleetmanager/-/raw/main/nfm/shipcomponentdata.json?inline=false"
+SHIP_DATA = "jaghaimo/nebulousfleetmanager/-/raw/main/nfm/shipdata.json?inline=false"
 WIKI_DATA = "nebfltcom/data/-/archive/main/data-main.zip?path=wiki"
 
 
