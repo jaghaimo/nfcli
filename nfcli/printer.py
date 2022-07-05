@@ -25,15 +25,13 @@ class FleetPrinter(ABC):
 
     def print(self, fleet: "Fleet"):
         if not self.no_title:
-            self.console.print(Panel(fleet.title, style="i"))
+            self.console.print(Panel(Text(fleet.title.center(self.console.width), style="white"), style="orange"))
 
     def add_components(self, tree: Tree, socket: "Socket"):
         for content in socket.contents:
             tree.add(f"{content.name} x{content.quantity} ", style="i d")
 
-    def get_sockets(
-        self, title: str, sockets: List["Socket"], color: Optional[str] = "white"
-    ) -> Group:
+    def get_sockets(self, title: str, sockets: List["Socket"], color: Optional[str] = "white") -> Group:
         elements = [Rule(Text(f"{title}", style="orange"), style="orange")]
         for socket in sockets:
             slot_split = socket.slot_name.split(" ")
@@ -73,9 +71,7 @@ class ColumnPrinter(FleetPrinter):
 class StackPrinter(FleetPrinter):
     def get_ship(self, ship: "Ship", no_ship_title: Optional[bool] = False) -> RenderableType:
         props = ["mountings", "compartments", "modules"]
-        sockets = [
-            Padding(self.get_sockets(prop.title(), getattr(ship, prop)), (0, 1)) for prop in props
-        ]
+        sockets = [Padding(self.get_sockets(prop.title(), getattr(ship, prop)), (0, 1)) for prop in props]
         if not no_ship_title:
             self.console.print("\n" + ship.title.center(self.console.width), highlight=False)
         return Columns(sockets, width=self.column_width, padding=(0, 0))
@@ -116,7 +112,7 @@ def fleet_printer_factory(printer: str, num_of_ships: int):
         column_width = int(console.width / STACK_COLUMNS)
         return StackPrinter(column_width, console)
 
-    logging.warn(f"Unknown printer requested, returning 'auto'")
+    logging.warn("Unknown printer requested, returning 'auto'")
     return fleet_printer_factory("auto", num_of_ships)
 
 

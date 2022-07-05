@@ -69,9 +69,7 @@ class Database:
         return self.get_slot(name) == SOCKET_AMMO
 
     def is_invalid(self, name: str) -> bool:
-        checks = (
-            int(self.is_mounting(name)) + int(self.is_compartment(name)) + int(self.is_module(name))
-        )
+        checks = int(self.is_mounting(name)) + int(self.is_compartment(name)) + int(self.is_module(name))
         return checks != 1
 
 

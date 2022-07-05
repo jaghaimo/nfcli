@@ -22,17 +22,17 @@ class Named:
 class Printable:
     @abstractproperty
     def title(self) -> str:
-        raise NotImplemented
+        raise NotImplementedError
 
     @abstractmethod
     def print(self, printer: "FleetPrinter"):
-        raise NotImplemented
+        raise NotImplementedError
 
 
 class Writeable:
     @abstractmethod
     def write(self, filename: str):
-        raise NotImplemented
+        raise NotImplementedError
 
 
 class Content(Named):
@@ -98,7 +98,7 @@ class Ship(Named, Printable, Writeable):
         return [socket for socket in self.sockets if check(socket._name)]
 
     def print(self, printer: "StackPrinter"):
-        renderable = printer.get_ship(self, no_ship_title=True)
+        renderable = printer.get_ship(self)
         printer.console.print(renderable)
 
     def write(self, filename: str):

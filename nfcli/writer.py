@@ -5,6 +5,7 @@ from typing import TYPE_CHECKING, List, TextIO
 
 import cairosvg
 from rich.console import Console
+from rich.text import Text
 
 from nfcli import COLUMN_WIDTH, nfc_theme
 from nfcli.printer import FleetPrinter, determine_printer
@@ -48,7 +49,7 @@ def write_ship(ship: "Ship", png_file: str):
     printer = get_printer(1)
     renderable = printer.get_ship(ship, no_ship_title=True)
     printer.console.print(renderable)
-    title = ship.title
+    title = Text.from_markup(ship.title).plain
     write_file(printer.console, title, png_file)
 
 

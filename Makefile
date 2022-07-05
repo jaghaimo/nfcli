@@ -11,5 +11,14 @@ copy: fleets/Starter\ -\ TF\ Ash.fleet fleets/Starter\ -\ TF\ Oak.fleet
 clean:
 	rm -f *.png
 
+format:
+	black nfcli
+	isort nfcli
+
+lint:
+	black --check --no-color --diff nfcli
+	flake8 --max-line-length 120 --max-complexity 10 nfcli
+	isort nfcli --check --diff
+
 $(SOURCES):
 	python3 -m nfcli -i "$@" -w
