@@ -14,7 +14,7 @@ from rich.tree import Tree
 from nfcli import COLUMN_WIDTH, STACK_COLUMNS, nfc_theme
 
 if TYPE_CHECKING:
-    from nfcli.model import Fleet, Ship, ShipFleetType, Socket
+    from nfcli.model import Component, Fleet, Ship, ShipFleetType
 
 
 class FleetPrinter(ABC):
@@ -27,27 +27,24 @@ class FleetPrinter(ABC):
         if not self.no_title:
             self.console.print(Panel(Text(fleet.title.center(self.console.width), style="white"), style="orange"))
 
-    def add_components(self, tree: Tree, socket: "Socket"):
-        for content in socket.contents:
+    def add_components(self, tree: Tree, component: "Component"):
+        for content in component.contents:
             tree.add(f"{content.name} x{content.quantity} ", style="i d")
 
-    def get_sockets(self, title: str, sockets: List["Socket"], color: Optional[str] = "white") -> Group:
+    def get_sockets(self, title: str, components: List["Component"], color: Optional[str] = "white") -> Group:
         elements = [Rule(Text(f"{title}", style="orange"), style="orange")]
-        for socket in sockets:
-            slot_split = socket.slot_name.split(" ")
-            slot_name = slot_split[-1]
-            just_size = 7 if int(slot_name) < 10 else 6
-            slot_size = "x".join([str(size) for size in socket.slot_size]).rjust(just_size)
-            slot_info = f"[orange]{slot_name}[/orange] [grey]{slot_size}[/grey]"
+        for component in components:
+            slot_number = component.slot_number
+            just_size = 7 if int(slot_number) < 10 else 6
+            slot_size = component.slot_size.rjust(just_size)
+            slot_info = f"[orange]{slot_number}[/orange] [grey]{slot_size}[/grey]"
             tree = Tree(
-                Text.from_markup(f"{slot_info} {socket.name}", overflow="ignore"),
+                Text.from_markup(f"{slot_info} {component.name}", overflow="ignore"),
                 style=color,
                 guide_style="dim",
             )
-            self.add_components(tree, socket)
+            self.add_components(tree, component)
             elements.append(tree)
-        if not sockets:
-            elements.append("[grey]" + "<EMPTY>".center(self.column_width) + "[/grey]")
         return Group(*elements)
 
 
@@ -56,10 +53,14 @@ class ColumnPrinter(FleetPrinter):
         line1 = ship.name.center(self.column_width)
         line2 = f"{ship.hull} ({ship.cost})".center(self.column_width)
         text = f"\n[b]{line1}[/b]\n{line2}"
-        mountings = self.get_sockets("Mountings", ship.mountings)
-        compartments = self.get_sockets("Compartments", ship.compartments)
-        modules = self.get_sockets("Modules", ship.modules)
-        group = Group(text, mountings, compartments, modules)
+        if ship.is_valid:
+            mountings = self.get_sockets("Mountings", ship.mountings)
+            compartments = self.get_sockets("Compartments", ship.compartments)
+            modules = self.get_sockets("Modules", ship.modules)
+            group = Group(text, mountings, compartments, modules)
+        else:
+            group = Group(text, self.get_sockets("Components", ship.components))
+
         return Padding(group, (0, 1))
 
     def print(self, fleet: "Fleet"):
@@ -78,12 +79,12 @@ class StackPrinter(FleetPrinter):
 
     def print(self, fleet: "Fleet"):
         super().print(fleet)
-        for ship in fleet.ships:
+        for ship in fleet.valid_ships:
             self.console.print(self.get_ship(ship))
 
 
-def determine_printer(num_of_ships: int) -> Tuple[int, Type[FleetPrinter]]:
-    if num_of_ships < 4:
+def determine_printer(num_of_ships: int, is_valid: bool) -> Tuple[int, Type[FleetPrinter]]:
+    if num_of_ships < 4 and is_valid:
         return (STACK_COLUMNS * COLUMN_WIDTH, StackPrinter)
 
     width = num_of_ships * COLUMN_WIDTH
@@ -93,14 +94,11 @@ def determine_printer(num_of_ships: int) -> Tuple[int, Type[FleetPrinter]]:
     return (width, ColumnPrinter)
 
 
-def fleet_printer_factory(printer: str, num_of_ships: int):
+def fleet_printer_factory(printer: str, fleet: "Fleet"):
     console = Console(theme=nfc_theme)
-    if printer == "auto":
-        style = "stack" if console.width < num_of_ships * COLUMN_WIDTH else "column"
-        style = style if num_of_ships > 3 else "stack"
-        return fleet_printer_factory(style, num_of_ships)
+    num_of_ships = fleet.n_ships
 
-    if printer == "column":
+    if printer == "column" or not fleet.is_valid:
         logging.debug("Returning ColumnPrinter")
         column_width = min(COLUMN_WIDTH, console.width)
         console.width = min(num_of_ships * column_width, console.width)
@@ -112,12 +110,17 @@ def fleet_printer_factory(printer: str, num_of_ships: int):
         column_width = int(console.width / STACK_COLUMNS)
         return StackPrinter(column_width, console)
 
+    if printer == "auto":
+        style = "stack" if console.width < num_of_ships * COLUMN_WIDTH else "column"
+        style = style if num_of_ships > 3 else "stack"
+        return fleet_printer_factory(style, fleet)
+
     logging.warn("Unknown printer requested, returning 'auto'")
-    return fleet_printer_factory("auto", num_of_ships)
+    return fleet_printer_factory("auto", fleet)
 
 
 def printer_factory(printer: str, entity: "ShipFleetType"):
     if entity.__class__.__name__ == "Fleet":
-        return fleet_printer_factory(printer, entity.n_ships)
+        return fleet_printer_factory(printer, entity)
 
     return fleet_printer_factory("stack", 1)

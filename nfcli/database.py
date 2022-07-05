@@ -1,4 +1,6 @@
 import json
+import logging
+from glob import glob
 from typing import Dict
 
 KEY_SLOT = "slot"
@@ -12,65 +14,28 @@ SOCKET_UNKNOWN = "unknown"
 
 class Database:
     def __init__(self) -> None:
-        # NEBFLTCOM Data (unused)
-        self.components = dict()
-        self.ships = dict()
-        # Nebulous Fleet Manager
-        self.component_data = self.load_json("data/component_data.json")
-        self.ship_data = self.load_json("data/ship_data.json")
+        self.components = self.load_all("data/*_components.json")
+        self.ships = self.load_all("data/*_ships.json")
 
-    def find_socket_attr(self, ship_data: Dict, key: str, attr: str) -> str:
-        sockets = [
-            ship_data.get(socket_type).get(key)
-            for socket_type in ["mountkeys", "compartmentkeys", "modulekeys"]
-            for sockets in ship_data.get(socket_type)
-            if key in sockets
-        ]
+    def load_all(self, glob_path: str) -> Dict:
+        loaded = {}
+        for path in glob(glob_path):
+            logging.debug(f"Reading {path}")
+            loaded.update(self.load_json(path))
+        return loaded
 
-        if len(sockets) == 1:
-            return sockets[0].get(attr)
-
-        return SOCKET_UNKNOWN.title()
-
-    def load_json(self, path_to_file: str) -> Dict:
+    def load_json(self, path: str) -> Dict:
         try:
-            f = open(path_to_file, "r")
+            f = open(path, "r")
         except EnvironmentError:
             return {}
         else:
             return json.load(f)
 
-    def get_name(self, name: str) -> str:
-        return name.split("/")[-1]
-
-    def get_socket_attr(self, hull: str, key: str, attr: str) -> str:
-        try:
-            ship_data = self.ship_data.get(hull)
-            return self.find_socket_attr(ship_data, key, attr)
-        except AttributeError:
-            return SOCKET_UNKNOWN
-
-    def get_slot(self, name: str) -> str:
-        try:
-            return self.component_data.get(name).get(KEY_SLOT)
-        except AttributeError:
-            return SOCKET_UNKNOWN
-
-    def is_mounting(self, name: str) -> bool:
-        return self.get_slot(name) == SOCKET_MOUNT
-
-    def is_compartment(self, name: str) -> bool:
-        return self.get_slot(name) == SOCKET_COMPARTMENT
-
-    def is_module(self, name: str) -> bool:
-        return self.get_slot(name) == SOCKET_MODULE
-
-    def is_ammo(self, name: str) -> bool:
-        return self.get_slot(name) == SOCKET_AMMO
-
-    def is_invalid(self, name: str) -> bool:
-        checks = int(self.is_mounting(name)) + int(self.is_compartment(name)) + int(self.is_module(name))
-        return checks != 1
+    def get_ship_data(self, hull: str) -> Dict:
+        if hull in self.ships:
+            return self.ships.get(hull)
+        return {}
 
 
 db = Database()

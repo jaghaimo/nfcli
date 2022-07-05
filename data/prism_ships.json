@@ -1,0 +1,159 @@
+{
+    "prism/CV_aryabhata": {
+        "mountkeys": {
+            "c2mount1": {},
+            "c2mount2": {},
+            "c1mount1": {},
+            "c1mount2": {}
+        },
+        "compartmentkeys": {
+            "mediumcompartment1": {},
+            "mediumcompartment2": {},
+            "smallcompartment1": {},
+            "smallcompartment2": {}
+        },
+        "modulekeys": {
+            "largemodule1": {},
+            "mediummodule1": {},
+            "mediummodule2": {},
+            "smallmodule1": {}
+        }
+    },
+    "prism/FF_euler": {
+        "mountkeys": {
+            "AiLyweqRf0GHk9fP-5Hyawa": {},
+            "6x7hX-NBqUyEM80kJXxu9gb": {},
+            "3EwSgEOj5UGQUqGrF6t5_gc": {},
+            "3EwSgEOj5UGQUqGrF6t5_gd": {}
+        },
+        "compartmentkeys": {
+            "pipSayFCn02A3Uov_rOk6Qa": {},
+            "pipSayFCn02A3Uov_rOk6Q2b": {},
+            "pipSayFCn02A3Uov_rOk6Q2d": {},
+            "pipSayFCn02A3Uov_rOk6Q231": {},
+            "pipSayFCn02A3Uov_rOk6Q232": {}
+        },
+        "modulekeys": {
+            "0GMte5rYLE6w1SAsLPKgXQa": {},
+            "TAgBFGiv-UOo4GOrNxWckga": {},
+            "Bisi0t3FmE2yYxB340uvFQa": {},
+            "KfMisTMUF0um0QOtylrOcwa": {},
+            "eMUMYEJ2Fk62RHFvPC22qAa": {}
+        }
+    },
+    "prism/DD_noether": {
+        "mountkeys": {
+            "mount345_DD1": {},
+            "mount345_DD2": {},
+            "mount345_DD3": {},
+            "mount343_DD1": {},
+            "mount343_DD2": {},
+            "mount343_DD3": {},
+            "mount343_DD4": {},
+            "mount343_DD5": {},
+            "mount222_DD1": {},
+            "mount222_DD2": {}
+        },
+        "compartmentkeys": {
+            "compartment618_DD": {},
+            "compartment618bridge_DD": {},
+            "compartment614_DD1": {},
+            "compartment614_DD2": {},
+            "compartment614_DD3": {},
+            "compartment614_DD4": {},
+            "compartment614_DD5": {},
+            "compartment313_DD1": {},
+            "compartment313_DD2": {}
+        },
+        "modulekeys": {
+            "module666reactor_DD": {},
+            "module666drive_DD": {},
+            "module333_DD1": {},
+            "module333_DD2": {},
+            "module333_DD3": {},
+            "module333_DD4": {},
+            "module222radar_DD": {},
+            "module222_DD": {}
+        }
+    },
+    "prism/CL_thales": {
+        "mountkeys": {
+            "mount646_CL1": {},
+            "mount646_CL2": {},
+            "mount343_CL1": {},
+            "mount343_CL2": {},
+            "mount343_CL3": {},
+            "mount343_CL4": {},
+            "mount222_CL1": {},
+            "mount222_CL2": {}
+        },
+        "compartmentkeys": {
+            "compartment618bridge_CL": {},
+            "compartment618_CL1": {},
+            "compartment618_CL2": {},
+            "compartment618_CL3": {},
+            "compartment616_CL1": {},
+            "compartment616_CL2": {},
+            "compartment416_CL1": {},
+            "compartment416_CL2": {},
+            "compartment416_CL3": {}
+        },
+        "modulekeys": {
+            "module666reactor_CL": {},
+            "module8810drive_CL": {},
+            "module333_CL1": {},
+            "module333_CL2": {},
+            "module333_CL3": {},
+            "module333_CL4": {},
+            "module222radar_CL": {},
+            "module222_CL": {}
+        }
+    },
+    "prism/CH_descartes": {
+        "mountkeys": {
+            "spinalmount1": {},
+            "spinalmount2": {},
+            "c4mount1": {},
+            "c4mount2": {},
+            "c3mount1": {},
+            "c3mount2": {},
+            "c2mount1": {},
+            "c2mount2": {},
+            "c2mount3": {},
+            "c2mount4": {},
+            "c1mount1": {},
+            "c1mount2": {},
+            "c1mount3": {},
+            "c1mount4": {}
+        },
+        "compartmentkeys": {
+            "hugecompartment1": {},
+            "hugecompartment2": {},
+            "hugecompartment3": {},
+            "hugecompartment4": {},
+            "hugecompartment5": {},
+            "hugecompartment6": {},
+            "mediumcompartment1": {},
+            "mediumcompartment2": {},
+            "mediumcompartment3": {},
+            "mediumcompartment4": {},
+            "smallcompartment1": {},
+            "smallcompartment2": {},
+            "smallcompartment3": {}
+        },
+        "modulekeys": {
+            "hugemodule1": {},
+            "largemodule1": {},
+            "largemodule2": {},
+            "mediummodule1": {},
+            "mediummodule2": {},
+            "mediummodule3": {},
+            "mediummodule4": {},
+            "mediummodule5": {},
+            "smallmodule1": {},
+            "smallmodule2": {},
+            "smallmodule3": {},
+            "smallmodule4": {}
+        }
+    }
+}

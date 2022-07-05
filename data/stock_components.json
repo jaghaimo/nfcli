@@ -1,0 +1,1084 @@
+{
+    "Stock/CR10 Antenna": {
+        "slot": "mount",
+        "category": "Communications",
+        "type": "Comms Antenna",
+        "cost": 5,
+        "size": [
+            2,
+            1,
+            2
+        ],
+        "power": 250
+    },
+    "Stock/CR70 Antenna": {
+        "slot": "mount",
+        "category": "Communications",
+        "type": "Comms Antenna",
+        "cost": 15,
+        "size": [
+            2,
+            1,
+            2
+        ],
+        "power": 600
+    },
+    "Stock/CR75 Antenna": {
+        "slot": "mount",
+        "category": "Communications",
+        "type": "Comms Antenna",
+        "cost": 0,
+        "size" :[
+            0,
+            0,
+            0
+        ]
+    },
+    "Stock/E15 'Masquerade' Signature Booster": {
+        "slot": "mount",
+        "category": "EWar",
+        "type": "Electronic Deception Module",
+        "cost": 20,
+        "size": [
+            3,
+            1,
+            3
+        ],
+        "power": 600
+    },
+    "Stock/E55 'Spotlight' Illuminator": {
+        "slot": "mount",
+        "category": "EWar",
+        "type": "Illuminator (Radar)",
+        "cost": 20,
+        "size": [
+            2,
+            1,
+            2
+        ],
+        "power": 750
+    },
+    "Stock/E57 'Floodlight' Illuminator": {
+        "slot": "mount",
+        "category": "EWar",
+        "type": "Illuminator (Radar)",
+        "cost": 30,
+        "size": [
+            2,
+            1,
+            2
+        ],
+        "power": 1500
+    },
+    "Stock/E70 'Interruption' Jammer": {
+        "slot": "mount",
+        "category": "EWar",
+        "type": "Jammer (Comms)",
+        "cost": 75,
+        "size": [
+            3,
+            1,
+            3
+        ],
+        "power": 750
+    },
+    "Stock/E71 'Hangup' Jammer": {
+        "slot": "mount",
+        "category": "EWar",
+        "type": "Jammer (Comms)",
+        "cost": 45,
+        "size": [
+            2,
+            1,
+            2
+        ],
+        "power": 500
+    },
+    "Stock/E90 'Blanket' Jammer": {
+        "slot": "mount",
+        "category": "EWar",
+        "type": "Jammer (Radar)",
+        "cost": 50,
+        "size": [
+            2,
+            1,
+            2
+        ],
+        "power": 1000
+    },
+    "Stock/ES22 'Pinard' Electronic Support Module": {
+        "slot": "mount",
+        "category": "Sensors",
+        "type": "ELINT Detector",
+        "cost": 30,
+        "size": [
+            3,
+            1,
+            3
+        ],
+        "power": 200
+    },
+    "Stock/RF101 'Bullseye' Radar": {
+        "slot": "mount",
+        "category": "Sensors",
+        "type": "Fire Control Radar",
+        "cost": 40,
+        "size": [
+            2,
+            1,
+            2
+        ],
+        "power": 300
+    },
+    "Stock/Mk610 Beam Turret": {
+        "slot": "mount",
+        "category": "Weapons - Energy",
+        "type": "Class 5 Particle Beam",
+        "cost": 100,
+        "size": [
+            8,
+            5,
+            6
+        ],
+        "crew": 20,
+        "power": 3500
+    },
+    "Stock/MLS-2 Launcher": {
+        "slot": "mount",
+        "category": "Weapons - Missile",
+        "type": "Size 2 Missile Launcher",
+        "cost": 20,
+        "size": [
+            2,
+            2,
+            3
+        ],
+        "crew": 10,
+        "power": 50,
+        "ammo": "Size 2 Missile"
+    },
+    "Stock/MLS-3 Launcher": {
+        "slot": "mount",
+        "category": "Weapons - Missile",
+        "type": "Size 3 Torpedo Launcher",
+        "cost": 20,
+        "size": [
+            2,
+            2,
+            5
+        ],
+        "crew": 12,
+        "power": 50,
+        "ammo": "Size 3 Missile"
+    },
+    "Stock/VLS1-23 Launcher": {
+        "slot": "mount",
+        "category": "Weapons - Missile",
+        "type": "Size 1 Missile Launcher",
+        "cost": 5,
+        "size": [
+            2,
+            2,
+            2
+        ],
+        "power": 50,    
+        "ammo": "Size 1 Missile",
+        "cells": 23,
+        "xsi:type": "CellLauncherData"
+    },
+    "Stock/VLS2-16 Launcher": {
+        "slot": "mount",
+        "category": "Weapons - Missile",
+        "type": "Size 2 Missile Launcher",
+        "cost": 10,
+        "size": [
+            3,
+            4,
+            3
+        ],
+        "power": 200,
+        "ammo": "Size 2 Missile",
+        "cells": 16,
+        "xsi:type": "CellLauncherData"
+    },
+    "Stock/Mk20 'Defender' PDT": {
+        "slot": "mount",
+        "category": "Weapons - Point Defense",
+        "type": "Class 1 Kinetic",
+        "cost": 15,
+        "size": [
+            2,
+            1,
+            2
+        ],
+        "crew": 3,
+        "power": 175,
+        "ammo": "Ballistic/Chemical - 20mm"
+    },
+    "Stock/Mk25 'Rebound' PDT": {
+        "slot": "mount",
+        "category": "Weapons - Point Defense",
+        "type": "Class 1 Kinetic",
+        "cost": 30,
+        "size": [
+            2,
+            1,
+            2
+        ],
+        "crew": 3,
+        "power": 20,
+        "ammo": "Ballistic/Chemical/Timed - 50mm"
+    },
+    "Stock/Mk90 'Aurora' PDT": {
+        "slot": "mount",
+        "category": "Weapons - Point Defense",
+        "type": "Class 1 Pulsed Laser",
+        "cost": 55,
+        "size": [
+            2,
+            1,
+            2
+        ],
+        "power": 700
+    },
+    "Stock/Mk61 Cannon": {
+        "slot": "mount",
+        "category": "Weapons - Projectile",
+        "type": "Class 2 Cannon",
+        "cost": 10,
+        "size": [
+            3,
+            1,
+            3
+        ],
+        "crew": 4,
+        "power": 50,
+        "ammo": "Ballistic/Chemical - 120mm"
+    },
+    "Stock/Mk62 Cannon": {
+        "slot": "mount",
+        "category": "Weapons - Projectile",
+        "type": "Class 2 Cannon",
+        "cost": 20,
+        "size": [
+            3,
+            1,
+            3
+        ],
+        "crew": 8,
+        "power": 50,
+        "ammo": "Ballistic/Chemical - 120mm"
+    },
+    "Stock/Mk64 Cannon": {
+        "slot": "mount",
+        "category": "Weapons - Projectile",
+        "type": "Class 3 Cannon",
+        "cost": 30,
+        "size": [
+            3,
+            1,
+            5
+        ],
+        "crew": 15,
+        "power": 125,
+        "ammo": "Ballistic/Chemical - 250mm"
+    },
+    "Stock/Mk66 Cannon": {
+        "slot": "mount",
+        "category": "Weapons - Projectile",
+        "type": "Class 4 Cannon",
+        "cost": 45,
+        "size": [
+            6,
+            3,
+            6
+        ],
+        "crew": 25,
+        "power": 200,
+        "ammo": "Ballistic/Chemical - 450mm"
+    },
+    "Stock/Mk68 Cannon": {
+        "slot": "mount",
+        "category": "Weapons - Projectile",
+        "type": "Class 5 Cannon",
+        "cost": 75,
+        "size": [
+            8,
+            5,
+            8
+        ],
+        "crew": 40,
+        "power": 225,
+        "ammo": "Ballistic/Chemical - 450mm"
+    },
+    "Stock/Mk81 Railgun": {
+        "slot": "mount",
+        "category": "Weapons - Projectile",
+        "type": "Class 4 Railgun",
+        "cost": 50,
+        "size": [
+            6,
+            3,
+            6
+        ],
+        "crew": 15,
+        "power": 1500,
+        "ammo": "Ballistic/Magnetic - 300mm"
+    },
+    "Stock/Mk82 Railgun": {
+        "slot": "mount",
+        "category": "Weapons - Projectile",
+        "type": "Class 5 Railgun",
+        "cost": 80,
+        "size": [
+            8,
+            5,
+            8
+        ],
+        "crew": 25,
+        "power": 1800,
+        "ammo": "Ballistic/Magnetic - 300mm"
+    },
+    "Stock/Mk550 Mass Driver": {
+        "slot": "mount",
+        "category": "Weapons - Spinal",
+        "type": "Spinal Mass Driver",
+        "cost": 75,
+        "size": [
+            4,
+            12,
+            4
+        ],
+        "crew": 15,
+        "power": 2000,
+        "ammo": "Ballistic/Magnetic - 300mm"
+    },
+    "Stock/Mk600 Beam Cannon": {
+        "slot": "mount",
+        "category": "Weapons - Spinal",
+        "type": "Spinal Particle Beam",
+        "cost": 75,
+        "size": [
+            4,
+            12,
+            4
+        ],
+        "crew": 15,
+        "power": 3000
+    },
+    "Stock/Auxiliary Steering": {
+        "slot": "compartment",
+        "category": "Command",
+        "type": "Command Center",
+        "cost": 10,
+        "size": [
+            3,
+            1,
+            3
+        ],
+        "crew": 5
+    },
+    "Stock/Basic CIC": {
+        "slot": "compartment",
+        "category": "Command",
+        "type": "Command Center",
+        "cost": 10,
+        "size": [
+            4,
+            1,
+            6
+        ],
+        "crew": 20
+    },
+    "Stock/Citadel CIC": {
+        "slot": "compartment",
+        "category": "Command",
+        "type": "Command Center",
+        "cost": 75,
+        "size": [
+            6,
+            1,
+            8
+        ],
+        "crew": 40
+    },
+    "Stock/Reinforced CIC": {
+        "slot": "compartment",
+        "category": "Command",
+        "type": "Command Center",
+        "cost": 25,
+        "size": [
+            4,
+            1,
+            6
+        ],
+        "crew": 20
+    },
+    "Stock/Battle Dressing Station": {
+        "slot": "compartment",
+        "category": "Crew",
+        "type": "Personnel",
+        "cost": 20,
+        "size": [
+            3,
+            1,
+            3
+        ],
+        "crew": 8
+    },
+    "Stock/Berthing": {
+        "slot": "compartment",
+        "category": "Crew",
+        "type": "Personnel",
+        "cost": 1,
+        "size": [
+            1,
+            1,
+            1
+        ],
+        "crewprovided": 3
+    },
+    "Stock/Damage Control Central": {
+        "slot": "compartment",
+        "category": "Damage Control",
+        "type": "Damage Control",
+        "cost": 20,
+        "size": [
+            3,
+            1,
+            3
+        ],
+        "crew": 10,
+        "power": 50
+    },
+    "Stock/Large DC Locker": {
+        "slot": "compartment",
+        "category": "Damage Control",
+        "type": "Damage Control",
+        "cost": 45,
+        "size": [
+            3,
+            1,
+            6
+        ],
+        "crew": 15
+    },
+    "Stock/Rapid DC Locker": {
+        "slot": "compartment",
+        "category": "Damage Control",
+        "type": "Damage Control",
+        "cost": 10,
+        "size": [
+            3,
+            1,
+            3
+        ],
+        "crew": 5
+    },
+    "Stock/Reinforced DC Locker": {
+        "slot": "compartment",
+        "category": "Damage Control",
+        "type": "Damage Control",
+        "cost": 45,
+        "size": [
+            3,
+            1,
+            3
+        ],
+        "crew": 10
+    },
+    "Stock/Small DC Locker": {
+        "slot": "compartment",
+        "category": "Damage Control",
+        "type": "Damage Control",
+        "cost": 30,
+        "size": [
+            3,
+            1,
+            3
+        ],
+        "crew": 10
+    },
+    "Stock/Small Workshop": {
+        "slot": "compartment",
+        "category": "Damage Control",
+        "type": "Damage Control",
+        "cost": 20,
+        "size": [
+            3,
+            1,
+            3
+        ],
+        "crew": 10,
+        "power": 50
+    },
+    "Stock/Plant Control Center": {
+        "slot": "compartment",
+        "category": "Engineering",
+        "type": "Reactor Control",
+        "cost": 25,
+        "size": [
+            3,
+            1,
+            3
+        ],
+        "crew": 15,
+        "powermult": 0.2
+    },
+    "Stock/Analysis Annex": {
+        "slot": "compartment",
+        "category": "Intelligence",
+        "type": "Intel Compartment",
+        "cost": 20,
+        "size": [
+            3,
+            1,
+            3
+        ],
+        "crew": 20
+    },
+    "Stock/Intelligence Center": {
+        "slot": "compartment",
+        "category": "Intelligence",
+        "type": "Intel Compartment",
+        "cost": 90,
+        "size": [
+            6,
+            1,
+            8
+        ],
+        "crew": 45
+    },
+    "Stock/Bulk Magazine": {
+        "slot": "compartment",
+        "category": "Storage",
+        "type": "Ammunition Storage",
+        "cost": 1,
+        "size": [
+            1,
+            1,
+            1
+        ],
+        "capacity": 15,
+        "xsi:type": "BulkMagazineData"
+    },
+    "Stock/Reinforced Magazine": {
+        "slot": "compartment",
+        "category": "Storage",
+        "type": "Ammunition Storage",
+        "cost": 2,
+        "size": [
+            1,
+            1,
+            1
+        ],
+        "capacity": 10,
+        "power": 10,
+        "xsi:type": "BulkMagazineData"
+    },
+    "Stock/Gun Plotting Center": {
+        "slot": "compartment",
+        "category": "Weapon Support",
+        "type": "Gunnery",
+        "cost": 30,
+        "size": [
+            3,
+            1,
+            3
+        ],
+        "crew": 30,
+        "power": 50
+    },
+    "Stock/Supplementary Radio Amplifiers": {
+        "slot": "module",
+        "category": "Communications",
+        "type": "Comms Control",
+        "cost": 20,
+        "size": [
+            2,
+            2,
+            2
+        ],
+        "power": 100
+    },
+    "Stock/Launcher Deluge System": {
+        "slot": "module",
+        "category": "Damage Control",
+        "type": "Module",
+        "cost": 15,
+        "size": [
+            2,
+            2,
+            2
+        ],
+        "power": 100
+    },
+    "Stock/Magazine Sprinklers": {
+        "slot": "module",
+        "category": "Damage Control",
+        "type": "Module",
+        "cost": 15,
+        "size": [
+            2,
+            2,
+            2
+        ],
+        "power": 100
+    },
+    "Stock/Redundant Reactor Failsafes": {
+        "slot": "module",
+        "category": "Engineering",
+        "type": "Module",
+        "cost": 25,
+        "size": [
+            2,
+            2,
+            2
+        ],
+        "power": 100
+    },
+    "Stock/Reinforced Thruster Nozzles": {
+        "slot": "module",
+        "category": "Engineering",
+        "type": "Thruster Upgrade",
+        "cost": 10,
+        "size": [
+            2,
+            2,
+            2
+        ]
+    },
+    "Stock/Small Reactor Booster": {
+        "slot": "module",
+        "category": "Engineering",
+        "type": "Gunnery",
+        "cost": 10,
+        "size": [
+            2,
+            2,
+            2
+        ],
+        "powermult": 0.1
+    },
+    "Stock/Signature Scrambler": {
+        "slot": "module",
+        "category": "EWar",
+        "type": "Electronic Deception Module",
+        "cost": 35,
+        "size": [
+            2,
+            2,
+            2
+        ],
+        "power": 450
+    },
+    "Stock/FR3300 Micro Reactor": {
+        "slot": "module",
+        "category": "Powerplant",
+        "type": "Fusion Powerplant",
+        "cost": 10,
+        "size": [
+            3,
+            3,
+            3
+        ],
+        "crew": 5,
+        "powerprovided": 2250
+    },
+    "Stock/FR4800 Reactor": {
+        "slot": "module",
+        "category": "Powerplant",
+        "type": "Fusion Powerplant",
+        "cost": 10,
+        "size": [
+            5,
+            5,
+            5
+        ],
+        "crew": 10,
+        "powerprovided": 4200
+    },
+    "Stock/FM200 Drive": {
+        "slot": "module",
+        "category": "Propulsion",
+        "type": "Fusion Drive",
+        "cost": 10,
+        "size": [
+            5,
+            3,
+            5
+        ],
+        "crew": 10,
+        "powerprovided": 500
+    },
+    "Stock/FM200R Drive": {
+        "slot": "module",
+        "category": "Propulsion",
+        "type": "Fusion Drive",
+        "cost": 20,
+        "size": [
+            5,
+            3,
+            5
+        ],
+        "crew": 10,
+        "powerprovided": 500
+    },
+    "Stock/FM230 'Whiplash' Drive": {
+        "slot": "module",
+        "category": "Propulsion",
+        "type": "Fusion Drive",
+        "cost": 20,
+        "size": [
+            5,
+            3,
+            5
+        ],
+        "crew": 10,
+        "powerprovided": 650
+    },
+    "Stock/FM240 'Dragonfly' Drive": {
+        "slot": "module",
+        "category": "Propulsion",
+        "type": "Fusion Drive",
+        "cost": 20,
+        "size": [
+            5,
+            3,
+            5
+        ],
+        "crew": 10,
+        "powerprovided": 500
+    },
+    "Stock/FM280 'Raider' Drive": {
+        "slot": "module",
+        "category": "Propulsion",
+        "type": "Fusion Drive",
+        "cost": 20,
+        "size": [
+            5,
+            3,
+            5
+        ],
+        "crew": 10,
+        "powerprovided": 300
+    },
+    "Stock/FM30X 'Prowler' Drive": {
+        "slot": "module",
+        "category": "Propulsion",
+        "type": "Fusion Drive",
+        "cost": 25,
+        "size": [
+            5,
+            3,
+            5
+        ],
+        "crew": 10,
+        "powerprovided": 350
+    },
+    "Stock/FM500 Drive": {
+        "slot": "module",
+        "category": "Propulsion",
+        "type": "Fusion Drive",
+        "cost": 15,
+        "size": [
+            10,
+            8,
+            10
+        ],
+        "crew": 10,
+        "powerprovided": 1000
+    },
+    "Stock/FM500R Drive": {
+        "slot": "module",
+        "category": "Propulsion",
+        "type": "Fusion Drive",
+        "cost": 30,
+        "size": [
+            10,
+            8,
+            10
+        ],
+        "crew": 10,
+        "powerprovided": 1000
+    },
+    "Stock/FM530 'Whiplash' Drive": {
+        "slot": "module",
+        "category": "Propulsion",
+        "type": "Fusion Drive",
+        "cost": 30,
+        "size": [
+            10,
+            8,
+            10
+        ],
+        "crew": 10,
+        "powerprovided": 1500
+    },
+    "Stock/FM540 'Dragonfly' Drive": {
+        "slot": "module",
+        "category": "Propulsion",
+        "type": "Fusion Drive",
+        "cost": 30,
+        "size": [
+            10,
+            8,
+            10
+        ],
+        "crew": 10,
+        "powerprovided": 1000
+    },
+    "Stock/FM580 'Raider' Drive": {
+        "slot": "module",
+        "category": "Propulsion",
+        "type": "Fusion Drive",
+        "cost": 30,
+        "size": [
+            10,
+            8,
+            10
+        ],
+        "crew": 10,
+        "powerprovided": 500
+    },
+    "Stock/Adaptive Radar Receiver": {
+        "slot": "module",
+        "category": "Sensors",
+        "type": "Radar Control",
+        "cost": 30,
+        "size": [
+            2,
+            2,
+            2
+        ],
+        "power": 200
+    },
+    "Stock/RM50 'Parallax' Radar": {
+        "slot": "module",
+        "category": "Sensors",
+        "type": "Multi-function Radar",
+        "cost": 45,
+        "size": [
+            2,
+            2,
+            2
+        ],
+        "power": 3600
+    },
+    "Stock/RS35 'Frontline' Radar": {
+        "slot": "module",
+        "category": "Sensors",
+        "type": "Search Radar",
+        "cost": 10,
+        "size": [
+            2,
+            2,
+            2
+        ],
+        "power": 2000
+    },
+    "Stock/RS41 'Spyglass' Radar": {
+        "slot": "module",
+        "category": "Sensors",
+        "type": "Search Radar",
+        "cost": 25,
+        "size": [
+            2,
+            2,
+            2
+        ],
+        "power": 4000
+    },
+    "Stock/Track Correlator": {
+        "slot": "module",
+        "category": "Sensors",
+        "type": "Radar Control",
+        "cost": 25,
+        "size": [
+            2,
+            2,
+            2
+        ],
+        "power": 150
+    },
+    "Stock/Actively Cooled Amplifiers": {
+        "slot": "module",
+        "category": "Weapon Support",
+        "type": "Module",
+        "cost": 25,
+        "size": [
+            2,
+            2,
+            2
+        ],
+        "power": 175
+    },
+    "Stock/Ammunition Elevators": {
+        "slot": "module",
+        "category": "Weapon Support",
+        "type": "Gunnery",
+        "cost": 20,
+        "size": [
+            2,
+            2,
+            2
+        ],
+        "power": 150
+    },
+    "Stock/Energy Regulator": {
+        "slot": "module",
+        "category": "Weapon Support",
+        "type": "Gunnery",
+        "cost": 30,
+        "size": [
+            2,
+            2,
+            2
+        ],
+        "power": 650
+    },
+    "Stock/Focused Particle Accelerator": {
+        "slot": "module",
+        "category": "Weapon Support",
+        "type": "Gunnery",
+        "cost": 25,
+        "size": [
+            3,
+            3,
+            3
+        ],
+        "power": 800
+    },
+    "Stock/Mount Gyros": {
+        "slot": "module",
+        "category": "Weapon Support",
+        "type": "Gunnery",
+        "cost": 20,
+        "size": [
+            2,
+            2,
+            2
+        ],
+        "power": 150
+    },
+    "Stock/Small Energy Regulator": {
+        "slot": "module",
+        "category": "Weapon Support",
+        "type": "Gunnery",
+        "cost": 20,
+        "size": [
+            2,
+            2,
+            2
+        ],
+        "power": 400
+    },
+    "Stock/120mm AP Shell": {
+        "slot": "ammo",
+        "type": "Ballistic/Chemical - 120mm",
+        "cost": "1/100",
+        "volume": 0.05
+    },
+    "Stock/120mm HE Shell": {
+        "slot": "ammo",
+        "type": "Ballistic/Chemical - 120mm",
+        "cost": "1/100",
+        "volume": 0.05
+    },
+    "Stock/120mm HE-RPF Shell": {
+        "slot": "ammo",
+        "type": "Ballistic/Chemical - 120mm",
+        "cost": "1/100",
+        "volume": 0.05
+    },
+    "Stock/20mm Slug": {
+        "slot": "ammo",
+        "type": "Ballistic/Chemical - 20mm",
+        "cost": "1/500",
+        "volume": 0.075
+    },
+    "Stock/250mm AP Shell": {
+        "slot": "ammo",
+        "type": "Ballistic/Chemical - 250mm",
+        "cost": "1/50",
+        "volume": 0.15
+    },
+    "Stock/250mm HE Shell": {
+        "slot": "ammo",
+        "type": "Ballistic/Chemical - 250mm",
+        "cost": "1/50",
+        "volume": 0.15
+    },
+    "Stock/250mm HE-RPF Shell": {
+        "slot": "ammo",
+        "type": "Ballistic/Chemical - 250mm",
+        "cost": "1/50",
+        "volume": 0.15
+    },
+    "Stock/300mm AP Rail Sabot": {
+        "slot": "ammo",
+        "type": "Ballistic/Magnetic - 300mm",
+        "cost": "1/25",
+        "volume": 0.75
+    },
+    "Stock/450mm AP Shell": {
+        "slot": "ammo",
+        "type": "Ballistic/Chemical - 450mm",
+        "cost": "1/25",
+        "volume": 0.8
+    },
+    "Stock/450mm HE Shell": {
+        "slot": "ammo",
+        "type": "Ballistic/Chemical - 450mm",
+        "cost": "1/25",
+        "volume": 0.8
+    },
+    "Stock/EA12 Chaff Decoy": {
+        "slot": "ammo",
+        "type": "Size 1 Missile",
+        "cost": 1,
+        "volume": 10
+    },
+    "Stock/Flak Round": {
+        "slot": "ammo",
+        "type": "Ballistic/Chemical/Timed - 50mm",
+        "cost": "1/75",
+        "volume": 0.01
+    },
+    "Stock/SDM-112 Riposte": {
+        "slot": "ammo",
+        "type": "Size 1 Missile",
+        "cost": 2,
+        "volume": 10
+    },
+    "Stock/SGM-206 Thunderhead": {
+        "slot": "ammo",
+        "type": "Size 2 Missile",
+        "cost": 6,
+        "volume": 20
+    },
+    "Stock/SGM-210 Squall": {
+        "slot": "ammo",
+        "type": "Size 2 Missile",
+        "cost": 2,
+        "volume": 20
+    },
+    "Stock/SGM-225 Hurricane": {
+        "slot": "ammo",
+        "type": "Size 2 Missile",
+        "cost": 8,
+        "volume": 20
+    },
+    "Stock/SGM-233 Gale": {
+        "slot": "ammo",
+        "type": "Size 2 Missile",
+        "cost": 3,
+        "volume": 20
+    },
+    "Stock/SGT-350 Mace": {
+        "slot": "ammo",
+        "type": "Size 3 Missile",
+        "cost": 8,
+        "volume": 30
+    }
+}

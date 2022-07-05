@@ -32,8 +32,8 @@ def get_temp_filename(ext: str) -> str:
     return tempfile.mktemp() + ext
 
 
-def get_printer(num_of_ships: int) -> FleetPrinter:
-    width, printer = determine_printer(num_of_ships)
+def get_printer(num_of_ships: int, is_valid: bool) -> FleetPrinter:
+    width, printer = determine_printer(num_of_ships, is_valid)
     console = Console(width=width, record=True, theme=nfc_theme, force_terminal=True)
     console.set_alt_screen(True)
     return printer(COLUMN_WIDTH, console, no_title=True)
@@ -46,7 +46,7 @@ def write_file(console: Console, title: str, png_file: str):
 
 
 def write_ship(ship: "Ship", png_file: str):
-    printer = get_printer(1)
+    printer = get_printer(1, ship.is_valid)
     renderable = printer.get_ship(ship, no_ship_title=True)
     printer.console.print(renderable)
     title = Text.from_markup(ship.title).plain
@@ -54,7 +54,7 @@ def write_ship(ship: "Ship", png_file: str):
 
 
 def write_fleet(fleet: "Fleet", png_file: str):
-    printer = get_printer(fleet.n_ships)
+    printer = get_printer(fleet.n_ships, fleet.is_valid)
     printer.print(fleet)
     title = fleet.title
     write_file(printer.console, title, png_file)

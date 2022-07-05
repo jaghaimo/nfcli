@@ -1,5 +1,3 @@
-__version__ = "0.4.1"
-
 from rich.theme import Theme
 
 STACK_COLUMNS = 3

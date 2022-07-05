@@ -1,9 +1,8 @@
 from __future__ import annotations
 
 from abc import abstractmethod, abstractproperty
-from typing import TYPE_CHECKING, Callable, List, Union
+from typing import TYPE_CHECKING, Dict, List, Union
 
-from nfcli.database import db
 from nfcli.writer import write_fleet, write_ship
 
 if TYPE_CHECKING:
@@ -16,7 +15,12 @@ class Named:
 
     @property
     def name(self):
-        return db.get_name(self._name)
+        return self.get_name(self._name)
+
+    def get_name(self, name: str) -> str:
+        suffix = name.split("/")[-1]
+        cleaned = suffix.split("_")[-1]
+        return cleaned[0].upper() + cleaned[1:]
 
 
 class Printable:
@@ -30,48 +34,81 @@ class Printable:
 
 
 class Writeable:
+    @abstractproperty
+    def is_valid(self):
+        raise NotImplementedError
+
     @abstractmethod
     def write(self, filename: str):
         raise NotImplementedError
 
 
 class Content(Named):
+    """Models content of a socket (ammo in magazine / launcher)."""
+
     def __init__(self, name: str, quantity: int) -> None:
         super().__init__(name)
         self.quantity = quantity
 
 
 class Socket(Named):
-    def __init__(self, hull: str, key: str, name: str, contents: List[Content]) -> None:
+    """Models simplified socket info from a fleet/ship file."""
+
+    def __init__(self, key: str, name: str, contents: List[Content]) -> None:
         super().__init__(name)
-        self._hull = hull
         self.key = key
         self.contents = contents
 
-    @property
-    def slot_name(self) -> str:
-        return db.get_socket_attr(self._hull, self.key, "name")
+
+class Component:
+    """Models full compartment info (socket + db data)."""
+
+    def __init__(self, socket: Socket, number: int, data: Dict) -> None:
+        self.socket = socket
+        self.number = number
+        self._data = data
 
     @property
-    def slot_size(self) -> List:
-        return db.get_socket_attr(self._hull, self.key, "size")
+    def name(self) -> str:
+        return self.socket.name
+
+    @property
+    def contents(self) -> List[Content]:
+        return self.socket.contents
+
+    @property
+    def slot_number(self) -> str:
+        return str(self.number)
+
+    @property
+    def slot_size(self) -> str:
+        if "size" in self._data:
+            return "x".join([str(size) for size in self._data.get("size")])
+        return "?x?x?"
+
+    @property
+    def slot_name(self) -> str:
+        if "name" in self._data:
+            return self._data.get("name")
+        return "Unknown"
 
 
 class Ship(Named, Printable, Writeable):
-    def __init__(self, name: str, cost: int, number: int, symbol_option: int, hull: str) -> None:
+    def __init__(self, name: str, cost: int, number: int, symbol_option: int, hull: str, data: Dict) -> None:
         super().__init__(name)
         self.cost = cost
         self.number = number
         self.symbol_option = symbol_option
         self._hull = hull
-        self.sockets: List[Socket] = []
+        self.sockets: Dict[Socket] = {}
+        self._data = data
 
     def add_socket(self, socket: Socket) -> None:
-        self.sockets.append(socket)
+        self.sockets[socket.key] = socket
 
     @property
     def hull(self) -> str:
-        return db.get_name(self._hull)
+        return self.get_name(self._hull)
 
     @property
     def title(self) -> str:
@@ -79,23 +116,34 @@ class Ship(Named, Printable, Writeable):
         return f"[b]{self.name}[/b] is {a_or_an} {self.hull} that costs {self.cost} points"
 
     @property
-    def mountings(self) -> List[Socket]:
-        return self.filter_sockets(db.is_mounting)
+    def is_valid(self) -> bool:
+        return bool(self._data)
 
     @property
-    def compartments(self) -> List[Socket]:
-        return self.filter_sockets(db.is_compartment)
+    def mountings(self) -> List[Component]:
+        return self._get_components("mountkeys")
 
     @property
-    def modules(self) -> List[Socket]:
-        return self.filter_sockets(db.is_module)
+    def compartments(self) -> List[Component]:
+        return self._get_components("compartmentkeys")
 
     @property
-    def invalid(self) -> List[Socket]:
-        return self.filter_sockets(db.is_invalid)
+    def modules(self) -> List[Component]:
+        return self._get_components("modulekeys")
 
-    def filter_sockets(self, check: Callable) -> List[Socket]:
-        return [socket for socket in self.sockets if check(socket._name)]
+    @property
+    def components(self) -> List[Component]:
+        return [Component(socket, i + 1, {}) for i, (_, socket) in enumerate(self.sockets.items())]
+
+    def _get_components(self, type: str) -> List[Component]:
+        return [
+            Component(self._get_socket(key), i + 1, data) for i, (key, data) in enumerate(self._data.get(type).items())
+        ]
+
+    def _get_socket(self, key: str) -> Socket:
+        if key in self.sockets:
+            return self.sockets[key]
+        return Socket(key, "[grey]<EMPTY>", [])
 
     def print(self, printer: "StackPrinter"):
         renderable = printer.get_ship(self)
@@ -111,6 +159,18 @@ class Fleet(Named, Printable, Writeable):
         self.points = points
         self.faction = faction
         self.ships: List[Ship] = []
+
+    @property
+    def is_valid(self) -> bool:
+        return not bool(self.invalid_ships)
+
+    @property
+    def valid_ships(self) -> List[Ship]:
+        return [ship for ship in self.ships if ship.is_valid]
+
+    @property
+    def invalid_ships(self) -> List[Ship]:
+        return [ship for ship in self.ships if not ship.is_valid]
 
     @property
     def n_ships(self) -> int:
