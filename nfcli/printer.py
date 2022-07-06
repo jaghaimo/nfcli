@@ -29,7 +29,7 @@ class FleetPrinter(ABC):
 
     def add_components(self, tree: Tree, component: "Component"):
         for content in component.contents:
-            tree.add(f"{content.name} x{content.quantity} ", style="i d")
+            tree.add(Text(f"{content.name} x{content.quantity}", overflow="ignore"), style="i d")
 
     def get_sockets(self, title: str, components: List["Component"], color: Optional[str] = "white") -> Group:
         elements = [Rule(Text(f"{title}", style="orange"), style="orange")]
@@ -96,21 +96,19 @@ def determine_printer(num_of_ships: int, is_valid: bool) -> Tuple[int, Type[Flee
 
 def fleet_printer_factory(printer: str, fleet: "Fleet"):
     console = Console(theme=nfc_theme)
-    num_of_ships = fleet.n_ships
-
-    if printer == "column" or not fleet.is_valid:
-        logging.debug("Returning ColumnPrinter")
-        column_width = min(COLUMN_WIDTH, console.width)
-        console.width = min(num_of_ships * column_width, console.width)
-        return ColumnPrinter(column_width, console)
-
     if printer == "stack":
         logging.debug("Returning StackPrinter")
         console.size = (min(STACK_COLUMNS * COLUMN_WIDTH, console.width), console.height)
         column_width = int(console.width / STACK_COLUMNS)
         return StackPrinter(column_width, console)
 
-    if printer == "auto":
+    num_of_ships = fleet.n_ships
+    if printer == "column" or not fleet.is_valid:
+        logging.debug("Returning ColumnPrinter")
+        column_width = min(COLUMN_WIDTH, console.width)
+        console.width = min(num_of_ships * column_width, console.width)
+        return ColumnPrinter(column_width, console)
+    elif printer == "auto":
         style = "stack" if console.width < num_of_ships * COLUMN_WIDTH else "column"
         style = style if num_of_ships > 3 else "stack"
         return fleet_printer_factory(style, fleet)
