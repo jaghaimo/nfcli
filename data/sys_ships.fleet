@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<Fleet xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>Hazel</Name>
+  <Version>2</Version>
+  <TotalPoints>350</TotalPoints>
+  <FactionKey>Stock/Alliance</FactionKey>
+  <ModDependencies>
+    <unsignedLong>1511403140</unsignedLong>
+  </ModDependencies>
+  <Ships>
+    <Ship>
+      <SaveID xsi:nil="true" />
+      <Key>72e77cdf-acad-4976-be1a-f396c5d676e2</Key>
+      <Name>The Full File</Name>
+      <Cost>350</Cost>
+      <Number>716</Number>
+      <SymbolOption>0</SymbolOption>
+      <HullType>State Yards Surplus/FF_dogfish</HullType>
+      <SocketMap>
+        <HullSocket>
+          <Key>com_01</Key>
+          <ComponentName>Stock/Auxiliary Steering</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>com_02</Key>
+          <ComponentName>Stock/Auxiliary Steering</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>com_03</Key>
+          <ComponentName>Stock/Auxiliary Steering</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>com_04</Key>
+          <ComponentName>Stock/Auxiliary Steering</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>com_05</Key>
+          <ComponentName>Stock/Auxiliary Steering</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>mod_01</Key>
+          <ComponentName>Stock/Supplementary Radio Amplifiers</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>mod_02</Key>
+          <ComponentName>Stock/Supplementary Radio Amplifiers</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>mod_03</Key>
+          <ComponentName>Stock/Supplementary Radio Amplifiers</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>mod_04</Key>
+          <ComponentName>Stock/Supplementary Radio Amplifiers</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>mod_05</Key>
+          <ComponentName>Stock/Supplementary Radio Amplifiers</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>mod_06</Key>
+          <ComponentName>Stock/Supplementary Radio Amplifiers</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>mou_01</Key>
+          <ComponentName>Stock/CR10 Antenna</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>mou_02</Key>
+          <ComponentName>Stock/CR10 Antenna</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>mou_03</Key>
+          <ComponentName>Stock/CR10 Antenna</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>mou_04</Key>
+          <ComponentName>Stock/CR10 Antenna</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>mou_05</Key>
+          <ComponentName>Stock/CR10 Antenna</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>mou_06</Key>
+          <ComponentName>Stock/CR10 Antenna</ComponentName>
+        </HullSocket>
+      </SocketMap>
+      <WeaponGroups />
+    </Ship>
+  </Ships>
+</Fleet>
