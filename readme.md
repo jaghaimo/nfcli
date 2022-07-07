@@ -26,14 +26,13 @@ poetry install
 And to execute, run:
 
 ```sh
-poetry shell
-python3 -m nfcli -i your_file.fleet -p
+poetry run nfcli -i your_file.fleet -p
 ```
 
 If unsure, run:
 
 ```sh
-python3 -m nfcli -h
+poetry run nfcli -h
 ```
 
 ## Running the bot
@@ -42,4 +41,4 @@ python3 -m nfcli -h
 - Configure `Bot` section and generate a `TOKEN`
 - Invite the bot to your server
 - Edit `.env.dist` and save it as `.env`
-- Run `python3 bot.py` and enjoy your new bot
+- Run `poetry run bot` and enjoy your new bot
