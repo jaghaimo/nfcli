@@ -8,11 +8,8 @@ from dotenv import load_dotenv
 from nfcli.parser import parse_any
 from nfcli.writer import close_all, delete_all, determine_output_file, get_temp_filename
 
-load_dotenv()
-TOKEN = os.getenv("DISCORD_TOKEN")
-
 client = discord.Client()
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.INFO, force=True)
 
 
 @client.event
@@ -48,4 +45,7 @@ async def on_message(message: discord.Message):
     delete_all(tmp_files)
 
 
-client.run(TOKEN)
+def start():
+    load_dotenv()
+    TOKEN = os.getenv("DISCORD_TOKEN")
+    client.run(TOKEN)
