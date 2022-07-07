@@ -1,5 +1,7 @@
+import shutil
 import tempfile
 from pathlib import Path
+from posixpath import dirname
 from typing import TYPE_CHECKING
 
 import cairosvg
@@ -13,8 +15,14 @@ if TYPE_CHECKING:
     from nfcli.model import Fleet, Ship
 
 
-def determine_output_file(input_fleet: str, ext: str) -> str:
-    return Path(input_fleet).stem + ext
+def delete_temporary(temp_path: str):
+    dir_path = dirname(temp_path)
+    if dir_path.startswith("/tmp/tmp"):
+        shutil.rmtree(dir_path)
+
+
+def determine_output_png(input_fleet: str) -> str:
+    return Path(input_fleet).stem + ".png"
 
 
 def get_temp_filename(ext: str) -> str:

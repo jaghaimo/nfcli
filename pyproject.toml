@@ -14,7 +14,7 @@ use_parentheses = true
 
 [tool.poetry]
 name = "nfcli"
-version = "0.6.0"
+version = "0.7.0"
 description = "A CLI tool to pretty print fleet and ship files to console."
 authors = ["Jaghaimo <1764586+jaghaimo@users.noreply.github.com>"]
 
@@ -25,6 +25,7 @@ rich = "^12.4.4"
 "discord.py" = "^1.7.3"
 python-dotenv = "^0.20.0"
 CairoSVG = "^2.5.2"
+steamctl = "^0.9.3"
 
 [tool.poetry.dev-dependencies]
 black = "^22.6.0"
