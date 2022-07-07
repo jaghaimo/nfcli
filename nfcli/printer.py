@@ -27,6 +27,21 @@ class FleetPrinter(ABC):
         if not self.no_title:
             self.console.print(Panel(Text(fleet.title.center(self.console.width), style="white"), style="orange"))
 
+    def print_mods(self, mods: List[str]):
+        if not mods:
+            return
+
+        self.console.print(self.get_mods(mods))
+
+    @classmethod
+    def get_mods(self, mods: List[str], begin_quote: Optional[str] = "", end_quote: Optional[str] = "") -> str:
+        if not mods:
+            return ""
+        mods_text = "\nMods required:"
+        for mod in mods:
+            mods_text += f"\n- {begin_quote}https://steamcommunity.com/sharedfiles/filedetails/?id={mod}{end_quote}"
+        return mods_text
+
     def add_components(self, tree: Tree, component: "Component"):
         for content in component.contents:
             tree.add(Text(f"{content.name} x{content.quantity}", overflow="ignore"), style="i d")

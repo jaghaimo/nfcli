@@ -1,12 +1,13 @@
 import logging
 import os
-from typing import List
+from typing import List, TextIO
 
 import discord
 from dotenv import load_dotenv
 
-from nfcli.parser import parse_any
-from nfcli.writer import close_all, delete_all, determine_output_file, get_temp_filename
+from nfcli.parser import parse_any, parse_mods
+from nfcli.printer import FleetPrinter
+from nfcli.writer import determine_output_file, get_temp_filename
 
 client = discord.Client()
 logging.basicConfig(level=logging.INFO, force=True)
@@ -26,8 +27,6 @@ async def on_message(message: discord.Message):
 
     ship_files = [file for file in message.attachments if file.filename.endswith("ship")]
     fleet_files = [file for file in message.attachments if file.filename.endswith("fleet")]
-    converted_files: List[discord.File] = []
-    tmp_files: List[str] = []
     for file in ship_files + fleet_files:
         logging.info(f"Converting {file}")
         xml_data = await file.read()
@@ -35,14 +34,16 @@ async def on_message(message: discord.Message):
         tmp_file = get_temp_filename(".png")
         entity = parse_any(file.filename, xml_data)
         entity.write(tmp_file)
-        converted_files.append(discord.File(open(tmp_file, "rb"), filename=png_file))
-        tmp_files.append(tmp_file)
+        converted_file = discord.File(open(tmp_file, "rb"), filename=png_file)
+        mod_deps = parse_mods(xml_data)
+        mods = FleetPrinter.get_mods(mod_deps, "<", ">")
+        await message.channel.send(f"Hull types: {entity.hulls}{mods}", files=[converted_file], reference=message)
+        cleanup(converted_file, tmp_file)
 
-    if converted_files:
-        await message.channel.send("", files=converted_files, reference=message)
 
-    close_all(converted_files)
-    delete_all(tmp_files)
+def cleanup(open_file: List[TextIO], filename: str):
+    open_file.close()
+    os.unlink(filename)
 
 
 def start():

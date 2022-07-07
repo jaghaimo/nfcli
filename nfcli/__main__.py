@@ -4,7 +4,7 @@ from typing import Dict
 
 from nfcli import load_path
 from nfcli.extractor import extract_slots
-from nfcli.parser import parse_any
+from nfcli.parser import parse_any, parse_mods
 from nfcli.printer import printer_factory
 from nfcli.writer import determine_output_file
 
@@ -40,6 +40,8 @@ def main() -> int:
         if args.print:
             printer = printer_factory(args.style, entity)
             entity.print(printer)
+            mods = parse_mods(xml_data)
+            printer.print_mods(mods)
         if args.write:
             output_file = determine_output_file(args.input, ".png")
             entity.write(output_file)

@@ -45,6 +45,17 @@ def get_ship(ship_data: OrderedDict) -> Ship:
     return ship
 
 
+def parse_mods(xml_data: str) -> List[str]:
+    mods = []
+    xmld = xmltodict.parse(xml_data, force_list=("unsignedLong"))
+    _, entity = xmld.popitem()
+    mod_deps_node = entity.get("ModDependencies") or {}
+    mod_deps = mod_deps_node.get("unsignedLong") or []
+    for mod_dep in mod_deps:
+        mods.append(mod_dep)
+    return mods
+
+
 def parse_ship(xml_data: str) -> Ship:
     xmld = xmltodict.parse(xml_data, force_list=("MagSaveData"))
     ship_data = xmld.get("Ship")

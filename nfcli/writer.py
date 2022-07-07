@@ -1,7 +1,6 @@
-import os
 import tempfile
 from pathlib import Path
-from typing import TYPE_CHECKING, List, TextIO
+from typing import TYPE_CHECKING
 
 import cairosvg
 from rich.console import Console
@@ -12,16 +11,6 @@ from nfcli.printer import FleetPrinter, determine_printer
 
 if TYPE_CHECKING:
     from nfcli.model import Fleet, Ship
-
-
-def close_all(open_files: List[TextIO]):
-    for open_file in open_files:
-        open_file.close()
-
-
-def delete_all(filenames: str):
-    for filename in filenames:
-        os.unlink(filename)
 
 
 def determine_output_file(input_fleet: str, ext: str) -> str:

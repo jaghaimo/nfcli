@@ -25,6 +25,10 @@ class Named:
 
 class Printable:
     @abstractproperty
+    def hulls(self) -> str:
+        raise NotImplementedError
+
+    @abstractproperty
     def title(self) -> str:
         raise NotImplementedError
 
@@ -111,6 +115,10 @@ class Ship(Named, Printable, Writeable):
         return self.get_name(self._hull)
 
     @property
+    def hulls(self) -> str:
+        return self.hull
+
+    @property
     def title(self) -> str:
         a_or_an = "an" if self.hull[0] == "A" else "a"
         return f"[b]{self.name}[/b] is {a_or_an} {self.hull} that costs {self.cost} points"
@@ -159,6 +167,11 @@ class Fleet(Named, Printable, Writeable):
         self.points = points
         self.faction = faction
         self.ships: List[Ship] = []
+
+    @property
+    def hulls(self) -> str:
+        hulls = set([ship.hull for ship in self.ships])
+        return ", ".join(hulls)
 
     @property
     def is_valid(self) -> bool:
