@@ -5,15 +5,15 @@
   <TotalPoints>350</TotalPoints>
   <FactionKey>Stock/Alliance</FactionKey>
   <ModDependencies>
-    <unsignedLong>1511403140</unsignedLong>
+    <unsignedLong>2831277422</unsignedLong>
   </ModDependencies>
   <Ships>
     <Ship>
       <SaveID xsi:nil="true" />
-      <Key>72e77cdf-acad-4976-be1a-f396c5d676e2</Key>
-      <Name>The Full File</Name>
+      <Key>6ae60c0f-02ca-4738-9805-273cb4ed34ca</Key>
+      <Name>Jaimie M. McCormac</Name>
       <Cost>350</Cost>
-      <Number>716</Number>
+      <Number>486</Number>
       <SymbolOption>0</SymbolOption>
       <HullType>State Yards Surplus/FF_dogfish</HullType>
       <SocketMap>
