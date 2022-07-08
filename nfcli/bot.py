@@ -28,12 +28,13 @@ async def on_message(message: discord.Message):
         return
 
     await asyncio.gather(
-        process_files(message),
+        process_uploads(message),
         process_workshops(message),
     )
 
 
 async def process_file(message: discord.Message, xml_data: str, filename: str, with_fleet_file: bool):
+    """Process one file content."""
     logging.info(f"Converting {filename}")
     png_file = determine_output_png(filename)
     tmp_file = get_temp_filename(".png")
@@ -49,7 +50,8 @@ async def process_file(message: discord.Message, xml_data: str, filename: str, w
     close_and_delete(converted_file, tmp_file)
 
 
-async def process_files(message: discord.Message):
+async def process_uploads(message: discord.Message):
+    """Process uploaded files."""
     ship_files = [file for file in message.attachments if file.filename.endswith("ship")]
     fleet_files = [file for file in message.attachments if file.filename.endswith("fleet")]
     for file in ship_files + fleet_files:
@@ -58,6 +60,7 @@ async def process_files(message: discord.Message):
 
 
 async def process_workshop(message: discord.Message, workshop_id: int):
+    """Process one workshop id."""
     input_files = download_workshop(workshop_id)
     for input_file in input_files:
         xml_data = load_path(input_file)
@@ -66,10 +69,14 @@ async def process_workshop(message: discord.Message, workshop_id: int):
 
 
 async def process_workshops(message: discord.Message):
-    link_regex = re.compile(r"((https?):((//)|(\\\\))+([\w\d:#@%/;$()~_?\+-=\\\.&](#!)?)*)", re.DOTALL)
+    """Extract and process workshop links."""
+    link_regex = re.compile(r"https?:\/\/steamcommunity\.com\/sharedfiles\/filedetails\S+")
     links = re.findall(link_regex, message.content)
+    workshop_ids = set()
     for link_data in links:
-        workshop_id = get_workshop_id(link_data)
+        workshop_ids.add(get_workshop_id(link_data))
+
+    for workshop_id in workshop_ids:
         await process_workshop(message, workshop_id)
 
 

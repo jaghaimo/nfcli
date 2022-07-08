@@ -32,8 +32,8 @@ def get_files(directory: str) -> List[str]:
     return glob(path.join(directory, "*.fleet")) + glob(path.join(directory, "*.ship"))
 
 
-def get_workshop_id(link_data: List[str]) -> int:
-    url = urlparse(link_data[0])
+def get_workshop_id(link: str) -> int:
+    url = urlparse(link)
     if url.hostname != "steamcommunity.com" or url.path != "/sharedfiles/filedetails/":
         return 0
     params = parse_qs(url.query)
