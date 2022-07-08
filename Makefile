@@ -1,6 +1,6 @@
 SOURCES = $(shell find fleets/ -iname '*.fleet' | sed 's/ /\\ /g')
 
-.PHONY: $(SOURCES) all copy clean
+.PHONY: $(SOURCES) all copy clean format init lint
 
 all: $(SOURCES)
 
@@ -14,6 +14,10 @@ clean:
 format:
 	black nfcli
 	isort nfcli
+
+init:
+	poetry install
+	poetry run nfcli -p -W 2623894227
 
 lint:
 	black --check --no-color --diff nfcli
