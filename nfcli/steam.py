@@ -2,6 +2,7 @@ from glob import glob
 from os import path
 from tempfile import mkdtemp
 from typing import List
+from urllib.parse import parse_qs, urlparse
 
 from steamctl.commands.workshop.gcmds import cmd_workshop_download
 
@@ -29,3 +30,13 @@ def get_args(id: int) -> object:
 
 def get_files(directory: str) -> List[str]:
     return glob(path.join(directory, "*.fleet")) + glob(path.join(directory, "*.ship"))
+
+
+def get_workshop_id(link_data: List[str]) -> int:
+    url = urlparse(link_data[0])
+    if url.hostname != "steamcommunity.com" or url.path != "/sharedfiles/filedetails/":
+        return 0
+    params = parse_qs(url.query)
+    if "id" not in params:
+        return 0
+    return int(params["id"][0])

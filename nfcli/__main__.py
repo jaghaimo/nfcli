@@ -1,6 +1,5 @@
 import argparse
 import logging
-from posixpath import dirname
 from typing import Dict
 
 from nfcli import load_path

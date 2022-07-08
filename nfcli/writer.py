@@ -1,8 +1,9 @@
+import os
 import shutil
 import tempfile
 from pathlib import Path
 from posixpath import dirname
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, List, TextIO
 
 import cairosvg
 from rich.console import Console
@@ -13,6 +14,11 @@ from nfcli.printer import FleetPrinter, determine_printer
 
 if TYPE_CHECKING:
     from nfcli.model import Fleet, Ship
+
+
+def close_and_delete(open_file: List[TextIO], filename: str):
+    open_file.close()
+    os.unlink(filename)
 
 
 def delete_temporary(temp_path: str):
