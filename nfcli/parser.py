@@ -38,7 +38,9 @@ def get_ship(ship_data: OrderedDict) -> Ship:
         hull,
         db.get_ship_data(hull),
     )
-    for socket_data in ship_data["SocketMap"]["HullSocket"]:
+    socket_map = ship_data["SocketMap"]
+    hull_socket = socket_map["HullSocket"] if socket_map else []
+    for socket_data in hull_socket:
         socket = get_socket(socket_data)
         ship.add_socket(socket)
 
@@ -57,13 +59,13 @@ def parse_mods(xml_data: str) -> List[str]:
 
 
 def parse_ship(xml_data: str) -> Ship:
-    xmld = xmltodict.parse(xml_data, force_list=("MagSaveData"))
+    xmld = xmltodict.parse(xml_data, force_list=("MagSaveData", "HullSocket"))
     ship_data = xmld.get("Ship")
     return get_ship(ship_data)
 
 
 def parse_fleet(xml_data: str) -> Fleet:
-    xmld = xmltodict.parse(xml_data, force_list=("MagSaveData", "Ship"))
+    xmld = xmltodict.parse(xml_data, force_list=("MagSaveData", "Ship", "HullSocket"))
     fleet_data = xmld.get("Fleet")
     fleet = Fleet(fleet_data["Name"], fleet_data["TotalPoints"], fleet_data["FactionKey"])
     for idx, ship_data in enumerate(fleet_data["Ships"]["Ship"]):
@@ -78,9 +80,12 @@ def parse_fleet(xml_data: str) -> Fleet:
 
 
 def parse_any(filename: str, xml_data: str) -> ShipFleetType:
-    if filename.endswith("fleet"):
-        return parse_fleet(xml_data)
-    elif filename.endswith("ship"):
-        return parse_ship(xml_data)
+    try:
+        if filename.endswith("fleet"):
+            return parse_fleet(xml_data)
+        elif filename.endswith("ship"):
+            return parse_ship(xml_data)
+    except Exception as exc:
+        logging.error(exc.with_traceback())
 
     raise ValueError("Unrecognizable file format")
