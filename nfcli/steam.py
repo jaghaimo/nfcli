@@ -17,7 +17,7 @@ def thread_with_timeout(func: Callable) -> Coroutine:
         loop = asyncio.get_event_loop()
         wrapped = functools.partial(func, *args, **kwargs)
         future = loop.run_in_executor(None, wrapped)
-        return await asyncio.wait_for(future, 10, loop=loop)
+        return await asyncio.wait_for(future, 10)
 
     return wrapper
 

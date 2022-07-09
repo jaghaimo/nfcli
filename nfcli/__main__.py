@@ -1,4 +1,5 @@
 import argparse
+import asyncio
 import logging
 from typing import Dict
 
@@ -36,7 +37,7 @@ def main() -> int:
     args = parse_args()
     entity = None
     if args.workshop:
-        args.input = download_from_workshop(args.workshop)[0]
+        args.input = asyncio.run(download_from_workshop(args.workshop))[0]
     if args.input:
         xml_data = load_path(args.input)
         entity = parse_any(args.input, xml_data)
