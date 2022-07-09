@@ -12,10 +12,16 @@ Until the application is packaged and released, you will need to use code from t
 
 Clone this repository, or download it as an archive. The minimal requirements are:
 
+Required:
+
 - Python 3.8+
 - Poetry (dependency manager)
 - libcairo2 (system library)
-- Recommended: fonts-firacode
+
+Recommended:
+
+- python3-levenshtein (faster !wiki string matching)
+- fonts-firacode (better font quality in rendered images)
 
 To install, run:
 

@@ -26,6 +26,7 @@ rich = "^12.4.4"
 python-dotenv = "^0.20.0"
 CairoSVG = "^2.5.2"
 steamctl = "^0.9.3"
+fuzzywuzzy = "^0.18.0"
 
 [tool.poetry.dev-dependencies]
 black = "^22.6.0"
@@ -35,6 +36,7 @@ isort = "^5.10.1"
 [tool.poetry.scripts]
 nfcli = "nfcli.__main__:main"
 "bot.upload" = "nfcli.bot.upload:start"
+"bot.wiki" = "nfcli.bot.wiki:start"
 "bot.workshop" = "nfcli.bot.workshop:start"
 
 [build-system]

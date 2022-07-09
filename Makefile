@@ -17,6 +17,7 @@ format:
 
 init:
 	poetry install
+	poetry run nfcli -u
 	poetry run nfcli -p -W 2623894227
 
 lint:

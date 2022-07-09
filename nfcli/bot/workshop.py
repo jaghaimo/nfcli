@@ -7,7 +7,7 @@ from nfcli import DISCORD_TOKEN, init_logger
 from nfcli.bot.functions import process_workshops
 
 client = discord.Client()
-init_logger("workshop.log", logging.INFO)
+init_logger("bot.workshop.log", logging.INFO)
 
 
 @client.event
