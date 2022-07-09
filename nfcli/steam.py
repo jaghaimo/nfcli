@@ -1,7 +1,9 @@
+import asyncio
+import functools
 from glob import glob
 from os import path
 from tempfile import mkdtemp
-from typing import List
+from typing import Callable, Coroutine, List
 from urllib.parse import parse_qs, urlparse
 
 from steamctl.commands.workshop.gcmds import cmd_workshop_download
@@ -9,7 +11,19 @@ from steamctl.commands.workshop.gcmds import cmd_workshop_download
 from nfcli import STEAM_API_KEY, STEAM_USERNAME
 
 
-def download_workshop(id: int) -> List[str]:
+def thread_with_timeout(func: Callable) -> Coroutine:
+    @functools.wraps(func)
+    async def wrapper(*args, **kwargs):
+        loop = asyncio.get_event_loop()
+        wrapped = functools.partial(func, *args, **kwargs)
+        future = loop.run_in_executor(None, wrapped)
+        return await asyncio.wait_for(future, 10, loop=loop)
+
+    return wrapper
+
+
+@thread_with_timeout
+def download_from_workshop(id: int) -> List[str]:
     args = get_args(id)
     cmd_workshop_download(args)
     return get_files(args.output)

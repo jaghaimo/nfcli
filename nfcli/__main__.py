@@ -2,11 +2,11 @@ import argparse
 import logging
 from typing import Dict
 
-from nfcli import load_path
+from nfcli import init_logger, load_path
 from nfcli.extractor import extract_slots
 from nfcli.parser import parse_any, parse_mods
 from nfcli.printer import printer_factory
-from nfcli.steam import download_workshop
+from nfcli.steam import download_from_workshop
 from nfcli.writer import delete_temporary, determine_output_png
 
 DESC = """Command line interface for converting Nebulous: Fleet Command fleet and ship files to images."""
@@ -27,8 +27,8 @@ def get_parser() -> argparse.ArgumentParser:
 def parse_args() -> Dict:
     parser = get_parser()
     args = parser.parse_args()
-    if args.debug:
-        logging.basicConfig(level=logging.DEBUG)
+    display_level = logging.DEBUG if args.debug else logging.WARNING
+    init_logger("main.log", display_level)
     return args
 
 
@@ -36,7 +36,7 @@ def main() -> int:
     args = parse_args()
     entity = None
     if args.workshop:
-        args.input = download_workshop(args.workshop)[0]
+        args.input = download_from_workshop(args.workshop)[0]
     if args.input:
         xml_data = load_path(args.input)
         entity = parse_any(args.input, xml_data)
@@ -51,11 +51,11 @@ def main() -> int:
         if args.write:
             output_file = determine_output_png(args.input)
             entity.write(output_file)
-    if args.workshop:
-        delete_temporary(args.input)
     else:
         parser = get_parser()
         parser.print_help()
+    if args.workshop:
+        delete_temporary(args.input)
 
 
 if __name__ == "__main__":

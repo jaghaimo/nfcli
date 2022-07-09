@@ -35,10 +35,10 @@ If unsure, run:
 poetry run nfcli -h
 ```
 
-## Running the bot
+## Discord Bot
 
-- Create a new Application via <https://discord.com/developers/applications>
+- Create a new `Application` via <https://discord.com/developers/applications>
 - Configure `Bot` section and generate a `TOKEN`
 - Invite the bot to your server
 - Edit `.env.dist` and save it as `.env`
-- Run `poetry run bot` and enjoy your new bot
+- Run `poetry run bot.upload` or `poetry run bot.workshop` and enjoy your new bot
