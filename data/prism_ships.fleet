@@ -2,7 +2,7 @@
 <Fleet xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Name>prism_ships</Name>
   <Version>2</Version>
-  <TotalPoints>2825</TotalPoints>
+  <TotalPoints>2830</TotalPoints>
   <FactionKey>Stock/Alliance</FactionKey>
   <ModDependencies>
     <unsignedLong>2789730936</unsignedLong>
@@ -372,7 +372,7 @@
       <SaveID xsi:nil="true" />
       <Key>b6682b7a-5c4a-49ed-8ae9-bd5f3b2b4250</Key>
       <Name>Prosy Marty</Name>
-      <Cost>1090</Cost>
+      <Cost>1095</Cost>
       <Number>698</Number>
       <SymbolOption>0</SymbolOption>
       <HullType>prism/CH_descartes</HullType>
@@ -390,15 +390,19 @@
           <ComponentName>Stock/CR10 Antenna</ComponentName>
         </HullSocket>
         <HullSocket>
-          <Key>c4mount2</Key>
-          <ComponentName>Stock/CR10 Antenna</ComponentName>
-        </HullSocket>
-        <HullSocket>
           <Key>c3mount1</Key>
           <ComponentName>Stock/CR10 Antenna</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>c3mount2</Key>
+          <ComponentName>Stock/CR10 Antenna</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>c3mount3</Key>
+          <ComponentName>Stock/CR10 Antenna</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>c3mount4</Key>
           <ComponentName>Stock/CR10 Antenna</ComponentName>
         </HullSocket>
         <HullSocket>
