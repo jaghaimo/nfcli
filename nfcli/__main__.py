@@ -6,7 +6,7 @@ from nfcli import init_logger, load_path
 from nfcli.extractor import extract_slots
 from nfcli.parser import parse_any, parse_mods
 from nfcli.printer import printer_factory
-from nfcli.steam import download_all, get_workshop_files
+from nfcli.steam import cache_workshop_files, get_workshop_files
 from nfcli.wiki import update_wiki
 from nfcli.writer import determine_output_png
 
@@ -41,7 +41,7 @@ def main() -> int:
     if args.update_wiki:
         update_wiki()
     if args.update_workshop:
-        download_all()
+        cache_workshop_files()
     if args.workshop:
         args.input = get_workshop_files(args.workshop)[0]
     if args.input:

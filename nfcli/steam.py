@@ -12,7 +12,6 @@ from steam import webapi
 from nfcli import STEAM_API_KEY, STEAM_USERNAME
 
 STEAM_APP_ID = 887570
-STEAMCMD_TIMEOUT = 30
 WORKSHOP_DIR = "~/.steam/steamapps/workshop/content/{}/{}"
 
 
@@ -30,16 +29,8 @@ def get_workshop_files(workshop_id: int) -> List[str]:
     files = get_files(workshop_path)
     if files:
         return files
-    return download_from_workshop(workshop_id)
-
-
-def download_from_workshop(workshop_id: int) -> List[str]:
-    workshop_path = get_local_path(workshop_id)
     download_bulk([workshop_id])
-    files = get_files(workshop_path)
-    if not files:
-        raise RuntimeError("Did not find any fleet or ship files.")
-    return files
+    return get_files(workshop_path)
 
 
 def download_bulk(workshop_ids: List[int], timeout: Optional[int] = 30):
@@ -49,7 +40,7 @@ def download_bulk(workshop_ids: List[int], timeout: Optional[int] = 30):
     subprocess.run(steam_cmd, timeout=timeout)
 
 
-def download_all():
+def cache_workshop_files():
     workshop_ids = find_all()
     existing_ids = find_existing()
     missing_ids = workshop_ids.difference(existing_ids)
