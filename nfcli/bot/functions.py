@@ -7,8 +7,8 @@ from discord import File, Message
 from nfcli import load_path
 from nfcli.parser import parse_any, parse_mods
 from nfcli.printer import FleetPrinter
-from nfcli.steam import download_from_workshop, get_workshop_id
-from nfcli.writer import close_and_delete, delete_temporary, determine_output_png, get_temp_filename
+from nfcli.steam import get_workshop_files, get_workshop_id
+from nfcli.writer import close_and_delete, determine_output_png, get_temp_filename
 
 
 async def process_file(message: Message, xml_data: str, filename: str, with_fleet_file: bool):
@@ -39,11 +39,10 @@ async def process_uploads(message: Message):
 
 async def process_workshop(message: Message, workshop_id: int):
     """Process one workshop id."""
-    input_files = await download_from_workshop(workshop_id)
+    input_files = get_workshop_files(workshop_id)
     for input_file in input_files:
         xml_data = load_path(input_file)
         await process_file(message, xml_data, input_file, with_fleet_file=True)
-        delete_temporary(input_file)
 
 
 async def process_workshops(message: Message):

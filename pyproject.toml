@@ -27,6 +27,8 @@ python-dotenv = "^0.20.0"
 CairoSVG = "^2.5.2"
 steamctl = "^0.9.3"
 fuzzywuzzy = "^0.18.0"
+python-Levenshtein = "^0.12.2"
+tqdm = "^4.64.0"
 
 [tool.poetry.dev-dependencies]
 black = "^22.6.0"
