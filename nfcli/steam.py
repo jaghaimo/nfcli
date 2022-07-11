@@ -76,7 +76,7 @@ def find_all() -> Set[int]:
         ids += results["publishedfiledetails"]
         cursor = results["next_cursor"]
     total = results["total"]
-    logging.info(f"Found {total} workshop files")
+    logging.info(f"Found {total} workshop files, parsing...")
     return set([int(workshop_id["publishedfileid"]) for workshop_id in ids if is_valid(workshop_id["tags"])])
 
 
