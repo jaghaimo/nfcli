@@ -1,6 +1,7 @@
 import logging
 import os
 import subprocess
+from distutils.dir_util import remove_tree
 from glob import glob
 from os import path
 from posixpath import dirname
@@ -46,20 +47,33 @@ def download_bulk(workshop_ids: List[int], timeout: Optional[int] = 30):
 
 
 def cache_workshop_files():
-    workshop_ids = find_all()
+    workshop_items = find_all()
+    invalidate_cache(workshop_items)
+    workshop_ids = set(workshop_items.keys())
     existing_ids = find_existing()
     missing_ids = workshop_ids.difference(existing_ids)
     if missing_ids:
         download_bulk(missing_ids, 3600)
 
 
+def invalidate_cache(workshop_items: Dict[str, Dict]) -> None:
+    for workshop_id, workshop_item in workshop_items.items():
+        workshop_path = get_local_path(workshop_id)
+        if not os.path.exists(workshop_path):
+            continue
+        mtime = os.path.getmtime(workshop_path)
+        if mtime < workshop_item["time_updated"]:
+            logging.info(f"Invalidating workshop item {workshop_id}.")
+            remove_tree(workshop_path)
+
+
 def is_valid(tags: List[str]) -> bool:
-    return any([tag["tag"] in ["Fleet", "Ship Template"] for tag in tags])
+    return any([tag["tag"].lower() in ["fleet", "ship template"] for tag in tags])
 
 
-def find_all() -> Set[int]:
+def find_all() -> Dict:
     cursor = "*"
-    ids = []
+    all_items = {}
     while cursor:
         params = {
             "appid": STEAM_APP_ID,
@@ -67,17 +81,25 @@ def find_all() -> Set[int]:
             "return_tags": True,
             "key": STEAM_API_KEY,
             "numperpage": 100,
-            "query_type": 0,
-            "search_text": " ",
+            "query_type": 21,
         }
         results = webapi.get("IPublishedFileService", "QueryFiles", params=params)["response"]
         if "publishedfiledetails" not in results:
             break
-        ids += results["publishedfiledetails"]
         cursor = results["next_cursor"]
+        items = results["publishedfiledetails"]
+        add_items(all_items, items)
     total = results["total"]
-    logging.info(f"Found {total} workshop files, parsing...")
-    return set([int(workshop_id["publishedfileid"]) for workshop_id in ids if is_valid(workshop_id["tags"])])
+    valid = len(all_items)
+    logging.info(f"Found {total} workshop files with {valid} being valid...")
+    return all_items
+
+
+def add_items(all_items: Dict[int, Dict], items: List[Dict]) -> None:
+    valid_items = [item for item in items if is_valid(item["tags"])]
+    for valid_item in valid_items:
+        item_id = int(valid_item["publishedfileid"])
+        all_items[item_id] = valid_item
 
 
 def find_existing() -> Set[int]:
