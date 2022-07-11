@@ -4,7 +4,7 @@ import subprocess
 from glob import glob
 from os import path
 from posixpath import dirname
-from typing import List, Optional, Set
+from typing import Dict, List, Optional, Set
 from urllib.parse import parse_qs, urlparse
 
 from steam import webapi
@@ -29,9 +29,13 @@ def get_workshop_files(workshop_id: int) -> List[str]:
     files = get_files(workshop_path)
     if files:
         return files
+    workshop_ids = find_all()
+    if workshop_id not in workshop_ids:
+        logging.warning(f"Workshop item {workshop_id} is not a fleet or ship entry!")
+        return []
+    logging.info(f"Downloading workshop item {workshop_id}.")
     download_bulk([workshop_id])
     return get_files(workshop_path)
-
 
 def download_bulk(workshop_ids: List[int], timeout: Optional[int] = 30):
     steam_cmd = ["steamcmd", "+login", STEAM_USERNAME]
@@ -46,6 +50,10 @@ def cache_workshop_files():
     missing_ids = workshop_ids.difference(existing_ids)
     if missing_ids:
         download_bulk(missing_ids, 3600)
+
+
+def is_valid(tags: List[str]) -> bool:
+    return any([tag["tag"] in ["Fleet", "Ship Template"] for tag in tags])
 
 
 def find_all() -> Set[int]:
@@ -68,14 +76,7 @@ def find_all() -> Set[int]:
         cursor = results["next_cursor"]
     total = results["total"]
     logging.info(f"Found {total} workshop files")
-    return set(
-        [
-            int(workshop_id["publishedfileid"])
-            for workshop_id in ids
-            for tag in workshop_id["tags"]
-            if tag["tag"] in ["Fleet", "Ship Template"]
-        ]
-    )
+    return set([int(workshop_id["publishedfileid"]) for workshop_id in ids if is_valid(workshop_id["tags"])])
 
 
 def find_existing() -> Set[int]:

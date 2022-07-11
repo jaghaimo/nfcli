@@ -43,7 +43,8 @@ def main() -> int:
     if args.update_workshop:
         cache_workshop_files()
     if args.workshop:
-        args.input = get_workshop_files(args.workshop)[0]
+        input_files = get_workshop_files(args.workshop)
+        args.input = input_files[0] if input_files else None
     if args.input:
         xml_data = load_path(args.input)
         entity = parse_any(args.input, xml_data)
