@@ -1,71 +1,68 @@
-import asyncio
-import functools
 import logging
-import time
-from distutils.dir_util import copy_tree
+import os
+import subprocess
 from glob import glob
-from os import mkdir, path
-from tempfile import mkdtemp
-from typing import Callable, Coroutine, List, Optional
+from os import path
+from posixpath import dirname
+from typing import List, Optional, Set
 from urllib.parse import parse_qs, urlparse
 
 from steam import webapi
-from steamctl.commands.workshop.gcmds import cmd_workshop_download
-from tqdm import tqdm
 
 from nfcli import STEAM_API_KEY, STEAM_USERNAME
-from nfcli.writer import delete_temporary
 
-NFC_STEAM_APP_ID = 887570
-WORKSHOP_DIR = "workshop"
-WORKSHOP_TIMEOUT = 60
-
-
-def thread_with_timeout(func: Callable) -> Coroutine:
-    @functools.wraps(func)
-    async def wrapper(*args, **kwargs):
-        loop = asyncio.get_event_loop()
-        wrapped = functools.partial(func, *args, **kwargs)
-        future = loop.run_in_executor(None, wrapped)
-        return await asyncio.wait_for(future, WORKSHOP_TIMEOUT)
-
-    return wrapper
+STEAM_APP_ID = 887570
+STEAMCMD_TIMEOUT = 30
+WORKSHOP_DIR = "~/.steam/steamapps/workshop/content/{}/{}"
 
 
-def get_path(workshop_id: int) -> str:
-    return path.join(WORKSHOP_DIR, str(workshop_id))
+def get_local_path(workshop_id: int) -> str:
+    return path.expanduser(WORKSHOP_DIR.format(STEAM_APP_ID, workshop_id))
 
 
-def get_workshop_files(workshop_id: int, sleep: Optional[int] = 0) -> List[str]:
+def get_files(directory: str) -> List[str]:
+    return glob(path.join(directory, "*.fleet")) + glob(path.join(directory, "*.ship"))
+
+
+def get_workshop_files(workshop_id: int) -> List[str]:
     """Get cached copy of workshop files, or download on the fly."""
-    path = get_path(workshop_id)
-    files = get_files(path)
+    workshop_path = get_local_path(workshop_id)
+    files = get_files(workshop_path)
     if files:
         return files
-    time.sleep(sleep)
-    return asyncio.run(download_from_workshop(workshop_id))
+    return download_from_workshop(workshop_id)
 
 
-@thread_with_timeout
 def download_from_workshop(workshop_id: int) -> List[str]:
-    args = get_args(workshop_id)
-    cmd_workshop_download(args)
-    path = get_path(workshop_id)
-    copy_tree(args.output, path)
-    delete_temporary(args.output)
-    return get_files(path)
+    workshop_path = get_local_path(workshop_id)
+    download_bulk([workshop_id])
+    files = get_files(workshop_path)
+    if not files:
+        raise RuntimeError("Did not find any fleet or ship files.")
+    return files
+
+
+def download_bulk(workshop_ids: List[int], timeout: Optional[int] = 30):
+    steam_cmd = ["steamcmd", "+login", STEAM_USERNAME]
+    steam_cmd += ["+workshop_download_item {} {}".format(STEAM_APP_ID, workshop_id) for workshop_id in workshop_ids]
+    steam_cmd.append("+quit")
+    subprocess.run(steam_cmd, timeout=timeout)
+
 
 def download_all():
     workshop_ids = find_all()
-    for _, workshop_id in enumerate(tqdm(workshop_ids)):
-        get_workshop_files(workshop_id, 1)
+    existing_ids = find_existing()
+    missing_ids = workshop_ids.difference(existing_ids)
+    if missing_ids:
+        download_bulk(missing_ids, 3600)
 
-def find_all() -> List[int]:
+
+def find_all() -> Set[int]:
     cursor = "*"
     ids = []
     while cursor:
         params = {
-            "appid": NFC_STEAM_APP_ID,
+            "appid": STEAM_APP_ID,
             "cursor": cursor,
             "return_tags": True,
             "key": STEAM_API_KEY,
@@ -80,25 +77,19 @@ def find_all() -> List[int]:
         cursor = results["next_cursor"]
     total = results["total"]
     logging.info(f"Found {total} workshop files")
-    return [workshop_id["publishedfileid"] for workshop_id in ids for tag in workshop_id["tags"] if tag["tag"] in ["Fleet", "Ship Template"]]
+    return set(
+        [
+            int(workshop_id["publishedfileid"])
+            for workshop_id in ids
+            for tag in workshop_id["tags"]
+            if tag["tag"] in ["Fleet", "Ship Template"]
+        ]
+    )
 
 
-def get_args(workshop_id: int) -> object:
-    args = type("", (), {})()
-    args.anonymous = False
-    args.apikey = STEAM_API_KEY
-    args.appid = NFC_STEAM_APP_ID
-    args.cell_id = None
-    args.id = workshop_id
-    args.output = mkdtemp()
-    args.user = STEAM_USERNAME
-    args.no_progress = True
-    args.no_directories = False
-    return args
-
-
-def get_files(directory: str) -> List[str]:
-    return glob(path.join(directory, "*.fleet")) + glob(path.join(directory, "*.ship"))
+def find_existing() -> Set[int]:
+    local_path = dirname(get_local_path(0))
+    return set([int(x) for x in os.listdir(local_path)])
 
 
 def get_workshop_id(link: str) -> int:

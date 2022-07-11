@@ -2,15 +2,8 @@ import logging
 import os
 from logging.handlers import TimedRotatingFileHandler
 
-import gevent
-import gevent.monkey
 from dotenv import load_dotenv
 from rich.theme import Theme
-
-gevent.monkey.patch_socket()
-gevent.monkey.patch_select()
-gevent.monkey.patch_ssl()
-
 
 load_dotenv()
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
