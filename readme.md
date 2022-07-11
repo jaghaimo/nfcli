@@ -20,6 +20,7 @@ Required:
 
 Recommended:
 
+- [SteamCMD](https://developer.valvesoftware.com/wiki/SteamCMD) (full Steam Workshop integration)
 - python3-levenshtein (faster !wiki string matching)
 - fonts-firacode (better font quality in rendered images)
 

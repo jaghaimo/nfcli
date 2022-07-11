@@ -37,6 +37,7 @@ def get_workshop_files(workshop_id: int) -> List[str]:
     download_bulk([workshop_id])
     return get_files(workshop_path)
 
+
 def download_bulk(workshop_ids: List[int], timeout: Optional[int] = 30):
     steam_cmd = ["steamcmd", "+login", STEAM_USERNAME]
     steam_cmd += ["+workshop_download_item {} {}".format(STEAM_APP_ID, workshop_id) for workshop_id in workshop_ids]
