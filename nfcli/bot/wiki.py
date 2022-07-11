@@ -3,8 +3,9 @@ import logging
 from discord.ext import commands
 
 from nfcli import DISCORD_TOKEN, init_logger
-from nfcli.wiki import wiki as wiki_db
+from nfcli.wiki import Wiki
 
+wiki_db = Wiki()
 bot = commands.Bot(command_prefix="!")
 init_logger("bot.wiki.log", logging.INFO)
 

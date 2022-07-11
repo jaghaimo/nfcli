@@ -4,7 +4,7 @@ from asyncio.exceptions import TimeoutError as AsyncioTimeoutError
 import discord
 
 from nfcli import DISCORD_TOKEN, init_logger
-from nfcli.bot.functions import process_workshops
+from nfcli.bot import process_workshops
 
 client = discord.Client()
 init_logger("bot.workshop.log", logging.INFO)

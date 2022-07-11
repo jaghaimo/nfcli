@@ -20,6 +20,7 @@ Required:
 
 Recommended:
 
+- [SteamCMD](https://developer.valvesoftware.com/wiki/SteamCMD) (full Steam Workshop integration)
 - python3-levenshtein (faster !wiki string matching)
 - fonts-firacode (better font quality in rendered images)
 
@@ -47,4 +48,5 @@ poetry run nfcli -h
 - Configure `Bot` section and generate a `TOKEN`
 - Invite the bot to your server
 - Edit `.env.dist` and save it as `.env`
-- Run `poetry run bot.upload` or `poetry run bot.workshop` and enjoy your new bot
+- Run `make cache` to build caches
+- Run appropriate bot `poetry run bot.<bot>`

@@ -109,31 +109,31 @@ def determine_printer(num_of_ships: int, is_valid: bool) -> Tuple[int, Type[Flee
     return (width, ColumnPrinter)
 
 
-def fleet_printer_factory(printer: str, fleet: "Fleet"):
+def fleet_printer_factory(printer_style: str, fleet: "Fleet"):
     console = Console(theme=nfc_theme)
-    if printer == "stack":
+    if printer_style == "stack":
         logging.debug("Returning StackPrinter")
         console.size = (min(STACK_COLUMNS * COLUMN_WIDTH, console.width), console.height)
         column_width = int(console.width / STACK_COLUMNS)
         return StackPrinter(column_width, console)
 
     num_of_ships = fleet.n_ships
-    if printer == "column" or not fleet.is_valid:
+    if printer_style == "column" or not fleet.is_valid:
         logging.debug("Returning ColumnPrinter")
         column_width = min(COLUMN_WIDTH, console.width)
         console.width = min(num_of_ships * column_width, console.width)
         return ColumnPrinter(column_width, console)
-    elif printer == "auto":
-        style = "stack" if console.width < num_of_ships * COLUMN_WIDTH else "column"
-        style = style if num_of_ships > 3 else "stack"
-        return fleet_printer_factory(style, fleet)
+    elif printer_style == "auto":
+        printer_style = "stack" if console.width < num_of_ships * COLUMN_WIDTH else "column"
+        printer_style = printer_style if num_of_ships > 3 else "stack"
+        return fleet_printer_factory(printer_style, fleet)
 
     logging.warn("Unknown printer requested, returning 'auto'")
     return fleet_printer_factory("auto", fleet)
 
 
-def printer_factory(printer: str, entity: "ShipFleetType"):
+def printer_factory(printer_style: str, entity: "ShipFleetType"):
     if entity.__class__.__name__ == "Fleet":
-        return fleet_printer_factory(printer, entity)
+        return fleet_printer_factory(printer_style, entity)
 
     return fleet_printer_factory("stack", 1)

@@ -4,5 +4,6 @@
 /.env
 /.vscode/
 /*.log
+/*.log.*
 /*.png
 /*.svg

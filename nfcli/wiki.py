@@ -17,7 +17,7 @@ WIKI_DIR = "wiki"
 WIKI_DATA_URL = "https://gitlab.com/nebfltcom/data/-/archive/main/data-main.zip?path=wiki"
 
 
-def update():
+def update_wiki():
     zip_content = urlopen(WIKI_DATA_URL)
     zipfile = ZipFile(BytesIO(zip_content.read()))
     for member in zipfile.namelist():
@@ -110,6 +110,3 @@ class Wiki:
         self._add_all(index["hulls"], self._add_hull)
         self._add_all(index["components"], self._add_component)
         self._add_all(index["munitions"], self._add_munition)
-
-
-wiki = Wiki()

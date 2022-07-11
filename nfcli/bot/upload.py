@@ -3,7 +3,7 @@ import logging
 import discord
 
 from nfcli import DISCORD_TOKEN, init_logger
-from nfcli.bot.functions import process_uploads
+from nfcli.bot import process_uploads
 
 client = discord.Client()
 init_logger("bot.upload.log", logging.INFO)
