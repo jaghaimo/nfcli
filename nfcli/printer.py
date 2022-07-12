@@ -1,6 +1,8 @@
+from __future__ import annotations
+
 import logging
 import math
-from abc import ABC
+from abc import ABC, abstractmethod, abstractproperty
 from typing import TYPE_CHECKING, List, Optional, Tuple, Type
 
 from rich.columns import Columns
@@ -17,7 +19,27 @@ if TYPE_CHECKING:
     from nfcli.model import Component, Fleet, Ship, ShipFleetType
 
 
-class FleetPrinter(ABC):
+class Printable:
+    @abstractproperty
+    def title(self) -> str:
+        raise NotImplementedError
+
+    @abstractproperty
+    def text(self) -> str:
+        raise NotImplementedError
+
+    @abstractmethod
+    def print(self, printer: Printer):
+        raise NotImplementedError
+
+
+class Printer(ABC):
+    @abstractmethod
+    def print(self, printable: Printable):
+        raise NotImplementedError
+
+
+class FleetPrinter(Printer):
     def __init__(self, column_width: int, console: Console, no_title: Optional[bool] = False):
         self.column_width = column_width
         self.console = console

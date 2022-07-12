@@ -1,6 +1,7 @@
 import logging
 import os
 import tempfile
+from abc import abstractmethod, abstractproperty
 from pathlib import Path
 from typing import TYPE_CHECKING, List, TextIO
 
@@ -14,6 +15,16 @@ from nfcli.printer import FleetPrinter, determine_printer
 
 if TYPE_CHECKING:
     from nfcli.model import Fleet, Ship
+
+
+class Writeable:
+    @abstractproperty
+    def is_valid(self):
+        raise NotImplementedError
+
+    @abstractmethod
+    def write(self, filename: str):
+        raise NotImplementedError
 
 
 def close_and_delete(open_file: List[TextIO], filename: str):

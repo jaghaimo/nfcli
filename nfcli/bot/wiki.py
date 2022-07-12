@@ -19,7 +19,11 @@ async def on_ready():
 
 @bot.command()
 async def wiki(ctx, *argv):
-    message = "Usage: `!wiki keyword`"
+    message = (
+        "Usage: `!wiki name or part of it`\n"
+        "This command is powered by <https://gitlab.com/nebfltcom/data/-/tree/main/wiki>\n"
+        "Special thanks to *@Alexbay218#0295*"
+    )
     if argv:
         keyword = " ".join(argv)
         entity = wiki_db.get(keyword)

@@ -24,7 +24,7 @@ async def process_file(message: Message, xml_data: str, filename: str, with_flee
         all_files.append(File(open(filename, "rb"), filename=basename(filename)))
     mod_deps = parse_mods(xml_data)
     mods = FleetPrinter.get_mods(mod_deps, "<", ">")
-    await message.channel.send(f"Hull types: {entity.hulls}{mods}", files=all_files, reference=message)
+    await message.channel.send(f"{entity.text}{mods}", files=all_files, reference=message)
     close_and_delete(converted_file, tmp_file)
 
 
@@ -39,12 +39,14 @@ async def process_uploads(message: Message):
 
 async def process_workshop(message: Message, workshop_id: int):
     """Process one workshop id."""
+    logging.info(f"Processing workshop item {workshop_id}")
     try:
         input_files = get_workshop_files(workshop_id, throw_if_not_found=True)
         for input_file in input_files:
             xml_data = load_path(input_file)
             await process_file(message, xml_data, input_file, with_fleet_file=True)
     except RuntimeError as exception:
+        logging.error(exception)
         await message.channel.send(exception, reference=message)
 
 

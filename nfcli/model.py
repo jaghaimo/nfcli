@@ -1,12 +1,9 @@
 from __future__ import annotations
 
-from abc import abstractmethod, abstractproperty
-from typing import TYPE_CHECKING, Dict, List, Union
+from typing import Dict, List, Union
 
-from nfcli.writer import write_fleet, write_ship
-
-if TYPE_CHECKING:
-    from nfcli.printer import FleetPrinter, StackPrinter
+from nfcli.printer import FleetPrinter, Printable, StackPrinter
+from nfcli.writer import Writeable, write_fleet, write_ship
 
 
 class Named:
@@ -21,30 +18,6 @@ class Named:
         suffix = name.split("/")[-1]
         cleaned = suffix.split("_")[-1]
         return cleaned[0].upper() + cleaned[1:]
-
-
-class Printable:
-    @abstractproperty
-    def hulls(self) -> str:
-        raise NotImplementedError
-
-    @abstractproperty
-    def title(self) -> str:
-        raise NotImplementedError
-
-    @abstractmethod
-    def print(self, printer: "FleetPrinter"):
-        raise NotImplementedError
-
-
-class Writeable:
-    @abstractproperty
-    def is_valid(self):
-        raise NotImplementedError
-
-    @abstractmethod
-    def write(self, filename: str):
-        raise NotImplementedError
 
 
 class Content(Named):
@@ -115,13 +88,13 @@ class Ship(Named, Printable, Writeable):
         return self.get_name(self._hull)
 
     @property
-    def hulls(self) -> str:
-        return self.hull
-
-    @property
     def title(self) -> str:
         a_or_an = "an" if self.hull[0] == "A" else "a"
         return f"[b]{self.name}[/b] is {a_or_an} {self.hull} that costs {self.cost} points"
+
+    @property
+    def text(self) -> str:
+        return f"Hull type: {self.hull}"
 
     @property
     def is_valid(self) -> bool:
@@ -169,11 +142,6 @@ class Fleet(Named, Printable, Writeable):
         self.ships: List[Ship] = []
 
     @property
-    def hulls(self) -> str:
-        hulls = set([ship.hull for ship in self.ships])
-        return ", ".join(hulls)
-
-    @property
     def is_valid(self) -> bool:
         return not bool(self.invalid_ships)
 
@@ -193,6 +161,14 @@ class Fleet(Named, Printable, Writeable):
     def title(self) -> str:
         ship_or_ships = "ships that cost" if self.n_ships > 1 else "ship which costs"
         return f"Fleet '{self.name}' is composed of {self.n_ships} {ship_or_ships} {self.points} points"
+
+    @property
+    def text(self) -> str:
+        hulls = set([ship.hull for ship in self.ships])
+        if len(hulls) == 1:
+            return self.ships[0].text
+        hull_str = ", ".join(hulls)
+        return f"Hull types: {hull_str}"
 
     def add_ship(self, ship: Ship) -> None:
         self.ships.append(ship)
