@@ -1,9 +1,11 @@
+import logging
 import os
 import tempfile
 from pathlib import Path
 from typing import TYPE_CHECKING, List, TextIO
 
 import cairosvg
+import xmltodict
 from rich.console import Console
 from rich.text import Text
 
@@ -36,8 +38,13 @@ def get_printer(num_of_ships: int, is_valid: bool) -> FleetPrinter:
 
 def write_file(console: Console, title: str, png_file: str):
     svg_content = console.export_svg(title=title, clear=True)
+    svg_dict = xmltodict.parse(svg_content)
+    try:
+        del svg_dict["svg"]["g"][0]
+    except KeyError:
+        logging.warning("Failed to clean SVG output.")
     console.set_alt_screen(False)
-    cairosvg.svg2png(bytestring=svg_content, write_to=png_file)
+    cairosvg.svg2png(bytestring=xmltodict.unparse(svg_dict), write_to=png_file)
 
 
 def write_ship(ship: "Ship", png_file: str):
