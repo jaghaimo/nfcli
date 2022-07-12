@@ -104,6 +104,8 @@ def add_items(all_items: Dict[int, Dict], items: List[Dict]) -> None:
 
 def find_existing() -> Set[int]:
     local_path = dirname(get_local_path(0))
+    if not os.path.exists(local_path):
+        return set()
     return set([int(x) for x in os.listdir(local_path)])
 
 
