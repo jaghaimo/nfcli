@@ -10,6 +10,8 @@ copy: fleets/Starter\ -\ TF\ Ash.fleet fleets/Starter\ -\ TF\ Oak.fleet
 
 clean:
 	rm -f *.png
+	rm -f *.log
+	rm -f *.log.*
 
 format:
 	black nfcli

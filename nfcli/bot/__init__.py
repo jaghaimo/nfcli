@@ -39,10 +39,13 @@ async def process_uploads(message: Message):
 
 async def process_workshop(message: Message, workshop_id: int):
     """Process one workshop id."""
-    input_files = get_workshop_files(workshop_id)
-    for input_file in input_files:
-        xml_data = load_path(input_file)
-        await process_file(message, xml_data, input_file, with_fleet_file=True)
+    try:
+        input_files = get_workshop_files(workshop_id, throw_if_not_found=True)
+        for input_file in input_files:
+            xml_data = load_path(input_file)
+            await process_file(message, xml_data, input_file, with_fleet_file=True)
+    except RuntimeError as exception:
+        await message.channel.send(exception, reference=message)
 
 
 async def process_workshops(message: Message):

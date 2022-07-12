@@ -24,7 +24,7 @@ def get_files(directory: str) -> List[str]:
     return glob(path.join(directory, "*.fleet")) + glob(path.join(directory, "*.ship"))
 
 
-def get_workshop_files(workshop_id: int) -> List[str]:
+def get_workshop_files(workshop_id: int, throw_if_not_found: Optional[bool] = False) -> List[str]:
     """Get cached copy of workshop files, or download on the fly."""
     workshop_path = get_local_path(workshop_id)
     files = get_files(workshop_path)
@@ -32,8 +32,9 @@ def get_workshop_files(workshop_id: int) -> List[str]:
         return files
     workshop_ids = find_all()
     if workshop_id not in workshop_ids:
-        logging.warning(f"Workshop item {workshop_id} is not a fleet or ship entry!")
-        return []
+        raise RuntimeError(f"Workshop item {workshop_id} is not a fleet or ship entry!")
+    if throw_if_not_found:
+        raise RuntimeError(f"I'm sorry, but the workshop item {workshop_id} has not yet been cached.")
     logging.info(f"Downloading workshop item {workshop_id}.")
     download_bulk([workshop_id])
     return get_files(workshop_path)

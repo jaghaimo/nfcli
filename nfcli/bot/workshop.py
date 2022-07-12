@@ -1,5 +1,4 @@
 import logging
-from asyncio.exceptions import TimeoutError as AsyncioTimeoutError
 
 import discord
 
@@ -21,13 +20,7 @@ async def on_ready():
 async def on_message(message: discord.Message):
     if message.author == client.user:
         return
-
-    try:
-        await process_workshops(message),
-    except AsyncioTimeoutError:
-        await message.channel.send(
-            "I'm sorry, but the Steam Workshop integration is currently down.", reference=message
-        )
+    await process_workshops(message),
 
 
 def start():
