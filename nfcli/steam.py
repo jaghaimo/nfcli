@@ -36,11 +36,11 @@ def get_workshop_files(workshop_id: int, throw_if_not_found: Optional[bool] = Fa
     if throw_if_not_found:
         raise RuntimeError(f"I'm sorry, but the workshop item {workshop_id} has not yet been cached.")
     logging.info(f"Downloading workshop item {workshop_id}.")
-    download_bulk([workshop_id])
+    download_bulk({workshop_id})
     return get_files(workshop_path)
 
 
-def download_bulk(workshop_ids: List[int], timeout: Optional[int] = 30):
+def download_bulk(workshop_ids: Set[int], timeout: int = 30):
     steam_cmd = ["steamcmd", "+login", STEAM_USERNAME]
     steam_cmd += ["+workshop_download_item {} {}".format(STEAM_APP_ID, workshop_id) for workshop_id in workshop_ids]
     steam_cmd.append("+quit")
@@ -57,7 +57,7 @@ def cache_workshop_files():
         download_bulk(missing_ids, 3600)
 
 
-def invalidate_cache(workshop_items: Dict[str, Dict]) -> None:
+def invalidate_cache(workshop_items: Dict[int, Dict]) -> None:
     for workshop_id, workshop_item in workshop_items.items():
         workshop_path = get_local_path(workshop_id)
         if not os.path.exists(workshop_path):
@@ -68,12 +68,13 @@ def invalidate_cache(workshop_items: Dict[str, Dict]) -> None:
             remove_tree(workshop_path)
 
 
-def is_valid(tags: List[str]) -> bool:
+def is_valid(tags: List[Dict]) -> bool:
     return any([tag["tag"].lower() in ["fleet", "ship template"] for tag in tags])
 
 
-def find_all() -> Dict:
+def find_all() -> Dict[int, Dict]:
     cursor = "*"
+    total = 0
     all_items = {}
     while cursor:
         params = {
@@ -89,8 +90,8 @@ def find_all() -> Dict:
             break
         cursor = results["next_cursor"]
         items = results["publishedfiledetails"]
+        total = results["total"]
         add_items(all_items, items)
-    total = results["total"]
     valid = len(all_items)
     logging.info(f"Found {total} workshop files with {valid} being valid...")
     return all_items

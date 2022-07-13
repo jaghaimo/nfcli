@@ -56,7 +56,7 @@ class FleetPrinter(Printer):
         self.console.print(self.get_mods(mods))
 
     @classmethod
-    def get_mods(self, mods: List[str], begin_quote: Optional[str] = "", end_quote: Optional[str] = "") -> str:
+    def get_mods(cls, mods: List[str], begin_quote: str = "", end_quote: str = "") -> str:
         if not mods:
             return ""
         mods_text = "\nMods required:"
@@ -68,8 +68,8 @@ class FleetPrinter(Printer):
         for content in component.contents:
             tree.add(Text(f"{content.name} x{content.quantity}", overflow="ignore"), style="i d")
 
-    def get_sockets(self, title: str, components: List["Component"], color: Optional[str] = "white") -> Group:
-        elements = [Rule(Text(f"{title}", style="orange"), style="orange")]
+    def get_sockets(self, title: str, components: List["Component"], color: str = "white") -> Group:
+        elements: List[RenderableType] = [Rule(Text(f"{title}", style="orange"), style="orange")]
         for component in components:
             slot_number = component.slot_number
             just_size = 7 if int(slot_number) < 10 else 6
@@ -131,7 +131,7 @@ def determine_printer(num_of_ships: int, is_valid: bool) -> Tuple[int, Type[Flee
     return (width, ColumnPrinter)
 
 
-def fleet_printer_factory(printer_style: str, fleet: Optional["Fleet"] = None):
+def fleet_printer_factory(printer_style: str, fleet: Optional["Fleet"] = None) -> FleetPrinter:
     console = Console(theme=nfc_theme)
     if printer_style == "stack" or fleet is None:
         logging.debug("Returning StackPrinter")
@@ -155,7 +155,7 @@ def fleet_printer_factory(printer_style: str, fleet: Optional["Fleet"] = None):
     return fleet_printer_factory("auto", fleet)
 
 
-def printer_factory(printer_style: str, entity: "ShipFleetType"):
+def printer_factory(printer_style: str, entity: "ShipFleetType") -> FleetPrinter:
     if entity.__class__.__name__ == "Fleet":
         return fleet_printer_factory(printer_style, entity)
 

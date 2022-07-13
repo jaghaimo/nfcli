@@ -5,7 +5,7 @@ import re
 import shutil
 from abc import abstractproperty
 from io import BytesIO
-from typing import Callable, Dict, List, Optional
+from typing import Callable, Dict, List
 from urllib.request import urlopen
 from zipfile import ZipFile
 
@@ -80,7 +80,7 @@ class Hull(Entity):
     @property
     def info(self) -> Dict[str, str]:
         return {
-            "Point Cost": self.point_cost,
+            "Point Cost": str(self.point_cost),
             "Class Size": self.size_class,
             "Mass": f"{self.mass} tonnes",
         }
@@ -101,7 +101,7 @@ class Hull(Entity):
     @property
     def durability(self) -> Dict[str, str]:
         return {
-            "Structural Integrity": self.base_integrity,
+            "Structural Integrity": str(self.base_integrity),
             "Armour Thickness": f"{self.armour_thickness} cm",
             "Component Damage Resistance": f"{self.component_damage_resistance}%",
         }
@@ -111,7 +111,7 @@ class Hull(Entity):
         return {
             "Radar Signature": f"{self.min_radar:.0f} m - {self.max_radar:.0f} m",
             "Visual Detection Distance": f"{self.vision_distance} m",
-            "Identification Difficulty": self.identity_work_value,
+            "Identification Difficulty": str(self.identity_work_value),
         }
 
     @property
@@ -239,7 +239,7 @@ class Wiki:
         self.entities = {}
         self._load()
 
-    def get(self, key: str, scorer: Optional[Callable] = token_sort_ratio, score_cutoff: Optional[int] = 0) -> Entity:
+    def get(self, key: str, scorer: Callable = token_sort_ratio, score_cutoff: int = 0) -> Entity:
         best_key = process.extractOne(key, self.entities.keys(), scorer=scorer, score_cutoff=score_cutoff)
         if not best_key:
             raise ValueError

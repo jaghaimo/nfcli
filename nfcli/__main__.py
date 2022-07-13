@@ -62,6 +62,7 @@ def main() -> int:
     else:
         parser = get_parser()
         parser.print_help()
+    return 0
 
 
 if __name__ == "__main__":

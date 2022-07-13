@@ -1,9 +1,8 @@
 import logging
-import os
 import tempfile
 from abc import abstractmethod, abstractproperty
 from pathlib import Path
-from typing import TYPE_CHECKING, List, TextIO
+from typing import TYPE_CHECKING
 
 import cairosvg
 import xmltodict
@@ -11,7 +10,7 @@ from rich.console import Console
 from rich.text import Text
 
 from nfcli import COLUMN_WIDTH, nfc_theme
-from nfcli.printer import FleetPrinter, determine_printer
+from nfcli.printer import FleetPrinter, StackPrinter, determine_printer
 
 if TYPE_CHECKING:
     from nfcli.model import Fleet, Ship
@@ -25,11 +24,6 @@ class Writeable:
     @abstractmethod
     def write(self, filename: str):
         raise NotImplementedError
-
-
-def close_and_delete(open_file: List[TextIO], filename: str):
-    open_file.close()
-    os.unlink(filename)
 
 
 def determine_output_png(input_fleet: str) -> str:
@@ -59,7 +53,8 @@ def write_file(console: Console, title: str, png_file: str):
 
 
 def write_ship(ship: "Ship", png_file: str):
-    printer = get_printer(1, ship.is_valid)
+    fleet_printer = get_printer(1, ship.is_valid)
+    printer = StackPrinter(COLUMN_WIDTH, fleet_printer.console, no_title=True)
     renderable = printer.get_ship(ship, no_ship_title=True)
     printer.console.print(renderable)
     title = Text.from_markup(ship.title).plain

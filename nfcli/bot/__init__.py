@@ -1,4 +1,5 @@
 import logging
+import os
 import re
 from posixpath import basename
 
@@ -8,7 +9,7 @@ from nfcli import load_path
 from nfcli.parser import parse_any, parse_mods
 from nfcli.printer import FleetPrinter
 from nfcli.steam import get_workshop_files, get_workshop_id
-from nfcli.writer import close_and_delete, determine_output_png, get_temp_filename
+from nfcli.writer import determine_output_png, get_temp_filename
 
 
 async def process_file(message: Message, xml_data: str, filename: str, with_fleet_file: bool):
@@ -25,7 +26,8 @@ async def process_file(message: Message, xml_data: str, filename: str, with_flee
     mod_deps = parse_mods(xml_data)
     mods = FleetPrinter.get_mods(mod_deps, "<", ">")
     await message.channel.send(f"{entity.text}{mods}", files=all_files, reference=message)
-    close_and_delete(converted_file, tmp_file)
+    converted_file.close()
+    os.unlink(tmp_file)
 
 
 async def process_uploads(message: Message):

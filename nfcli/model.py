@@ -77,7 +77,7 @@ class Ship(Named, Printable, Writeable):
         self.number = number
         self.symbol_option = symbol_option
         self._hull = hull
-        self.sockets: Dict[Socket] = {}
+        self.sockets: Dict[str, Socket] = {}
         self._data = data
 
     def add_socket(self, socket: Socket) -> None:
