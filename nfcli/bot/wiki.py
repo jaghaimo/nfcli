@@ -16,6 +16,8 @@ init_logger("bot.wiki.log", logging.INFO)
 async def replace_with_previous(channel: TextChannel, link: str, message: str) -> str:
     old_messages: List[Message] = await channel.history(limit=100).flatten()
     for old_message in old_messages:
+        if old_message.author != bot.user:
+            continue
         if link in old_message.content:
             return f"I have already explained this recently!\n<{old_message.jump_url}>"
     return message
