@@ -131,9 +131,9 @@ def determine_printer(num_of_ships: int, is_valid: bool) -> Tuple[int, Type[Flee
     return (width, ColumnPrinter)
 
 
-def fleet_printer_factory(printer_style: str, fleet: "Fleet"):
+def fleet_printer_factory(printer_style: str, fleet: Optional["Fleet"] = None):
     console = Console(theme=nfc_theme)
-    if printer_style == "stack":
+    if printer_style == "stack" or fleet is None:
         logging.debug("Returning StackPrinter")
         console.size = (min(STACK_COLUMNS * COLUMN_WIDTH, console.width), console.height)
         column_width = int(console.width / STACK_COLUMNS)
@@ -146,6 +146,7 @@ def fleet_printer_factory(printer_style: str, fleet: "Fleet"):
         console.width = min(num_of_ships * column_width, console.width)
         return ColumnPrinter(column_width, console)
     elif printer_style == "auto":
+        logging.debug("Determining printer based on fleet and console size")
         printer_style = "stack" if console.width < num_of_ships * COLUMN_WIDTH else "column"
         printer_style = printer_style if num_of_ships > 3 else "stack"
         return fleet_printer_factory(printer_style, fleet)
@@ -158,4 +159,4 @@ def printer_factory(printer_style: str, entity: "ShipFleetType"):
     if entity.__class__.__name__ == "Fleet":
         return fleet_printer_factory(printer_style, entity)
 
-    return fleet_printer_factory("stack", 1)
+    return fleet_printer_factory("stack")
