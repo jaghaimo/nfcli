@@ -8,7 +8,7 @@ from nfcli.writer import Writeable, write_fleet, write_ship
 
 class Named:
     def __init__(self, name: str) -> None:
-        self._name = name
+        self._name = str(name)
 
     @property
     def name(self):
