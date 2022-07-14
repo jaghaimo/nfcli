@@ -88,7 +88,7 @@ async def replace_with_previous(channel: discord.TextChannel, link: str, message
 
 @bot.event
 async def on_ready():
-    logging.info("Workshop bot initialized")
+    logging.info("Discord bot initialized")
     for guild in bot.guilds:
         logging.info(f"Connected to the guild: {guild.name} (id: {guild.id})")
 
@@ -103,7 +103,7 @@ async def on_message(message: discord.Message):
 
 @bot.command(name="wiki")
 async def wiki(ctx: discord.ApplicationContext, *, keywords):
-    """Search N:FC wiki data dumps (thanks to @Alexbay218#0295)"""
+    """Search N:FC wiki data dumps provided by @Alexbay218#0295"""
     async with ctx.typing():
         entity = wiki_db.get(keywords)
         message = entity.text
