@@ -5,7 +5,7 @@ import re
 import shutil
 from abc import abstractproperty
 from io import BytesIO
-from typing import Callable, Dict, List
+from typing import Callable, Dict, List, Optional
 from urllib.request import urlopen
 from zipfile import ZipFile
 
@@ -34,8 +34,21 @@ def update_wiki():
 
 
 class Entity:
-    def __init__(self, name: str) -> None:
+    def __init__(self, name: str, description: str) -> None:
         self.name = name
+        self.description = description
+
+    @property
+    def description(self) -> str:
+        return self._description
+
+    @description.setter
+    def description(self, description: str):
+        self._description = description.replace("\n\n", "\n")
+
+    @property
+    def header(self) -> str:
+        return f"**{self.name}** [<{self.link}>]\n{self.description}\n```yaml\n"
 
     @abstractproperty
     def link(self) -> str:
@@ -46,21 +59,35 @@ class Entity:
         raise NotImplementedError
 
     def dict_to_str(self, dictionary: Dict[str, str]) -> str:
-        as_list = [f"{key}: {value}" for key, value in dictionary.items()]
+        as_list = [f"{key.rjust(27)}: {value}" if value else "" for key, value in dictionary.items()]
         return "\n".join(as_list)
+
+    def str_to_dict(self, string: Optional[str] = None) -> Dict[str, str]:
+        if not string:
+            return {}
+        new_dict = {}
+        for line in string.splitlines():
+            tokens = line.split(":", maxsplit=2)
+            if len(tokens) != 2:
+                continue
+            key, value = tokens[0], tokens[1]
+            new_dict[self.sanitize(key)] = self.strip_tags(value)
+        return new_dict
 
     def get_link(self, link: str) -> str:
         return WIKI_URL + link
 
+    def sanitize(self, string: str) -> str:
+        return string.replace("(", "").replace(")", "").strip()
+
     def strip_tags(self, string: str) -> str:
-        return re.sub("<[^<]+?>", "", string)
+        return re.sub("<[^<]+?>", "", string).strip()
 
 
 class Hull(Entity):
     def __init__(self, raw_data: Dict) -> None:
-        super().__init__(raw_data["ClassName"] + " " + raw_data["HullClassification"])
+        super().__init__(raw_data["ClassName"] + " " + raw_data["HullClassification"], raw_data["LongDescription"])
         self.class_name: str = raw_data["ClassName"]
-        self.description: str = raw_data["LongDescription"]
         self.size_class: str = raw_data["SizeClass"]
         self.point_cost: int = raw_data["PointCost"]
         self.mass: int = raw_data["Mass"]
@@ -79,17 +106,20 @@ class Hull(Entity):
 
     @property
     def info(self) -> Dict[str, str]:
-        return {
+        info = {
             "Point Cost": str(self.point_cost),
             "Class Size": self.size_class,
             "Mass": f"{self.mass} tonnes",
         }
+        info.update(self.str_to_dict(self.hull_buffs))
+        return info
 
     @property
     def manoeuvrability(self) -> Dict[str, str]:
         linear_acceleration = 1000 * self.linear_motor / self.mass
         time_to_max_speed = self.max_speed / linear_acceleration
         return {
+            "Manoeuvrability": "",
             "Linear Speed": f"{self.max_speed} m/s",
             "Linear Thrust": f"{self.linear_motor} MN",
             "Angular Speed": f"{self.max_turn_speed:.2f} deg/s",
@@ -101,6 +131,7 @@ class Hull(Entity):
     @property
     def durability(self) -> Dict[str, str]:
         return {
+            "Durability": "",
             "Structural Integrity": str(self.base_integrity),
             "Armour Thickness": f"{self.armour_thickness} cm",
             "Component Damage Resistance": f"{self.component_damage_resistance}%",
@@ -109,7 +140,8 @@ class Hull(Entity):
     @property
     def detectability(self) -> Dict[str, str]:
         return {
-            "Radar Signature": f"{self.min_radar:.0f} m - {self.max_radar:.0f} m",
+            "Detectability": "",
+            "Radar Signature": f"{self.min_radar:.0f} m to {self.max_radar:.0f} m",
             "Visual Detection Distance": f"{self.vision_distance} m",
             "Identification Difficulty": str(self.identity_work_value),
         }
@@ -120,18 +152,16 @@ class Hull(Entity):
 
     @property
     def text(self) -> str:
-        info = f"**{self.name}**\n<{self.link}>\n" + self.dict_to_str(self.info)
-        if self.hull_buffs:
-            info += "\n" + self.strip_tags(self.hull_buffs.strip())
-        manoeuvrability = "__Manoeuvrability__\n" + self.dict_to_str(self.manoeuvrability)
-        durability = "__Durability__\n" + self.dict_to_str(self.durability)
-        detectability = "__Detectability__\n" + self.dict_to_str(self.detectability)
-        return "\n\n".join([info, manoeuvrability, durability, detectability, self.description])
+        info = self.dict_to_str(self.info)
+        manoeuvrability = self.dict_to_str(self.manoeuvrability)
+        durability = self.dict_to_str(self.durability)
+        detectability = self.dict_to_str(self.detectability) + "\n```"
+        return "\n".join([self.header, info, manoeuvrability, durability, detectability])
 
 
 class Component(Entity):
     def __init__(self, raw_data: Dict) -> None:
-        super().__init__(raw_data["ComponentName"])
+        super().__init__(raw_data["ComponentName"], raw_data["LongDescription"])
         self.category: str = raw_data["Category"]
         self.type: str = raw_data["Type"]
         self.point_cost: int = raw_data["PointCost"]
@@ -146,7 +176,6 @@ class Component(Entity):
         self.functioning_threshold: int = raw_data["FunctioningThreshold"]
         self.damage_resistance: int = raw_data["DamageResistance"]
         self.crew_data: Dict[str, int] = raw_data["CrewOperatedComponentData"]
-        self.description: str = raw_data["LongDescription"]
         self.resources: str = raw_data["FormattedResources"]
         self.buffs: str = raw_data["FormattedBuffs"]
 
@@ -160,6 +189,8 @@ class Component(Entity):
             info["Required Crew"] = str(self.crew_data["CrewRequired"]) if "CrewRequired" in self.crew_data else "none"
         info["Size"] = "x".join([str(x) for x in self.size.values()])
         info["Mass"] = f"{self.mass} tonnes"
+        info.update(self.str_to_dict(self.resources))
+        info.update(self.str_to_dict(self.buffs))
         return info
 
     @property
@@ -168,6 +199,7 @@ class Component(Entity):
         compounding_cost = "Yes" if self.compounding_cost else "No"
         compounding_scale = f"(x{self.compounding_scale})" if self.compounding_scale > 1 else ""
         return {
+            "Cost": "",
             "Point Cost": f"{self.point_cost}{scale_with_size}",
             "Compounding Cost": f"{compounding_cost} {compounding_scale}".strip(),
             "First Instance Free": "Yes" if self.first_instance_free else "No",
@@ -176,6 +208,7 @@ class Component(Entity):
     @property
     def durability(self) -> Dict[str, str]:
         return {
+            "Durability": "",
             "Component Integrity": str(self.component_integrity),
             "Is Reinforced": "Yes" if self.reinforced else "No",
             "Functioning Threshold": str(self.functioning_threshold),
@@ -189,25 +222,33 @@ class Component(Entity):
 
     @property
     def text(self) -> str:
-        info = f"**{self.name}**\n<{self.link}>\n" + self.dict_to_str(self.info)
-        if self.resources:
-            info += "\n" + self.strip_tags(self.resources.strip())
-        if self.buffs:
-            info += "\n\n__Component Buffs__\n" + self.strip_tags(self.buffs.strip())
-        cost = "__Cost__\n" + self.dict_to_str(self.cost)
-        durability = "__Durability__\n" + self.dict_to_str(self.durability)
-        return "\n\n".join([info, cost, durability, self.description])
+        info = self.dict_to_str(self.info)
+        cost = self.dict_to_str(self.cost)
+        durability = self.dict_to_str(self.durability) + "\n```"
+        return "\n".join([self.header, info, cost, durability])
 
 
 class Munition(Entity):
     def __init__(self, raw_data: Dict) -> None:
-        super().__init__(raw_data["MunitionName"])
+        super().__init__(raw_data["MunitionName"], "")
         self.type = raw_data["Type"]
         self.role = raw_data["Role"]
         self.point_cost = raw_data["PointCost"]
         self.volume = raw_data["StorageVolume"]
         self.division = raw_data["PointDivision"]
-        self.description: str = raw_data["Description"]
+        self.set_from_description(raw_data["Description"])
+
+    def set_from_description(self, description_and_details: str):
+        description: List[str] = []
+        details: List[str] = []
+        for line in description_and_details.splitlines():
+            if len(line) > 30:
+                description.append(line)
+            else:
+                details.append(self.strip_tags(line))
+        self.description = "\n".join(description)
+        self.details = {"Details": ""}
+        self.details.update(self.str_to_dict("\n".join(details)))
 
     @property
     def info(self) -> Dict[str, str]:
@@ -226,12 +267,9 @@ class Munition(Entity):
 
     @property
     def text(self) -> str:
-        info = f"**{self.name}**\n<{self.link}>\n" + self.dict_to_str(self.info)
-        description = self.description
-        description = description.replace("<b>", "__")
-        description = description.replace("</b>", "__")
-        description = self.strip_tags(description)
-        return "\n\n".join([info, description])
+        info = self.dict_to_str(self.info)
+        details = self.dict_to_str(self.details) + "\n```"
+        return "\n".join([self.header, info, details])
 
 
 class Wiki:
