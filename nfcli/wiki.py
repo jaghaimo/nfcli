@@ -5,7 +5,7 @@ import re
 import shutil
 from abc import abstractproperty
 from io import BytesIO
-from typing import Callable, Dict, List
+from typing import Callable, Dict, List, Optional
 from urllib.request import urlopen
 from zipfile import ZipFile
 
@@ -39,8 +39,16 @@ class Entity:
         self.description = description
 
     @property
-    def header(self):
-        return f"**{self.name}**\n<{self.link}>\n{self.description}\n```yaml\n"
+    def description(self) -> str:
+        return self._description
+
+    @description.setter
+    def description(self, description: str):
+        self._description = description.replace("\n\n", "\n")
+
+    @property
+    def header(self) -> str:
+        return f"**{self.name}** [<{self.link}>]\n{self.description}\n```yaml\n"
 
     @abstractproperty
     def link(self) -> str:
@@ -51,10 +59,12 @@ class Entity:
         raise NotImplementedError
 
     def dict_to_str(self, dictionary: Dict[str, str]) -> str:
-        as_list = [f"{key.rjust(27)}: {value}" for key, value in dictionary.items()]
+        as_list = [f"{key.rjust(27)}: {value}" if value else "" for key, value in dictionary.items()]
         return "\n".join(as_list)
 
-    def str_to_dict(self, string: str) -> Dict[str, str]:
+    def str_to_dict(self, string: Optional[str] = None) -> Dict[str, str]:
+        if not string:
+            return {}
         new_dict = {}
         for line in string.splitlines():
             tokens = line.split(":", maxsplit=2)
@@ -109,6 +119,7 @@ class Hull(Entity):
         linear_acceleration = 1000 * self.linear_motor / self.mass
         time_to_max_speed = self.max_speed / linear_acceleration
         return {
+            "Manoeuvrability": "",
             "Linear Speed": f"{self.max_speed} m/s",
             "Linear Thrust": f"{self.linear_motor} MN",
             "Angular Speed": f"{self.max_turn_speed:.2f} deg/s",
@@ -120,6 +131,7 @@ class Hull(Entity):
     @property
     def durability(self) -> Dict[str, str]:
         return {
+            "Durability": "",
             "Structural Integrity": str(self.base_integrity),
             "Armour Thickness": f"{self.armour_thickness} cm",
             "Component Damage Resistance": f"{self.component_damage_resistance}%",
@@ -128,6 +140,7 @@ class Hull(Entity):
     @property
     def detectability(self) -> Dict[str, str]:
         return {
+            "Detectability": "",
             "Radar Signature": f"{self.min_radar:.0f} m to {self.max_radar:.0f} m",
             "Visual Detection Distance": f"{self.vision_distance} m",
             "Identification Difficulty": str(self.identity_work_value),
@@ -143,7 +156,7 @@ class Hull(Entity):
         manoeuvrability = self.dict_to_str(self.manoeuvrability)
         durability = self.dict_to_str(self.durability)
         detectability = self.dict_to_str(self.detectability) + "\n```"
-        return "\n\n".join([self.header, info, manoeuvrability, durability, detectability])
+        return "\n".join([self.header, info, manoeuvrability, durability, detectability])
 
 
 class Component(Entity):
@@ -186,6 +199,7 @@ class Component(Entity):
         compounding_cost = "Yes" if self.compounding_cost else "No"
         compounding_scale = f"(x{self.compounding_scale})" if self.compounding_scale > 1 else ""
         return {
+            "Cost": "",
             "Point Cost": f"{self.point_cost}{scale_with_size}",
             "Compounding Cost": f"{compounding_cost} {compounding_scale}".strip(),
             "First Instance Free": "Yes" if self.first_instance_free else "No",
@@ -194,6 +208,7 @@ class Component(Entity):
     @property
     def durability(self) -> Dict[str, str]:
         return {
+            "Durability": "",
             "Component Integrity": str(self.component_integrity),
             "Is Reinforced": "Yes" if self.reinforced else "No",
             "Functioning Threshold": str(self.functioning_threshold),
@@ -210,7 +225,7 @@ class Component(Entity):
         info = self.dict_to_str(self.info)
         cost = self.dict_to_str(self.cost)
         durability = self.dict_to_str(self.durability) + "\n```"
-        return "\n\n".join([self.header, info, cost, durability])
+        return "\n".join([self.header, info, cost, durability])
 
 
 class Munition(Entity):
@@ -232,7 +247,8 @@ class Munition(Entity):
             else:
                 details.append(self.strip_tags(line))
         self.description = "\n".join(description)
-        self.details = self.str_to_dict("\n".join(details))
+        self.details = {"Details": ""}
+        self.details.update(self.str_to_dict("\n".join(details)))
 
     @property
     def info(self) -> Dict[str, str]:
@@ -253,11 +269,7 @@ class Munition(Entity):
     def text(self) -> str:
         info = self.dict_to_str(self.info)
         details = self.dict_to_str(self.details) + "\n```"
-        # description = self.description
-        # description = description.replace("<b>", "__")
-        # description = description.replace("</b>", "__")
-        # description = self.strip_tags(description)
-        return "\n\n".join([self.header, info, details])
+        return "\n".join([self.header, info, details])
 
 
 class Wiki:
