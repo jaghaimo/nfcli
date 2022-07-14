@@ -14,7 +14,7 @@ use_parentheses = true
 
 [tool.poetry]
 name = "nfcli"
-version = "1.1.1"
+version = "1.2.0"
 description = "A CLI tool to pretty print fleet and ship files to console."
 authors = ["Jaghaimo <1764586+jaghaimo@users.noreply.github.com>"]
 
@@ -36,6 +36,7 @@ isort = "^5.10.1"
 
 [tool.poetry.scripts]
 nfcli = "nfcli.__main__:main"
+bot = "nfcli.bot:start"
 "bot.upload" = "nfcli.bot.upload:start"
 "bot.wiki" = "nfcli.bot.wiki:start"
 "bot.workshop" = "nfcli.bot.workshop:start"
