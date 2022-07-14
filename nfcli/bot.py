@@ -91,6 +91,7 @@ async def on_ready():
     logging.info("Discord bot initialized")
     for guild in bot.guilds:
         logging.info(f"Connected to the guild: {guild.name} (id: {guild.id})")
+    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="your fleets"))
 
 
 @bot.event
@@ -102,13 +103,13 @@ async def on_message(message: discord.Message):
 
 
 @bot.command(name="wiki")
-async def wiki(ctx: discord.ApplicationContext, *, keywords):
+async def wiki(ctx: discord.ApplicationContext, *, keywords: str):
     """Search N:FC wiki data dumps provided by @Alexbay218#0295"""
     async with ctx.typing():
         entity = wiki_db.get(keywords)
         message = entity.text
-        if entity:
-            message = await replace_with_previous(ctx.channel, entity.link, message)
+        # if entity:
+        #     message = await replace_with_previous(ctx.channel, entity.link, message)
         await ctx.respond(message)
 
 
