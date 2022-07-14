@@ -1,15 +1,13 @@
 import logging
 from typing import List
 
-from discord import Message, TextChannel
-from discord.ext import commands
+from discord import ApplicationContext, Bot, Message, TextChannel
 
 from nfcli import DISCORD_TOKEN, init_logger
 from nfcli.wiki import Wiki
 
 wiki_db = Wiki()
-bot = commands.Bot(command_prefix="!")
-bot.remove_command("help")
+bot = Bot()
 init_logger("bot.wiki.log", logging.INFO)
 
 
@@ -30,23 +28,16 @@ async def on_ready():
         logging.info(f"Connected to the guild: {guild.name} (id: {guild.id})")
 
 
-@bot.command()
-async def wiki(ctx: commands.Context, *argv):
-    entity = None
-    message = (
-        "Usage: `!wiki name or part of it`\n"
-        "This command is powered by <https://gitlab.com/nebfltcom/data/-/tree/main/wiki>\n"
-        "Special thanks to *@Alexbay218#0295*"
-    )
-    if argv:
-        keyword = " ".join(argv)
-        entity = wiki_db.get(keyword)
-        message = entity.text
+@bot.command(name="wiki")
+async def wiki(ctx: ApplicationContext, *, keywords):
+    """Search N:FC wiki data dumps (thanks to @Alexbay218#0295)"""
+    entity = wiki_db.get(keywords)
+    message = entity.text
 
     if entity:
         message = await replace_with_previous(ctx.channel, entity.link, message)
 
-    await ctx.reply(message)
+    await ctx.respond(message)
 
 
 def start():

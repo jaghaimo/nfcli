@@ -6,7 +6,7 @@ from nfcli import DISCORD_TOKEN, init_logger
 from nfcli.bot import process_uploads
 
 client = discord.Client()
-init_logger("bot.upload.log", logging.INFO)
+init_logger("bot.upload.log", logging.DEBUG)
 
 
 @client.event
