@@ -50,6 +50,10 @@ class Entity:
     def header(self) -> str:
         return f"**{self.name}** [<{self.link}>]\n{self.description}\n```yaml\n"
 
+    @property
+    def footer(self) -> str:
+        return "```"
+
     @abstractproperty
     def link(self) -> str:
         raise NotImplementedError
@@ -155,8 +159,8 @@ class Hull(Entity):
         info = self.dict_to_str(self.info)
         manoeuvrability = self.dict_to_str(self.manoeuvrability)
         durability = self.dict_to_str(self.durability)
-        detectability = self.dict_to_str(self.detectability) + "\n```"
-        return "\n".join([self.header, info, manoeuvrability, durability, detectability])
+        detectability = self.dict_to_str(self.detectability)
+        return "\n".join([self.header, info, manoeuvrability, durability, detectability, self.footer])
 
 
 class Component(Entity):
@@ -175,7 +179,13 @@ class Component(Entity):
         self.reinforced: int = raw_data["Reinforced"]
         self.functioning_threshold: int = raw_data["FunctioningThreshold"]
         self.damage_resistance: int = raw_data["DamageResistance"]
-        self.crew_data: Dict[str, int] = raw_data["CrewOperatedComponentData"]
+        self.crew_data: Dict = raw_data["CrewOperatedComponentData"]
+        ewar_data = {}
+        if raw_data["TurretedEWarComponentData"]:
+            ewar_data = raw_data["TurretedEWarComponentData"]
+        elif raw_data["OmnidirectionalEWarComponentData"]:
+            ewar_data = raw_data["OmnidirectionalEWarComponentData"]
+        self.ewar_data: Dict = ewar_data
         self.resources: str = raw_data["FormattedResources"]
         self.buffs: str = raw_data["FormattedBuffs"]
 
@@ -216,6 +226,16 @@ class Component(Entity):
         }
 
     @property
+    def ewar(self) -> Dict[str, str]:
+        ewar = {}
+        if self.ewar_data:
+            ewar["EWar"] = ""
+            ewar["Range"] = str(self.ewar_data["MaxRange"] / 1000) + " km"
+            ewar["Radiated Power"] = str(self.ewar_data["RadiatedPower"]) + " kW"
+            ewar["Gain"] = str(self.ewar_data["Gain"]) + " dB"
+        return ewar
+
+    @property
     def link(self) -> str:
         name = self.name.lower().replace(" ", "-")
         return self.get_link(f"component:{name}")
@@ -223,9 +243,10 @@ class Component(Entity):
     @property
     def text(self) -> str:
         info = self.dict_to_str(self.info)
+        ewar = self.dict_to_str(self.ewar)
         cost = self.dict_to_str(self.cost)
-        durability = self.dict_to_str(self.durability) + "\n```"
-        return "\n".join([self.header, info, cost, durability])
+        durability = self.dict_to_str(self.durability)
+        return "\n".join([self.header, info, ewar, cost, durability, self.footer])
 
 
 class Munition(Entity):
@@ -268,8 +289,8 @@ class Munition(Entity):
     @property
     def text(self) -> str:
         info = self.dict_to_str(self.info)
-        details = self.dict_to_str(self.details) + "\n```"
-        return "\n".join([self.header, info, details])
+        details = self.dict_to_str(self.details)
+        return "\n".join([self.header, info, details, self.footer])
 
 
 class Wiki:
