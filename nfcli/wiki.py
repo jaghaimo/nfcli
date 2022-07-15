@@ -12,9 +12,8 @@ from zipfile import ZipFile
 from fuzzywuzzy import process
 from fuzzywuzzy.fuzz import partial_token_sort_ratio, token_sort_ratio
 
-from nfcli import load_path
+from nfcli import DATA_DIR, WIKI_DIR, load_path
 
-WIKI_DIR = "wiki"
 WIKI_DATA_URL = "https://gitlab.com/nebfltcom/data/-/archive/main/data-main.zip?path=wiki"
 WIKI_URL = "http://nebfltcom.wikidot.com/"
 
@@ -319,17 +318,24 @@ class Wiki:
     def _add(self, entity: Entity) -> None:
         self.entities[entity.name] = entity
 
-    def _add_all(self, filenames: List[str], callback: Callable) -> None:
+    def _add_all(self, dirname: str, filenames: List[str], callback: Callable) -> None:
         for filename in filenames:
-            content = self._read_json(filename)
+            content = self._read_json(dirname, filename)
             callback(content)
 
-    def _read_json(self, filename: str) -> Dict:
-        content = load_path(os.path.join(WIKI_DIR, filename))
+    def _process_aliases(self):
+        aliases = self._read_json(DATA_DIR, "wiki.json")
+        for source, target in aliases.items():
+            entity = self.get(target)
+            self.entities[source] = entity
+
+    def _read_json(self, dirname: str, filename: str) -> Dict:
+        content = load_path(os.path.join(dirname, filename))
         return json.loads(content)
 
     def _load(self) -> None:
-        index = self._read_json("index.json")
-        self._add_all(index["hulls"], self._add_hull)
-        self._add_all(index["components"], self._add_component)
-        self._add_all(index["munitions"], self._add_munition)
+        index = self._read_json(WIKI_DIR, "index.json")
+        self._add_all(WIKI_DIR, index["hulls"], self._add_hull)
+        self._add_all(WIKI_DIR, index["components"], self._add_component)
+        self._add_all(WIKI_DIR, index["munitions"], self._add_munition)
+        self._process_aliases()
