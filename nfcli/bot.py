@@ -108,8 +108,8 @@ async def wiki(ctx: discord.ApplicationContext, *, keywords: str):
     async with ctx.typing():
         entity = wiki_db.get(keywords)
         message = entity.text
-        # if entity:
-        #     message = await replace_with_previous(ctx.channel, entity.link, message)
+        if entity:
+            message = await replace_with_previous(ctx.channel, entity.link, message)
         await ctx.respond(message)
 
 
