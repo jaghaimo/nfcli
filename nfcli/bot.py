@@ -23,20 +23,21 @@ init_logger("bot.log", logging.INFO)
 
 async def process_file(message: Message, xml_data: str, filename: str, with_fleet_file: bool):
     """Process one file content."""
-    logging.info(f"Converting file {filename}")
-    png_file = determine_output_png(filename)
-    tmp_file = get_temp_filename(".png")
-    entity = parse_any(filename, xml_data)
-    entity.write(tmp_file)
-    converted_file = File(open(tmp_file, "rb"), filename=png_file)
-    all_files = [converted_file]
-    if with_fleet_file:
-        all_files.append(File(open(filename, "rb"), filename=basename(filename)))
-    mod_deps = parse_mods(xml_data)
-    mods = FleetPrinter.get_mods(mod_deps, "<", ">")
-    await message.channel.send(f"{entity.text}{mods}", files=all_files, reference=message)
-    converted_file.close()
-    os.unlink(tmp_file)
+    async with message.channel.typing():
+        logging.info(f"Converting file {filename}")
+        png_file = determine_output_png(filename)
+        tmp_file = get_temp_filename(".png")
+        entity = parse_any(filename, xml_data)
+        entity.write(tmp_file)
+        converted_file = File(open(tmp_file, "rb"), filename=png_file)
+        all_files = [converted_file]
+        if with_fleet_file:
+            all_files.append(File(open(filename, "rb"), filename=basename(filename)))
+        mod_deps = parse_mods(xml_data)
+        mods = FleetPrinter.get_mods(mod_deps, "<", ">")
+        await message.channel.send(f"{entity.text}{mods}", files=all_files, reference=message)
+        converted_file.close()
+        os.unlink(tmp_file)
 
 
 async def process_uploads(message: Message):
@@ -45,9 +46,8 @@ async def process_uploads(message: Message):
     fleet_files = [file for file in message.attachments if file.filename.endswith("fleet")]
     all_files = ship_files + fleet_files
     for file in all_files:
-        async with message.channel.typing():
-            xml_data = await file.read()
-            await process_file(message, xml_data, file.filename, with_fleet_file=False)
+        xml_data = await file.read()
+        await process_file(message, xml_data, file.filename, with_fleet_file=False)
 
 
 async def process_workshop(message: Message, workshop_id: int):
@@ -72,8 +72,7 @@ async def process_workshops(message: Message):
         workshop_ids.add(get_workshop_id(link_data))
 
     for workshop_id in workshop_ids:
-        async with message.channel.typing():
-            await process_workshop(message, workshop_id)
+        await process_workshop(message, workshop_id)
 
 
 async def replace_with_previous(channel: discord.TextChannel, link: str, message: str) -> str:

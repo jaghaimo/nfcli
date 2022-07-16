@@ -32,7 +32,7 @@ def get_workshop_files(workshop_id: int, throw_if_not_found: Optional[bool] = Fa
         return files
     workshop_ids = find_all()
     if workshop_id not in workshop_ids:
-        raise RuntimeError(f"Workshop item {workshop_id} is not a fleet or ship entry!")
+        return []
     if throw_if_not_found:
         raise RuntimeError(f"I'm sorry, but the workshop item {workshop_id} has not yet been cached.")
     logging.info(f"Downloading workshop item {workshop_id}.")
