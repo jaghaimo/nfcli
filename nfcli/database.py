@@ -32,6 +32,11 @@ class Database:
         else:
             return json.load(f)
 
+    def get_component_data(self, socket: str) -> Dict:
+        if socket in self.components:
+            return self.components.get(socket)
+        return {}
+
     def get_ship_data(self, hull: str) -> Dict:
         if hull in self.ships:
             return self.ships.get(hull)

@@ -3,6 +3,7 @@ from __future__ import annotations
 import logging
 import math
 from abc import ABC, abstractmethod, abstractproperty
+from collections import Counter
 from typing import TYPE_CHECKING, List, Optional, Tuple, Type
 
 from rich.columns import Columns
@@ -32,6 +33,8 @@ class Printable:
     def print(self, printer: Printer):
         raise NotImplementedError
 
+    def counter_to_string(self, counter: Counter) -> str:
+        return ", ".join([f"_{count}x_ {hull}" for hull, count in counter.most_common()])
 
 class Printer(ABC):
     @abstractmethod

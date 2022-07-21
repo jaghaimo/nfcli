@@ -21,11 +21,11 @@ def get_content(content_data: OrderedDict) -> List[Content]:
 
 
 def get_socket(socket_data: OrderedDict) -> Socket:
+    name = socket_data["ComponentName"]
     content = []
     if "ComponentData" in socket_data:
         content = get_content(socket_data["ComponentData"])
-
-    return Socket(socket_data["Key"], socket_data["ComponentName"], content)
+    return Socket(socket_data["Key"], name, content, db.get_component_data(name))
 
 
 def get_ship(ship_data: OrderedDict) -> Ship:

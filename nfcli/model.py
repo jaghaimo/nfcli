@@ -1,6 +1,7 @@
 from __future__ import annotations
 
-from typing import Dict, List, Union
+from collections import Counter
+from typing import Dict, List, Optional, Union
 
 from nfcli.printer import FleetPrinter, Printable, StackPrinter
 from nfcli.writer import Writeable, write_fleet, write_ship
@@ -31,10 +32,15 @@ class Content(Named):
 class Socket(Named):
     """Models simplified socket info from a fleet/ship file."""
 
-    def __init__(self, key: str, name: str, contents: List[Content]) -> None:
+    def __init__(self, key: str, name: str, contents: List[Content], data: Dict) -> None:
         super().__init__(name)
         self.key = key
         self.contents = contents
+        self._data = data
+
+    @property
+    def category(self) -> Optional[str]:
+        return self._data["category"] if "category" in self._data else None
 
 
 class Component:
@@ -88,6 +94,13 @@ class Ship(Named, Printable, Writeable):
         return self.get_name(self._hull)
 
     @property
+    def tags(self) -> Counter:
+        tags = Counter()
+        for component in self.mountings:
+            tags.update(Counter({component.socket.category: 1}))
+        return tags
+
+    @property
     def title(self) -> str:
         a_or_an = "an" if self.hull[0] == "A" else "a"
         return f"[b]{self.name}[/b] is {a_or_an} {self.hull} that costs {self.cost} points"
@@ -124,7 +137,7 @@ class Ship(Named, Printable, Writeable):
     def _get_socket(self, key: str) -> Socket:
         if key in self.sockets:
             return self.sockets[key]
-        return Socket(key, "[grey]<EMPTY>", [])
+        return Socket(key, "[grey]<EMPTY>", [], {})
 
     def print(self, printer: "StackPrinter"):
         renderable = printer.get_ship(self)
@@ -164,11 +177,13 @@ class Fleet(Named, Printable, Writeable):
 
     @property
     def text(self) -> str:
-        hulls = set([ship.hull for ship in self.ships])
-        if len(hulls) == 1:
-            return self.ships[0].text
-        hull_str = ", ".join(hulls)
-        return f"Hull types: {hull_str}"
+        hulls = Counter([ship.hull for ship in self.ships])
+        tags = Counter()
+        for tag in [ship.tags for ship in self.ships]:
+            tags.update(tag)
+        hull_str = self.counter_to_string(hulls)
+        tag_str = self.counter_to_string(tags)
+        return f"Hull types: {hull_str}\nTags: {tag_str}"
 
     def add_ship(self, ship: Ship) -> None:
         self.ships.append(ship)
