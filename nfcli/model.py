@@ -32,24 +32,19 @@ class Content(Named):
 class Socket(Named):
     """Models simplified socket info from a fleet/ship file."""
 
-    def __init__(self, key: str, name: str, contents: List[Content], data: Dict) -> None:
+    def __init__(self, key: str, name: str, contents: List[Content], tag: Optional[str]) -> None:
         super().__init__(name)
         self.key = key
         self.contents = contents
-        self._data = data
-
-    @property
-    def category(self) -> Optional[str]:
-        return self._data["category"] if "category" in self._data else None
-
+        self.tag = tag
 
 class Component:
-    """Models full compartment info (socket + db data)."""
+    """Models full component info (socket + db data)."""
 
-    def __init__(self, socket: Socket, number: int, data: Dict) -> None:
+    def __init__(self, socket: Socket, number: int, size: str) -> None:
         self.socket = socket
-        self.number = number
-        self._data = data
+        self.slot_number = number
+        self.slot_size = size
 
     @property
     def name(self) -> str:
@@ -58,22 +53,6 @@ class Component:
     @property
     def contents(self) -> List[Content]:
         return self.socket.contents
-
-    @property
-    def slot_number(self) -> str:
-        return str(self.number)
-
-    @property
-    def slot_size(self) -> str:
-        if "size" in self._data:
-            return "x".join([str(size) for size in self._data.get("size")])
-        return "?x?x?"
-
-    @property
-    def slot_name(self) -> str:
-        if "name" in self._data:
-            return self._data.get("name")
-        return "Unknown"
 
 
 class Ship(Named, Printable, Writeable):
@@ -97,7 +76,7 @@ class Ship(Named, Printable, Writeable):
     def tags(self) -> Counter:
         tags = Counter()
         for component in self.mountings:
-            tags.update(Counter({component.socket.category: 1}))
+            tags.update(Counter({component.socket.tag: 1}))
         return tags
 
     @property
@@ -115,29 +94,29 @@ class Ship(Named, Printable, Writeable):
 
     @property
     def mountings(self) -> List[Component]:
-        return self._get_components("mountkeys")
+        return self._get_components("mounts")
 
     @property
     def compartments(self) -> List[Component]:
-        return self._get_components("compartmentkeys")
+        return self._get_components("compartments")
 
     @property
     def modules(self) -> List[Component]:
-        return self._get_components("modulekeys")
+        return self._get_components("modules")
 
     @property
     def components(self) -> List[Component]:
-        return [Component(socket, i + 1, {}) for i, (_, socket) in enumerate(self.sockets.items())]
+        return [Component(socket, i + 1, "?x?x?") for i, (_, socket) in enumerate(self.sockets.items())]
 
     def _get_components(self, type: str) -> List[Component]:
         return [
-            Component(self._get_socket(key), i + 1, data) for i, (key, data) in enumerate(self._data.get(type).items())
+            Component(self._get_socket(key), i + 1, size) for i, (key, size) in enumerate(self._data.get(type).items())
         ]
 
     def _get_socket(self, key: str) -> Socket:
         if key in self.sockets:
             return self.sockets[key]
-        return Socket(key, "[grey]<EMPTY>", [], {})
+        return Socket(key, "[grey]<EMPTY>", [], None)
 
     def print(self, printer: "StackPrinter"):
         renderable = printer.get_ship(self)
