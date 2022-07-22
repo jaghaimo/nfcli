@@ -1,6 +1,7 @@
 from __future__ import annotations
 
-from typing import Dict, List, Union
+from collections import Counter
+from typing import Dict, List, Optional, Union
 
 from rich.text import Text
 
@@ -33,10 +34,11 @@ class Content(Named):
 class Socket(Named):
     """Models simplified socket info from a fleet/ship file."""
 
-    def __init__(self, key: str, name: str, contents: List[Content]) -> None:
+    def __init__(self, key: str, name: str, contents: List[Content], tag: Optional[str]) -> None:
         super().__init__(name)
         self.key = key
         self.contents = contents
+        self.tag = tag
 
 
 class Component:
@@ -71,10 +73,12 @@ class Ship(Named, Printable, Writeable):
 
     @property
     def hull(self) -> str:
-        name = self._hull
-        if "name" in self._data:
-            name = self._data.get("name")
-        return self.get_name(name)
+        return self.get_name(self._hull)
+
+    @property
+    def tags(self) -> str:
+        tag_counter = Counter([component.socket.tag for component in self.mountings])
+        return " ".join([key for key in tag_counter.keys() if key is not None])
 
     @property
     def title(self) -> str:
@@ -113,7 +117,7 @@ class Ship(Named, Printable, Writeable):
     def _get_socket(self, key: str) -> Socket:
         if key in self.sockets:
             return self.sockets[key]
-        return Socket(key, "[grey]<EMPTY>", [])
+        return Socket(key, "[grey]<EMPTY>", [], None)
 
     def print(self, printer: "StackPrinter"):
         renderable = printer.get_ship(self)
@@ -153,7 +157,7 @@ class Fleet(Named, Printable, Writeable):
 
     @property
     def text(self) -> str:
-        ships_and_costs = {ship.name: f"{ship.hull} ({ship.cost})" for ship in self.ships}
+        ships_and_costs = {ship.name: f"{ship.hull} [{ship.tags}]" for ship in self.ships}
         longest_name = max([len(name) for name in ships_and_costs.keys()])
         ship_list = [f"{key.rjust(longest_name)} : {value}" for key, value in ships_and_costs.items()]
         return f"{self.title}:\n```yaml\n" + "\n".join(ship_list) + "\n```"

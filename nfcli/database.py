@@ -1,11 +1,12 @@
 import json
 import logging
 from glob import glob
-from typing import Dict
+from typing import Dict, Optional
 
 
 class Database:
     def __init__(self) -> None:
+        self.components = self.load_all("data/*_components.json")
         self.ships = self.load_all("data/*_ships.json")
 
     def load_all(self, glob_path: str) -> Dict:
@@ -22,6 +23,11 @@ class Database:
             return {}
         else:
             return json.load(f)
+
+    def get_component_tag(self, socket: str) -> Optional[str]:
+        if socket in self.components:
+            return self.components.get(socket)
+        return None
 
     def get_ship_data(self, hull: str) -> Dict:
         if hull in self.ships:
