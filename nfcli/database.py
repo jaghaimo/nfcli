@@ -1,15 +1,7 @@
 import json
 import logging
 from glob import glob
-from typing import Dict
-
-KEY_SLOT = "slot"
-
-SOCKET_MOUNT = "mount"
-SOCKET_COMPARTMENT = "compartment"
-SOCKET_MODULE = "module"
-SOCKET_AMMO = "ammo"
-SOCKET_UNKNOWN = "unknown"
+from typing import Dict, Optional
 
 
 class Database:
@@ -32,10 +24,10 @@ class Database:
         else:
             return json.load(f)
 
-    def get_component_tag(self, socket: str) -> str:
+    def get_component_tag(self, socket: str) -> Optional[str]:
         if socket in self.components:
             return self.components.get(socket)
-        return ""
+        return None
 
     def get_ship_data(self, hull: str) -> Dict:
         if hull in self.ships:

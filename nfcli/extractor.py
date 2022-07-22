@@ -45,6 +45,7 @@ def convert_nfm_data():
     convert_ships()
     convert_components()
 
+
 def convert_ships():
     stock_ships = load_path("data/stock_ships_old.json")
     ships = json.loads(stock_ships)

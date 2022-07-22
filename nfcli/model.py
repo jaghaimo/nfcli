@@ -38,6 +38,7 @@ class Socket(Named):
         self.contents = contents
         self.tag = tag
 
+
 class Component:
     """Models full component info (socket + db data)."""
 
