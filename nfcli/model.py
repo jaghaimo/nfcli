@@ -32,11 +32,10 @@ class Content(Named):
 class Socket(Named):
     """Models simplified socket info from a fleet/ship file."""
 
-    def __init__(self, key: str, name: str, contents: List[Content], tag: Optional[str]) -> None:
+    def __init__(self, key: str, name: str, contents: List[Content]) -> None:
         super().__init__(name)
         self.key = key
         self.contents = contents
-        self.tag = tag
 
 
 class Component:
@@ -71,14 +70,10 @@ class Ship(Named, Printable, Writeable):
 
     @property
     def hull(self) -> str:
-        return self.get_name(self._hull)
-
-    @property
-    def tags(self) -> Counter:
-        tags = Counter()
-        for component in self.mountings:
-            tags.update(Counter({component.socket.tag: 1}))
-        return tags
+        name = self._hull
+        if "name" in self._data:
+            name = self._data.get("name")
+        return self.get_name(name)
 
     @property
     def title(self) -> str:
@@ -87,7 +82,7 @@ class Ship(Named, Printable, Writeable):
 
     @property
     def text(self) -> str:
-        return f"Hull type: {self.hull}"
+        return f"Hull: {self.hull}"
 
     @property
     def is_valid(self) -> bool:
@@ -117,7 +112,7 @@ class Ship(Named, Printable, Writeable):
     def _get_socket(self, key: str) -> Socket:
         if key in self.sockets:
             return self.sockets[key]
-        return Socket(key, "[grey]<EMPTY>", [], None)
+        return Socket(key, "[grey]<EMPTY>", [])
 
     def print(self, printer: "StackPrinter"):
         renderable = printer.get_ship(self)
@@ -157,13 +152,10 @@ class Fleet(Named, Printable, Writeable):
 
     @property
     def text(self) -> str:
-        hulls = Counter([ship.hull for ship in self.ships])
-        tags = Counter()
-        for tag in [ship.tags for ship in self.ships]:
-            tags.update(tag)
-        hull_str = self.counter_to_string(hulls)
-        tag_str = self.counter_to_string(tags)
-        return f"Hull types: {hull_str}\nTags: {tag_str}"
+        ship_or_ships = "Hull" if len(self.ships) == 1 else "Hulls"
+        hull_counter = Counter([ship.hull for ship in self.ships])
+        hull_string = self.counter_to_string(hull_counter)
+        return f"{ship_or_ships}: {hull_string}"
 
     def add_ship(self, ship: Ship) -> None:
         self.ships.append(ship)
