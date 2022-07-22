@@ -1,7 +1,8 @@
 from __future__ import annotations
 
-from collections import Counter
-from typing import Dict, List, Optional, Union
+from typing import Dict, List, Union
+
+from rich.text import Text
 
 from nfcli.printer import FleetPrinter, Printable, StackPrinter
 from nfcli.writer import Writeable, write_fleet, write_ship
@@ -82,7 +83,7 @@ class Ship(Named, Printable, Writeable):
 
     @property
     def text(self) -> str:
-        return f"Hull: {self.hull}"
+        return Text.from_markup(self.title).plain + "."
 
     @property
     def is_valid(self) -> bool:
@@ -152,10 +153,10 @@ class Fleet(Named, Printable, Writeable):
 
     @property
     def text(self) -> str:
-        ship_or_ships = "Hull" if len(self.ships) == 1 else "Hulls"
-        hull_counter = Counter([ship.hull for ship in self.ships])
-        hull_string = self.counter_to_string(hull_counter)
-        return f"{ship_or_ships}: {hull_string}"
+        ships_and_costs = {ship.name: f"{ship.hull} ({ship.cost})" for ship in self.ships}
+        longest_name = max([len(name) for name in ships_and_costs.keys()])
+        ship_list = [f"{key.rjust(longest_name)} : {value}" for key, value in ships_and_costs.items()]
+        return f"{self.title}:\n```yaml\n" + "\n".join(ship_list) + "\n```"
 
     def add_ship(self, ship: Ship) -> None:
         self.ships.append(ship)

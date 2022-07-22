@@ -1,7 +1,7 @@
 import json
 import logging
 from glob import glob
-from typing import Dict, Optional
+from typing import Dict
 
 
 class Database:
