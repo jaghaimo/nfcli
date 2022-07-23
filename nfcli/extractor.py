@@ -7,7 +7,7 @@ from nfcli.model import Fleet, Ship
 
 
 def add_ship(info: Dict, ship: Ship):
-    ship_info = {}
+    ship_info = {"name": ship.name}
     ship_info["mounts"] = {}
     ship_info["compartments"] = {}
     ship_info["modules"] = {}

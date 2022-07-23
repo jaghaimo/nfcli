@@ -11,7 +11,7 @@
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>ef59eeb8-6b01-4d24-b7fa-eb58b70c208a</Key>
-      <Name>Bound Madelena</Name>
+      <Name>Aryabhata Light Torchship</Name>
       <Cost>250</Cost>
       <Number>464</Number>
       <SymbolOption>0</SymbolOption>
@@ -71,7 +71,7 @@
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>63f69d0f-f047-45bb-ad4c-73ed4f0513c3</Key>
-      <Name>Mown Carline</Name>
+      <Name>Euler Light Torchship</Name>
       <Cost>320</Cost>
       <Number>221</Number>
       <SymbolOption>0</SymbolOption>
@@ -139,7 +139,7 @@
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>b2e3e975-95d3-4d3f-9453-76daba883be4</Key>
-      <Name>Pricy Benoite</Name>
+      <Name>Noether Medium Torchship</Name>
       <Cost>475</Cost>
       <Number>1266</Number>
       <SymbolOption>0</SymbolOption>
@@ -259,7 +259,7 @@
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>f95e3110-be6e-4410-8037-fee94711d320</Key>
-      <Name>Timid Meggie</Name>
+      <Name>Thales Medium Torchship</Name>
       <Cost>690</Cost>
       <Number>1241</Number>
       <SymbolOption>0</SymbolOption>
@@ -371,7 +371,7 @@
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>b6682b7a-5c4a-49ed-8ae9-bd5f3b2b4250</Key>
-      <Name>Prosy Marty</Name>
+      <Name>Descartes Heavy Torchship</Name>
       <Cost>1095</Cost>
       <Number>698</Number>
       <SymbolOption>0</SymbolOption>
