@@ -61,7 +61,7 @@ async def process_workshop(message: Message, workshop_id: int):
             await process_file(message, xml_data, input_file, with_fleet_file=True)
     except RuntimeError as exception:
         logging.error(exception)
-        await message.channel.send(exception, reference=message)
+        await message.reply(exception)
 
 
 async def process_wiki(message: Message):
