@@ -79,6 +79,8 @@ class Ship(Named, Printable, Writeable):
 
     @property
     def hull(self) -> str:
+        if "name" in self._data:
+            return self._data.get("name")
         return self.get_name(self._hull)
 
     @property
@@ -86,7 +88,7 @@ class Ship(Named, Printable, Writeable):
         tag_counter = Counter()
         for component in [component for component in self.mountings]:
             tag_counter.update({component.socket.tag: component.slot_weight})
-        logging.info(tag_counter)
+        logging.debug(tag_counter)
         return " ".join([key for key, _ in tag_counter.most_common() if key is not None])
 
     @property
