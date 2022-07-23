@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import logging
+import math
 from collections import Counter
 from typing import Dict, List, Optional, Union
 
@@ -48,6 +50,10 @@ class Component:
         self.socket = socket
         self.slot_number = number
         self.slot_size = size
+        try:
+            self.slot_weight = math.prod([int(x) for x in size.split("x")])
+        except ValueError:
+            self.slot_weight = 1
 
     @property
     def name(self) -> str:
@@ -77,8 +83,11 @@ class Ship(Named, Printable, Writeable):
 
     @property
     def tags(self) -> str:
-        tag_counter = Counter([component.socket.tag for component in self.mountings])
-        return " ".join([key for key in tag_counter.keys() if key is not None])
+        tag_counter = Counter()
+        for component in [component for component in self.mountings]:
+            tag_counter.update({component.socket.tag: component.slot_weight})
+        logging.info(tag_counter)
+        return " ".join([key for key, _ in tag_counter.most_common() if key is not None])
 
     @property
     def title(self) -> str:
