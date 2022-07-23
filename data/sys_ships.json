@@ -1,27 +1,27 @@
 {
     "State Yards Surplus/FF_dogfish": {
-        "mountkeys": {
-            "mou_01": {},
-            "mou_02": {},
-            "mou_03": {},
-            "mou_04": {},
-            "mou_05": {},
-            "mou_06": {}
+        "mounts": {
+            "mou_01": "?x?x?",
+            "mou_02": "?x?x?",
+            "mou_03": "?x?x?",
+            "mou_04": "?x?x?",
+            "mou_05": "?x?x?",
+            "mou_06": "?x?x?"
         },
-        "compartmentkeys": {
-            "com_01": {},
-            "com_02": {},
-            "com_03": {},
-            "com_04": {},
-            "com_05": {}
+        "compartments": {
+            "com_01": "?x?x?",
+            "com_02": "?x?x?",
+            "com_03": "?x?x?",
+            "com_04": "?x?x?",
+            "com_05": "?x?x?"
         },
-        "modulekeys": {
-            "mod_01": {},
-            "mod_02": {},
-            "mod_03": {},
-            "mod_04": {},
-            "mod_05": {},
-            "mod_06": {}
+        "modules": {
+            "mod_01": "?x?x?",
+            "mod_02": "?x?x?",
+            "mod_03": "?x?x?",
+            "mod_04": "?x?x?",
+            "mod_05": "?x?x?",
+            "mod_06": "?x?x?"
         }
     }
 }

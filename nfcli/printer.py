@@ -3,6 +3,7 @@ from __future__ import annotations
 import logging
 import math
 from abc import ABC, abstractmethod, abstractproperty
+from collections import Counter
 from typing import TYPE_CHECKING, List, Optional, Tuple, Type
 
 from rich.columns import Columns
@@ -71,7 +72,7 @@ class FleetPrinter(Printer):
     def get_sockets(self, title: str, components: List["Component"], color: str = "white") -> Group:
         elements: List[RenderableType] = [Rule(Text(f"{title}", style="orange"), style="orange")]
         for component in components:
-            slot_number = component.slot_number
+            slot_number = str(component.slot_number)
             just_size = 7 if int(slot_number) < 10 else 6
             slot_size = component.slot_size.rjust(just_size)
             slot_info = f"[orange]{slot_number}[/orange] [grey]{slot_size}[/grey]"
