@@ -63,6 +63,7 @@ async def process_workshop(message: Message, workshop_id: int):
         logging.error(exception)
         await message.channel.send(exception, reference=message)
 
+
 async def process_wiki(message: Message):
     """Adds a friendly reminded to use slash command instead."""
     is_wiki = message.content[0:4].lower() == "wiki" or message.content[1:5].lower() == "wiki"
@@ -70,10 +71,11 @@ async def process_wiki(message: Message):
         reply = await message.reply(
             "Hey dummy, stop spamming and use the `/wiki` command instead!\n"
             "In case you missed the tutorial: type `/wiki`, press enter, type keywords, press enter again.\n"
-            "This message will self destruct in 9 seconds, hope you delete yours too."
-            )
+            "This message will self destruct in few seconds. You better delete yours too!"
+        )
         await asyncio.sleep(9)
         await reply.delete()
+
 
 async def process_workshops(message: Message):
     """Extract and process workshop links."""
@@ -112,6 +114,7 @@ async def on_message(message: discord.Message):
     await process_wiki(message)
     await process_workshops(message)
     await process_uploads(message)
+
 
 @bot.slash_command(name="wiki")
 async def wiki_slash(ctx: discord.ApplicationContext, *, keywords: str):

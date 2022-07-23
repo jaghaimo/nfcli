@@ -33,9 +33,6 @@ class Printable:
     def print(self, printer: Printer):
         raise NotImplementedError
 
-    def counter_to_string(self, counter: Counter) -> str:
-        return ", ".join([f"_{count}x_ {hull}" for hull, count in counter.most_common()])
-
 
 class Printer(ABC):
     @abstractmethod
