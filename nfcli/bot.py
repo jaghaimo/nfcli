@@ -66,10 +66,10 @@ async def process_workshop(message: Message, workshop_id: int):
 
 async def process_wiki(message: Message):
     """Adds a friendly reminded to use slash command instead."""
-    is_wiki = message.content[0:4].lower() == "wiki" or message.content[1:5].lower() == "wiki"
+    is_wiki = message.content[1:5].lower() == "wiki"
     if is_wiki:
         reply = await message.reply(
-            "Hey dummy, stop spamming and use the `/wiki` command instead!\n"
+            "Hey dummy, stop spamming the channel and use `/wiki` command instead!\n"
             "In case you missed the tutorial: type `/wiki`, press enter, type keywords, press enter again.\n"
             "This message will self destruct in few seconds. You better delete yours too!"
         )
