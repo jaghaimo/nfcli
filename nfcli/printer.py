@@ -60,7 +60,7 @@ class FleetPrinter(Printer):
     def get_mods(cls, mods: List[str], begin_quote: str = "", end_quote: str = "") -> str:
         if not mods:
             return ""
-        mods_text = "\nMods required:"
+        mods_text = "Mods required:"
         for mod in mods:
             mods_text += f"\n- {begin_quote}https://steamcommunity.com/sharedfiles/filedetails/?id={mod}{end_quote}"
         return mods_text
