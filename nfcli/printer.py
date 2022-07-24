@@ -3,7 +3,6 @@ from __future__ import annotations
 import logging
 import math
 from abc import ABC, abstractmethod, abstractproperty
-from collections import Counter
 from typing import TYPE_CHECKING, List, Optional, Tuple, Type
 
 from rich.columns import Columns
