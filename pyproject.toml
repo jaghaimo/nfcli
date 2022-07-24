@@ -36,7 +36,6 @@ isort = "^5.10.1"
 
 [tool.poetry.scripts]
 nfcli = "nfcli.__main__:main"
-convert = "nfcli.extractor:convert_nfm_data"
 bot = "nfcli.bot:start"
 
 [build-system]
