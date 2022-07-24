@@ -1,1366 +1,210 @@
 {
     "Stock/Sprinter Corvette": {
-        "hullsize": "corvette",
-        "symbols": [
-            "FFL"
-        ],
-        "basecost": 100,
-        "basecrewcomplement": 40,
-        "integrated": [
-            "Stock/CR10 Antenna"
-        ],
-        "mountkeys": {
-            "wDsRnL5nKkyYvKgD6VcPHg": {
-                "name": "Mount 1",
-                "size": [
-                    3,
-                    4,
-                    5
-                ]
-            },
-            "Z48ot_dQfkWb6AVYjaM_gA": {
-                "name": "Mount 2",
-                "size": [
-                    3,
-                    4,
-                    3
-                ]
-            },
-            "IUdNSVZm2Eu9n3F5HnSAng": {
-                "name": "Mount 3",
-                "size": [
-                    2,
-                    2,
-                    2
-                ]
-            },
-            "ZxY9ONYz80SiLNSObvjNzQ": {
-                "name": "Mount 4",
-                "size": [
-                    2,
-                    2,
-                    2
-                ]
-            }
+        "name": "Stock/Sprinter Corvette",
+        "mounts": {
+            "wDsRnL5nKkyYvKgD6VcPHg": "3x4x5",
+            "Z48ot_dQfkWb6AVYjaM_gA": "3x4x3",
+            "IUdNSVZm2Eu9n3F5HnSAng": "2x2x2",
+            "ZxY9ONYz80SiLNSObvjNzQ": "2x2x2"
         },
-        "compartmentkeys": {
-            "XPaYCjBqdEqBxEIsVLP0oA": {
-                "name": "Compartment 1",
-                "size": [
-                    4,
-                    1,
-                    6
-                ],
-                "default": "Stock/Basic CIC"
-            },
-            "xRYIkvssd0mPY3VIgrnQ5A": {
-                "name": "Compartment 2",
-                "size": [
-                    4,
-                    1,
-                    6
-                ]
-            },
-            "rXO8xwG1MkqzI_2pU-O_qQ": {
-                "name": "Compartment 3",
-                "size": [
-                    3,
-                    1,
-                    3
-                ]
-            },
-            "GefqwCQzg0qXA3EFRmDtPw": {
-                "name": "Compartment 4",
-                "size": [
-                    3,
-                    1,
-                    3
-                ]
-            }
+        "compartments": {
+            "XPaYCjBqdEqBxEIsVLP0oA": "4x1x6",
+            "xRYIkvssd0mPY3VIgrnQ5A": "4x1x6",
+            "rXO8xwG1MkqzI_2pU-O_qQ": "3x1x3",
+            "GefqwCQzg0qXA3EFRmDtPw": "3x1x3"
         },
-        "modulekeys": {
-            "4WpJyiOKVEqCwR99l47MkA": {
-                "name": "Module 1",
-                "size": [
-                    3,
-                    3,
-                    3
-                ],
-                "default": "Stock/FR3300 Micro Reactor"
-            },
-            "4EHx4mQhNUi-WuuQtQF5fA": {
-                "name": "Module 2",
-                "size": [
-                    8,
-                    3,
-                    6
-                ],
-                "default": "Stock/FM200 Drive"
-            },
-            "TSPPW9ECe06-MGzR1i0WvQ": {
-                "name": "Module 3",
-                "size": [
-                    2,
-                    2,
-                    2
-                ],
-                "default": "Stock/RS35 'Frontline' Radar"
-            },
-            "MBOvGazj6UWpt2OOy44s7w": {
-                "name": "Module 4",
-                "size": [
-                    2,
-                    2,
-                    2
-                ]
-            }
+        "modules": {
+            "4WpJyiOKVEqCwR99l47MkA": "3x3x3",
+            "4EHx4mQhNUi-WuuQtQF5fA": "8x3x6",
+            "TSPPW9ECe06-MGzR1i0WvQ": "2x2x2",
+            "MBOvGazj6UWpt2OOy44s7w": "2x2x2"
         }
     },
     "Stock/Raines Frigate": {
-        "hullsize": "frigate",
-        "symbols":[
-            "FF",
-            "FFG",
-            "FFE"
-        ],
-        "basecost": 125,
-        "basecrewcomplement": 50,
-        "integrated": [
-            "Stock/CR10 Antenna"
-        ],
-        "mountkeys": {
-            "PDKmGfvpykODc3XHDQ7WBw": {
-                "name": "Mount 1",
-                "size": [
-                    3,
-                    4,
-                    3
-                ]
-            },
-            "WwMGqYiU7E6lp7ID47phqA": {
-                "name": "Mount 2",
-                "size": [
-                    3,
-                    4,
-                    3
-                ]
-            },
-            "gkfIwYzn7kGhG6MW9uxBmw": {
-                "name": "Mount 3",
-                "size": [
-                    3,
-                    4,
-                    3
-                ]
-            },
-            "D3zoB0PetEC973iUck_mNQ": {
-                "name": "Mount 4",
-                "size": [
-                    3,
-                    4,
-                    3
-                ]
-            }
+        "name": "Stock/Raines Frigate",
+        "mounts": {
+            "PDKmGfvpykODc3XHDQ7WBw": "3x4x3",
+            "WwMGqYiU7E6lp7ID47phqA": "3x4x3",
+            "gkfIwYzn7kGhG6MW9uxBmw": "3x4x3",
+            "D3zoB0PetEC973iUck_mNQ": "3x4x3"
         },
-        "compartmentkeys": {
-            "98N-YI_1WUOs--qPYlt-7g": {
-                "name": "Compartment 1",
-                "size": [
-                    4,
-                    1,
-                    6
-                ],
-                "default": "Stock/Basic CIC"
-            },
-            "6Tzo7268MEqgyFxnGvLKUg": {
-                "name": "Compartment 2",
-                "size": [
-                    4,
-                    1,
-                    6
-                ]
-            },
-            "O_Y-AJc7r0alOg36rvY6MQ": {
-                "name": "Compartment 3",
-                "size": [
-                    3,
-                    1,
-                    3
-                ]
-            },
-            "5APOD4UfSkGdkm9WWdAvLA": {
-                "name": "Compartment 4",
-                "size": [
-                    3,
-                    1,
-                    3
-                ]
-            },
-            "lorATFhkTkeZQYThYOHazg": {
-                "name": "Compartment 5",
-                "size": [
-                    3,
-                    1,
-                    5
-                ]
-            }
+        "compartments": {
+            "98N-YI_1WUOs--qPYlt-7g": "4x1x6",
+            "6Tzo7268MEqgyFxnGvLKUg": "4x1x6",
+            "O_Y-AJc7r0alOg36rvY6MQ": "3x1x3",
+            "5APOD4UfSkGdkm9WWdAvLA": "3x1x3",
+            "lorATFhkTkeZQYThYOHazg": "3x1x5"
         },
-        "modulekeys": {
-            "bRgUlaoQJ0S7M91zMpdAdA": {
-                "name": "Module 1",
-                "size": [
-                    6,
-                    6,
-                    6
-                ],
-                "default": "Stock/FR4800 Reactor"
-            },
-            "Jmtnwo0KQki5QyEPPlBHrA": {
-                "name": "Module 2",
-                "size": [
-                    8,
-                    3,
-                    6
-                ],
-                "default":"Stock/FM200 Drive"
-            },
-            "V42tXibIR0e4u6riIHYZOw": {
-                "name": "Module 3",
-                "size": [
-                    2,
-                    2,
-                    2
-                ],
-                "default": "Stock/RS35 'Frontline' Radar"
-            },
-            "p-m7ijS6ukuqzuBT5NE_lA": {
-                "name": "Module 4",
-                "size": [
-                    2,
-                    2,
-                    2
-                ]
-            },
-            "foApM84hT0GpEw4GaFv38w": {
-                "name": "Module 5",
-                "size": [
-                    3,
-                    3,
-                    3
-                ]
-            }
+        "modules": {
+            "bRgUlaoQJ0S7M91zMpdAdA": "6x6x6",
+            "Jmtnwo0KQki5QyEPPlBHrA": "8x3x6",
+            "V42tXibIR0e4u6riIHYZOw": "2x2x2",
+            "p-m7ijS6ukuqzuBT5NE_lA": "2x2x2",
+            "foApM84hT0GpEw4GaFv38w": "3x3x3"
         }
     },
     "Stock/Keystone Destroyer": {
-        "hullsize": "destroyer",
-        "symbols":[
-            "DD",
-            "DDG",
-            "DDE"
-        ],
-        "basecost": 200,
-        "basecrewcomplement": 50,
-        "integrated": [
-            "Stock/CR10 Antenna"
-        ],
-        "mountkeys": {
-            "NpYYAkA5Z0uAElOjDg3Rag": {
-                "name": "Mount 1",
-                "size": [
-                    3,
-                    4,
-                    5
-                ]
-            },
-            "fSYv4j5-eEObwJEVhoBSvg": {
-                "name": "Mount 2",
-                "size": [
-                    3,
-                    4,
-                    5
-                ]
-            },
-            "x21sadthgE2FtDWSJKINGQ": {
-                "name": "Mount 3",
-                "size": [
-                    3,
-                    4,
-                    3
-                ]
-            },
-            "IxKwpY5d9EicYRRTMn8xVw": {
-                "name": "Mount 4",
-                "size": [
-                    3,
-                    4,
-                    3
-                ]
-            },
-            "JpOU9MgWXEmfLcQoAK4otA": {
-                "name": "Mount 5",
-                "size": [
-                    2,
-                    2,
-                    2
-                ]
-            },
-            "LCosRblddUCjPogeJ5eSeA": {
-                "name": "Mount 6",
-                "size": [
-                    2,
-                    2,
-                    2
-                ]
-            },
-            "hGeid9yk80GqIN5IUlp8aw": {
-                "name": "Mount 7",
-                "size": [
-                    4,
-                    12,
-                    4
-                ]
-            }
+        "name": "Stock/Keystone Destroyer",
+        "mounts": {
+            "NpYYAkA5Z0uAElOjDg3Rag": "3x4x5",
+            "fSYv4j5-eEObwJEVhoBSvg": "3x4x5",
+            "x21sadthgE2FtDWSJKINGQ": "3x4x3",
+            "IxKwpY5d9EicYRRTMn8xVw": "3x4x3",
+            "JpOU9MgWXEmfLcQoAK4otA": "2x2x2",
+            "LCosRblddUCjPogeJ5eSeA": "2x2x2",
+            "hGeid9yk80GqIN5IUlp8aw": "4x12x4"
         },
-        "compartmentkeys": {
-            "PlyaCcjDo0qu155JIZgm6A": {
-                "name": "Compartment 1",
-                "size": [
-                    6,
-                    1,
-                    8
-                ],
-                "default": "Stock/Basic CIC"
-            },
-            "ytRGy84X_kW1odHYCBICDQ": {
-                "name": "Compartment 2",
-                "size": [
-                    6,
-                    1,
-                    8
-                ]
-            },
-            "yM3Am4PqyUOIByTKzM6sPA": {
-                "name": "Compartment 3",
-                "size": [
-                    6,
-                    1,
-                    4
-                ]
-            },
-            "H1ekC2-9c02VyNXY4IeLYA": {
-                "name": "Compartment 4",
-                "size": [
-                    6,
-                    1,
-                    4
-                ]
-            },
-            "ln5c_ZvdCUSMVWZL_-m3yw": {
-                "name": "Compartment 5",
-                "size": [
-                    6,
-                    1,
-                    4
-                ]
-            },
-            "H-oABJbYw0qgKd4QzU0WaA": {
-                "name": "Compartment 6",
-                "size": [
-                    6,
-                    1,
-                    4
-                ]
-            },
-            "tCBEdcIUhk6AL-X6sCujsQ": {
-                "name": "Compartment 7",
-                "size": [
-                    6,
-                    1,
-                    4
-                ]
-            }
+        "compartments": {
+            "PlyaCcjDo0qu155JIZgm6A": "6x1x8",
+            "ytRGy84X_kW1odHYCBICDQ": "6x1x8",
+            "yM3Am4PqyUOIByTKzM6sPA": "6x1x4",
+            "H1ekC2-9c02VyNXY4IeLYA": "6x1x4",
+            "ln5c_ZvdCUSMVWZL_-m3yw": "6x1x4",
+            "H-oABJbYw0qgKd4QzU0WaA": "6x1x4",
+            "tCBEdcIUhk6AL-X6sCujsQ": "6x1x4"
         },
-        "modulekeys": {
-            "AWYvQUZ26k20yHOrVQKg6Q": {
-                "name": "Module 1",
-                "size": [
-                    6,
-                    6,
-                    6
-                ],
-                "default": "Stock/FR4800 Reactor"
-            },
-            "tmHTz6HkrE-RUtN94W6lyQ": {
-                "name": "Module 2",
-                "size": [
-                    8,
-                    8,
-                    6
-                ],
-                "default": "Stock/FM200 Drive"
-            },
-            "m5J1jQdOfUKM9r7NZjMpKA": {
-                "name": "Module 3",
-                "size": [
-                    3,
-                    3,
-                    3
-                ]
-            },
-            "h29TSNGRo0m_DmeRr2BqDw": {
-                "name": "Module 4",
-                "size": [
-                    3,
-                    3,
-                    3
-                ]
-            },
-            "E9sMCEquVk-NNj5heGmIlQ": {
-                "name": "Module 5",
-                "size": [
-                    2,
-                    2,
-                    2
-                ]
-            },
-            "gx2UKetKWUm5BfZhiD5phQ": {
-                "name": "Module 6",
-                "size": [
-                    2,
-                    2,
-                    2
-                ]
-            },
-            "ZJTmbGdjAk-XEKihIYHEuw": {
-                "name": "Module 7",
-                "size": [
-                    3,
-                    3,
-                    3
-                ]
-            }
+        "modules": {
+            "AWYvQUZ26k20yHOrVQKg6Q": "6x6x6",
+            "tmHTz6HkrE-RUtN94W6lyQ": "8x8x6",
+            "m5J1jQdOfUKM9r7NZjMpKA": "3x3x3",
+            "h29TSNGRo0m_DmeRr2BqDw": "3x3x3",
+            "E9sMCEquVk-NNj5heGmIlQ": "2x2x2",
+            "gx2UKetKWUm5BfZhiD5phQ": "2x2x2",
+            "ZJTmbGdjAk-XEKihIYHEuw": "3x3x3"
         }
     },
     "Stock/Vauxhall Light Cruiser": {
-        "hullsize": "lightcruiser",
-        "symbols": [
-            "CL"
-        ],
-        "basecost": 350,
-        "basecrewcomplement": 75,
-        "integrated": [
-            "Stock/CR10 Antenna"
-        ],
-        "mountkeys": {
-            "T9Ebo41iA0eBXNYx8uyisw": {
-                "name": "Mount 1",
-                "size": [
-                    3,
-                    4,
-                    5
-                ]
-            },
-            "2QQdxC4UE0KOM42r82-ETQ": {
-                "name": "Mount 2",
-                "size": [
-                    3,
-                    4,
-                    5
-                ]
-            },
-            "IFKM9E04aUaHS0IoNDMShA": {
-                "name": "Mount 3",
-                "size": [
-                    3,
-                    4,
-                    5
-                ]
-            },
-            "rX6hes7UqkyHjEyKbFaWTQ": {
-                "name": "Mount 4",
-                "size": [
-                    3,
-                    4,
-                    5
-                ]
-            },
-            "BRMwuusKC02YrbFXRrrNzA": {
-                "name": "Mount 5",
-                "size": [
-                    3,
-                    4,
-                    5
-                ]
-            },
-            "vO1oPhlSuUih_cdAZk3Hqg": {
-                "name": "Mount 6",
-                "size": [
-                    3,
-                    4,
-                    5
-                ]
-            },
-            "RLHQUFf200uLZjKX5axkMw": {
-                "name": "Mount 7",
-                "size": [
-                    2,
-                    2,
-                    2
-                ]
-            },
-            "uyPDg0tD3U6YKz18bVdkPg": {
-                "name": "Mount 8",
-                "size": [
-                    2,
-                    2,
-                    2
-                ]
-            },
-            "Xicf0TT7pEaFy_x1uk7ueQ": {
-                "name": "Mount 9",
-                "size": [
-                    2,
-                    2,
-                    2
-                ]
-            },
-            "XTg1H1Popku5gxW8sei5XQ": {
-                "name": "Mount 10",
-                "size": [
-                    2,
-                    2,
-                    2
-                ]
-            }
+        "name": "Stock/Vauxhall Light Cruiser",
+        "mounts": {
+            "T9Ebo41iA0eBXNYx8uyisw": "3x4x5",
+            "2QQdxC4UE0KOM42r82-ETQ": "3x4x5",
+            "IFKM9E04aUaHS0IoNDMShA": "3x4x5",
+            "rX6hes7UqkyHjEyKbFaWTQ": "3x4x5",
+            "BRMwuusKC02YrbFXRrrNzA": "3x4x5",
+            "vO1oPhlSuUih_cdAZk3Hqg": "3x4x5",
+            "RLHQUFf200uLZjKX5axkMw": "2x2x2",
+            "uyPDg0tD3U6YKz18bVdkPg": "2x2x2",
+            "Xicf0TT7pEaFy_x1uk7ueQ": "2x2x2",
+            "XTg1H1Popku5gxW8sei5XQ": "2x2x2"
         },
-        "compartmentkeys": {
-            "a8H-rPyVSk6uBOrP7lQYUA": {
-                "name": "Compartment 1",
-                "size": [
-                    6,
-                    1,
-                    8
-                ],
-                "default": "Stock/Basic CIC"
-            },
-            "NBbnpHfpDUSS6bNgDlSjzw": {
-                "name": "Compartment 2",
-                "size": [
-                    6,
-                    1,
-                    8
-                ]
-            },
-            "f_SO68qAGU-sw69T9GEWow": {
-                "name": "Compartment 3",
-                "size": [
-                    6,
-                    1,
-                    8
-                ]
-            },
-            "9R0tfjsN-kiETUBLeCCmGw": {
-                "name": "Compartment 4",
-                "size": [
-                    6,
-                    1,
-                    8
-                ]
-            },
-            "-bAF6R6aiU2Afn8T_oKY4g": {
-                "name": "Compartment 5",
-                "size": [
-                    6,
-                    1,
-                    4
-                ]
-            },
-            "-7H3WGDwyESDI3lkHzBdGQ": {
-                "name": "Compartment 6",
-                "size": [
-                    6,
-                    1,
-                    4
-                ]
-            },
-            "o1o5WOogUE255YVi43KlcQ": {
-                "name": "Compartment 7",
-                "size": [
-                    4,
-                    1,
-                    8
-                ]
-            },
-            "DAcDeA0yskSjje92CY-F7w": {
-                "name": "Compartment 8",
-                "size": [
-                    6,
-                    1,
-                    4
-                ]
-            },
-            "jKvCg9nYmkKfAn4-ht_Y6A": {
-                "name": "Compartment 9",
-                "size": [
-                    6,
-                    1,
-                    8
-                ]
-            }
+        "compartments": {
+            "a8H-rPyVSk6uBOrP7lQYUA": "6x1x8",
+            "NBbnpHfpDUSS6bNgDlSjzw": "6x1x8",
+            "f_SO68qAGU-sw69T9GEWow": "6x1x8",
+            "9R0tfjsN-kiETUBLeCCmGw": "6x1x8",
+            "-bAF6R6aiU2Afn8T_oKY4g": "6x1x4",
+            "-7H3WGDwyESDI3lkHzBdGQ": "6x1x4",
+            "o1o5WOogUE255YVi43KlcQ": "4x1x8",
+            "DAcDeA0yskSjje92CY-F7w": "6x1x4",
+            "jKvCg9nYmkKfAn4-ht_Y6A": "6x1x8"
         },
-        "modulekeys": {
-            "8VKMmbA23Em1f-MBZKO2vA": {
-                "name": "Module 1",
-                "size": [
-                    6,
-                    6,
-                    6
-                ],
-                "default": "Stock/FR4800 Reactor"
-            },
-            "udQjNCWlA0awkv6LhH55uQ": {
-                "name": "Module 2",
-                "size": [
-                    3,
-                    3,
-                    3
-                ]
-            },
-            "3eXWUksWXk-5q9MW52rghw": {
-                "name": "Module 3",
-                "size": [
-                    8,
-                    12,
-                    10
-                ],
-                "default": "Stock/FM500 Drive"
-            },
-            "_jqFwgf3EkKUUqHzVWidzw": {
-                "name": "Module 4",
-                "size": [
-                    3,
-                    3,
-                    3
-                ]
-            },
-            "qulLVFUtzk2Qm8rZtfpFDw": {
-                "name": "Module 5",
-                "size": [
-                    2,
-                    2,
-                    2
-                ]
-            },
-            "N_gGUWCQx0mUOX9RaFoI6A": {
-                "name": "Module 6",
-                "size": [
-                    3,
-                    3,
-                    3
-                ]
-            },
-            "E1ZSbpYpZkufCyifYiiK8Q": {
-                "name": "Module 7",
-                "size": [
-                    2,
-                    2,
-                    2
-                ]
-            },
-            "-hETYcmKH0eeXzkFpnhgeg": {
-                "name": "Module 8",
-                "size": [
-                    2,
-                    2,
-                    2
-                ],
-                "default": "Stock/RS35 'Frontline' Radar"
-            },
-            "hU2L93VfQU-jutnRC0dKgw": {
-                "name": "Module 9",
-                "size": [
-                    2,
-                    2,
-                    2
-                ]
-            }
+        "modules": {
+            "8VKMmbA23Em1f-MBZKO2vA": "6x6x6",
+            "udQjNCWlA0awkv6LhH55uQ": "3x3x3",
+            "3eXWUksWXk-5q9MW52rghw": "8x12x10",
+            "_jqFwgf3EkKUUqHzVWidzw": "3x3x3",
+            "qulLVFUtzk2Qm8rZtfpFDw": "2x2x2",
+            "N_gGUWCQx0mUOX9RaFoI6A": "3x3x3",
+            "E1ZSbpYpZkufCyifYiiK8Q": "2x2x2",
+            "-hETYcmKH0eeXzkFpnhgeg": "2x2x2",
+            "hU2L93VfQU-jutnRC0dKgw": "2x2x2"
         }
     },
     "Stock/Axford Heavy Cruiser": {
-        "hullsize": "heavycruiser",
-        "symbols": [
-            "CH"
-        ],
-        "basecost": 600,
-        "basecrewcomplement": 90,
-        "integrated": [
-            "Stock/CR10 Antenna",
-            "Stock/CR75 Antenna"
-        ],
-        "mountkeys": {
-            "whDP9rtbukKsocnrqnqaLQ": {
-                "name": "Mount 1",
-                "size": [
-                    6,
-                    4,
-                    6
-                ]
-            },
-            "8CtCKPLfZEOOFvm1DhV-oQ": {
-                "name": "Mount 2",
-                "size": [
-                    6,
-                    4,
-                    6
-                ]
-            },
-            "N7yRYYUuG0uOzd5aufgViA": {
-                "name": "Mount 3",
-                "size": [
-                    8,
-                    7,
-                    8
-                ]
-            },
-            "lYEQo4jJvEGxRqJa2MB25A": {
-                "name": "Mount 4",
-                "size": [
-                    3,
-                    4,
-                    3
-                ]
-            },
-            "9qreGP2Iw0KwuloNpNFTSg": {
-                "name": "Mount 5",
-                "size": [
-                    3,
-                    4,
-                    3
-                ]
-            },
-            "v9Sqa5DcCkibdi29AkakNg": {
-                "name": "Mount 6",
-                "size": [
-                    3,
-                    4,
-                    3
-                ]
-            },
-            "3MoeYUx1HUS6xNDBMsssig": {
-                "name": "Mount 7",
-                "size": [
-                    3,
-                    4,
-                    3
-                ]
-            },
-            "LbD9Txe-S0a_nODTqtrk7g": {
-                "name": "Mount 8",
-                "size": [
-                    2,
-                    2,
-                    2
-                ]
-            },
-            "KxV0hkkGBE2AOUCo5axQbg": {
-                "name": "Mount 9",
-                "size": [
-                    2,
-                    2,
-                    2
-                ]
-            },
-            "tyGXrucCjUe0FVyP1YDpUw": {
-                "name": "Mount 10",
-                "size": [
-                    2,
-                    2,
-                    2
-                ]
-            },
-            "rXZhdtbK3EC8K_cu6-r_Xg": {
-                "name": "Mount 11",
-                "size": [
-                    2,
-                    2,
-                    2
-                ]
-            }
+        "name": "Stock/Axford Heavy Cruiser",
+        "mounts": {
+            "whDP9rtbukKsocnrqnqaLQ": "6x4x6",
+            "8CtCKPLfZEOOFvm1DhV-oQ": "6x4x6",
+            "N7yRYYUuG0uOzd5aufgViA": "8x7x8",
+            "lYEQo4jJvEGxRqJa2MB25A": "3x4x3",
+            "9qreGP2Iw0KwuloNpNFTSg": "3x4x3",
+            "v9Sqa5DcCkibdi29AkakNg": "3x4x3",
+            "3MoeYUx1HUS6xNDBMsssig": "3x4x3",
+            "LbD9Txe-S0a_nODTqtrk7g": "2x2x2",
+            "KxV0hkkGBE2AOUCo5axQbg": "2x2x2",
+            "tyGXrucCjUe0FVyP1YDpUw": "2x2x2",
+            "rXZhdtbK3EC8K_cu6-r_Xg": "2x2x2"
         },
-        "compartmentkeys": {
-            "ylUvmASKlEiyCtyCsNRKWg": {
-                "name": "Compartment 1",
-                "size": [
-                    6,
-                    1,
-                    8
-                ],
-                "default": "Stock/Basic CIC"
-            },
-            "TX2TktZe7EWB9s-MqlDQgA": {
-                "name": "Compartment 2",
-                "size": [
-                    6,
-                    1,
-                    8
-                ]
-            },
-            "cMs0g0g3WUeZJQASb7omew": {
-                "name": "Compartment 3",
-                "size": [
-                    6,
-                    1,
-                    8
-                ]
-            },
-            "iHYg3DdYAUKS-uIBaRpNqA": {
-                "name": "Compartment 4",
-                "size": [
-                    6,
-                    1,
-                    8
-                ]
-            },
-            "j2ST2yYfwk2_tBIayI3sQg": {
-                "name": "Compartment 5",
-                "size": [
-                    6,
-                    1,
-                    4
-                ]
-            },
-            "SV_4BgcxwU24YIbep-k74g": {
-                "name": "Compartment 6",
-                "size": [
-                    6,
-                    1,
-                    4
-                ]
-            },
-            "A8e_Z_d8WU2qzo6HTQwCBA": {
-                "name": "Compartment 7",
-                "size": [
-                    4,
-                    1,
-                    6
-                ]
-            },
-            "2xmOS4ns_EaMYjBXrrhhig": {
-                "name": "Compartment 8",
-                "size": [
-                    6,
-                    1,
-                    6
-                ]
-            },
-            "y1xLixKUzUSKT7Nz7aUkLQ": {
-                "name": "Compartment 9",
-                "size": [
-                    6,
-                    1,
-                    6
-                ]
-            },
-            "RmUeePb-8EGbFaRgVjCXsA": {
-                "name": "Compartment 10",
-                "size": [
-                    6,
-                    1,
-                    8
-                ]
-            },
-            "eYp1IPfupUGVITrkVhgZJw": {
-                "name": "Compartment 11",
-                "size": [
-                    4,
-                    1,
-                    6
-                ]
-            }
+        "compartments": {
+            "ylUvmASKlEiyCtyCsNRKWg": "6x1x8",
+            "TX2TktZe7EWB9s-MqlDQgA": "6x1x8",
+            "cMs0g0g3WUeZJQASb7omew": "6x1x8",
+            "iHYg3DdYAUKS-uIBaRpNqA": "6x1x8",
+            "j2ST2yYfwk2_tBIayI3sQg": "6x1x4",
+            "SV_4BgcxwU24YIbep-k74g": "6x1x4",
+            "A8e_Z_d8WU2qzo6HTQwCBA": "4x1x6",
+            "2xmOS4ns_EaMYjBXrrhhig": "6x1x6",
+            "y1xLixKUzUSKT7Nz7aUkLQ": "6x1x6",
+            "RmUeePb-8EGbFaRgVjCXsA": "6x1x8",
+            "eYp1IPfupUGVITrkVhgZJw": "4x1x6"
         },
-        "modulekeys": {
-            "lxkgmNwqjUua0sRee2pDJg": {
-                "name": "Module 1",
-                "size": [
-                    6,
-                    6,
-                    6
-                ],
-                "default": "Stock/FR4800 Reactor"
-            },
-            "_Aun-HW-DkOGytVmYSn5IQ": {
-                "name": "Module 2",
-                "size": [
-                    6,
-                    6,
-                    6
-                ]
-            },
-            "2ZLEJvxYf0CATl1lBi3cuQ": {
-                "name": "Module 3",
-                "size": [
-                    12,
-                    8,
-                    10
-                ],
-                "default": "Stock/FM500 Drive"
-            },
-            "ba-3VQ-zGEmDCfU12uaqaA": {
-                "name": "Module 4",
-                "size": [
-                    3,
-                    3,
-                    3
-                ]
-            },
-            "hQ-Mzyns0UO4oMp7gG0d8A": {
-                "name": "Module 5",
-                "size": [
-                    3,
-                    3,
-                    3
-                ]
-            },
-            "oyAxfnepkEG46VjtvQWXpw": {
-                "name": "Module 6",
-                "size": [
-                    3,
-                    3,
-                    3
-                ]
-            },
-            "Yo9hPw6Mf060B3vqwSO4GA": {
-                "name": "Module 7",
-                "size": [
-                    3,
-                    3,
-                    3
-                ]
-            },
-            "CgpRQa-660KEed1wTRL4vw": {
-                "name": "Module 8",
-                "size": [
-                    2,
-                    2,
-                    2
-                ]
-            },
-            "awwdeDnNs0G-RceQF1TByA": {
-                "name": "Module 9",
-                "size": [
-                    2,
-                    2,
-                    2
-                ]
-            },
-            "tnZD-B5Ls0qAyBtdz4yoTA": {
-                "name": "Module 10",
-                "size": [
-                    2,
-                    2,
-                    2
-                ]
-            },
-            "S8ALcpOMYEqJog1v2q8UMQ": {
-                "name": "Module 11",
-                "size": [
-                    2,
-                    2,
-                    2
-                ],
-                "default":"Stock/RS35 'Frontline' Radar"
-            },
-            "rQWETsDGdE-AR8N3NPfwXg": {
-                "name": "Module 12",
-                "size": [
-                    2,
-                    2,
-                    2
-                ]
-            }
+        "modules": {
+            "lxkgmNwqjUua0sRee2pDJg": "6x6x6",
+            "_Aun-HW-DkOGytVmYSn5IQ": "6x6x6",
+            "2ZLEJvxYf0CATl1lBi3cuQ": "12x8x10",
+            "ba-3VQ-zGEmDCfU12uaqaA": "3x3x3",
+            "hQ-Mzyns0UO4oMp7gG0d8A": "3x3x3",
+            "oyAxfnepkEG46VjtvQWXpw": "3x3x3",
+            "Yo9hPw6Mf060B3vqwSO4GA": "3x3x3",
+            "CgpRQa-660KEed1wTRL4vw": "2x2x2",
+            "awwdeDnNs0G-RceQF1TByA": "2x2x2",
+            "tnZD-B5Ls0qAyBtdz4yoTA": "2x2x2",
+            "S8ALcpOMYEqJog1v2q8UMQ": "2x2x2",
+            "rQWETsDGdE-AR8N3NPfwXg": "2x2x2"
         }
     },
     "Stock/Solomon Battleship": {
-        "hullsize": "battleship",
-        "symbols": [
-            "BB"
-        ],
-        "basecost": 1000,
-        "basecrewcomplement": 150,
-        "integrated": [
-            "Stock/CR75 Antenna"
-        ],
-        "mountkeys": {
-            "vvpl_pV8B0W33ernrw31jg": {
-                "name": "Mount 1",
-                "size": [
-                    8,
-                    7,
-                    8
-                ]
-            },
-            "AznvpY2By0GiQxgeOTktww": {
-                "name": "Mount 2",
-                "size": [
-                    6,
-                    4,
-                    6
-                ]
-            },
-            "N5nMrtk4bkiSDzOffAmI1w": {
-                "name": "Mount 3",
-                "size": [
-                    8,
-                    7,
-                    8
-                ]
-            },
-            "HsGDhCR_T0KH1ddzUnSHmA": {
-                "name": "Mount 4",
-                "size": [
-                    8,
-                    7,
-                    8
-                ]
-            },
-            "oRZYmSFdsk2BFB03PqyS2w": {
-                "name": "Mount 5",
-                "size": [
-                    3,
-                    4,
-                    3
-                ]
-            },
-            "csaNZW85vkO8uIQ9XDe1iw": {
-                "name": "Mount 6",
-                "size": [
-                    3,
-                    4,
-                    3
-                ]
-            },
-            "eBG0UhrBiky4nUx81rPbLw": {
-                "name": "Mount 7",
-                "size": [
-                    3,
-                    4,
-                    3
-                ]
-            },
-            "M6NaSvLam06C-1DTggI99g": {
-                "name": "Mount 8",
-                "size": [
-                    2,
-                    2,
-                    2
-                ]
-            },
-            "3HKNGt305UC23fGT8OKcLw": {
-                "name": "Mount 9",
-                "size": [
-                    3,
-                    4,
-                    3
-                ]
-            },
-            "R_Y-LTCc0kydl6L8Sq5Dmw": {
-                "name": "Mount 10",
-                "size": [
-                    3,
-                    4,
-                    3
-                ]
-            },
-            "-gtO0aqGDEOH-Tm612wAoA": {
-                "name": "Mount 11",
-                "size": [
-                    3,
-                    4,
-                    3
-                ]
-            },
-            "37oZ894X7kG2Dq0E5mEKDQ": {
-                "name": "Mount 12",
-                "size": [
-                    2,
-                    2,
-                    2
-                ]
-            },
-            "ZjH6aPXnl0eOdklaPsRNAA": {
-                "name": "Mount 13",
-                "size": [
-                    2,
-                    2,
-                    2
-                ]
-            },
-            "4dNKr5i87EeDGq9coaWYJg": {
-                "name": "Mount 14",
-                "size": [
-                    2,
-                    2,
-                    2
-                ]
-            }
+        "name": "Stock/Solomon Battleship",
+        "mounts": {
+            "vvpl_pV8B0W33ernrw31jg": "8x7x8",
+            "AznvpY2By0GiQxgeOTktww": "6x4x6",
+            "N5nMrtk4bkiSDzOffAmI1w": "8x7x8",
+            "HsGDhCR_T0KH1ddzUnSHmA": "8x7x8",
+            "oRZYmSFdsk2BFB03PqyS2w": "3x4x3",
+            "csaNZW85vkO8uIQ9XDe1iw": "3x4x3",
+            "eBG0UhrBiky4nUx81rPbLw": "3x4x3",
+            "M6NaSvLam06C-1DTggI99g": "2x2x2",
+            "3HKNGt305UC23fGT8OKcLw": "3x4x3",
+            "R_Y-LTCc0kydl6L8Sq5Dmw": "3x4x3",
+            "-gtO0aqGDEOH-Tm612wAoA": "3x4x3",
+            "37oZ894X7kG2Dq0E5mEKDQ": "2x2x2",
+            "ZjH6aPXnl0eOdklaPsRNAA": "2x2x2",
+            "4dNKr5i87EeDGq9coaWYJg": "2x2x2"
         },
-        "compartmentkeys": {
-            "XAbGPXPgDEuDieQDqbA9MQ": {
-                "name": "Compartment 1",
-                "size": [
-                    6,
-                    1,
-                    8
-                ],
-                "default": "Stock/Basic CIC"
-            },
-            "SX-a4J4eek2nmJztXePU3Q": {
-                "name": "Compartment 2",
-                "size": [
-                    6,
-                    1,
-                    8
-                ]
-            },
-            "4sUWwP0VukOFbXT1YAMa9g": {
-                "name": "Compartment 3",
-                "size": [
-                    6,
-                    1,
-                    8
-                ]
-            },
-            "09AenxIgokykwMTCMJz24w": {
-                "name": "Compartment 4",
-                "size": [
-                    6,
-                    1,
-                    4
-                ]
-            },
-            "RtZe85sJUkO5b1xVdgPlqQ": {
-                "name": "Compartment 5",
-                "size": [
-                    6,
-                    1,
-                    4
-                ]
-            },
-            "8YQv6H5fN0SylDc4p2fT-w": {
-                "name": "Compartment 6",
-                "size": [
-                    6,
-                    1,
-                    4
-                ]
-            },
-            "6P8ohHGH_UaCAMEE5jFoRg": {
-                "name": "Compartment 7",
-                "size": [
-                    6,
-                    1,
-                    4
-                ]
-            },
-            "80T00-71i0Wz-uNk04dzvQ": {
-                "name": "Compartment 8",
-                "size": [
-                    6,
-                    1,
-                    4
-                ]
-            },
-            "GbGNS6ZFo0qx-dxuEmZTbg": {
-                "name": "Compartment 9",
-                "size": [
-                    6,
-                    1,
-                    8
-                ]
-            },
-            "tkt9JPA2V0CWAO-Dfj8FHQ": {
-                "name": "Compartment 10",
-                "size": [
-                    6,
-                    1,
-                    4
-                ]
-            },
-            "QkO76Z2PAUq8iD4cuc_P4A": {
-                "name": "Compartment 11",
-                "size": [
-                    6,
-                    1,
-                    4
-                ]
-            },
-            "lp31cinWLE-ZGgtisuoaug"
-            : {
-                "name": "Compartment 12",
-                "size": [
-                    6,
-                    1,
-                    8
-                ]
-            },
-            "wbgVupdnzEGle6f8tezZYQ": {
-                "name": "Compartment 13",
-                "size": [
-                    6,
-                    1,
-                    8
-                ]
-            },
-            "Jl5HmssP406Au7n4NHceQw": {
-                "name": "Compartment 14",
-                "size": [
-                    6,
-                    1,
-                    8
-                ]
-            },
-            "-wa5U_hdw0mHKI1PglDeGg": {
-                "name": "Compartment 15",
-                "size": [
-                    6,
-                    1,
-                    8
-                ]
-            },
-            "97l_f_ktb0yoEquIa75icg": {
-                "name": "Compartment 16",
-                "size": [
-                    6,
-                    1,
-                    8
-                ]
-            }
+        "compartments": {
+            "XAbGPXPgDEuDieQDqbA9MQ": "6x1x8",
+            "SX-a4J4eek2nmJztXePU3Q": "6x1x8",
+            "4sUWwP0VukOFbXT1YAMa9g": "6x1x8",
+            "09AenxIgokykwMTCMJz24w": "6x1x4",
+            "RtZe85sJUkO5b1xVdgPlqQ": "6x1x4",
+            "8YQv6H5fN0SylDc4p2fT-w": "6x1x4",
+            "6P8ohHGH_UaCAMEE5jFoRg": "6x1x4",
+            "80T00-71i0Wz-uNk04dzvQ": "6x1x4",
+            "GbGNS6ZFo0qx-dxuEmZTbg": "6x1x8",
+            "tkt9JPA2V0CWAO-Dfj8FHQ": "6x1x4",
+            "QkO76Z2PAUq8iD4cuc_P4A": "6x1x4",
+            "lp31cinWLE-ZGgtisuoaug": "6x1x8",
+            "wbgVupdnzEGle6f8tezZYQ": "6x1x8",
+            "Jl5HmssP406Au7n4NHceQw": "6x1x8",
+            "-wa5U_hdw0mHKI1PglDeGg": "6x1x8",
+            "97l_f_ktb0yoEquIa75icg": "6x1x8"
         },
-        "modulekeys": {
-            "Cz_cm8aRt0mRiYxdq26V7A": {
-                "name": "Module 1",
-                "size": [
-                    8,
-                    8,
-                    8
-                ],
-                "default": "Stock/FR4800 Reactor"
-            },
-            "eOvmJ625f0yGavYASYtYYQ": {
-                "name": "Module 2",
-                "size": [
-                    8,
-                    8,
-                    8
-                ]
-            },
-            "1I5WRAX0oU6zIv7yEvqfmQ": {
-                "name": "Module 3",
-                "size": [
-                    16,
-                    8,
-                    10
-                ],
-                "default":"Stock/FM500 Drive"
-            },
-            "98aZYYnrXUWKXheUXHoLLw": {
-                "name": "Module 4",
-                "size": [
-                    12,
-                    8,
-                    10
-                ],
-                "default":"Stock/FM500 Drive"
-            },
-            "cVsLdxme_kGSU2jWlYnXzg": {
-                "name": "Module 5",
-                "size": [
-                    3,
-                    3,
-                    3
-                ]
-            },
-            "rWWXZNnbKUi7djDPaKTttQ": {
-                "name": "Module 6",
-                "size": [
-                    3,
-                    3,
-                    3
-                ]
-            },
-            "tgWD8fbOBEWq4KfvYDN_BQ": {
-                "name": "Module 7",
-                "size": [
-                    3,
-                    3,
-                    3
-                ]
-            },
-            "4wfe6HbB9kCN7CDcF7_POQ": {
-                "name": "Module 8",
-                "size": [
-                    3,
-                    3,
-                    3
-                ]
-            },
-            "yAg2wUCkJ0a6Ef3m96WyYw": {
-                "name": "Module 9",
-                "size": [
-                    3,
-                    3,
-                    3
-                ]
-            },
-            "rTbYkycwWku-Ye1FCBJbvw": {
-                "name": "Module 10",
-                "size": [
-                    3,
-                    3,
-                    3
-                ]
-            },
-            "-ao2fBk-zkK3QTdVH4fqHA": {
-                "name": "Module 11",
-                "size": [
-                    3,
-                    3,
-                    3
-                ]
-            },
-            "5lOFQqLf-kOQq0zbIv0MKw": {
-                "name": "Module 12",
-                "size": [
-                    2,
-                    2,
-                    2
-                ],
-                "default":"Stock/RS35 'Frontline' Radar"
-            },
-            "PWWRnNTo60Cx9faCbUhx-g": {
-                "name": "Module 13",
-                "size": [
-                    2,
-                    2,
-                    2
-                ]
-            },
-            "31ilgFi2f0ScvJbFia-Opg": {
-                "name": "Module 14",
-                "size": [
-                    2,
-                    2,
-                    2
-                ]
-            },
-            "MjJFzcmp2kCLRWmjC30TKA": {
-                "name": "Module 15",
-                "size": [
-                    2,
-                    2,
-                    2
-                ]
-            }
+        "modules": {
+            "Cz_cm8aRt0mRiYxdq26V7A": "8x8x8",
+            "eOvmJ625f0yGavYASYtYYQ": "8x8x8",
+            "1I5WRAX0oU6zIv7yEvqfmQ": "16x8x10",
+            "98aZYYnrXUWKXheUXHoLLw": "12x8x10",
+            "cVsLdxme_kGSU2jWlYnXzg": "3x3x3",
+            "rWWXZNnbKUi7djDPaKTttQ": "3x3x3",
+            "tgWD8fbOBEWq4KfvYDN_BQ": "3x3x3",
+            "4wfe6HbB9kCN7CDcF7_POQ": "3x3x3",
+            "yAg2wUCkJ0a6Ef3m96WyYw": "3x3x3",
+            "rTbYkycwWku-Ye1FCBJbvw": "3x3x3",
+            "-ao2fBk-zkK3QTdVH4fqHA": "3x3x3",
+            "5lOFQqLf-kOQq0zbIv0MKw": "2x2x2",
+            "PWWRnNTo60Cx9faCbUhx-g": "2x2x2",
+            "31ilgFi2f0ScvJbFia-Opg": "2x2x2",
+            "MjJFzcmp2kCLRWmjC30TKA": "2x2x2"
         }
     }
 }

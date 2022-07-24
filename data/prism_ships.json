@@ -1,160 +1,165 @@
 {
     "prism/CV_aryabhata": {
-        "mountkeys": {
-            "c2mount1": {},
-            "c2mount2": {},
-            "c1mount1": {},
-            "c1mount2": {}
+        "name": "Aryabhata Light Torchship",
+        "mounts": {
+            "c2mount1": "?x?x?",
+            "c2mount2": "?x?x?",
+            "c1mount1": "?x?x?",
+            "c1mount2": "?x?x?"
         },
-        "compartmentkeys": {
-            "mediumcompartment1": {},
-            "mediumcompartment2": {},
-            "smallcompartment1": {},
-            "smallcompartment2": {}
+        "compartments": {
+            "mediumcompartment1": "?x?x?",
+            "mediumcompartment2": "?x?x?",
+            "smallcompartment1": "?x?x?",
+            "smallcompartment2": "?x?x?"
         },
-        "modulekeys": {
-            "largemodule1": {},
-            "mediummodule1": {},
-            "mediummodule2": {},
-            "smallmodule1": {}
+        "modules": {
+            "largemodule1": "?x?x?",
+            "mediummodule1": "?x?x?",
+            "mediummodule2": "?x?x?",
+            "smallmodule1": "?x?x?"
         }
     },
     "prism/FF_euler": {
-        "mountkeys": {
-            "AiLyweqRf0GHk9fP-5Hyawa": {},
-            "6x7hX-NBqUyEM80kJXxu9gb": {},
-            "3EwSgEOj5UGQUqGrF6t5_gc": {},
-            "3EwSgEOj5UGQUqGrF6t5_gd": {}
+        "name": "Euler Light Torchship",
+        "mounts": {
+            "AiLyweqRf0GHk9fP-5Hyawa": "?x?x?",
+            "6x7hX-NBqUyEM80kJXxu9gb": "?x?x?",
+            "3EwSgEOj5UGQUqGrF6t5_gc": "?x?x?",
+            "3EwSgEOj5UGQUqGrF6t5_gd": "?x?x?"
         },
-        "compartmentkeys": {
-            "pipSayFCn02A3Uov_rOk6Qa": {},
-            "pipSayFCn02A3Uov_rOk6Q2b": {},
-            "pipSayFCn02A3Uov_rOk6Q2d": {},
-            "pipSayFCn02A3Uov_rOk6Q231": {},
-            "pipSayFCn02A3Uov_rOk6Q232": {}
+        "compartments": {
+            "pipSayFCn02A3Uov_rOk6Qa": "?x?x?",
+            "pipSayFCn02A3Uov_rOk6Q2b": "?x?x?",
+            "pipSayFCn02A3Uov_rOk6Q2d": "?x?x?",
+            "pipSayFCn02A3Uov_rOk6Q231": "?x?x?",
+            "pipSayFCn02A3Uov_rOk6Q232": "?x?x?"
         },
-        "modulekeys": {
-            "0GMte5rYLE6w1SAsLPKgXQa": {},
-            "TAgBFGiv-UOo4GOrNxWckga": {},
-            "Bisi0t3FmE2yYxB340uvFQa": {},
-            "KfMisTMUF0um0QOtylrOcwa": {},
-            "eMUMYEJ2Fk62RHFvPC22qAa": {}
+        "modules": {
+            "0GMte5rYLE6w1SAsLPKgXQa": "?x?x?",
+            "TAgBFGiv-UOo4GOrNxWckga": "?x?x?",
+            "Bisi0t3FmE2yYxB340uvFQa": "?x?x?",
+            "KfMisTMUF0um0QOtylrOcwa": "?x?x?",
+            "eMUMYEJ2Fk62RHFvPC22qAa": "?x?x?"
         }
     },
     "prism/DD_noether": {
-        "mountkeys": {
-            "mount345_DD1": {},
-            "mount345_DD2": {},
-            "mount345_DD3": {},
-            "mount343_DD1": {},
-            "mount343_DD2": {},
-            "mount343_DD3": {},
-            "mount343_DD4": {},
-            "mount343_DD5": {},
-            "mount222_DD1": {},
-            "mount222_DD2": {}
+        "name": "Noethr Medium Torchship",
+        "mounts": {
+            "mount345_DD1": "?x?x?",
+            "mount345_DD2": "?x?x?",
+            "mount345_DD3": "?x?x?",
+            "mount343_DD1": "?x?x?",
+            "mount343_DD2": "?x?x?",
+            "mount343_DD3": "?x?x?",
+            "mount343_DD4": "?x?x?",
+            "mount343_DD5": "?x?x?",
+            "mount222_DD1": "?x?x?",
+            "mount222_DD2": "?x?x?"
         },
-        "compartmentkeys": {
-            "compartment618_DD": {},
-            "compartment618bridge_DD": {},
-            "compartment614_DD1": {},
-            "compartment614_DD2": {},
-            "compartment614_DD3": {},
-            "compartment614_DD4": {},
-            "compartment614_DD5": {},
-            "compartment313_DD1": {},
-            "compartment313_DD2": {}
+        "compartments": {
+            "compartment618_DD": "?x?x?",
+            "compartment618bridge_DD": "?x?x?",
+            "compartment614_DD1": "?x?x?",
+            "compartment614_DD2": "?x?x?",
+            "compartment614_DD3": "?x?x?",
+            "compartment614_DD4": "?x?x?",
+            "compartment614_DD5": "?x?x?",
+            "compartment313_DD1": "?x?x?",
+            "compartment313_DD2": "?x?x?"
         },
-        "modulekeys": {
-            "module666reactor_DD": {},
-            "module666drive_DD": {},
-            "module333_DD1": {},
-            "module333_DD2": {},
-            "module333_DD3": {},
-            "module333_DD4": {},
-            "module222radar_DD": {},
-            "module222_DD": {}
+        "modules": {
+            "module666reactor_DD": "?x?x?",
+            "module666drive_DD": "?x?x?",
+            "module333_DD1": "?x?x?",
+            "module333_DD2": "?x?x?",
+            "module333_DD3": "?x?x?",
+            "module333_DD4": "?x?x?",
+            "module222radar_DD": "?x?x?",
+            "module222_DD": "?x?x?"
         }
     },
     "prism/CL_thales": {
-        "mountkeys": {
-            "mount646_CL1": {},
-            "mount646_CL2": {},
-            "mount343_CL1": {},
-            "mount343_CL2": {},
-            "mount343_CL3": {},
-            "mount343_CL4": {},
-            "mount222_CL1": {},
-            "mount222_CL2": {}
+        "name": "Thales Medium Torchship",
+        "mounts": {
+            "mount646_CL1": "?x?x?",
+            "mount646_CL2": "?x?x?",
+            "mount343_CL1": "?x?x?",
+            "mount343_CL2": "?x?x?",
+            "mount343_CL3": "?x?x?",
+            "mount343_CL4": "?x?x?",
+            "mount222_CL1": "?x?x?",
+            "mount222_CL2": "?x?x?"
         },
-        "compartmentkeys": {
-            "compartment618bridge_CL": {},
-            "compartment618_CL1": {},
-            "compartment618_CL2": {},
-            "compartment618_CL3": {},
-            "compartment616_CL1": {},
-            "compartment616_CL2": {},
-            "compartment416_CL1": {},
-            "compartment416_CL2": {},
-            "compartment416_CL3": {}
+        "compartments": {
+            "compartment618bridge_CL": "?x?x?",
+            "compartment618_CL1": "?x?x?",
+            "compartment618_CL2": "?x?x?",
+            "compartment618_CL3": "?x?x?",
+            "compartment616_CL1": "?x?x?",
+            "compartment616_CL2": "?x?x?",
+            "compartment416_CL1": "?x?x?",
+            "compartment416_CL2": "?x?x?",
+            "compartment416_CL3": "?x?x?"
         },
-        "modulekeys": {
-            "module666reactor_CL": {},
-            "module8810drive_CL": {},
-            "module333_CL1": {},
-            "module333_CL2": {},
-            "module333_CL3": {},
-            "module333_CL4": {},
-            "module222radar_CL": {},
-            "module222_CL": {}
+        "modules": {
+            "module666reactor_CL": "?x?x?",
+            "module8810drive_CL": "?x?x?",
+            "module333_CL1": "?x?x?",
+            "module333_CL2": "?x?x?",
+            "module333_CL3": "?x?x?",
+            "module333_CL4": "?x?x?",
+            "module222radar_CL": "?x?x?",
+            "module222_CL": "?x?x?"
         }
     },
     "prism/CH_descartes": {
-        "mountkeys": {
-            "spinalmount1": {},
-            "spinalmount2": {},
-            "c4mount1": {},
-            "c3mount1": {},
-            "c3mount2": {},
-            "c3mount3": {},
-            "c3mount4": {},
-            "c2mount1": {},
-            "c2mount2": {},
-            "c2mount3": {},
-            "c2mount4": {},
-            "c1mount1": {},
-            "c1mount2": {},
-            "c1mount3": {},
-            "c1mount4": {}
+        "name": "Descartes Heavy Torchship",
+        "mounts": {
+            "spinalmount1": "?x?x?",
+            "spinalmount2": "?x?x?",
+            "c4mount1": "?x?x?",
+            "c3mount1": "?x?x?",
+            "c3mount2": "?x?x?",
+            "c3mount3": "?x?x?",
+            "c3mount4": "?x?x?",
+            "c2mount1": "?x?x?",
+            "c2mount2": "?x?x?",
+            "c2mount3": "?x?x?",
+            "c2mount4": "?x?x?",
+            "c1mount1": "?x?x?",
+            "c1mount2": "?x?x?",
+            "c1mount3": "?x?x?",
+            "c1mount4": "?x?x?"
         },
-        "compartmentkeys": {
-            "hugecompartment1": {},
-            "hugecompartment2": {},
-            "hugecompartment3": {},
-            "hugecompartment4": {},
-            "hugecompartment5": {},
-            "hugecompartment6": {},
-            "mediumcompartment1": {},
-            "mediumcompartment2": {},
-            "mediumcompartment3": {},
-            "mediumcompartment4": {},
-            "smallcompartment1": {},
-            "smallcompartment2": {},
-            "smallcompartment3": {}
+        "compartments": {
+            "hugecompartment1": "?x?x?",
+            "hugecompartment2": "?x?x?",
+            "hugecompartment3": "?x?x?",
+            "hugecompartment4": "?x?x?",
+            "hugecompartment5": "?x?x?",
+            "hugecompartment6": "?x?x?",
+            "mediumcompartment1": "?x?x?",
+            "mediumcompartment2": "?x?x?",
+            "mediumcompartment3": "?x?x?",
+            "mediumcompartment4": "?x?x?",
+            "smallcompartment1": "?x?x?",
+            "smallcompartment2": "?x?x?",
+            "smallcompartment3": "?x?x?"
         },
-        "modulekeys": {
-            "hugemodule1": {},
-            "largemodule1": {},
-            "largemodule2": {},
-            "mediummodule1": {},
-            "mediummodule2": {},
-            "mediummodule3": {},
-            "mediummodule4": {},
-            "mediummodule5": {},
-            "smallmodule1": {},
-            "smallmodule2": {},
-            "smallmodule3": {},
-            "smallmodule4": {}
+        "modules": {
+            "hugemodule1": "?x?x?",
+            "largemodule1": "?x?x?",
+            "largemodule2": "?x?x?",
+            "mediummodule1": "?x?x?",
+            "mediummodule2": "?x?x?",
+            "mediummodule3": "?x?x?",
+            "mediummodule4": "?x?x?",
+            "mediummodule5": "?x?x?",
+            "smallmodule1": "?x?x?",
+            "smallmodule2": "?x?x?",
+            "smallmodule3": "?x?x?",
+            "smallmodule4": "?x?x?"
         }
     }
 }

@@ -1,3 +1,4 @@
+import asyncio
 import logging
 import os
 import re
@@ -35,7 +36,7 @@ async def process_file(message: Message, xml_data: str, filename: str, with_flee
             all_files.append(File(open(filename, "rb"), filename=basename(filename)))
         mod_deps = parse_mods(xml_data)
         mods = FleetPrinter.get_mods(mod_deps, "<", ">")
-        await message.channel.send(f"{entity.text}{mods}", files=all_files, reference=message)
+        await message.reply(f"{entity.text}{mods}", files=all_files)
         converted_file.close()
         os.unlink(tmp_file)
 
@@ -60,7 +61,20 @@ async def process_workshop(message: Message, workshop_id: int):
             await process_file(message, xml_data, input_file, with_fleet_file=True)
     except RuntimeError as exception:
         logging.error(exception)
-        await message.channel.send(exception, reference=message)
+        await message.reply(exception)
+
+
+async def process_wiki(message: Message):
+    """Adds a friendly reminded to use slash command instead."""
+    is_wiki = message.content[1:5].lower() == "wiki"
+    if is_wiki:
+        reply = await message.reply(
+            "Hey dummy, stop spamming the channel and use `/wiki` command instead!\n"
+            "In case you missed the tutorial: type `/wiki`, press enter, type keywords, press enter again.\n"
+            "This message will self destruct in few seconds. I hope yours too!"
+        )
+        await asyncio.sleep(9)
+        await reply.delete()
 
 
 async def process_workshops(message: Message):
@@ -97,12 +111,13 @@ async def on_ready():
 async def on_message(message: discord.Message):
     if message.author == bot.user:
         return
-    await process_workshops(message),
-    await process_uploads(message),
+    await process_wiki(message)
+    await process_workshops(message)
+    await process_uploads(message)
 
 
-@bot.command(name="wiki")
-async def wiki(ctx: discord.ApplicationContext, *, keywords: str):
+@bot.slash_command(name="wiki")
+async def wiki_slash(ctx: discord.ApplicationContext, *, keywords: str):
     """Search N:FC wiki data dumps provided by @Alexbay218#0295"""
     async with ctx.typing():
         entity = wiki_db.get(keywords)

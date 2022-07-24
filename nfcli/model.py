@@ -1,6 +1,11 @@
 from __future__ import annotations
 
-from typing import Dict, List, Union
+import logging
+import math
+from collections import Counter
+from typing import Dict, List, Optional, Union
+
+from rich.text import Text
 
 from nfcli.printer import FleetPrinter, Printable, StackPrinter
 from nfcli.writer import Writeable, write_fleet, write_ship
@@ -31,19 +36,24 @@ class Content(Named):
 class Socket(Named):
     """Models simplified socket info from a fleet/ship file."""
 
-    def __init__(self, key: str, name: str, contents: List[Content]) -> None:
+    def __init__(self, key: str, name: str, contents: List[Content], tag: Optional[str]) -> None:
         super().__init__(name)
         self.key = key
         self.contents = contents
+        self.tag = tag
 
 
 class Component:
-    """Models full compartment info (socket + db data)."""
+    """Models full component info (socket + db data)."""
 
-    def __init__(self, socket: Socket, number: int, data: Dict) -> None:
+    def __init__(self, socket: Socket, number: int, size: str) -> None:
         self.socket = socket
-        self.number = number
-        self._data = data
+        self.slot_number = number
+        self.slot_size = size
+        try:
+            self.slot_weight = math.prod([int(x) for x in size.split("x")])
+        except ValueError:
+            self.slot_weight = 1
 
     @property
     def name(self) -> str:
@@ -52,22 +62,6 @@ class Component:
     @property
     def contents(self) -> List[Content]:
         return self.socket.contents
-
-    @property
-    def slot_number(self) -> str:
-        return str(self.number)
-
-    @property
-    def slot_size(self) -> str:
-        if "size" in self._data:
-            return "x".join([str(size) for size in self._data.get("size")])
-        return "?x?x?"
-
-    @property
-    def slot_name(self) -> str:
-        if "name" in self._data:
-            return self._data.get("name")
-        return "Unknown"
 
 
 class Ship(Named, Printable, Writeable):
@@ -85,7 +79,17 @@ class Ship(Named, Printable, Writeable):
 
     @property
     def hull(self) -> str:
+        if "name" in self._data:
+            return self._data.get("name")
         return self.get_name(self._hull)
+
+    @property
+    def tags(self) -> str:
+        tag_counter = Counter()
+        for component in [component for component in self.mountings]:
+            tag_counter.update({component.socket.tag: component.slot_weight})
+        logging.debug(tag_counter)
+        return " ".join([key for key, _ in tag_counter.most_common() if key is not None])
 
     @property
     def title(self) -> str:
@@ -94,7 +98,7 @@ class Ship(Named, Printable, Writeable):
 
     @property
     def text(self) -> str:
-        return f"Hull type: {self.hull}"
+        return Text.from_markup(self.title).plain + "."
 
     @property
     def is_valid(self) -> bool:
@@ -102,29 +106,29 @@ class Ship(Named, Printable, Writeable):
 
     @property
     def mountings(self) -> List[Component]:
-        return self._get_components("mountkeys")
+        return self._get_components("mounts")
 
     @property
     def compartments(self) -> List[Component]:
-        return self._get_components("compartmentkeys")
+        return self._get_components("compartments")
 
     @property
     def modules(self) -> List[Component]:
-        return self._get_components("modulekeys")
+        return self._get_components("modules")
 
     @property
     def components(self) -> List[Component]:
-        return [Component(socket, i + 1, {}) for i, (_, socket) in enumerate(self.sockets.items())]
+        return [Component(socket, i + 1, "?x?x?") for i, (_, socket) in enumerate(self.sockets.items())]
 
     def _get_components(self, type: str) -> List[Component]:
         return [
-            Component(self._get_socket(key), i + 1, data) for i, (key, data) in enumerate(self._data.get(type).items())
+            Component(self._get_socket(key), i + 1, size) for i, (key, size) in enumerate(self._data.get(type).items())
         ]
 
     def _get_socket(self, key: str) -> Socket:
         if key in self.sockets:
             return self.sockets[key]
-        return Socket(key, "[grey]<EMPTY>", [])
+        return Socket(key, "[grey]<EMPTY>", [], None)
 
     def print(self, printer: "StackPrinter"):
         renderable = printer.get_ship(self)
@@ -164,11 +168,10 @@ class Fleet(Named, Printable, Writeable):
 
     @property
     def text(self) -> str:
-        hulls = set([ship.hull for ship in self.ships])
-        if len(hulls) == 1:
-            return self.ships[0].text
-        hull_str = ", ".join(hulls)
-        return f"Hull types: {hull_str}"
+        ships_and_costs = {ship.name: f"{ship.hull} [{ship.tags}]" for ship in self.ships}
+        longest_name = max([len(name) for name in ships_and_costs.keys()])
+        ship_list = [f"{key.rjust(longest_name)} : {value}" for key, value in ships_and_costs.items()]
+        return f"{self.title}:\n```yaml\n" + "\n".join(ship_list) + "\n```"
 
     def add_ship(self, ship: Ship) -> None:
         self.ships.append(ship)

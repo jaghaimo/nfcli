@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Fleet xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Name>Hazel</Name>
+  <Name>sys_ships</Name>
   <Version>2</Version>
   <TotalPoints>350</TotalPoints>
   <FactionKey>Stock/Alliance</FactionKey>
@@ -11,7 +11,7 @@
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>6ae60c0f-02ca-4738-9805-273cb4ed34ca</Key>
-      <Name>Jaimie M. McCormac</Name>
+      <Name>Dogfish Heavy Frigate</Name>
       <Cost>350</Cost>
       <Number>486</Number>
       <SymbolOption>0</SymbolOption>
