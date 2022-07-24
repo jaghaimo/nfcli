@@ -71,7 +71,7 @@ async def process_wiki(message: Message):
         reply = await message.reply(
             "Hey dummy, stop spamming the channel and use `/wiki` command instead!\n"
             "In case you missed the tutorial: type `/wiki`, press enter, type keywords, press enter again.\n"
-            "This message will self destruct in few seconds. You better delete yours too!"
+            "This message will self destruct in few seconds. I hope yours too!"
         )
         await asyncio.sleep(9)
         await reply.delete()
