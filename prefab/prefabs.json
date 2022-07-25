@@ -1,4 +1,10 @@
 {
-    "halberd.prefab": "Halberd1",
-    "tachi.prefab": "Donny Railgun plus Tachi"
+    "prefab/aryabhata.prefab": "prims",
+    "prefab/descartes.prefab": "prims",
+    "prefab/euler.prefab": "prims",
+    "prefab/noether.prefab": "prims",
+    "prefab/pythagoras.prefab": "prims",
+    "prefab/thales.prefab": "prims",
+    "prefab/halberd.prefab": "Halberd1",
+    "prefab/tachi.prefab": "Donny Railgun plus Tachi"
 }

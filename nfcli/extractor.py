@@ -1,5 +1,4 @@
 import json
-import os
 from typing import Dict
 
 from tqdm import tqdm
@@ -64,7 +63,7 @@ def extract_from_prefabs():
     prefabs_json = load_path("prefab/prefabs.json")
     prefabs = json.loads(prefabs_json)
     for prefab_file, namespace in tqdm(prefabs.items()):
-        ship = extract_ship_data(os.path.join("prefab", prefab_file))
+        ship = extract_ship_data(prefab_file)
         ship_key = "/".join([namespace, ship["name"]])
         name_hull = " ".join([ship["name"], ship["hull"]])
         ship["name"] = name_hull
