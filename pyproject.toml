@@ -28,7 +28,6 @@ fuzzywuzzy = "^0.18.0"
 python-Levenshtein = "^0.12.2"
 steam = "^1.3.0"
 py-cord = "^2.0.0"
-unityparser = "^2.2.0"
 
 [tool.poetry.dev-dependencies]
 black = "^22.6.0"
@@ -38,6 +37,9 @@ isort = "^5.10.1"
 [tool.poetry.scripts]
 nfcli = "nfcli.__main__:main"
 bot = "nfcli.bot:start"
+prefab = "nfcli.extractor:extract_prefab_data"
+steam = "nfcli.steam:cache_workshop_files"
+wiki = "nfcli.wiki:update_wiki"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
