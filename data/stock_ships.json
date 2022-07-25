@@ -1,6 +1,6 @@
 {
     "Stock/Sprinter Corvette": {
-        "name": "Stock/Sprinter Corvette",
+        "name": "Sprinter Corvette",
         "mounts": {
             "wDsRnL5nKkyYvKgD6VcPHg": "3x4x5",
             "Z48ot_dQfkWb6AVYjaM_gA": "3x4x3",
@@ -21,7 +21,7 @@
         }
     },
     "Stock/Raines Frigate": {
-        "name": "Stock/Raines Frigate",
+        "name": "Raines Frigate",
         "mounts": {
             "PDKmGfvpykODc3XHDQ7WBw": "3x4x3",
             "WwMGqYiU7E6lp7ID47phqA": "3x4x3",
@@ -44,7 +44,7 @@
         }
     },
     "Stock/Keystone Destroyer": {
-        "name": "Stock/Keystone Destroyer",
+        "name": "Keystone Destroyer",
         "mounts": {
             "NpYYAkA5Z0uAElOjDg3Rag": "3x4x5",
             "fSYv4j5-eEObwJEVhoBSvg": "3x4x5",
@@ -74,7 +74,7 @@
         }
     },
     "Stock/Vauxhall Light Cruiser": {
-        "name": "Stock/Vauxhall Light Cruiser",
+        "name": "Vauxhall Light Cruiser",
         "mounts": {
             "T9Ebo41iA0eBXNYx8uyisw": "3x4x5",
             "2QQdxC4UE0KOM42r82-ETQ": "3x4x5",
@@ -111,7 +111,7 @@
         }
     },
     "Stock/Axford Heavy Cruiser": {
-        "name": "Stock/Axford Heavy Cruiser",
+        "name": "Axford Heavy Cruiser",
         "mounts": {
             "whDP9rtbukKsocnrqnqaLQ": "6x4x6",
             "8CtCKPLfZEOOFvm1DhV-oQ": "6x4x6",
@@ -154,7 +154,7 @@
         }
     },
     "Stock/Solomon Battleship": {
-        "name": "Stock/Solomon Battleship",
+        "name": "Solomon Battleship",
         "mounts": {
             "vvpl_pV8B0W33ernrw31jg": "8x7x8",
             "AznvpY2By0GiQxgeOTktww": "6x4x6",
