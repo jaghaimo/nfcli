@@ -1,11 +1,10 @@
 import json
 import logging
 import os
+import sys
 from glob import glob
 from posixpath import basename
 from typing import Dict
-
-from ruamel.yaml import YAML
 
 from nfcli import load_path
 from nfcli.model import Fleet, Ship
@@ -41,8 +40,26 @@ def get_socket_data(input: str) -> Dict:
         socket_data[key] = "x".join([str(x) for x in value.values()])
     return socket_data
 
-
 def extract_slots(input: str, output: str):
+    # tachi = load_path("prefab/tachi.prefab")
+    # docs = yaml.load_all(tachi, Loader=yaml.Loader)
+    # print([d for d in docs])
+    from unityparser import UnityDocument
+    doc = UnityDocument.load_yaml("prefab/tachi.prefab")
+    entries = doc.filter(class_names=('MonoBehaviour',), attributes=("_className","_hullClassification"))
+    for entry in entries:
+        print(entry._className)
+        print(entry._hullClassification)
+        print(entry._socketRoot)
+
+    # slots = doc.filter(class_names=('MonoBehaviour',), attributes=("_key","_size"))
+    # for slot in slots:
+    #     print(slot._key)
+    #     print(slot._size)
+    sys.exit()
+
+
+def extract_slots_old(input: str, output: str):
     xml_data = load_path(input)
     fleet = parse_fleet(xml_data)
     if not isinstance(fleet, Fleet):
