@@ -38,7 +38,7 @@ isort = "^5.10.1"
 [tool.poetry.scripts]
 nfcli = "nfcli.__main__:main"
 bot = "nfcli.bot:start"
-prefab = "nfcli.extractor:extract_prefab_data"
+extract = "nfcli.extractor:extract_from_prefabs"
 steam = "nfcli.steam:cache_workshop_files"
 wiki = "nfcli.wiki:update_wiki"
 

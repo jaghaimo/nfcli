@@ -3,7 +3,6 @@ import logging
 from typing import Dict
 
 from nfcli import init_logger, load_path
-from nfcli.extractor import extract_slots
 from nfcli.parser import parse_any, parse_mods
 from nfcli.printer import printer_factory
 from nfcli.steam import get_workshop_files
@@ -15,7 +14,6 @@ DESC = """Command line interface for converting Nebulous: Fleet Command fleet an
 def get_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=DESC)
     parser.add_argument("-d", "--debug", action="store_true", help="enable debug mode")
-    parser.add_argument("-e", "--extract", type=str, help="extract slot info")
     parser.add_argument("-i", "--input", type=str, help="fleet or ship file to convert")
     parser.add_argument("-p", "--print", action="store_true", help="print output to console")
     parser.add_argument("-s", "--style", type=str, default="auto", help="printer style: auto (default), column, stack")
@@ -35,8 +33,6 @@ def parse_args() -> Dict:
 def main() -> int:
     args = parse_args()
     entity = None
-    if args.extract:
-        extract_slots(args.input, args.extract)
     if args.workshop:
         input_files = get_workshop_files(args.workshop)
         args.input = input_files[0] if input_files else None

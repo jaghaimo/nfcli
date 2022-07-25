@@ -1,0 +1,76 @@
+{
+    "Halberd1/Halberd": {
+        "name": "Halberd Destroyer",
+        "mounts": {
+            "UNSCHSpinal1": "4x12x4",
+            "UNSCHSpinal2": "4x12x4",
+            "UNSCHTurret6": "3x4x5",
+            "UNSCHTurret5": "3x4x5",
+            "UNSCHTurret8": "3x4x5",
+            "UNSCHTurret9": "3x4x5",
+            "UNSCHTurret1": "3x4x3",
+            "UNSCHTurret2": "3x4x3",
+            "UNSCHTurret3": "3x4x3",
+            "UNSCHTurret4": "3x4x3",
+            "UNSCHTurret7": "3x4x3",
+            "UNSCHTurret10": "3x4x3",
+            "UNSCHTurret16": "3x4x3",
+            "UNSCHTurret15": "3x4x3",
+            "UNSCHTurret11": "2x2x2",
+            "UNSCHTurret12": "2x2x2",
+            "UNSCHTurret13": "2x2x2",
+            "UNSCHTurret14": "2x2x2"
+        },
+        "compartments": {
+            "UNSCHComp1": "6x1x4",
+            "UNSCHComp2": "6x1x8",
+            "UNSCHComp3": "6x1x8",
+            "UNSCHComp4": "6x1x4",
+            "UNSCHComp5": "6x1x4",
+            "UNSCHComp6": "6x1x4",
+            "UNSCHComp7": "6x1x4",
+            "UNSCHComp8": "6x1x4",
+            "UNSCHComp9": "6x1x4",
+            "UNSCHComp10": "6x1x4"
+        },
+        "modules": {
+            "UNSCHMod1": "8x8x6",
+            "UNSCHMod2": "8x8x6",
+            "UNSCHMod3": "8x8x6",
+            "UNSCHMod4": "8x8x6",
+            "UNSCHMod5": "3x3x3",
+            "UNSCHMod6": "3x3x3",
+            "UNSCHMod7": "2x2x2",
+            "UNSCHMod8": "2x2x2",
+            "UNSCHMod9": "2x2x2",
+            "UNSCHMod10": "2x2x2",
+            "UNSCHMod11": "2x2x2",
+            "UNSCHMod12": "2x2x2"
+        }
+    },
+    "Donny Railgun plus Tachi/Tachi": {
+        "name": "Tachi Frigate",
+        "mounts": {
+            "sJy17LxiFEa_Jg2eG7vo_g": "3x4x5",
+            "868S5BoLbEyDXgUIBjDgGw": "3x4x5",
+            "bKbcQINNhkeupusJpTNnMQ": "3x4x3",
+            "eiNgwocVDUmC_4874hoC8w": "3x4x3",
+            "u2lXNd89kE2ed2p_eegIKw": "2x2x2",
+            "w61XWF4FfEy6Vs8NzQ9LIw": "2x2x2"
+        },
+        "compartments": {
+            "EjELzJulYUW-b3xgUWYG6w": "4x1x6",
+            "9lV88FWvr0GlzHjFCbXSAg": "3x1x3",
+            "XDYP0GbT1EqJVFyMBylCoA": "4x1x6",
+            "B1BUy3KwvUGXKNztOLWkGg": "3x1x5",
+            "J9TgUh9_9UOAzG1ZnBDU8w": "3x1x3"
+        },
+        "modules": {
+            "vjjhrbLKGUK7hVJAvNHLwQ": "8x3x6",
+            "KXnBV3wv4UWZvkN3SE-7UQ": "6x6x6",
+            "XwTTbZtxBky-kwXtab-luQ": "2x2x2",
+            "BCA2vAupIE6pSiwptpVuNg": "2x2x2",
+            "wRvT-EutFk6eyYaju9rfvg": "2x2x2"
+        }
+    }
+}
