@@ -10,9 +10,9 @@ TYPE_TO_NAME = {0: "mounts", 1: "compartments", 2: "modules"}
 
 
 def add_socket(ship: Dict, socket: object):
+    type = socket._type
     key = socket._key
     size = "x".join([str(x) for x in socket._size.values()])
-    type = socket._type
     ship[TYPE_TO_NAME[type]][key] = size
 
 
@@ -30,9 +30,13 @@ def get_socket(file_id: str, all_entries: Dict[str, object]) -> Dict:
 
 
 def get_ship(entry: object, all_entries: Dict[str, object]) -> Dict:
-    name = entry._className
-    hull = entry._hullClassification
-    ship = {"name": name, "hull": hull, "mounts": {}, "compartments": {}, "modules": {}}
+    ship = {
+        "name": entry._className,
+        "hull": entry._hullClassification,
+        "mounts": {},
+        "compartments": {},
+        "modules": {},
+    }
     socket_root = str(entry._socketRoot["fileID"])
     socket_node = all_entries[socket_root]
     for child in socket_node.m_Children:
@@ -53,6 +57,7 @@ def extract_ship_data(input: str):
         raise RuntimeError("Could not find a starting MonoBehaviour object")
     return get_ship(entries[0], all_entries)
 
+
 def extract_from_prefabs():
     ships = {}
     prefabs_json = load_path("prefab/prefabs.json")
@@ -62,7 +67,7 @@ def extract_from_prefabs():
         ship_key = "/".join([namespace, ship["name"]])
         name_hull = " ".join([ship["name"], ship["hull"]])
         ship["name"] = name_hull
-        del(ship["hull"])
+        del ship["hull"]
         ships[ship_key] = ship
 
     with open("data/modded_ships.json", "w") as file:
