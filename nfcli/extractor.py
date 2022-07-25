@@ -2,6 +2,7 @@ import json
 import os
 from typing import Dict
 
+from tqdm import tqdm
 from unityparser import UnityDocument
 
 from nfcli import load_path
@@ -62,7 +63,7 @@ def extract_from_prefabs():
     ships = {}
     prefabs_json = load_path("prefab/prefabs.json")
     prefabs = json.loads(prefabs_json)
-    for prefab_file, namespace in prefabs.items():
+    for prefab_file, namespace in tqdm(prefabs.items()):
         ship = extract_ship_data(os.path.join("prefab", prefab_file))
         ship_key = "/".join([namespace, ship["name"]])
         name_hull = " ".join([ship["name"], ship["hull"]])
