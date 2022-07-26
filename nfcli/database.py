@@ -16,7 +16,6 @@ class Database:
             hull = self._load_json(file)
             key = hull["key"]
             self.hulls[f"{namespace}/{key}"] = hull
-        print(self.hulls)
 
     def _load_json(self, path: str) -> Dict:
         try:
