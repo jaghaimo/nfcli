@@ -1,0 +1,44 @@
+{
+  "key": "Axford Heavy Cruiser",
+  "name": "'Axford' class Heavy Cruiser",
+  "mounts": {
+    "whDP9rtbukKsocnrqnqaLQ": "6x4x6",
+    "8CtCKPLfZEOOFvm1DhV-oQ": "6x4x6",
+    "N7yRYYUuG0uOzd5aufgViA": "8x7x8",
+    "lYEQo4jJvEGxRqJa2MB25A": "3x4x3",
+    "9qreGP2Iw0KwuloNpNFTSg": "3x4x3",
+    "v9Sqa5DcCkibdi29AkakNg": "3x4x3",
+    "3MoeYUx1HUS6xNDBMsssig": "3x4x3",
+    "LbD9Txe-S0a_nODTqtrk7g": "2x2x2",
+    "KxV0hkkGBE2AOUCo5axQbg": "2x2x2",
+    "tyGXrucCjUe0FVyP1YDpUw": "2x2x2",
+    "rXZhdtbK3EC8K_cu6-r_Xg": "2x2x2"
+  },
+  "compartments": {
+    "ylUvmASKlEiyCtyCsNRKWg": "6x1x8",
+    "TX2TktZe7EWB9s-MqlDQgA": "6x1x8",
+    "cMs0g0g3WUeZJQASb7omew": "6x1x8",
+    "iHYg3DdYAUKS-uIBaRpNqA": "6x1x8",
+    "j2ST2yYfwk2_tBIayI3sQg": "6x1x4",
+    "SV_4BgcxwU24YIbep-k74g": "6x1x4",
+    "A8e_Z_d8WU2qzo6HTQwCBA": "4x1x6",
+    "2xmOS4ns_EaMYjBXrrhhig": "6x1x6",
+    "y1xLixKUzUSKT7Nz7aUkLQ": "6x1x6",
+    "RmUeePb-8EGbFaRgVjCXsA": "6x1x8",
+    "eYp1IPfupUGVITrkVhgZJw": "4x1x6"
+  },
+  "modules": {
+    "lxkgmNwqjUua0sRee2pDJg": "6x6x6",
+    "_Aun-HW-DkOGytVmYSn5IQ": "6x6x6",
+    "2ZLEJvxYf0CATl1lBi3cuQ": "12x8x10",
+    "ba-3VQ-zGEmDCfU12uaqaA": "3x3x3",
+    "hQ-Mzyns0UO4oMp7gG0d8A": "3x3x3",
+    "oyAxfnepkEG46VjtvQWXpw": "3x3x3",
+    "Yo9hPw6Mf060B3vqwSO4GA": "3x3x3",
+    "CgpRQa-660KEed1wTRL4vw": "2x2x2",
+    "awwdeDnNs0G-RceQF1TByA": "2x2x2",
+    "tnZD-B5Ls0qAyBtdz4yoTA": "2x2x2",
+    "S8ALcpOMYEqJog1v2q8UMQ": "2x2x2",
+    "rQWETsDGdE-AR8N3NPfwXg": "2x2x2"
+  }
+}

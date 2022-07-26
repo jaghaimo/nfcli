@@ -36,7 +36,7 @@ def get_ship(ship_data: OrderedDict) -> Ship:
         ship_data["Number"],
         ship_data["SymbolOption"],
         hull,
-        db.get_ship_data(hull),
+        db.get_hull_data(hull),
     )
     socket_map = ship_data["SocketMap"]
     hull_socket = socket_map["HullSocket"] if socket_map else []

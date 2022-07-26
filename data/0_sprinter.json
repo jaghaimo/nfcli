@@ -1,0 +1,22 @@
+{
+  "key": "Sprinter Corvette",
+  "name": "'Sprinter' class Corvette",
+  "mounts": {
+    "wDsRnL5nKkyYvKgD6VcPHg": "3x4x5",
+    "Z48ot_dQfkWb6AVYjaM_gA": "3x4x3",
+    "IUdNSVZm2Eu9n3F5HnSAng": "2x2x2",
+    "ZxY9ONYz80SiLNSObvjNzQ": "2x2x2"
+  },
+  "compartments": {
+    "XPaYCjBqdEqBxEIsVLP0oA": "4x1x6",
+    "xRYIkvssd0mPY3VIgrnQ5A": "4x1x6",
+    "rXO8xwG1MkqzI_2pU-O_qQ": "3x1x3",
+    "GefqwCQzg0qXA3EFRmDtPw": "3x1x3"
+  },
+  "modules": {
+    "4WpJyiOKVEqCwR99l47MkA": "3x3x3",
+    "4EHx4mQhNUi-WuuQtQF5fA": "8x3x6",
+    "TSPPW9ECe06-MGzR1i0WvQ": "2x2x2",
+    "MBOvGazj6UWpt2OOy44s7w": "2x2x2"
+  }
+}

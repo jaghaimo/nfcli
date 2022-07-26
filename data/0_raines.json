@@ -1,0 +1,24 @@
+{
+  "key": "Raines Frigate",
+  "name": "'Raines' class Frigate",
+  "mounts": {
+    "PDKmGfvpykODc3XHDQ7WBw": "3x4x3",
+    "WwMGqYiU7E6lp7ID47phqA": "3x4x3",
+    "gkfIwYzn7kGhG6MW9uxBmw": "3x4x3",
+    "D3zoB0PetEC973iUck_mNQ": "3x4x3"
+  },
+  "compartments": {
+    "98N-YI_1WUOs--qPYlt-7g": "4x1x6",
+    "6Tzo7268MEqgyFxnGvLKUg": "4x1x6",
+    "O_Y-AJc7r0alOg36rvY6MQ": "3x1x3",
+    "5APOD4UfSkGdkm9WWdAvLA": "3x1x3",
+    "lorATFhkTkeZQYThYOHazg": "3x1x5"
+  },
+  "modules": {
+    "bRgUlaoQJ0S7M91zMpdAdA": "6x6x6",
+    "Jmtnwo0KQki5QyEPPlBHrA": "8x3x6",
+    "V42tXibIR0e4u6riIHYZOw": "2x2x2",
+    "p-m7ijS6ukuqzuBT5NE_lA": "2x2x2",
+    "foApM84hT0GpEw4GaFv38w": "3x3x3"
+  }
+}

@@ -6,17 +6,19 @@ from typing import Dict, Optional
 
 class Database:
     def __init__(self) -> None:
-        self.components = self.load_all("data/*_components.json")
-        self.ships = self.load_all("data/*_ships.json")
+        self.hulls = {}
+        self.tags = self._load_json("data/tags.json")
+        self._load_hulls("data/hulls.json")
 
-    def load_all(self, glob_path: str) -> Dict:
-        loaded = {}
-        for path in glob(glob_path):
-            logging.debug(f"Reading {path}")
-            loaded.update(self.load_json(path))
-        return loaded
+    def _load_hulls(self, path: str) -> Dict:
+        hull_files = self._load_json(path)
+        for file, namespace in hull_files.items():
+            hull = self._load_json(file)
+            key = hull["key"]
+            self.hulls[f"{namespace}/{key}"] = hull
+        print(self.hulls)
 
-    def load_json(self, path: str) -> Dict:
+    def _load_json(self, path: str) -> Dict:
         try:
             f = open(path, "r")
         except EnvironmentError:
@@ -25,13 +27,13 @@ class Database:
             return json.load(f)
 
     def get_component_tag(self, socket: str) -> Optional[str]:
-        if socket in self.components:
-            return self.components.get(socket)
+        if socket in self.tags:
+            return self.tags.get(socket)
         return None
 
-    def get_ship_data(self, hull: str) -> Dict:
-        if hull in self.ships:
-            return self.ships.get(hull)
+    def get_hull_data(self, hull: str) -> Dict:
+        if hull in self.hulls:
+            return self.hulls.get(hull)
         return {}
 
 

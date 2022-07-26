@@ -1,0 +1,35 @@
+{
+  "key": "CL_thales",
+  "name": "'Thales' class Medium Torchship",
+  "mounts": {
+    "mount646_CL1": "6x4x6",
+    "mount646_CL2": "6x4x6",
+    "mount343_CL1": "3x4x3",
+    "mount343_CL2": "3x4x3",
+    "mount343_CL3": "3x4x3",
+    "mount343_CL4": "3x4x3",
+    "mount222_CL1": "2x2x2",
+    "mount222_CL2": "2x2x2"
+  },
+  "compartments": {
+    "compartment618bridge_CL": "6x1x8",
+    "compartment618_CL1": "6x1x8",
+    "compartment618_CL2": "6x1x8",
+    "compartment618_CL3": "6x1x8",
+    "compartment616_CL1": "6x1x6",
+    "compartment616_CL2": "6x1x6",
+    "compartment416_CL1": "4x1x6",
+    "compartment416_CL2": "4x1x6",
+    "compartment416_CL3": "4x1x6"
+  },
+  "modules": {
+    "module666reactor_CL": "6x6x6",
+    "module8810drive_CL": "8x8x10",
+    "module333_CL1": "3x3x3",
+    "module333_CL2": "3x3x3",
+    "module333_CL3": "3x3x3",
+    "module333_CL4": "3x3x3",
+    "module222radar_CL": "2x2x2",
+    "module222_CL": "2x2x2"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "key": "Pella",
+  "name": "'Pella' class Light Cruiser",
+  "mounts": {
+    "3HUk6y7wyMeshB5JQUvPbficuNs9CTKS": "3x4x5",
+    "o2WwKms0Wx4ROZxSTp8GGOfPx0GGMiT0": "3x4x5",
+    "w_hFFkegwkCo9P1bEL0CSA": "3x4x5",
+    "mx4dzd3tmHYbA2cJY6rUd6kQHXsA7MYF": "3x4x5",
+    "QiZfab9ZZkKCN8RXv6VGyQ": "3x4x5",
+    "nAIktZNl_kaD4xIPLiPOew": "3x4x5",
+    "ZyJ9NoAjl1sTGaIQq8B1Ny66q7I0ptIG": "3x4x3",
+    "iEvl51T5UUWR1JybswA5Mw": "3x4x3",
+    "w9BftGeaeU-fLUfpbqiTPQ": "2x2x2",
+    "MVO_w0LfHU6d85-NUtJfEg": "2x2x2",
+    "UxUFAP9IL0S1BwJK30vyIA": "2x2x2",
+    "19G8HP3bbECUBiOscbe-8g": "2x2x2",
+    "Uf2YZ07kTUq969AYKWIsFw": "2x2x2",
+    "_R4zUU1WhkO4KVIAYXmOXA": "2x2x2"
+  },
+  "compartments": {
+    "DaISYHbsYKOMoQzit4mgBZhaT3DjU3RX": "6x1x8",
+    "zf1p7ZFc5eS0BG4fPy85pOhPBjP1cCtA": "6x1x8",
+    "XulOhckUoTS5kJ8DOuP1W6rfXn78eelP": "6x1x8",
+    "l4teurjzsD24bbs1xAJwBgJbvgC5ipYN": "6x1x8",
+    "WGazqmmHUEOteO6p69U6yw": "6x1x8",
+    "N43bDMqkz0egUjnYLE5j3A": "8x1x4",
+    "QxGoOmViKE-sLzu0r0S7Hg": "6x1x4",
+    "6Nv9sgxgNEGx3yi-fQ-Wig": "6x1x4",
+    "xtoCKM-osUaMuIU4yp3GNQ": "6x1x4"
+  },
+  "modules": {
+    "fThglYxKRwwCnccXU9scnaonZ932JyKa": "10x10x10",
+    "qGzD2SdY_E2kQUSYQtyI5Q": "6x6x6",
+    "D_wvUWHBUUyMj7R0_OGyYQ": "6x6x6",
+    "uz7IIM9PDVFSxsHVGF9Nm6vwJj751deN": "3x3x3",
+    "XPUlGdLT8yCOtpEhaQCRzBPDjEZqa0JQ": "3x3x3",
+    "PvqgTFexAa0Vhwtl0vpipwU7WRnkCpVo": "2x2x2",
+    "6Sl82TTkwEyQB-D_cVsXqg": "2x2x2",
+    "qzanfSXhTUqYafjKd4xXsQ": "2x2x2",
+    "cN869X27tUu4mKoC0wjkcg": "2x2x2"
+  }
+}

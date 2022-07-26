@@ -1,0 +1,31 @@
+{
+  "key": "Keystone Destroyer",
+  "name": "'Keystone' class Destroyer",
+  "mounts": {
+    "NpYYAkA5Z0uAElOjDg3Rag": "3x4x5",
+    "fSYv4j5-eEObwJEVhoBSvg": "3x4x5",
+    "x21sadthgE2FtDWSJKINGQ": "3x4x3",
+    "IxKwpY5d9EicYRRTMn8xVw": "3x4x3",
+    "JpOU9MgWXEmfLcQoAK4otA": "2x2x2",
+    "LCosRblddUCjPogeJ5eSeA": "2x2x2",
+    "hGeid9yk80GqIN5IUlp8aw": "4x12x4"
+  },
+  "compartments": {
+    "PlyaCcjDo0qu155JIZgm6A": "6x1x8",
+    "ytRGy84X_kW1odHYCBICDQ": "6x1x8",
+    "yM3Am4PqyUOIByTKzM6sPA": "6x1x4",
+    "H1ekC2-9c02VyNXY4IeLYA": "6x1x4",
+    "ln5c_ZvdCUSMVWZL_-m3yw": "6x1x4",
+    "H-oABJbYw0qgKd4QzU0WaA": "6x1x4",
+    "tCBEdcIUhk6AL-X6sCujsQ": "6x1x4"
+  },
+  "modules": {
+    "AWYvQUZ26k20yHOrVQKg6Q": "6x6x6",
+    "tmHTz6HkrE-RUtN94W6lyQ": "8x8x6",
+    "m5J1jQdOfUKM9r7NZjMpKA": "3x3x3",
+    "h29TSNGRo0m_DmeRr2BqDw": "3x3x3",
+    "E9sMCEquVk-NNj5heGmIlQ": "2x2x2",
+    "gx2UKetKWUm5BfZhiD5phQ": "2x2x2",
+    "ZJTmbGdjAk-XEKihIYHEuw": "3x3x3"
+  }
+}

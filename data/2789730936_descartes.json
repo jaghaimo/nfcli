@@ -1,0 +1,50 @@
+{
+  "key": "CH_descartes",
+  "name": "'Descartes' class Heavy Torchship",
+  "mounts": {
+    "spinalmount1": "4x12x4",
+    "spinalmount2": "4x12x4",
+    "c4mount1": "6x4x6",
+    "c3mount1": "3x3x5",
+    "c3mount2": "3x3x5",
+    "c3mount3": "3x4x5",
+    "c3mount4": "3x4x5",
+    "c2mount1": "3x4x3",
+    "c2mount2": "3x4x3",
+    "c2mount3": "3x4x3",
+    "c2mount4": "3x4x3",
+    "c1mount1": "2x2x2",
+    "c1mount2": "2x2x2",
+    "c1mount3": "2x2x2",
+    "c1mount4": "2x2x2"
+  },
+  "compartments": {
+    "hugecompartment1": "6x1x8",
+    "hugecompartment2": "6x1x8",
+    "hugecompartment3": "6x1x8",
+    "hugecompartment4": "6x1x8",
+    "hugecompartment5": "6x1x8",
+    "hugecompartment6": "6x1x8",
+    "mediumcompartment1": "6x1x4",
+    "mediumcompartment2": "6x1x4",
+    "mediumcompartment3": "6x1x4",
+    "mediumcompartment4": "6x1x4",
+    "smallcompartment1": "3x1x3",
+    "smallcompartment2": "3x1x3",
+    "smallcompartment3": "3x1x3"
+  },
+  "modules": {
+    "hugemodule1": "16x8x10",
+    "largemodule1": "8x8x8",
+    "largemodule2": "8x8x8",
+    "mediummodule1": "3x3x3",
+    "mediummodule2": "3x3x3",
+    "mediummodule3": "3x3x3",
+    "mediummodule4": "3x3x3",
+    "mediummodule5": "3x3x3",
+    "smallmodule1": "2x2x2",
+    "smallmodule2": "2x2x2",
+    "smallmodule3": "2x2x2",
+    "smallmodule4": "2x2x2"
+  }
+}

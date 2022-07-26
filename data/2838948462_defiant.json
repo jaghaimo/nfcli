@@ -1,0 +1,47 @@
+{
+  "key": "CL_Defiant",
+  "name": "'Defiant' class Battlecruiser",
+  "mounts": {
+    "8x7x8 FWD": "8x7x8",
+    "8x7x8 AFT": "8x7x8",
+    "2x2x2 AFT UPPER": "2x2x2",
+    "2x2x2 AFT LOWER": "2x2x2",
+    "2x2x2 AFT PORT": "2x2x2",
+    "2x2x2 AFT STBD": "2x2x2",
+    "2x2x2 FWD PORT": "2x2x2",
+    "2x2x2 FWD STBD ": "2x2x2",
+    "6x4x6 FWD": "6x4x6",
+    "6x4x6 AFT LOWER": "6x4x6",
+    "6x4x6 AFT UPPER": "6x4x6",
+    "3x4x5 FWD UPPER": "3x4x5"
+  },
+  "compartments": {
+    "6x1x8 uL": "6x1x8",
+    "6x1x8 uL aft": "6x1x8",
+    "6x1x8 ML": "6x1x8",
+    "6x1x8 lL": "6x1x8",
+    "6x1x8 lL AFT": "6x1x8",
+    "6x1x8 STBD": "6x1x8",
+    "6x1x8 PORT": "6x1x8",
+    "6x1x4 UL": "6x1x4",
+    "6x1x4 UL 2": "6x1x4",
+    "6x1x4 UL 3": "6x1x4"
+  },
+  "modules": {
+    "STBD ME": "10x8x10",
+    "PORT ME": "10x8x10",
+    "RC": "5x5x5",
+    "2x2x2 Port 1": "2x2x2",
+    "2x2x2 Port 2": "2x2x2",
+    "2x2x2 STBD 1": "2x2x2",
+    "2x2x2 STBD 2": "2x2x2",
+    "2x2x2 PORT 3": "2x2x2",
+    "2x2x2 PORT 4": "2x2x2",
+    "2x2x2 STBD 3": "2x2x2",
+    "2x2x2 STBD 4": "2x2x2",
+    "3x3x3 Port 1": "3x3x3",
+    "3x3x3 PORT 2": "3x3x3",
+    "3x3x3 STBD 1": "3x3x3",
+    "3x3x3 STBD 2": "3x3x3"
+  }
+}
