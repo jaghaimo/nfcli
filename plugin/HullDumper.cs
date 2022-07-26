@@ -26,7 +26,7 @@ namespace HullDumper
 
         private HullSpec GetHull(Hull hull)
         {
-            HullSpec hullSpec = new HullSpec(hull.FullClassification);
+            HullSpec hullSpec = new HullSpec(hull.name, hull.FullClassification);
             foreach (HullSocket socket in hull.GetAllSockets())
             {
                 SocketSpec socketSpec = new SocketSpec { Key = socket.Key, Size = socket.Size };
@@ -38,13 +38,15 @@ namespace HullDumper
     }
     public class HullSpec
     {
-        public HullSpec(string name)
+        public HullSpec(string key, string name)
         {
+            Key = key;
             Name = name;
             Surfaces = new List<SocketSpec>();
             Compartments = new List<SocketSpec>();
             Modules = new List<SocketSpec>();
         }
+        public string Key { get; set; }
         public string Name { get; set; }
         public List<SocketSpec> Surfaces { get; set; }
         public List<SocketSpec> Compartments { get; set; }
@@ -73,6 +75,7 @@ namespace HullDumper
         public override string ToString()
         {
             return "{\n" +
+                $"  \"key\": \"{Key}\",\n" +
                 $"  \"name\": \"{Name}\",\n" +
                 "  \"mounts\": {\n" + SocketsToString(Surfaces) + "\n  },\n" +
                 "  \"compartments\": {\n" + SocketsToString(Compartments) + "\n  },\n" +
