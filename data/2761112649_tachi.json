@@ -1,0 +1,26 @@
+{
+  "key": "TachiMarsTest",
+  "name": "'Tachi' class Frigate",
+  "mounts": {
+    "sJy17LxiFEa_Jg2eG7vo_g": "3x4x5",
+    "868S5BoLbEyDXgUIBjDgGw": "3x4x5",
+    "bKbcQINNhkeupusJpTNnMQ": "3x4x3",
+    "eiNgwocVDUmC_4874hoC8w": "3x4x3",
+    "u2lXNd89kE2ed2p_eegIKw": "2x2x2",
+    "w61XWF4FfEy6Vs8NzQ9LIw": "2x2x2"
+  },
+  "compartments": {
+    "EjELzJulYUW-b3xgUWYG6w": "4x1x6",
+    "9lV88FWvr0GlzHjFCbXSAg": "3x1x3",
+    "XDYP0GbT1EqJVFyMBylCoA": "4x1x6",
+    "B1BUy3KwvUGXKNztOLWkGg": "3x1x5",
+    "J9TgUh9_9UOAzG1ZnBDU8w": "3x1x3"
+  },
+  "modules": {
+    "vjjhrbLKGUK7hVJAvNHLwQ": "8x3x6",
+    "KXnBV3wv4UWZvkN3SE-7UQ": "6x6x6",
+    "XwTTbZtxBky-kwXtab-luQ": "2x2x2",
+    "BCA2vAupIE6pSiwptpVuNg": "2x2x2",
+    "wRvT-EutFk6eyYaju9rfvg": "2x2x2"
+  }
+}

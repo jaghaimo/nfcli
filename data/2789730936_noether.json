@@ -1,0 +1,37 @@
+{
+  "key": "DD_noether",
+  "name": "'Noether' class Medium Torchship",
+  "mounts": {
+    "mount345_DD1": "3x4x5",
+    "mount345_DD2": "3x4x5",
+    "mount345_DD3": "3x4x5",
+    "mount343_DD1": "3x4x3",
+    "mount343_DD2": "3x1x3",
+    "mount343_DD3": "3x1x3",
+    "mount343_DD4": "3x1x3",
+    "mount343_DD5": "3x1x3",
+    "mount222_DD1": "2x2x3",
+    "mount222_DD2": "2x2x3"
+  },
+  "compartments": {
+    "compartment618_DD": "6x1x8",
+    "compartment618bridge_DD": "6x1x4",
+    "compartment614_DD1": "6x1x4",
+    "compartment614_DD2": "6x1x4",
+    "compartment614_DD3": "6x1x4",
+    "compartment614_DD4": "6x1x4",
+    "compartment614_DD5": "6x1x4",
+    "compartment313_DD1": "3x1x3",
+    "compartment313_DD2": "3x1x3"
+  },
+  "modules": {
+    "module666reactor_DD": "6x6x6",
+    "module666drive_DD": "6x6x6",
+    "module333_DD1": "3x3x3",
+    "module333_DD2": "3x3x3",
+    "module333_DD3": "3x3x3",
+    "module333_DD4": "3x3x3",
+    "module222radar_DD": "2x2x2",
+    "module222_DD": "2x2x2"
+  }
+}

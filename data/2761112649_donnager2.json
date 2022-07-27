@@ -1,0 +1,53 @@
+{
+  "key": "Donnager2",
+  "name": "'Donnager' class Battleship",
+  "mounts": {
+    "w_hFFkegwkCo9P1bEL0CSA": "8x7x8",
+    "3HUk6y7wyMeshB5JQUvPbficuNs9CTKS": "8x7x8",
+    "o2WwKms0Wx4ROZxSTp8GGOfPx0GGMiT0": "8x7x8",
+    "G0MtBKcXN0SsXzsTs4dskw": "8x7x8",
+    "ZyJ9NoAjl1sTGaIQq8B1Ny66q7I0ptIG": "4x12x4",
+    "iEvl51T5UUWR1JybswA5Mw": "4x12x4",
+    "mx4dzd3tmHYbA2cJY6rUd6kQHXsA7MYF": "4x12x4",
+    "QiZfab9ZZkKCN8RXv6VGyQ": "4x12x4",
+    "nAIktZNl_kaD4xIPLiPOew": "4x12x4",
+    "0EHOleJeU0ubp8FfbPbCQQ": "4x12x4",
+    "w9BftGeaeU-fLUfpbqiTPQ": "2x2x2",
+    "MVO_w0LfHU6d85-NUtJfEg": "2x2x2",
+    "UxUFAP9IL0S1BwJK30vyIA": "2x2x2",
+    "19G8HP3bbECUBiOscbe-8g": "2x2x2",
+    "Uf2YZ07kTUq969AYKWIsFw": "2x2x2",
+    "_R4zUU1WhkO4KVIAYXmOXA": "2x2x2",
+    "jX6GE247VEOKqbD9vjJIzw": "2x2x2",
+    "PZ7lIiEVn0m4yT_scF7oMg": "2x2x2"
+  },
+  "compartments": {
+    "DaISYHbsYKOMoQzit4mgBZhaT3DjU3RX": "10x2x10",
+    "zf1p7ZFc5eS0BG4fPy85pOhPBjP1cCtA": "10x2x10",
+    "XulOhckUoTS5kJ8DOuP1W6rfXn78eelP": "10x2x10",
+    "l4teurjzsD24bbs1xAJwBgJbvgC5ipYN": "10x2x10",
+    "gjdlYECuBUarJKBB33Lm-A": "10x2x10",
+    "B3jPkzV_7k-oWUtQDYgylA": "10x2x10",
+    "tn44KuhJXk60_GR_dk3KUw": "10x2x10",
+    "ISC95m9OCk-7l92TptImcw": "10x2x10",
+    "PQCik_ToFUiQUCre9SAreQ": "6x2x4"
+  },
+  "modules": {
+    "fThglYxKRwwCnccXU9scnaonZ932JyKa": "10x10x10",
+    "8ELfxsVhewdsI6T5VdZNIhE7aOER6P8Y": "10x10x10",
+    "D_wvUWHBUUyMj7R0_OGyYQ": "10x10x10",
+    "uz7IIM9PDVFSxsHVGF9Nm6vwJj751deN": "10x10x10",
+    "QMOmmFES9UKOJlJsT_RJEw": "5x5x5",
+    "XPUlGdLT8yCOtpEhaQCRzBPDjEZqa0JQ": "5x5x5",
+    "6OvJLwwq8UCXbLtz7FL7ow": "5x5x5",
+    "cfrXSee3JE-59mLSncBf5Q": "5x5x5",
+    "PvqgTFexAa0Vhwtl0vpipwU7WRnkCpVo": "2x2x2",
+    "6Sl82TTkwEyQB-D_cVsXqg": "2x2x2",
+    "qzanfSXhTUqYafjKd4xXsQ": "2x2x2",
+    "cN869X27tUu4mKoC0wjkcg": "2x2x2",
+    "w3NXxcRatUS_W5Piq6Ifmg": "2x2x2",
+    "SqHEwfUFYUWsAjtG_7HwKA": "2x2x2",
+    "xxsEiIeMj0mGP4wikSKGRQ": "2x2x2",
+    "pRQJ7SbUzUmXPbUZW6ID0A": "2x2x2"
+  }
+}

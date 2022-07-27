@@ -1,0 +1,36 @@
+{
+  "key": "DD_Nexaria",
+  "name": "'Nexaria' class Destroyer",
+  "mounts": {
+    "spinalmount": "4x12x4",
+    "c2_1": "3x4x3",
+    "c2_2": "3x4x3",
+    "c2_3": "3x4x3",
+    "c2_4": "3x4x3",
+    "c1_1": "2x2x2",
+    "c1_2": "2x2x2"
+  },
+  "compartments": {
+    "lc_1": "6x1x8",
+    "lc_2": "6x1x8",
+    "mc_1": "6x1x4",
+    "mc_2": "4x1x6",
+    "mc_3": "4x1x6",
+    "sc_1": "3x1x3",
+    "sc_2": "3x1x3",
+    "sc_3": "3x1x3",
+    "sc_4": "3x1x3",
+    "sc_5": "3x1x3",
+    "sc_6": "3x1x3"
+  },
+  "modules": {
+    "lm_1": "6x6x6",
+    "lm_2": "8x8x6",
+    "lm_3": "6x6x6",
+    "sm_1": "3x3x3",
+    "sm_2": "3x3x3",
+    "sm_3": "3x3x3",
+    "sm_4": "3x3x3",
+    "sm_5": "2x2x2"
+  }
+}

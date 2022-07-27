@@ -1,0 +1,48 @@
+{
+  "key": "Scirocco",
+  "name": "'Scirocco' class Heavy Cruiser",
+  "mounts": {
+    "w_hFFkegwkCo9P1bEL0CSA": "8x7x8",
+    "3HUk6y7wyMeshB5JQUvPbficuNs9CTKS": "6x4x6",
+    "o2WwKms0Wx4ROZxSTp8GGOfPx0GGMiT0": "6x4x6",
+    "ZyJ9NoAjl1sTGaIQq8B1Ny66q7I0ptIG": "3x4x3",
+    "iEvl51T5UUWR1JybswA5Mw": "3x4x3",
+    "mx4dzd3tmHYbA2cJY6rUd6kQHXsA7MYF": "3x4x3",
+    "QiZfab9ZZkKCN8RXv6VGyQ": "3x4x3",
+    "nAIktZNl_kaD4xIPLiPOew": "3x4x3",
+    "w9BftGeaeU-fLUfpbqiTPQ": "2x2x2",
+    "MVO_w0LfHU6d85-NUtJfEg": "2x2x2",
+    "UxUFAP9IL0S1BwJK30vyIA": "2x2x2",
+    "19G8HP3bbECUBiOscbe-8g": "2x2x2",
+    "Uf2YZ07kTUq969AYKWIsFw": "2x2x2",
+    "_R4zUU1WhkO4KVIAYXmOXA": "2x2x2",
+    "jX6GE247VEOKqbD9vjJIzw": "2x2x2"
+  },
+  "compartments": {
+    "DaISYHbsYKOMoQzit4mgBZhaT3DjU3RX": "6x1x8",
+    "zf1p7ZFc5eS0BG4fPy85pOhPBjP1cCtA": "6x1x8",
+    "XulOhckUoTS5kJ8DOuP1W6rfXn78eelP": "6x1x8",
+    "l4teurjzsD24bbs1xAJwBgJbvgC5ipYN": "6x1x8",
+    "gjdlYECuBUarJKBB33Lm-A": "6x1x8",
+    "B3jPkzV_7k-oWUtQDYgylA": "6x1x8",
+    "tn44KuhJXk60_GR_dk3KUw": "6x1x4",
+    "ISC95m9OCk-7l92TptImcw": "6x1x4",
+    "U4-mEPmff0agGvyox7KdzQ": "6x1x4",
+    "sB7eT_LmIESB0aTnxX69ug": "6x1x4",
+    "PQCik_ToFUiQUCre9SAreQ": "6x1x4"
+  },
+  "modules": {
+    "fThglYxKRwwCnccXU9scnaonZ932JyKa": "10x10x10",
+    "8ELfxsVhewdsI6T5VdZNIhE7aOER6P8Y": "6x6x6",
+    "D_wvUWHBUUyMj7R0_OGyYQ": "6x6x6",
+    "uz7IIM9PDVFSxsHVGF9Nm6vwJj751deN": "3x3x3",
+    "XPUlGdLT8yCOtpEhaQCRzBPDjEZqa0JQ": "3x3x3",
+    "6OvJLwwq8UCXbLtz7FL7ow": "3x3x3",
+    "cfrXSee3JE-59mLSncBf5Q": "3x3x3",
+    "PvqgTFexAa0Vhwtl0vpipwU7WRnkCpVo": "2x2x2",
+    "6Sl82TTkwEyQB-D_cVsXqg": "2x2x2",
+    "qzanfSXhTUqYafjKd4xXsQ": "2x2x2",
+    "cN869X27tUu4mKoC0wjkcg": "2x2x2",
+    "FQpLSONr6EGysuV8SQNOVw": "2x2x2"
+  }
+}

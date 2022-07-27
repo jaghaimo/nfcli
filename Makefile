@@ -23,8 +23,8 @@ lint:
 	isort nfcli --check --diff
 
 cache:
-	poetry run nfcli --update-wiki
-	poetry run nfcli --update-workshop
+	poetry run steam
+	poetry run wiki
 
 $(SOURCES):
 	python3 -m nfcli -i "$@" -w

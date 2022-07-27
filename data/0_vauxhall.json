@@ -1,0 +1,38 @@
+{
+  "key": "Vauxhall Light Cruiser",
+  "name": "'Vauxhall' class Light Cruiser",
+  "mounts": {
+    "T9Ebo41iA0eBXNYx8uyisw": "3x4x5",
+    "2QQdxC4UE0KOM42r82-ETQ": "3x4x5",
+    "IFKM9E04aUaHS0IoNDMShA": "3x4x5",
+    "rX6hes7UqkyHjEyKbFaWTQ": "3x4x5",
+    "BRMwuusKC02YrbFXRrrNzA": "3x4x5",
+    "vO1oPhlSuUih_cdAZk3Hqg": "3x4x5",
+    "RLHQUFf200uLZjKX5axkMw": "2x2x2",
+    "uyPDg0tD3U6YKz18bVdkPg": "2x2x2",
+    "Xicf0TT7pEaFy_x1uk7ueQ": "2x2x2",
+    "XTg1H1Popku5gxW8sei5XQ": "2x2x2"
+  },
+  "compartments": {
+    "a8H-rPyVSk6uBOrP7lQYUA": "6x1x8",
+    "NBbnpHfpDUSS6bNgDlSjzw": "6x1x8",
+    "f_SO68qAGU-sw69T9GEWow": "6x1x8",
+    "9R0tfjsN-kiETUBLeCCmGw": "6x1x8",
+    "-bAF6R6aiU2Afn8T_oKY4g": "6x1x4",
+    "-7H3WGDwyESDI3lkHzBdGQ": "6x1x4",
+    "o1o5WOogUE255YVi43KlcQ": "4x1x8",
+    "DAcDeA0yskSjje92CY-F7w": "6x1x4",
+    "jKvCg9nYmkKfAn4-ht_Y6A": "6x1x8"
+  },
+  "modules": {
+    "8VKMmbA23Em1f-MBZKO2vA": "6x6x6",
+    "udQjNCWlA0awkv6LhH55uQ": "3x3x3",
+    "3eXWUksWXk-5q9MW52rghw": "8x12x10",
+    "_jqFwgf3EkKUUqHzVWidzw": "3x3x3",
+    "qulLVFUtzk2Qm8rZtfpFDw": "2x2x2",
+    "N_gGUWCQx0mUOX9RaFoI6A": "3x3x3",
+    "E1ZSbpYpZkufCyifYiiK8Q": "2x2x2",
+    "-hETYcmKH0eeXzkFpnhgeg": "2x2x2",
+    "hU2L93VfQU-jutnRC0dKgw": "2x2x2"
+  }
+}

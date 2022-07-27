@@ -1,0 +1,35 @@
+{
+  "key": "Serrio Mal",
+  "name": "'Orion' class Destroyer",
+  "mounts": {
+    "ZyJ9NoAjl1sTGaIQq8B1Ny66q7I0ptIG": "4x12x4",
+    "3HUk6y7wyMeshB5JQUvPbficuNs9CTKS": "3x4x3",
+    "o2WwKms0Wx4ROZxSTp8GGOfPx0GGMiT0": "3x4x3",
+    "w_hFFkegwkCo9P1bEL0CSA": "3x4x3",
+    "mx4dzd3tmHYbA2cJY6rUd6kQHXsA7MYF": "3x4x3",
+    "QiZfab9ZZkKCN8RXv6VGyQ": "3x2x5",
+    "nAIktZNl_kaD4xIPLiPOew": "3x2x5",
+    "w9BftGeaeU-fLUfpbqiTPQ": "2x2x2",
+    "MVO_w0LfHU6d85-NUtJfEg": "2x2x2",
+    "UxUFAP9IL0S1BwJK30vyIA": "2x2x2",
+    "19G8HP3bbECUBiOscbe-8g": "2x2x2"
+  },
+  "compartments": {
+    "DaISYHbsYKOMoQzit4mgBZhaT3DjU3RX": "6x1x8",
+    "zf1p7ZFc5eS0BG4fPy85pOhPBjP1cCtA": "6x1x8",
+    "XulOhckUoTS5kJ8DOuP1W6rfXn78eelP": "6x1x4",
+    "l4teurjzsD24bbs1xAJwBgJbvgC5ipYN": "6x1x4",
+    "gjdlYECuBUarJKBB33Lm-A": "6x1x4",
+    "tn44KuhJXk60_GR_dk3KUw": "6x1x4",
+    "ISC95m9OCk-7l92TptImcw": "6x1x4"
+  },
+  "modules": {
+    "fThglYxKRwwCnccXU9scnaonZ932JyKa": "8x8x6",
+    "8ELfxsVhewdsI6T5VdZNIhE7aOER6P8Y": "6x6x6",
+    "D_wvUWHBUUyMj7R0_OGyYQ": "3x3x3",
+    "uz7IIM9PDVFSxsHVGF9Nm6vwJj751deN": "3x3x3",
+    "XPUlGdLT8yCOtpEhaQCRzBPDjEZqa0JQ": "3x3x3",
+    "PvqgTFexAa0Vhwtl0vpipwU7WRnkCpVo": "2x2x2",
+    "6Sl82TTkwEyQB-D_cVsXqg": "2x2x2"
+  }
+}

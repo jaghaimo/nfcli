@@ -1,0 +1,27 @@
+{
+  "key": "FF_dogfish",
+  "name": "'Dogfish' class Heavy Frigate",
+  "mounts": {
+    "mou_01": "3x4x3",
+    "mou_02": "3x4x3",
+    "mou_03": "3x4x3",
+    "mou_04": "3x4x3",
+    "mou_05": "2x2x2",
+    "mou_06": "2x2x2"
+  },
+  "compartments": {
+    "com_01": "4x1x6",
+    "com_02": "4x1x6",
+    "com_03": "4x1x4",
+    "com_04": "4x1x4",
+    "com_05": "4x1x4"
+  },
+  "modules": {
+    "mod_01": "3x8x6",
+    "mod_02": "6x6x6",
+    "mod_03": "3x3x3",
+    "mod_04": "3x3x3",
+    "mod_05": "2x2x2",
+    "mod_06": "2x2x2"
+  }
+}
