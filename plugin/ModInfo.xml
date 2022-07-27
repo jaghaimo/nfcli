@@ -7,4 +7,5 @@
     <string>HullDumper.dll</string>
   </Assemblies>
   <GameVer>0.1.0</GameVer>
+  <PreviewImage>HullDumper.png</PreviewImage>
 </ModInfo>
