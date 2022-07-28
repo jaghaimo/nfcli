@@ -1,9 +1,10 @@
 *.pyc
 *.swp
 *:Zone.Identifier
-/.env
-/.vscode/
 /*.log
 /*.log.*
 /*.png
 /*.svg
+/.env
+/.vscode/
+/plugin/.vs/

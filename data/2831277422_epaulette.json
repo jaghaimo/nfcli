@@ -1,0 +1,32 @@
+{
+  "key": "DD_epaulette",
+  "name": "'Epaulette' class Destroyer",
+  "mounts": {
+    "des_01": "10x10x10",
+    "mou_01": "2x2x2",
+    "mou_02": "2x2x2",
+    "mou_03": "3x4x5",
+    "mou_04": "3x4x5",
+    "mou_05": "2x2x2",
+    "mou_06": "2x2x2",
+    "mbat_01": "5x6x25"
+  },
+  "compartments": {
+    "com_01": "6x1x8",
+    "com_02": "6x1x8",
+    "com_03": "5x1x6",
+    "com_04": "5x1x6",
+    "com_05": "4x1x6",
+    "com_06": "4x1x6",
+    "com_07": "3x1x6",
+    "com_08": "3x1x6"
+  },
+  "modules": {
+    "mod_01": "3x7x13",
+    "mod_02": "6x6x6",
+    "mod_03": "3x3x3",
+    "mod_04": "3x3x3",
+    "mod_05": "2x2x2",
+    "mod_06": "2x2x2"
+  }
+}
