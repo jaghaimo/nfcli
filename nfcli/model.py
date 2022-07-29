@@ -85,6 +85,9 @@ class Ship(Named, Printable, Writeable):
 
     @property
     def tags(self) -> str:
+        if not self.is_valid:
+            return ""
+
         tag_counter = Counter()
         for component in [component for component in self.mountings]:
             tag_counter.update({component.socket.tag: component.slot_weight})
