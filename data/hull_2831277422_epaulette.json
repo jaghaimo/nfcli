@@ -1,8 +1,7 @@
 {
-  "key": "DD_epaulette",
+  "key": "State Yards Surplus/DD_epaulette",
   "name": "'Epaulette' class Destroyer",
   "mounts": {
-    "des_01": "10x10x10",
     "mou_01": "2x2x2",
     "mou_02": "2x2x2",
     "mou_03": "3x4x5",
@@ -19,7 +18,8 @@
     "com_05": "4x1x6",
     "com_06": "4x1x6",
     "com_07": "3x1x6",
-    "com_08": "3x1x6"
+    "com_08": "3x1x6",
+    "des_01": "10x10x10"
   },
   "modules": {
     "mod_01": "3x7x13",

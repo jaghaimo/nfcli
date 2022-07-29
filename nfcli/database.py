@@ -8,14 +8,13 @@ class Database:
     def __init__(self) -> None:
         self.hulls = {}
         self.tags = self._load_json("data/tags.json")
-        self._load_hulls("data/hulls.json")
+        self._load_hulls()
 
-    def _load_hulls(self, path: str) -> Dict:
-        hull_files = self._load_json(path)
-        for file, namespace in hull_files.items():
+    def _load_hulls(self) -> Dict:
+        for file in glob("data/hull_*.json"):
             hull = self._load_json(file)
             key = hull["key"]
-            self.hulls[f"{namespace}/{key}"] = hull
+            self.hulls[f"{key}"] = hull
 
     def _load_json(self, path: str) -> Dict:
         try:

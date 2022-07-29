@@ -15,9 +15,9 @@ namespace HullDumper
             foreach (Hull hull in allHulls)
             {
                 ulong sourceModId = hull.SourceModId ?? 0;
-                string fileName = $"{sourceModId}_{hull.ClassName.ToLower()}";
+                string fileName = $"hull_{sourceModId}_{hull.ClassName.ToLower()}.json";
                 HullSpec hullSpec = GetHull(hull);
-                System.IO.File.WriteAllText($"{ModDatabase.LocalModDirectory}{fileName}.json", hullSpec.ToString());
+                System.IO.File.WriteAllText($"{ModDatabase.LocalModDirectory}{fileName}", hullSpec.ToString());
             }
         }
         public void PreLoad()
@@ -26,7 +26,7 @@ namespace HullDumper
 
         private HullSpec GetHull(Hull hull)
         {
-            HullSpec hullSpec = new HullSpec(hull.name, hull.FullClassification);
+            HullSpec hullSpec = new HullSpec(hull.SaveKey, hull.FullClassification);
             foreach (HullSocket socket in hull.GetAllSockets())
             {
                 SocketSpec socketSpec = new SocketSpec { Key = socket.Key, Size = socket.Size };
