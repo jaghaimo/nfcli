@@ -3,10 +3,9 @@ import logging
 from typing import Dict
 
 from nfcli import init_logger, load_path
-from nfcli.parser import parse_any, parse_mods
-from nfcli.printer import printer_factory
+from nfcli.parsers import parse_any, parse_mods
 from nfcli.steam import get_workshop_files
-from nfcli.writer import determine_output_png
+from nfcli.writers import determine_output_png
 
 DESC = """Command line interface for converting Nebulous: Fleet Command fleet and ship files to images."""
 
@@ -41,10 +40,8 @@ def main() -> int:
         entity = parse_any(args.input, xml_data)
     if entity:
         if args.print:
-            printer = printer_factory(args.style, entity)
-            entity.print(printer)
             mods = parse_mods(xml_data)
-            printer.print_mods(mods)
+            entity.print(args.style, mods)
         if args.write:
             output_file = determine_output_png(args.input)
             entity.write(output_file)

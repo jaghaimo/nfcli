@@ -10,10 +10,10 @@ from rich.console import Console
 from rich.text import Text
 
 from nfcli import COLUMN_WIDTH, nfc_theme
-from nfcli.printer import FleetPrinter, StackPrinter, determine_printer
+from nfcli.printers import FleetPrinter, StackPrinter, determine_printer
 
 if TYPE_CHECKING:
-    from nfcli.model import Fleet, Ship
+    from nfcli.models import Fleet, Ship
 
 
 class Writeable:

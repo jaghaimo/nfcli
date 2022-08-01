@@ -9,11 +9,11 @@ import discord
 from discord import File, Message
 
 from nfcli import DISCORD_TOKEN, init_logger, load_path
-from nfcli.parser import parse_any, parse_mods
-from nfcli.printer import FleetPrinter
+from nfcli.parsers import parse_any, parse_mods
+from nfcli.printers import FleetPrinter
 from nfcli.steam import get_workshop_files, get_workshop_id
 from nfcli.wiki import Wiki
-from nfcli.writer import determine_output_png, get_temp_filename
+from nfcli.writers import determine_output_png, get_temp_filename
 
 wiki_db = Wiki()
 intents = discord.Intents.default()

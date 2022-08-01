@@ -1,10 +1,12 @@
 import logging
-from typing import List, OrderedDict
+from typing import List, OrderedDict, Union
 
 import xmltodict
 
 from nfcli.database import db
-from nfcli.model import Content, Fleet, Ship, ShipFleetType, Socket
+from nfcli.models import Content, Fleet, Ship, Socket
+from nfcli.printers import Printable
+from nfcli.writers import Writeable
 
 
 def get_content(content_data: OrderedDict) -> List[Content]:
@@ -79,7 +81,7 @@ def parse_fleet(xml_data: str) -> Fleet:
     return fleet
 
 
-def parse_any(filename: str, xml_data: str) -> ShipFleetType:
+def parse_any(filename: str, xml_data: str) -> Union[Printable, Writeable]:
     try:
         if filename.endswith("fleet"):
             return parse_fleet(xml_data)

@@ -16,7 +16,7 @@ from rich.tree import Tree
 from nfcli import COLUMN_WIDTH, STACK_COLUMNS, nfc_theme
 
 if TYPE_CHECKING:
-    from nfcli.model import Component, Fleet, Ship, ShipFleetType
+    from nfcli.models import Component, Fleet, Ship
 
 
 class Printable:
@@ -29,31 +29,17 @@ class Printable:
         raise NotImplementedError
 
     @abstractmethod
-    def print(self, printer: Printer):
+    def print(self, style: str, mods: List[str]):
         raise NotImplementedError
 
 
 class Printer(ABC):
+    def __init__(self, console: Console):
+        self.console = console
+
     @abstractmethod
     def print(self, printable: Printable):
         raise NotImplementedError
-
-
-class FleetPrinter(Printer):
-    def __init__(self, column_width: int, console: Console, no_title: Optional[bool] = False):
-        self.column_width = column_width
-        self.console = console
-        self.no_title = no_title
-
-    def print(self, fleet: "Fleet"):
-        if not self.no_title:
-            self.console.print(Panel(Text(fleet.title.center(self.console.width), style="white"), style="orange"))
-
-    def print_mods(self, mods: List[str]):
-        if not mods:
-            return
-
-        self.console.print(self.get_mods(mods))
 
     @classmethod
     def get_mods(cls, mods: List[str], begin_quote: str = "", end_quote: str = "") -> str:
@@ -63,6 +49,22 @@ class FleetPrinter(Printer):
         for mod in mods:
             mods_text += f"\n- {begin_quote}https://steamcommunity.com/sharedfiles/filedetails/?id={mod}{end_quote}"
         return mods_text
+
+    def print_mods(self, mods: List[str]):
+        if not mods:
+            return
+        self.console.print(self.get_mods(mods))
+
+
+class FleetPrinter(Printer):
+    def __init__(self, column_width: int, console: Console, no_title: Optional[bool] = False):
+        super().__init__(console)
+        self.column_width = column_width
+        self.no_title = no_title
+
+    def print(self, fleet: "Fleet"):
+        if not self.no_title:
+            self.console.print(Panel(Text(fleet.title.center(self.console.width), style="white"), style="orange"))
 
     def add_components(self, tree: Tree, component: "Component"):
         for content in component.contents:
@@ -153,10 +155,3 @@ def fleet_printer_factory(printer_style: str, fleet: Optional["Fleet"] = None) -
 
     logging.warn("Unknown printer requested, returning 'auto'")
     return fleet_printer_factory("auto", fleet)
-
-
-def printer_factory(printer_style: str, entity: "ShipFleetType") -> FleetPrinter:
-    if entity.__class__.__name__ == "Fleet":
-        return fleet_printer_factory(printer_style, entity)
-
-    return fleet_printer_factory("stack")

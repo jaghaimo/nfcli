@@ -3,15 +3,17 @@ from __future__ import annotations
 import logging
 import math
 from collections import Counter
-from typing import Dict, List, Optional, Union
+from typing import Dict, List, Optional
 
 from rich.text import Text
 
-from nfcli.printer import FleetPrinter, Printable, StackPrinter
-from nfcli.writer import Writeable, write_fleet, write_ship
+from nfcli.printers import Printable, fleet_printer_factory
+from nfcli.writers import Writeable, write_fleet, write_ship
 
 
 class Named:
+    """Adds a cleaned, unnamespaced name."""
+
     def __init__(self, name: str) -> None:
         self._name = str(name)
 
@@ -19,7 +21,8 @@ class Named:
     def name(self):
         return self.get_name(self._name)
 
-    def get_name(self, name: str) -> str:
+    @classmethod
+    def get_name(cls, name: str) -> str:
         suffix = name.split("/")[-1]
         cleaned = suffix.split("_")[-1]
         return cleaned[0].upper() + cleaned[1:]
@@ -133,9 +136,11 @@ class Ship(Named, Printable, Writeable):
             return self.sockets[key]
         return Socket(key, "[grey]<EMPTY>", [], None)
 
-    def print(self, printer: "StackPrinter"):
+    def print(self, style: str, mods: List[str]):
+        printer = fleet_printer_factory("stack")
         renderable = printer.get_ship(self)
         printer.console.print(renderable)
+        printer.print_mods(mods)
 
     def write(self, filename: str):
         write_ship(self, filename)
@@ -179,11 +184,10 @@ class Fleet(Named, Printable, Writeable):
     def add_ship(self, ship: Ship) -> None:
         self.ships.append(ship)
 
-    def print(self, printer: "FleetPrinter"):
+    def print(self, style: str, mods: List[str]):
+        printer = fleet_printer_factory(style, self)
         printer.print(self)
+        printer.print_mods(mods)
 
     def write(self, filename: str):
         write_fleet(self, filename)
-
-
-ShipFleetType = Union[Ship, Fleet]
