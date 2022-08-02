@@ -1,0 +1,21 @@
+{
+  "key": "State Yards Surplus/PT_lantern",
+  "name": "'Lantern' class Patrol Ship",
+  "mounts": {
+    "mou_01": "2x2x2",
+    "mou_02": "3x4x3",
+    "mou_03": "3x4x3"
+  },
+  "compartments": {
+    "com_01": "4x1x6",
+    "com_02": "3x1x3",
+    "com_03": "3x1x3",
+    "com_04": "3x1x3"
+  },
+  "modules": {
+    "mod_dr_01": "3x8x6",
+    "mod_re_01": "3x3x3",
+    "mod_re_02": "3x3x3",
+    "mod_01": "2x2x2"
+  }
+}

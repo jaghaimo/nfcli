@@ -1,0 +1,21 @@
+{
+  "key": "State Yards Surplus/CR_pygmy",
+  "name": "'Pygmy' class Corvette",
+  "mounts": {
+    "mou_sp": "4x12x4",
+    "mou_01": "2x2x2",
+    "mou_02": "2x2x2"
+  },
+  "compartments": {
+    "com_01": "4x1x6",
+    "com_02": "4x1x6",
+    "com_03": "3x1x3",
+    "com_04": "3x1x3"
+  },
+  "modules": {
+    "mod_dr_01": "3x8x6",
+    "mod_re_01": "3x3x3",
+    "mod_01": "2x2x2",
+    "mod_02": "2x2x2"
+  }
+}
