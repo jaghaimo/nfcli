@@ -151,7 +151,11 @@ class Fleet(Named, Printable, Writeable):
         super().__init__(name)
         self.points = points
         self.faction = faction
-        self.ships: List[Ship] = []
+        self._ships: List[Ship] = []
+
+    @property
+    def ships(self) -> List[Ship]:
+        return sorted(self._ships, key=lambda ship: int(ship.cost), reverse=True)
 
     @property
     def is_valid(self) -> bool:
@@ -167,7 +171,7 @@ class Fleet(Named, Printable, Writeable):
 
     @property
     def n_ships(self) -> int:
-        return len(self.ships)
+        return len(self._ships)
 
     @property
     def title(self) -> str:
@@ -182,7 +186,7 @@ class Fleet(Named, Printable, Writeable):
         return f"{self.title}:\n```yaml\n" + "\n".join(ship_list) + "\n```"
 
     def add_ship(self, ship: Ship) -> None:
-        self.ships.append(ship)
+        self._ships.append(ship)
 
     def print(self, style: str, mods: List[str]):
         printer = fleet_printer_factory(style, self)
