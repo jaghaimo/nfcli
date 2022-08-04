@@ -3,15 +3,17 @@ import logging
 import os
 import re
 from posixpath import basename
+from random import random
 from typing import List
 
 import discord
 from discord import File, Message
+from discord.ext import tasks
 
 from nfcli import DISCORD_TOKEN, init_logger, load_path
 from nfcli.parsers import parse_any, parse_mods
 from nfcli.printers import FleetPrinter
-from nfcli.steam import get_workshop_files, get_workshop_id
+from nfcli.steam import get_player_count, get_workshop_files, get_workshop_id
 from nfcli.wiki import Wiki
 from nfcli.writers import determine_output_png, get_temp_filename
 
@@ -104,7 +106,7 @@ async def on_ready():
     logging.info("Discord bot initialized")
     for guild in bot.guilds:
         logging.info(f"Connected to the guild: {guild.name} (id: {guild.id})")
-    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="your fleets"))
+    status_changer.start()
 
 
 @bot.event
@@ -125,6 +127,20 @@ async def wiki_slash(ctx: discord.ApplicationContext, *, keywords: str):
         if entity:
             message = await replace_with_previous(ctx.channel, entity.link, message)
         await ctx.respond(message)
+
+
+@tasks.loop(seconds=60.0)
+async def status_changer():
+    player_count = get_player_count()
+    name = f"{str(player_count)} fleets"
+    if player_count == -1:
+        name = "undisclosed number of fleets"
+    elif player_count == 0:
+        name = "empty shipyard"
+    elif player_count == 1:
+        name = "just one fleet"
+    activity = discord.Activity(type=discord.ActivityType.watching, name=name)
+    await bot.change_presence(activity=activity)
 
 
 def start():

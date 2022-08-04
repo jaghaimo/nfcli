@@ -16,6 +16,13 @@ STEAM_APP_ID = 887570
 WORKSHOP_DIR = "~/.steam/steamapps/workshop/content/{}/{}"
 
 
+def get_player_count() -> int:
+    params = {"appid": STEAM_APP_ID}
+    results = webapi.get("ISteamUserStats", "GetNumberOfCurrentPlayers", params=params)["response"]
+    player_count = results["player_count"] if "player_count" in results else -1
+    return player_count
+
+
 def get_local_path(workshop_id: int) -> str:
     return path.expanduser(WORKSHOP_DIR.format(STEAM_APP_ID, workshop_id))
 
