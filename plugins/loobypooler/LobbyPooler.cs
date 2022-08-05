@@ -37,15 +37,19 @@ namespace LobbyPooler
                     Debug.Log("Failed to refresh lobbies!");
                     return;
                 }
-                Thread.Sleep(1000);
-                lobbyList.GetNewLobbies();
+                while (lobbyList.Status == MatchListRefreshStatus.Refreshing)
+                {
+                    Thread.Sleep(1000);
+                    Debug.Log("Fetching new lobbies");
+                    lobbyList.GetNewLobbies();
+                }
                 Debug.Log($"Lobbies refreshed, found {lobbyList.AllLobbies.Count} lobbies");
                 foreach (SteamLobby steamLobby in lobbyList.AllLobbies)
                 {
                     Debug.Log($"{steamLobby.Name} - {steamLobby.CurrentPlayers} / {steamLobby.MaxPlayers}");
                 }
                 lobbyList.StopRefreshing();
-                Thread.Sleep(59000);
+                Thread.Sleep(60000);
             }
         }
     }
