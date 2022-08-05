@@ -1,4 +1,4 @@
-# Hull Dumper helper plugin
+# NFCLI helper plugins
 
 ## Requirements
 

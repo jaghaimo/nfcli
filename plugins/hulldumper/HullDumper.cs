@@ -23,7 +23,6 @@ namespace HullDumper
         public void PreLoad()
         {
         }
-
         private HullSpec GetHull(Hull hull)
         {
             HullSpec hullSpec = new HullSpec(hull.SaveKey, hull.FullClassification);
