@@ -41,8 +41,9 @@ def init_database(connection: Connection):
 
 
 def insert_lobby_data(connection: Connection, lobby_data: str):
-    insert_lobby_data = f"INSERT INTO lobbies (lobby_data) VALUES {lobby_data}"
-    execute_query(connection, insert_lobby_data)
+    insert_lobby_data = f"INSERT INTO lobbies (lobby_data) VALUES (?)"
+    cursor = connection.cursor()
+    cursor.execute(insert_lobby_data, (lobby_data))
 
 
 def fetch_lobby_data(connection: Connection) -> Lobbies:
