@@ -2,6 +2,9 @@ import logging
 import sqlite3
 from pathlib import Path
 from sqlite3 import Connection, Cursor, Error
+from typing import Dict, Optional
+
+from nfcli.models import Lobbies
 
 SQL_PATH = Path(Path.home(), ".nfcli.sqlite")
 
@@ -9,8 +12,9 @@ SQL_PATH = Path(Path.home(), ".nfcli.sqlite")
 def create_connection() -> Connection:
     connection = None
     try:
-        connection = sqlite3.connect(SQL_PATH.absolute)
+        connection = sqlite3.connect(SQL_PATH.absolute())
         logging.debug("Connection to SQLite DB successful")
+        init_database(connection)
     except Error as e:
         logging.error(f"The error '{e}' occurred when connecting to SQLite DB")
     return connection
@@ -36,9 +40,15 @@ def init_database(connection: Connection):
     """
     execute_query(connection, create_table)
 
+
 def insert_lobby_data(connection: Connection, lobby_data: str):
     insert_lobby_data = f"INSERT INTO lobbies (lobby_data) VALUES {lobby_data}"
     execute_query(connection, insert_lobby_data)
 
-def get_last_lobby_data(connection: Connection):
-    pass
+
+def fetch_lobby_data(connection: Connection) -> Optional[Lobbies]:
+    fetch_lobby_data = "SELECT lobby_data, timestamp FROM lobbies ORDER BY id DESC"
+    cursor = execute_query(connection, fetch_lobby_data)
+    if cursor is None:
+        return None
+    return Lobbies(cursor.fetchone())

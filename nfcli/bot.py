@@ -3,7 +3,6 @@ import logging
 import os
 import re
 from posixpath import basename
-from random import random
 from typing import List
 
 import discord
@@ -13,11 +12,13 @@ from discord.ext import tasks
 from nfcli import DISCORD_TOKEN, init_logger, load_path
 from nfcli.parsers import parse_any, parse_mods
 from nfcli.printers import FleetPrinter
+from nfcli.sqlite import create_connection, fetch_lobby_data
 from nfcli.steam import get_player_count, get_workshop_files, get_workshop_id
 from nfcli.wiki import Wiki
 from nfcli.writers import determine_output_png, get_temp_filename
 
 wiki_db = Wiki()
+connection = create_connection()
 intents = discord.Intents.default()
 intents.message_content = True
 bot = discord.Bot(intents=intents)
@@ -127,6 +128,14 @@ async def wiki_slash(ctx: discord.ApplicationContext, *, keywords: str):
         if entity:
             message = await replace_with_previous(ctx.channel, entity.link, message)
         await ctx.respond(message)
+
+
+@bot.slash_command(name="lobbies")
+async def lobbies_slash(ctx: discord.ApplicationContext):
+    """Report number of lobbies in the game."""
+    async with ctx.typing():
+        lobby = fetch_lobby_data(connection)
+        await ctx.respond(lobby)
 
 
 @tasks.loop(seconds=60.0)

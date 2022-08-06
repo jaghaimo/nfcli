@@ -11,6 +11,27 @@ from nfcli.printers import Printable, fleet_printer_factory
 from nfcli.writers import Writeable, write_fleet, write_ship
 
 
+class Lobby:
+    pass
+
+
+class Lobbies:
+    def __init__(self, lobby_data: str = "") -> None:
+        self.lobbies: List[Lobby] = []
+        self._parse_data(lobby_data)
+
+    def __str__(self) -> str:
+        if not self.lobbies:
+            return (
+                "I don't have any recent lobby data at hand. "
+                "Perhaps you could help by running the data gathering mod?"
+            )
+        return "Some data is there. I have no idea what to do with it..."
+
+    def _parse_data(self, lobby_data: str):
+        pass
+
+
 class Named:
     """Adds a cleaned, unnamespaced name."""
 
