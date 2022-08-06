@@ -2,7 +2,6 @@ import logging
 import sqlite3
 from pathlib import Path
 from sqlite3 import Connection, Cursor, Error
-from typing import Dict, Optional
 
 from nfcli.models import Lobbies
 
@@ -46,9 +45,9 @@ def insert_lobby_data(connection: Connection, lobby_data: str):
     execute_query(connection, insert_lobby_data)
 
 
-def fetch_lobby_data(connection: Connection) -> Optional[Lobbies]:
+def fetch_lobby_data(connection: Connection) -> Lobbies:
     fetch_lobby_data = "SELECT lobby_data, timestamp FROM lobbies ORDER BY id DESC"
     cursor = execute_query(connection, fetch_lobby_data)
     if cursor is None:
-        return None
+        return Lobbies()
     return Lobbies(cursor.fetchone())
