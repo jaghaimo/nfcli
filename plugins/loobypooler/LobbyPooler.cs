@@ -1,17 +1,14 @@
 ﻿using Modding;
 using Networking;
-using System.Collections;
 using System.Net;
 using System.Threading;
 using UnityEngine;
-using UnityEngine.Networking;
 
 namespace LobbyPooler
 {
     public class LobbyPooler : IModEntryPoint
     {
         private static MultiplayerFilters _filters = default;
-        private UnityWebRequest www = UnityWebRequest.Get("https://discord.com/api/webhooks/1005583148698046515/qHx3Lbkg8TuG5F09gsy_VmZ6Iz76x0yIfR5ZjYRFaZk8kIlUQQei8u9kk0bB_qFoaQQm");
 
         public void PostLoad()
         {
@@ -25,7 +22,7 @@ namespace LobbyPooler
         {
         }
 
-        public void LobbyPool()
+        private void LobbyPool()
         {
             while (true)
             {
@@ -52,20 +49,46 @@ namespace LobbyPooler
                 {
                     Debug.Log($"{steamLobby.Name} - {steamLobby.CurrentPlayers} / {steamLobby.MaxPlayers}");
                 }
-                SendData(lobbyList.AllLobbies.ToString());
+                SendData(lobbyList);
                 Thread.Sleep(60000);
             }
         }
 
-        public void SendData(string lobbyData)
+        private void SendData(SteamLobbyList lobbyList)
         {
-            string URI = "https://discord.com/api/webhooks/1005583148698046515/qHx3Lbkg8TuG5F09gsy_VmZ6Iz76x0yIfR5ZjYRFaZk8kIlUQQei8u9kk0bB_qFoaQQm";
-            var parameters = new System.Collections.Specialized.NameValueCollection();
-            parameters.Add("content", lobbyData);
+            string uri = "https://discord.com/api/webhooks/1005583148698046515/qHx3Lbkg8TuG5F09gsy_VmZ6Iz76x0yIfR5ZjYRFaZk8kIlUQQei8u9kk0bB_qFoaQQm";
+            var parameters = new System.Collections.Specialized.NameValueCollection
+            {
+                { "content", GetLobbyData(lobbyList) }
+            };
             using (WebClient wc = new WebClient())
             {
-                wc.UploadValues(URI, parameters);
+                wc.UploadValues(uri, parameters);
             }
+        }
+
+        private string GetLobbyData(SteamLobbyList lobbyList)
+        {
+            string lobbies = "";
+            foreach (SteamLobby lobby in lobbyList.AllLobbies)
+            {
+                string lobbyData = "{";
+                lobbyData += AddField("cp", lobby.CurrentPlayers);
+                lobbyData += AddField("hp", lobby.HasPassword);
+                lobbyData += AddField("ip", lobby.InProgress);
+                lobbyData += AddField("mp", lobby.MaxPlayers);
+                lobbies += lobbyData.TrimEnd(',') + "},";
+            }
+            return "{" + lobbies.TrimEnd(',') + "}";
+        }
+
+        private string AddField(string key, bool value)
+        {
+            return $"\"{key}\": {value},";
+        }
+        private string AddField(string key, int value)
+        {
+            return $"\"{key}\": {value},";
         }
     }
 }
