@@ -1,13 +1,17 @@
 ﻿using Modding;
 using Networking;
-using UnityEngine;
+using System.Collections;
+using System.Net;
 using System.Threading;
+using UnityEngine;
+using UnityEngine.Networking;
 
 namespace LobbyPooler
 {
     public class LobbyPooler : IModEntryPoint
     {
-        private MultiplayerFilters _filters = default;
+        private static MultiplayerFilters _filters = default;
+        private UnityWebRequest www = UnityWebRequest.Get("https://discord.com/api/webhooks/1005583148698046515/qHx3Lbkg8TuG5F09gsy_VmZ6Iz76x0yIfR5ZjYRFaZk8kIlUQQei8u9kk0bB_qFoaQQm");
 
         public void PostLoad()
         {
@@ -48,8 +52,19 @@ namespace LobbyPooler
                 {
                     Debug.Log($"{steamLobby.Name} - {steamLobby.CurrentPlayers} / {steamLobby.MaxPlayers}");
                 }
-                lobbyList.StopRefreshing();
+                SendData(lobbyList.AllLobbies.ToString());
                 Thread.Sleep(60000);
+            }
+        }
+
+        public void SendData(string lobbyData)
+        {
+            string URI = "https://discord.com/api/webhooks/1005583148698046515/qHx3Lbkg8TuG5F09gsy_VmZ6Iz76x0yIfR5ZjYRFaZk8kIlUQQei8u9kk0bB_qFoaQQm";
+            var parameters = new System.Collections.Specialized.NameValueCollection();
+            parameters.Add("content", lobbyData);
+            using (WebClient wc = new WebClient())
+            {
+                wc.UploadValues(URI, parameters);
             }
         }
     }
