@@ -73,22 +73,16 @@ namespace LobbyPooler
             foreach (SteamLobby lobby in lobbyList.AllLobbies)
             {
                 string lobbyData = "{";
-                lobbyData += AddField("cp", lobby.CurrentPlayers);
-                lobbyData += AddField("hp", lobby.HasPassword);
-                lobbyData += AddField("ip", lobby.InProgress);
-                lobbyData += AddField("mp", lobby.MaxPlayers);
+                lobbyData += AddField("h", lobby.HasPassword ? 1 : 0);
+                lobbyData += AddField("i", lobby.InProgress ? 1 : 0);
                 lobbies += lobbyData.TrimEnd(',') + "},";
             }
             return "{" + lobbies.TrimEnd(',') + "}";
         }
 
-        private string AddField(string key, bool value)
-        {
-            return $"\"{key}\": {value},";
-        }
         private string AddField(string key, int value)
         {
-            return $"\"{key}\": {value},";
+            return $"\"{key}\":{value},";
         }
     }
 }
