@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import logging
 import math
 from collections import Counter
@@ -12,24 +13,59 @@ from nfcli.writers import Writeable, write_fleet, write_ship
 
 
 class Lobby:
-    pass
+    def __init__(self, in_progress: int, has_password: int) -> None:
+        self.in_progress = in_progress == 1
+        self.has_password = has_password == 1
 
 
 class Lobbies:
     def __init__(self, lobby_data: str = "") -> None:
-        self.lobbies: List[Lobby] = []
+        self.lobbies: Optional[List[Lobby]] = None
         self._parse_data(lobby_data)
 
     def __str__(self) -> str:
-        if not self.lobbies:
+        if self.lobbies == False:
             return (
                 "I don't have any recent lobby data at hand. "
                 "Perhaps you could help by running the data gathering mod?"
             )
-        return "Some data is there. I have no idea what to do with it..."
+        total_lobbies = len(self.lobbies)
+        lobby_or_lobbies = "There is one lobby" if total_lobbies == 1 else f"There are {total_lobbies} lobbies"
+        open_lobbies = len(self.open)
+        open_private = len(self.has_password(self.open))
+        open_public = open_lobbies - open_private
+        in_progress = len(self.in_progress)
+        in_progress_private = len(self.has_password(self.in_progress))
+        in_progress_public = in_progress - in_progress_private
+        return (
+            f"{lobby_or_lobbies} currently present in the game.\n"
+            "```yaml\n"
+            f"Open Lobbies : {open_lobbies} [{open_public} public and {len(open_private)} private]\n"
+            f" In Progress : {in_progress} [{in_progress_public} public and {len(in_progress_private)} private]\n"
+            "```"
+        )
+
+    @property
+    def open(self) -> List[Lobby]:
+        return [lobby for lobby in self.lobbies if not lobby.in_progress]
+
+    @property
+    def in_progress(self) -> List[Lobby]:
+        return [lobby for lobby in self.lobbies if lobby.in_progress]
+
+    def has_password(self, lobbies: Optional[List[Lobby]] = None) -> List[Lobby]:
+        if lobbies is None:
+            lobbies = self.lobbies
+        return [lobby for lobby in lobbies if lobby.has_password]
+
+    def is_valid(self) -> bool:
+        return self.lobbies != None
 
     def _parse_data(self, lobby_data: str):
-        pass
+        self.lobbies = []
+        lobbies = json.loads(lobby_data)
+        for lobby in lobbies:
+            lobbies.append(Lobby(lobby["i"], lobby["h"]))
 
 
 class Named:
