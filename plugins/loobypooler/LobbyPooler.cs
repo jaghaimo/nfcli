@@ -29,6 +29,7 @@ namespace LobbyPooler
             var filePath = Path.Combine(ModDatabase.LocalModDirectory, "LobbyPooler.txt");
             if (!File.Exists(filePath))
             {
+                Debug.Log($"Missing config file: {filePath}");
                 return;
             }
             var content = File.ReadAllText(filePath);
