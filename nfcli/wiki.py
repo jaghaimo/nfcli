@@ -261,11 +261,12 @@ class Munition(Entity):
     def set_from_description(self, description_and_details: str):
         description: List[str] = []
         details: List[str] = []
-        for line in description_and_details.splitlines():
+        for raw_line in description_and_details.splitlines():
+            line = self.strip_tags(raw_line)
             if len(line) > 30:
                 description.append(line)
             else:
-                details.append(self.strip_tags(line))
+                details.append(line)
         self.description = "\n".join(description)
         self.details = {"Details": ""}
         self.details.update(self.str_to_dict("\n".join(details)))

@@ -92,8 +92,8 @@ namespace LobbyPooler
         }
 
         /**
-          * Returns JSON string with lobby data, e.g.
-          * {{"h":0,"i":1},{"h":1,"i":0}}
+          * Returns partial JSON string with lobby data, e.g.
+          * [{"h":0,"i":1},{"h":1,"i":0}]
           */
         private string GetLobbyData(SteamLobbyList lobbyList)
         {
@@ -105,7 +105,7 @@ namespace LobbyPooler
                 lobbyData += AddField("i", lobby.InProgress ? 1 : 0);
                 lobbies += lobbyData.TrimEnd(',') + "},";
             }
-            return "{" + lobbies.TrimEnd(',') + "}";
+            return "[" + lobbies.TrimEnd(',') + "]";
         }
 
         /**

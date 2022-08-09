@@ -2,6 +2,7 @@ import logging
 import sqlite3
 from pathlib import Path
 from sqlite3 import Connection, Cursor, Error
+from time import time
 
 from nfcli.models import Lobbies
 
@@ -33,22 +34,27 @@ def init_database(connection: Connection):
     create_table = """
     CREATE TABLE IF NOT EXISTS lobbies (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        lobby_data TEXT NOT NULL,
-        timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+        timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+        author TEXT NOT NULL,
+        lobby_data TEXT NOT NULL
     );
     """
     execute_query(connection, create_table)
 
 
-def insert_lobby_data(connection: Connection, lobby_data: str):
-    insert_lobby_data = f"INSERT INTO lobbies (lobby_data) VALUES (?)"
+def insert_lobby_data(connection: Connection, author: str, lobby_data: str):
+    insert_lobby_data = "INSERT INTO lobbies (author, lobby_data) VALUES (?, ?)"
     cursor = connection.cursor()
-    cursor.execute(insert_lobby_data, (lobby_data))
+    cursor.execute(insert_lobby_data, (author, lobby_data))
+    connection.commit()
 
 
 def fetch_lobby_data(connection: Connection) -> Lobbies:
-    fetch_lobby_data = "SELECT lobby_data, timestamp FROM lobbies ORDER BY id DESC"
+    fetch_lobby_data = "SELECT timestamp, author, lobby_data FROM lobbies ORDER BY id DESC"
     cursor = execute_query(connection, fetch_lobby_data)
     if cursor is None:
-        return Lobbies()
-    return Lobbies(cursor.fetchone())
+        return Lobbies(time(), "")
+    row = cursor.fetchone()
+    if not row:
+        return Lobbies(time(), "")
+    return Lobbies(*row)

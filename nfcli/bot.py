@@ -8,14 +8,20 @@ from typing import List
 import discord
 from discord import File, Message
 from discord.ext import tasks
+from dotenv import load_dotenv
 
-from nfcli import DISCORD_TOKEN, init_logger, load_path
+from nfcli import init_logger, load_path
+from nfcli.models import Lobbies
 from nfcli.parsers import parse_any, parse_mods
 from nfcli.printers import FleetPrinter
-from nfcli.sqlite import create_connection, fetch_lobby_data
+from nfcli.sqlite import create_connection, fetch_lobby_data, insert_lobby_data
 from nfcli.steam import get_player_count, get_workshop_files, get_workshop_id
 from nfcli.wiki import Wiki
 from nfcli.writers import determine_output_png, get_temp_filename
+
+load_dotenv()
+DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
+DISCORD_CHANNEL = int(os.getenv("DISCORD_CHANNEL"))
 
 wiki_db = Wiki()
 connection = create_connection()
@@ -67,7 +73,7 @@ async def process_workshop(message: Message, workshop_id: int):
         await message.reply(exception)
 
 
-async def process_wiki(message: Message):
+async def process_old_wiki(message: Message):
     """Adds a friendly reminded to use slash command instead."""
     is_wiki = message.content[1:5].lower() == "wiki"
     if is_wiki:
@@ -92,6 +98,14 @@ async def process_workshops(message: Message):
         await process_workshop(message, workshop_id)
 
 
+def process_lobby_data(message: Message):
+    """Extract and process lobby data from subscribed channel."""
+    logging.debug("Checking incoming message")
+    Lobbies._parse_data(message.content)
+    logging.debug("Adding new lobby data")
+    insert_lobby_data(connection, message.author.name, message.content)
+
+
 async def replace_with_previous(channel: discord.TextChannel, link: str, message: str) -> str:
     old_messages: List[discord.Message] = await channel.history(limit=100).flatten()
     for old_message in old_messages:
@@ -114,28 +128,29 @@ async def on_ready():
 async def on_message(message: discord.Message):
     if message.author == bot.user:
         return
-    await process_wiki(message)
-    await process_workshops(message)
-    await process_uploads(message)
+    if message.channel.id == DISCORD_CHANNEL and message.author.bot:
+        process_lobby_data(message)
+    else:
+        await process_old_wiki(message)
+        await process_workshops(message)
+        await process_uploads(message)
 
 
 @bot.slash_command(name="wiki")
 async def wiki_slash(ctx: discord.ApplicationContext, *, keywords: str):
     """Search N:FC wiki data dumps provided by @Alexbay218#0295"""
-    async with ctx.typing():
-        entity = wiki_db.get(keywords)
-        message = entity.text
-        if entity:
-            message = await replace_with_previous(ctx.channel, entity.link, message)
-        await ctx.respond(message)
+    entity = wiki_db.get(keywords)
+    message = entity.text
+    if entity:
+        message = await replace_with_previous(ctx.channel, entity.link, message)
+    await ctx.respond(message)
 
 
 @bot.slash_command(name="lobbies")
 async def lobbies_slash(ctx: discord.ApplicationContext):
-    """Report number of lobbies in the game."""
-    async with ctx.typing():
-        lobby = fetch_lobby_data(connection)
-        await ctx.respond(lobby)
+    """Report number of lobbies in the game (semi-live data provided by volunteers)."""
+    lobby = fetch_lobby_data(connection)
+    await ctx.respond(lobby)
 
 
 @tasks.loop(seconds=60.0)

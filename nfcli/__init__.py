@@ -1,14 +1,7 @@
 import logging
-import os
 from logging.handlers import TimedRotatingFileHandler
 
-from dotenv import load_dotenv
 from rich.theme import Theme
-
-load_dotenv()
-DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
-STEAM_API_KEY = os.getenv("STEAM_API_KEY")
-STEAM_USERNAME = os.getenv("STEAM_USERNAME")
 
 DATA_DIR = "data"
 WIKI_DIR = "wiki"
