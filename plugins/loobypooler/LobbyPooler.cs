@@ -1,5 +1,6 @@
 ﻿using Modding;
 using Networking;
+using System.IO;
 using System.Net;
 using System.Threading;
 using UnityEngine;
@@ -9,17 +10,40 @@ namespace LobbyPooler
     public class LobbyPooler : IModEntryPoint
     {
         private static MultiplayerFilters _filters = default;
+        private static string _discordHook = null;
 
         public void PostLoad()
         {
             _filters.HideInProgress = false;
             _filters.HidePassword = false;
-            Thread thread = new Thread(new ThreadStart(LobbyPool));
-            thread.Start();
+            LoadToken();
+            StartThread();
         }
 
         public void PreLoad()
         {
+        }
+
+        private void LoadToken()
+        {
+            var filePath = Path.Combine(ModDatabase.LocalModDirectory, "LobbyPooler.txt");
+            if (!File.Exists(filePath))
+            {
+                return;
+            }
+            var content = File.ReadAllText(filePath);
+            _discordHook = content.Trim();
+        }
+
+        private void StartThread()
+        {
+            if (_discordHook == null)
+            {
+                Debug.Log("No token configured, bailing out!");
+                return;
+            }
+            Thread thread = new Thread(new ThreadStart(LobbyPool));
+            thread.Start();
         }
 
         private void LobbyPool()
@@ -40,7 +64,7 @@ namespace LobbyPooler
                 }
                 while (lobbyList.Status == MatchListRefreshStatus.Refreshing)
                 {
-                    Thread.Sleep(1000);
+                    Thread.Sleep(500);
                     Debug.Log("Fetching new lobbies");
                     lobbyList.GetNewLobbies();
                 }
@@ -56,17 +80,20 @@ namespace LobbyPooler
 
         private void SendData(SteamLobbyList lobbyList)
         {
-            string uri = "https://discord.com/api/webhooks/1005583148698046515/qHx3Lbkg8TuG5F09gsy_VmZ6Iz76x0yIfR5ZjYRFaZk8kIlUQQei8u9kk0bB_qFoaQQm";
             var parameters = new System.Collections.Specialized.NameValueCollection
             {
                 { "content", GetLobbyData(lobbyList) }
             };
             using (WebClient wc = new WebClient())
             {
-                wc.UploadValues(uri, parameters);
+                wc.UploadValues(_discordHook, parameters);
             }
         }
 
+        /**
+          * Returns JSON string with lobby data, e.g.
+          * {{"h":0,"i":1},{"h":1,"i":0}}
+          */
         private string GetLobbyData(SteamLobbyList lobbyList)
         {
             string lobbies = "";
@@ -80,6 +107,10 @@ namespace LobbyPooler
             return "{" + lobbies.TrimEnd(',') + "}";
         }
 
+        /**
+         * Returns JSON encoded int field with a trailing comma, e.g.
+         * "h":0,
+         */
         private string AddField(string key, int value)
         {
             return $"\"{key}\":{value},";
