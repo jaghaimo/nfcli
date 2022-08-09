@@ -5,9 +5,9 @@ using System.Net;
 using System.Threading;
 using UnityEngine;
 
-namespace LobbyPooler
+namespace LobbyPoller
 {
-    public class LobbyPooler : IModEntryPoint
+    public class LobbyPoller : IModEntryPoint
     {
         private static MultiplayerFilters _filters = default;
         private static string _discordHook = null;
@@ -26,7 +26,7 @@ namespace LobbyPooler
 
         private void LoadToken()
         {
-            var filePath = Path.Combine(ModDatabase.LocalModDirectory, "LobbyPooler.txt");
+            var filePath = Path.Combine(ModDatabase.LocalModDirectory, "LobbyPoller.txt");
             if (!File.Exists(filePath))
             {
                 Debug.Log($"Missing config file {filePath}");
@@ -43,11 +43,11 @@ namespace LobbyPooler
                 Debug.Log("No token configured, bailing out!");
                 return;
             }
-            Thread thread = new Thread(new ThreadStart(LobbyPool));
+            Thread thread = new Thread(new ThreadStart(LobbyPoll));
             thread.Start();
         }
 
-        private void LobbyPool()
+        private void LobbyPoll()
         {
             while (true)
             {

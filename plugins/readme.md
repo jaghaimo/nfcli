@@ -1,6 +1,6 @@
 # NFCLI helper plugins
 
-Currently there are two helper plugins available - `HullDumper` and `LobbyPooler`.
+Currently there are two helper plugins available - `HullDumper` and `LobbyPoller`.
 
 ## Requirements
 
