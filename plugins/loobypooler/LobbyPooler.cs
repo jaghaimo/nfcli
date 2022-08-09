@@ -29,7 +29,7 @@ namespace LobbyPooler
             var filePath = Path.Combine(ModDatabase.LocalModDirectory, "LobbyPooler.txt");
             if (!File.Exists(filePath))
             {
-                Debug.Log($"Missing config file: {filePath}");
+                Debug.Log($"Missing config file {filePath}");
                 return;
             }
             var content = File.ReadAllText(filePath);
@@ -51,11 +51,6 @@ namespace LobbyPooler
         {
             while (true)
             {
-                if (!SteamManager.Initialized)
-                {
-                    Debug.Log("We are too early!");
-                    return;
-                }
                 SteamLobbyList lobbyList = new SteamLobbyList();
                 lobbyList.RefreshLobbies(_filters);
                 if (lobbyList.Status == MatchListRefreshStatus.Failed)
@@ -66,14 +61,9 @@ namespace LobbyPooler
                 while (lobbyList.Status == MatchListRefreshStatus.Refreshing)
                 {
                     Thread.Sleep(500);
-                    Debug.Log("Fetching new lobbies");
                     lobbyList.GetNewLobbies();
                 }
-                Debug.Log($"Lobbies refreshed, found {lobbyList.AllLobbies.Count} lobbies");
-                foreach (SteamLobby steamLobby in lobbyList.AllLobbies)
-                {
-                    Debug.Log($"{steamLobby.Name} - {steamLobby.CurrentPlayers} / {steamLobby.MaxPlayers}");
-                }
+                Debug.Log($"Lobbies refreshed, found {lobbyList.AllLobbies.Count}");
                 SendData(lobbyList);
                 Thread.Sleep(60000);
             }
