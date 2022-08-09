@@ -8,10 +8,12 @@ from posixpath import dirname
 from typing import Dict, List, Optional, Set
 from urllib.parse import parse_qs, urlparse
 
+from dotenv import load_dotenv
 from steam import webapi
 
-from nfcli import STEAM_API_KEY, STEAM_USERNAME
-
+load_dotenv()
+STEAM_API_KEY = os.getenv("STEAM_API_KEY")
+STEAM_USERNAME = os.getenv("STEAM_USERNAME")
 STEAM_APP_ID = 887570
 WORKSHOP_DIR = "~/.steam/steamapps/workshop/content/{}/{}"
 

@@ -1,14 +1,92 @@
 from __future__ import annotations
 
+import json
 import logging
 import math
 from collections import Counter
 from typing import Dict, List, Optional
 
+import arrow
 from rich.text import Text
 
 from nfcli.printers import Printable, fleet_printer_factory
 from nfcli.writers import Writeable, write_fleet, write_ship
+
+
+class Lobby:
+    """Plain object for lobby."""
+
+    def __init__(self, in_progress: int, has_password: int) -> None:
+        self.in_progress = in_progress == 1
+        self.has_password = has_password == 1
+
+
+class Lobbies:
+    """Parses and provides additional lobby operations."""
+
+    def __init__(self, timestamp: int, author: str, lobby_data: Optional[str] = None) -> None:
+        self.timestamp = timestamp
+        self.author = author
+        self.lobbies: List[Lobby] = []
+        if lobby_data is not None:
+            self.lobbies = self._parse_data(lobby_data)
+
+    @classmethod
+    def _parse_data(cls, lobby_data: str) -> List[Lobbies]:
+        lobbies = json.loads(lobby_data)
+        lobby_list = []
+        for lobby in lobbies:
+            lobby_list.append(Lobby(lobby["i"], lobby["h"]))
+        return lobby_list
+
+    def __str__(self) -> str:
+        if not self.is_valid:
+            return (
+                "I don't have any recent lobby data at hand. "
+                "Perhaps you could help by running our data gathering mod? "
+                "Ask @Jaghaimo#8364 for details."
+            )
+        total_lobbies = len(self.lobbies)
+        lobby_or_lobbies = "there was one lobby" if total_lobbies == 1 else f"there were {total_lobbies} lobbies"
+        open_lobbies = len(self.open)
+        open_private = len(self.with_password(self.open))
+        open_public = open_lobbies - open_private
+        in_progress = len(self.in_progress)
+        in_progress_private = len(self.with_password(self.in_progress))
+        in_progress_public = in_progress - in_progress_private
+        return (
+            f"As of {self.time} {lobby_or_lobbies} present in the game.\n"
+            "```yaml\n"
+            f"Open Lobbies : {open_lobbies} [{open_public} public and {open_private} private]\n"
+            f" In Progress : {in_progress} [{in_progress_public} public and {in_progress_private} private]\n"
+            "```"
+            f"*Data kindly provided by {self.author}'s client.*"
+        )
+
+    @property
+    def is_valid(self) -> bool:
+        if self.lobbies is None:
+            return False
+
+        timedelta = arrow.now() - arrow.get(self.timestamp)
+        return timedelta.seconds < 1800
+
+    @property
+    def time(self) -> str:
+        return arrow.get(self.timestamp).humanize()
+
+    @property
+    def open(self) -> List[Lobby]:
+        return [lobby for lobby in self.lobbies if not lobby.in_progress]
+
+    @property
+    def in_progress(self) -> List[Lobby]:
+        return [lobby for lobby in self.lobbies if lobby.in_progress]
+
+    def with_password(self, lobbies: Optional[List[Lobby]] = None) -> List[Lobby]:
+        if lobbies is None:
+            lobbies = self.lobbies
+        return [lobby for lobby in lobbies if lobby.has_password]
 
 
 class Named:

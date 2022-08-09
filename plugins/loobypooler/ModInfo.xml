@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<ModInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ModName>LobbyPooler</ModName>
+  <ModDescription>Pools lobby data and sends it to a Discord channel.</ModDescription>
+  <ModVer>1</ModVer>
+  <Assemblies>
+    <string>LobbyPooler.dll</string>
+  </Assemblies>
+  <GameVer>0.1.0</GameVer>
+</ModInfo>
