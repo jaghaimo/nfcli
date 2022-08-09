@@ -14,7 +14,7 @@ Clone this repository, or download it as an archive. The minimal requirements ar
 
 Required:
 
-- Python 3.8+
+- Python 3.10+
 - Poetry (dependency manager)
 - libcairo2 (system library)
 
