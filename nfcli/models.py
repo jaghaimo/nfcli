@@ -27,7 +27,7 @@ class Lobbies:
     def __init__(self, timestamp: int, author: str, lobby_data: Optional[str] = None) -> None:
         self.timestamp = timestamp
         self.author = author
-        self.lobbies: List[Lobby] = []
+        self.lobbies: Optional[List[Lobby]] = None
         if lobby_data is not None:
             self.lobbies = self._parse_data(lobby_data)
 
