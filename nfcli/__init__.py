@@ -3,6 +3,8 @@ from logging.handlers import TimedRotatingFileHandler
 
 from rich.theme import Theme
 
+from nfcli.debugger import init_debugger
+
 DATA_DIR = "data"
 WIKI_DIR = "wiki"
 
@@ -10,6 +12,8 @@ STACK_COLUMNS = 3
 COLUMN_WIDTH = 50
 
 nfc_theme = Theme({"orange": "#e14b00", "grey": "#474946"})
+
+init_debugger()
 
 
 def load_path(path: str) -> str:

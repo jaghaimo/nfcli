@@ -21,7 +21,7 @@ from nfcli.writers import determine_output_png, get_temp_filename
 
 load_dotenv()
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
-DISCORD_CHANNEL = int(os.getenv("DISCORD_CHANNEL"))
+DISCORD_CHANNELS = [int(discord_channel) for discord_channel in os.getenv("DISCORD_CHANNELS").split(",")]
 
 wiki_db = Wiki()
 connection = create_connection()
@@ -128,7 +128,7 @@ async def on_ready():
 async def on_message(message: discord.Message):
     if message.author == bot.user:
         return
-    if message.channel.id == DISCORD_CHANNEL and message.author.bot:
+    if message.channel.id in DISCORD_CHANNELS and message.author.bot:
         process_lobby_data(message)
     else:
         await process_old_wiki(message)
