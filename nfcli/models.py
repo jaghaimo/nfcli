@@ -47,6 +47,11 @@ class Lobbies:
                 "Ask @Jaghaimo#8364 for details."
             )
         total_lobbies = len(self.lobbies)
+        if total_lobbies == 0:
+            return (
+                f"As of {self.time} there were no lobbies present in the game.\n"
+                f"*Data kindly provided by {self.author}'s client.*"
+            )
         lobby_or_lobbies = "there was one lobby" if total_lobbies == 1 else f"there were {total_lobbies} lobbies"
         open_lobbies = len(self.open)
         open_private = len(self.with_password(self.open))
