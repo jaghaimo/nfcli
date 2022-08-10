@@ -61,6 +61,10 @@ class Entity:
     def text(self) -> str:
         raise NotImplementedError
 
+    def list_to_str(self, list: List[str]) -> str:
+        filtered_list = [element for element in list if element]
+        return "\n".join(filtered_list)
+
     def dict_to_str(self, dictionary: Dict[str, str]) -> str:
         as_list = [f"{key.rjust(27)}: {value}" if value else "" for key, value in dictionary.items()]
         return "\n".join(as_list)
@@ -159,7 +163,7 @@ class Hull(Entity):
         manoeuvrability = self.dict_to_str(self.manoeuvrability)
         durability = self.dict_to_str(self.durability)
         detectability = self.dict_to_str(self.detectability)
-        return "\n".join([self.header, info, manoeuvrability, durability, detectability, self.footer])
+        return self.list_to_str([self.header, info, manoeuvrability, durability, detectability, self.footer])
 
 
 class Component(Entity):
@@ -245,7 +249,7 @@ class Component(Entity):
         ewar = self.dict_to_str(self.ewar)
         cost = self.dict_to_str(self.cost)
         durability = self.dict_to_str(self.durability)
-        return "\n".join([self.header, info, ewar, cost, durability, self.footer])
+        return self.list_to_str([self.header, info, ewar, cost, durability, self.footer])
 
 
 class Munition(Entity):
@@ -290,7 +294,7 @@ class Munition(Entity):
     def text(self) -> str:
         info = self.dict_to_str(self.info)
         details = self.dict_to_str(self.details)
-        return "\n".join([self.header, info, details, self.footer])
+        return self.list_to_str([self.header, info, details, self.footer])
 
 
 class Wiki:
