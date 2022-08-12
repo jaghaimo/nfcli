@@ -11,6 +11,15 @@
     <Reference Include="Facepunch.Steamworks.Win64">
       <HintPath>..\libs\Facepunch.Steamworks.Win64.dll</HintPath>
     </Reference>
+    <Reference Include="Nebulous">
+      <HintPath>..\libs\Nebulous.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\libs\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\libs\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
