@@ -1,12 +1,8 @@
-.PHONY: all release debug
-all: release debug
+.PHONY: all restore build
+all: build
 
-release:
-	msbuild /property:Configuration=Release
-	mkdir -p release
-	cp ModInfo.xml obj/Release/HullDumper.dll release
+restore:
+	dotnet restore
 
-debug:
-	msbuild /property:Configuration=Debug
-	mkdir -p debug
-	cp ModInfo.xml obj/Debug/HullDumper.dll debug
+build: restore
+	msbuild
