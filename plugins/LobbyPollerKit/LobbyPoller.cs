@@ -1,13 +1,10 @@
 using System;
 using System.IO;
-using Networking;
 using System.Net;
 using System.Threading;
-using UnityEngine;
 
 class LobbyPoller
 {
-    private static MultiplayerFilters _filters = default;
     private static string? _discordHook = null;
 
     public void Start()
@@ -33,19 +30,19 @@ class LobbyPoller
         while (true)
         {
             SteamLobbyList lobbyList = new SteamLobbyList();
-            lobbyList.RefreshLobbies(_filters);
-            if (lobbyList.Status == MatchListRefreshStatus.Failed)
+            lobbyList.RefreshLobbies();
+            if (lobbyList.Status == SteamLobbyList.RefreshStatus.Failed)
             {
-                Debug.Log("Failed to refresh lobbies!");
+                Console.WriteLine("Failed to refresh lobbies, waiting 10s");
                 Thread.Sleep(10000);
                 continue;
             }
-            while (lobbyList.Status == MatchListRefreshStatus.Refreshing)
+            while (lobbyList.Status == SteamLobbyList.RefreshStatus.Refreshing)
             {
-                Thread.Sleep(500);
+                Thread.Sleep(1000);
                 lobbyList.GetNewLobbies();
             }
-            Debug.Log($"Lobbies refreshed, found {lobbyList.AllLobbies.Count}");
+            Console.WriteLine($"Lobbies refreshed, found {lobbyList.AllLobbies.Count}, waiting 60s");
             SendData(lobbyList);
             Thread.Sleep(60000);
         }
