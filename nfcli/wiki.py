@@ -189,6 +189,10 @@ class Component(Entity):
         elif raw_data["OmnidirectionalEWarComponentData"]:
             ewar_data = raw_data["OmnidirectionalEWarComponentData"]
         self.ewar_data: Dict = ewar_data
+        sensor_data = {}
+        if raw_data["SensorComponentData"]:
+            sensor_data = raw_data["SensorComponentData"]
+        self.sensor_data: Dict = sensor_data
         self.resources: str = raw_data["FormattedResources"]
         self.buffs: str = raw_data["FormattedBuffs"]
 
@@ -239,6 +243,16 @@ class Component(Entity):
         return ewar
 
     @property
+    def sensor(self) -> Dict[str, str]:
+        sensor = {}
+        if self.sensor_data:
+            sensor["Sensors"] = ""
+            sensor["Range"] = str(self.sensor_data["MaxRange"] / 1000) + " km"
+            sensor["Radiated Power"] = str(self.sensor_data["RadiatedPower"]) + " W"
+            sensor["Gain"] = str(self.sensor_data["Gain"]) + " dB"
+        return sensor
+
+    @property
     def link(self) -> str:
         name = self.name.lower().replace(" ", "-")
         return self.get_link(f"component:{name}")
@@ -247,9 +261,10 @@ class Component(Entity):
     def text(self) -> str:
         info = self.dict_to_str(self.info)
         ewar = self.dict_to_str(self.ewar)
+        sensor = self.dict_to_str(self.sensor)
         cost = self.dict_to_str(self.cost)
         durability = self.dict_to_str(self.durability)
-        return self.list_to_str([self.header, info, ewar, cost, durability, self.footer])
+        return self.list_to_str([self.header, info, ewar, sensor, cost, durability, self.footer])
 
 
 class Munition(Entity):
