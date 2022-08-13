@@ -10,5 +10,5 @@ if (SteamClient.IsValid)
 }
 else
 {
-    Console.WriteLine("Failed to initialize Steam client");
+    Console.WriteLine("Failed to initialize Steam Client");
 }

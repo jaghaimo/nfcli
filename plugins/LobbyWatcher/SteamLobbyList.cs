@@ -52,14 +52,13 @@ public class SteamLobbyList
     {
         if (this._fetchTask == null)
         {
-            Console.WriteLine("Nothing to stop!");
             return;
         }
         if (this._cancelToken == null)
         {
-            Console.WriteLine("No cancellation token to use!");
             return;
         }
+        Console.WriteLine("Cancelling existing task");
         this._cancelToken.Cancel();
         this._status = RefreshStatus.Done;
         this._fetchTask = null;
@@ -71,13 +70,13 @@ public class SteamLobbyList
         bool flag = this._status != RefreshStatus.Refreshing || this._fetchTask == null;
         if (this._status != RefreshStatus.Refreshing)
         {
-            Console.WriteLine("Lobbies are not refreshing!");
+            Console.WriteLine("Lobbies are not refreshing");
             return null;
         }
 
         if (this._fetchTask == null)
         {
-            Console.WriteLine("No task fetching data!");
+            Console.WriteLine("No data fetching task - did you forget to call RefreshLobbies()?");
             return null;
         }
         List<SteamLobby>? output = null;
@@ -110,8 +109,7 @@ public class SteamLobbyList
         int totalCount = 0;
         for (int page = 0; page < 10; page++)
         {
-            bool isCancellationRequested = cancel.IsCancellationRequested;
-            if (isCancellationRequested)
+            if (cancel.IsCancellationRequested)
             {
                 Console.WriteLine("Cancellation request found");
                 return totalCount;
@@ -132,8 +130,6 @@ public class SteamLobbyList
         }
         return totalCount;
     }
-
-    private const int _throttleDelay = 50;
 
     private RefreshStatus _status = RefreshStatus.Done;
 

@@ -5,7 +5,6 @@ using Steamworks.Data;
 
 public class SteamLobby
 {
-
     public enum GameMode
     {
         Unknown,
@@ -17,14 +16,6 @@ public class SteamLobby
         get
         {
             return this._lobby.Id;
-        }
-    }
-
-    public SteamId ConnectionOwnerID
-    {
-        get
-        {
-            return this._lobby.Owner.Id;
         }
     }
 
@@ -43,24 +34,6 @@ public class SteamLobby
     public bool HasPassword { get; private set; }
 
     public bool InProgress { get; private set; }
-
-    public int CurrentPlayers
-    {
-        get
-        {
-            return this._lobby.MemberCount;
-        }
-    }
-
-    public int MaxPlayers
-    {
-        get
-        {
-            return this._lobby.MaxMembers;
-        }
-    }
-
-    public bool HasFullInfo { get; private set; } = false;
 
     public SteamLobby(Lobby lobby)
     {
@@ -94,11 +67,6 @@ public class SteamLobby
         this.Members = this._lobby.Members.ToList<Friend>();
     }
 
-    public void LeaveLobby()
-    {
-        this._lobby.Leave();
-    }
-
     public override string ToString()
     {
         return string.Format("Lobby \"{0}\" ({1}) owned by \"{2}\" ({3})", new object[]
@@ -109,28 +77,6 @@ public class SteamLobby
                 this.LobbyOwnerID
         });
     }
-
-    public const string KeyName = "name";
-
-    public const string KeyGameMode = "gamemode";
-
-    public const string KeySubMode = "submode";
-
-    public const string KeyHasPassword = "password";
-
-    public const string KeyMapName = "map";
-
-    public const string KeyInProgress = "inprogress";
-
-    public const string KeyNetLocation = "netloc";
-
-    public const string KeyOwnerName = "ownerName";
-
-    public const string KeyOwnerId = "ownerId";
-
-    public const string KeyPage = "page";
-
-    public const int MaximumPages = 10;
 
     private Lobby _lobby;
 

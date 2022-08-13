@@ -19,8 +19,7 @@ class LobbyPoller
         var filePath = "LobbyPoller.txt";
         if (!File.Exists(filePath))
         {
-            Console.WriteLine($"Missing config file {filePath}");
-            return;
+            throw new Exception($"Missing config file {filePath}");
         }
         var content = File.ReadAllText(filePath);
         _discordHook = content.Trim();
