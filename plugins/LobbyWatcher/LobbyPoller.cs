@@ -9,7 +9,6 @@ class LobbyPoller
 
     public void Start()
     {
-
         LoadToken();
         LobbyPoll();
     }
@@ -24,6 +23,7 @@ class LobbyPoller
         var content = File.ReadAllText(filePath);
         _discordHook = content.Trim();
     }
+
     private void LobbyPoll()
     {
         while (true)
@@ -41,7 +41,9 @@ class LobbyPoller
                 Thread.Sleep(1000);
                 lobbyList.GetNewLobbies();
             }
-            Console.WriteLine($"Lobbies refreshed, found {lobbyList.AllLobbies.Count}, waiting 60s");
+            Console.WriteLine(
+                $"Lobbies refreshed, found {lobbyList.AllLobbies.Count}, waiting 60s"
+            );
             SendData(lobbyList);
             Thread.Sleep(60000);
         }
@@ -50,9 +52,9 @@ class LobbyPoller
     private void SendData(SteamLobbyList lobbyList)
     {
         var parameters = new System.Collections.Specialized.NameValueCollection
-            {
-                { "content", GetLobbyData(lobbyList) }
-            };
+        {
+            { "content", GetLobbyData(lobbyList) }
+        };
         using (WebClient wc = new WebClient())
         {
             wc.UploadValues(_discordHook, parameters);

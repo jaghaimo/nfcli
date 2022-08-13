@@ -13,10 +13,7 @@ public class SteamLobby
 
     public SteamId LobbyID
     {
-        get
-        {
-            return this._lobby.Id;
-        }
+        get { return this._lobby.Id; }
     }
 
     public string OwnerName { get; private set; }
@@ -44,10 +41,7 @@ public class SteamLobby
         bool flag = ulong.TryParse(this._lobby.GetData("ownerId"), out id);
         if (flag)
         {
-            this.LobbyOwnerID = new SteamId
-            {
-                Value = id
-            };
+            this.LobbyOwnerID = new SteamId { Value = id };
         }
         int modeInt;
         bool flag2 = int.TryParse(this._lobby.GetData("gamemode"), out modeInt);
@@ -69,13 +63,10 @@ public class SteamLobby
 
     public override string ToString()
     {
-        return string.Format("Lobby \"{0}\" ({1}) owned by \"{2}\" ({3})", new object[]
-        {
-                this.Name,
-                this.LobbyID,
-                this.OwnerName,
-                this.LobbyOwnerID
-        });
+        return string.Format(
+            "Lobby \"{0}\" ({1}) owned by \"{2}\" ({3})",
+            new object[] { this.Name, this.LobbyID, this.OwnerName, this.LobbyOwnerID }
+        );
     }
 
     private Lobby _lobby;

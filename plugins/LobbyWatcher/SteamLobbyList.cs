@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using Steamworks;
 using Steamworks.Data;
 
-
 public class SteamLobbyList
 {
     public enum RefreshStatus
@@ -18,18 +17,12 @@ public class SteamLobbyList
 
     public RefreshStatus Status
     {
-        get
-        {
-            return this._status;
-        }
+        get { return this._status; }
     }
 
     public IReadOnlyCollection<SteamLobby> AllLobbies
     {
-        get
-        {
-            return this._lobbies;
-        }
+        get { return this._lobbies; }
     }
 
     public void RefreshLobbies()
