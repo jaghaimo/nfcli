@@ -15,7 +15,7 @@ class LobbyPoller
 
     private void LoadToken()
     {
-        var filePath = "LobbyPoller.txt";
+        var filePath = "LobbyWatcher.txt";
         if (!File.Exists(filePath))
         {
             throw new Exception($"Missing config file {filePath}");
