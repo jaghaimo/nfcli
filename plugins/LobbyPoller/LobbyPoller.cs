@@ -20,9 +20,7 @@ namespace LobbyPoller
             StartThread();
         }
 
-        public void PreLoad()
-        {
-        }
+        public void PreLoad() { }
 
         private void LoadToken()
         {

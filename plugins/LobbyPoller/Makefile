@@ -4,5 +4,8 @@ all: build
 restore:
 	dotnet restore
 
-build: restore
+format:
+	dotnet csharpier .
+
+build: restore format
 	msbuild

@@ -17,12 +17,15 @@ namespace HullDumper
                 ulong sourceModId = hull.SourceModId ?? 0;
                 string fileName = $"hull_{sourceModId}_{hull.ClassName.ToLower()}.json";
                 HullSpec hullSpec = GetHull(hull);
-                System.IO.File.WriteAllText($"{ModDatabase.LocalModDirectory}{fileName}", hullSpec.ToString());
+                System.IO.File.WriteAllText(
+                    $"{ModDatabase.LocalModDirectory}{fileName}",
+                    hullSpec.ToString()
+                );
             }
         }
-        public void PreLoad()
-        {
-        }
+
+        public void PreLoad() { }
+
         private HullSpec GetHull(Hull hull)
         {
             HullSpec hullSpec = new HullSpec(hull.SaveKey, hull.FullClassification);
@@ -35,6 +38,7 @@ namespace HullDumper
             return hullSpec;
         }
     }
+
     public class HullSpec
     {
         public HullSpec(string key, string name)
@@ -45,11 +49,13 @@ namespace HullDumper
             Compartments = new List<SocketSpec>();
             Modules = new List<SocketSpec>();
         }
+
         public string Key { get; set; }
         public string Name { get; set; }
         public List<SocketSpec> Surfaces { get; set; }
         public List<SocketSpec> Compartments { get; set; }
         public List<SocketSpec> Modules { get; set; }
+
         public void Add(HullSocketType type, SocketSpec socket)
         {
             switch (type)
@@ -67,25 +73,35 @@ namespace HullDumper
                     break;
             }
         }
+
         private string SocketsToString(List<SocketSpec> sockets)
         {
             return "    " + string.Join(",\n    ", sockets);
         }
+
         public override string ToString()
         {
-            return "{\n" +
-                $"  \"key\": \"{Key}\",\n" +
-                $"  \"name\": \"{Name}\",\n" +
-                "  \"mounts\": {\n" + SocketsToString(Surfaces) + "\n  },\n" +
-                "  \"compartments\": {\n" + SocketsToString(Compartments) + "\n  },\n" +
-                "  \"modules\": {\n" + SocketsToString(Modules) + "\n  }\n" +
-                "}\n";
+            return "{\n"
+                + $"  \"key\": \"{Key}\",\n"
+                + $"  \"name\": \"{Name}\",\n"
+                + "  \"mounts\": {\n"
+                + SocketsToString(Surfaces)
+                + "\n  },\n"
+                + "  \"compartments\": {\n"
+                + SocketsToString(Compartments)
+                + "\n  },\n"
+                + "  \"modules\": {\n"
+                + SocketsToString(Modules)
+                + "\n  }\n"
+                + "}\n";
         }
     }
+
     public class SocketSpec
     {
         public string Key { get; set; }
         public Vector3Int Size { get; set; }
+
         public override string ToString()
         {
             return $"\"{Key}\": \"{Size.x}x{Size.y}x{Size.z}\"";
