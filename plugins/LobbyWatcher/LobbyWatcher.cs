@@ -3,7 +3,7 @@ using System.IO;
 using System.Net;
 using System.Threading;
 
-class LobbyPoller
+class LobbyWatcher
 {
     private static string? _discordHook = null;
 
