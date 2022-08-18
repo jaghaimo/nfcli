@@ -19,7 +19,7 @@ format:
 
 lint:
 	black --check --no-color --diff nfcli
-	flake8 --max-line-length 120 --max-complexity 10 nfcli
+	flake8 nfcli
 	isort nfcli --check --diff
 
 cache:

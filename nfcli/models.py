@@ -263,9 +263,8 @@ class Fleet(Named, Printable, Writeable):
 
     @property
     def text(self) -> str:
-        ships_and_costs = {ship.name: f"{ship.hull} [{ship.tags}]" for ship in self.ships}
-        longest_name = max([len(name) for name in ships_and_costs.keys()])
-        ship_list = [f"{key.rjust(longest_name)} : {value}" for key, value in ships_and_costs.items()]
+        longest_name = max([len(ship.name) for ship in self.ships])
+        ship_list = [f"{ship.name.rjust(longest_name)} : {ship.hull} [{ship.tags}]" for ship in self.ships]
         return f"{self.title}:\n```yaml\n" + "\n".join(ship_list) + "\n```"
 
     def add_ship(self, ship: Ship) -> None:
