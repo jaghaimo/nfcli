@@ -50,17 +50,31 @@ class LobbyWatcher
             lobbyList.RefreshLobbies();
             if (lobbyList.Status == SteamLobbyList.RefreshStatus.Failed)
             {
-                LobbyWatcher.Log("Failed to refresh lobbies, waiting 10s");
+                LobbyWatcher.Log("Failed to refresh lobbies, retrying in 10s");
                 Thread.Sleep(10000);
                 continue;
             }
-            while (lobbyList.Status == SteamLobbyList.RefreshStatus.Refreshing)
+            for (int i = 0; i < 10; i++)
             {
                 Thread.Sleep(1000);
                 lobbyList.GetNewLobbies();
+                if (lobbyList.Status != SteamLobbyList.RefreshStatus.Refreshing)
+                {
+                    break;
+                }
             }
-            LobbyWatcher.Log($"Lobbies refreshed, found {lobbyList.AllLobbies.Count}, waiting 60s");
-            SendData(lobbyList);
+            if (lobbyList.Status == SteamLobbyList.RefreshStatus.Refreshing)
+            {
+                LobbyWatcher.Log("Fetching lobbies timed out, retrying in 60s");
+                lobbyList.StopRefreshing();
+            }
+            else
+            {
+                LobbyWatcher.Log(
+                    $"Lobbies refreshed, found {lobbyList.AllLobbies.Count}, waiting 60s"
+                );
+                SendData(lobbyList);
+            }
             Thread.Sleep(60000);
         }
     }
