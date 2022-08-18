@@ -28,10 +28,10 @@ public class SteamLobbyList
     public void RefreshLobbies()
     {
         this.StopRefreshing();
-        Console.WriteLine("Refreshing lobby list");
+        LobbyWatcher.Log("Refreshing lobby list");
         if (!SteamClient.IsValid)
         {
-            Console.WriteLine("Steam Client is invalid");
+            LobbyWatcher.Log("Steam Client is invalid");
             this._status = RefreshStatus.Failed;
             return;
         }
@@ -51,7 +51,7 @@ public class SteamLobbyList
         {
             return;
         }
-        Console.WriteLine("Cancelling existing task");
+        LobbyWatcher.Log("Cancelling existing task");
         this._cancelToken.Cancel();
         this._status = RefreshStatus.Done;
         this._fetchTask = null;
@@ -63,13 +63,13 @@ public class SteamLobbyList
         bool flag = this._status != RefreshStatus.Refreshing || this._fetchTask == null;
         if (this._status != RefreshStatus.Refreshing)
         {
-            Console.WriteLine("Lobbies are not refreshing");
+            LobbyWatcher.Log("Lobbies are not refreshing");
             return null;
         }
 
         if (this._fetchTask == null)
         {
-            Console.WriteLine("No data fetching task - did you forget to call RefreshLobbies()?");
+            LobbyWatcher.Log("No data fetching task - did you forget to call RefreshLobbies()?");
             return null;
         }
         List<SteamLobby>? output = null;
@@ -104,7 +104,7 @@ public class SteamLobbyList
         {
             if (cancel.IsCancellationRequested)
             {
-                Console.WriteLine("Cancellation request found");
+                LobbyWatcher.Log("Cancellation request found");
                 return totalCount;
             }
             LobbyQuery query = SteamMatchmaking.LobbyList;

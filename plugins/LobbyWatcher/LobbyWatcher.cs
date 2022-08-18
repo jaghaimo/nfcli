@@ -2,10 +2,28 @@ using System;
 using System.IO;
 using System.Net;
 using System.Threading;
+using Steamworks;
 
 class LobbyWatcher
 {
     private static string? _discordHook = null;
+
+    private static void Main(string[] args)
+    {
+        SteamClient.Init(887570U, true);
+        if (!SteamClient.IsValid)
+        {
+            throw new Exception("Failed to initialize Steam Client");
+        }
+        SteamClient.RunCallbacks();
+        var poller = new LobbyWatcher();
+        poller.Start();
+    }
+
+    public static void Log(string message)
+    {
+        Console.WriteLine($"{DateTime.Now}: {message}");
+    }
 
     public void Start()
     {
@@ -32,7 +50,7 @@ class LobbyWatcher
             lobbyList.RefreshLobbies();
             if (lobbyList.Status == SteamLobbyList.RefreshStatus.Failed)
             {
-                Console.WriteLine("Failed to refresh lobbies, waiting 10s");
+                LobbyWatcher.Log("Failed to refresh lobbies, waiting 10s");
                 Thread.Sleep(10000);
                 continue;
             }
@@ -41,9 +59,7 @@ class LobbyWatcher
                 Thread.Sleep(1000);
                 lobbyList.GetNewLobbies();
             }
-            Console.WriteLine(
-                $"Lobbies refreshed, found {lobbyList.AllLobbies.Count}, waiting 60s"
-            );
+            LobbyWatcher.Log($"Lobbies refreshed, found {lobbyList.AllLobbies.Count}, waiting 60s");
             SendData(lobbyList);
             Thread.Sleep(60000);
         }
