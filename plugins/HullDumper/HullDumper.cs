@@ -31,7 +31,11 @@ namespace HullDumper
             HullSpec hullSpec = new HullSpec(hull.SaveKey, hull.FullClassification);
             foreach (HullSocket socket in hull.GetAllSockets())
             {
-                SocketSpec socketSpec = new SocketSpec { Key = socket.Key, Size = socket.Size };
+                SocketSpec socketSpec = new SocketSpec
+                {
+                    Key = socket.Key,
+                    Size = socket.Size.Dimensions
+                };
                 hullSpec.Add(socket.Type, socketSpec);
             }
             Console.WriteLine(hullSpec);

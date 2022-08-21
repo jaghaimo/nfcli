@@ -1,12 +1,44 @@
 import logging
-from typing import List, OrderedDict, Union
+import re
+from typing import Dict, List, Optional, OrderedDict, Union
 
 import xmltodict
 
 from nfcli.database import db
-from nfcli.models import Content, Fleet, Ship, Socket
+from nfcli.models import Content, Fleet, Missile, Ship, Socket
 from nfcli.printers import Printable
 from nfcli.writers import Writeable
+
+
+def list_to_str(list: List[str]) -> str:
+    filtered_list = [element for element in list if element]
+    return "\n".join(filtered_list)
+
+
+def dict_to_str(dictionary: Dict[str, str]) -> str:
+    as_list = [f"{key.rjust(27)}: {value}" if value else "" for key, value in dictionary.items()]
+    return "\n".join(as_list)
+
+
+def str_to_dict(string: Optional[str] = None) -> Dict[str, str]:
+    if not string:
+        return {}
+    new_dict = {}
+    for line in string.splitlines():
+        tokens = line.split(":", maxsplit=2)
+        if len(tokens) != 2:
+            continue
+        key, value = tokens[0], tokens[1]
+        new_dict[sanitize(key)] = strip_tags(value)
+    return new_dict
+
+
+def sanitize(string: str) -> str:
+    return string.replace("(", "").replace(")", "").strip()
+
+
+def strip_tags(string: str) -> str:
+    return re.sub("<[^<]+?>", "", string).strip()
 
 
 def get_content(content_data: OrderedDict) -> List[Content]:
@@ -49,6 +81,17 @@ def get_ship(ship_data: OrderedDict) -> Ship:
     return ship
 
 
+def get_missile(missile_data: OrderedDict) -> Missile:
+    return Missile(
+        missile_data["Designation"],
+        missile_data["Nickname"],
+        strip_tags(missile_data["Description"]),
+        strip_tags(missile_data["LongDescription"]),
+        int(missile_data["Cost"]),
+        missile_data["BodyKey"],
+    )
+
+
 def parse_mods(xml_data: str) -> List[str]:
     mods = []
     xmld = xmltodict.parse(xml_data, force_list=("unsignedLong"))
@@ -67,16 +110,24 @@ def parse_ship(xml_data: str) -> Ship:
 
 
 def parse_fleet(xml_data: str) -> Fleet:
-    xmld = xmltodict.parse(xml_data, force_list=("MagSaveData", "Ship", "HullSocket"))
+    xmld = xmltodict.parse(xml_data, force_list=("MagSaveData", "Ship", "HullSocket", "MissileTemplate"))
     fleet_data = xmld.get("Fleet")
     fleet = Fleet(fleet_data["Name"], fleet_data["TotalPoints"], fleet_data["FactionKey"])
     for idx, ship_data in enumerate(fleet_data["Ships"]["Ship"]):
         if idx > 9:
             logging.warn("Stopping after parsing 10 ships")
             break
-        logging.info(f"Parsing ship #{str(idx)}")
+        logging.debug(f"Parsing ship #{str(idx)}")
         ship = get_ship(ship_data)
         fleet.add_ship(ship)
+
+    if "MissileTypes" not in fleet_data:
+        return fleet
+
+    for idx, missile_template in enumerate(fleet_data["MissileTypes"]["MissileTemplate"]):
+        logging.debug(f"Parsing missile #{str(idx)}")
+        missile = get_missile(missile_template)
+        fleet.add_missile(missile)
 
     return fleet
 
