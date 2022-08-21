@@ -2,9 +2,9 @@
 <ModInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ModName>LobbyPoller</ModName>
   <ModDescription>Polls lobby data and sends it to a Discord channel.</ModDescription>
-  <ModVer>1.1.0</ModVer>
+  <ModVer>2</ModVer>
   <Assemblies>
     <string>LobbyPoller.dll</string>
   </Assemblies>
-  <GameVer>0.1.0</GameVer>
+  <GameVer>0.2.2</GameVer>
 </ModInfo>
