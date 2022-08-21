@@ -1,11 +1,10 @@
 import json
 import logging
 import os
-import re
 import shutil
 from abc import abstractproperty
 from io import BytesIO
-from typing import Callable, Dict, List, Optional
+from typing import Callable, Dict, List
 from urllib.request import urlopen
 from zipfile import ZipFile
 
@@ -13,6 +12,7 @@ from fuzzywuzzy import process
 from fuzzywuzzy.fuzz import partial_token_sort_ratio, token_sort_ratio
 
 from nfcli import DATA_DIR, WIKI_DIR, load_path
+from nfcli.parsers import dict_to_str, list_to_str, str_to_dict, strip_tags
 
 WIKI_DATA_URL = "https://gitlab.com/nebfltcom/data/-/archive/main/data-main.zip?path=wiki"
 WIKI_URL = "http://nebfltcom.wikidot.com/"
@@ -61,34 +61,8 @@ class Entity:
     def text(self) -> str:
         raise NotImplementedError
 
-    def list_to_str(self, list: List[str]) -> str:
-        filtered_list = [element for element in list if element]
-        return "\n".join(filtered_list)
-
-    def dict_to_str(self, dictionary: Dict[str, str]) -> str:
-        as_list = [f"{key.rjust(27)}: {value}" if value else "" for key, value in dictionary.items()]
-        return "\n".join(as_list)
-
-    def str_to_dict(self, string: Optional[str] = None) -> Dict[str, str]:
-        if not string:
-            return {}
-        new_dict = {}
-        for line in string.splitlines():
-            tokens = line.split(":", maxsplit=2)
-            if len(tokens) != 2:
-                continue
-            key, value = tokens[0], tokens[1]
-            new_dict[self.sanitize(key)] = self.strip_tags(value)
-        return new_dict
-
     def get_link(self, link: str) -> str:
         return WIKI_URL + link
-
-    def sanitize(self, string: str) -> str:
-        return string.replace("(", "").replace(")", "").strip()
-
-    def strip_tags(self, string: str) -> str:
-        return re.sub("<[^<]+?>", "", string).strip()
 
 
 class Hull(Entity):
@@ -118,7 +92,7 @@ class Hull(Entity):
             "Class Size": self.size_class,
             "Mass": f"{self.mass} tonnes",
         }
-        info.update(self.str_to_dict(self.hull_buffs))
+        info.update(str_to_dict(self.hull_buffs))
         return info
 
     @property
@@ -159,11 +133,11 @@ class Hull(Entity):
 
     @property
     def text(self) -> str:
-        info = self.dict_to_str(self.info)
-        manoeuvrability = self.dict_to_str(self.manoeuvrability)
-        durability = self.dict_to_str(self.durability)
-        detectability = self.dict_to_str(self.detectability)
-        return self.list_to_str([self.header, info, manoeuvrability, durability, detectability, self.footer])
+        info = dict_to_str(self.info)
+        manoeuvrability = dict_to_str(self.manoeuvrability)
+        durability = dict_to_str(self.durability)
+        detectability = dict_to_str(self.detectability)
+        return list_to_str([self.header, info, manoeuvrability, durability, detectability, self.footer])
 
 
 class Component(Entity):
@@ -206,8 +180,8 @@ class Component(Entity):
             info["Required Crew"] = str(self.crew_data["CrewRequired"]) if "CrewRequired" in self.crew_data else "none"
         info["Size"] = "x".join([str(x) for x in self.size.values()])
         info["Mass"] = f"{self.mass} tonnes"
-        info.update(self.str_to_dict(self.resources))
-        info.update(self.str_to_dict(self.buffs))
+        info.update(str_to_dict(self.resources))
+        info.update(str_to_dict(self.buffs))
         return info
 
     @property
@@ -259,12 +233,12 @@ class Component(Entity):
 
     @property
     def text(self) -> str:
-        info = self.dict_to_str(self.info)
-        ewar = self.dict_to_str(self.ewar)
-        sensor = self.dict_to_str(self.sensor)
-        cost = self.dict_to_str(self.cost)
-        durability = self.dict_to_str(self.durability)
-        return self.list_to_str([self.header, info, ewar, sensor, cost, durability, self.footer])
+        info = dict_to_str(self.info)
+        ewar = dict_to_str(self.ewar)
+        sensor = dict_to_str(self.sensor)
+        cost = dict_to_str(self.cost)
+        durability = dict_to_str(self.durability)
+        return list_to_str([self.header, info, ewar, sensor, cost, durability, self.footer])
 
 
 class Munition(Entity):
@@ -281,14 +255,14 @@ class Munition(Entity):
         description: List[str] = []
         details: List[str] = []
         for raw_line in description_and_details.splitlines():
-            line = self.strip_tags(raw_line)
+            line = strip_tags(raw_line)
             if len(line) > 30:
                 description.append(line)
             else:
                 details.append(line)
         self.description = "\n".join(description)
         self.details = {"Details": ""}
-        self.details.update(self.str_to_dict("\n".join(details)))
+        self.details.update(str_to_dict("\n".join(details)))
 
     @property
     def info(self) -> Dict[str, str]:
@@ -307,9 +281,9 @@ class Munition(Entity):
 
     @property
     def text(self) -> str:
-        info = self.dict_to_str(self.info)
-        details = self.dict_to_str(self.details)
-        return self.list_to_str([self.header, info, details, self.footer])
+        info = dict_to_str(self.info)
+        details = dict_to_str(self.details)
+        return list_to_str([self.header, info, details, self.footer])
 
 
 class Wiki:

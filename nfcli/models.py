@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import logging
 import math
+import re
 from collections import Counter
 from typing import Dict, List, Optional
 
@@ -109,6 +110,25 @@ class Named:
         suffix = name.split("/")[-1]
         cleaned = suffix.split("_")[-1]
         return cleaned[0].upper() + cleaned[1:]
+
+
+class Missile(Named):
+    """Models content of a missile template."""
+
+    def __init__(
+        self, designation: str, nickname: str, description: str, long_description: str, cost: int, body_key: str
+    ) -> None:
+        super().__init__(body_key)
+        self.designation = designation
+        self.nickname = nickname
+        self.full_name = f"{designation} {nickname}"
+        self.description = description
+        self.long_description = long_description
+        self.cost = cost
+
+    @property
+    def size(self) -> str:
+        return re.search("[1-9]+", self.name).group()
 
 
 class Content(Named):
@@ -235,10 +255,15 @@ class Fleet(Named, Printable, Writeable):
         self.points = points
         self.faction = faction
         self._ships: List[Ship] = []
+        self._missiles: List[Missile] = []
 
     @property
     def ships(self) -> List[Ship]:
         return sorted(self._ships, key=lambda ship: int(ship.cost), reverse=True)
+
+    @property
+    def missiles(self) -> List[Missile]:
+        return sorted(self._missiles, key=lambda missile: missile.full_name)
 
     @property
     def is_valid(self) -> bool:
@@ -263,12 +288,32 @@ class Fleet(Named, Printable, Writeable):
 
     @property
     def text(self) -> str:
+        return self.ship_list + self.missile_list
+
+    @property
+    def ship_list(self) -> str:
         longest_name = max([len(ship.name) for ship in self.ships])
         ship_list = [f"{ship.name.rjust(longest_name)} : {ship.hull} [{ship.tags}]" for ship in self.ships]
         return f"{self.title}:\n```yaml\n" + "\n".join(ship_list) + "\n```"
 
+    @property
+    def missile_list(self) -> str:
+        if not self._missiles:
+            return ""
+        longest_name = max([len(missile.full_name) for missile in self.missiles])
+        missile_list = [f"{missile.full_name.rjust(longest_name)} : {missile.description}" for missile in self.missiles]
+        title = (
+            "This fleet uses only one missile type"
+            if len(missile_list) == 1
+            else f"This fleet uses {len(missile_list)} different missile types"
+        )
+        return f"{title}:\n```yaml\n" + "\n".join(missile_list) + "\n```"
+
     def add_ship(self, ship: Ship) -> None:
         self._ships.append(ship)
+
+    def add_missile(self, missile: Missile) -> None:
+        self._missiles.append(missile)
 
     def print(self, style: str, mods: List[str]):
         printer = fleet_printer_factory(style, self)
