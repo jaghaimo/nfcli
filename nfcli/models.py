@@ -301,7 +301,10 @@ class Fleet(Named, Printable, Writeable):
         if not self._missiles:
             return ""
         longest_name = max([len(missile.full_name) for missile in self.missiles])
-        missile_list = [f"{missile.full_name.rjust(longest_name)} : {missile.description}" for missile in self.missiles]
+        missile_list = [
+            f"{missile.full_name.rjust(longest_name)} : {missile.description} [{missile.cost}pts]"
+            for missile in self.missiles
+        ]
         title = (
             "This fleet uses only one missile type"
             if len(missile_list) == 1
