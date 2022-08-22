@@ -8,10 +8,11 @@ from collections import Counter
 from typing import Dict, List, Optional
 
 import arrow
+from rich.console import Console
 from rich.text import Text
 
-from nfcli.printers import Printable, fleet_printer_factory
-from nfcli.writers import Writeable, write_fleet, write_ship
+from nfcli.printers import FleetPrinter, Printable, ShipPrinter, print_any
+from nfcli.writers import Writeable, write_any
 
 
 class Lobby:
@@ -257,14 +258,12 @@ class Ship(Named, Printable, Writeable):
             return self.sockets[key]
         return Socket(key, "[grey]<EMPTY>", [], None)
 
-    def print(self, style: str, mods: List[str]):
-        printer = fleet_printer_factory("stack")
-        renderable = printer.get_ship(self)
-        printer.console.print(renderable)
-        printer.print_mods(mods)
+    def print(self, console: Console, mods: List[str]):
+        print_any(ShipPrinter(console), self, mods)
 
     def write(self, filename: str):
-        write_ship(self, filename)
+        title = Text.from_markup(self.title).plain
+        write_any(self, 3, title, filename)
 
 
 class Fleet(Named, Printable, Writeable):
@@ -336,10 +335,8 @@ class Fleet(Named, Printable, Writeable):
     def add_missile(self, missile: Missile) -> None:
         self._missiles.append(missile)
 
-    def print(self, style: str, mods: List[str]):
-        printer = fleet_printer_factory(style, self)
-        printer.print(self)
-        printer.print_mods(mods)
+    def print(self, console: Console, mods: List[str] = []):
+        print_any(FleetPrinter(console), self, mods)
 
     def write(self, filename: str):
-        write_fleet(self, filename)
+        write_any(self, self.n_ships, self.title, filename)
