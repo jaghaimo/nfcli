@@ -112,25 +112,6 @@ class Named:
         return cleaned[0].upper() + cleaned[1:]
 
 
-class Missile(Named):
-    """Models content of a missile template."""
-
-    def __init__(
-        self, designation: str, nickname: str, description: str, long_description: str, cost: int, body_key: str
-    ) -> None:
-        super().__init__(body_key)
-        self.designation = designation
-        self.nickname = nickname
-        self.full_name = f"{designation} {nickname}"
-        self.description = description
-        self.long_description = long_description
-        self.cost = cost
-
-    @property
-    def size(self) -> str:
-        return re.search("[1-9]+", self.name).group()
-
-
 class Content(Named):
     """Models content of a socket (ammo in magazine / launcher)."""
 
@@ -168,6 +149,43 @@ class Component:
     @property
     def contents(self) -> List[Content]:
         return self.socket.contents
+
+
+class Missile(Named, Printable, Writeable):
+    """Models content of a missile template."""
+
+    def __init__(
+        self, designation: str, nickname: str, description: str, long_description: str, cost: int, body_key: str
+    ) -> None:
+        super().__init__(body_key)
+        self.designation = designation
+        self.nickname = nickname
+        self.full_name = f"{designation} {nickname}"
+        self.description = description
+        self.long_description = long_description
+        self.cost = cost
+
+    @property
+    def size(self) -> str:
+        return re.search("[1-9]+", self.name).group()
+
+    @property
+    def title(self) -> str:
+        raise NotImplementedError
+
+    @property
+    def text(self) -> str:
+        raise NotImplementedError
+
+    def print(self, style: str, mods: List[str]):
+        raise NotImplementedError
+
+    @property
+    def is_valid(self):
+        return True
+
+    def write(self, filename: str):
+        raise NotImplementedError
 
 
 class Ship(Named, Printable, Writeable):

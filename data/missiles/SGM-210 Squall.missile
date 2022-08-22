@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<MissileTemplate xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AssociatedTemplateName>SGM-210 Squall</AssociatedTemplateName>
+  <Designation>SGM-210</Designation>
+  <Nickname>Squall</Nickname>
+  <Description>CRUISE - ARAD(&lt;color=#4CFF72&gt;RADAR&lt;/color&gt;) - HE SHAPED</Description>
+  <LongDescription>The SGM-210 Squall is a size 2 waypoint-capable cruise missile.  It is based on the SGM-2 body, which is a flexible mainstay anti-ship missile.  This missile will deliver a Contact Fuze, High Explosive, Shaped warhead.  It homes in on its target using a Radar Anti-Radiation seeker.
+
+Control Method: CRUISE (Waypoint Capable)
+Targeting Modes:
+	&lt;b&gt;&lt;color=#4CFF72&gt;POSITION&lt;/color&gt;	&lt;color=#4CFF72&gt;TRACK[+TRP]&lt;/color&gt;&lt;/b&gt;
+Primary Seeker: ANTI-RADIATION (All &lt;color=#4CFF72&gt;RADAR&lt;/color&gt; Signals)
+
+200 m/s for 14,040 m, top speed in 1.1 s
+Terminal Maneuvers: None
+
+Contact Fuze, High Explosive, Shaped
+Armor: 54cm   Component: 960hp
+Blast Angle: 70 deg
+
+Body Integrity: 20 
+Programming Time: 8 s
+Radar Signature Bonus: 100 %
+Pre-Ignition Strafe: 100 %
+Pre-Ignition Turn: 100 %</LongDescription>
+  <Cost>9</Cost>
+  <BodyKey>Stock/SGM-2 Body</BodyKey>
+  <TemplateKey>2f88ad84-8107-4cba-b49c-c5e01bd8e7bd</TemplateKey>
+  <BaseColor>
+    <r>1</r>
+    <g>1</g>
+    <b>1</b>
+    <a>1</a>
+  </BaseColor>
+  <StripeColor>
+    <r>0.129411772</r>
+    <g>0.3882353</g>
+    <b>0.7058824</b>
+    <a>1</a>
+  </StripeColor>
+  <Sockets>
+    <MissileSocket>
+      <Size>1</Size>
+      <InstalledComponent xsi:type="PassiveARHSeekerSettings">
+        <ComponentKey>Stock/Fixed Anti-Radiation Seeker</ComponentKey>
+        <Mode>Targeting</Mode>
+        <TargetType>All</TargetType>
+      </InstalledComponent>
+    </MissileSocket>
+    <MissileSocket>
+      <Size>1</Size>
+    </MissileSocket>
+    <MissileSocket>
+      <Size>1</Size>
+      <InstalledComponent xsi:type="CruiseGuidanceSettings">
+        <ComponentKey>Stock/Cruise Guidance</ComponentKey>
+        <Role>Offensive</Role>
+        <HotLaunch>false</HotLaunch>
+        <SelfDestructOnLost>false</SelfDestructOnLost>
+        <Maneuvers>None</Maneuvers>
+        <DefensiveDoctrine>
+          <TargetSizeMask>12</TargetSizeMask>
+          <TargetSizeOrdering>Descending</TargetSizeOrdering>
+          <SalvoSize>0</SalvoSize>
+          <FarthestFirst>false</FarthestFirst>
+        </DefensiveDoctrine>
+      </InstalledComponent>
+    </MissileSocket>
+    <MissileSocket>
+      <Size>4</Size>
+      <InstalledComponent>
+        <ComponentKey>Stock/HE Impact</ComponentKey>
+      </InstalledComponent>
+    </MissileSocket>
+    <MissileSocket>
+      <Size>6</Size>
+      <InstalledComponent xsi:type="MissileEngineSettings">
+        <ComponentKey />
+        <BalanceValues>
+          <A>0.248382539</A>
+          <B>0.488160223</B>
+          <C>0.263457239</C>
+        </BalanceValues>
+      </InstalledComponent>
+    </MissileSocket>
+  </Sockets>
+</MissileTemplate>

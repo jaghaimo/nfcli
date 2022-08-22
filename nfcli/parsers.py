@@ -102,6 +102,10 @@ def parse_mods(xml_data: str) -> List[str]:
         mods.append(mod_dep)
     return mods
 
+def parse_missile(xml_data: str) -> Missile:
+    xmld = xmltodict.parse(xml_data)
+    missile_template = xmld.get("MissileTemplate")
+    return get_missile(missile_template)
 
 def parse_ship(xml_data: str) -> Ship:
     xmld = xmltodict.parse(xml_data, force_list=("MagSaveData", "HullSocket"))
@@ -138,6 +142,8 @@ def parse_any(filename: str, xml_data: str) -> Union[Printable, Writeable]:
             return parse_fleet(xml_data)
         elif filename.endswith("ship"):
             return parse_ship(xml_data)
+        elif filename.endswith("missile"):
+            return parse_missile(xml_data)
     except Exception as exc:
         logging.error(exc.with_traceback())
 
