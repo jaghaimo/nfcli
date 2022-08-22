@@ -102,10 +102,12 @@ def parse_mods(xml_data: str) -> List[str]:
         mods.append(mod_dep)
     return mods
 
+
 def parse_missile(xml_data: str) -> Missile:
     xmld = xmltodict.parse(xml_data)
     missile_template = xmld.get("MissileTemplate")
     return get_missile(missile_template)
+
 
 def parse_ship(xml_data: str) -> Ship:
     xmld = xmltodict.parse(xml_data, force_list=("MagSaveData", "HullSocket"))

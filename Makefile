@@ -1,10 +1,10 @@
-SOURCES = $(shell find fleets/ -iname '*.fleet' | sed 's/ /\\ /g')
+SOURCES = $(shell find data/fleets/ -iname '*.fleet' | sed 's/ /\\ /g')
 
 .PHONY: $(SOURCES) all copy clean format lint cache
 
 all: $(SOURCES)
 
-copy: fleets/Starter\ -\ TF\ Ash.fleet fleets/Starter\ -\ TF\ Oak.fleet
+copy: data/fleets/Starter\ -\ TF\ Ash.fleet data/fleets/Starter\ -\ TF\ Oak.fleet
 	cp Starter\ -\ TF\ Ash.png images/tf-ash.png
 	cp Starter\ -\ TF\ Oak.png images/tf-oak.png
 
