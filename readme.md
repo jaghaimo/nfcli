@@ -1,10 +1,8 @@
-# Neboulous Fleet CLI
+# Nebulous Fleet CLI
 
 A CLI tool to pretty print fleet files to console. Can write output as image, and provides a Discord bot on top.
 
-![Starter - TF Ash - column view](images/tf-ash.png)
-
-![Starter - TF Oak - stack view](images/tf-oak.png)
+![Starter - TF Ash](https://repository-images.githubusercontent.com/488916250/0f609472-b0d3-40f1-bfcb-7c5e3f439547)
 
 ## Requirements, Installation and Execution
 
