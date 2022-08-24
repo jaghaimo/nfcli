@@ -13,7 +13,7 @@ from dotenv import load_dotenv
 from nfcli import init_logger, load_path
 from nfcli.models import Lobbies
 from nfcli.parsers import parse_any, parse_mods
-from nfcli.printers import ShipPrinter
+from nfcli.printers import Printer
 from nfcli.sqlite import create_connection, fetch_lobby_data, insert_lobby_data
 from nfcli.steam import get_player_count, get_workshop_files, get_workshop_id
 from nfcli.wiki import Wiki
@@ -44,7 +44,7 @@ async def process_file(message: Message, xml_data: str, filename: str, with_flee
         if with_fleet_file:
             all_files.append(File(open(filename, "rb"), filename=basename(filename)))
         mod_deps = parse_mods(xml_data)
-        mods = ShipPrinter.get_mods(mod_deps, "<", ">")
+        mods = Printer.get_mods(mod_deps, "<", ">")
         await message.reply(f"{entity.text}{mods}", files=all_files)
         converted_file.close()
         os.unlink(tmp_file)
