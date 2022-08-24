@@ -11,7 +11,7 @@ import arrow
 from rich.console import Console
 from rich.text import Text
 
-from nfcli.printers import FleetPrinter, Printable, ShipPrinter, print_any
+from nfcli.printers import FleetPrinter, MissilePrinter, Printable, ShipPrinter, print_any
 from nfcli.writers import Writeable, write_any
 
 
@@ -172,21 +172,22 @@ class Missile(Named, Printable, Writeable):
 
     @property
     def title(self) -> str:
-        raise NotImplementedError
+        return f"[b]{self.title}[/b] is a size {self.size} missile that costs {self.cost} points."
 
     @property
     def text(self) -> str:
-        raise NotImplementedError
-
-    def print(self, style: str, mods: List[str]):
-        raise NotImplementedError
+        return Text.from_markup(self.title).plain + "."
 
     @property
     def is_valid(self):
         return True
 
+    def print(self, console: Console, with_title: bool, mods: List[str]):
+        print_any(MissilePrinter(console), self, mods, with_title)
+
     def write(self, filename: str):
-        raise NotImplementedError
+        title = Text.from_markup(self.title).plain
+        write_any(self, 3, title, filename)
 
 
 class Ship(Named, Printable, Writeable):
@@ -258,8 +259,8 @@ class Ship(Named, Printable, Writeable):
             return self.sockets[key]
         return Socket(key, "[grey]<EMPTY>", [], None)
 
-    def print(self, console: Console, mods: List[str]):
-        print_any(ShipPrinter(console), self, mods)
+    def print(self, console: Console, with_title: bool, mods: List[str]):
+        print_any(ShipPrinter(console), self, mods, with_title)
 
     def write(self, filename: str):
         title = Text.from_markup(self.title).plain
@@ -335,8 +336,8 @@ class Fleet(Named, Printable, Writeable):
     def add_missile(self, missile: Missile) -> None:
         self._missiles.append(missile)
 
-    def print(self, console: Console, mods: List[str] = []):
-        print_any(FleetPrinter(console), self, mods)
+    def print(self, console: Console, with_title: bool, mods: List[str] = []):
+        print_any(FleetPrinter(console), self, mods, with_title)
 
     def write(self, filename: str):
         write_any(self, self.n_ships, self.title, filename)

@@ -44,5 +44,5 @@ def write_any(printable: Printable, num_of_columns: int, title: str, png_file: s
     width = determine_width(num_of_columns)
     console = Console(width=width, record=True, theme=nfc_theme, force_terminal=True)
     console.set_alt_screen(True)
-    printable.print(console)
+    printable.print(console, False, [])
     write_file(console, title, png_file)

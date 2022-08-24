@@ -43,7 +43,7 @@ def main() -> int:
         if args.print:
             console = Console(theme=nfc_theme)
             mods = parse_mods(xml_data)
-            entity.print(console, mods)
+            entity.print(console, True, mods)
         if args.write:
             output_file = determine_output_png(args.input)
             entity.write(output_file)

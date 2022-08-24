@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<Ship xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Key>61a65dd8-591d-4e91-9e5d-2d656764c7dc</Key>
+  <Name>Gun Frigate</Name>
+  <Cost>306</Cost>
+  <Number>0</Number>
+  <SymbolOption>0</SymbolOption>
+  <HullType>Stock/Raines Frigate</HullType>
+  <SocketMap>
+    <HullSocket>
+      <Key>PDKmGfvpykODc3XHDQ7WBw</Key>
+      <ComponentName>Stock/Mk62 Cannon</ComponentName>
+    </HullSocket>
+    <HullSocket>
+      <Key>WwMGqYiU7E6lp7ID47phqA</Key>
+      <ComponentName>Stock/Mk62 Cannon</ComponentName>
+    </HullSocket>
+    <HullSocket>
+      <Key>gkfIwYzn7kGhG6MW9uxBmw</Key>
+      <ComponentName>Stock/RF101 'Bullseye' Radar</ComponentName>
+    </HullSocket>
+    <HullSocket>
+      <Key>D3zoB0PetEC973iUck_mNQ</Key>
+      <ComponentName>Stock/Mk62 Cannon</ComponentName>
+    </HullSocket>
+    <HullSocket>
+      <Key>98N-YI_1WUOs--qPYlt-7g</Key>
+      <ComponentName>Stock/Basic CIC</ComponentName>
+    </HullSocket>
+    <HullSocket>
+      <Key>6Tzo7268MEqgyFxnGvLKUg</Key>
+      <ComponentName>Stock/Berthing</ComponentName>
+    </HullSocket>
+    <HullSocket>
+      <Key>O_Y-AJc7r0alOg36rvY6MQ</Key>
+      <ComponentName>Stock/Berthing</ComponentName>
+    </HullSocket>
+    <HullSocket>
+      <Key>5APOD4UfSkGdkm9WWdAvLA</Key>
+      <ComponentName>Stock/Small DC Locker</ComponentName>
+    </HullSocket>
+    <HullSocket>
+      <Key>lorATFhkTkeZQYThYOHazg</Key>
+      <ComponentName>Stock/Bulk Magazine</ComponentName>
+      <ComponentData xsi:type="BulkMagazineData">
+        <Load>
+          <MagSaveData>
+            <MagazineKey>hlFbqzToyEuT5NoYClufOg</MagazineKey>
+            <MunitionKey>Stock/120mm AP Shell</MunitionKey>
+            <Quantity>2030</Quantity>
+          </MagSaveData>
+          <MagSaveData>
+            <MagazineKey>YtSDYVRT-0iRluHpqibGsA</MagazineKey>
+            <MunitionKey>Stock/120mm HE Shell</MunitionKey>
+            <Quantity>2470</Quantity>
+          </MagSaveData>
+        </Load>
+      </ComponentData>
+    </HullSocket>
+    <HullSocket>
+      <Key>bRgUlaoQJ0S7M91zMpdAdA</Key>
+      <ComponentName>Stock/FR4800 Reactor</ComponentName>
+    </HullSocket>
+    <HullSocket>
+      <Key>Jmtnwo0KQki5QyEPPlBHrA</Key>
+      <ComponentName>Stock/FM200 Drive</ComponentName>
+    </HullSocket>
+    <HullSocket>
+      <Key>V42tXibIR0e4u6riIHYZOw</Key>
+      <ComponentName>Stock/RS35 'Frontline' Radar</ComponentName>
+    </HullSocket>
+  </SocketMap>
+  <WeaponGroups>
+    <WepGroup Name="Guns">
+      <MemberKeys>
+        <string>PDKmGfvpykODc3XHDQ7WBw</string>
+        <string>WwMGqYiU7E6lp7ID47phqA</string>
+        <string>D3zoB0PetEC973iUck_mNQ</string>
+      </MemberKeys>
+    </WepGroup>
+  </WeaponGroups>
+</Ship>
