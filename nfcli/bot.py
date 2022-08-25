@@ -9,6 +9,7 @@ import discord
 from discord import File, Message
 from discord.ext import tasks
 from dotenv import load_dotenv
+from genericpath import exists
 
 from nfcli import init_logger, load_path
 from nfcli.models import Lobbies
@@ -39,8 +40,10 @@ async def process_file(message: Message, xml_data: str, filename: str, with_flee
         tmp_file = get_temp_filename(".png")
         entity = parse_any(filename, xml_data)
         entity.write(tmp_file)
-        converted_file = File(open(tmp_file, "rb"), filename=png_file)
-        all_files = [converted_file]
+        all_files = []
+        if exists(tmp_file):
+            converted_file = File(open(tmp_file, "rb"), filename=png_file)
+            all_files.append(converted_file)
         if with_fleet_file:
             all_files.append(File(open(filename, "rb"), filename=basename(filename)))
         mod_deps = parse_mods(xml_data)

@@ -1,4 +1,4 @@
-SOURCES = $(shell find data/fleets/ -iname '*.fleet' -o -iname '*.missile' | sed 's/ /\\ /g')
+SOURCES = $(shell find data/ -iname '*.fleet' -o -iname '*.missile' | sed 's/ /\\ /g')
 
 .PHONY: $(SOURCES) all clean format lint black flake isort cache steam wiki
 
