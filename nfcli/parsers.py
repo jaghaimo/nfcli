@@ -1,44 +1,13 @@
 import logging
-import re
-from typing import Dict, List, Optional, OrderedDict, Union
+from typing import List, OrderedDict, Union
 
 import xmltodict
 
+from nfcli import strip_tags
 from nfcli.database import db
 from nfcli.models import Content, Fleet, Missile, Ship, Socket
 from nfcli.printers import Printable
 from nfcli.writers import Writeable
-
-
-def list_to_str(list: List[str]) -> str:
-    filtered_list = [element for element in list if element]
-    return "\n".join(filtered_list)
-
-
-def dict_to_str(dictionary: Dict[str, str]) -> str:
-    as_list = [f"{key.rjust(27)}: {value}" if value else "" for key, value in dictionary.items()]
-    return "\n".join(as_list)
-
-
-def str_to_dict(string: Optional[str] = None) -> Dict[str, str]:
-    if not string:
-        return {}
-    new_dict = {}
-    for line in string.splitlines():
-        tokens = line.split(":", maxsplit=2)
-        if len(tokens) != 2:
-            continue
-        key, value = tokens[0], tokens[1]
-        new_dict[sanitize(key)] = strip_tags(value)
-    return new_dict
-
-
-def sanitize(string: str) -> str:
-    return string.replace("(", "").replace(")", "").strip()
-
-
-def strip_tags(string: str) -> str:
-    return re.sub("<[^<]+?>", "", string).strip()
 
 
 def get_content(content_data: OrderedDict) -> List[Content]:

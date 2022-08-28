@@ -12,7 +12,7 @@ from rich.rule import Rule
 from rich.text import Text
 from rich.tree import Tree
 
-from nfcli import COLUMN_WIDTH, STACK_COLUMNS
+from nfcli import COLUMN_WIDTH, STACK_COLUMNS, pad_str
 
 if TYPE_CHECKING:
     from nfcli.models import Component, Fleet, Missile, Ship
@@ -57,20 +57,19 @@ class Printer(ABC):
 
 class MissilePrinter(Printer):
     def get_section(self, title: str, text: str):
-        return Padding(Group(Rule(Text(title, style="orange"), style="orange"), Text(text)), (0, 1))
+        padded_str = pad_str(text)
+        return Padding(Group(Rule(Text(title, style="orange"), style="orange"), Text(padded_str)), (0, 1))
 
     def print(self, with_title: bool, missile: "Missile"):
         column_width = min(2 * COLUMN_WIDTH, self.console.width)
         self.console.width = min(column_width, self.console.width)
         if with_title:
             self.console.print(Panel(Text(missile.title.center(self.console.width), style="white"), style="orange"))
-        description = missile.long_description.split("\n\n")[0]
-        full_stats = missile.long_description.split("\n\n")[1:]
-        self.console.print(self.get_section("Description", description))
-        self.console.print(self.get_section("Avionics", full_stats[0].replace("\n\t", " ")))
-        self.console.print(self.get_section("Flight Characteristics", full_stats[1].replace("\n\t", " ")))
-        self.console.print(self.get_section("Damage", full_stats[2].replace("\n\t", " ")))
-        self.console.print(self.get_section("Additional Stats", full_stats[3].replace("\n\t", " ")))
+        self.console.print(self.get_section("Description", missile.long_description))
+        self.console.print(self.get_section("Avionics", missile.avionics))
+        self.console.print(self.get_section("Flight Characteristics", missile.flight_characteristics))
+        self.console.print(self.get_section("Damage", missile.damage))
+        self.console.print(self.get_section("Additional Stats", missile.additional_stats))
 
 
 class ShipPrinter(Printer):

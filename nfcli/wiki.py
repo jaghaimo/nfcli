@@ -11,8 +11,7 @@ from zipfile import ZipFile
 from fuzzywuzzy import process
 from fuzzywuzzy.fuzz import partial_token_sort_ratio, token_sort_ratio
 
-from nfcli import DATA_DIR, WIKI_DIR, load_path
-from nfcli.parsers import dict_to_str, list_to_str, str_to_dict, strip_tags
+from nfcli import DATA_DIR, WIKI_DIR, dict_to_str, list_to_str, load_path, str_to_dict, strip_tags
 
 WIKI_DATA_URL = "https://gitlab.com/nebfltcom/data/-/archive/main/data-main.zip?path=wiki"
 WIKI_URL = "http://nebfltcom.wikidot.com/"

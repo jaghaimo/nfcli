@@ -163,8 +163,15 @@ class Missile(Named, Printable, Writeable):
         self.nickname = nickname
         self.full_name = f"{designation} {nickname}"
         self.description = description
-        self.long_description = long_description
         self.cost = cost
+        full_stats = [stats.replace("\n\t", " ") for stats in long_description.split("\n\n")]
+        (
+            self.long_description,
+            self.avionics,
+            self.flight_characteristics,
+            self.damage,
+            self.additional_stats,
+        ) = full_stats
 
     @property
     def size(self) -> str:
