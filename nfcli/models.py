@@ -204,6 +204,10 @@ class Ship(Named, Printable, Writeable):
         self.sockets[socket.key] = socket
 
     @property
+    def name(self):
+        return self._name
+
+    @property
     def hull(self) -> str:
         if "name" in self._data:
             return self._data.get("name")
