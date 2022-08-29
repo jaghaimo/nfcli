@@ -33,4 +33,4 @@ wiki:
 	poetry run wiki
 
 $(SOURCES):
-	python3 -m nfcli -i "$@" -w
+	poetry run nfcli -i "$@" -w

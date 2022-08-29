@@ -1,3 +1,4 @@
+import os
 import tempfile
 from abc import abstractmethod, abstractproperty
 from pathlib import Path
@@ -29,8 +30,7 @@ def get_temp_filename(ext: str) -> str:
 
 def write_any(printable: Printable, num_of_columns: int, title: str, png_file: str):
     width = determine_width(num_of_columns)
-    console = Console(width=width, record=True, theme=nfc_theme, force_terminal=True)
-    console.set_alt_screen(True)
+    console = Console(width=width, record=True, theme=nfc_theme, force_terminal=True, file=open(os.devnull, "w"))
     printable.print(console, False, [])
-    svg_content = console.export_svg(title=title)
+    svg_content = console.export_svg(title=title, clear=False)
     cairosvg.svg2png(bytestring=svg_content, write_to=png_file)
