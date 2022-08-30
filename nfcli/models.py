@@ -232,7 +232,7 @@ class Ship(Named, Printable):
 
     @property
     def title(self) -> str:
-        a_or_an = "an" if self.hull[0] == "A" else "a"
+        a_or_an = "an" if self.hull[1] == "A" else "a"
         return f"'{self.name}' is {a_or_an} {self.hull} that costs {self.cost} points"
 
     @property

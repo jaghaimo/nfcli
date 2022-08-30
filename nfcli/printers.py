@@ -14,7 +14,7 @@ from rich.rule import Rule
 from rich.text import Text
 from rich.tree import Tree
 
-from nfcli import COLUMN_WIDTH, STACK_COLUMNS, nfc_theme, pad_str
+from nfcli import COLUMN_WIDTH, STACK_COLUMNS, nfc_theme
 
 if TYPE_CHECKING:
     from nfcli.models import Component, Fleet, Missile, Ship
@@ -67,15 +67,15 @@ class Printer(ABC):
 
 class MissilePrinter(Printer):
     def get_section(self, title: str, text: str):
-        padded_str = pad_str(text)
-        return Padding(Group(Rule(Text(title, style="orange"), style="orange"), Text(padded_str)), (0, 1))
+        padded_str = Text.from_markup(pad_str(text))
+        return Padding(Group(Rule(Text(title, style="orange"), style="orange"), padded_str), (0, 1))
 
     def print(self, with_title: bool, missile: "Missile"):
         column_width = min(2 * COLUMN_WIDTH, self.console.width)
         self.console.width = min(column_width, self.console.width)
         if with_title:
             self.console.print(Panel(Text(missile.title.center(self.console.width), style="white"), style="orange"))
-        self.console.print(self.get_section("Description", missile.long_description))
+        self.console.print(Padding(Text(missile.long_description + "\n"), (0, 1)))
         self.console.print(self.get_section("Avionics", missile.avionics))
         self.console.print(self.get_section("Flight Characteristics", missile.flight_characteristics))
         self.console.print(self.get_section("Damage", missile.damage))
@@ -136,8 +136,17 @@ class FleetPrinter(ShipPrinter):
         self.console.size = (min(fleet.n_ships * column_width, self.console.width), self.console.height)
         if with_title:
             self.console.print(Panel(Text(fleet.title.center(self.console.width), style="white"), style="orange"))
-        ships = [self.get_ship(ship, column_width) for ship in fleet.ships]
-        self.console.print(Columns(ships, width=column_width, padding=(0, 0)))
+
+        if fleet.n_ships > 2:
+            ships = [self.get_ship(ship, column_width) for ship in fleet.ships]
+            self.console.print(Columns(ships, width=column_width, padding=(0, 0)))
+            return
+
+        ship_printer = ShipPrinter(self.console)
+        for ship in fleet.ships:
+            self.console.print()
+            self.console.print(Text(ship.title.center(self.console.width), style="white"))
+            ship_printer.print(False, ship)
 
 
 def determine_width(num_of_columns: int) -> int:
@@ -145,6 +154,22 @@ def determine_width(num_of_columns: int) -> int:
     if num_of_columns > 5:
         width = math.ceil(num_of_columns / 2) * COLUMN_WIDTH
     return width
+
+
+def pad_str(string: str) -> str:
+    padded_str = ""
+    for line in string.splitlines():
+        tokens = line.split(":", maxsplit=2)
+        if len(tokens) != 2:
+            padded_str += f"{line.strip()}\n"
+            continue
+        key, value = tokens[0], tokens[1]
+        if not value:
+            padded_str += f"\n[orange]{key.rjust(32 + len(key))}[/orange]\n"
+            continue
+        padded_key = key.strip().rjust(30)
+        padded_str += f"[dim]{padded_key}[/dim]  {value.strip()}\n"
+    return padded_str[:-1]
 
 
 def print_any(printer: Printer, printable: Printable, mods: List[str], with_title: bool) -> None:

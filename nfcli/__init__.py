@@ -1,12 +1,10 @@
 import logging
 import re
 from logging.handlers import TimedRotatingFileHandler
+from os import getenv
 from pathlib import Path
-from typing import Dict, List, Optional
 
 from rich.theme import Theme
-
-from nfcli.debugger import init_debugger
 
 DATA_DIR = "data"
 WIKI_DIR = "wiki"
@@ -16,16 +14,22 @@ COLUMN_WIDTH = 50
 
 nfc_theme = Theme({"orange": "#e14b00", "grey": "#474946"})
 
-init_debugger()
-
-
-def load_path(path: str) -> str:
-    with open(path, "r") as f:
-        return f.read()
-
 
 def determine_output_png(input_fleet: str) -> str:
     return Path(input_fleet).stem + ".png"
+
+
+def init_debugger():
+    if getenv("DEBUG") == "True":
+        import multiprocessing
+
+        if multiprocessing.current_process().pid > 1:
+            import debugpy
+
+            debugpy.listen(("localhost", 9000))
+            print("Debugger is ready to be attached, press F5", flush=True)
+            debugpy.wait_for_client()
+            print("Visual Studio Code debugger is now attached", flush=True)
 
 
 def init_logger(filename: str, level: int):
@@ -39,47 +43,9 @@ def init_logger(filename: str, level: int):
     logging.basicConfig(level=logging.DEBUG, handlers=[stream_handler, file_handler], force=True)
 
 
-def list_to_str(list: List[str]) -> str:
-    filtered_list = [element for element in list if element]
-    return "\n".join(filtered_list)
-
-
-def dict_to_str(dictionary: Dict[str, str]) -> str:
-    as_list = [f"{key.rjust(27)}: {value}" if value else "" for key, value in dictionary.items()]
-    return "\n".join(as_list)
-
-
-def pad_str(string: str) -> str:
-    padded_str = ""
-    for line in string.splitlines():
-        tokens = line.split(":", maxsplit=2)
-        if len(tokens) != 2:
-            padded_str += f"{line.strip()}\n"
-            continue
-        key, value = tokens[0], tokens[1]
-        if not value:
-            padded_str += f"\n{key.rjust(32 + len(key))}\n"
-            continue
-        padded_key = key.strip().rjust(30)
-        padded_str += f"{padded_key}: {value.strip()}\n"
-    return padded_str[:-1]
-
-
-def str_to_dict(string: Optional[str] = None) -> Dict[str, str]:
-    if not string:
-        return {}
-    new_dict = {}
-    for line in string.splitlines():
-        tokens = line.split(":", maxsplit=2)
-        if len(tokens) != 2:
-            continue
-        key, value = tokens[0], tokens[1]
-        new_dict[sanitize(key)] = strip_tags(value)
-    return new_dict
-
-
-def sanitize(string: str) -> str:
-    return string.replace("(", "").replace(")", "").strip()
+def load_path(path: str) -> str:
+    with open(path, "r") as f:
+        return f.read()
 
 
 def strip_tags(string: str) -> str:
