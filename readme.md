@@ -2,8 +2,6 @@
 
 A CLI tool to pretty print fleet files to console. Can write output as image, and provides a Discord bot on top.
 
-![Starter - TF Ash](https://repository-images.githubusercontent.com/488916250/0f609472-b0d3-40f1-bfcb-7c5e3f439547)
-
 ## Requirements, Installation and Execution
 
 Until the application is packaged and released, you will need to use code from this repository directly.
