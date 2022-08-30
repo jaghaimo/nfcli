@@ -2,6 +2,7 @@ import asyncio
 import logging
 import os
 import re
+import tempfile
 from posixpath import basename
 from typing import List
 
@@ -11,10 +12,10 @@ from discord.ext import tasks
 from dotenv import load_dotenv
 from genericpath import exists
 
-from nfcli import init_logger, load_path
+from nfcli import determine_output_png, init_logger, load_path
 from nfcli.models import Lobbies
 from nfcli.parsers import parse_any, parse_mods
-from nfcli.printers import Printer, determine_output_png, get_temp_filename
+from nfcli.printers import Printer
 from nfcli.sqlite import create_connection, fetch_lobby_data, insert_lobby_data
 from nfcli.steam import get_player_count, get_workshop_files, get_workshop_id
 from nfcli.wiki import Wiki
@@ -29,6 +30,10 @@ intents = discord.Intents.default()
 intents.message_content = True
 bot = discord.Bot(intents=intents)
 init_logger("bot.log", logging.INFO)
+
+
+def get_temp_filename(ext: str) -> str:
+    return tempfile.mktemp() + ext
 
 
 async def process_file(message: Message, xml_data: str, filename: str, with_fleet_file: bool):
@@ -54,9 +59,10 @@ async def process_file(message: Message, xml_data: str, filename: str, with_flee
 
 async def process_uploads(message: Message):
     """Process uploaded files."""
+    missile_files = [file for file in message.attachments if file.filename.endswith("missile")]
     ship_files = [file for file in message.attachments if file.filename.endswith("ship")]
     fleet_files = [file for file in message.attachments if file.filename.endswith("fleet")]
-    all_files = ship_files + fleet_files
+    all_files = missile_files + ship_files + fleet_files
     for file in all_files:
         xml_data = await file.read()
         await process_file(message, xml_data, file.filename, with_fleet_file=False)

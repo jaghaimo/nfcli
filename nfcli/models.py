@@ -178,7 +178,7 @@ class Missile(Named, Printable):
 
     @property
     def title(self) -> str:
-        return f"{self.full_name} is a size {self.size} missile that costs {self.cost} points."
+        return f"{self.full_name} is a size {self.size} missile that costs {self.cost} points"
 
     @property
     def text(self) -> str:

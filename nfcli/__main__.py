@@ -4,10 +4,9 @@ from typing import Dict
 
 from rich.console import Console
 
-from nfcli import init_logger, load_path, nfc_theme
+from nfcli import determine_output_png, init_logger, load_path, nfc_theme
 from nfcli.parsers import parse_any, parse_mods
 from nfcli.steam import get_workshop_files
-from nfcli.writers import determine_output_png
 
 DESC = """Command line interface for converting Nebulous: Fleet Command fleet and ship files to images."""
 

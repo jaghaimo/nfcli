@@ -2,9 +2,7 @@ from __future__ import annotations
 
 import math
 import os
-import tempfile
 from abc import ABC, abstractmethod, abstractproperty
-from pathlib import Path
 from typing import TYPE_CHECKING, List
 
 import cairosvg
@@ -142,19 +140,11 @@ class FleetPrinter(ShipPrinter):
         self.console.print(Columns(ships, width=column_width, padding=(0, 0)))
 
 
-def determine_output_png(input_fleet: str) -> str:
-    return Path(input_fleet).stem + ".png"
-
-
 def determine_width(num_of_columns: int) -> int:
     width = num_of_columns * COLUMN_WIDTH
     if num_of_columns > 5:
         width = math.ceil(num_of_columns / 2) * COLUMN_WIDTH
     return width
-
-
-def get_temp_filename(ext: str) -> str:
-    return tempfile.mktemp() + ext
 
 
 def print_any(printer: Printer, printable: Printable, mods: List[str], with_title: bool) -> None:

@@ -1,6 +1,7 @@
 import logging
 import re
 from logging.handlers import TimedRotatingFileHandler
+from pathlib import Path
 from typing import Dict, List, Optional
 
 from rich.theme import Theme
@@ -21,6 +22,10 @@ init_debugger()
 def load_path(path: str) -> str:
     with open(path, "r") as f:
         return f.read()
+
+
+def determine_output_png(input_fleet: str) -> str:
+    return Path(input_fleet).stem + ".png"
 
 
 def init_logger(filename: str, level: int):
