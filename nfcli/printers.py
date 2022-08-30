@@ -1,9 +1,13 @@
 from __future__ import annotations
 
 import math
+import os
+import tempfile
 from abc import ABC, abstractmethod, abstractproperty
+from pathlib import Path
 from typing import TYPE_CHECKING, List
 
+import cairosvg
 from rich.columns import Columns
 from rich.console import Console, Group, RenderableType
 from rich.padding import Padding
@@ -12,7 +16,7 @@ from rich.rule import Rule
 from rich.text import Text
 from rich.tree import Tree
 
-from nfcli import COLUMN_WIDTH, STACK_COLUMNS, pad_str
+from nfcli import COLUMN_WIDTH, STACK_COLUMNS, nfc_theme, pad_str
 
 if TYPE_CHECKING:
     from nfcli.models import Component, Fleet, Missile, Ship
@@ -27,8 +31,16 @@ class Printable:
     def text(self) -> str:
         raise NotImplementedError
 
+    @abstractproperty
+    def is_valid(self):
+        raise NotImplementedError
+
     @abstractmethod
     def print(self, console: Console, with_title: bool, mods: List[str]):
+        raise NotImplementedError
+
+    @abstractmethod
+    def write(self, filename: str):
         raise NotImplementedError
 
 
@@ -130,6 +142,10 @@ class FleetPrinter(ShipPrinter):
         self.console.print(Columns(ships, width=column_width, padding=(0, 0)))
 
 
+def determine_output_png(input_fleet: str) -> str:
+    return Path(input_fleet).stem + ".png"
+
+
 def determine_width(num_of_columns: int) -> int:
     width = num_of_columns * COLUMN_WIDTH
     if num_of_columns > 5:
@@ -137,6 +153,18 @@ def determine_width(num_of_columns: int) -> int:
     return width
 
 
+def get_temp_filename(ext: str) -> str:
+    return tempfile.mktemp() + ext
+
+
 def print_any(printer: Printer, printable: Printable, mods: List[str], with_title: bool) -> None:
     printer.print(with_title, printable)
     printer.print_mods(mods)
+
+
+def write_any(printable: Printable, num_of_columns: int, title: str, png_file: str):
+    width = determine_width(num_of_columns)
+    console = Console(width=width, record=True, theme=nfc_theme, force_terminal=True, file=open(os.devnull, "w"))
+    printable.print(console, False, [])
+    svg_content = console.export_svg(title=title, clear=False)
+    cairosvg.svg2png(bytestring=svg_content, write_to=png_file)

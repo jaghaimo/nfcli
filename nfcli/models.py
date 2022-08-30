@@ -11,8 +11,7 @@ import arrow
 from rich.console import Console
 from rich.text import Text
 
-from nfcli.printers import FleetPrinter, MissilePrinter, Printable, ShipPrinter, print_any
-from nfcli.writers import Writeable, write_any
+from nfcli.printers import FleetPrinter, MissilePrinter, Printable, ShipPrinter, print_any, write_any
 
 
 class Lobby:
@@ -152,7 +151,7 @@ class Component:
         return self.socket.contents
 
 
-class Missile(Named, Printable, Writeable):
+class Missile(Named, Printable):
     """Models content of a missile template."""
 
     def __init__(
@@ -197,7 +196,7 @@ class Missile(Named, Printable, Writeable):
         write_any(self, 3, title, filename)
 
 
-class Ship(Named, Printable, Writeable):
+class Ship(Named, Printable):
     def __init__(self, name: str, cost: int, number: int, symbol_option: int, hull: str, data: Dict) -> None:
         super().__init__(name)
         self.cost = cost
@@ -278,7 +277,7 @@ class Ship(Named, Printable, Writeable):
         write_any(self, 3, title, filename)
 
 
-class Fleet(Named, Printable, Writeable):
+class Fleet(Named, Printable):
     def __init__(self, name: str, points: int, faction: str):
         super().__init__(name)
         self.points = points
