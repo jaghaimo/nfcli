@@ -36,6 +36,11 @@ def get_temp_filename(ext: str) -> str:
     return tempfile.mktemp() + ext
 
 
+def is_supported(filename: str) -> bool:
+    extensions = ["fleet", "missile", "ship"]
+    return any([filename.endswith(extension) for extension in extensions])
+
+
 async def process_file(message: Message, xml_data: str, filename: str, with_fleet_file: bool):
     """Process one file content."""
     async with message.channel.typing():
@@ -59,11 +64,8 @@ async def process_file(message: Message, xml_data: str, filename: str, with_flee
 
 async def process_uploads(message: Message):
     """Process uploaded files."""
-    missile_files = [file for file in message.attachments if file.filename.endswith("missile")]
-    ship_files = [file for file in message.attachments if file.filename.endswith("ship")]
-    fleet_files = [file for file in message.attachments if file.filename.endswith("fleet")]
-    all_files = missile_files + ship_files + fleet_files
-    for file in all_files:
+    files = [file for file in message.attachments if is_supported(file.filename)]
+    for file in files:
         xml_data = await file.read()
         await process_file(message, xml_data, file.filename, with_fleet_file=False)
 
