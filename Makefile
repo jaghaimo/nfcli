@@ -1,30 +1,38 @@
-SOURCES = $(shell find fleets/ -iname '*.fleet' | sed 's/ /\\ /g')
+SOURCES = $(shell find data/ -iname '*.fleet' -o -iname '*.missile' -o -iname '*.ship' | sed 's/ /\\ /g')
 
-.PHONY: $(SOURCES) all copy clean format lint cache
+.PHONY: $(SOURCES) all clean check format lint black flake isort cache steam wiki
 
 all: $(SOURCES)
-
-copy: fleets/Starter\ -\ TF\ Ash.fleet fleets/Starter\ -\ TF\ Oak.fleet
-	cp Starter\ -\ TF\ Ash.png images/tf-ash.png
-	cp Starter\ -\ TF\ Oak.png images/tf-oak.png
 
 clean:
 	rm -f *.png
 	rm -f *.log
 	rm -f *.log.*
 
+check: format lint
+
 format:
 	black nfcli
 	isort nfcli
 
-lint:
+lint: black flake isort
+
+black:
 	black --check --no-color --diff nfcli
+
+flake:
 	flake8 nfcli
+
+isort:
 	isort nfcli --check --diff
 
-cache:
+cache: steam wiki
+
+steam:
 	poetry run steam
+
+wiki:
 	poetry run wiki
 
 $(SOURCES):
-	python3 -m nfcli -i "$@" -w
+	poetry run nfcli -i "$@" -w

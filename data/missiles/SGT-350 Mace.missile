@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<MissileTemplate xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AssociatedTemplateName>SGT-350 Mace</AssociatedTemplateName>
+  <Designation>SGT-350</Designation>
+  <Nickname>Mace</Nickname>
+  <Description>DIRECT - &lt;color=#FBFF4C&gt;CMD&lt;/color&gt; - HE SHAPED</Description>
+  <LongDescription>The SGT-350 Mace is a size 3 direct guidance missile.  It is based on the SGT-3 body, which is a heavy anti-ship torpedo.  This missile will deliver a Contact Fuze, High Explosive, Shaped warhead.  It homes in on its target using command guidance from its launching ship.
+
+Control Method: DIRECT
+Targeting Modes:
+	&lt;b&gt;&lt;color=#FF2525&gt;POSITION&lt;/color&gt;	&lt;color=#4CFF72&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+Primary Seeker: COMMAND (&lt;color=#FBFF4C&gt;Requires COMMS Enabled&lt;/color&gt;)
+
+152 m/s for 5,755 m, top speed in 2.1 s
+Terminal Maneuvers: None
+
+Contact Fuze, High Explosive, Shaped
+Armor: 123cm   Component: 5,040hp
+Blast Angle: 70 deg
+
+Body Integrity: 110 
+Programming Time: 6 s
+Radar Signature Bonus: 100 %
+Pre-Ignition Strafe: 100 %
+Pre-Ignition Turn: 100 %</LongDescription>
+  <Cost>10</Cost>
+  <BodyKey>Stock/SGT-3 Body</BodyKey>
+  <TemplateKey>b6053eaa-08cc-404d-b652-ce4fc00b25ce</TemplateKey>
+  <BaseColor>
+    <r>0.2627451</r>
+    <g>0.2627451</g>
+    <b>0.2627451</b>
+    <a>1</a>
+  </BaseColor>
+  <StripeColor>
+    <r>0.8509804</r>
+    <g>0.3647059</g>
+    <b>0.180392161</b>
+    <a>1</a>
+  </StripeColor>
+  <Sockets>
+    <MissileSocket>
+      <Size>1</Size>
+      <InstalledComponent xsi:type="CommandSeekerSettings">
+        <ComponentKey>Stock/Command Receiver</ComponentKey>
+        <Mode>Targeting</Mode>
+      </InstalledComponent>
+    </MissileSocket>
+    <MissileSocket>
+      <Size>1</Size>
+    </MissileSocket>
+    <MissileSocket>
+      <Size>1</Size>
+      <InstalledComponent xsi:type="DirectGuidanceSettings">
+        <ComponentKey>Stock/Direct Guidance</ComponentKey>
+        <Role>Offensive</Role>
+        <HotLaunch>false</HotLaunch>
+        <SelfDestructOnLost>false</SelfDestructOnLost>
+        <Maneuvers>None</Maneuvers>
+        <DefensiveDoctrine>
+          <TargetSizeMask>0</TargetSizeMask>
+          <TargetSizeOrdering>Descending</TargetSizeOrdering>
+          <SalvoSize>0</SalvoSize>
+          <FarthestFirst>false</FarthestFirst>
+        </DefensiveDoctrine>
+        <ApproachAngleControl>true</ApproachAngleControl>
+      </InstalledComponent>
+    </MissileSocket>
+    <MissileSocket>
+      <Size>7</Size>
+      <InstalledComponent>
+        <ComponentKey>Stock/HE Impact</ComponentKey>
+      </InstalledComponent>
+    </MissileSocket>
+    <MissileSocket>
+      <Size>7</Size>
+      <InstalledComponent xsi:type="MissileEngineSettings">
+        <ComponentKey />
+        <BalanceValues>
+          <A>0.364052922</A>
+          <B>0.1818584</B>
+          <C>0.4540887</C>
+        </BalanceValues>
+      </InstalledComponent>
+    </MissileSocket>
+  </Sockets>
+</MissileTemplate>

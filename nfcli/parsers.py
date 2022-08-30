@@ -1,44 +1,12 @@
 import logging
-import re
-from typing import Dict, List, Optional, OrderedDict, Union
+from typing import List, OrderedDict
 
 import xmltodict
 
+from nfcli import strip_tags
 from nfcli.database import db
 from nfcli.models import Content, Fleet, Missile, Ship, Socket
 from nfcli.printers import Printable
-from nfcli.writers import Writeable
-
-
-def list_to_str(list: List[str]) -> str:
-    filtered_list = [element for element in list if element]
-    return "\n".join(filtered_list)
-
-
-def dict_to_str(dictionary: Dict[str, str]) -> str:
-    as_list = [f"{key.rjust(27)}: {value}" if value else "" for key, value in dictionary.items()]
-    return "\n".join(as_list)
-
-
-def str_to_dict(string: Optional[str] = None) -> Dict[str, str]:
-    if not string:
-        return {}
-    new_dict = {}
-    for line in string.splitlines():
-        tokens = line.split(":", maxsplit=2)
-        if len(tokens) != 2:
-            continue
-        key, value = tokens[0], tokens[1]
-        new_dict[sanitize(key)] = strip_tags(value)
-    return new_dict
-
-
-def sanitize(string: str) -> str:
-    return string.replace("(", "").replace(")", "").strip()
-
-
-def strip_tags(string: str) -> str:
-    return re.sub("<[^<]+?>", "", string).strip()
 
 
 def get_content(content_data: OrderedDict) -> List[Content]:
@@ -103,6 +71,12 @@ def parse_mods(xml_data: str) -> List[str]:
     return mods
 
 
+def parse_missile(xml_data: str) -> Missile:
+    xmld = xmltodict.parse(xml_data)
+    missile_template = xmld.get("MissileTemplate")
+    return get_missile(missile_template)
+
+
 def parse_ship(xml_data: str) -> Ship:
     xmld = xmltodict.parse(xml_data, force_list=("MagSaveData", "HullSocket"))
     ship_data = xmld.get("Ship")
@@ -132,12 +106,14 @@ def parse_fleet(xml_data: str) -> Fleet:
     return fleet
 
 
-def parse_any(filename: str, xml_data: str) -> Union[Printable, Writeable]:
+def parse_any(filename: str, xml_data: str) -> Printable:
     try:
         if filename.endswith("fleet"):
             return parse_fleet(xml_data)
         elif filename.endswith("ship"):
             return parse_ship(xml_data)
+        elif filename.endswith("missile"):
+            return parse_missile(xml_data)
     except Exception as exc:
         logging.error(exc.with_traceback())
 

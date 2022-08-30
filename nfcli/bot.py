@@ -2,6 +2,7 @@ import asyncio
 import logging
 import os
 import re
+import tempfile
 from posixpath import basename
 from typing import List
 
@@ -9,15 +10,15 @@ import discord
 from discord import File, Message
 from discord.ext import tasks
 from dotenv import load_dotenv
+from genericpath import exists
 
-from nfcli import init_logger, load_path
+from nfcli import determine_output_png, init_logger, load_path
 from nfcli.models import Lobbies
 from nfcli.parsers import parse_any, parse_mods
-from nfcli.printers import FleetPrinter
+from nfcli.printers import Printer
 from nfcli.sqlite import create_connection, fetch_lobby_data, insert_lobby_data
 from nfcli.steam import get_player_count, get_workshop_files, get_workshop_id
 from nfcli.wiki import Wiki
-from nfcli.writers import determine_output_png, get_temp_filename
 
 load_dotenv()
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
@@ -31,6 +32,15 @@ bot = discord.Bot(intents=intents)
 init_logger("bot.log", logging.INFO)
 
 
+def get_temp_filename(ext: str) -> str:
+    return tempfile.mktemp() + ext
+
+
+def is_supported(filename: str) -> bool:
+    extensions = ["fleet", "missile", "ship"]
+    return any([filename.endswith(extension) for extension in extensions])
+
+
 async def process_file(message: Message, xml_data: str, filename: str, with_fleet_file: bool):
     """Process one file content."""
     async with message.channel.typing():
@@ -39,12 +49,14 @@ async def process_file(message: Message, xml_data: str, filename: str, with_flee
         tmp_file = get_temp_filename(".png")
         entity = parse_any(filename, xml_data)
         entity.write(tmp_file)
-        converted_file = File(open(tmp_file, "rb"), filename=png_file)
-        all_files = [converted_file]
+        all_files = []
+        if exists(tmp_file):
+            converted_file = File(open(tmp_file, "rb"), filename=png_file)
+            all_files.append(converted_file)
         if with_fleet_file:
             all_files.append(File(open(filename, "rb"), filename=basename(filename)))
         mod_deps = parse_mods(xml_data)
-        mods = FleetPrinter.get_mods(mod_deps, "<", ">")
+        mods = Printer.get_mods(mod_deps, "<", ">")
         await message.reply(f"{entity.text}{mods}", files=all_files)
         converted_file.close()
         os.unlink(tmp_file)
@@ -52,10 +64,8 @@ async def process_file(message: Message, xml_data: str, filename: str, with_flee
 
 async def process_uploads(message: Message):
     """Process uploaded files."""
-    ship_files = [file for file in message.attachments if file.filename.endswith("ship")]
-    fleet_files = [file for file in message.attachments if file.filename.endswith("fleet")]
-    all_files = ship_files + fleet_files
-    for file in all_files:
+    files = [file for file in message.attachments if is_supported(file.filename)]
+    for file in files:
         xml_data = await file.read()
         await process_file(message, xml_data, file.filename, with_fleet_file=False)
 

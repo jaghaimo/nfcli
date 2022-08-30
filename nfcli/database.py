@@ -10,7 +10,7 @@ class Database:
         self._load_hulls()
 
     def _load_hulls(self) -> Dict:
-        for file in glob("data/hull_*.json"):
+        for file in glob("data/hulls/hull_*.json"):
             hull = self._load_json(file)
             key = hull["key"]
             self.hulls[f"{key}"] = hull

@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<MissileTemplate xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AssociatedTemplateName>SGM-222 Hurricane</AssociatedTemplateName>
+  <Designation>SGM-222</Designation>
+  <Nickname>Hurricane</Nickname>
+  <Description>DIRECT - &lt;color=#FBFF4C&gt;CMD&lt;/color&gt; - HE SHAPED</Description>
+  <LongDescription>The SGM-222 Hurricane is a size 2 direct guidance missile.  It is based on the SGM-2 body, which is a flexible mainstay anti-ship missile.  This missile will deliver a Contact Fuze, High Explosive, Shaped warhead.  It homes in on its target using command guidance from its launching ship.
+
+Control Method: DIRECT
+Targeting Modes:
+	&lt;b&gt;&lt;color=#FF2525&gt;POSITION&lt;/color&gt;	&lt;color=#4CFF72&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+Primary Seeker: COMMAND (&lt;color=#FBFF4C&gt;Requires COMMS Enabled&lt;/color&gt;)
+
+201 m/s for 14,054 m, top speed in 1.3 s
+Terminal Maneuvers: None
+
+Contact Fuze, High Explosive, Shaped
+Armor: 60cm   Component: 1,200hp
+Blast Angle: 70 deg
+
+Body Integrity: 20 
+Programming Time: 8 s
+Radar Signature Bonus: 100 %
+Pre-Ignition Strafe: 100 %
+Pre-Ignition Turn: 100 %</LongDescription>
+  <Cost>7</Cost>
+  <BodyKey>Stock/SGM-2 Body</BodyKey>
+  <TemplateKey>eefeda36-4ed3-444b-8ba1-97b7f5f3ed19</TemplateKey>
+  <BaseColor>
+    <r>1</r>
+    <g>1</g>
+    <b>1</b>
+    <a>1</a>
+  </BaseColor>
+  <StripeColor>
+    <r>0.160784319</r>
+    <g>0.596078455</g>
+    <b>0.160784319</b>
+    <a>1</a>
+  </StripeColor>
+  <Sockets>
+    <MissileSocket>
+      <Size>1</Size>
+      <InstalledComponent xsi:type="CommandSeekerSettings">
+        <ComponentKey>Stock/Command Receiver</ComponentKey>
+        <Mode>Targeting</Mode>
+      </InstalledComponent>
+    </MissileSocket>
+    <MissileSocket>
+      <Size>1</Size>
+    </MissileSocket>
+    <MissileSocket>
+      <Size>1</Size>
+      <InstalledComponent xsi:type="DirectGuidanceSettings">
+        <ComponentKey>Stock/Direct Guidance</ComponentKey>
+        <Role>Offensive</Role>
+        <HotLaunch>false</HotLaunch>
+        <SelfDestructOnLost>false</SelfDestructOnLost>
+        <Maneuvers>None</Maneuvers>
+        <DefensiveDoctrine>
+          <TargetSizeMask>12</TargetSizeMask>
+          <TargetSizeOrdering>Descending</TargetSizeOrdering>
+          <SalvoSize>0</SalvoSize>
+          <FarthestFirst>false</FarthestFirst>
+        </DefensiveDoctrine>
+        <ApproachAngleControl>true</ApproachAngleControl>
+      </InstalledComponent>
+    </MissileSocket>
+    <MissileSocket>
+      <Size>5</Size>
+      <InstalledComponent>
+        <ComponentKey>Stock/HE Impact</ComponentKey>
+      </InstalledComponent>
+    </MissileSocket>
+    <MissileSocket>
+      <Size>5</Size>
+      <InstalledComponent xsi:type="MissileEngineSettings">
+        <ComponentKey />
+        <BalanceValues>
+          <A>0.2547394</A>
+          <B>0.6321806</B>
+          <C>0.113080025</C>
+        </BalanceValues>
+      </InstalledComponent>
+    </MissileSocket>
+  </Sockets>
+</MissileTemplate>

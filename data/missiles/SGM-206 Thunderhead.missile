@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<MissileTemplate xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AssociatedTemplateName>SGM-206 Thunderhead</AssociatedTemplateName>
+  <Designation>SGM-206</Designation>
+  <Nickname>Thunderhead</Nickname>
+  <Description>CRUISE - ACT(&lt;color=#4CFF72&gt;RADAR&lt;/color&gt;) - HE SHAPED</Description>
+  <LongDescription>The SGM-206 Thunderhead is a size 2 waypoint-capable cruise missile.  It is based on the SGM-2 body, which is a flexible mainstay anti-ship missile.  This missile will deliver a Contact Fuze, High Explosive, Shaped warhead.  It homes in on its target using an Active Radar seeker.
+
+Control Method: CRUISE (Waypoint Capable)
+Targeting Modes:
+	&lt;b&gt;&lt;color=#4CFF72&gt;POSITION&lt;/color&gt;	&lt;color=#4CFF72&gt;TRACK[+TRP]&lt;/color&gt;&lt;/b&gt;
+Primary Seeker: ACTIVE &lt;color=#4CFF72&gt;RADAR&lt;/color&gt;
+
+200 m/s for 14,040 m, top speed in 1.1 s
+Terminal Maneuvers: None
+
+Contact Fuze, High Explosive, Shaped
+Armor: 54cm   Component: 960hp
+Blast Angle: 70 deg
+
+Body Integrity: 20 
+Programming Time: 8 s
+Radar Signature Bonus: 100 %
+Pre-Ignition Strafe: 100 %
+Pre-Ignition Turn: 100 %</LongDescription>
+  <Cost>6</Cost>
+  <BodyKey>Stock/SGM-2 Body</BodyKey>
+  <TemplateKey>2882048f-862c-45f1-839d-128132ed441c</TemplateKey>
+  <BaseColor>
+    <r>1</r>
+    <g>1</g>
+    <b>1</b>
+    <a>1</a>
+  </BaseColor>
+  <StripeColor>
+    <r>0.7058824</r>
+    <g>0.129411772</g>
+    <b>0.129411772</b>
+    <a>1</a>
+  </StripeColor>
+  <Sockets>
+    <MissileSocket>
+      <Size>1</Size>
+      <InstalledComponent xsi:type="ActiveSeekerSettings">
+        <ComponentKey>Stock/Fixed Active Radar Seeker</ComponentKey>
+        <Mode>Targeting</Mode>
+        <DetectPDTargets>false</DetectPDTargets>
+      </InstalledComponent>
+    </MissileSocket>
+    <MissileSocket>
+      <Size>1</Size>
+    </MissileSocket>
+    <MissileSocket>
+      <Size>1</Size>
+      <InstalledComponent xsi:type="CruiseGuidanceSettings">
+        <ComponentKey>Stock/Cruise Guidance</ComponentKey>
+        <Role>Offensive</Role>
+        <HotLaunch>false</HotLaunch>
+        <SelfDestructOnLost>false</SelfDestructOnLost>
+        <Maneuvers>None</Maneuvers>
+        <DefensiveDoctrine>
+          <TargetSizeMask>12</TargetSizeMask>
+          <TargetSizeOrdering>Descending</TargetSizeOrdering>
+          <SalvoSize>0</SalvoSize>
+          <FarthestFirst>false</FarthestFirst>
+        </DefensiveDoctrine>
+      </InstalledComponent>
+    </MissileSocket>
+    <MissileSocket>
+      <Size>4</Size>
+      <InstalledComponent>
+        <ComponentKey>Stock/HE Impact</ComponentKey>
+      </InstalledComponent>
+    </MissileSocket>
+    <MissileSocket>
+      <Size>6</Size>
+      <InstalledComponent xsi:type="MissileEngineSettings">
+        <ComponentKey />
+        <BalanceValues>
+          <A>0.248382539</A>
+          <B>0.488160223</B>
+          <C>0.263457239</C>
+        </BalanceValues>
+      </InstalledComponent>
+    </MissileSocket>
+  </Sockets>
+</MissileTemplate>

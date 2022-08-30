@@ -4,18 +4,44 @@ import os
 import shutil
 from abc import abstractproperty
 from io import BytesIO
-from typing import Callable, Dict, List
+from typing import Callable, Dict, List, Optional
 from urllib.request import urlopen
 from zipfile import ZipFile
 
 from fuzzywuzzy import process
 from fuzzywuzzy.fuzz import partial_token_sort_ratio, token_sort_ratio
 
-from nfcli import DATA_DIR, WIKI_DIR, load_path
-from nfcli.parsers import dict_to_str, list_to_str, str_to_dict, strip_tags
+from nfcli import DATA_DIR, WIKI_DIR, load_path, strip_tags
 
 WIKI_DATA_URL = "https://gitlab.com/nebfltcom/data/-/archive/main/data-main.zip?path=wiki"
 WIKI_URL = "http://nebfltcom.wikidot.com/"
+
+
+def list_to_str(list: List[str]) -> str:
+    filtered_list = [element for element in list if element]
+    return "\n".join(filtered_list)
+
+
+def dict_to_str(dictionary: Dict[str, str]) -> str:
+    as_list = [f"{key.rjust(27)}: {value}" if value else "" for key, value in dictionary.items()]
+    return "\n".join(as_list)
+
+
+def sanitize(string: str) -> str:
+    return string.replace("(", "").replace(")", "").strip()
+
+
+def str_to_dict(string: Optional[str] = None) -> Dict[str, str]:
+    if not string:
+        return {}
+    new_dict = {}
+    for line in string.splitlines():
+        tokens = line.split(":", maxsplit=2)
+        if len(tokens) != 2:
+            continue
+        key, value = tokens[0], tokens[1]
+        new_dict[sanitize(key)] = strip_tags(value)
+    return new_dict
 
 
 def update_wiki():

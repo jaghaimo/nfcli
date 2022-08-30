@@ -8,10 +8,10 @@ from collections import Counter
 from typing import Dict, List, Optional
 
 import arrow
+from rich.console import Console
 from rich.text import Text
 
-from nfcli.printers import Printable, fleet_printer_factory
-from nfcli.writers import Writeable, write_fleet, write_ship
+from nfcli.printers import FleetPrinter, MissilePrinter, Printable, ShipPrinter, print_any, write_any
 
 
 class Lobby:
@@ -112,25 +112,6 @@ class Named:
         return cleaned[0].upper() + cleaned[1:]
 
 
-class Missile(Named):
-    """Models content of a missile template."""
-
-    def __init__(
-        self, designation: str, nickname: str, description: str, long_description: str, cost: int, body_key: str
-    ) -> None:
-        super().__init__(body_key)
-        self.designation = designation
-        self.nickname = nickname
-        self.full_name = f"{designation} {nickname}"
-        self.description = description
-        self.long_description = long_description
-        self.cost = cost
-
-    @property
-    def size(self) -> str:
-        return re.search("[1-9]+", self.name).group()
-
-
 class Content(Named):
     """Models content of a socket (ammo in magazine / launcher)."""
 
@@ -170,7 +151,52 @@ class Component:
         return self.socket.contents
 
 
-class Ship(Named, Printable, Writeable):
+class Missile(Named, Printable):
+    """Models content of a missile template."""
+
+    def __init__(
+        self, designation: str, nickname: str, description: str, long_description: str, cost: int, body_key: str
+    ) -> None:
+        super().__init__(body_key)
+        self.designation = designation
+        self.nickname = nickname
+        self.full_name = f"{designation} {nickname}"
+        self.description = description
+        self.cost = cost
+        full_stats = [stats.replace("\n\t", " ") for stats in long_description.split("\n\n")]
+        (
+            self.long_description,
+            self.avionics,
+            self.flight_characteristics,
+            self.damage,
+            self.additional_stats,
+        ) = full_stats
+
+    @property
+    def size(self) -> str:
+        return re.search("[1-9]+", self.name).group()
+
+    @property
+    def title(self) -> str:
+        return f"{self.full_name} is a size {self.size} missile that costs {self.cost} points"
+
+    @property
+    def text(self) -> str:
+        return Text.from_markup(self.title).plain + "."
+
+    @property
+    def is_valid(self):
+        return True
+
+    def print(self, console: Console, with_title: bool, mods: List[str]):
+        print_any(MissilePrinter(console), self, mods, with_title)
+
+    def write(self, filename: str):
+        title = Text.from_markup(self.title).plain
+        write_any(self, 3, title, filename)
+
+
+class Ship(Named, Printable):
     def __init__(self, name: str, cost: int, number: int, symbol_option: int, hull: str, data: Dict) -> None:
         super().__init__(name)
         self.cost = cost
@@ -182,6 +208,10 @@ class Ship(Named, Printable, Writeable):
 
     def add_socket(self, socket: Socket) -> None:
         self.sockets[socket.key] = socket
+
+    @property
+    def name(self):
+        return self._name
 
     @property
     def hull(self) -> str:
@@ -202,8 +232,8 @@ class Ship(Named, Printable, Writeable):
 
     @property
     def title(self) -> str:
-        a_or_an = "an" if self.hull[0] == "A" else "a"
-        return f"[b]{self.name}[/b] is {a_or_an} {self.hull} that costs {self.cost} points"
+        a_or_an = "an" if self.hull[1] == "A" else "a"
+        return f"'{self.name}' is {a_or_an} {self.hull} that costs {self.cost} points"
 
     @property
     def text(self) -> str:
@@ -239,17 +269,15 @@ class Ship(Named, Printable, Writeable):
             return self.sockets[key]
         return Socket(key, "[grey]<EMPTY>", [], None)
 
-    def print(self, style: str, mods: List[str]):
-        printer = fleet_printer_factory("stack")
-        renderable = printer.get_ship(self)
-        printer.console.print(renderable)
-        printer.print_mods(mods)
+    def print(self, console: Console, with_title: bool, mods: List[str]):
+        print_any(ShipPrinter(console), self, mods, with_title)
 
     def write(self, filename: str):
-        write_ship(self, filename)
+        title = Text.from_markup(self.title).plain
+        write_any(self, 3, title, filename)
 
 
-class Fleet(Named, Printable, Writeable):
+class Fleet(Named, Printable):
     def __init__(self, name: str, points: int, faction: str):
         super().__init__(name)
         self.points = points
@@ -318,10 +346,8 @@ class Fleet(Named, Printable, Writeable):
     def add_missile(self, missile: Missile) -> None:
         self._missiles.append(missile)
 
-    def print(self, style: str, mods: List[str]):
-        printer = fleet_printer_factory(style, self)
-        printer.print(self)
-        printer.print_mods(mods)
+    def print(self, console: Console, with_title: bool, mods: List[str] = []):
+        print_any(FleetPrinter(console), self, mods, with_title)
 
     def write(self, filename: str):
-        write_fleet(self, filename)
+        write_any(self, self.n_ships, self.title, filename)

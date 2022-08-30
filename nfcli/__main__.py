@@ -2,10 +2,11 @@ import argparse
 import logging
 from typing import Dict
 
-from nfcli import init_logger, load_path
+from rich.console import Console
+
+from nfcli import determine_output_png, init_logger, load_path, nfc_theme
 from nfcli.parsers import parse_any, parse_mods
 from nfcli.steam import get_workshop_files
-from nfcli.writers import determine_output_png
 
 DESC = """Command line interface for converting Nebulous: Fleet Command fleet and ship files to images."""
 
@@ -15,7 +16,6 @@ def get_parser() -> argparse.ArgumentParser:
     parser.add_argument("-d", "--debug", action="store_true", help="enable debug mode")
     parser.add_argument("-i", "--input", type=str, help="fleet or ship file to convert")
     parser.add_argument("-p", "--print", action="store_true", help="print output to console")
-    parser.add_argument("-s", "--style", type=str, default="auto", help="printer style: auto (default), column, stack")
     parser.add_argument("-w", "--write", action="store_true", help="write output to a file")
     parser.add_argument("--workshop", type=int, help="download and parse Steam Workshop fleet")
     return parser
@@ -40,8 +40,9 @@ def main() -> int:
         entity = parse_any(args.input, xml_data)
     if entity:
         if args.print:
+            console = Console(theme=nfc_theme)
             mods = parse_mods(xml_data)
-            entity.print(args.style, mods)
+            entity.print(console, True, mods)
         if args.write:
             output_file = determine_output_png(args.input)
             entity.write(output_file)
