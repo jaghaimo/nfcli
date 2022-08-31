@@ -164,6 +164,8 @@ class Missile(Named, Printable):
         self.description = description
         self.cost = cost
         full_stats = [stats.replace("\n\t", " ") for stats in long_description.split("\n\n")]
+        if len(full_stats) == 4:
+            full_stats.append("")
         (
             self.long_description,
             self.avionics,

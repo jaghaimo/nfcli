@@ -50,3 +50,6 @@ def load_path(path: str) -> str:
 
 def strip_tags(string: str) -> str:
     return re.sub("<[^<]+?>", "", string).strip()
+
+
+init_debugger()
