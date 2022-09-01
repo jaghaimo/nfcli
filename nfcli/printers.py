@@ -133,7 +133,8 @@ class FleetPrinter(ShipPrinter):
 
     def print(self, with_title: bool, fleet: "Fleet"):
         column_width = min(COLUMN_WIDTH, self.console.width)
-        self.console.size = (min(fleet.n_ships * column_width, self.console.width), self.console.height)
+        number_of_columns = fleet.n_ships if fleet.n_ships > 2 else 3
+        self.console.size = (min(number_of_columns * column_width, self.console.width), self.console.height)
         if with_title:
             self.console.print(Panel(Text(fleet.title.center(self.console.width), style="white"), style="orange"))
 
@@ -149,7 +150,9 @@ class FleetPrinter(ShipPrinter):
             ship_printer.print(False, ship)
 
 
-def determine_width(num_of_columns: int) -> int:
+def desired_console_width(num_of_columns: int) -> int:
+    if num_of_columns < 3:
+        return 3 * COLUMN_WIDTH
     width = num_of_columns * COLUMN_WIDTH
     if num_of_columns > 5:
         width = math.ceil(num_of_columns / 2) * COLUMN_WIDTH
@@ -178,7 +181,7 @@ def print_any(printer: Printer, printable: Printable, mods: List[str], with_titl
 
 
 def write_any(printable: Printable, num_of_columns: int, title: str, png_file: str):
-    width = determine_width(num_of_columns)
+    width = desired_console_width(num_of_columns)
     console = Console(width=width, record=True, theme=nfc_theme, force_terminal=True, file=open(os.devnull, "w"))
     printable.print(console, False, [])
     svg_content = console.export_svg(title=title, clear=False)
