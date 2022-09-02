@@ -3,6 +3,9 @@ import sqlite3
 from pathlib import Path
 from sqlite3 import Connection, Cursor, Error
 from time import time
+from typing import Counter, List
+
+from discord.message import Attachment
 
 from nfcli.models import Lobbies
 
@@ -31,7 +34,7 @@ def execute_query(connection: Connection, query: str) -> Cursor:
 
 
 def init_database(connection: Connection):
-    create_table = """
+    create_table_lobbies = """
     CREATE TABLE IF NOT EXISTS lobbies (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
@@ -39,7 +42,19 @@ def init_database(connection: Connection):
         lobby_data TEXT NOT NULL
     );
     """
-    execute_query(connection, create_table)
+    execute_query(connection, create_table_lobbies)
+    create_table_usage = """
+    CREATE TABLE IF NOT EXISTS usage (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+        guild BIGINT NOT NULL,
+        user BIGINT NOT NULL,
+        fleets TINYINT NOT NULL,
+        ships TINYINT NOT NULL,
+        missiles TINYINT NOT NULL
+    );
+    """
+    execute_query(connection, create_table_usage)
 
 
 def insert_lobby_data(connection: Connection, author: str, lobby_data: str):
@@ -58,3 +73,12 @@ def fetch_lobby_data(connection: Connection) -> Lobbies:
     if not row:
         return Lobbies(time(), "")
     return Lobbies(*row)
+
+
+def insert_usage_data(connection: Connection, guild: int, user: int, files: List[Attachment]):
+    extensions = [file.filename.split(".")[-1] for file in files]
+    counter = Counter(extensions)
+    insert_lobby_data = "INSERT INTO usage (guild, user, fleets, ships, missiles) VALUES (?, ?, ?, ?, ?)"
+    cursor = connection.cursor()
+    cursor.execute(insert_lobby_data, (guild, user, counter["fleet"], counter["ship"], counter["missile"]))
+    connection.commit()

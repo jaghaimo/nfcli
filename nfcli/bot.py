@@ -16,7 +16,7 @@ from nfcli import determine_output_png, init_logger, load_path
 from nfcli.models import Lobbies
 from nfcli.parsers import parse_any, parse_mods
 from nfcli.printers import Printer
-from nfcli.sqlite import create_connection, fetch_lobby_data, insert_lobby_data
+from nfcli.sqlite import create_connection, fetch_lobby_data, insert_lobby_data, insert_usage_data
 from nfcli.steam import get_player_count, get_workshop_files, get_workshop_id
 from nfcli.wiki import Wiki
 
@@ -65,6 +65,8 @@ async def process_file(message: Message, xml_data: str, filename: str, with_flee
 async def process_uploads(message: Message):
     """Process uploaded files."""
     files = [file for file in message.attachments if is_supported(file.filename)]
+    if files:
+        insert_usage_data(connection, message.guild.id, message.author.id, files)
     for file in files:
         xml_data = await file.read()
         await process_file(message, xml_data, file.filename, with_fleet_file=False)
