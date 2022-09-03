@@ -4,7 +4,6 @@ import os
 import re
 import tempfile
 from posixpath import basename
-from typing import List
 
 import discord
 from discord import File, Message
@@ -110,7 +109,7 @@ async def process_workshops(message: Message):
         await process_workshop(message, workshop_id)
 
 
-def process_lobby_data(message: Message):
+async def process_lobby_data(message: Message):
     """Extract and process lobby data from subscribed channel."""
     logging.debug("Checking incoming message")
     Lobbies._parse_data(message.content)
@@ -118,14 +117,12 @@ def process_lobby_data(message: Message):
     insert_lobby_data(connection, message.author.name, message.content)
 
 
-async def replace_with_previous(channel: discord.TextChannel, link: str, message: str) -> str:
-    old_messages: List[discord.Message] = await channel.history(limit=100).flatten()
-    for old_message in old_messages:
-        if old_message.author != bot.user:
-            continue
-        if link in old_message.content:
-            return f"I have already explained this recently!\n<{old_message.jump_url}>"
-    return message
+async def process_interaction(ctx: discord.ApplicationContext, reply: str, timeout: int = 30):
+    await ctx.respond(reply + f"*This message will be deleted in {timeout}s.*")
+    for i in range(timeout):
+        await ctx.edit(content=reply + f"*This message will be deleted in {timeout - i}s.*")
+        await asyncio.sleep(1)
+    await ctx.delete()
 
 
 @bot.event
@@ -141,7 +138,7 @@ async def on_message(message: discord.Message):
     if message.author == bot.user:
         return
     if message.channel.id in DISCORD_CHANNELS and message.author.bot:
-        process_lobby_data(message)
+        await process_lobby_data(message)
     else:
         await process_old_wiki(message)
         await process_workshops(message)
@@ -149,20 +146,17 @@ async def on_message(message: discord.Message):
 
 
 @bot.slash_command(name="wiki")
-async def wiki_slash(ctx: discord.ApplicationContext, *, keywords: str):
+async def wiki_action(ctx: discord.ApplicationContext, *, keywords: str):
     """Search N:FC wiki data dumps provided by @Alexbay218#0295"""
     entity = wiki_db.get(keywords)
-    message = entity.text
-    if entity:
-        message = await replace_with_previous(ctx.channel, entity.link, message)
-    await ctx.respond(message)
+    await process_interaction(ctx, entity.text)
 
 
 @bot.slash_command(name="lobbies")
-async def lobbies_slash(ctx: discord.ApplicationContext):
+async def lobbies_current(ctx: discord.ApplicationContext):
     """Report number of lobbies in the game (semi-live data provided by volunteers)."""
     lobby = fetch_lobby_data(connection)
-    await ctx.respond(lobby)
+    await process_interaction(ctx, str(lobby) + " ")
 
 
 @tasks.loop(seconds=60.0)

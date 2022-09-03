@@ -12,19 +12,19 @@ clean:
 check: format lint
 
 format:
-	black nfcli
-	isort nfcli
+	poetry run black nfcli
+	poetry run isort nfcli
 
 lint: black flake isort
 
 black:
-	black --check --no-color --diff nfcli
+	poetry run black --check --no-color --diff nfcli
 
 flake:
-	flake8 nfcli
+	poetry run flake8 nfcli
 
 isort:
-	isort nfcli --check --diff
+	poetry run isort nfcli --check --diff
 
 cache: steam wiki
 
