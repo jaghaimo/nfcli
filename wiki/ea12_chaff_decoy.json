@@ -1,0 +1,28 @@
+{
+  "MunitionName": "EA12 Chaff Decoy",
+  "Description": "VLS-launched countermeasure that detonates into a cloud of highly-reflective strips of aluminum which can completely disrupt the targeting systems of radar-guided missiles or radar-equipped warships for a short time.\n\nSize: 1\nCruise Speed: 15 m/s\nRange: 68 m",
+  "Type": "Missile",
+  "SimMethod": "Spawned",
+  "Role": "Defensive",
+  "PointCost": 1,
+  "PointDivision": 1,
+  "StorageVolume": 1,
+  "SupportsPositionTargeting": true,
+  "PositionTargetingNoInput": false,
+  "SupportsTrackTargeting": false,
+  "SupportsVisualTargeting": false,
+  "SupportsTargetReferencePoints": false,
+  "FlightSpeed": 15,
+  "TrackBackoff": 0,
+  "Lifetime": 4.5,
+  "MaxRange": 67.5,
+  "ShellMunitionData": null,
+  "MissileData": {
+    "Size": 1,
+    "MotorForce": 1,
+    "TurnRate": 1.5,
+    "MaxOffAngleThrust": 10,
+    "Guidance": "None"
+  },
+  "DamageCharacteristics": null
+}

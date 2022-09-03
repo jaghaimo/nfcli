@@ -1,0 +1,184 @@
+{
+  "ComponentName": "Mk82 Railgun",
+  "LongDescription": "The Mk.82 provides an extra rail, giving the attached warship double the anti-ship firepower. However, because of the higher need for a dedicated power line to combat the incredibly slow recharge time, the Mk.82 requires even larger amounts of reactor power and crew to properly function. Fires 300mm magnetic rounds.",
+  "FlavorText": "When the Mk81 took off, the Naval Office immediately started talking about improving on the railgun, especially since the after-action reports described the Mk81 being one of the most deadly weapons to be developed since the Mk62. Only problem was that it's- understandably- quite expensive to produce in-house, so the Naval Office turned to a third-party.\n\nThe initial design was such a complete and utter failure that the entire team was pulled from the project and the company slated for \"liquidation\" before the weapon was given to Falke-Tethys and thus, the Mk82 was put into service after a three-year development time and has since become a symbol of Alliance strength. Doesn't seem to stop the OSP, though.\n\n- T. Meadows, LT",
+  "Category": "Weapons - Projectile",
+  "Type": "Surface",
+  "CompoundingCost": false,
+  "CompoundingMultiplier": 1,
+  "CompoundingCostClass": "Mk82 Railgun",
+  "FirstInstanceFree": false,
+  "PointCost": 80,
+  "Mass": 35,
+  "Size": {
+    "x": 8,
+    "y": 5,
+    "z": 8
+  },
+  "CanTile": false,
+  "MaxHealth": 400,
+  "Reinforced": false,
+  "FunctioningThreshold": 30,
+  "DamageResistance": 30,
+  "DCPriority": "Medium",
+  "RareDebuffSubtype": "",
+  "RareDebuffChance": 0.05,
+  "FormattedResources": "Power: <color=#FF2525>-1800 kW</color>\n",
+  "ResourceDemandPriority": "High",
+  "FormattedBuffs": "",
+  "IWeaponData": {
+    "WepType": "Turret",
+    "OptimalTargetWeight": "Heavy",
+    "PDTTargetMethod": "Direct",
+    "NeedsExternalAmmoFeed": true,
+    "SupportsAmmoSelection": true,
+    "SupportsPositionTargeting": true,
+    "PositionTargetingNoInput": false,
+    "SupportsTrackTargeting": true,
+    "SupportsVisualTargeting": true,
+    "SupportsTargetReferencePoints": false
+  },
+  "WeaponComponentData": {
+    "OptimalTargetWeight": "Heavy",
+    "AllowGrouping": true,
+    "GroupingName": "300mm Railgun",
+    "IsPointDefense": false,
+    "IsEW": false,
+    "CheckFriendlyFire": true,
+    "CheckObstaclesInWay": true,
+    "RequireExternalAmmoFeed": true,
+    "AllowAmmoSelection": true,
+    "LeadTargets": true,
+    "OnTargetAngle": 0.2
+  },
+  "ContinuousWeaponComponentData": null,
+  "DiscreteWeaponComponentData": {
+    "TimeBetweenMuzzles": 2.5,
+    "MagazineSize": 2,
+    "ReloadTime": 30
+  },
+  "CellLauncherComponentData": null,
+  "TubeLauncherComponentData": null,
+  "FixedContinuousWeaponComponentData": null,
+  "MuzzleData": {
+    "MaxRange": null,
+    "SimMethod": "Spawned",
+    "IgnoreAccuracyModifiers": false,
+    "BaseAccuracy": 0.075,
+    "AccuracyData": [
+      {
+        "Range": 0,
+        "Spread": 0
+      },
+      {
+        "Range": 1000,
+        "Spread": 2.61800027
+      },
+      {
+        "Range": 2000,
+        "Spread": 5.23600054
+      },
+      {
+        "Range": 3000,
+        "Spread": 7.854
+      },
+      {
+        "Range": 4000,
+        "Spread": 10.4720011
+      },
+      {
+        "Range": 5000,
+        "Spread": 13.09
+      },
+      {
+        "Range": 6000,
+        "Spread": 15.708
+      },
+      {
+        "Range": 7000,
+        "Spread": 18.326
+      },
+      {
+        "Range": 8000,
+        "Spread": 20.9440022
+      },
+      {
+        "Range": 9000,
+        "Spread": 23.5620022
+      },
+      {
+        "Range": 10000,
+        "Spread": 26.18
+      },
+      {
+        "Range": 11000,
+        "Spread": 28.798
+      },
+      {
+        "Range": 12000,
+        "Spread": 31.416
+      },
+      {
+        "Range": 13000,
+        "Spread": 34.034
+      },
+      {
+        "Range": 14000,
+        "Spread": 36.652
+      },
+      {
+        "Range": 15000,
+        "Spread": 39.2700043
+      },
+      {
+        "Range": 16000,
+        "Spread": 41.8880043
+      },
+      {
+        "Range": 17000,
+        "Spread": 44.506
+      },
+      {
+        "Range": 18000,
+        "Spread": 47.1240044
+      },
+      {
+        "Range": 19000,
+        "Spread": 49.7420044
+      },
+      {
+        "Range": 20000,
+        "Spread": 52.36
+      }
+    ]
+  },
+  "RaycastDamageCharacteristicData": null,
+  "RaycastDamageFalloffData": null,
+  "CommsAntennaComponentData": null,
+  "OmnidirectionalEWarComponentData": null,
+  "TurretedEWarComponentData": null,
+  "ISensorComponentData": null,
+  "PassiveSensorComponentData": null,
+  "SensorComponentData": null,
+  "FireControlData": null,
+  "IEWarTargetData": null,
+  "SensorTurretComponentData": null,
+  "TurretedContinuousWeaponComponentData": null,
+  "TurretedDiscreteWeaponComponentData": {
+    "TraverseRate": 2.5,
+    "ElevationRate": 4,
+    "MaxElevation": 25,
+    "MinElevation": -3
+  },
+  "IIntelComponentData": null,
+  "CommandComponentData": null,
+  "IntelligenceComponentData": null,
+  "BerthingComponentData": null,
+  "CrewOperatedComponentData": {
+    "CrewRequired": 25,
+    "ReinforceCrewAt": -1
+  },
+  "DCLockerComponentData": null,
+  "IMagazineProviderData": null,
+  "BulkMagazineComponentData": null
+}

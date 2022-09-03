@@ -1,0 +1,485 @@
+{
+  "ComponentName": "RS41 'Spyglass' Radar",
+  "LongDescription": "The RS41 Suite provides a long-range sensor system to the equipped warship for detecting targets at range, but at the cost of reduced sensor track accuracy and a higher power draw.",
+  "FlavorText": "An excellent choice for scout warships, especially given the recent ATD upgrades package issued to the RS41. These hold a notorious reputation among pirates and smugglers given the narrow beam these deploy, making it far more easier at detecting stealthy contacts.\n\nHowever, because of the narrow beam, the RS41 is unsuitable for frontline brawling and should really only be used in emergencies when at close-range engagements.\n\n- S. Ace, CWO",
+  "Category": "Sensors",
+  "Type": "Module",
+  "CompoundingCost": false,
+  "CompoundingMultiplier": 1,
+  "CompoundingCostClass": "RS41 'Spyglass' Radar",
+  "FirstInstanceFree": false,
+  "PointCost": 25,
+  "Mass": 5,
+  "Size": {
+    "x": 2,
+    "y": 2,
+    "z": 2
+  },
+  "CanTile": false,
+  "MaxHealth": 200,
+  "Reinforced": false,
+  "FunctioningThreshold": 30,
+  "DamageResistance": 30,
+  "DCPriority": "High",
+  "RareDebuffSubtype": "",
+  "RareDebuffChance": 0.05,
+  "FormattedResources": "Power: <color=#FF2525>-4000 kW</color>\n",
+  "ResourceDemandPriority": "Critical",
+  "FormattedBuffs": "",
+  "IWeaponData": null,
+  "WeaponComponentData": null,
+  "ContinuousWeaponComponentData": null,
+  "DiscreteWeaponComponentData": null,
+  "CellLauncherComponentData": null,
+  "TubeLauncherComponentData": null,
+  "FixedContinuousWeaponComponentData": null,
+  "MuzzleData": null,
+  "RaycastDamageCharacteristicData": null,
+  "RaycastDamageFalloffData": null,
+  "CommsAntennaComponentData": null,
+  "OmnidirectionalEWarComponentData": null,
+  "TurretedEWarComponentData": null,
+  "ISensorComponentData": {
+    "IgnoreEMCON": false,
+    "CanOrderLock": false,
+    "CanOrderBurnthrough": false
+  },
+  "PassiveSensorComponentData": null,
+  "SensorComponentData": {
+    "SigType": "Radar",
+    "OperatingFreq": "S",
+    "MaxRange": 11500,
+    "RadiatedPower": 4500,
+    "Gain": 60,
+    "Sensitivity": -38.5,
+    "ApertureSize": 40,
+    "NoiseFiltering": 0,
+    "CanLock": false,
+    "LockErrorMultiplier": 0.1,
+    "MaintainLockSNR": 0,
+    "BurnthroughPowerMultiplier": 3,
+    "BurnthroughDamageProbability": 0.2,
+    "BurnthroughDamage": 25,
+    "DeviationData": [
+      {
+        "SignalLoss": 0,
+        "DeviationMultiplier": 0.34999156
+      },
+      {
+        "SignalLoss": 0.01,
+        "DeviationMultiplier": 0.3510297
+      },
+      {
+        "SignalLoss": 0.02,
+        "DeviationMultiplier": 0.352044761
+      },
+      {
+        "SignalLoss": 0.03,
+        "DeviationMultiplier": 0.353037655
+      },
+      {
+        "SignalLoss": 0.04,
+        "DeviationMultiplier": 0.354009241
+      },
+      {
+        "SignalLoss": 0.05,
+        "DeviationMultiplier": 0.3549605
+      },
+      {
+        "SignalLoss": 0.06,
+        "DeviationMultiplier": 0.355892271
+      },
+      {
+        "SignalLoss": 0.07,
+        "DeviationMultiplier": 0.356805474
+      },
+      {
+        "SignalLoss": 0.08,
+        "DeviationMultiplier": 0.357701033
+      },
+      {
+        "SignalLoss": 0.09,
+        "DeviationMultiplier": 0.358579844
+      },
+      {
+        "SignalLoss": 0.1,
+        "DeviationMultiplier": 0.35944283
+      },
+      {
+        "SignalLoss": 0.11,
+        "DeviationMultiplier": 0.360290855
+      },
+      {
+        "SignalLoss": 0.12,
+        "DeviationMultiplier": 0.361124873
+      },
+      {
+        "SignalLoss": 0.13,
+        "DeviationMultiplier": 0.361945748
+      },
+      {
+        "SignalLoss": 0.14,
+        "DeviationMultiplier": 0.3627544
+      },
+      {
+        "SignalLoss": 0.15,
+        "DeviationMultiplier": 0.363551766
+      },
+      {
+        "SignalLoss": 0.16,
+        "DeviationMultiplier": 0.3643387
+      },
+      {
+        "SignalLoss": 0.17,
+        "DeviationMultiplier": 0.365116119
+      },
+      {
+        "SignalLoss": 0.18,
+        "DeviationMultiplier": 0.36588496
+      },
+      {
+        "SignalLoss": 0.19,
+        "DeviationMultiplier": 0.3666461
+      },
+      {
+        "SignalLoss": 0.2,
+        "DeviationMultiplier": 0.367400438
+      },
+      {
+        "SignalLoss": 0.21,
+        "DeviationMultiplier": 0.368148923
+      },
+      {
+        "SignalLoss": 0.22,
+        "DeviationMultiplier": 0.3688924
+      },
+      {
+        "SignalLoss": 0.23,
+        "DeviationMultiplier": 0.369631827
+      },
+      {
+        "SignalLoss": 0.24,
+        "DeviationMultiplier": 0.3703681
+      },
+      {
+        "SignalLoss": 0.25,
+        "DeviationMultiplier": 0.3711021
+      },
+      {
+        "SignalLoss": 0.26,
+        "DeviationMultiplier": 0.371834725
+      },
+      {
+        "SignalLoss": 0.27,
+        "DeviationMultiplier": 0.3725669
+      },
+      {
+        "SignalLoss": 0.28,
+        "DeviationMultiplier": 0.373299569
+      },
+      {
+        "SignalLoss": 0.29,
+        "DeviationMultiplier": 0.37403357
+      },
+      {
+        "SignalLoss": 0.3,
+        "DeviationMultiplier": 0.374769837
+      },
+      {
+        "SignalLoss": 0.31,
+        "DeviationMultiplier": 0.3755093
+      },
+      {
+        "SignalLoss": 0.32,
+        "DeviationMultiplier": 0.37625283
+      },
+      {
+        "SignalLoss": 0.33,
+        "DeviationMultiplier": 0.377001315
+      },
+      {
+        "SignalLoss": 0.34,
+        "DeviationMultiplier": 0.377755731
+      },
+      {
+        "SignalLoss": 0.35,
+        "DeviationMultiplier": 0.3785169
+      },
+      {
+        "SignalLoss": 0.36,
+        "DeviationMultiplier": 0.3792858
+      },
+      {
+        "SignalLoss": 0.37,
+        "DeviationMultiplier": 0.3800633
+      },
+      {
+        "SignalLoss": 0.38,
+        "DeviationMultiplier": 0.3808503
+      },
+      {
+        "SignalLoss": 0.39,
+        "DeviationMultiplier": 0.3816477
+      },
+      {
+        "SignalLoss": 0.4,
+        "DeviationMultiplier": 0.382456452
+      },
+      {
+        "SignalLoss": 0.41,
+        "DeviationMultiplier": 0.383277416
+      },
+      {
+        "SignalLoss": 0.42,
+        "DeviationMultiplier": 0.384111524
+      },
+      {
+        "SignalLoss": 0.43,
+        "DeviationMultiplier": 0.384959668
+      },
+      {
+        "SignalLoss": 0.44,
+        "DeviationMultiplier": 0.385822743
+      },
+      {
+        "SignalLoss": 0.45,
+        "DeviationMultiplier": 0.386701643
+      },
+      {
+        "SignalLoss": 0.46,
+        "DeviationMultiplier": 0.387597322
+      },
+      {
+        "SignalLoss": 0.47,
+        "DeviationMultiplier": 0.388510674
+      },
+      {
+        "SignalLoss": 0.48,
+        "DeviationMultiplier": 0.389442563
+      },
+      {
+        "SignalLoss": 0.49,
+        "DeviationMultiplier": 0.390393943
+      },
+      {
+        "SignalLoss": 0.5,
+        "DeviationMultiplier": 0.3913657
+      },
+      {
+        "SignalLoss": 0.51,
+        "DeviationMultiplier": 0.39235872
+      },
+      {
+        "SignalLoss": 0.52,
+        "DeviationMultiplier": 0.393373936
+      },
+      {
+        "SignalLoss": 0.53,
+        "DeviationMultiplier": 0.394412249
+      },
+      {
+        "SignalLoss": 0.54,
+        "DeviationMultiplier": 0.395474553
+      },
+      {
+        "SignalLoss": 0.55,
+        "DeviationMultiplier": 0.396561742
+      },
+      {
+        "SignalLoss": 0.56,
+        "DeviationMultiplier": 0.397674769
+      },
+      {
+        "SignalLoss": 0.57,
+        "DeviationMultiplier": 0.3988145
+      },
+      {
+        "SignalLoss": 0.58,
+        "DeviationMultiplier": 0.399981827
+      },
+      {
+        "SignalLoss": 0.59,
+        "DeviationMultiplier": 0.4011777
+      },
+      {
+        "SignalLoss": 0.6,
+        "DeviationMultiplier": 0.402403
+      },
+      {
+        "SignalLoss": 0.61,
+        "DeviationMultiplier": 0.403658628
+      },
+      {
+        "SignalLoss": 0.62,
+        "DeviationMultiplier": 0.404945523
+      },
+      {
+        "SignalLoss": 0.63,
+        "DeviationMultiplier": 0.406264544
+      },
+      {
+        "SignalLoss": 0.64,
+        "DeviationMultiplier": 0.407616615
+      },
+      {
+        "SignalLoss": 0.65,
+        "DeviationMultiplier": 0.409002632
+      },
+      {
+        "SignalLoss": 0.66,
+        "DeviationMultiplier": 0.410423517
+      },
+      {
+        "SignalLoss": 0.67,
+        "DeviationMultiplier": 0.4118802
+      },
+      {
+        "SignalLoss": 0.68,
+        "DeviationMultiplier": 0.41337353
+      },
+      {
+        "SignalLoss": 0.69,
+        "DeviationMultiplier": 0.414904416
+      },
+      {
+        "SignalLoss": 0.7,
+        "DeviationMultiplier": 0.4164738
+      },
+      {
+        "SignalLoss": 0.71,
+        "DeviationMultiplier": 0.4180826
+      },
+      {
+        "SignalLoss": 0.72,
+        "DeviationMultiplier": 0.419731677
+      },
+      {
+        "SignalLoss": 0.73,
+        "DeviationMultiplier": 0.421421945
+      },
+      {
+        "SignalLoss": 0.74,
+        "DeviationMultiplier": 0.423154354
+      },
+      {
+        "SignalLoss": 0.75,
+        "DeviationMultiplier": 0.424929738
+      },
+      {
+        "SignalLoss": 0.76,
+        "DeviationMultiplier": 0.426749021
+      },
+      {
+        "SignalLoss": 0.77,
+        "DeviationMultiplier": 0.428613156
+      },
+      {
+        "SignalLoss": 0.78,
+        "DeviationMultiplier": 0.430523038
+      },
+      {
+        "SignalLoss": 0.79,
+        "DeviationMultiplier": 0.4324795
+      },
+      {
+        "SignalLoss": 0.8,
+        "DeviationMultiplier": 0.434483558
+      },
+      {
+        "SignalLoss": 0.81,
+        "DeviationMultiplier": 0.436536
+      },
+      {
+        "SignalLoss": 0.82,
+        "DeviationMultiplier": 0.438637853
+      },
+      {
+        "SignalLoss": 0.83,
+        "DeviationMultiplier": 0.4407899
+      },
+      {
+        "SignalLoss": 0.84,
+        "DeviationMultiplier": 0.442993164
+      },
+      {
+        "SignalLoss": 0.85,
+        "DeviationMultiplier": 0.445248455
+      },
+      {
+        "SignalLoss": 0.86,
+        "DeviationMultiplier": 0.447556734
+      },
+      {
+        "SignalLoss": 0.87,
+        "DeviationMultiplier": 0.449918866
+      },
+      {
+        "SignalLoss": 0.88,
+        "DeviationMultiplier": 0.452257872
+      },
+      {
+        "SignalLoss": 0.89,
+        "DeviationMultiplier": 0.454107165
+      },
+      {
+        "SignalLoss": 0.9,
+        "DeviationMultiplier": 0.4581746
+      },
+      {
+        "SignalLoss": 0.91,
+        "DeviationMultiplier": 0.4680147
+      },
+      {
+        "SignalLoss": 0.92,
+        "DeviationMultiplier": 0.487181842
+      },
+      {
+        "SignalLoss": 0.93,
+        "DeviationMultiplier": 0.519230545
+      },
+      {
+        "SignalLoss": 0.94,
+        "DeviationMultiplier": 0.5677153
+      },
+      {
+        "SignalLoss": 0.95,
+        "DeviationMultiplier": 0.636190534
+      },
+      {
+        "SignalLoss": 0.96,
+        "DeviationMultiplier": 0.7282108
+      },
+      {
+        "SignalLoss": 0.97,
+        "DeviationMultiplier": 0.8272537
+      },
+      {
+        "SignalLoss": 0.98,
+        "DeviationMultiplier": 0.909897447
+      },
+      {
+        "SignalLoss": 0.99,
+        "DeviationMultiplier": 0.9696463
+      },
+      {
+        "SignalLoss": 1,
+        "DeviationMultiplier": 1.00000381
+      }
+    ]
+  },
+  "FireControlData": null,
+  "IEWarTargetData": {
+    "SigType": "Radar"
+  },
+  "SensorTurretComponentData": null,
+  "TurretedContinuousWeaponComponentData": null,
+  "TurretedDiscreteWeaponComponentData": null,
+  "IIntelComponentData": null,
+  "CommandComponentData": null,
+  "IntelligenceComponentData": null,
+  "BerthingComponentData": null,
+  "CrewOperatedComponentData": null,
+  "DCLockerComponentData": null,
+  "IMagazineProviderData": null,
+  "BulkMagazineComponentData": null
+}

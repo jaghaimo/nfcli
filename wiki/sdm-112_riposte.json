@@ -1,0 +1,39 @@
+{
+  "MunitionName": "SDM-112 Riposte",
+  "Description": "The 112 Riposte is a small VLS-launched missile with the primary function of intercepting incoming missile threats. When in range, the Riposte detonates, launching fragmentation at the incoming threat to destroy it.\n\nThe Riposte is completely ineffective against warships.\n\nSize: 1\nCruise Speed: 300 m/s\nRange: 4,500 m\n\n<b>Warhead:</b>\nType: Blast Fragmentation\nDamage: 50\nBlast Radius: 25\n\n<b>Seeker:</b>\nType: Command Guided\nSupports TRPs: No",
+  "Type": "Missile",
+  "SimMethod": "Spawned",
+  "Role": "Defensive",
+  "PointCost": 2,
+  "PointDivision": 1,
+  "StorageVolume": 4,
+  "SupportsPositionTargeting": false,
+  "PositionTargetingNoInput": false,
+  "SupportsTrackTargeting": true,
+  "SupportsVisualTargeting": false,
+  "SupportsTargetReferencePoints": false,
+  "FlightSpeed": 300,
+  "TrackBackoff": 20,
+  "Lifetime": 15,
+  "MaxRange": 4500,
+  "ShellMunitionData": null,
+  "MissileData": {
+    "Size": 1,
+    "MotorForce": 10,
+    "TurnRate": 5,
+    "MaxOffAngleThrust": 35,
+    "Guidance": "Command"
+  },
+  "DamageCharacteristics": {
+    "ArmorPenetration": 2,
+    "OverpenetrationDamageMultiplier": 1,
+    "ComponentSearchDistance": 2.5,
+    "HeatDamage": 0,
+    "DamageBrushSize": 1,
+    "ComponentDamage": 50,
+    "RandomEffectMultiplier": 0,
+    "CrewVulnerabilityMultiplier": 0,
+    "IgnoreEffectiveThickness": true,
+    "NeverRicochet": true
+  }
+}

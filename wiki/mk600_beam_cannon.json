@@ -1,0 +1,604 @@
+{
+  "ComponentName": "Mk600 Beam Cannon",
+  "LongDescription": "The Mk600 is a bow-mounted particle beam, specially designed for the Keystone-class. Capable of gutting the insides of targets, the Mk600 is an excellent tool for knife-fighting, but suffers from a very short range and damage falloff. The weapon can be battleshorted to fire longer at the risk of damage to the weapon.",
+  "FlavorText": "Didn't take long before the Naval Office thought about giving the Keystone-class the Mk610. Who can blame them? A good beam to the aft of a ship and you'll fry the entire drive bay, hell, maybe you'll set off the magazines if they have any back there.\n\nBut since the Keystone can actually hook up a dedicated power line to the reactor, the Mk600 can fire a jet of superaccelerated particles before superheating them into the trademark bright green \"beam\" that can punch straight through warship armor when kept on target, even better if you have the courage to trigger a battleshort on it.\n\nJust watch the heat because once the chamber melts from the overheating energy, the CSO is going to make your day a living hell, trust me on that.\n\n- T. Meadows, LT",
+  "Category": "Weapons - Spinal",
+  "Type": "Surface",
+  "CompoundingCost": false,
+  "CompoundingMultiplier": 1,
+  "CompoundingCostClass": "Mk600 Beam Cannon",
+  "FirstInstanceFree": false,
+  "PointCost": 75,
+  "Mass": 100,
+  "Size": {
+    "x": 4,
+    "y": 12,
+    "z": 4
+  },
+  "CanTile": false,
+  "MaxHealth": 450,
+  "Reinforced": false,
+  "FunctioningThreshold": 20,
+  "DamageResistance": 40,
+  "DCPriority": "Medium",
+  "RareDebuffSubtype": "",
+  "RareDebuffChance": 0.05,
+  "FormattedResources": "Power: <color=#FF2525>-3000 kW</color>\n",
+  "ResourceDemandPriority": "High",
+  "FormattedBuffs": "",
+  "IWeaponData": {
+    "WepType": "Turret",
+    "OptimalTargetWeight": "Heavy",
+    "PDTTargetMethod": "Direct",
+    "NeedsExternalAmmoFeed": false,
+    "SupportsAmmoSelection": false,
+    "SupportsPositionTargeting": true,
+    "PositionTargetingNoInput": false,
+    "SupportsTrackTargeting": true,
+    "SupportsVisualTargeting": true,
+    "SupportsTargetReferencePoints": false
+  },
+  "WeaponComponentData": {
+    "OptimalTargetWeight": "Heavy",
+    "AllowGrouping": false,
+    "GroupingName": "",
+    "IsPointDefense": false,
+    "IsEW": false,
+    "CheckFriendlyFire": true,
+    "CheckObstaclesInWay": true,
+    "RequireExternalAmmoFeed": false,
+    "AllowAmmoSelection": false,
+    "LeadTargets": false,
+    "OnTargetAngle": 2.5
+  },
+  "ContinuousWeaponComponentData": {
+    "BurstDuration": 7.5,
+    "CooldownTime": 30,
+    "CooldownStyle": "AlwaysFull",
+    "GradualCooldownSpeed": 0.5,
+    "BattleshortAvailable": true,
+    "OverheatDamageProbability": 0.8,
+    "OverheatDamagePerSecond": 20,
+    "SingleCycleOrder": false
+  },
+  "DiscreteWeaponComponentData": null,
+  "CellLauncherComponentData": null,
+  "TubeLauncherComponentData": null,
+  "FixedContinuousWeaponComponentData": {
+    "SteerableBeam": true,
+    "SteerAngle": 3,
+    "SteerRate": 0.2
+  },
+  "MuzzleData": {
+    "MaxRange": 6000,
+    "SimMethod": "Hitscan",
+    "IgnoreAccuracyModifiers": false,
+    "BaseAccuracy": 0.05,
+    "AccuracyData": [
+      {
+        "Range": 0,
+        "Spread": 0
+      },
+      {
+        "Range": 1000,
+        "Spread": 1.745331
+      },
+      {
+        "Range": 2000,
+        "Spread": 3.490662
+      },
+      {
+        "Range": 3000,
+        "Spread": 5.23599243
+      },
+      {
+        "Range": 4000,
+        "Spread": 6.981324
+      },
+      {
+        "Range": 5000,
+        "Spread": 8.726655
+      },
+      {
+        "Range": 6000,
+        "Spread": 10.4719849
+      },
+      {
+        "Range": 7000,
+        "Spread": 12.2173166
+      },
+      {
+        "Range": 8000,
+        "Spread": 13.9626484
+      },
+      {
+        "Range": 9000,
+        "Spread": 15.7079792
+      },
+      {
+        "Range": 10000,
+        "Spread": 17.45331
+      },
+      {
+        "Range": 11000,
+        "Spread": 19.19864
+      },
+      {
+        "Range": 12000,
+        "Spread": 20.94397
+      },
+      {
+        "Range": 13000,
+        "Spread": 22.6893024
+      },
+      {
+        "Range": 14000,
+        "Spread": 24.4346333
+      },
+      {
+        "Range": 15000,
+        "Spread": 26.1799641
+      },
+      {
+        "Range": 16000,
+        "Spread": 27.9252968
+      },
+      {
+        "Range": 17000,
+        "Spread": 29.6706276
+      },
+      {
+        "Range": 18000,
+        "Spread": 31.4159584
+      },
+      {
+        "Range": 19000,
+        "Spread": 33.16129
+      },
+      {
+        "Range": 20000,
+        "Spread": 34.90662
+      }
+    ]
+  },
+  "RaycastDamageCharacteristicData": {
+    "ArmorPenetration": 180,
+    "OverpenetrationDamageMultiplier": 1,
+    "ComponentSearchDistance": 15,
+    "HeatDamage": 500,
+    "DamageBrushSize": 2,
+    "ComponentDamage": 300,
+    "RandomEffectMultiplier": 0.2,
+    "CrewVulnerabilityMultiplier": 0.4,
+    "IgnoreEffectiveThickness": false,
+    "NeverRicochet": true
+  },
+  "RaycastDamageFalloffData": [
+    {
+      "Range": 0,
+      "DamageModifier": 1
+    },
+    {
+      "Range": 60,
+      "DamageModifier": 0.9997763
+    },
+    {
+      "Range": 120,
+      "DamageModifier": 0.999556839
+    },
+    {
+      "Range": 180,
+      "DamageModifier": 0.999339461
+    },
+    {
+      "Range": 240,
+      "DamageModifier": 0.9991219
+    },
+    {
+      "Range": 300,
+      "DamageModifier": 0.998902142
+    },
+    {
+      "Range": 360,
+      "DamageModifier": 0.9986779
+    },
+    {
+      "Range": 420,
+      "DamageModifier": 0.998447061
+    },
+    {
+      "Range": 480,
+      "DamageModifier": 0.9982074
+    },
+    {
+      "Range": 540,
+      "DamageModifier": 0.9979568
+    },
+    {
+      "Range": 600,
+      "DamageModifier": 0.9976931
+    },
+    {
+      "Range": 660,
+      "DamageModifier": 0.9974142
+    },
+    {
+      "Range": 720,
+      "DamageModifier": 0.9971177
+    },
+    {
+      "Range": 780,
+      "DamageModifier": 0.9968017
+    },
+    {
+      "Range": 840,
+      "DamageModifier": 0.996463835
+    },
+    {
+      "Range": 900,
+      "DamageModifier": 0.996102035
+    },
+    {
+      "Range": 960,
+      "DamageModifier": 0.9957142
+    },
+    {
+      "Range": 1020,
+      "DamageModifier": 0.995297968
+    },
+    {
+      "Range": 1080,
+      "DamageModifier": 0.994851351
+    },
+    {
+      "Range": 1140,
+      "DamageModifier": 0.99437207
+    },
+    {
+      "Range": 1200,
+      "DamageModifier": 0.993858039
+    },
+    {
+      "Range": 1260,
+      "DamageModifier": 0.993307054
+    },
+    {
+      "Range": 1320,
+      "DamageModifier": 0.9927169
+    },
+    {
+      "Range": 1380,
+      "DamageModifier": 0.9920855
+    },
+    {
+      "Range": 1440,
+      "DamageModifier": 0.9914106
+    },
+    {
+      "Range": 1500,
+      "DamageModifier": 0.9906901
+    },
+    {
+      "Range": 1560,
+      "DamageModifier": 0.9899218
+    },
+    {
+      "Range": 1620,
+      "DamageModifier": 0.989103556
+    },
+    {
+      "Range": 1680,
+      "DamageModifier": 0.9882332
+    },
+    {
+      "Range": 1740,
+      "DamageModifier": 0.987308562
+    },
+    {
+      "Range": 1800,
+      "DamageModifier": 0.9863274
+    },
+    {
+      "Range": 1860,
+      "DamageModifier": 0.985287666
+    },
+    {
+      "Range": 1920,
+      "DamageModifier": 0.9841871
+    },
+    {
+      "Range": 1980,
+      "DamageModifier": 0.9830236
+    },
+    {
+      "Range": 2040,
+      "DamageModifier": 0.981794953
+    },
+    {
+      "Range": 2100,
+      "DamageModifier": 0.980499
+    },
+    {
+      "Range": 2160,
+      "DamageModifier": 0.9791336
+    },
+    {
+      "Range": 2220,
+      "DamageModifier": 0.977696538
+    },
+    {
+      "Range": 2280,
+      "DamageModifier": 0.976185739
+    },
+    {
+      "Range": 2340,
+      "DamageModifier": 0.974598944
+    },
+    {
+      "Range": 2400,
+      "DamageModifier": 0.972934
+    },
+    {
+      "Range": 2460,
+      "DamageModifier": 0.9711887
+    },
+    {
+      "Range": 2520,
+      "DamageModifier": 0.969361067
+    },
+    {
+      "Range": 2580,
+      "DamageModifier": 0.9674487
+    },
+    {
+      "Range": 2640,
+      "DamageModifier": 0.9654496
+    },
+    {
+      "Range": 2700,
+      "DamageModifier": 0.963361442
+    },
+    {
+      "Range": 2760,
+      "DamageModifier": 0.9611822
+    },
+    {
+      "Range": 2820,
+      "DamageModifier": 0.958909631
+    },
+    {
+      "Range": 2880,
+      "DamageModifier": 0.9565416
+    },
+    {
+      "Range": 2940,
+      "DamageModifier": 0.954075933
+    },
+    {
+      "Range": 3000,
+      "DamageModifier": 0.9515104
+    },
+    {
+      "Range": 3060,
+      "DamageModifier": 0.948843
+    },
+    {
+      "Range": 3120,
+      "DamageModifier": 0.9460714
+    },
+    {
+      "Range": 3180,
+      "DamageModifier": 0.9431935
+    },
+    {
+      "Range": 3240,
+      "DamageModifier": 0.9402071
+    },
+    {
+      "Range": 3300,
+      "DamageModifier": 0.937110066
+    },
+    {
+      "Range": 3360,
+      "DamageModifier": 0.933900237
+    },
+    {
+      "Range": 3420,
+      "DamageModifier": 0.93057543
+    },
+    {
+      "Range": 3480,
+      "DamageModifier": 0.9271335
+    },
+    {
+      "Range": 3540,
+      "DamageModifier": 0.923572242
+    },
+    {
+      "Range": 3600,
+      "DamageModifier": 0.91988945
+    },
+    {
+      "Range": 3660,
+      "DamageModifier": 0.9160831
+    },
+    {
+      "Range": 3720,
+      "DamageModifier": 0.91215086
+    },
+    {
+      "Range": 3780,
+      "DamageModifier": 0.9080907
+    },
+    {
+      "Range": 3840,
+      "DamageModifier": 0.9039004
+    },
+    {
+      "Range": 3900,
+      "DamageModifier": 0.8995777
+    },
+    {
+      "Range": 3960,
+      "DamageModifier": 0.8951205
+    },
+    {
+      "Range": 4020,
+      "DamageModifier": 0.8905268
+    },
+    {
+      "Range": 4080,
+      "DamageModifier": 0.885794163
+    },
+    {
+      "Range": 4140,
+      "DamageModifier": 0.8809205
+    },
+    {
+      "Range": 4200,
+      "DamageModifier": 0.8759038
+    },
+    {
+      "Range": 4260,
+      "DamageModifier": 0.8707417
+    },
+    {
+      "Range": 4320,
+      "DamageModifier": 0.865432143
+    },
+    {
+      "Range": 4380,
+      "DamageModifier": 0.859972954
+    },
+    {
+      "Range": 4440,
+      "DamageModifier": 0.854361951
+    },
+    {
+      "Range": 4500,
+      "DamageModifier": 0.848596931
+    },
+    {
+      "Range": 4560,
+      "DamageModifier": 0.842675745
+    },
+    {
+      "Range": 4620,
+      "DamageModifier": 0.836596251
+    },
+    {
+      "Range": 4680,
+      "DamageModifier": 0.8303563
+    },
+    {
+      "Range": 4740,
+      "DamageModifier": 0.8239367
+    },
+    {
+      "Range": 4800,
+      "DamageModifier": 0.8168607
+    },
+    {
+      "Range": 4860,
+      "DamageModifier": 0.808915555
+    },
+    {
+      "Range": 4920,
+      "DamageModifier": 0.8001067
+    },
+    {
+      "Range": 4980,
+      "DamageModifier": 0.790439546
+    },
+    {
+      "Range": 5040,
+      "DamageModifier": 0.7799194
+    },
+    {
+      "Range": 5100,
+      "DamageModifier": 0.768551648
+    },
+    {
+      "Range": 5160,
+      "DamageModifier": 0.7563417
+    },
+    {
+      "Range": 5220,
+      "DamageModifier": 0.743295
+    },
+    {
+      "Range": 5280,
+      "DamageModifier": 0.729416847
+    },
+    {
+      "Range": 5340,
+      "DamageModifier": 0.7147127
+    },
+    {
+      "Range": 5400,
+      "DamageModifier": 0.6991879
+    },
+    {
+      "Range": 5460,
+      "DamageModifier": 0.6828477
+    },
+    {
+      "Range": 5520,
+      "DamageModifier": 0.6656977
+    },
+    {
+      "Range": 5580,
+      "DamageModifier": 0.6477432
+    },
+    {
+      "Range": 5640,
+      "DamageModifier": 0.6289896
+    },
+    {
+      "Range": 5700,
+      "DamageModifier": 0.609442234
+    },
+    {
+      "Range": 5760,
+      "DamageModifier": 0.58910656
+    },
+    {
+      "Range": 5820,
+      "DamageModifier": 0.5679878
+    },
+    {
+      "Range": 5880,
+      "DamageModifier": 0.5460915
+    },
+    {
+      "Range": 5940,
+      "DamageModifier": 0.5234231
+    },
+    {
+      "Range": 6000,
+      "DamageModifier": 0.499987781
+    }
+  ],
+  "CommsAntennaComponentData": null,
+  "OmnidirectionalEWarComponentData": null,
+  "TurretedEWarComponentData": null,
+  "ISensorComponentData": null,
+  "PassiveSensorComponentData": null,
+  "SensorComponentData": null,
+  "FireControlData": null,
+  "IEWarTargetData": null,
+  "SensorTurretComponentData": null,
+  "TurretedContinuousWeaponComponentData": null,
+  "TurretedDiscreteWeaponComponentData": null,
+  "IIntelComponentData": null,
+  "CommandComponentData": null,
+  "IntelligenceComponentData": null,
+  "BerthingComponentData": null,
+  "CrewOperatedComponentData": {
+    "CrewRequired": 15,
+    "ReinforceCrewAt": -1
+  },
+  "DCLockerComponentData": null,
+  "IMagazineProviderData": null,
+  "BulkMagazineComponentData": null
+}

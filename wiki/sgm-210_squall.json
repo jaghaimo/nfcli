@@ -1,0 +1,39 @@
+{
+  "MunitionName": "SGM-210 Squall",
+  "Description": "The 210 Squall is a Home-On-Jam/Anti-Radiation cruise missile, designed to guide itself directly onto warships deploying sensor jamming tactics. The Squall will only home in on jamming signals, and cannot be used to seek targets independently.\n\nSize: 2\nCruise Speed: 200 m/s\nRange: 14,000 m\n\n<b>Warhead:</b>\nType: Explosive Impact\nArmor Penetration: 150 cm\nComponent Damage: 1200 hp\nBlast Angle: 70\n\n<b>Seeker:</b>\nType: Home on Jam - <color=#4CFF72>RADAR</color>\nRange: 1,000 m\nFOV: 90 deg\nSupports TRPs: No",
+  "Type": "Missile",
+  "SimMethod": "Spawned",
+  "Role": "Offensive",
+  "PointCost": 2,
+  "PointDivision": 1,
+  "StorageVolume": 20,
+  "SupportsPositionTargeting": true,
+  "PositionTargetingNoInput": false,
+  "SupportsTrackTargeting": true,
+  "SupportsVisualTargeting": false,
+  "SupportsTargetReferencePoints": false,
+  "FlightSpeed": 200,
+  "TrackBackoff": 50,
+  "Lifetime": 70,
+  "MaxRange": 14000,
+  "ShellMunitionData": null,
+  "MissileData": {
+    "Size": 2,
+    "MotorForce": 5,
+    "TurnRate": 0.75,
+    "MaxOffAngleThrust": 10,
+    "Guidance": "AntiJamming"
+  },
+  "DamageCharacteristics": {
+    "ArmorPenetration": 150,
+    "OverpenetrationDamageMultiplier": 1,
+    "ComponentSearchDistance": 7,
+    "HeatDamage": 1500,
+    "DamageBrushSize": 4,
+    "ComponentDamage": 1200,
+    "RandomEffectMultiplier": 1.5,
+    "CrewVulnerabilityMultiplier": 1.5,
+    "IgnoreEffectiveThickness": true,
+    "NeverRicochet": true
+  }
+}

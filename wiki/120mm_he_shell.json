@@ -1,0 +1,441 @@
+{
+  "MunitionName": "120mm HE Shell",
+  "Description": "High-explosive rounds utilized by light cannon weapons, such as the Mk6X series. Effective on light or medium-type warships.\n\nEffective at disabling components within ships, at a reduced effectiveness on armor penetration. Works best after a salvo of AP rounds.\n\nType: Ballistic/Chemical\nSize: 120mm\nArmor Penetration: 30 cm\nComponent Damage: 45 hp\nPenetration Depth: 15 m\nMuzzle Velocity: 800 m/s\nRange: 7,200 m\nVolume: 0.05 m³\nExplosion Radius: 5",
+  "Type": "Ballistic",
+  "SimMethod": "Spawned",
+  "Role": "Offensive",
+  "PointCost": 1,
+  "PointDivision": 100,
+  "StorageVolume": 0.05,
+  "SupportsPositionTargeting": true,
+  "PositionTargetingNoInput": false,
+  "SupportsTrackTargeting": true,
+  "SupportsVisualTargeting": true,
+  "SupportsTargetReferencePoints": false,
+  "FlightSpeed": 800,
+  "TrackBackoff": 0,
+  "Lifetime": 9,
+  "MaxRange": 7200,
+  "ShellMunitionData": {
+    "MaxPenetration": 15,
+    "PenetrationFalloffData": [
+      {
+        "Range": 0,
+        "Penetration": 15
+      },
+      {
+        "Range": 648,
+        "Penetration": 14.9306641
+      },
+      {
+        "Range": 1296,
+        "Penetration": 14.8619413
+      },
+      {
+        "Range": 1944,
+        "Penetration": 14.7938337
+      },
+      {
+        "Range": 2592,
+        "Penetration": 14.72634
+      },
+      {
+        "Range": 3240,
+        "Penetration": 14.6594639
+      },
+      {
+        "Range": 3888,
+        "Penetration": 14.5932045
+      },
+      {
+        "Range": 4536,
+        "Penetration": 14.5275631
+      },
+      {
+        "Range": 5184,
+        "Penetration": 14.46254
+      },
+      {
+        "Range": 5832,
+        "Penetration": 14.3981361
+      },
+      {
+        "Range": 6480,
+        "Penetration": 14.3343544
+      },
+      {
+        "Range": 7128,
+        "Penetration": 14.2711926
+      },
+      {
+        "Range": 7776,
+        "Penetration": 14.2086554
+      },
+      {
+        "Range": 8424,
+        "Penetration": 14.14674
+      },
+      {
+        "Range": 9072,
+        "Penetration": 14.08545
+      },
+      {
+        "Range": 9720,
+        "Penetration": 14.0247841
+      },
+      {
+        "Range": 10368,
+        "Penetration": 13.9647455
+      },
+      {
+        "Range": 11016,
+        "Penetration": 13.9053335
+      },
+      {
+        "Range": 11664,
+        "Penetration": 13.846549
+      },
+      {
+        "Range": 12312,
+        "Penetration": 13.788393
+      },
+      {
+        "Range": 12960,
+        "Penetration": 13.7308683
+      },
+      {
+        "Range": 13608,
+        "Penetration": 13.6739731
+      },
+      {
+        "Range": 14256,
+        "Penetration": 13.61771
+      },
+      {
+        "Range": 14904,
+        "Penetration": 13.5620794
+      },
+      {
+        "Range": 15552,
+        "Penetration": 13.507082
+      },
+      {
+        "Range": 16200,
+        "Penetration": 13.45272
+      },
+      {
+        "Range": 16848,
+        "Penetration": 13.3989925
+      },
+      {
+        "Range": 17496,
+        "Penetration": 13.3459005
+      },
+      {
+        "Range": 18144,
+        "Penetration": 13.2934465
+      },
+      {
+        "Range": 18792,
+        "Penetration": 13.24163
+      },
+      {
+        "Range": 19440,
+        "Penetration": 13.1904526
+      },
+      {
+        "Range": 20088,
+        "Penetration": 13.1399136
+      },
+      {
+        "Range": 20736,
+        "Penetration": 13.0900173
+      },
+      {
+        "Range": 21384,
+        "Penetration": 13.0407619
+      },
+      {
+        "Range": 22032,
+        "Penetration": 12.9921484
+      },
+      {
+        "Range": 22680,
+        "Penetration": 12.94418
+      },
+      {
+        "Range": 23328,
+        "Penetration": 12.8968544
+      },
+      {
+        "Range": 23976,
+        "Penetration": 12.850174
+      },
+      {
+        "Range": 24624,
+        "Penetration": 12.804141
+      },
+      {
+        "Range": 25272,
+        "Penetration": 12.7587538
+      },
+      {
+        "Range": 25920,
+        "Penetration": 12.714016
+      },
+      {
+        "Range": 26568,
+        "Penetration": 12.6699257
+      },
+      {
+        "Range": 27216,
+        "Penetration": 12.6264858
+      },
+      {
+        "Range": 27864,
+        "Penetration": 12.5836964
+      },
+      {
+        "Range": 28512,
+        "Penetration": 12.5415592
+      },
+      {
+        "Range": 29160,
+        "Penetration": 12.5000744
+      },
+      {
+        "Range": 29808,
+        "Penetration": 12.4592419
+      },
+      {
+        "Range": 30456,
+        "Penetration": 12.4190645
+      },
+      {
+        "Range": 31104,
+        "Penetration": 12.3795424
+      },
+      {
+        "Range": 31752,
+        "Penetration": 12.3406773
+      },
+      {
+        "Range": 32400,
+        "Penetration": 12.3024683
+      },
+      {
+        "Range": 33048,
+        "Penetration": 12.2649174
+      },
+      {
+        "Range": 33696,
+        "Penetration": 12.2280264
+      },
+      {
+        "Range": 34344,
+        "Penetration": 12.1917934
+      },
+      {
+        "Range": 34992,
+        "Penetration": 12.1562223
+      },
+      {
+        "Range": 35640,
+        "Penetration": 12.1213131
+      },
+      {
+        "Range": 36288,
+        "Penetration": 12.0870657
+      },
+      {
+        "Range": 36936,
+        "Penetration": 12.0534821
+      },
+      {
+        "Range": 37584,
+        "Penetration": 12.0205631
+      },
+      {
+        "Range": 38232,
+        "Penetration": 11.988308
+      },
+      {
+        "Range": 38880,
+        "Penetration": 11.9567213
+      },
+      {
+        "Range": 39528,
+        "Penetration": 11.9257994
+      },
+      {
+        "Range": 40176,
+        "Penetration": 11.8955469
+      },
+      {
+        "Range": 40824,
+        "Penetration": 11.865963
+      },
+      {
+        "Range": 41472,
+        "Penetration": 11.8370495
+      },
+      {
+        "Range": 42120,
+        "Penetration": 11.8088064
+      },
+      {
+        "Range": 42768,
+        "Penetration": 11.7812347
+      },
+      {
+        "Range": 43416,
+        "Penetration": 11.7543344
+      },
+      {
+        "Range": 44064,
+        "Penetration": 11.7281094
+      },
+      {
+        "Range": 44712,
+        "Penetration": 11.7025585
+      },
+      {
+        "Range": 45360,
+        "Penetration": 11.6776819
+      },
+      {
+        "Range": 46008,
+        "Penetration": 11.6534824
+      },
+      {
+        "Range": 46656,
+        "Penetration": 11.62996
+      },
+      {
+        "Range": 47304,
+        "Penetration": 11.6071148
+      },
+      {
+        "Range": 47952,
+        "Penetration": 11.5849485
+      },
+      {
+        "Range": 48600,
+        "Penetration": 11.5634632
+      },
+      {
+        "Range": 49248,
+        "Penetration": 11.5426579
+      },
+      {
+        "Range": 49896,
+        "Penetration": 11.5225344
+      },
+      {
+        "Range": 50544,
+        "Penetration": 11.5030937
+      },
+      {
+        "Range": 51192,
+        "Penetration": 11.4843359
+      },
+      {
+        "Range": 51840,
+        "Penetration": 11.4662628
+      },
+      {
+        "Range": 52488,
+        "Penetration": 11.4488754
+      },
+      {
+        "Range": 53136,
+        "Penetration": 11.4321728
+      },
+      {
+        "Range": 53784,
+        "Penetration": 11.4161587
+      },
+      {
+        "Range": 54432,
+        "Penetration": 11.4008322
+      },
+      {
+        "Range": 55080,
+        "Penetration": 11.3861942
+      },
+      {
+        "Range": 55728,
+        "Penetration": 11.3722458
+      },
+      {
+        "Range": 56376,
+        "Penetration": 11.35899
+      },
+      {
+        "Range": 57024,
+        "Penetration": 11.3464241
+      },
+      {
+        "Range": 57672,
+        "Penetration": 11.3345509
+      },
+      {
+        "Range": 58320,
+        "Penetration": 11.3233728
+      },
+      {
+        "Range": 58968,
+        "Penetration": 11.3128872
+      },
+      {
+        "Range": 59616,
+        "Penetration": 11.3030977
+      },
+      {
+        "Range": 60264,
+        "Penetration": 11.2940044
+      },
+      {
+        "Range": 60912,
+        "Penetration": 11.2856073
+      },
+      {
+        "Range": 61560,
+        "Penetration": 11.2779093
+      },
+      {
+        "Range": 62208,
+        "Penetration": 11.27091
+      },
+      {
+        "Range": 62856,
+        "Penetration": 11.2646112
+      },
+      {
+        "Range": 63504,
+        "Penetration": 11.2590122
+      },
+      {
+        "Range": 64152,
+        "Penetration": 11.2541142
+      },
+      {
+        "Range": 64800,
+        "Penetration": 11.2499208
+      }
+    ]
+  },
+  "MissileData": null,
+  "DamageCharacteristics": {
+    "ArmorPenetration": 30,
+    "OverpenetrationDamageMultiplier": 0.2,
+    "ComponentSearchDistance": 1.5,
+    "HeatDamage": 200,
+    "DamageBrushSize": 0.4,
+    "ComponentDamage": 45,
+    "RandomEffectMultiplier": 1,
+    "CrewVulnerabilityMultiplier": 1,
+    "IgnoreEffectiveThickness": false,
+    "NeverRicochet": false
+  }
+}
