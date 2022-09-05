@@ -4,7 +4,7 @@ from typing import List, OrderedDict
 import xmltodict
 
 from nfcli import strip_tags
-from nfcli.database import db
+from nfcli.database import hulls
 from nfcli.models import Content, Fleet, Missile, Ship, Socket
 from nfcli.printers import Printable
 
@@ -27,7 +27,7 @@ def get_socket(socket_data: OrderedDict) -> Socket:
     content = []
     if "ComponentData" in socket_data:
         content = get_content(socket_data["ComponentData"])
-    return Socket(socket_data["Key"], name, content, db.get_component_tag(name))
+    return Socket(socket_data["Key"], name, content, hulls.get_component_tag(name))
 
 
 def get_ship(ship_data: OrderedDict) -> Ship:
@@ -38,7 +38,7 @@ def get_ship(ship_data: OrderedDict) -> Ship:
         ship_data["Number"],
         ship_data["SymbolOption"],
         hull,
-        db.get_hull_data(hull),
+        hulls.get_data(hull),
     )
     socket_map = ship_data["SocketMap"]
     hull_socket = socket_map["HullSocket"] if socket_map else []

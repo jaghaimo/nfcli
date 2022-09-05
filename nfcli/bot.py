@@ -3,7 +3,6 @@ import logging
 import os
 import re
 import tempfile
-from posixpath import basename
 
 import discord
 from discord import File, Message
@@ -28,7 +27,7 @@ connection = create_connection()
 intents = discord.Intents.default()
 intents.message_content = True
 bot = discord.Bot(intents=intents)
-init_logger("bot.log", logging.INFO)
+init_logger("../bot.log", logging.INFO)
 
 
 def get_temp_filename(ext: str) -> str:
@@ -53,7 +52,7 @@ async def process_file(message: Message, xml_data: str, filename: str, with_flee
             converted_file = File(open(tmp_file, "rb"), filename=png_file)
             all_files.append(converted_file)
         if with_fleet_file:
-            all_files.append(File(open(filename, "rb"), filename=basename(filename)))
+            all_files.append(File(open(filename, "rb"), filename=os.path.basename(filename)))
         mod_deps = parse_mods(xml_data)
         mods = Printer.get_mods(mod_deps, "<", ">")
         await message.reply(f"{entity.text}{mods}", files=all_files)
@@ -166,9 +165,9 @@ async def status_changer():
     if player_count == -1:
         name = "undisclosed number of fleets"
     elif player_count == 0:
-        name = "empty shipyard"
+        name = "an empty shipyard"
     elif player_count == 1:
-        name = "just one fleet"
+        name = "just one lonely fleet"
     activity = discord.Activity(type=discord.ActivityType.watching, name=name)
     await bot.change_presence(activity=activity)
 

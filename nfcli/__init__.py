@@ -1,13 +1,11 @@
 import logging
+import os
 import re
 from logging.handlers import TimedRotatingFileHandler
-from os import getenv
 from pathlib import Path
+from typing import Optional
 
 from rich.theme import Theme
-
-DATA_DIR = "data"
-WIKI_DIR = "wiki"
 
 STACK_COLUMNS = 3
 COLUMN_WIDTH = 50
@@ -20,7 +18,7 @@ def determine_output_png(input_fleet: str) -> str:
 
 
 def init_debugger():
-    if getenv("DEBUG") == "True":
+    if os.getenv("DEBUG") == "True":
         import multiprocessing
 
         if multiprocessing.current_process().pid > 1:
@@ -32,15 +30,18 @@ def init_debugger():
             print("Visual Studio Code debugger is now attached", flush=True)
 
 
-def init_logger(filename: str, level: int):
-    file_handler = TimedRotatingFileHandler(filename, when="d", interval=1, backupCount=7)
-    file_handler.setLevel(level)
+def init_logger(filename: Optional[str], level: int):
+    formatter = logging.Formatter("%(asctime)s:%(name)s:%(levelname)s: %(message)s")
     stream_handler = logging.StreamHandler()
     stream_handler.setLevel(level)
-    formatter = logging.Formatter("%(asctime)s:%(name)s:%(levelname)s: %(message)s")
     stream_handler.setFormatter(formatter)
-    file_handler.setFormatter(formatter)
-    logging.basicConfig(level=logging.DEBUG, handlers=[stream_handler, file_handler], force=True)
+    handlers = [stream_handler]
+    if filename:
+        file_handler = TimedRotatingFileHandler(filename, when="d", interval=1, backupCount=7)
+        file_handler.setLevel(level)
+        file_handler.setFormatter(formatter)
+        handlers.append(file_handler)
+    logging.basicConfig(level=logging.DEBUG, handlers=handlers, force=True)
 
 
 def load_path(path: str) -> str:

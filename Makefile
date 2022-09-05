@@ -14,6 +14,7 @@ check: format lint
 format:
 	poetry run black nfcli
 	poetry run isort nfcli
+	poetry run autoflake --remove-all-unused-imports --remove-unused-variables -i -r nfcli
 
 lint: black flake isort
 

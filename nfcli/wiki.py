@@ -11,9 +11,10 @@ from zipfile import ZipFile
 from fuzzywuzzy import process
 from fuzzywuzzy.fuzz import partial_token_sort_ratio, token_sort_ratio
 
-from nfcli import DATA_DIR, WIKI_DIR, load_path, strip_tags
+from nfcli import load_path, strip_tags
 
 WIKI_DATA_URL = "https://gitlab.com/nebfltcom/data/-/archive/main/data-main.zip?path=wiki"
+WIKI_DIR = "data/wiki"
 WIKI_URL = "http://nebfltcom.wikidot.com/"
 
 
@@ -344,7 +345,7 @@ class Wiki:
             callback(content)
 
     def _process_aliases(self):
-        aliases = self._read_json(DATA_DIR, "wiki.json")
+        aliases = self._read_json("data", "wiki.json")
         for source, target in aliases.items():
             entity = self.get(target)
             self.entities[source] = entity

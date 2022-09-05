@@ -25,7 +25,7 @@ def parse_args() -> Dict:
     parser = get_parser()
     args = parser.parse_args()
     display_level = logging.DEBUG if args.debug else logging.WARNING
-    init_logger("main.log", display_level)
+    init_logger(None, display_level)
     return args
 
 
