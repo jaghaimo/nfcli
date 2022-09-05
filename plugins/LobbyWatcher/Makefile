@@ -8,4 +8,4 @@ format:
 	dotnet csharpier .
 
 build: restore format
-	msbuild
+	dotnet build
