@@ -105,11 +105,16 @@ namespace HullDumper
             return "    " + string.Join(",\n    ", sockets);
         }
 
+        private string Sanitize(string Text)
+        {
+            return Text.Replace("\"", "\\\"");
+        }
+
         public override string ToString()
         {
             return "{\n"
-                + $"  \"key\": \"{Key}\",\n"
-                + $"  \"name\": \"{Name}\",\n"
+                + $"  \"key\": \"{Sanitize(Key)}\",\n"
+                + $"  \"name\": \"{Sanitize(Name)}\",\n"
                 + "  \"mounts\": {\n"
                 + SocketsToString(Surfaces)
                 + "\n  },\n"
