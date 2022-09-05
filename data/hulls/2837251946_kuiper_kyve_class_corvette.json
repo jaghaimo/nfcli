@@ -2,8 +2,8 @@
   "key": "KUIPER/Kyve Class Corvette",
   "name": "'Kyve' class Corvette",
   "mounts": {
-    "c2_1": "2x2x3",
-    "c2_2": "2x2x3",
+    "c2_1": "3x2x3",
+    "c2_2": "3x2x3",
     "c2_3": "2x2x3",
     "c2_4": "2x2x3"
   },

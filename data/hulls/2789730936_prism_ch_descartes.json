@@ -4,9 +4,8 @@
   "mounts": {
     "spinalmount1": "4x12x4",
     "spinalmount2": "4x12x4",
+    "c3mount1": "6x4x6",
     "c4mount1": "6x4x6",
-    "c3mount1": "3x3x5",
-    "c3mount2": "3x3x5",
     "c3mount3": "3x4x5",
     "c3mount4": "3x4x5",
     "c2mount1": "3x4x3",

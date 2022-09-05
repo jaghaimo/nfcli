@@ -15,7 +15,9 @@ namespace HullDumper
             foreach (Hull hull in allHulls)
             {
                 ulong sourceModId = hull.SourceModId ?? 0;
-                string fileName = $"hull_{sourceModId}_{hull.ClassName.ToLower()}.json";
+                string hullName = sanitizeHullName(hull.SaveKey.ToLower());
+                string fileName = getFileName(sourceModId, hullName);
+                Console.WriteLine($"Writing to {fileName} file...");
                 HullSpec hullSpec = GetHull(hull);
                 System.IO.File.WriteAllText(
                     $"{ModDatabase.LocalModDirectory}{fileName}",
@@ -25,6 +27,26 @@ namespace HullDumper
         }
 
         public void PreLoad() { }
+
+        private string sanitizeHullName(string hullName)
+        {
+            hullName = hullName.Replace(' ', '_');
+            foreach (char c in System.IO.Path.GetInvalidFileNameChars())
+            {
+                hullName = hullName.Replace(c, '_');
+            }
+            return hullName;
+        }
+
+        private string getFileName(ulong sourceModId, string hullName)
+        {
+            string fileName = $"{sourceModId}_{hullName}.json";
+            if (System.IO.File.Exists(fileName))
+            {
+                return getFileName(sourceModId, hullName + "_1");
+            }
+            return fileName;
+        }
 
         private HullSpec GetHull(Hull hull)
         {

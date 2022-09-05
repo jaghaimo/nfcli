@@ -1,0 +1,33 @@
+{
+  "key": "KUIPER/Cadonia Class Frigate (REWORK WIP - MISSING DC BOARD)",
+  "name": "'Cadonia (REWORK WIP)' class Escort Frigate",
+  "mounts": {
+    "c1_1": "2x2x2",
+    "c2_1": "3x1x3",
+    "c2_2": "3x1x3",
+    "c3_1": "3x4x5",
+    "c0_1": "1x3x1",
+    "c0_2": "1x3x1",
+    "c0_3": "1x4x1",
+    "c0_4": "1x4x1",
+    "c0_5": "1x4x1",
+    "c0_6": "1x4x1"
+  },
+  "compartments": {
+    "sc_1": "3x1x3",
+    "sc_2": "3x1x3",
+    "mc_1": "4x1x6",
+    "mc_2": "4x1x6",
+    "mc_3": "3x1x5",
+    "lc_1": "8x1x6",
+    "lc_2": "8x1x6"
+  },
+  "modules": {
+    "mm_1": "5x5x5",
+    "mm_2": "5x5x5",
+    "sm_1": "3x3x3",
+    "sm_2": "3x3x3",
+    "sm_3": "3x3x3",
+    "sm_4": "3x3x3"
+  }
+}

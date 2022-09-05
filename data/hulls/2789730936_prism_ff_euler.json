@@ -8,8 +8,8 @@
     "3EwSgEOj5UGQUqGrF6t5_gd": "2x2x2"
   },
   "compartments": {
-    "pipSayFCn02A3Uov_rOk6Qa": "6x1x6",
-    "pipSayFCn02A3Uov_rOk6Q2b": "4x1x6",
+    "pipSayFCn02A3Uov_rOk6Qa": "8x1x6",
+    "pipSayFCn02A3Uov_rOk6Q2b": "6x1x6",
     "pipSayFCn02A3Uov_rOk6Q2d": "4x1x6",
     "pipSayFCn02A3Uov_rOk6Q231": "3x1x3",
     "pipSayFCn02A3Uov_rOk6Q232": "3x1x3"
@@ -19,6 +19,7 @@
     "TAgBFGiv-UOo4GOrNxWckga": "6x6x6",
     "Bisi0t3FmE2yYxB340uvFQa": "3x3x3",
     "KfMisTMUF0um0QOtylrOcwa": "3x3x3",
-    "eMUMYEJ2Fk62RHFvPC22qAa": "2x2x2"
+    "eMUMYEJ2Fk62RHFvPC22qAa": "2x2x2",
+    "eMUMYEJ2Fk62RHFvPC22qAb": "2x2x2"
   }
 }

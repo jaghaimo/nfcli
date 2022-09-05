@@ -10,8 +10,8 @@
     "mount343_DD3": "3x1x3",
     "mount343_DD4": "3x1x3",
     "mount343_DD5": "3x1x3",
-    "mount222_DD1": "2x2x3",
-    "mount222_DD2": "2x2x3"
+    "mount222_DD1": "2x2x2",
+    "mount222_DD2": "2x2x2"
   },
   "compartments": {
     "compartment618_DD": "6x1x8",
