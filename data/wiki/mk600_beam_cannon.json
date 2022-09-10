@@ -36,7 +36,7 @@
     "PositionTargetingNoInput": false,
     "SupportsTrackTargeting": true,
     "SupportsVisualTargeting": true,
-    "SupportsTargetReferencePoints": false
+    "SupportsWaypoints": false
   },
   "WeaponComponentData": {
     "OptimalTargetWeight": "Heavy",
@@ -164,7 +164,7 @@
   "RaycastDamageCharacteristicData": {
     "ArmorPenetration": 180,
     "OverpenetrationDamageMultiplier": 1,
-    "ComponentSearchDistance": 15,
+    "MaxPenetrationDepth": null,
     "HeatDamage": 500,
     "DamageBrushSize": 2,
     "ComponentDamage": 300,

@@ -1,0 +1,21 @@
+{
+  "MunitionName": "EA99 Active Decoy",
+  "Description": "A more advanced radar decoy which features an active component, enabling it to seduce chaff-discriminant and anti-radiation missiles by emitting its own radar signals which mimic those of ship-based radars.\n\nThe EA99 decoy requires a known missile threat in order to determine its optimal fly-out direction to maximize probability of seduction.  These decoys cannot be dumb-fired like chaff and flares.\n\nSize: 1\nCruise Speed: 20 m/s\nRange: 600 m\n\n<b>Decoy Capabilities:</b>\nSignatures:\n   - <color=#4CFF72>RADAR</color>\n   - PSV <color=#4CFF72>RADAR</color>\nRequires Target: Yes\nTTGI Autofire: 15\nRefire Time: 20\n\n<i><color=#FFEF9E>Codename \"Conure\", I can't tell you much about these, most of their system are classified and I only know basic operation when I have to service them.  They have a small propellant charge in the base and an impressively complex radar emitter in that fuselage. Once it activates, it'll steer away from the ship and deploy its emitter bars.\n\nJust a heads up, though, these have an insane amount of signature output and you can bet once it's used, anything in the Battlespace will be able to see it.\n\n- I. Parker, CMC</color></i>",
+  "Type": "Missile",
+  "SimMethod": "Spawned",
+  "Role": "None",
+  "PointCost": 4,
+  "PointDivision": 1,
+  "StorageVolume": 4,
+  "SupportsPositionTargeting": true,
+  "PositionTargetingNoInput": false,
+  "SupportsTrackTargeting": true,
+  "SupportsVisualTargeting": false,
+  "SupportsWaypoints": false,
+  "FlightSpeed": 20,
+  "Lifetime": 30,
+  "MaxRange": 600,
+  "ShellMunitionData": null,
+  "MissileData": null,
+  "DamageCharacteristics": null
+}

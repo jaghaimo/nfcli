@@ -14,12 +14,10 @@
   "ArmorThickness": 30,
   "MaxComponentDR": 0.2,
   "CrewVulnerability": 0.25,
-  "MaxRadar": 11727.543,
-  "MinRadar": 3288.50732,
   "IdentityWorkValue": 200,
   "BaseCrewComplement": 75,
   "VisionDistance": 2500,
-  "EditorFormatHullBuffs": null,
+  "EditorFormatHullBuffs": "Missile Programming Channels: <color=#4CFF72>+2 </color>\n",
   "SignatureData": [
     {
       "x": -0.5257311,

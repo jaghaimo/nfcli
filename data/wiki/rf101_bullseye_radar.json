@@ -48,7 +48,6 @@
   "SensorComponentData": null,
   "FireControlData": {
     "SigType": "Radar",
-    "OperatingFreq": "X",
     "MaxRange": 9000,
     "RadiatedPower": 1500,
     "Gain": 80,

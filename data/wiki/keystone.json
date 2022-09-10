@@ -2,7 +2,7 @@
   "ClassName": "Keystone",
   "HullClassification": "Destroyer",
   "LongDescription": "Destroyers are typically medium-weight specialized warships, equipped with a generous amount of armor and utility space to fulfill specific roles. The Keystone, in particular, can equip spinal weapons fixed to the bow, often giving the ship deadly efficiency to punch above its weight class.",
-  "FlavorText": "Nobody cares about this but me, but the Keystone-class Destroyer is just an up-sized Raines with an oversized reactor bay and about half of the bow gutted to fit its spinal weapon. The early-model Keystone (yes, named after *that* Keystone) was one of those ill-advised engineering mishaps where nobody knew what they were doing.\n\nBack then, the Keystone was called the Thatcher-class and it just wasn't very good. It was undergunned, far too slow for its hull class, and had some of the most inefficient cost overruns ever seen by that point. It had its uses as an exploration vessel and intimidating non-Alliance locals but it just didn't have good marks to be a mainline warship. Cass Keystone- the very same- was becoming ever more frustrated with her own Thatcher-class that she took matters into her owns hands. She rolled up into New Cydonia, strong-armed her way into the Naval Office, and nearly made a fistfight break out with her \"firm\" way of making demands.\n\nI want to say that they spent maybe five hours trying to talk down Keystone, but in the end, she managed to convince the Office to at least try putting a Mass Driver on the bow. The rest is history. If anything, Keystone could turn the lowliest vessel into a deadly weapon and many still hold her as a revolutionary of Alliance naval doctrine, and trust me, her namesake delivers.\n\n- T. Meadows, LT",
+  "FlavorText": "Sam Keystone- there's a name you won't be seeing in the coming days- is responsible for coming up with the modern day Keystone-class. Nobody cares about this but me, but the Keystone-class Destroyer is just an up-sized Raines with an oversized reactor bay and about half of the bow gutted to fit its spinal weapon. The earlier model was one of those ill-advised engineering mishaps where nobody knew what they were doing, just the usual thing with the Naval Office.\n\nFor the record, it was known as the Thatcher-class and it just wasn't very good. It was undergunned, far too slow for its hull class, and had some of the most inefficient cost overruns ever seen by that point, a real piece of work that would have made Winchester declare martial law from how utterly furious he would have been. t had its uses as an exploration vessel and intimidating non-Alliance locals but it just didn't have good marks to be a mainline warship until Sam nearly made a fistfight break out on Boardman when she marched into the Naval Office and firmly demanded a trial run with the Mk550 Mass Driver. We all know what happened tafter that.\n\nIf anything, Sam could turn the lowliest vessel into a deadly weapon and many still hold her as a revolutionary of Alliance naval doctrine, and trust me, her namesake delivers.\n\n- T. Meadows, LT",
   "SizeClass": "Medium",
   "PointCost": 200,
   "Mass": 8095,
@@ -14,12 +14,10 @@
   "ArmorThickness": 22,
   "MaxComponentDR": 0.1,
   "CrewVulnerability": 0.45,
-  "MaxRadar": 6281.85352,
-  "MinRadar": 2144.88623,
   "IdentityWorkValue": 200,
   "BaseCrewComplement": 50,
   "VisionDistance": 2500,
-  "EditorFormatHullBuffs": "Overheat Damage Chance (Beam): <color=#4CFF72>-75%</color>\n",
+  "EditorFormatHullBuffs": "Overheat Damage Chance (Beam): <color=#4CFF72>-75%</color>\nPowerplant Efficiency: <color=#4CFF72>+25%</color>\nMissile Programming Channels: <color=#4CFF72>+1 </color>\n",
   "SignatureData": [
     {
       "x": -0.5257311,

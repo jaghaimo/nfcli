@@ -1,6 +1,6 @@
 {
   "ComponentName": "Mk61 Cannon",
-  "LongDescription": "The Mk.61 is a light cannon, offering great accuracy at medium range and can provide good, steady firepower against targets that fit its intended weight class, such as destroyers, frigates, and corvettes. \n\nAs expected, however, the performance of the Mk61 falls dramatically when tasked against heavier warships and massed guns are often required to remotely dent heavy hull armor. Fires 120mm chemical-ballistic shells.",
+  "LongDescription": "The Mk.61 is a light cannon, offering great accuracy at medium range and can provide good, steady firepower against targets that fit its intended weight class, such as destroyers, frigates, and corvettes. \n\nAs expected, however, the performance of the Mk61 falls dramatically when tasked against heavier warships and massed guns are often required to remotely dent heavy hull armor. Fires 120mm chemical-ballistic shells.\n\nThe Mk61 and Mk62 also feature a specially designed dual-purpose control computer allowing them to be automatically assigned to incoming missile threats, provided the gun is not already assigned another target and the correct ammunition is available.",
   "FlavorText": "About as simple as you can get when it comes to Alliance naval ballistics. The Naval Office pulled the gun off the NAV-9 tank, threw on an autoloader, gave it some new housing, and called it a day. To would-be pirates, these things are a death sentence because they have just enough firepower to vaporize a bulkhead, and that's not counting the proximity fused shells.\n\nBut put this up against anything bigger than a destroyer and you'll quickly find out why the Alliance always prefer the big stuff.\n\n- T. Meadows, LT",
   "Category": "Weapons - Projectile",
   "Type": "Surface",
@@ -36,7 +36,7 @@
     "PositionTargetingNoInput": false,
     "SupportsTrackTargeting": true,
     "SupportsVisualTargeting": true,
-    "SupportsTargetReferencePoints": false
+    "SupportsWaypoints": false
   },
   "WeaponComponentData": {
     "OptimalTargetWeight": "Medium",
@@ -54,8 +54,8 @@
   "ContinuousWeaponComponentData": null,
   "DiscreteWeaponComponentData": {
     "TimeBetweenMuzzles": 1,
-    "MagazineSize": 2,
-    "ReloadTime": 10
+    "MagazineSize": 1,
+    "ReloadTime": 5.5
   },
   "CellLauncherComponentData": null,
   "TubeLauncherComponentData": null,
@@ -165,8 +165,8 @@
   "SensorTurretComponentData": null,
   "TurretedContinuousWeaponComponentData": null,
   "TurretedDiscreteWeaponComponentData": {
-    "TraverseRate": 20,
-    "ElevationRate": 20,
+    "TraverseRate": 35,
+    "ElevationRate": 35,
     "MaxElevation": 70,
     "MinElevation": -5
   },

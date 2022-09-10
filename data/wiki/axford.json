@@ -2,7 +2,7 @@
   "ClassName": "Axford",
   "HullClassification": "Heavy Cruiser",
   "LongDescription": "Heavy cruisers are slow, heavily armored, and armed to take on multiple targets as the situation dictates. The Axford-class is no different, with heavy sloped armor and dual Class 4 weapon mounts, with a single Class 5 mount for heavy fire support.",
-  "FlavorText": "The Axford-class has been a turbulent mainstay of the Alliance fleet, seeing countless battle in the Battlespace and in the Naval Office. During the Argos Trials, the current head of the Naval Office- at the time being Admiral Arke Winchester- would attempt every month to have the Axford struck from the development quotas citing high costs and \"an aura of complacency\". Whatever his reasoning, the Axford's well-deserved combat legacy has cemented a venerable position in the Fleets, one I am pleased to still manufacture.\n\nThe modern Axford is a venerable force to be reckoned with in the Battlespace, providing a heavy tactical punch into opposing taskgroups with its thick armor and heavy weapon mounts, the heaviest of which being the ventral Class 5 mount. Typically specialized for frontline combat, the Axford is often seen as a flagship in offensive fleets, sporting 450mm guns for generalist combat or railguns for destroying heavily-armored targets. Unfortunately, the Axford's slow speed and poor point-defense placement require it to rely on allied warships for protection.\n\nFor most crews, the presence of an Axford is enough to inspire a reckless sense of invulnerability, a fact that has come to be feared by would-be pirates and the OSP alike, and I would not have it any other way.\n\n- F. Autumns, CEO, Falke-Tethys Drive Yards",
+  "FlavorText": "A modern force of nature, as one should expect from the Alliance Naval Office. While certainly not as old as the Raines, the Axford has become a posterchild of the Shelter Alliance, meaning its predecessor the Ocello-class is treated by the ANO as something considered a humiliating design, which is a ridiculous stance to have. The Ocello was a blight upon the the enemy during the Deshima Blitz and it served with distinction.\n\nNow it's being commandeered by the OSP after defectors ran off with archived schematics and access keys to the mothballed fleets. Whatever the enemy, however, the Axford will be there to meet them with its heavyweight punch and the engineering of my shipyards.\n\n- F. Autumns, CEO, Falke-Tethys Drive Yards",
   "SizeClass": "Heavy",
   "PointCost": 600,
   "Mass": 13140,
@@ -14,12 +14,10 @@
   "ArmorThickness": 40,
   "MaxComponentDR": 0.4,
   "CrewVulnerability": 0.25,
-  "MaxRadar": 14332.5,
-  "MinRadar": 4534.95,
   "IdentityWorkValue": 200,
   "BaseCrewComplement": 90,
   "VisionDistance": 2500,
-  "EditorFormatHullBuffs": null,
+  "EditorFormatHullBuffs": "Missile Programming Channels: <color=#4CFF72>+2 </color>\n",
   "SignatureData": [
     {
       "x": -0.5257311,

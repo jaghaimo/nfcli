@@ -1,22 +1,22 @@
 {
-  "ComponentName": "Mk90 'Aurora' PDT",
-  "LongDescription": "A tactical laser system utilizing a pulsed laser that provides unrivaled long-range point defense, highly effective against missiles and personal craft. While accurate, the weapon requires immense reserves of power and can have its own fire-control system jammed.",
-  "FlavorText": "The Mk.90 Aurora is the go-to solution for point defense, accept no substitutes, but that isn't going to make me accept it in my life. Don't get me wrong, I love the hardware as much as anybody, but when you have what is obviously a notorious arms procurement goat-rope, you have to start questioning \"is it worth it?\"\n\nUnfortunately, yes it is.  There's nothing that can match the Aurora in efficiency and range, but don't ever don't ever mention the cost overruns that came around during the Aurora's development, especially around Naval Office personnel or the Admiralty. It might be easy (if costly) to manufacture these days and every warship eventually gets the Aurora upgrade package, but it's still one of those sore spots in the finance books.\n\n- T. Meadows, LT",
+  "ComponentName": "Mk95 'Sarissa' PDT",
+  "LongDescription": "The Mk95 'Sarissa' is the Alliance's answer to the difficulty of hitting modern multi-stage missiles after the sprint vehicle separates.  This long-range point defense system allows individual missiles to be engaged at extreme range, before they are able to enter their terminal sprint phase and are thus easy pickings.\n\nThis weapon fires a miniscule projectile at high velocities which can easily destroy an unprotected target like a missile.  Unfortunately, the small size means the projectile will simply vaporize against the armored hull of a warship and cause minimal damage.",
+  "FlavorText": "Pride of Winchester's personal engineering bureau, so that should give you an idea of how utterly expensive it was to produce and how many development teams were slated for 'rotation' out into the Vacation Planet after the usual Naval Office troubles. The Sarissa is pretty new when you compare it to the other options on the roster, but that isn't going to stop the Brass from deploying it in spades.\n\n\nThis is a case where a simple idea on paper- a coilgun firing cases of crunched up tungsten- becomes an engineering nightmare and nobody has any idea what they're doing or how to actually service it, but damn it, we'll try. Even with the shotgun-style sabot cans, the long-range potential here just cannot be beat, even by the Aurora's standards. Not the fastest rate of fire in class, but that's not really a problem when you got the range advantage.\n\n\n- T. Meadows, LT",
   "Category": "Weapons - Point Defense",
   "Type": "Surface",
   "CompoundingCost": false,
   "CompoundingMultiplier": 1,
-  "CompoundingCostClass": "Mk90 'Aurora' PDT",
+  "CompoundingCostClass": "Mk95 'Sarissa' PDT",
   "FirstInstanceFree": false,
-  "PointCost": 55,
-  "Mass": 3,
+  "PointCost": 65,
+  "Mass": 7,
   "Size": {
-    "x": 2,
+    "x": 3,
     "y": 1,
-    "z": 2
+    "z": 3
   },
   "CanTile": false,
-  "MaxHealth": 100,
+  "MaxHealth": 150,
   "Reinforced": false,
   "FunctioningThreshold": 10,
   "DamageResistance": 15,
@@ -28,48 +28,43 @@
   "FormattedBuffs": "",
   "IWeaponData": {
     "WepType": "Turret",
-    "OptimalTargetWeight": "Light",
+    "OptimalTargetWeight": "Medium",
     "PDTTargetMethod": "Direct",
-    "NeedsExternalAmmoFeed": false,
-    "SupportsAmmoSelection": false,
+    "NeedsExternalAmmoFeed": true,
+    "SupportsAmmoSelection": true,
     "SupportsPositionTargeting": true,
     "PositionTargetingNoInput": false,
     "SupportsTrackTargeting": true,
-    "SupportsVisualTargeting": false,
+    "SupportsVisualTargeting": true,
     "SupportsWaypoints": false
   },
   "WeaponComponentData": {
-    "OptimalTargetWeight": "Light",
+    "OptimalTargetWeight": "Medium",
     "AllowGrouping": false,
     "GroupingName": "",
     "IsPointDefense": true,
     "IsEW": false,
     "CheckFriendlyFire": true,
     "CheckObstaclesInWay": true,
-    "RequireExternalAmmoFeed": false,
-    "AllowAmmoSelection": false,
-    "LeadTargets": false,
-    "OnTargetAngle": 1
+    "RequireExternalAmmoFeed": true,
+    "AllowAmmoSelection": true,
+    "LeadTargets": true,
+    "OnTargetAngle": 0.075
   },
-  "ContinuousWeaponComponentData": {
-    "BurstDuration": 1.8,
-    "CooldownTime": 3.4,
-    "CooldownStyle": "Gradual",
-    "GradualCooldownSpeed": 0.2,
-    "BattleshortAvailable": true,
-    "OverheatDamageProbability": 0.4,
-    "OverheatDamagePerSecond": 14,
-    "SingleCycleOrder": false
+  "ContinuousWeaponComponentData": null,
+  "DiscreteWeaponComponentData": {
+    "TimeBetweenMuzzles": 1,
+    "MagazineSize": 1,
+    "ReloadTime": 8
   },
-  "DiscreteWeaponComponentData": null,
   "CellLauncherComponentData": null,
   "TubeLauncherComponentData": null,
   "FixedContinuousWeaponComponentData": null,
   "MuzzleData": {
-    "MaxRange": 3000,
-    "SimMethod": "Hitscan",
-    "IgnoreAccuracyModifiers": true,
-    "BaseAccuracy": 0.01,
+    "MaxRange": null,
+    "SimMethod": "Spawned",
+    "IgnoreAccuracyModifiers": false,
+    "BaseAccuracy": 0.025,
     "AccuracyData": [
       {
         "Range": 0,
@@ -77,504 +72,88 @@
       },
       {
         "Range": 1000,
-        "Spread": 0.34906584
+        "Spread": 0.8726648
       },
       {
         "Range": 2000,
-        "Spread": 0.6981317
+        "Spread": 1.74532962
       },
       {
         "Range": 3000,
-        "Spread": 1.04719746
+        "Spread": 2.61799455
       },
       {
         "Range": 4000,
-        "Spread": 1.39626336
+        "Spread": 3.49065924
       },
       {
         "Range": 5000,
-        "Spread": 1.74532914
+        "Spread": 4.363324
       },
       {
         "Range": 6000,
-        "Spread": 2.094395
+        "Spread": 5.235989
       },
       {
         "Range": 7000,
-        "Spread": 2.443461
+        "Spread": 6.108654
       },
       {
         "Range": 8000,
-        "Spread": 2.79252672
+        "Spread": 6.98131847
       },
       {
         "Range": 9000,
-        "Spread": 3.1415925
+        "Spread": 7.853984
       },
       {
         "Range": 10000,
-        "Spread": 3.49065828
+        "Spread": 8.726648
       },
       {
         "Range": 11000,
-        "Spread": 3.8397243
+        "Spread": 9.599313
       },
       {
         "Range": 12000,
-        "Spread": 4.18879
+        "Spread": 10.4719782
       },
       {
         "Range": 13000,
-        "Spread": 4.537856
+        "Spread": 11.3446426
       },
       {
         "Range": 14000,
-        "Spread": 4.886922
+        "Spread": 12.217308
       },
       {
         "Range": 15000,
-        "Spread": 5.23598766
+        "Spread": 13.0899725
       },
       {
         "Range": 16000,
-        "Spread": 5.58505344
+        "Spread": 13.9626369
       },
       {
         "Range": 17000,
-        "Spread": 5.934119
+        "Spread": 14.8353024
       },
       {
         "Range": 18000,
-        "Spread": 6.283185
+        "Spread": 15.7079678
       },
       {
         "Range": 19000,
-        "Spread": 6.63225126
+        "Spread": 16.5806313
       },
       {
         "Range": 20000,
-        "Spread": 6.98131657
+        "Spread": 17.4532967
       }
     ]
   },
-  "RaycastDamageCharacteristicData": {
-    "ArmorPenetration": 15,
-    "OverpenetrationDamageMultiplier": 1,
-    "MaxPenetrationDepth": null,
-    "HeatDamage": 0,
-    "DamageBrushSize": 0.5,
-    "ComponentDamage": 40,
-    "RandomEffectMultiplier": 0.2,
-    "CrewVulnerabilityMultiplier": 1,
-    "IgnoreEffectiveThickness": false,
-    "NeverRicochet": true
-  },
-  "RaycastDamageFalloffData": [
-    {
-      "Range": 0,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 30,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 60,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 90,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 120,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 150,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 180,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 210,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 240,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 270,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 300,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 330,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 360,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 390,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 420,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 450,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 480,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 510,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 540,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 570,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 600,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 630,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 660,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 690,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 720,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 750,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 780,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 810,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 840,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 870,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 900,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 930,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 960,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 990,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 1020,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 1050,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 1080,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 1110,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 1140,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 1170,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 1200,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 1230,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 1260,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 1290,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 1320,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 1350,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 1380,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 1410,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 1440,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 1470,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 1500,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 1530,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 1560,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 1590,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 1620,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 1650,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 1680,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 1710,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 1740,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 1770,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 1800,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 1830,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 1860,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 1890,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 1920,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 1950,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 1980,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 2010,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 2040,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 2070,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 2100,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 2130,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 2160,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 2190,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 2220,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 2250,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 2280,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 2310,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 2340,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 2370,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 2400,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 2430,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 2460,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 2490,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 2520,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 2550,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 2580,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 2610,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 2640,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 2670,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 2700,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 2730,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 2760,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 2790,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 2820,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 2850,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 2880,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 2910,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 2940,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 2970,
-      "DamageModifier": 1
-    },
-    {
-      "Range": 3000,
-      "DamageModifier": 1
-    }
-  ],
+  "RaycastDamageCharacteristicData": null,
+  "RaycastDamageFalloffData": null,
   "CommsAntennaComponentData": null,
   "OmnidirectionalEWarComponentData": null,
   "TurretedEWarComponentData": null,
@@ -583,10 +162,10 @@
   "SensorComponentData": null,
   "FireControlData": {
     "SigType": "Radar",
-    "MaxRange": 3250,
-    "RadiatedPower": 750,
-    "Gain": 40,
-    "ApertureSize": 10,
+    "MaxRange": 6250,
+    "RadiatedPower": 1250,
+    "Gain": 70,
+    "ApertureSize": 20,
     "NoiseFiltering": 0,
     "LockErrorMultiplier": 1,
     "MaintainLockSNR": 0.05,
@@ -999,21 +578,19 @@
   },
   "IEWarTargetData": null,
   "SensorTurretComponentData": null,
-  "TurretedContinuousWeaponComponentData": {
-    "TraverseRate": 100,
-    "ElevationRate": 100,
-    "MaxElevation": 85,
-    "MinElevation": -5,
-    "LimitRotationSpeedWhenFiring": false,
-    "FiringRotationSpeedModifier": 1
+  "TurretedContinuousWeaponComponentData": null,
+  "TurretedDiscreteWeaponComponentData": {
+    "TraverseRate": 30,
+    "ElevationRate": 30,
+    "MaxElevation": 65,
+    "MinElevation": -5
   },
-  "TurretedDiscreteWeaponComponentData": null,
   "IIntelComponentData": null,
   "CommandComponentData": null,
   "IntelligenceComponentData": null,
   "BerthingComponentData": null,
   "CrewOperatedComponentData": {
-    "CrewRequired": 0,
+    "CrewRequired": 4,
     "ReinforceCrewAt": -1
   },
   "DCLockerComponentData": null,

@@ -2,7 +2,7 @@
   "ClassName": "Raines",
   "HullClassification": "Frigate",
   "LongDescription": "The Alliance Raines-class is a solid all-around warship, boasting 4 mount points and a generous swath of internal modules and compartments. In terms of overall performance, the Raines has moderate armoring, speed, and agility, while being able to function as a jack-of-trades warship.",
-  "FlavorText": "The Raines-class has been around forever and it's probably never going to be replaced. You might think that would put it at a disadvantage since it's a design that's older than the Axford-class, but you would be hard-pressed to find anything more essential than this. Its predecessor, the Mason-class, wasn't doing so hot when the Naval Office, fresh from a successful upgrades package for the Axford, convinced the Admiralty to approve a replacement for the gun frigate. It didn't take long before the Raines-class Frigate floated out of the shipyard with it's olive drab hull and bone-white trim.\n\nAt the same time, the War Office's new SGM-series of cruise missiles entered the arsenal which immediately found itself put into the Raines' VLS modules, turning the gun frigate into the now-standard Guided Missile Frigate. Raines can take any kind of configuration- even their old gun profile- but coming up against a stand-off frigate is probably the most deadly. Not only is it packing the Alliance's most deadliest (excluding the Mace) anti-ship cruise missile to date, they usually come with Bullseye FCRs to make sure everybody can hit you. Performance-wise, Raines-class frigates are a middle-ground of durability, agility, and firepower, a nice trifecta.\n\nRaines are usually the go-to patrol warship and the most common you'll see in Alliance space, but in combat, they hover around Vauxhalls and Axfords, waiting for the moment that armor cracks open to lay in a volley of SGMs. Like the saying goes, \"When it Raines, it pours.\" Ugh, what a terrible phrase.\n\n- T. Meadows, LT",
+  "FlavorText": "Been around since before I was even born, hell, probably before Constantine. The Raines has been around forever and you'd think that Winchester would look at this thing with contempt, but it should say something that even he respects the humble frigate.\n\nA nice trifecta of utility, speed, and armoring, but don't count on it doing any of the heavy lifting. The Naval Office likes its jack-of-trades but are smart enough to know that trying to make it do everything is going to make the Raines wind up like its predecessor, the Mason-class, sitting in bureaucratic hell before getting scrapped. The Raines doesn't have to do its job any better than it's already doing, it just has to look good in the AARs. Let the missiles do the hard work.\n\n- T. Meadows, LT",
   "SizeClass": "Medium",
   "PointCost": 125,
   "Mass": 5095,
@@ -14,12 +14,10 @@
   "ArmorThickness": 15,
   "MaxComponentDR": 0.05,
   "CrewVulnerability": 0.6,
-  "MaxRadar": 3783.00024,
-  "MinRadar": 1209,
   "IdentityWorkValue": 200,
   "BaseCrewComplement": 50,
   "VisionDistance": 2500,
-  "EditorFormatHullBuffs": "Flank Damage Probability: <color=#4CFF72>-15%</color>\n",
+  "EditorFormatHullBuffs": "Flank Damage Probability: <color=#4CFF72>-15%</color>\nMissile Programming Channels: <color=#4CFF72>+1 </color>\n",
   "SignatureData": [
     {
       "x": -0.5257311,

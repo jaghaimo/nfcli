@@ -106,8 +106,9 @@ class Hull(Entity):
         self.base_integrity: int = raw_data["BaseIntegrity"]
         self.armour_thickness: int = raw_data["ArmorThickness"]
         self.component_damage_resistance: int = raw_data["MaxComponentDR"] * 100
-        self.max_radar: float = raw_data["MaxRadar"]
-        self.min_radar: float = raw_data["MinRadar"]
+        radar_data = [data["value"] for data in raw_data["SignatureData"]]
+        self.max_radar: float = max(radar_data)
+        self.min_radar: float = min(radar_data)
         self.vision_distance: int = raw_data["VisionDistance"]
         self.identity_work_value: int = raw_data["IdentityWorkValue"]
         self.hull_buffs: str = raw_data["EditorFormatHullBuffs"]

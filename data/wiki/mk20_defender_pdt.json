@@ -1,7 +1,7 @@
 {
   "ComponentName": "Mk20 'Defender' PDT",
   "LongDescription": "The Mk20 sprays thousands of 20mm slugs at approaching threats, typically missiles, so long as the weapon is supplied sufficient ammunition. Its integrated Fire Control allows it to lock onto targets independently, but still requires cueing from the host warship's search sensors.\n\nDespite its high rate of fire and accuracy, the weapon is not effective against any warship-type targets.",
-  "FlavorText": "One of the finest ship-based weapon systems we've still got in service since the Divide. When it comes to anti-missile solutions, look no further than the Mk.20 Defender, your typical CIWS. Ask any of the fellas who got out alive during the Divide and they'll tell you that the Mk25 Rebound is a much safer option, but that's because most Fleet boys have bias towards your typical flak defense gun. Sure, the Rebound doesn't have its own integrated FCS or target priority software and it definitely can't determine angle-to-velocity calculations like the Defender, but when you see that wall of explosions covering your field-of-fire, it's enough to get anybody riled up. At least, until the Defender started to become standard point-defense across the fleets.\n\nIt devours ammunition and sustained fire with these is going to chew through the magazines faster than you can say \"fire everything\". Recently, these have been seeing action in asteroid belts, set up on special base-mounts attached to small rocks to blast at any would-be pirates. Has a nasty habit of turning anything metal into a fine mist, just a terrible waste of potential salvage. But at the end of the day, the Defender is a distinctive weapon of the fleets, rightly feared.\n\n- T. Meadows, LT",
+  "FlavorText": "Should say something that our Claymores use these for dogfighting and the Marines have them set up for perimeter defense on the Vacation Planet. One burst from a Defender will vaporize anything below warship-grade armor, just a terrible waste of salvage. The old guard of the Alliance will always grumble about the Defender but they'll never deny the raw stopping power of a second-long burst from these.\n\nIt devours ammunition and sustained fire with these is going to chew through the magazines faster than you can say \"Graznovia\". On the off-chance that a pirate crew manages to get one of these and the ammunition to match, you can bet they'll be considered threat level red so long as they have them parked on their hull.\n\n- T. Meadows, LT",
   "Category": "Weapons - Point Defense",
   "Type": "Surface",
   "CompoundingCost": false,
@@ -27,7 +27,7 @@
   "ResourceDemandPriority": "High",
   "FormattedBuffs": "",
   "IWeaponData": {
-    "WepType": "PointDefense",
+    "WepType": "Turret",
     "OptimalTargetWeight": "Light",
     "PDTTargetMethod": "Direct",
     "NeedsExternalAmmoFeed": true,
@@ -36,7 +36,7 @@
     "PositionTargetingNoInput": false,
     "SupportsTrackTargeting": true,
     "SupportsVisualTargeting": false,
-    "SupportsTargetReferencePoints": false
+    "SupportsWaypoints": false
   },
   "WeaponComponentData": {
     "OptimalTargetWeight": "Light",
@@ -167,10 +167,9 @@
   "SensorComponentData": null,
   "FireControlData": {
     "SigType": "Radar",
-    "OperatingFreq": "X",
-    "MaxRange": 1750,
-    "RadiatedPower": 300,
-    "Gain": 40,
+    "MaxRange": 2500,
+    "RadiatedPower": 800,
+    "Gain": 45,
     "ApertureSize": 3,
     "NoiseFiltering": 0,
     "LockErrorMultiplier": 1,

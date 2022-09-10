@@ -1,7 +1,7 @@
 {
   "ComponentName": "Mk82 Railgun",
-  "LongDescription": "The Mk.82 provides an extra rail, giving the attached warship double the anti-ship firepower. However, because of the higher need for a dedicated power line to combat the incredibly slow recharge time, the Mk.82 requires even larger amounts of reactor power and crew to properly function. Fires 300mm magnetic rounds.",
-  "FlavorText": "When the Mk81 took off, the Naval Office immediately started talking about improving on the railgun, especially since the after-action reports described the Mk81 being one of the most deadly weapons to be developed since the Mk62. Only problem was that it's- understandably- quite expensive to produce in-house, so the Naval Office turned to a third-party.\n\nThe initial design was such a complete and utter failure that the entire team was pulled from the project and the company slated for \"liquidation\" before the weapon was given to Falke-Tethys and thus, the Mk82 was put into service after a three-year development time and has since become a symbol of Alliance strength. Doesn't seem to stop the OSP, though.\n\n- T. Meadows, LT",
+  "LongDescription": "The Alliance Mk8X Railgun provides a heavy warship with long-range direct-fire offensive ability, intended to pressure targets caught out in open space and foregoing cover. Alliance railguns typically lack the explosive power of their favored cannon weapons but make up for it with precision fire that can trigger fires and other debilitating effects on targets.\n\nThis model of the 8X is equipped with an additional rail at the cost of recharge time and power draw. Fires 300mm Magnetic rounds.",
+  "FlavorText": "I remember reading a report about an \"attempt\" to make a tri-railed battery but it turns out that the coils were so close to each other by that point that it would send the shells forward and then launch them back into the turret at Mach 6, completely blowing out the back because of the reversing frequencies.\n\nNaval Office wasn't happy, neither was the War Office when they got issued the field tests during the Deshima Blitz and lost a whole battery, a lot of expletives and a busted jaw on Naval Office guy, that part's a little spotty.\n\n- T. Meadows, LT",
   "Category": "Weapons - Projectile",
   "Type": "Surface",
   "CompoundingCost": false,
@@ -36,7 +36,7 @@
     "PositionTargetingNoInput": false,
     "SupportsTrackTargeting": true,
     "SupportsVisualTargeting": true,
-    "SupportsTargetReferencePoints": false
+    "SupportsWaypoints": false
   },
   "WeaponComponentData": {
     "OptimalTargetWeight": "Heavy",

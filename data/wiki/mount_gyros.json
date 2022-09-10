@@ -1,7 +1,7 @@
 {
   "ComponentName": "Mount Gyros",
   "LongDescription": "Equips a warship's turreted weapons with self-correcting gyroscopic rings, improving turret traversal speed and increasing overall accuracy.",
-  "FlavorText": "Contrary to popular belief, these will not make a turret rotate against the warship's current angle. Instead, it steadies the gun during sudden shifts in the engine speed and shocks from weapon impacts.\n\nOverall, a valuable asset for any direct-fire warship, especially those with cannons or railguns.\n\n- S. Ace, CWO",
+  "FlavorText": "Contrary to popular belief, these will not make a turret rotate against the warship's current angle. Instead, it steadies the gun during sudden shifts in the engine speed and shocks from weapon impacts.\n\nOverall, a valuable asset for any direct-fire warship, especially those with cannons or railguns.\n\n- I. Parker, CMC",
   "Category": "Weapon Support",
   "Type": "Module",
   "CompoundingCost": false,

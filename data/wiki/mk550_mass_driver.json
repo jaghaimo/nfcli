@@ -1,7 +1,7 @@
 {
   "ComponentName": "Mk550 Mass Driver",
-  "LongDescription": "The Mk550 is a bow-mounted mass driver specially designed for the Keystone-class, allowing the latter to provide long range precision fire in 3-round bursts, a feat typically found on railgun-equipped cruisers. Fires 300mm magnetic rounds.",
-  "FlavorText": "Mass Drivers are typically used by mining vessels, firing seismic payloads into asteroids to shatter them into manageable chunks. But back during the Guild Riots of '34, rioting miners decided to swap over to tungsten bars which just so happened to have the same kinetic properties of Mk81 ammunition, so a team of disgruntled rock-wranglers shanghaied an entire station's worth of tungsten and, within a few weeks, started using them on Alliance flotillas to turn them into slag.\n\nSince mass drivers can have magazines and a dedicated power line to a ship's reactor, the miners were able to lay down far more firepower and outgun our own railguns, which made the Naval Office- as expected- furious. Thanks to Keystone, though, they got their answer with the Mk550 Mass Driver and found that the humble Keystone-class could dominate the battlespace without having to be in the frontline. Now it's standard issue for every Keystone and when you see those rails jutting out of the bow, you can rest assured knowing that it'll be fire at some point in its career.\n\n- T. Meadows, LT\n",
+  "LongDescription": "The Mk550 is a bow-mounted mass driver specially designed for the Keystone-class, allowing the latter to provide long range precision fire in 3-round bursts, a feat typically found on railgun-equipped cruisers. Fires 300mm Magnetic rounds.",
+  "FlavorText": "Back during the Guild Riots, a team of rioting rockwranglers shanghaied an entire station's worth of ore, melted them down into superalloy rods, and then had a hell of a time of firing them out of their mass drivers to turn Alliance hulls into molten slag. Naval Office was furious.\n\nCaptain Sam Keystone came up with the idea of turning this around on them and outfitted her own destroyer with a captured mass driver. Didn't take long until the AARs started to show more miner vessels lost compared to Alliance ships. The rest is history.\n\n- T. Meadows, LT",
   "Category": "Weapons - Spinal",
   "Type": "Surface",
   "CompoundingCost": false,
@@ -36,7 +36,7 @@
     "PositionTargetingNoInput": false,
     "SupportsTrackTargeting": true,
     "SupportsVisualTargeting": true,
-    "SupportsTargetReferencePoints": false
+    "SupportsWaypoints": false
   },
   "WeaponComponentData": {
     "OptimalTargetWeight": "Heavy",
@@ -55,7 +55,7 @@
   "DiscreteWeaponComponentData": {
     "TimeBetweenMuzzles": 5,
     "MagazineSize": 3,
-    "ReloadTime": 45
+    "ReloadTime": 35
   },
   "CellLauncherComponentData": null,
   "TubeLauncherComponentData": null,

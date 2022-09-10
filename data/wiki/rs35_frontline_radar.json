@@ -47,7 +47,6 @@
   "PassiveSensorComponentData": null,
   "SensorComponentData": {
     "SigType": "Radar",
-    "OperatingFreq": "C",
     "MaxRange": 8000,
     "RadiatedPower": 3500,
     "Gain": 40,

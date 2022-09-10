@@ -1,6 +1,6 @@
 {
   "ComponentName": "Mk62 Cannon",
-  "LongDescription": "Like its single-barreled variant, the Mk62 is a light 120mm naval gun, now sporting an additional gun to provide twice the firepower. Also like the Mk61, the Mk62 is an excellent weapon for tackling warships of its intended weight. However, the additional barrel increases the reload time significantly.\n\nOverall, the Mk62 is identical to its single-barreled variant, with all the strengths and weaknesses as the latter. Fires 120mm chemical-ballistic shells.",
+  "LongDescription": "Like its single-barreled variant, the Mk62 is a light 120mm naval gun, now sporting an additional gun to provide twice the firepower. Also like the Mk61, the Mk62 is an excellent weapon for tackling warships of its intended weight. However, the additional barrel increases the reload time significantly.\n\nOverall, the Mk62 is identical to its single-barreled variant, with all the strengths and weaknesses as the latter. Fires 120mm chemical-ballistic shells.\n\nThe Mk61 and Mk62 also feature a specially designed dual-purpose control computer allowing them to be automatically assigned to incoming missile threats, provided the gun is not already assigned another target and the correct ammunition is available.",
   "FlavorText": "Nothing fancy here, just another barrel on the Mk.61. These are actually standard issue and the Naval Office prefers to equip warships with these when given the choice. Still has the autoloader with a worryingly high rate of crushing your fingers, but that's never stopped most of the new gunnery guys.\n\n- T. Meadows, LT",
   "Category": "Weapons - Projectile",
   "Type": "Surface",
@@ -36,7 +36,7 @@
     "PositionTargetingNoInput": false,
     "SupportsTrackTargeting": true,
     "SupportsVisualTargeting": true,
-    "SupportsTargetReferencePoints": false
+    "SupportsWaypoints": false
   },
   "WeaponComponentData": {
     "OptimalTargetWeight": "Medium",
@@ -54,8 +54,8 @@
   "ContinuousWeaponComponentData": null,
   "DiscreteWeaponComponentData": {
     "TimeBetweenMuzzles": 1,
-    "MagazineSize": 4,
-    "ReloadTime": 12.5
+    "MagazineSize": 1,
+    "ReloadTime": 4
   },
   "CellLauncherComponentData": null,
   "TubeLauncherComponentData": null,
@@ -165,8 +165,8 @@
   "SensorTurretComponentData": null,
   "TurretedContinuousWeaponComponentData": null,
   "TurretedDiscreteWeaponComponentData": {
-    "TraverseRate": 18,
-    "ElevationRate": 20,
+    "TraverseRate": 35,
+    "ElevationRate": 35,
     "MaxElevation": 70,
     "MinElevation": -5
   },

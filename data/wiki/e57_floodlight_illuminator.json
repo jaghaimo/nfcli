@@ -8,7 +8,7 @@
   "CompoundingMultiplier": 1,
   "CompoundingCostClass": "E57 'Floodlight' Illuminator",
   "FirstInstanceFree": false,
-  "PointCost": 30,
+  "PointCost": 15,
   "Mass": 2,
   "Size": {
     "x": 2,
@@ -25,7 +25,7 @@
   "RareDebuffChance": 0.05,
   "FormattedResources": "Power: <color=#FF2525>-1500 kW</color>\n",
   "ResourceDemandPriority": "High",
-  "FormattedBuffs": "Radar Signature: <color=#FF2525>+20%</color>\n",
+  "FormattedBuffs": "Radar Signature: <color=#FF2525>+10%</color>\n",
   "IWeaponData": {
     "WepType": "EWar",
     "OptimalTargetWeight": "Light",
@@ -36,7 +36,7 @@
     "PositionTargetingNoInput": false,
     "SupportsTrackTargeting": true,
     "SupportsVisualTargeting": false,
-    "SupportsTargetReferencePoints": false
+    "SupportsWaypoints": false
   },
   "WeaponComponentData": {
     "OptimalTargetWeight": "Light",

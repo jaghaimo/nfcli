@@ -1,7 +1,7 @@
 {
   "ComponentName": "Mk81 Railgun",
-  "LongDescription": "The Mk81 is the go-to weapon for naval warfare in the Alliance arsenal. As a railgun, the Mk81 provides unrivaled armor penetration, accuracy, range, and muzzle velocity, capable of defeating heavy capital ship armor with ease, but performance falls dramatically on lighter targets as the round will typically overpenetrate and deal little damage.\n\nDespite the strengths of the weapon, the railgun requires an immense amount of power to operate, while the slow recharge and acquisition time makes the weapon nearly impossible to use at close range. Fires 300mm magnetic rounds.",
-  "FlavorText": "Lorentz force weapons have been an Alliance mainstay for some time, from ground vehicles to the Sharpstick for infantry. The Naval Office loves these, can't get enough of them, but mention these to any maintainence crew and you'll work them up into a mouth-frothing frenzy of profanity that it would make an asteroid miner blush.\n\nIn atmosphere, 81s and 82s have this distinct thunderclap muzzle report before ripping out chunks of terrain or whatever the shell hits. Marines and Fleet nickname them Lightningbolts and it's a pretty apt description, if you ask me. In Requisitions, though, the War Office hates it since its popularity with the Naval Office means that any kind of replacement or proposal just ends up getting binned before it even reaches prototype development.\n\n- T. Meadows, LT",
+  "LongDescription": "The Alliance Mk8X Railgun provides a heavy warship with long-range direct-fire offensive ability, intended to pressure targets caught out in open space and foregoing cover. Alliance railguns typically lack the explosive power of their favored cannon weapons but make up for it with precision fire that can trigger fires and other debilitating effects on targets.\n\nRailguns defeat armor with ease but the lack of an explosive payload reduces the killing power of these weapons. Fires 300mm Magnetic rounds.",
+  "FlavorText": "An Alliance favorite, Lorentz force weaponry has been a Naval Office go-to once the Venuma Coalition started slinging tungsten from GTO batteries. Turns out that just throwing really, really hard metal at something is still a viable tactic even in this day and age. Maintenance crews hate these things, though, I don't blame them. Naval Office set up a ridiculous magnetic array and just one misplaced charge coil sends the whole thing out of frequency.\n\nThe shells make a pretty nice sound when they breach atmo, crews have come to nickname the 8X as the \"Lightningbolt\" which is a pretty apt description when you hear the thunderclap from the round snapping into air. In Requisitions, though, the War Office hates it since its popularity with the Naval Office means that any kind of replacement or proposal just ends up getting binned before it even reaches prototype development.\n\n- T. Meadows, LT",
   "Category": "Weapons - Projectile",
   "Type": "Surface",
   "CompoundingCost": false,
@@ -36,7 +36,7 @@
     "PositionTargetingNoInput": false,
     "SupportsTrackTargeting": true,
     "SupportsVisualTargeting": true,
-    "SupportsTargetReferencePoints": false
+    "SupportsWaypoints": false
   },
   "WeaponComponentData": {
     "OptimalTargetWeight": "Heavy",

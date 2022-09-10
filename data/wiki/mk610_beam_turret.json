@@ -8,7 +8,7 @@
   "CompoundingMultiplier": 1,
   "CompoundingCostClass": "Mk610 Beam Turret",
   "FirstInstanceFree": false,
-  "PointCost": 100,
+  "PointCost": 80,
   "Mass": 50,
   "Size": {
     "x": 8,
@@ -23,7 +23,7 @@
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,
-  "FormattedResources": "Power: <color=#FF2525>-3500 kW</color>\n",
+  "FormattedResources": "Power: <color=#FF2525>-3000 kW</color>\n",
   "ResourceDemandPriority": "High",
   "FormattedBuffs": "",
   "IWeaponData": {
@@ -36,7 +36,7 @@
     "PositionTargetingNoInput": false,
     "SupportsTrackTargeting": true,
     "SupportsVisualTargeting": true,
-    "SupportsTargetReferencePoints": false
+    "SupportsWaypoints": false
   },
   "WeaponComponentData": {
     "OptimalTargetWeight": "Superheavy",
@@ -160,7 +160,7 @@
   "RaycastDamageCharacteristicData": {
     "ArmorPenetration": 180,
     "OverpenetrationDamageMultiplier": 1,
-    "ComponentSearchDistance": 15,
+    "MaxPenetrationDepth": null,
     "HeatDamage": 500,
     "DamageBrushSize": 2,
     "ComponentDamage": 300,

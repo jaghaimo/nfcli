@@ -1,29 +1,29 @@
 {
-  "ComponentName": "Mk25 'Rebound' PDT",
-  "LongDescription": "The Mk25 'Rebound' fires short-range 50mm flak rounds, detonating roughly in proximity of the approaching threat, typically missiles or personal craft. As the weapon lacks a Fire Control radar it is entirely reliant on the host warship's sensors.",
-  "FlavorText": "Unusual for the Naval Office to keep something this ancient around for so long, but the Rebound has been a staple of naval warfare ever since the Old Wars. It's cheap, noisy, and definitely great at filling the battlespace with clouds of metal.\n\nIt has only the minimum of hydraulics needed to be considered a turret and very little in the way of a targeting computer that isn't just \"shoot here\", but you don't exactly need to be precise with the Rebound and that makes it a great weapon for colony defense, it's made to be rugged and simple to maintain, so you can take these anywhere and know that your Rebound will always get you through the toughest of times.\n\n- T. Meadows, LT",
+  "ComponentName": "Mk29 'Stonewall' PDT",
+  "LongDescription": "The Mk29 'Stonewall' is an upsized version of its cousin the Rebound.  With its four barrels firing time-fuzed 50mm explosive rounds it can be used to establish defensive perimeters around formations of warships.  As a perimeter weapon, the Stonewall targets entire missile raids at once, seeking to put a wall of explosives between the threat and the defended ship, rather than trying to hit an individual missile.",
+  "FlavorText": "Sort of a generalized term for a box loaded with flak guns, but that's because 'wall' and 'clouds of hot metal' tend to go hand-in-hand with the Naval Office's naming schema. The usual Alliance doctrine for point-defense is two-step: Either kill it from range or, if that fails, kill it with a big wall, hence the 'Stonewall'. A very simple idea, just fill the Battlespace with an impenetrable cloud of fragments.\n\nProbably not the most expensive thing in the Alliance PD roster, but that doesn't mean it's not effective. Adding three cannons to the Rebound means you get flak firepower that would make a Graznovian sweat but the Naval Office decided to skip the chassis upgrade, I mean there's just enough structural support here to barely keep it from shaking itself apart when all four of those guns are firing at high rates. A messy weapon, but one that really gets the morale soaring when they let loose.\n\n- T. Meadows, LT",
   "Category": "Weapons - Point Defense",
   "Type": "Surface",
   "CompoundingCost": false,
   "CompoundingMultiplier": 1,
-  "CompoundingCostClass": "Mk25 'Rebound' PDT",
+  "CompoundingCostClass": "Mk29 'Stonewall' PDT",
   "FirstInstanceFree": false,
-  "PointCost": 20,
-  "Mass": 3,
+  "PointCost": 40,
+  "Mass": 7,
   "Size": {
-    "x": 2,
+    "x": 3,
     "y": 1,
-    "z": 2
+    "z": 3
   },
   "CanTile": false,
-  "MaxHealth": 100,
+  "MaxHealth": 150,
   "Reinforced": false,
   "FunctioningThreshold": 10,
   "DamageResistance": 15,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,
-  "FormattedResources": "Power: <color=#FF2525>-20 kW</color>\n",
+  "FormattedResources": "Power: <color=#FF2525>-40 kW</color>\n",
   "ResourceDemandPriority": "High",
   "FormattedBuffs": "",
   "IWeaponData": {
@@ -49,13 +49,13 @@
     "RequireExternalAmmoFeed": true,
     "AllowAmmoSelection": false,
     "LeadTargets": true,
-    "OnTargetAngle": 1
+    "OnTargetAngle": 5
   },
   "ContinuousWeaponComponentData": null,
   "DiscreteWeaponComponentData": {
-    "TimeBetweenMuzzles": 0.3,
-    "MagazineSize": 15,
-    "ReloadTime": 3
+    "TimeBetweenMuzzles": 0.25,
+    "MagazineSize": 100,
+    "ReloadTime": 0.25
   },
   "CellLauncherComponentData": null,
   "TubeLauncherComponentData": null,
@@ -64,7 +64,7 @@
     "MaxRange": null,
     "SimMethod": "Spawned",
     "IgnoreAccuracyModifiers": true,
-    "BaseAccuracy": 1,
+    "BaseAccuracy": 1.5,
     "AccuracyData": [
       {
         "Range": 0,
@@ -72,83 +72,83 @@
       },
       {
         "Range": 1000,
-        "Spread": 34.9207726
+        "Spread": 52.4077835
       },
       {
         "Range": 2000,
-        "Spread": 69.8415451
+        "Spread": 104.815567
       },
       {
         "Range": 3000,
-        "Spread": 104.762314
+        "Spread": 157.223343
       },
       {
         "Range": 4000,
-        "Spread": 139.68309
+        "Spread": 209.631134
       },
       {
         "Range": 5000,
-        "Spread": 174.603867
+        "Spread": 262.0389
       },
       {
         "Range": 6000,
-        "Spread": 209.524628
+        "Spread": 314.4467
       },
       {
         "Range": 7000,
-        "Spread": 244.4454
+        "Spread": 366.8545
       },
       {
         "Range": 8000,
-        "Spread": 279.36618
+        "Spread": 419.262268
       },
       {
         "Range": 9000,
-        "Spread": 314.286926
+        "Spread": 471.670044
       },
       {
         "Range": 10000,
-        "Spread": 349.207733
+        "Spread": 524.0778
       },
       {
         "Range": 11000,
-        "Spread": 384.128479
+        "Spread": 576.4856
       },
       {
         "Range": 12000,
-        "Spread": 419.049255
+        "Spread": 628.8934
       },
       {
         "Range": 13000,
-        "Spread": 453.970032
+        "Spread": 681.3012
       },
       {
         "Range": 14000,
-        "Spread": 488.8908
+        "Spread": 733.709
       },
       {
         "Range": 15000,
-        "Spread": 523.8116
+        "Spread": 786.1167
       },
       {
         "Range": 16000,
-        "Spread": 558.732361
+        "Spread": 838.524536
       },
       {
         "Range": 17000,
-        "Spread": 593.6531
+        "Spread": 890.9323
       },
       {
         "Range": 18000,
-        "Spread": 628.573853
+        "Spread": 943.3401
       },
       {
         "Range": 19000,
-        "Spread": 663.4946
+        "Spread": 995.7478
       },
       {
         "Range": 20000,
-        "Spread": 698.415466
+        "Spread": 1048.15564
       }
     ]
   },
@@ -165,8 +165,8 @@
   "SensorTurretComponentData": null,
   "TurretedContinuousWeaponComponentData": null,
   "TurretedDiscreteWeaponComponentData": {
-    "TraverseRate": 80,
-    "ElevationRate": 80,
+    "TraverseRate": 30,
+    "ElevationRate": 30,
     "MaxElevation": 89,
     "MinElevation": -5
   },
@@ -175,7 +175,7 @@
   "IntelligenceComponentData": null,
   "BerthingComponentData": null,
   "CrewOperatedComponentData": {
-    "CrewRequired": 3,
+    "CrewRequired": 5,
     "ReinforceCrewAt": -1
   },
   "DCLockerComponentData": null,

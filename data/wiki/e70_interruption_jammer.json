@@ -8,7 +8,7 @@
   "CompoundingMultiplier": 1,
   "CompoundingCostClass": "E70 'Interruption' Jammer",
   "FirstInstanceFree": false,
-  "PointCost": 75,
+  "PointCost": 55,
   "Mass": 5,
   "Size": {
     "x": 3,
@@ -23,7 +23,7 @@
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,
-  "FormattedResources": "Power: <color=#FF2525>-750 kW</color>\n",
+  "FormattedResources": "Power: <color=#FF2525>-600 kW</color>\n",
   "ResourceDemandPriority": "High",
   "FormattedBuffs": "",
   "IWeaponData": {
@@ -36,7 +36,7 @@
     "PositionTargetingNoInput": true,
     "SupportsTrackTargeting": false,
     "SupportsVisualTargeting": false,
-    "SupportsTargetReferencePoints": false
+    "SupportsWaypoints": false
   },
   "WeaponComponentData": {
     "OptimalTargetWeight": "Light",

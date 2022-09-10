@@ -1,0 +1,21 @@
+{
+  "MunitionName": "EA20 Flare Decoy",
+  "Description": "VLS-launched countermeasure that detonates into a number of extremely bright, high-temperature flares which attempt to mimic the hot wake of the ship and draw off heat-seeking missiles.\n\nSize: 1\nCruise Speed: 30 m/s\nRange: 75 m\n\n<b>Decoy Capabilities:</b>\nSignatures:\n   - <color=#FF2525>WAKE</color>\nRequires Target: No\nTTGI Autofire: 20\nRefire Time: 10\n\n<i><color=#FFEF9E>Spectral flares packed into a small cylinder charge, bursts into a cloud of magnesium-teflon flares that used to shine at about a million candela until a canister malfunctioned in a magazine and temporarily blinded Captain Chris Molefe for about a week.\n\nThankfully, space is terrible at venting heat, so these will typically pull any wake-homing munitions off their vectors if you can deploy them in time. Pray the ANO gave your ship a Scryer.\n\n- I. Parker, CMC</color></i>",
+  "Type": "Missile",
+  "SimMethod": "Spawned",
+  "Role": "None",
+  "PointCost": 1,
+  "PointDivision": 1,
+  "StorageVolume": 4,
+  "SupportsPositionTargeting": true,
+  "PositionTargetingNoInput": false,
+  "SupportsTrackTargeting": true,
+  "SupportsVisualTargeting": false,
+  "SupportsWaypoints": false,
+  "FlightSpeed": 30,
+  "Lifetime": 2.5,
+  "MaxRange": 75,
+  "ShellMunitionData": null,
+  "MissileData": null,
+  "DamageCharacteristics": null
+}
