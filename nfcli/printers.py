@@ -104,8 +104,12 @@ class ShipPrinter(Printer):
         return Group(*elements)
 
     def get_ship(self, ship: "Ship", column_width: int) -> RenderableType:
-        props = ["mountings", "compartments", "modules"]
-        sockets = [Padding(self.get_sockets(prop.title(), getattr(ship, prop)), (0, 1)) for prop in props]
+        if ship.is_valid:
+            props = ["mountings", "compartments", "modules"]
+            sockets = [Padding(self.get_sockets(prop.title(), getattr(ship, prop)), (0, 1)) for prop in props]
+        else:
+            sockets = [Padding(self.get_sockets("Components", ship.components), (0, 1))]
+            column_width = 3 * column_width
         return Columns(sockets, width=column_width, padding=(0, 0))
 
     def print(self, with_title: bool, ship: "Ship"):
