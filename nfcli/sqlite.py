@@ -8,6 +8,7 @@ from typing import Counter, List
 from discord.message import Attachment
 
 from nfcli.models import Lobbies
+from nfcli.stats import Guild, User
 
 SQL_PATH = Path(Path.home(), ".nfcli.sqlite")
 
@@ -82,3 +83,22 @@ def insert_usage_data(connection: Connection, guild: int, user: int, files: List
     cursor = connection.cursor()
     cursor.execute(insert_lobby_data, (guild, user, counter["fleet"], counter["ship"], counter["missile"]))
     connection.commit()
+
+
+def fetch_usage_servers(connection: Connection, days: int = 30) -> Guild:
+    user = fetch_usage_users(connection, days)
+    fetch_usage_servers = (
+        "SELECT COUNT(DISTINCT guild), SUM(fleets), SUM(ships), SUM(missiles) FROM usage"
+        f" WHERE timestamp > DATETIME('now', '-{days} day')"
+    )
+    cursor = execute_query(connection, fetch_usage_servers)
+    return Guild(*cursor.fetchone(), days, user)
+
+
+def fetch_usage_users(connection: Connection, days: int = 30) -> User:
+    fetch_usage_users = (
+        "SELECT guild, user, SUM(fleets) AS sf, SUM(ships) AS ss, SUM(missiles) AS sm FROM usage"
+        f" WHERE timestamp > DATETIME('now', '-{days} day') GROUP BY user ORDER BY sf+ss+sm DESC LIMIT 10"
+    )
+    cursor = execute_query(connection, fetch_usage_users)
+    return User(*cursor.fetchone(), days)

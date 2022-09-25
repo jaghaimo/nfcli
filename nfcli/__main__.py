@@ -6,6 +6,7 @@ from rich.console import Console
 
 from nfcli import determine_output_png, init_logger, load_path, nfc_theme
 from nfcli.parsers import parse_any, parse_mods
+from nfcli.sqlite import create_connection, fetch_usage_servers
 from nfcli.steam import get_workshop_files
 
 DESC = """Command line interface for converting Nebulous: Fleet Command fleet and ship files to images."""
@@ -17,6 +18,7 @@ def get_parser() -> argparse.ArgumentParser:
     parser.add_argument("-i", "--input", type=str, help="fleet or ship file to convert")
     parser.add_argument("-p", "--print", action="store_true", help="print output to console")
     parser.add_argument("-w", "--write", action="store_true", help="write output to a file")
+    parser.add_argument("--stats", type=int, help="print bot usage stats")
     parser.add_argument("--workshop", type=int, help="download and parse Steam Workshop fleet")
     return parser
 
@@ -46,6 +48,9 @@ def main() -> int:
         if args.write:
             output_file = determine_output_png(args.input)
             entity.write(output_file)
+    elif args.stats:
+        connection = create_connection()
+        print(fetch_usage_servers(connection, abs(args.stats)))
     else:
         parser = get_parser()
         parser.print_help()

@@ -45,7 +45,7 @@ class Lobbies:
             return (
                 "I don't have any recent lobby data at hand. "
                 "Perhaps you could help by running our data gathering mod? "
-                "Ask @Jaghaimo#8364 for details."
+                "Ask @Jaghaimo#8364 for details.\n"
             )
         total_lobbies = len(self.lobbies)
         if total_lobbies == 0:
