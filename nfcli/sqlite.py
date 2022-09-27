@@ -3,7 +3,7 @@ import sqlite3
 from pathlib import Path
 from sqlite3 import Connection, Cursor, Error
 from time import time
-from typing import Counter, List
+from typing import Any, Counter, List
 
 from discord.message import Attachment
 
@@ -11,6 +11,15 @@ from nfcli.models import Lobbies
 from nfcli.stats import Guild, User
 
 SQL_PATH = Path(Path.home(), ".nfcli.sqlite")
+
+
+def fetch_row(cursor: Cursor, default: List[Any]) -> List[Any]:
+    if not cursor:
+        return default
+    row = cursor.fetchone()
+    if not row:
+        return default
+    return row
 
 
 def create_connection() -> Connection:
@@ -68,11 +77,7 @@ def insert_lobby_data(connection: Connection, author: str, lobby_data: str):
 def fetch_lobby_data(connection: Connection) -> Lobbies:
     fetch_lobby_data = "SELECT timestamp, author, lobby_data FROM lobbies ORDER BY id DESC"
     cursor = execute_query(connection, fetch_lobby_data)
-    if cursor is None:
-        return Lobbies(time(), "")
-    row = cursor.fetchone()
-    if not row:
-        return Lobbies(time(), "")
+    row = fetch_row(cursor, [time(), ""])
     return Lobbies(*row)
 
 
@@ -92,7 +97,8 @@ def fetch_usage_servers(connection: Connection, days: int = 30) -> Guild:
         f" WHERE timestamp > DATETIME('now', '-{days} day')"
     )
     cursor = execute_query(connection, fetch_usage_servers)
-    return Guild(*cursor.fetchone(), days, user)
+    row = fetch_row(cursor, [0, 0, 0, 0])
+    return Guild(*row, days, user)
 
 
 def fetch_usage_users(connection: Connection, days: int = 30) -> User:
@@ -101,4 +107,5 @@ def fetch_usage_users(connection: Connection, days: int = 30) -> User:
         f" WHERE timestamp > DATETIME('now', '-{days} day') GROUP BY user ORDER BY sf+ss+sm DESC LIMIT 10"
     )
     cursor = execute_query(connection, fetch_usage_users)
-    return User(*cursor.fetchone(), days)
+    row = fetch_row(cursor, [0, 0, 0, 0, 0])
+    return User(*row, days)
