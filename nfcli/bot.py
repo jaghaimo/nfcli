@@ -161,6 +161,7 @@ async def lobbies_action(ctx: discord.ApplicationContext):
 @bot.slash_command(name="stats")
 async def stats_action(ctx: discord.ApplicationContext, last_days: int):
     """Show basic usage statics."""
+    last_days = max(1, min(last_days, 30))
     guilds_stats = fetch_usage_servers(connection, last_days)
     await process_interaction(ctx, str(guilds_stats))
 
