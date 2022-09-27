@@ -1,3 +1,5 @@
+"""Handles static content in `data/hulls` folder."""
+
 import json
 from glob import glob
 from typing import Dict, Optional

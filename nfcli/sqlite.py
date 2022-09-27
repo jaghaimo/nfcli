@@ -1,3 +1,5 @@
+"""Communicates with an sqlite database."""
+
 import logging
 import sqlite3
 from pathlib import Path
@@ -8,7 +10,7 @@ from typing import Any, Counter, List
 from discord.message import Attachment
 
 from nfcli.models import Lobbies
-from nfcli.stats import Guild, User
+from nfcli.stats import Guilds, User
 
 SQL_PATH = Path(Path.home(), ".nfcli.sqlite")
 
@@ -90,7 +92,7 @@ def insert_usage_data(connection: Connection, guild: int, user: int, files: List
     connection.commit()
 
 
-def fetch_usage_servers(connection: Connection, days: int = 30) -> Guild:
+def fetch_usage_servers(connection: Connection, days: int = 30) -> Guilds:
     user = fetch_usage_users(connection, days)
     fetch_usage_servers = (
         "SELECT COUNT(DISTINCT guild), SUM(fleets), SUM(ships), SUM(missiles) FROM usage"
@@ -98,7 +100,7 @@ def fetch_usage_servers(connection: Connection, days: int = 30) -> Guild:
     )
     cursor = execute_query(connection, fetch_usage_servers)
     row = fetch_row(cursor, [0, 0, 0, 0])
-    return Guild(*row, days, user)
+    return Guilds(*row, days, user)
 
 
 def fetch_usage_users(connection: Connection, days: int = 30) -> User:

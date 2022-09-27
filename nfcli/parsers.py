@@ -4,7 +4,7 @@ from typing import List, OrderedDict
 import xmltodict
 
 from nfcli import strip_tags
-from nfcli.database import hulls
+from nfcli.hulls import hulls
 from nfcli.models import Content, Fleet, Missile, Ship, Socket
 from nfcli.printers import Printable
 

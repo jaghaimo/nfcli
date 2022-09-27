@@ -1,3 +1,5 @@
+"""Handles static content in `data/wiki` folder."""
+
 import json
 import logging
 import os

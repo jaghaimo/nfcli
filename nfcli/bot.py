@@ -14,7 +14,7 @@ from nfcli import determine_output_png, init_logger, load_path
 from nfcli.models import Lobbies
 from nfcli.parsers import parse_any, parse_mods
 from nfcli.printers import Printer
-from nfcli.sqlite import create_connection, fetch_lobby_data, insert_lobby_data, insert_usage_data
+from nfcli.sqlite import create_connection, fetch_lobby_data, fetch_usage_servers, insert_lobby_data, insert_usage_data
 from nfcli.steam import get_player_count, get_workshop_files, get_workshop_id
 from nfcli.wiki import Wiki
 
@@ -117,9 +117,9 @@ async def process_lobby_data(message: Message):
 
 
 async def process_interaction(ctx: discord.ApplicationContext, reply: str, timeout: int = 30):
-    await ctx.respond(reply + f"*This message will be deleted in {timeout}s.*")
+    await ctx.respond(reply + f"\n\n*This message will be deleted in {timeout}s.*")
     for i in range(timeout):
-        await ctx.edit(content=reply + f"*This message will be deleted in {timeout - i}s.*")
+        await ctx.edit(content=reply + f"\n\n*This message will be deleted in {timeout - i}s.*")
         await asyncio.sleep(1)
     await ctx.delete()
 
@@ -152,10 +152,17 @@ async def wiki_action(ctx: discord.ApplicationContext, *, keywords: str):
 
 
 @bot.slash_command(name="lobbies")
-async def lobbies_current(ctx: discord.ApplicationContext):
+async def lobbies_action(ctx: discord.ApplicationContext):
     """Report number of lobbies in the game (semi-live data provided by volunteers)."""
     lobby = fetch_lobby_data(connection)
-    await process_interaction(ctx, str(lobby) + " ")
+    await process_interaction(ctx, str(lobby))
+
+
+@bot.slash_command(name="stats")
+async def stats_action(ctx: discord.ApplicationContext, last_days: int):
+    """Show basic usage statics."""
+    guilds_stats = fetch_usage_servers(connection, last_days)
+    await process_interaction(ctx, str(guilds_stats))
 
 
 @tasks.loop(seconds=60.0)

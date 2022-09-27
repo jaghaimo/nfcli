@@ -58,7 +58,7 @@ class User(CountAware, TimeAware):
         return f"The busiest user has requested an analysis of {self.counts}."
 
 
-class Guild(CountAware, TimeAware):
+class Guilds(CountAware, TimeAware):
     def __init__(self, guilds: int, fleets: int, ships: int, missiles: int, last_days: int, user: User) -> None:
         super().__init__(fleets=fleets, ships=ships, missiles=missiles, last_days=last_days)
         self.guilds = guilds
