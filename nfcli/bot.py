@@ -136,6 +136,8 @@ async def on_ready():
 async def on_message(message: discord.Message):
     if message.author == bot.user:
         return
+    if message.content.startswith("!nohazel"):
+        return
     if message.channel.id in DISCORD_CHANNELS and message.author.bot:
         await process_lobby_data(message)
     else:
