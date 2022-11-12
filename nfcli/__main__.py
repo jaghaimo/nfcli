@@ -1,6 +1,5 @@
 import argparse
 import logging
-from typing import Dict
 
 from rich.console import Console
 
@@ -23,7 +22,7 @@ def get_parser() -> argparse.ArgumentParser:
     return parser
 
 
-def parse_args() -> Dict:
+def parse_args() -> dict:
     parser = get_parser()
     args = parser.parse_args()
     display_level = logging.DEBUG if args.debug else logging.WARNING

@@ -6,7 +6,7 @@ import os
 import shutil
 from abc import abstractproperty
 from io import BytesIO
-from typing import Callable, Dict, List, Optional
+from typing import Callable, Optional
 from urllib.request import urlopen
 from zipfile import ZipFile
 
@@ -20,12 +20,12 @@ WIKI_DIR = "data/wiki"
 WIKI_URL = "http://nebfltcom.wikidot.com/"
 
 
-def list_to_str(list: List[str]) -> str:
+def list_to_str(list: list[str]) -> str:
     filtered_list = [element for element in list if element]
     return "\n".join(filtered_list)
 
 
-def dict_to_str(dictionary: Dict[str, str]) -> str:
+def dict_to_str(dictionary: dict[str, str]) -> str:
     as_list = [f"{key.rjust(27)}: {value}" if value else "" for key, value in dictionary.items()]
     return "\n".join(as_list)
 
@@ -34,7 +34,7 @@ def sanitize(string: str) -> str:
     return string.replace("(", "").replace(")", "").strip()
 
 
-def str_to_dict(string: Optional[str] = None) -> Dict[str, str]:
+def str_to_dict(string: Optional[str] = None) -> dict[str, str]:
     if not string:
         return {}
     new_dict = {}
@@ -95,7 +95,7 @@ class Entity:
 
 
 class Hull(Entity):
-    def __init__(self, raw_data: Dict) -> None:
+    def __init__(self, raw_data: dict) -> None:
         super().__init__(raw_data["ClassName"] + " " + raw_data["HullClassification"], raw_data["LongDescription"])
         self.class_name: str = raw_data["ClassName"]
         self.size_class: str = raw_data["SizeClass"]
@@ -116,7 +116,7 @@ class Hull(Entity):
         self.hull_buffs: str = raw_data["EditorFormatHullBuffs"]
 
     @property
-    def info(self) -> Dict[str, str]:
+    def info(self) -> dict[str, str]:
         info = {
             "Point Cost": str(self.point_cost),
             "Class Size": self.size_class,
@@ -126,7 +126,7 @@ class Hull(Entity):
         return info
 
     @property
-    def manoeuvrability(self) -> Dict[str, str]:
+    def manoeuvrability(self) -> dict[str, str]:
         linear_acceleration = 1000 * self.linear_motor / self.mass
         time_to_max_speed = self.max_speed / linear_acceleration
         return {
@@ -140,7 +140,7 @@ class Hull(Entity):
         }
 
     @property
-    def durability(self) -> Dict[str, str]:
+    def durability(self) -> dict[str, str]:
         return {
             "Durability": "",
             "Structural Integrity": str(self.base_integrity),
@@ -149,7 +149,7 @@ class Hull(Entity):
         }
 
     @property
-    def detectability(self) -> Dict[str, str]:
+    def detectability(self) -> dict[str, str]:
         return {
             "Detectability": "",
             "Radar Signature": f"{self.min_radar:.0f} m to {self.max_radar:.0f} m",
@@ -171,13 +171,13 @@ class Hull(Entity):
 
 
 class Component(Entity):
-    def __init__(self, raw_data: Dict) -> None:
+    def __init__(self, raw_data: dict) -> None:
         super().__init__(raw_data["ComponentName"], raw_data["LongDescription"])
         self.category: str = raw_data["Category"]
         self.type: str = raw_data["Type"]
         self.point_cost: int = raw_data["PointCost"]
         self.mass: int = raw_data["Mass"]
-        self.size: Dict[str, int] = raw_data["Size"]
+        self.size: dict[str, int] = raw_data["Size"]
         self.scale_with_size: bool = raw_data["CanTile"]
         self.compounding_cost: bool = raw_data["CompoundingCost"]
         self.compounding_scale: int = raw_data["CompoundingMultiplier"]
@@ -186,22 +186,22 @@ class Component(Entity):
         self.reinforced: int = raw_data["Reinforced"]
         self.functioning_threshold: int = raw_data["FunctioningThreshold"]
         self.damage_resistance: int = raw_data["DamageResistance"]
-        self.crew_data: Dict = raw_data["CrewOperatedComponentData"]
+        self.crew_data: dict = raw_data["CrewOperatedComponentData"]
         ewar_data = {}
         if raw_data["TurretedEWarComponentData"]:
             ewar_data = raw_data["TurretedEWarComponentData"]
         elif raw_data["OmnidirectionalEWarComponentData"]:
             ewar_data = raw_data["OmnidirectionalEWarComponentData"]
-        self.ewar_data: Dict = ewar_data
+        self.ewar_data: dict = ewar_data
         sensor_data = {}
         if raw_data["SensorComponentData"]:
             sensor_data = raw_data["SensorComponentData"]
-        self.sensor_data: Dict = sensor_data
+        self.sensor_data: dict = sensor_data
         self.resources: str = raw_data["FormattedResources"]
         self.buffs: str = raw_data["FormattedBuffs"]
 
     @property
-    def info(self) -> Dict[str, str]:
+    def info(self) -> dict[str, str]:
         info = {
             "Category": self.category,
             "Type": self.type,
@@ -215,7 +215,7 @@ class Component(Entity):
         return info
 
     @property
-    def cost(self) -> Dict[str, str]:
+    def cost(self) -> dict[str, str]:
         scale_with_size = " (scales with size)" if self.scale_with_size else ""
         compounding_cost = "Yes" if self.compounding_cost else "No"
         compounding_scale = f"(x{self.compounding_scale})" if self.compounding_scale > 1 else ""
@@ -227,7 +227,7 @@ class Component(Entity):
         }
 
     @property
-    def durability(self) -> Dict[str, str]:
+    def durability(self) -> dict[str, str]:
         return {
             "Durability": "",
             "Component Integrity": str(self.component_integrity),
@@ -237,7 +237,7 @@ class Component(Entity):
         }
 
     @property
-    def ewar(self) -> Dict[str, str]:
+    def ewar(self) -> dict[str, str]:
         ewar = {}
         if self.ewar_data:
             ewar["EWar"] = ""
@@ -247,7 +247,7 @@ class Component(Entity):
         return ewar
 
     @property
-    def sensor(self) -> Dict[str, str]:
+    def sensor(self) -> dict[str, str]:
         sensor = {}
         if self.sensor_data:
             sensor["Sensors"] = ""
@@ -272,7 +272,7 @@ class Component(Entity):
 
 
 class Munition(Entity):
-    def __init__(self, raw_data: Dict) -> None:
+    def __init__(self, raw_data: dict) -> None:
         super().__init__(raw_data["MunitionName"], "")
         self.type = raw_data["Type"]
         self.role = raw_data["Role"]
@@ -282,8 +282,8 @@ class Munition(Entity):
         self.set_from_description(raw_data["Description"])
 
     def set_from_description(self, description_and_details: str):
-        description: List[str] = []
-        details: List[str] = []
+        description: list[str] = []
+        details: list[str] = []
         for raw_line in description_and_details.splitlines():
             line = strip_tags(raw_line)
             if len(line) > 30:
@@ -295,7 +295,7 @@ class Munition(Entity):
         self.details.update(str_to_dict("\n".join(details)))
 
     @property
-    def info(self) -> Dict[str, str]:
+    def info(self) -> dict[str, str]:
         unit = "units" if self.division > 1 else "unit"
         return {
             "Type": self.type,
@@ -330,19 +330,19 @@ class Wiki:
 
         return self.get(key, partial_token_sort_ratio, 51)
 
-    def _add_hull(self, hull: Dict) -> None:
+    def _add_hull(self, hull: dict) -> None:
         self._add(Hull(hull))
 
-    def _add_component(self, component: Dict) -> None:
+    def _add_component(self, component: dict) -> None:
         self._add(Component(component))
 
-    def _add_munition(self, munition: Dict) -> None:
+    def _add_munition(self, munition: dict) -> None:
         self._add(Munition(munition))
 
     def _add(self, entity: Entity) -> None:
         self.entities[entity.name] = entity
 
-    def _add_all(self, dirname: str, filenames: List[str], callback: Callable) -> None:
+    def _add_all(self, dirname: str, filenames: list[str], callback: Callable) -> None:
         for filename in filenames:
             content = self._read_json(dirname, filename)
             callback(content)
@@ -353,7 +353,7 @@ class Wiki:
             entity = self.get(target)
             self.entities[source] = entity
 
-    def _read_json(self, dirname: str, filename: str) -> Dict:
+    def _read_json(self, dirname: str, filename: str) -> dict:
         content = load_path(os.path.join(dirname, filename))
         return json.loads(content)
 

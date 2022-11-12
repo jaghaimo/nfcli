@@ -5,7 +5,7 @@ import logging
 import math
 import re
 from collections import Counter
-from typing import Dict, List, Optional
+from typing import Optional
 
 import arrow
 from rich.console import Console
@@ -28,12 +28,12 @@ class Lobbies:
     def __init__(self, timestamp: int, author: str, lobby_data: Optional[str] = None) -> None:
         self.timestamp = timestamp
         self.author = author
-        self.lobbies: Optional[List[Lobby]] = None
+        self.lobbies: Optional[list[Lobby]] = None
         if lobby_data is not None:
             self.lobbies = self._parse_data(lobby_data)
 
     @classmethod
-    def _parse_data(cls, lobby_data: str) -> List[Lobbies]:
+    def _parse_data(cls, lobby_data: str) -> list[Lobby]:
         lobbies = json.loads(lobby_data)
         lobby_list = []
         for lobby in lobbies:
@@ -82,14 +82,14 @@ class Lobbies:
         return arrow.get(self.timestamp).humanize()
 
     @property
-    def open(self) -> List[Lobby]:
+    def open(self) -> list[Lobby]:
         return [lobby for lobby in self.lobbies if not lobby.in_progress]
 
     @property
-    def in_progress(self) -> List[Lobby]:
+    def in_progress(self) -> list[Lobby]:
         return [lobby for lobby in self.lobbies if lobby.in_progress]
 
-    def with_password(self, lobbies: Optional[List[Lobby]] = None) -> List[Lobby]:
+    def with_password(self, lobbies: Optional[list[Lobby]] = None) -> list[Lobby]:
         if lobbies is None:
             lobbies = self.lobbies
         return [lobby for lobby in lobbies if lobby.has_password]
@@ -123,7 +123,7 @@ class Content(Named):
 class Socket(Named):
     """Models simplified socket info from a fleet/ship file."""
 
-    def __init__(self, key: str, name: str, contents: List[Content], tag: Optional[str]) -> None:
+    def __init__(self, key: str, name: str, contents: list[Content], tag: Optional[str]) -> None:
         super().__init__(name)
         self.key = key
         self.contents = contents
@@ -147,7 +147,7 @@ class Component:
         return self.socket.name
 
     @property
-    def contents(self) -> List[Content]:
+    def contents(self) -> list[Content]:
         return self.socket.contents
 
 
@@ -190,7 +190,7 @@ class Missile(Named, Printable):
     def is_valid(self):
         return True
 
-    def print(self, console: Console, with_title: bool, mods: List[str]):
+    def print(self, console: Console, with_title: bool, mods: list[str]):
         print_any(MissilePrinter(console), self, mods, with_title)
 
     def write(self, filename: str):
@@ -199,13 +199,13 @@ class Missile(Named, Printable):
 
 
 class Ship(Named, Printable):
-    def __init__(self, name: str, cost: int, number: int, symbol_option: int, hull: str, data: Dict) -> None:
+    def __init__(self, name: str, cost: int, number: int, symbol_option: int, hull: str, data: dict) -> None:
         super().__init__(name)
         self.cost = cost
         self.number = number
         self.symbol_option = symbol_option
         self._hull = hull
-        self.sockets: Dict[str, Socket] = {}
+        self.sockets: dict[str, Socket] = {}
         self._data = data
 
     def add_socket(self, socket: Socket) -> None:
@@ -246,22 +246,22 @@ class Ship(Named, Printable):
         return bool(self._data)
 
     @property
-    def mountings(self) -> List[Component]:
+    def mountings(self) -> list[Component]:
         return self._get_components("mounts")
 
     @property
-    def compartments(self) -> List[Component]:
+    def compartments(self) -> list[Component]:
         return self._get_components("compartments")
 
     @property
-    def modules(self) -> List[Component]:
+    def modules(self) -> list[Component]:
         return self._get_components("modules")
 
     @property
-    def components(self) -> List[Component]:
+    def components(self) -> list[Component]:
         return [Component(socket, i + 1, "?x?x?") for i, (_, socket) in enumerate(self.sockets.items())]
 
-    def _get_components(self, type: str) -> List[Component]:
+    def _get_components(self, type: str) -> list[Component]:
         return [
             Component(self._get_socket(key), i + 1, size) for i, (key, size) in enumerate(self._data.get(type).items())
         ]
@@ -271,7 +271,7 @@ class Ship(Named, Printable):
             return self.sockets[key]
         return Socket(key, "[grey]<EMPTY>", [], None)
 
-    def print(self, console: Console, with_title: bool, mods: List[str]):
+    def print(self, console: Console, with_title: bool, mods: list[str]):
         print_any(ShipPrinter(console), self, mods, with_title)
 
     def write(self, filename: str):
@@ -284,15 +284,15 @@ class Fleet(Named, Printable):
         super().__init__(name)
         self.points = points
         self.faction = faction
-        self._ships: List[Ship] = []
-        self._missiles: List[Missile] = []
+        self._ships: list[Ship] = []
+        self._missiles: list[Missile] = []
 
     @property
-    def ships(self) -> List[Ship]:
+    def ships(self) -> list[Ship]:
         return sorted(self._ships, key=lambda ship: int(ship.cost), reverse=True)
 
     @property
-    def missiles(self) -> List[Missile]:
+    def missiles(self) -> list[Missile]:
         return sorted(self._missiles, key=lambda missile: missile.full_name)
 
     @property
@@ -300,11 +300,11 @@ class Fleet(Named, Printable):
         return not bool(self.invalid_ships)
 
     @property
-    def valid_ships(self) -> List[Ship]:
+    def valid_ships(self) -> list[Ship]:
         return [ship for ship in self.ships if ship.is_valid]
 
     @property
-    def invalid_ships(self) -> List[Ship]:
+    def invalid_ships(self) -> list[Ship]:
         return [ship for ship in self.ships if not ship.is_valid]
 
     @property
@@ -348,7 +348,7 @@ class Fleet(Named, Printable):
     def add_missile(self, missile: Missile) -> None:
         self._missiles.append(missile)
 
-    def print(self, console: Console, with_title: bool, mods: List[str] = []):
+    def print(self, console: Console, with_title: bool, mods: list[str] = []):
         print_any(FleetPrinter(console), self, mods, with_title)
 
     def write(self, filename: str):

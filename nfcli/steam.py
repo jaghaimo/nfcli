@@ -5,7 +5,7 @@ from distutils.dir_util import remove_tree
 from glob import glob
 from os import path
 from posixpath import dirname
-from typing import Dict, List, Optional, Set
+from typing import Optional
 from urllib.parse import parse_qs, urlparse
 
 from dotenv import load_dotenv
@@ -29,11 +29,11 @@ def get_local_path(workshop_id: int) -> str:
     return path.expanduser(WORKSHOP_DIR.format(STEAM_APP_ID, workshop_id))
 
 
-def get_files(directory: str) -> List[str]:
+def get_files(directory: str) -> list[str]:
     return glob(path.join(directory, "*.fleet")) + glob(path.join(directory, "*.ship"))
 
 
-def get_workshop_files(workshop_id: int, throw_if_not_found: Optional[bool] = False) -> List[str]:
+def get_workshop_files(workshop_id: int, throw_if_not_found: Optional[bool] = False) -> list[str]:
     """Get cached copy of workshop files, or download on the fly."""
     workshop_path = get_local_path(workshop_id)
     files = get_files(workshop_path)
@@ -49,7 +49,7 @@ def get_workshop_files(workshop_id: int, throw_if_not_found: Optional[bool] = Fa
     return get_files(workshop_path)
 
 
-def download_bulk(workshop_ids: Set[int], timeout: int = 30):
+def download_bulk(workshop_ids: set[int], timeout: int = 30):
     steam_cmd = ["steamcmd", "+login", STEAM_USERNAME]
     steam_cmd += ["+workshop_download_item {} {}".format(STEAM_APP_ID, workshop_id) for workshop_id in workshop_ids]
     steam_cmd.append("+quit")
@@ -66,7 +66,7 @@ def cache_workshop_files():
         download_bulk(missing_ids, 3600)
 
 
-def invalidate_cache(workshop_items: Dict[int, Dict]) -> None:
+def invalidate_cache(workshop_items: dict[int, dict]) -> None:
     for workshop_id, workshop_item in workshop_items.items():
         workshop_path = get_local_path(workshop_id)
         if not os.path.exists(workshop_path):
@@ -77,11 +77,11 @@ def invalidate_cache(workshop_items: Dict[int, Dict]) -> None:
             remove_tree(workshop_path)
 
 
-def is_valid(tags: List[Dict]) -> bool:
+def is_valid(tags: list[dict]) -> bool:
     return any([tag["tag"].lower() in ["fleet", "ship template"] for tag in tags])
 
 
-def find_all() -> Dict[int, Dict]:
+def find_all() -> dict[int, dict]:
     cursor = "*"
     total = 0
     all_items = {}
@@ -106,14 +106,14 @@ def find_all() -> Dict[int, Dict]:
     return all_items
 
 
-def add_items(all_items: Dict[int, Dict], items: List[Dict]) -> None:
-    valid_items = [item for item in items if is_valid(item["tags"])]
+def add_items(all_items: dict[int, dict], items: list[dict]) -> None:
+    valid_items = [item for item in items if "tags" in item and is_valid(item["tags"])]
     for valid_item in valid_items:
         item_id = int(valid_item["publishedfileid"])
         all_items[item_id] = valid_item
 
 
-def find_existing() -> Set[int]:
+def find_existing() -> set[int]:
     local_path = dirname(get_local_path(0))
     if not os.path.exists(local_path):
         return set()

@@ -3,7 +3,7 @@ from __future__ import annotations
 import math
 import os
 from abc import ABC, abstractmethod, abstractproperty
-from typing import TYPE_CHECKING, List
+from typing import TYPE_CHECKING
 
 import cairosvg
 from rich.columns import Columns
@@ -34,7 +34,7 @@ class Printable:
         raise NotImplementedError
 
     @abstractmethod
-    def print(self, console: Console, with_title: bool, mods: List[str]):
+    def print(self, console: Console, with_title: bool, mods: list[str]):
         raise NotImplementedError
 
     @abstractmethod
@@ -51,7 +51,7 @@ class Printer(ABC):
         raise NotImplementedError
 
     @classmethod
-    def get_mods(cls, mods: List[str], begin_quote: str = "", end_quote: str = "") -> str:
+    def get_mods(cls, mods: list[str], begin_quote: str = "", end_quote: str = "") -> str:
         if not mods:
             return ""
         mods_text = "\nMods required:"
@@ -59,7 +59,7 @@ class Printer(ABC):
             mods_text += f"\n- {begin_quote}https://steamcommunity.com/sharedfiles/filedetails/?id={mod}{end_quote}"
         return mods_text
 
-    def print_mods(self, mods: List[str]):
+    def print_mods(self, mods: list[str]):
         if not mods:
             return
         self.console.print(self.get_mods(mods))
@@ -87,8 +87,8 @@ class ShipPrinter(Printer):
         for content in component.contents:
             tree.add(Text(f"{content.name} x{content.quantity}", overflow="ignore"), style="i d")
 
-    def get_sockets(self, title: str, components: List["Component"], color: str = "white") -> Group:
-        elements: List[RenderableType] = [Rule(Text(f"{title}", style="orange"), style="orange")]
+    def get_sockets(self, title: str, components: list["Component"], color: str = "white") -> Group:
+        elements: list[RenderableType] = [Rule(Text(f"{title}", style="orange"), style="orange")]
         for component in components:
             slot_number = str(component.slot_number)
             just_size = 7 if int(slot_number) < 10 else 6
@@ -179,7 +179,7 @@ def pad_str(string: str) -> str:
     return padded_str[:-1]
 
 
-def print_any(printer: Printer, printable: Printable, mods: List[str], with_title: bool) -> None:
+def print_any(printer: Printer, printable: Printable, mods: list[str], with_title: bool) -> None:
     printer.print(with_title, printable)
     printer.print_mods(mods)
 

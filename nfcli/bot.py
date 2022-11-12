@@ -5,8 +5,9 @@ import re
 import tempfile
 
 import discord
-from discord import File, Message
+from discord import Message
 from discord.ext import tasks
+from discord.file import File
 from dotenv import load_dotenv
 from genericpath import exists
 
@@ -20,7 +21,7 @@ from nfcli.wiki import Wiki
 
 load_dotenv()
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
-DISCORD_CHANNELS = [int(discord_channel) for discord_channel in os.getenv("DISCORD_CHANNELS").split(",")]
+DISCORD_CHANNEL = int(os.getenv("DISCORD_CHANNEL"))
 
 wiki_db = Wiki()
 connection = create_connection()
@@ -48,9 +49,10 @@ async def process_file(message: Message, xml_data: str, filename: str, with_flee
         entity = parse_any(filename, xml_data)
         entity.write(tmp_file)
         all_files = []
-        if exists(tmp_file):
-            converted_file = File(open(tmp_file, "rb"), filename=png_file)
-            all_files.append(converted_file)
+        if not exists(tmp_file):
+            raise RuntimeError(f"Failed to write to {tmp_file}")
+        converted_file = File(open(tmp_file, "rb"), filename=png_file)
+        all_files.append(converted_file)
         if with_fleet_file:
             all_files.append(File(open(filename, "rb"), filename=os.path.basename(filename)))
         mod_deps = parse_mods(xml_data)
@@ -62,7 +64,7 @@ async def process_file(message: Message, xml_data: str, filename: str, with_flee
 
 async def process_uploads(message: Message):
     """Process uploaded files."""
-    files = [file for file in message.attachments if is_supported(file.filename)]
+    files = [file for file in message.attachments if is_supported(file.filename) and not file.is_spoiler()]
     if files:
         insert_usage_data(connection, message.guild.id, message.author.id, files)
     for file in files:
@@ -136,9 +138,7 @@ async def on_ready():
 async def on_message(message: discord.Message):
     if message.author == bot.user:
         return
-    if message.content.startswith("!nohazel"):
-        return
-    if message.channel.id in DISCORD_CHANNELS and message.author.bot:
+    if message.channel.id == DISCORD_CHANNEL and message.author.bot:
         await process_lobby_data(message)
     else:
         await process_old_wiki(message)
