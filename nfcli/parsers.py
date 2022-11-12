@@ -1,5 +1,4 @@
 import logging
-from typing import List, OrderedDict
 
 import xmltodict
 
@@ -9,7 +8,7 @@ from nfcli.models import Content, Fleet, Missile, Ship, Socket
 from nfcli.printers import Printable
 
 
-def get_content(content_data: OrderedDict) -> List[Content]:
+def get_content(content_data: dict) -> list[Content]:
     content = []
     all_loads = []
     for key in ["MissileLoad", "Load"]:
@@ -22,7 +21,7 @@ def get_content(content_data: OrderedDict) -> List[Content]:
     return content
 
 
-def get_socket(socket_data: OrderedDict) -> Socket:
+def get_socket(socket_data: dict) -> Socket:
     name = socket_data["ComponentName"]
     content = []
     if "ComponentData" in socket_data:
@@ -30,7 +29,7 @@ def get_socket(socket_data: OrderedDict) -> Socket:
     return Socket(socket_data["Key"], name, content, hulls.get_component_tag(name))
 
 
-def get_ship(ship_data: OrderedDict) -> Ship:
+def get_ship(ship_data: dict) -> Ship:
     hull = ship_data["HullType"]
     ship = Ship(
         ship_data["Name"],
@@ -49,7 +48,7 @@ def get_ship(ship_data: OrderedDict) -> Ship:
     return ship
 
 
-def get_missile(missile_data: OrderedDict) -> Missile:
+def get_missile(missile_data: dict) -> Missile:
     return Missile(
         missile_data["Designation"],
         missile_data["Nickname"],
@@ -60,7 +59,7 @@ def get_missile(missile_data: OrderedDict) -> Missile:
     )
 
 
-def parse_mods(xml_data: str) -> List[str]:
+def parse_mods(xml_data: str) -> list[str]:
     mods = []
     xmld = xmltodict.parse(xml_data, force_list=("unsignedLong"))
     _, entity = xmld.popitem()
@@ -73,19 +72,19 @@ def parse_mods(xml_data: str) -> List[str]:
 
 def parse_missile(xml_data: str) -> Missile:
     xmld = xmltodict.parse(xml_data)
-    missile_template = xmld.get("MissileTemplate")
+    missile_template: dict = xmld.get("MissileTemplate")
     return get_missile(missile_template)
 
 
 def parse_ship(xml_data: str) -> Ship:
     xmld = xmltodict.parse(xml_data, force_list=("MagSaveData", "HullSocket"))
-    ship_data = xmld.get("Ship")
+    ship_data: dict = xmld.get("Ship")
     return get_ship(ship_data)
 
 
 def parse_fleet(xml_data: str) -> Fleet:
     xmld = xmltodict.parse(xml_data, force_list=("MagSaveData", "Ship", "HullSocket", "MissileTemplate"))
-    fleet_data = xmld.get("Fleet")
+    fleet_data: dict = xmld.get("Fleet")
     fleet = Fleet(fleet_data["Name"], fleet_data["TotalPoints"], fleet_data["FactionKey"])
     for idx, ship_data in enumerate(fleet_data["Ships"]["Ship"]):
         if idx > 9:

@@ -5,7 +5,7 @@ import sqlite3
 from pathlib import Path
 from sqlite3 import Connection, Cursor, Error
 from time import time
-from typing import Any, Counter, List
+from typing import Any, Counter
 
 from discord.message import Attachment
 
@@ -15,7 +15,7 @@ from nfcli.stats import Guilds, User
 SQL_PATH = Path(Path.home(), ".nfcli.sqlite")
 
 
-def fetch_row(cursor: Cursor, default: List[Any]) -> List[Any]:
+def fetch_row(cursor: Cursor, default: list[Any]) -> list[Any]:
     if not cursor:
         return default
     row = cursor.fetchone()
@@ -32,6 +32,7 @@ def create_connection() -> Connection:
         init_database(connection)
     except Error as e:
         logging.error(f"The error '{e}' occurred when connecting to SQLite DB")
+        raise e
     return connection
 
 
@@ -43,6 +44,7 @@ def execute_query(connection: Connection, query: str) -> Cursor:
         return cursor
     except Error as e:
         logging.error(f"The error '{e}' occurred when executing '{query}' query")
+        raise e
 
 
 def init_database(connection: Connection):
@@ -83,7 +85,7 @@ def fetch_lobby_data(connection: Connection) -> Lobbies:
     return Lobbies(*row)
 
 
-def insert_usage_data(connection: Connection, guild: int, user: int, files: List[Attachment]):
+def insert_usage_data(connection: Connection, guild: int, user: int, files: list[Attachment]):
     extensions = [file.filename.split(".")[-1] for file in files]
     counter = Counter(extensions)
     insert_lobby_data = "INSERT INTO usage (guild, user, fleets, ships, missiles) VALUES (?, ?, ?, ?, ?)"
