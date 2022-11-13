@@ -1,12 +1,12 @@
 using System;
-using System.IO;
 using System.Net;
 using System.Threading;
 using Steamworks;
 
 class LobbyWatcher
 {
-    private static string? _discordHook = null;
+    private static string _discordHook =
+        "https://discordapp.com/api/webhooks/1041396457648955453/5vWd1O07W2YKPEbdTK6o-_TFoibYRUsYle2imBM4Mg4xY_NTtmEHi7jbRyduqp4r7bOR";
 
     private static void Main(string[] args)
     {
@@ -27,19 +27,7 @@ class LobbyWatcher
 
     public void Start()
     {
-        LoadToken();
         LobbyPoll();
-    }
-
-    private void LoadToken()
-    {
-        var filePath = "LobbyWatcher.txt";
-        if (!File.Exists(filePath))
-        {
-            throw new Exception($"Missing config file {filePath}");
-        }
-        var content = File.ReadAllText(filePath);
-        _discordHook = content.Trim();
     }
 
     private void LobbyPoll()
@@ -101,18 +89,21 @@ class LobbyWatcher
         foreach (SteamLobby lobby in lobbyList.AllLobbies)
         {
             string lobbyData = "{";
-            lobbyData += AddField("h", lobby.HasPassword ? 1 : 0);
-            lobbyData += AddField("i", lobby.InProgress ? 1 : 0);
+            lobbyData += AddField("h", lobby.HasPassword ? "1" : "0");
+            lobbyData += AddField("i", lobby.InProgress ? "1" : "0");
             lobbies += lobbyData.TrimEnd(',') + "},";
         }
-        return "[" + lobbies.TrimEnd(',') + "]";
+        string data = "";
+        data += AddField("u", SteamClient.SteamId.ToString());
+        data += AddField("l", "[" + lobbies.TrimEnd(',') + "]").TrimEnd((','));
+        return "{" + data + "}";
     }
 
     /**
      * Returns JSON encoded int field with a trailing comma, e.g.
      * "h":0,
      */
-    private string AddField(string key, int value)
+    private string AddField(string key, string value)
     {
         return $"\"{key}\":{value},";
     }
