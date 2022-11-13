@@ -2,7 +2,7 @@
 <ModInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ModName>LobbyPoller</ModName>
   <ModDescription>Polls lobby data and sends it to a Discord channel.</ModDescription>
-  <ModVer>2</ModVer>
+  <ModVer>3</ModVer>
   <Assemblies>
     <string>LobbyPoller.dll</string>
   </Assemblies>

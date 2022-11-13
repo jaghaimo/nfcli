@@ -1,6 +1,5 @@
 ﻿using Modding;
 using Networking;
-using System.IO;
 using System.Net;
 using System.Threading;
 using UnityEngine;
@@ -10,37 +9,20 @@ namespace LobbyPoller
     public class LobbyPoller : IModEntryPoint
     {
         private static MultiplayerFilters _filters = default;
-        private static string _discordHook = null;
+        private static string _discordHook =
+            "https://discordapp.com/api/webhooks/1041396457648955453/5vWd1O07W2YKPEbdTK6o-_TFoibYRUsYle2imBM4Mg4xY_NTtmEHi7jbRyduqp4r7bOR";
 
         public void PostLoad()
         {
             _filters.HideInProgress = false;
             _filters.HidePassword = false;
-            LoadToken();
             StartThread();
         }
 
         public void PreLoad() { }
 
-        private void LoadToken()
-        {
-            var filePath = Path.Combine(ModDatabase.LocalModDirectory, "LobbyPoller.txt");
-            if (!File.Exists(filePath))
-            {
-                Debug.Log($"Missing config file {filePath}");
-                return;
-            }
-            var content = File.ReadAllText(filePath);
-            _discordHook = content.Trim();
-        }
-
         private void StartThread()
         {
-            if (_discordHook == null)
-            {
-                Debug.Log("No token configured, bailing out!");
-                return;
-            }
             Thread thread = new Thread(new ThreadStart(LobbyPoll));
             thread.Start();
         }
@@ -89,18 +71,21 @@ namespace LobbyPoller
             foreach (SteamLobby lobby in lobbyList.AllLobbies)
             {
                 string lobbyData = "{";
-                lobbyData += AddField("h", lobby.HasPassword ? 1 : 0);
-                lobbyData += AddField("i", lobby.InProgress ? 1 : 0);
+                lobbyData += AddField("h", lobby.HasPassword ? "1" : "0");
+                lobbyData += AddField("i", lobby.InProgress ? "1" : "0");
                 lobbies += lobbyData.TrimEnd(',') + "},";
             }
-            return "[" + lobbies.TrimEnd(',') + "]";
+            string data = "";
+            data += AddField("u", SteamManager.ThisUser.Id.Value.ToString());
+            data += AddField("l", "[" + lobbies.TrimEnd(',') + "]").TrimEnd((','));
+            return "{" + data + "}";
         }
 
         /**
          * Returns JSON encoded int field with a trailing comma, e.g.
          * "h":0,
          */
-        private string AddField(string key, int value)
+        private string AddField(string key, string value)
         {
             return $"\"{key}\":{value},";
         }
