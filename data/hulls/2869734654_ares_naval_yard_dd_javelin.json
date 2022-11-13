@@ -1,0 +1,35 @@
+{
+  "key": "Ares Naval Yard/DD_Javelin",
+  "name": "'Javelin' class Destroyer",
+  "mounts": {
+    "n1": "3x4x3",
+    "n2": "3x4x3",
+    "n3": "3x4x3",
+    "n4": "3x4x5",
+    "n5": "3x4x5",
+    "n6": "3x4x5",
+    "n7": "2x2x2",
+    "n8": "2x2x2",
+    "ar1": "9x0x6"
+  },
+  "compartments": {
+    "c1": "6x1x8",
+    "c2": "6x1x8",
+    "c3": "6x1x4",
+    "c4": "6x1x4",
+    "c5": "6x1x4",
+    "c6": "6x1x4",
+    "c7": "4x1x6",
+    "c8": "4x1x6"
+  },
+  "modules": {
+    "m1": "6x6x6",
+    "m2": "8x8x8",
+    "m3": "3x3x3",
+    "m4": "3x3x3",
+    "m5": "2x2x2",
+    "m6": "2x2x2",
+    "m7": "3x3x3",
+    "m8": "3x3x3"
+  }
+}

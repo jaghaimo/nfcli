@@ -1,0 +1,23 @@
+{
+  "key": "Ares Naval Yard/CV_Dart",
+  "name": "'Dart' class Corvette",
+  "mounts": {
+    "n1": "2x2x2",
+    "n2": "2x2x2",
+    "n3": "3x4x3",
+    "n4": "3x4x3",
+    "ar1": "9x0x6"
+  },
+  "compartments": {
+    "c1": "4x1x6",
+    "c2": "4x1x6",
+    "c3": "3x1x3",
+    "c4": "3x1x3"
+  },
+  "modules": {
+    "m1": "3x3x3",
+    "m2": "6x6x6",
+    "m": "2x2x2",
+    "m4": "2x2x2"
+  }
+}

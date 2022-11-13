@@ -1,0 +1,23 @@
+{
+  "key": "screamer/CV_Finley",
+  "name": "'Finley' class Corvette",
+  "mounts": {
+    "c1mount1": "2x2x2",
+    "c1mount2": "2x2x2",
+    "c2mount1": "3x4x3",
+    "c2mount2": "3x4x3"
+  },
+  "compartments": {
+    "compM1": "4x1x6",
+    "compM2": "4x1x6",
+    "compS1": "3x1x3",
+    "compS2": "3x1x3",
+    "compS3": "3x1x3"
+  },
+  "modules": {
+    "moduleL1": "5x5x5",
+    "moduleM1": "3x3x3",
+    "moduleM2": "3x3x3",
+    "moduleS1": "2x2x2"
+  }
+}

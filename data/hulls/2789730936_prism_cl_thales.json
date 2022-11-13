@@ -4,12 +4,16 @@
   "mounts": {
     "mount646_CL1": "6x4x6",
     "mount646_CL2": "6x4x6",
-    "mount343_CL1": "3x4x3",
-    "mount343_CL2": "3x4x3",
-    "mount343_CL3": "3x4x3",
-    "mount343_CL4": "3x4x3",
+    "mount343_CL1": "3x2x3",
+    "mount343_CL2": "3x2x3",
+    "mount343_CL3": "3x2x3",
+    "mount343_CL4": "3x2x3",
     "mount222_CL1": "2x2x2",
-    "mount222_CL2": "2x2x2"
+    "mount222_CL2": "2x2x2",
+    "spine_1": "1x3x12",
+    "spine_2": "1x3x12",
+    "spine_3": "1x3x12",
+    "spine_4": "1x3x12"
   },
   "compartments": {
     "compartment618bridge_CL": "6x1x8",

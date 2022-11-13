@@ -1,0 +1,43 @@
+{
+  "key": "Ares Naval Yard/CA_Cataphract",
+  "name": "'Cataphract' class Heavy Cruiser",
+  "mounts": {
+    "n1": "6x4x6",
+    "n2": "6x4x6",
+    "n3": "3x4x5",
+    "n4": "3x4x5",
+    "n5": "3x4x5",
+    "n6": "3x4x5",
+    "n7": "2x2x2",
+    "n8": "2x2x2",
+    "n9": "2x2x2",
+    "n10": "2x2x2",
+    "ar1": "9x0x6"
+  },
+  "compartments": {
+    "c1": "6x1x8",
+    "c2": "6x1x8",
+    "c3": "6x1x8",
+    "c4": "6x1x8",
+    "c5": "6x1x8",
+    "c6": "6x1x6",
+    "c7": "6x1x6",
+    "c8": "6x1x4",
+    "c9": "6x1x4",
+    "c10": "6x1x4",
+    "c11": "6x1x4"
+  },
+  "modules": {
+    "m1": "12x8x10",
+    "m2": "6x6x6",
+    "m3": "6x6x6",
+    "m4": "3x3x3",
+    "m5": "3x3x3",
+    "m6": "3x3x3",
+    "m7": "3x3x3",
+    "m8": "2x2x2",
+    "m9": "2x2x2",
+    "m10": "2x2x2",
+    "m11": "2x2x2"
+  }
+}
