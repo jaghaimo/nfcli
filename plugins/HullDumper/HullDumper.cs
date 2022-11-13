@@ -11,7 +11,7 @@ namespace HullDumper
     {
         public void PostLoad()
         {
-            IReadOnlyCollection<Hull> allHulls = BundleManager.Instance.AllHulls;
+            IReadOnlyCollection<BaseHull> allHulls = BundleManager.Instance.AllHulls;
             foreach (Hull hull in allHulls)
             {
                 ulong sourceModId = hull.SourceModId ?? 0;
@@ -48,10 +48,10 @@ namespace HullDumper
             return fileName;
         }
 
-        private HullSpec GetHull(Hull hull)
+        private HullSpec GetHull(BaseHull hull)
         {
             HullSpec hullSpec = new HullSpec(hull.SaveKey, hull.FullClassification);
-            foreach (HullSocket socket in hull.GetAllSockets())
+            foreach (HullSocket socket in hull.AllSockets)
             {
                 SocketSpec socketSpec = new SocketSpec
                 {
