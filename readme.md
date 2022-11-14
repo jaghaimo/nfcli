@@ -45,4 +45,4 @@ poetry run nfcli -h
 - Invite the bot to your server
 - Edit `.env.dist` and save it as `.env`
 - Run `make cache` to build caches
-- Run appropriate bot `poetry run bot.<bot>`
+- Start the bot `poetry run bot`
