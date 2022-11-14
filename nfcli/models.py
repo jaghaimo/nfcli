@@ -25,34 +25,33 @@ class Lobby:
 class Lobbies:
     """Parses and provides additional lobby operations."""
 
-    def __init__(self, timestamp: int, author: str, lobby_data: Optional[str] = None) -> None:
+    def __init__(self, timestamp: float, lobby_data: Optional[str]) -> None:
         self.timestamp = timestamp
-        self.author = author
         self.lobbies: Optional[list[Lobby]] = None
         if lobby_data is not None:
-            self.lobbies = self._parse_data(lobby_data)
+            self.author, self.lobbies = self._parse_data(lobby_data)
 
     @classmethod
-    def _parse_data(cls, lobby_data: str) -> list[Lobby]:
-        lobbies = json.loads(lobby_data)
+    def _parse_data(cls, lobby_data: str) -> tuple[int, list[Lobby]]:
+        data = json.loads(lobby_data)
+        user = int(data["u"])
+        lobbies = data["l"]
         lobby_list = []
         for lobby in lobbies:
             lobby_list.append(Lobby(lobby["i"], lobby["h"]))
-        return lobby_list
+        return user, lobby_list
 
     def __str__(self) -> str:
         if not self.is_valid:
             return (
-                "I don't have any recent lobby data at hand. "
-                "Perhaps you could help by running our data gathering mod? "
-                "Ask @Jaghaimo#8364 for details."
+                "I don't have any recent lobby data at hand :four::zero::four: :scream_cat:!\n"
+                "Could you help by running a data gathering mod while you play, or a standalone app otherwise?\n"
+                "Mod: <https://steamcommunity.com/sharedfiles/filedetails/?id=2849396705>\n"
+                "App: <https://github.com/jaghaimo/nfcli/releases/download/lw/LobbyWatcher.zip>"
             )
         total_lobbies = len(self.lobbies)
         if total_lobbies == 0:
-            return (
-                f"As of {self.time} there were no lobbies present in the game.\n"
-                f"*Data kindly provided by {self.author}'s client.*"
-            )
+            return f"As of {self.time} there were no lobbies present in the game."
         lobby_or_lobbies = "there was one lobby" if total_lobbies == 1 else f"there were {total_lobbies} lobbies"
         open_lobbies = len(self.open)
         open_private = len(self.with_password(self.open))
@@ -66,7 +65,6 @@ class Lobbies:
             f"Open Lobbies : {open_lobbies} [{open_public} public and {open_private} private]\n"
             f" In Progress : {in_progress} [{in_progress_public} public and {in_progress_private} private]\n"
             "```"
-            f"*Data kindly provided by {self.author}'s client.*"
         )
 
     @property

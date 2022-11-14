@@ -3,6 +3,7 @@ import logging
 import os
 import re
 import tempfile
+from time import time
 
 import discord
 from discord import Message
@@ -15,13 +16,14 @@ from nfcli import determine_output_png, init_logger, load_path
 from nfcli.models import Lobbies
 from nfcli.parsers import parse_any, parse_mods
 from nfcli.printers import Printer
-from nfcli.sqlite import create_connection, fetch_lobby_data, fetch_usage_servers, insert_lobby_data, insert_usage_data
+from nfcli.sqlite import create_connection, fetch_usage_servers, insert_usage_data
 from nfcli.steam import get_player_count, get_workshop_files, get_workshop_id
 from nfcli.wiki import Wiki
 
 load_dotenv()
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 DISCORD_CHANNEL = int(os.getenv("DISCORD_CHANNEL"))
+lobbies = Lobbies(time(), None)
 
 wiki_db = Wiki()
 connection = create_connection()
@@ -113,15 +115,19 @@ async def process_workshops(message: Message):
 async def process_lobby_data(message: Message):
     """Extract and process lobby data from subscribed channel."""
     logging.debug("Checking incoming message")
-    Lobbies._parse_data(message.content)
-    logging.debug("Adding new lobby data")
-    insert_lobby_data(connection, message.author.name, message.content)
+    if not len(message.content):
+        return
+    lobbies_temp = Lobbies(time(), message.content)
+    logging.debug("Storing new lobby data")
+    global lobbies
+    lobbies = lobbies_temp
 
 
 async def process_interaction(ctx: discord.ApplicationContext, reply: str, timeout: int = 30):
-    await ctx.respond(reply + f"\n\n*This message will be deleted in {timeout}s.*")
+    new_lines = "\n" if reply.endswith("```") else "\n\n"
+    await ctx.respond(reply + f"{new_lines}*This message will be deleted in {timeout}s.*")
     for i in range(timeout):
-        await ctx.edit(content=reply + f"\n\n*This message will be deleted in {timeout - i}s.*")
+        await ctx.edit(content=reply + f"{new_lines}*This message will be deleted in {timeout - i}s.*")
         await asyncio.sleep(1)
     await ctx.delete()
 
@@ -156,8 +162,8 @@ async def wiki_action(ctx: discord.ApplicationContext, *, keywords: str):
 @bot.slash_command(name="lobbies")
 async def lobbies_action(ctx: discord.ApplicationContext):
     """Report number of lobbies in the game (semi-live data provided by volunteers)."""
-    lobby = fetch_lobby_data(connection)
-    await process_interaction(ctx, str(lobby))
+    global lobbies
+    await process_interaction(ctx, str(lobbies))
 
 
 @bot.slash_command(name="stats")

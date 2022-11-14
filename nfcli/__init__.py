@@ -25,9 +25,9 @@ def init_debugger():
             import debugpy
 
             debugpy.listen(("localhost", 9000))
-            print("Debugger is ready to be attached, press F5", flush=True)
+            print("Debugger is ready to be attached", flush=True)
             debugpy.wait_for_client()
-            print("Visual Studio Code debugger is now attached", flush=True)
+            print("Debugger is now attached", flush=True)
 
 
 def init_logger(filename: Optional[str], level: int):
