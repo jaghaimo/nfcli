@@ -1,0 +1,37 @@
+{
+  "key": "windsor/CL_Aclimator",
+  "name": "'Aclimator' class Light Cruiser",
+  "mounts": {
+    "n1": "3x4x5",
+    "n2": "3x4x5",
+    "n7": "3x4x5",
+    "n8": "3x4x5",
+    "n10": "3x4x5",
+    "n9": "3x4x5",
+    "n3": "2x2x2",
+    "n4": "2x2x2",
+    "n5": "2x2x2",
+    "n6": "2x2x2"
+  },
+  "compartments": {
+    "c1": "6x1x8",
+    "c2": "6x1x8",
+    "c3": "6x1x8",
+    "c4": "6x1x8",
+    "c5": "6x1x4",
+    "c6": "6x1x4",
+    "c7": "6x1x4",
+    "c8": "6x1x4"
+  },
+  "modules": {
+    "m1": "6x6x6",
+    "m2": "6x6x6",
+    "m3": "3x3x3",
+    "m4": "3x3x3",
+    "m5": "10x8x10",
+    "m6": "3x3x3",
+    "m7": "3x3x3",
+    "m8": "2x2x2",
+    "m9": "2x2x2"
+  }
+}

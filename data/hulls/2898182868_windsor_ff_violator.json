@@ -1,0 +1,23 @@
+{
+  "key": "windsor/FF_Violator",
+  "name": "'Violator' class Frigate",
+  "mounts": {
+    "n1": "3x4x5",
+    "n2": "3x4x5",
+    "n3": "3x4x5",
+    "n4": "3x4x5"
+  },
+  "compartments": {
+    "c1": "4x1x6",
+    "c2": "4x1x6",
+    "c3": "3x1x3",
+    "c4": "3x1x3"
+  },
+  "modules": {
+    "m1": "6x6x6",
+    "m2": "6x6x6",
+    "m3": "2x2x2",
+    "m4": "3x3x3",
+    "m5": "2x2x2"
+  }
+}

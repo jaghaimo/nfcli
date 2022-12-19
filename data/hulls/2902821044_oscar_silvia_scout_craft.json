@@ -1,0 +1,27 @@
+{
+  "key": "oscar/Silvia Scout Craft",
+  "name": "'Silvia' class Scout Craft",
+  "mounts": {
+    "W1": "3x2x3",
+    "W2": "2x1x2",
+    "W3": "2x1x2",
+    "W4": "2x1x2",
+    "W5": "2x1x2"
+  },
+  "compartments": {
+    "C1": "6x1x8",
+    "C2": "6x1x8",
+    "C3": "3x1x4",
+    "C4": "3x1x4",
+    "C5": "3x1x4",
+    "C6": "3x1x4"
+  },
+  "modules": {
+    "M1": "6x3x6",
+    "M2": "6x3x6",
+    "M3": "2x2x2",
+    "M4": "2x2x2",
+    "M5": "2x2x2",
+    "M6": "2x2x2"
+  }
+}

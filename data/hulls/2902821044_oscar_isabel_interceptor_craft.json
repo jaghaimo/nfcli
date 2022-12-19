@@ -1,0 +1,35 @@
+{
+  "key": "oscar/Isabel Interceptor Craft",
+  "name": "'Isabel' class Interceptor Craft",
+  "mounts": {
+    "W1": "3x4x5",
+    "W2": "3x4x5",
+    "W3": "3x4x5",
+    "W4": "3x2x5",
+    "W5": "3x2x5",
+    "W6": "3x1x3",
+    "W7": "3x1x3",
+    "W8": "3x1x3",
+    "W9": "3x2x3"
+  },
+  "compartments": {
+    "C1": "6x1x8",
+    "C2": "6x1x8",
+    "C3": "6x1x8",
+    "C4": "4x1x6",
+    "C5": "4x1x6",
+    "C6": "3x1x4",
+    "C7": "3x1x4",
+    "C8": "3x1x4",
+    "C9": "3x1x4"
+  },
+  "modules": {
+    "M1": "6x3x6",
+    "M2": "6x3x6",
+    "M3": "6x3x6",
+    "M4": "3x3x3",
+    "M5": "3x3x3",
+    "M6": "3x3x3",
+    "M7": "3x3x3"
+  }
+}

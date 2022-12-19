@@ -1,0 +1,27 @@
+{
+  "key": "oscar/Erica Escort Craft",
+  "name": "'Erica' class Escort Craft",
+  "mounts": {
+    "W1": "3x1x3",
+    "W2": "3x1x3",
+    "W3": "3x1x3",
+    "W4": "3x1x3",
+    "W5": "2x1x2"
+  },
+  "compartments": {
+    "C1": "6x1x8",
+    "C2": "4x1x6",
+    "C3": "4x1x6",
+    "C4": "4x1x6",
+    "C5": "3x1x4",
+    "C6": "3x1x4"
+  },
+  "modules": {
+    "M1": "6x3x6",
+    "M2": "6x3x6",
+    "M3": "2x2x2",
+    "M4": "2x2x2",
+    "M5": "2x2x2",
+    "M6": "2x2x2"
+  }
+}
