@@ -1,7 +1,7 @@
 {
   "ComponentName": "E70 'Interruption' Jammer",
   "LongDescription": "The E70 is a jamming suite that saturates a 360-degree radius around a host warship, disrupting communications and preventing affected warships from receiving the shared track picture from other warships.\n\nWhile an effective screening tool, the E70 lacks the high-power, extended range of directional communications jammers seen on dedicated EWar configurations.",
-  "FlavorText": "A favorite of warships equipped with 'Prowler' drives. I've worked on a few of these and from what I gathered these operate via warblers and random noise, usually of the subtle variety.\n\nSometimes called a \"golf ball\", with the ships referred as \"tees\". Honestly, with how often these get shot off the hull and sent flying into space, it's an apt description.\n\n- I. Parker, CMC",
+  "FlavorText": "A favorite of warships equipped with 'Prowler' drives. I've worked on a few of these and from what I gathered these operate via warblers and random noise, usually of the subtle variety.\n\nI can't begin to count how many reports I've written up of these getting shot off the hull or blown open by space rocks. You fly into an asteroid field and you can bet you won't see these come out unscathed.\n\n- I. Parker, CMC",
   "Category": "EWar",
   "Type": "Surface",
   "CompoundingCost": false,

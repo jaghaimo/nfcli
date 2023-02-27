@@ -1,6 +1,6 @@
 {
   "MunitionName": "300mm AP Rail Sabot",
-  "Description": "High-velocity alloy-based shell used in railgun-type weapon systems, including mass drivers.\n\nTrades explosive power for unrivaled armor penetration, extremely effective on heavy-type warships but performance falls dramatically on lighter targets.\n\nType: Ballistic/Magnetic\nSize: 300mm\nRole: Offensive\nArmor Penetration: 200 cm\nComponent Damage: 70 hp\nMuzzle Velocity: 3000 m/s\nRange: 24,000 m\nVolume: 0.75 m³",
+  "Description": "High-velocity alloy-based shell used in railgun-type weapon systems, including mass drivers.\n\nTrades explosive power for unrivaled armor penetration, extremely effective on heavy-type warships but performance falls dramatically on lighter targets.\n\nType: Ballistic/Magnetic\nSize: 300mm\nRole: Offensive\nArmor Penetration: 200 cm\nComponent Damage: 70 hp\nMuzzle Velocity: 3000 m/s\nRange: 21,000 m\nVolume: 0.75 m³",
   "Type": "Ballistic",
   "SimMethod": "Spawned",
   "Role": "Offensive",
@@ -13,8 +13,8 @@
   "SupportsVisualTargeting": true,
   "SupportsWaypoints": false,
   "FlightSpeed": 3000,
-  "Lifetime": 8,
-  "MaxRange": 24000,
+  "Lifetime": 7,
+  "MaxRange": 21000,
   "ShellMunitionData": {
     "MaxPenetration": -10
   },

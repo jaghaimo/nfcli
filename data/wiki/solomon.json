@@ -12,6 +12,7 @@
   "AngularMotor": 3.1,
   "BaseIntegrity": 8000,
   "ArmorThickness": 52,
+  "InteriorDensityArmorEquivalent": 1.2,
   "MaxComponentDR": 0.4,
   "CrewVulnerability": 0.3,
   "IdentityWorkValue": 200,

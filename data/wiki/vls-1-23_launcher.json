@@ -1,7 +1,7 @@
 {
   "ComponentName": "VLS-1-23 Launcher",
   "LongDescription": "Similar to the VLS-2, the VLS-1-23 serves as a compact missile platform that allows a warship to have a wide variety of missile weapons to be used on a moment's notice, but is rated for smaller munitions like Riposte interceptors.  Unlike its larger cousin, however, it is not designed in a modular fashion and has a consistent cell count regardless of the size of the available mount.",
-  "FlavorText": "Very simple engineering by missile launcher standards when you think about it. I don't know how much it costs the ANO to manufacture one of these but it's expensive enough that you can get the modular look of the VLS-2 or the VLS-3.\n\nThese are mostly found on lighter warships or pickets where anti-missile operations are the usual mission profiles. Ripostes, Conures, chaff, flares, you name it,  it'll fire it as long as you have the warning time.  Theres been some experiments into using these as offensive platforms but I wouldn't hold your breath for shining results.\n\n- T. Meadows, LT",
+  "FlavorText": "Very simple engineering by missile launcher standards when you think about it. I don't know how much it costs the ANO to manufacture one of these but it's expensive enough that you can get the modular look of the VLS-2 or the VLS-3.\n\nThese are mostly found on lighter warships or pickets where anti-missile operations are the usual mission profiles. Ripostes, Conures, chaff, flares, you name it,  it'll fire it as long as you have the warning time.  There's been some experiments into using these as offensive platforms but I wouldn't hold your breath for shining results.\n\n- T. Meadows, LT",
   "Category": "Weapons - Missile",
   "Type": "Surface",
   "CompoundingCost": false,

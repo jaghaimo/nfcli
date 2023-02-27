@@ -16,6 +16,9 @@
   "Lifetime": 30,
   "MaxRange": 600,
   "ShellMunitionData": null,
-  "MissileData": null,
+  "MissileData": {
+    "Size": 1,
+    "SignatureData": null
+  },
   "DamageCharacteristics": null
 }
