@@ -14,7 +14,7 @@ use_parentheses = true
 
 [tool.poetry]
 name = "nfcli"
-version = "1.13.1"
+version = "1.14.0"
 description = "A CLI tool to pretty print fleet and ship files to console."
 authors = ["Jaghaimo <1764586+jaghaimo@users.noreply.github.com>"]
 

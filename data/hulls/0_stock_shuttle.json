@@ -1,0 +1,20 @@
+{
+  "key": "Stock/Shuttle",
+  "name": "'Shuttle' class Clipper",
+  "mounts": {
+    "3mlCA6C6m0GI3wONZK_aqg": "3x2x3",
+    "fbAgHM9u302peFMSC0TidQ": "3x2x3",
+    "rbZhGCN7UUWcgLsNZkZXIA": "2x2x2"
+  },
+  "compartments": {
+    "hh8PA01jxEytn9KuihcJ3Q": "4x1x6",
+    "wDWAeeoAK0mAx3hbF1tMlA": "3x1x3",
+    "CcSXjIupV0Kw-jxaV6HpEA": "3x1x3"
+  },
+  "modules": {
+    "bInyh5AAt0y_m-3UaI8Ysw": "3x3x3",
+    "-harMwD0o0OExuMqT63fTQ": "8x3x6",
+    "zUeDN4FpYEyyWHIhTIgZFg": "2x2x2",
+    "uXJ_fvsZ3USAs1SpiTrZ1g": "2x2x2"
+  }
+}

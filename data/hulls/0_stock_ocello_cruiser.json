@@ -1,0 +1,40 @@
+{
+  "key": "Stock/Ocello Cruiser",
+  "name": "'Ocello' class Command Cruiser",
+  "mounts": {
+    "iJzzxinSN0uJIjrt9M3aGA": "6x4x6",
+    "lQ7GplJ1ikW0K_QhXK7GvA": "6x4x6",
+    "60X-7VSlxUq6Qas-KwszMA": "6x4x6",
+    "4v5e01-gEUiTNnQJevNpGg": "3x4x3",
+    "o78jebL2nkezXdHJ6xA3WA": "3x4x3",
+    "Gpm2KFKPCU-0ECKr0YsJAw": "3x4x3",
+    "-lwFeyvDUECyC-AuVfATog": "3x4x3",
+    "rI5k7ytZH0S7yQLZnFB_nQ": "2x2x2",
+    "0J9pyeFp6U6KMEAXiuNHHw": "2x2x2",
+    "mP5XoHZ3Wk-DsFk3YLAxzg": "2x2x2",
+    "xe7LNTrStUuS8PMCn6KYsQ": "2x2x2"
+  },
+  "compartments": {
+    "4NKBOsswyUGpVA-YP-T5ng": "6x1x8",
+    "bzRgWNrBdE6BjUaGy8G1tg": "6x1x8",
+    "foWiXJZCEEKQx0LmO1IMnw": "6x1x8",
+    "viC38BuOaEuyTlVDRdF0gg": "6x1x8",
+    "GXIxYPfk8E2cbQnK0U1QNw": "4x1x6",
+    "q5iHLt9VEU-166x4NJmr4Q": "6x1x6",
+    "vXXZA02qQEyreCSFbtLJOA": "6x1x6",
+    "S03aWjfX90epbCcytu9_xw": "6x1x6",
+    "aImgD6jcq0GZXRi5MmyeWw": "6x1x6"
+  },
+  "modules": {
+    "hjHxzsG5iUCkaG0eGd52bA": "6x6x6",
+    "Fp6_NyEq1E-ZGeZxM9kjUg": "6x6x6",
+    "-XwaOMN6eUSsztvywrmXVQ": "8x12x10",
+    "26mxVeOdd0SB5ZSaG_hJ0w": "3x3x3",
+    "c2zMLaokmU6GUJMYfS3N_Q": "3x3x3",
+    "t3_3a8clbky2DQa0g_ODgg": "3x3x3",
+    "73x1IW-ccUSI_0bIcWMFPw": "2x2x2",
+    "LNhnTOaflUaLPxvcpEctGg": "2x2x2",
+    "yPVEWDqw0EOqF2I5_u-ETA": "2x2x2",
+    "FDuYw4ygU0ik6wQg6rW2Qg": "2x2x2"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "key": "Stock/Bulk Hauler",
+  "name": "'Bulk Freighter' class Line Ship",
+  "mounts": {
+    "E9IMUD_Uz0661-nYgJh4Mg": "6x10x6",
+    "auQ7ijGeX0evdikZQeBxTg": "6x10x6",
+    "d3N-B_JnDUKAdVRBJ6nvFQ": "6x10x6",
+    "xvNT1_DYcUuSpU6rrmL_4A": "6x10x6",
+    "t0T4CSAPnEq4rvHAVl84-Q": "6x10x6",
+    "grYBjxIS3E--lmrqenuK8A": "6x10x6",
+    "8pltGexHAEyFL2ljOe0oMQ": "6x10x6",
+    "tcQfj6XOHUWFSAx_W0cc1A": "6x10x6",
+    "bxvsvg5znk6TqiIKq8H0kg": "3x4x3",
+    "9EF9u0V1eUetleBnkQhHkA": "3x4x3",
+    "I68tNng-K0yG-AoUx0HcSw": "3x4x3",
+    "Sb5-VSuwlkWpT6ViRiJ3vg": "3x4x3",
+    "6ZiODnoXqkaNWvaqyGjnwg": "3x4x3",
+    "87PSgg9GREmGU9MIRAXXhg": "3x4x3",
+    "VDQhZPo-rkWkzwozat27fw": "3x4x3"
+  },
+  "compartments": {
+    "y1Cs8LR0KUyCKUAJBIOyOg": "8x3x8",
+    "3Ky8PvdxqUKMRXZa0xLF2A": "8x3x8",
+    "fYoX2amTl0KrZurPKjU9gg": "8x3x8",
+    "T9TN0ZYumUaCxcSRjO_qTw": "8x1x8",
+    "T4d-8WnA_UiHSJh6PXiXpA": "8x1x8",
+    "6LpDL27QuEW0PZCm35Nx5w": "8x1x8",
+    "QIOFQpQSKESIdNzf_JEFyA": "8x1x8",
+    "FVcPIcV_00eu62NQQK3oLg": "8x1x8",
+    "1FrTJ5o850ynlq4dRDmMbA": "8x1x8"
+  },
+  "modules": {
+    "vOzzHo4KfE60wZ3Q1s38GA": "12x12x12",
+    "6evWdeLGT0uALe075-nhgw": "6x6x6",
+    "JVCLf3RKKUOBEXaWWkVLMw": "3x3x3",
+    "yryHYXgMWEy969gRuaDO6w": "3x3x3",
+    "JHJi2y5Xskytpw5-Qbu95A": "3x3x3",
+    "MQyTgOLGCkyeljdvbkkFDA": "3x3x3",
+    "S-rQo19r20K0L0PRer3yMw": "3x3x3",
+    "M3mc7A4WOU-2fq5XgRSECA": "3x3x3"
+  }
+}

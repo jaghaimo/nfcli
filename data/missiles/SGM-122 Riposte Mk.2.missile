@@ -1,49 +1,53 @@
 <?xml version="1.0"?>
 <MissileTemplate xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <AssociatedTemplateName>SGM-112 Riposte</AssociatedTemplateName>
-  <Designation>SGM-112</Designation>
-  <Nickname>Riposte</Nickname>
-  <Description>DIRECT - &lt;color=#FBFF4C&gt;CMD&lt;/color&gt; - HE FRAG</Description>
-  <LongDescription>The SGM-112 Riposte is a size 1 direct guidance missile.  It is based on the SGM-1 body, which is a nimble general-purpose missile.  This missile will deliver a Proximity Fuze, High Explosive, Blast Fragmentation warhead.  It homes in on its target using command guidance from its launching ship.
+  <AssociatedTemplateName>SGM-122 Riposte Mk.2</AssociatedTemplateName>
+  <Designation>SGM-122</Designation>
+  <Nickname>Riposte Mk.2</Nickname>
+  <Description>DIRECT - ACT(&lt;color=#4CFF72&gt;RADAR&lt;/color&gt;) - HE FRAG</Description>
+  <LongDescription>The SGM-122 Riposte Mk.2 is a size 1 direct guidance missile.  It is based on the SGM-1 body, which is a nimble general-purpose missile.  This missile will deliver a Proximity Fuze, High Explosive, Blast Fragmentation warhead.  It homes in on its target using an Active Radar seeker.
 
 Control Method: DIRECT
 Targeting Modes:
-	&lt;b&gt;&lt;color=#FF2525&gt;POSITION&lt;/color&gt;	&lt;color=#4CFF72&gt;TRACK&lt;/color&gt;&lt;/b&gt;
-Primary Seeker: COMMAND (&lt;color=#FBFF4C&gt;Requires COMMS Enabled&lt;/color&gt;)
+	&lt;b&gt;&lt;color=#4CFF72&gt;POSITION&lt;/color&gt;	&lt;color=#4CFF72&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+Primary Seeker: ACTIVE &lt;color=#4CFF72&gt;RADAR&lt;/color&gt;
 
-335 m/s for 3,435 m, top speed in 0.7 s
+335 m/s for 4,323 m, top speed in 0.7 s
 Terminal Maneuvers: None
 
 Proximity Fuze, High Explosive, Blast Fragmentation
-Armor: 1cm   Component: 40hp
-Blast Radius: 33 m
+Armor: 1cm   Component: 28hp
+Blast Radius: 30 m
 
 Body Integrity: 10 
 Programming Time: 3 s
 Radar Signature Bonus: 100 %
-Pre-Ignition Strafe: 100 %
-Pre-Ignition Turn: 100 %</LongDescription>
-  <Cost>4</Cost>
+Boost-Phase Duration: 3 s
+Boost-Phase Strafe: 100 %
+Boost-Phase Turn Rate: 100 %
+Failure Rate: 0 %</LongDescription>
+  <Cost>3</Cost>
   <BodyKey>Stock/SGM-1 Body</BodyKey>
   <TemplateKey>f8cf77e3-f11c-4840-b773-c0f969af1916</TemplateKey>
   <BaseColor>
-    <r>1</r>
-    <g>0.4862745</g>
-    <b>0</b>
+    <r>0.9999999</r>
+    <g>0.9999999</g>
+    <b>0.9999998</b>
     <a>1</a>
   </BaseColor>
   <StripeColor>
-    <r>0.254901975</r>
-    <g>0.254901975</g>
-    <b>0.254901975</b>
+    <r>-7.07805157E-08</r>
+    <g>-7.07805157E-08</g>
+    <b>-7.07805157E-08</b>
     <a>1</a>
   </StripeColor>
   <Sockets>
     <MissileSocket>
       <Size>1</Size>
-      <InstalledComponent xsi:type="CommandSeekerSettings">
-        <ComponentKey>Stock/Command Receiver</ComponentKey>
+      <InstalledComponent xsi:type="ActiveSeekerSettings">
+        <ComponentKey>Stock/Steerable Active Radar Seeker</ComponentKey>
         <Mode>Targeting</Mode>
+        <RejectUnvalidated>false</RejectUnvalidated>
+        <DetectPDTargets>true</DetectPDTargets>
       </InstalledComponent>
     </MissileSocket>
     <MissileSocket>
@@ -52,11 +56,11 @@ Pre-Ignition Turn: 100 %</LongDescription>
         <ComponentKey>Stock/Direct Guidance</ComponentKey>
         <Role>Defensive</Role>
         <HotLaunch>true</HotLaunch>
-        <SelfDestructOnLost>true</SelfDestructOnLost>
+        <SelfDestructOnLost>false</SelfDestructOnLost>
         <Maneuvers>None</Maneuvers>
         <DefensiveDoctrine>
           <TargetSizeMask>12</TargetSizeMask>
-          <TargetSizeOrdering>Descending</TargetSizeOrdering>
+          <TargetSizeOrdering>Ascending</TargetSizeOrdering>
           <SalvoSize>0</SalvoSize>
           <FarthestFirst>false</FarthestFirst>
         </DefensiveDoctrine>
@@ -64,13 +68,13 @@ Pre-Ignition Turn: 100 %</LongDescription>
       </InstalledComponent>
     </MissileSocket>
     <MissileSocket>
-      <Size>2</Size>
+      <Size>1</Size>
       <InstalledComponent>
-        <ComponentKey>Stock/Blast Fragmentation</ComponentKey>
+        <ComponentKey>Stock/Blast Fragmentation EL</ComponentKey>
       </InstalledComponent>
     </MissileSocket>
     <MissileSocket>
-      <Size>4</Size>
+      <Size>5</Size>
       <InstalledComponent xsi:type="MissileEngineSettings">
         <ComponentKey />
         <BalanceValues>

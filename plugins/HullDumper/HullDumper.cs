@@ -12,7 +12,7 @@ namespace HullDumper
         public void PostLoad()
         {
             IReadOnlyCollection<BaseHull> allHulls = BundleManager.Instance.AllHulls;
-            foreach (Hull hull in allHulls)
+            foreach (BaseHull hull in allHulls)
             {
                 ulong sourceModId = hull.SourceModId ?? 0;
                 string hullName = sanitizeHullName(hull.SaveKey.ToLower());

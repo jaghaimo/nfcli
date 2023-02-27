@@ -2,9 +2,9 @@
 <ModInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ModName>HullDumper</ModName>
   <ModDescription>Dumps hull data to JSON files, which are then consumed by `nfcli` app. Enable this mod and make sure it is loaded last. After the game has started, dumped data can be found in the local mods folder.</ModDescription>
-  <ModVer>4</ModVer>
+  <ModVer>5</ModVer>
   <Assemblies>
     <string>HullDumper.dll</string>
   </Assemblies>
-  <GameVer>0.2.2</GameVer>
+  <GameVer>0.3.0</GameVer>
 </ModInfo>
