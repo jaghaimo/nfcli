@@ -315,7 +315,13 @@ class Fleet(Named, Printable):
 
     @property
     def text(self) -> str:
-        return self.ship_list + self.missile_list
+        combined = self.title + self.ship_list + self.missile_list
+        if len(combined) > 2000:
+            return (
+                f"{self.title}\n\n*Skipping fleet analysis due to Discord message size limitation."
+                " Yes, it would need more than 2000 characters.*\n"
+            )
+        return combined
 
     @property
     def ship_list(self) -> str:

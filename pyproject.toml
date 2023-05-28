@@ -8,7 +8,7 @@ select = ["F", "E", "W", "C90", "I", "UP", "C4", "SIM", "ERA", "RUF"]
 
 [tool.poetry]
 name = "nfcli"
-version = "1.15.0"
+version = "1.15.1"
 description = "A CLI tool to pretty print fleet and ship files to console."
 authors = ["Jaghaimo <1764586+jaghaimo@users.noreply.github.com>"]
 
