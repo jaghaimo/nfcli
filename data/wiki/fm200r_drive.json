@@ -1,5 +1,6 @@
 {
   "ComponentName": "FM200R Drive",
+  "SaveKey": "Stock/FM200R Drive",
   "Faction": "Stock/Alliance",
   "ShortDescription": "Fusion Drive",
   "LongDescription": "This small-sized drive system provides power for the main engines of smaller warships, while also providing a small amount of reactor power.\n\nThe FM200R is a specially designed reinforced version of the mainstay drive module of the Alliance fleet.",
@@ -21,7 +22,7 @@
   "MaxHealth": 500,
   "Reinforced": true,
   "FunctioningThreshold": 25,
-  "DamageResistance": 60,
+  "DamageThreshold": 60,
   "DCPriority": "Critical",
   "RareDebuffSubtype": "drive",
   "RareDebuffChance": 0.05,

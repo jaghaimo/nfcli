@@ -1,5 +1,6 @@
 {
   "ComponentName": "J15 'Bellbird' Jammer",
+  "SaveKey": "Stock/J15 Jammer",
   "Faction": "Stock/Protectorate",
   "ShortDescription": "Jammer (Radar)",
   "LongDescription": "The J15 is a simple directional swept noise jammer, designed to radiate radio waves in frequency ranges typically used by military radar suites.",
@@ -21,7 +22,7 @@
   "MaxHealth": 150,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

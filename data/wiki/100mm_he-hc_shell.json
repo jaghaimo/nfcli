@@ -1,5 +1,6 @@
 {
   "MunitionName": "100mm HE-HC Shell",
+  "SaveKey": "Stock/100mm HE-HC Shell",
   "Description": "A variant of the 100mm HE shell with a greater length and more explosive capacity at the expense of armor penetration.  Most useful against targets which have had the armor stripped off by plasma barrage.\n\nType: Ballistic/Chemical\nSize: 100mm\nRole: Offensive\nArmor Penetration: 8 cm\nComponent Damage: 70 hp\nPenetration Depth: 30 m\nExplosion Radius: 10\nMuzzle Velocity: 900 m/s\nRange: 7,200 m\nVolume: 0.05 m³",
   "Type": "Ballistic",
   "SimMethod": "Spawned",

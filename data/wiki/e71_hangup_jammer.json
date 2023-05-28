@@ -1,5 +1,6 @@
 {
   "ComponentName": "E71 'Hangup' Jammer",
+  "SaveKey": "Stock/E71 'Hangup' Jammer",
   "Faction": "Stock/Alliance",
   "ShortDescription": "Jammer (Comms)",
   "LongDescription": "Once activated, the E71 floods a region of the battlespace with random noise and radio waves, disrupting communications and preventing targets from receiving track data from other sources, such as scouts. However, it does not prevent sending data, only receiving.",
@@ -21,7 +22,7 @@
   "MaxHealth": 75,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

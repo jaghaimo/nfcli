@@ -1,6 +1,7 @@
 {
   "MunitionName": "100mm Grape",
-  "Description": "A cannister of small, hardened metal beads.  Can be used against unarmored targets to directly attack crew and damage delicate systems, or against missiles in flight.\n\nType: Ballistic/Chemical\nSize: 100mm\nRole: Dual-Purpose\nArmor Penetration: 10 cm\nComponent Damage: 25 hp\nMuzzle Velocity: 900 m/s\nRange: 5,400 m\nVolume: 0.05 m³",
+  "SaveKey": "Stock/100mm Grapeshot",
+  "Description": "A canister of small, hardened metal beads.  Can be used against unarmored targets to directly attack crew and damage delicate systems, or against missiles in flight.\n\nType: Ballistic/Chemical\nSize: 100mm\nRole: Dual-Purpose\nArmor Penetration: 10 cm\nComponent Damage: 25 hp\nMuzzle Velocity: 900 m/s\nRange: 5,400 m\nVolume: 0.05 m³",
   "Type": "Ballistic",
   "SimMethod": "Spawned",
   "Role": "Offensive, Defensive",

@@ -1,5 +1,6 @@
 {
   "ComponentName": "C60 Cannon",
+  "SaveKey": "Stock/C60 Cannon",
   "Faction": "Stock/Protectorate",
   "ShortDescription": "Class 2 Casemate Cannon",
   "LongDescription": "With stockpiles of 450mm shells filling Alliance supply depots across Protectorate space, it was only natural that they would be procured for use in the Bethel Blockade.  The C60 is meant to provide a heavy punch-up capability to the smaller commandeered ships which can't mount the larger C65.  In hunter-killer packs, this weapon can completely devastate an Alliance ship caught unprepared.",
@@ -21,7 +22,7 @@
   "MaxHealth": 350,
   "Reinforced": false,
   "FunctioningThreshold": 30,
-  "DamageResistance": 40,
+  "DamageThreshold": 40,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,
@@ -55,9 +56,9 @@
   },
   "ContinuousWeaponComponentData": null,
   "DiscreteWeaponComponentData": {
-    "TimeBetweenMuzzles": 4,
-    "MagazineSize": 4,
-    "ReloadTime": 60
+    "TimeBetweenMuzzles": 1,
+    "MagazineSize": 1,
+    "ReloadTime": 18
   },
   "CellLauncherComponentData": null,
   "TubeLauncherComponentData": null,

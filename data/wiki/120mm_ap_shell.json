@@ -1,5 +1,6 @@
 {
   "MunitionName": "120mm AP Shell",
+  "SaveKey": "Stock/120mm AP Shell",
   "Description": "Armor-piercing rounds utilized by light cannon weapons, such as the Mk6X series. Effective on light or medium-type warships.\n\nIncreased effectiveness on armored targets, but with reduced damage on internal compartments.\n\nType: Ballistic/Chemical\nSize: 120mm\nRole: Offensive\nArmor Penetration: 45 cm\nComponent Damage: 30 hp\nMuzzle Velocity: 800 m/s\nRange: 7,200 m\nVolume: 0.05 m³",
   "Type": "Ballistic",
   "SimMethod": "Spawned",

@@ -1,5 +1,6 @@
 {
   "ComponentName": "FR3300 Micro Reactor",
+  "SaveKey": "Stock/FR3300 Micro Reactor",
   "Faction": "Stock/Alliance",
   "ShortDescription": "Fusion Powerplant",
   "LongDescription": "The FR-Series 3300 Reactor is typically found on Corvette-class warships. While inefficient for larger warships, the FR3300 can provide a nice backup supply of power alongside the main reactor.",
@@ -21,7 +22,7 @@
   "MaxHealth": 200,
   "Reinforced": false,
   "FunctioningThreshold": 50,
-  "DamageResistance": 30,
+  "DamageThreshold": 30,
   "DCPriority": "Critical",
   "RareDebuffSubtype": "reactor",
   "RareDebuffChance": 0.05,

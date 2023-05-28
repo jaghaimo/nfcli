@@ -1,5 +1,6 @@
 {
   "ComponentName": "CR10 Antenna",
+  "SaveKey": "Stock/CR10 Antenna",
   "Faction": "",
   "ShortDescription": "Comms Antenna",
   "LongDescription": "The CR10 functions as a fallback antenna array, giving the host warship additional transmitting power should the main communications antennae be disabled.\n\nThe most powerful antenna array on a warship will serve as the active communications path, even if the integrated array is still functional.",
@@ -21,7 +22,7 @@
   "MaxHealth": 100,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

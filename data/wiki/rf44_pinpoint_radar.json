@@ -1,5 +1,6 @@
 {
   "ComponentName": "RF44 'Pinpoint' Radar",
+  "SaveKey": "Stock/RF44 'Pinpoint' Radar",
   "Faction": "Stock/Protectorate",
   "ShortDescription": "Fire Control Radar",
   "LongDescription": "The Pinpoint is the predecessor to the Bullseye Fire Control Radar that is now ubiquitous throughout the fleet.  It is inferior in almost every way except its resistance to jamming, but provides good target quality if it can get in range.",
@@ -21,7 +22,7 @@
   "MaxHealth": 70,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 10,
+  "DamageThreshold": 10,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

@@ -1,5 +1,6 @@
 {
   "MunitionName": "300mm AP Rail Sabot",
+  "SaveKey": "Stock/300mm AP Rail Sabot",
   "Description": "High-velocity alloy-based shell used in railgun-type weapon systems, including mass drivers.  While the full size of the sabot package is 300mm, the needle projectile is much smaller.  These high-speed, extremely hard needles perforate delicate components and cause rapid degradation to warship systems, though they lack the explosive punch to permanently destroy them.\n\nType: Ballistic/Magnetic\nSize: 300mm\nRole: Offensive\nArmor Penetration: 200 cm\nComponent Damage: 80 hp (Ignores DR)\nStructural Damage: 0\nMuzzle Velocity: 2000 m/s\nRange: 21,000 m\nVolume: 0.75 m³",
   "Type": "Ballistic",
   "SimMethod": "Spawned",

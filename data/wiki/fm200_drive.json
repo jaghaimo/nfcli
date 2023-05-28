@@ -1,5 +1,6 @@
 {
   "ComponentName": "FM200 Drive",
+  "SaveKey": "Stock/FM200 Drive",
   "Faction": "Stock/Alliance",
   "ShortDescription": "Fusion Drive",
   "LongDescription": "This small-sized drive system provides power for the main engines of smaller warships, while also providing a small amount of reactor power. With an even balance of power and durability, the FM200 can fit all manner of warships, and even provide backup drives to larger warships.",
@@ -21,7 +22,7 @@
   "MaxHealth": 250,
   "Reinforced": false,
   "FunctioningThreshold": 50,
-  "DamageResistance": 40,
+  "DamageThreshold": 40,
   "DCPriority": "Critical",
   "RareDebuffSubtype": "drive",
   "RareDebuffChance": 0.05,

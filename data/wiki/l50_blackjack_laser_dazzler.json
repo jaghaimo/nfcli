@@ -1,5 +1,6 @@
 {
   "ComponentName": "L50 'Blackjack' Laser Dazzler",
+  "SaveKey": "Stock/L50 Laser Dazzler",
   "Faction": "Stock/Protectorate",
   "ShortDescription": "Jammer (EO)",
   "LongDescription": "The L50 is a dual-purpose laser dazzler which can be used to manually scramble any electro-optical sensors in its area of effect.  It is also automatically slaved to the point defense control computer, and will attempt to jam any incoming missile threats.",
@@ -21,7 +22,7 @@
   "MaxHealth": 75,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

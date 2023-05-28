@@ -1,5 +1,6 @@
 {
   "ComponentName": "Launcher Deluge System",
+  "SaveKey": "Stock/Launcher Deluge System",
   "Faction": "",
   "ShortDescription": "",
   "LongDescription": "An emergency system installed into vertical cell missile launchers which fills the entire launcher with water to stop the spread of fire to ammunition.  Significantly reduces the chances of a launcher exploding when hit by enemy fire.",
@@ -21,7 +22,7 @@
   "MaxHealth": 75,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 10,
+  "DamageThreshold": 10,
   "DCPriority": "Low",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

@@ -1,5 +1,6 @@
 {
   "ComponentName": "P60 'Grazer' PDT",
+  "SaveKey": "Stock/P60 Laser PDT",
   "Faction": "Stock/Protectorate",
   "ShortDescription": "Class 1 Laser",
   "LongDescription": "Probably the greatest threat to the Protectorate's rag-tag fleet is the advanced hybrid missiles that Alliance ships regularly carry.  Tremendous effort was dedicated to creating a laser weapon which could counter even one of these missiles, and through no small feat the P60 was developed.  Taking advantage of the high speed and accuracy of shipyard cutting laser arms, and adding an electro-optical sensor for accuracy, the P60 can output a brief burst of laser energy to cut through sprinting threats.",
@@ -21,7 +22,7 @@
   "MaxHealth": 100,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

@@ -1,5 +1,6 @@
 {
   "ComponentName": "Mk25 'Rebound' PDT",
+  "SaveKey": "Stock/Mk25 'Rebound' PDT",
   "Faction": "Stock/Alliance",
   "ShortDescription": "Class 1 Kinetic",
   "LongDescription": "The Mk25 'Rebound' fires short-range 50mm flak rounds, detonating roughly in proximity of the approaching threat, typically missiles or personal craft. As the weapon lacks a Fire Control radar it is entirely reliant on the host warship's sensors, but is highly resistant to radar jamming and can operate off of visuals.",
@@ -21,7 +22,7 @@
   "MaxHealth": 100,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

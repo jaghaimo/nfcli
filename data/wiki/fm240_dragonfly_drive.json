@@ -1,5 +1,6 @@
 {
   "ComponentName": "FM240 'Dragonfly' Drive",
+  "SaveKey": "Stock/FM240 'Dragonfly' Drive",
   "Faction": "Stock/Alliance",
   "ShortDescription": "Fusion Drive",
   "LongDescription": "A high-efficiency drive with the majority of power redirected to the maneuvering thrusters, pulled from mining vessels. Although it sacrifices some top speed for the warship, it significantly increases the agility of the warship, allowing much faster turns, rolls, and translations.",
@@ -21,7 +22,7 @@
   "MaxHealth": 250,
   "Reinforced": false,
   "FunctioningThreshold": 50,
-  "DamageResistance": 40,
+  "DamageThreshold": 40,
   "DCPriority": "Critical",
   "RareDebuffSubtype": "drive",
   "RareDebuffChance": 0.05,

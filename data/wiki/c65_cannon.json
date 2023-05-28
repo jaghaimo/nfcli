@@ -1,5 +1,6 @@
 {
   "ComponentName": "C65 Cannon",
+  "SaveKey": "Stock/C65 Cannon",
   "Faction": "Stock/Protectorate",
   "ShortDescription": "Class 4 Casemate Cannon",
   "LongDescription": "With stockpiles of 450mm shells filling Alliance supply depots across Protectorate space, it was only natural that they would be procured for use in the Bethel Blockade.  Knowing that the blockade fleet would be facing down the heaviest of armored warships if the Alliance did decide to break through at the Kribensis gate, the C65 was designed to be the primary armament of the ships holding the line there.  Its massive autoloader allows a lineship to output as much firepower as a Solomon battleship, but it can take a while to reload.",
@@ -21,7 +22,7 @@
   "MaxHealth": 500,
   "Reinforced": false,
   "FunctioningThreshold": 20,
-  "DamageResistance": 40,
+  "DamageThreshold": 40,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

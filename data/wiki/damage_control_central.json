@@ -1,5 +1,6 @@
 {
   "ComponentName": "Damage Control Central",
+  "SaveKey": "Stock/Damage Control Central",
   "Faction": "",
   "ShortDescription": "Damage Control",
   "LongDescription": "The DCC operates as a hub for damage control teams, allowing coordinated response and pooling of repair equipment. Increases the effectiveness of damage control teams on the warship.",
@@ -21,7 +22,7 @@
   "MaxHealth": 200,
   "Reinforced": false,
   "FunctioningThreshold": 15,
-  "DamageResistance": 35,
+  "DamageThreshold": 35,
   "DCPriority": "Low",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

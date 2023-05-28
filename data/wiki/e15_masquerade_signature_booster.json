@@ -1,5 +1,6 @@
 {
   "ComponentName": "E15 'Masquerade' Signature Booster",
+  "SaveKey": "Stock/E15 'Masquerade' Signature Booster",
   "Faction": "Stock/Alliance",
   "ShortDescription": "Electronic Deception Module",
   "LongDescription": "The E15 is a simple electronic noisemaker.  It amplifies the electronic signature of its host warship, making it appear as a large, appealing target.  Note that this will make the warship visible at longer ranges, and does not significantly complicate identification.  In order to keep the ruse up, this module is best combined with a Signature Scrambler.",
@@ -21,7 +22,7 @@
   "MaxHealth": 100,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "Low",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

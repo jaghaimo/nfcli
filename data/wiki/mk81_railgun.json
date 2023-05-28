@@ -1,5 +1,6 @@
 {
   "ComponentName": "Mk81 Railgun",
+  "SaveKey": "Stock/Mk81 Railgun",
   "Faction": "Stock/Alliance",
   "ShortDescription": "Class 4 Railgun",
   "LongDescription": "The Alliance Mk8X Railgun provides a heavy warship with long-range direct-fire offensive ability, intended to pressure targets caught out in open space and foregoing cover. Alliance railguns typically lack the explosive power of their favored cannon weapons but make up for it with precision fire that can trigger fires and other debilitating effects on targets.\n\nRailguns defeat armor with ease but the lack of an explosive payload reduces the killing power of these weapons. Fires 300mm Magnetic rounds.",
@@ -21,7 +22,7 @@
   "MaxHealth": 300,
   "Reinforced": false,
   "FunctioningThreshold": 30,
-  "DamageResistance": 30,
+  "DamageThreshold": 30,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

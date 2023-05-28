@@ -1,5 +1,6 @@
 {
   "ComponentName": "BW2000 Drive",
+  "SaveKey": "Stock/BW2000 Drive",
   "Faction": "Stock/Protectorate",
   "ShortDescription": "Fusion Drive",
   "LongDescription": "Heavy civilian drive for cargo vessels, with increased power output at the expense of thrust power.",
@@ -21,7 +22,7 @@
   "MaxHealth": 700,
   "Reinforced": false,
   "FunctioningThreshold": 50,
-  "DamageResistance": 40,
+  "DamageThreshold": 40,
   "DCPriority": "Critical",
   "RareDebuffSubtype": "drive",
   "RareDebuffChance": 0.05,

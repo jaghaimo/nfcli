@@ -1,5 +1,6 @@
 {
   "ComponentName": "BW1500 Drive",
+  "SaveKey": "Stock/BW1500 Drive",
   "Faction": "Stock/Protectorate",
   "ShortDescription": "Fusion Drive",
   "LongDescription": "Heavy civilian drive for cargo vessels.",
@@ -21,7 +22,7 @@
   "MaxHealth": 700,
   "Reinforced": false,
   "FunctioningThreshold": 50,
-  "DamageResistance": 40,
+  "DamageThreshold": 40,
   "DCPriority": "Critical",
   "RareDebuffSubtype": "drive",
   "RareDebuffChance": 0.05,

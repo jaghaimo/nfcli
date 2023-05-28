@@ -1,5 +1,6 @@
 {
   "MunitionName": "450mm AP Shell",
+  "SaveKey": "Stock/450mm AP Shell",
   "Description": "Armor Piercing shells for use in heavy ballistic weapons, effective against medium and heavy warships.\n\nLow-velocity shells that have increased effectiveness against hull armor, but lacks a high-explosive payload. Best used against slow, heavy targets in broadside volleys, followed by salvos of high-explosive shells.\n\nType: Ballistic/Chemical\nSize: 450mm\nRole: Offensive\nArmor Penetration: 110 cm\nComponent Damage: 100 hp\nMuzzle Velocity: 750 m/s\nRange: 11,250 m\nVolume: 0.8 m³",
   "Type": "Ballistic",
   "SimMethod": "Spawned",

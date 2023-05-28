@@ -1,5 +1,6 @@
 {
   "ComponentName": "CHI-7700 Drive",
+  "SaveKey": "Stock/CHI-7700 Drive",
   "Faction": "Stock/Protectorate",
   "ShortDescription": "Fusion Drive",
   "LongDescription": "A high-maneuverability drive commonly found on bulk haulers traveling in and out of dense asteroid fields, transporting mining yields to refineries elsewhere in the system.",
@@ -21,7 +22,7 @@
   "MaxHealth": 700,
   "Reinforced": false,
   "FunctioningThreshold": 50,
-  "DamageResistance": 40,
+  "DamageThreshold": 40,
   "DCPriority": "Critical",
   "RareDebuffSubtype": "drive",
   "RareDebuffChance": 0.05,

@@ -1,5 +1,6 @@
 {
   "ComponentName": "R400 'Bloodhound' LRT Radar",
+  "SaveKey": "Stock/R400 Radar",
   "Faction": "Stock/Protectorate",
   "ShortDescription": "Long Range Tracking Radar",
   "LongDescription": "The R400 is a long-range tracking radar which can develop an accurate track on a ship within an extremely narrow field of view while staying out of harm's way.\n\nThe R400 does not provide continuous scan like a search radar, and must be manually directed at an area to search.",
@@ -21,7 +22,7 @@
   "MaxHealth": 200,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,
@@ -53,7 +54,7 @@
   "OmnidirectionalEWarComponentData": null,
   "TurretedEWarComponentData": null,
   "ISensorComponentData": {
-    "IgnoreEMCON": false,
+    "IgnoreEMCON": true,
     "CanOrderLock": false,
     "CanOrderBurnthrough": false
   },

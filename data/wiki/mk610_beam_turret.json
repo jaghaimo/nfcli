@@ -1,5 +1,6 @@
 {
   "ComponentName": "Mk610 Beam Turret",
+  "SaveKey": "Stock/Mk610 Beam Turret",
   "Faction": "Stock/Alliance",
   "ShortDescription": "Class 5 Particle Beam",
   "LongDescription": "The Mk610 Particle Beam functions as a close-range 'knife fighting' weapon for heavy warships, capable of stripping away armor and incinerating the delicate insides of warships, but its short-range and damage falloff means the weapon is best used when the host warship is closing on a target. A mild recharge time and immense requirement for power also means this weapon needs judicious use to be effective.",
@@ -21,7 +22,7 @@
   "MaxHealth": 400,
   "Reinforced": false,
   "FunctioningThreshold": 30,
-  "DamageResistance": 30,
+  "DamageThreshold": 30,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

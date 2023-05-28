@@ -1,5 +1,6 @@
 {
   "ComponentName": "TE45 Mass Driver",
+  "SaveKey": "Stock/TE45 Mass Driver",
   "Faction": "Stock/Protectorate",
   "ShortDescription": "Spinal Mass Driver",
   "LongDescription": "The TE45 is a repurposed piece of mining equipment, able to sling a massive block of tungsten at high velocities and crack open asteroids.  These railguns don't have the same armor penetration as an Alliance railgun due to the shape of their projectile, but having a heavy block of metal stop instantly when hitting an armored warship creates quite the explosion.",
@@ -21,7 +22,7 @@
   "MaxHealth": 450,
   "Reinforced": false,
   "FunctioningThreshold": 20,
-  "DamageResistance": 40,
+  "DamageThreshold": 40,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

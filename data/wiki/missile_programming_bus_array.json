@@ -1,5 +1,6 @@
 {
   "ComponentName": "Missile Programming Bus Array",
+  "SaveKey": "Stock/Missile Programming Bus Array",
   "Faction": "",
   "ShortDescription": "Missile Support",
   "LongDescription": "Programming targets and flight paths into missiles is a complex process, and only one missile can be programmed at a time on most ships.  This module upgrades the missile programming bus to add additional programming channels, enabling more missiles to be prepared for launch at the same time.",
@@ -21,7 +22,7 @@
   "MaxHealth": 100,
   "Reinforced": false,
   "FunctioningThreshold": 15,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "Low",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

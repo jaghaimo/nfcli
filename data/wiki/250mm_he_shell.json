@@ -1,5 +1,6 @@
 {
   "MunitionName": "250mm HE Shell",
+  "SaveKey": "Stock/250mm HE Shell",
   "Description": "High-explosive shells utilized by cannon weapons, such as the Mk6X series. Effective on light or medium-type warships, with acceptable performance on heavy-type warships.\n\nLacks the hull armor penetration power of AP shells, but utilizes a deadly high-explosive payload to destroy the interiors of targets. Best used to follow up salvos of armor-piercing shells.\n\nType: Ballistic/Chemical\nSize: 250mm\nRole: Offensive\nArmor Penetration: 40 cm\nComponent Damage: 80 hp\nPenetration Depth: 25 m\nExplosion Radius: 9\nMuzzle Velocity: 800 m/s\nRange: 8,000 m\nVolume: 0.15 m³",
   "Type": "Ballistic",
   "SimMethod": "Spawned",

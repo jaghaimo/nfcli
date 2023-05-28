@@ -1,5 +1,6 @@
 {
   "ComponentName": "Gun Plotting Center",
+  "SaveKey": "Stock/Gun Plotting Center",
   "Faction": "",
   "ShortDescription": "Gunnery",
   "LongDescription": "A workspace with an extensive suite of targeting arrays, computing systems, and calculators. Provides gunnery teams the means to lay in much more accurate firing solutions, increasing overall ballistic weapon accuracy.",
@@ -21,7 +22,7 @@
   "MaxHealth": 100,
   "Reinforced": false,
   "FunctioningThreshold": 15,
-  "DamageResistance": 10,
+  "DamageThreshold": 10,
   "DCPriority": "Low",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

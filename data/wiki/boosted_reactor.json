@@ -1,5 +1,6 @@
 {
   "ComponentName": "Boosted Reactor",
+  "SaveKey": "Stock/Boosted Reactor",
   "Faction": "Stock/Protectorate",
   "ShortDescription": "Fusion Powerplant",
   "LongDescription": "This reactor has had its power output boosted by making unauthorized modifications and removing many safety features.  It provides more power, but has a much higher probability of catastrophic failure under fire.",
@@ -21,7 +22,7 @@
   "MaxHealth": 300,
   "Reinforced": false,
   "FunctioningThreshold": 50,
-  "DamageResistance": 40,
+  "DamageThreshold": 40,
   "DCPriority": "Critical",
   "RareDebuffSubtype": "reactor",
   "RareDebuffChance": 0.1,

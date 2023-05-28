@@ -1,5 +1,6 @@
 {
   "ComponentName": "Reinforced DC Locker",
+  "SaveKey": "Stock/Reinforced DC Locker",
   "Faction": "",
   "ShortDescription": "Damage Control",
   "LongDescription": "Damage Control lockers provide a warship with teams capable of repairing ship components and restoring destroyed modules or compartments back into working order.\n\nEach locker allows a certain number of restorations for destroyed modules or components, but destruction of a DC locker will completely remove all available restorations. This compartment is reinforced to make it more likely restorations will remain available after a big hit.",
@@ -21,7 +22,7 @@
   "MaxHealth": 200,
   "Reinforced": true,
   "FunctioningThreshold": 20,
-  "DamageResistance": 35,
+  "DamageThreshold": 35,
   "DCPriority": "Low",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

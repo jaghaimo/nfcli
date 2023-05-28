@@ -1,5 +1,6 @@
 {
   "MunitionName": "EA12 Chaff Decoy",
+  "SaveKey": "Stock/EA12 Chaff Decoy",
   "Description": "VLS-launched countermeasure that detonates into a cloud of highly-reflective strips of aluminum which can completely disrupt the targeting systems of radar-guided missiles or radar-equipped warships for a short time.\n\nSize: 1\nCruise Speed: 15 m/s\nRange: 68 m\n\n<b>Decoy Capabilities:</b>\nSignatures:\n   - <color=#4CFF72>RADAR</color>\nRequires Target: No\nTTGI Autofire: 30\nRefire Time: 20\n\n<i><color=#FFEF9E>Any spacer worth their salt will carry a few of these, even the civilian ones. These days, they're filled with glass fibre coated in aluminum with a little bit of silver strips thrown in there for good measure. Since there's obviously no IFF attached, our own radar will pick these up as unknown sensor tracks, but we can at least filter these out  with some selective tuning.\n\n- I. Parker, CMC</color></i>",
   "Type": "Missile",
   "SimMethod": "Spawned",

@@ -1,5 +1,6 @@
 {
   "ComponentName": "VLS-2 Launcher",
+  "SaveKey": "Stock/VLS-2 Launcher",
   "Faction": "Stock/Alliance",
   "ShortDescription": "Size 2 Missile Launcher",
   "LongDescription": "Available to nearly all warships, the VLS-2 is the most common missile platform found in the fleets, with a modular system that allow for a mix-and-match mission profile of all medium-size missiles, such as the SGM-2 series of cruise missiles. Despite the ease-of-use, reloading the cells is a delicate task that can only be completed in port, so once a VLS is empty, it's useless for the remainder of an engagement.",
@@ -21,7 +22,7 @@
   "MaxHealth": 100,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "High",
   "RareDebuffSubtype": "cell launcher",
   "RareDebuffChance": 0.05,

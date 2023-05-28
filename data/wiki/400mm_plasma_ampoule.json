@@ -1,6 +1,7 @@
 {
   "MunitionName": "400mm Plasma Ampoule",
-  "Description": "A magnetic bottle containing a quantity of plasma within its field.  When propelled at an enemy ship by a coilgun it shatters on impact, melting large swathes of armor away.\n\nType: Ballistic/Magnetic\nSize: 400mm Ampoule\nRole: Offensive\nArmor Penetration: 45 cm\nComponent Damage: 60 hp\nPenetration Depth: 0 m\nMuzzle Velocity: 600 m/s\nRange: 12,000 m\nVolume: 0.8 m³",
+  "SaveKey": "Stock/400mm Plasma Ampoule",
+  "Description": "A magnetic bottle containing a quantity of plasma within its field.  When propelled at an enemy ship by a coilgun it shatters on impact, melting large swathes of armor away.  The plasma contained in the bottle is heated by induction immediately before firing and cools in flight, giving this weapon its highest damage potential at ranges less than 4km.\n\nType: Ballistic/Magnetic\nSize: 400mm Ampoule\nRole: Offensive\nArmor Penetration: 60 cm\nComponent Damage: 60 hp\nPenetration Depth: 0 m\nMuzzle Velocity: 600 m/s\nRange: 8,400 m\nVolume: 0.8 m³",
   "Type": "Ballistic",
   "SimMethod": "Spawned",
   "Role": "Offensive",
@@ -13,18 +14,18 @@
   "SupportsVisualTargeting": true,
   "SupportsWaypoints": false,
   "FlightSpeed": 600,
-  "Lifetime": 20,
-  "MaxRange": 12000,
+  "Lifetime": 14,
+  "MaxRange": 8400,
   "ShellMunitionData": {
     "MaxPenetration": 0
   },
   "MissileData": null,
   "DamageCharacteristics": {
-    "ArmorPenetration": 45,
+    "ArmorPenetration": 60,
     "OverpenetrationDamageMultiplier": 0.2,
     "MaxPenetrationDepth": 0,
     "HeatDamage": 500,
-    "DamageBrushSize": 6,
+    "DamageBrushSize": 3,
     "ComponentDamage": 60,
     "RandomEffectMultiplier": 0.25,
     "CrewVulnerabilityMultiplier": 1,

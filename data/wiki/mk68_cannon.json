@@ -1,5 +1,6 @@
 {
   "ComponentName": "Mk68 Cannon",
+  "SaveKey": "Stock/Mk68 Cannon",
   "Faction": "Stock/Alliance",
   "ShortDescription": "Class 5 Cannon",
   "LongDescription": "The Mk.68 is identical in function to the Mk.66, but sports a third barrel for additional offensive capability. However, the additional firepower means additional requirements for crew, ammunition, and an increased reload time. Fires 450mm chemical-ballistic shells.",
@@ -21,7 +22,7 @@
   "MaxHealth": 450,
   "Reinforced": false,
   "FunctioningThreshold": 30,
-  "DamageResistance": 30,
+  "DamageThreshold": 30,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

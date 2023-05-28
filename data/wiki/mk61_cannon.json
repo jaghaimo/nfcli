@@ -1,5 +1,6 @@
 {
   "ComponentName": "Mk61 Cannon",
+  "SaveKey": "Stock/Mk61 Cannon",
   "Faction": "Stock/Alliance",
   "ShortDescription": "Class 2 Cannon",
   "LongDescription": "The Mk.61 is a light cannon, offering great accuracy at medium range and can provide good, steady firepower against targets that fit its intended weight class, such as destroyers, frigates, and corvettes. \n\nAs expected, however, the performance of the Mk61 falls dramatically when tasked against heavier warships and massed guns are often required to remotely dent heavy hull armor. Fires 120mm chemical-ballistic shells.\n\nThe Mk61 and Mk62 also feature a specially designed dual-purpose control computer allowing them to be automatically assigned to incoming missile threats, provided the gun is not already assigned another target and the correct ammunition is available.",
@@ -21,7 +22,7 @@
   "MaxHealth": 150,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

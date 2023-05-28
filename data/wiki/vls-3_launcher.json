@@ -1,5 +1,6 @@
 {
   "ComponentName": "VLS-3 Launcher",
+  "SaveKey": "Stock/VLS-3 Launcher",
   "Faction": "Stock/Alliance",
   "ShortDescription": "Size 3 Missile Launcher",
   "LongDescription": "Available to nearly all warships, the VLS-3 is a modular system that allow for a mix-and-match mission profile of all large-size missiles, such as the SGT-3 series of torpedoes. Despite the ease-of-use, reloading the cells is a delicate task that can only be completed in port, so once a VLS is empty, it's useless for the remainder of an engagement.",
@@ -21,7 +22,7 @@
   "MaxHealth": 175,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "High",
   "RareDebuffSubtype": "cell launcher",
   "RareDebuffChance": 0.05,

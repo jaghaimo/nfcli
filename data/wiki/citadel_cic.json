@@ -1,5 +1,6 @@
 {
   "ComponentName": "Citadel CIC",
+  "SaveKey": "Stock/Citadel CIC",
   "Faction": "",
   "ShortDescription": "Command Center",
   "LongDescription": "The Combat Information Center (CIC) is the central command hub that provides command and control for the warship, and is critical in the operation of the vessel during an engagement.  This compartment is heavily reinforced and resistant to damage.\n\nThis CIC also features a workspace for a small team of intelligence analysts to speed up target identification and do basic battle damage assessment, though they lack the ability to process tracks from the rest of the fleet.\n\nDestruction of the CIC results in a loss of command and the affected warship cannot receive commands until the CIC is repaired.",
@@ -21,7 +22,7 @@
   "MaxHealth": 400,
   "Reinforced": true,
   "FunctioningThreshold": 20,
-  "DamageResistance": 50,
+  "DamageThreshold": 50,
   "DCPriority": "High",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

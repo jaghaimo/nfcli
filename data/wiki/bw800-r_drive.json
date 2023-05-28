@@ -1,5 +1,6 @@
 {
   "ComponentName": "BW800-R Drive",
+  "SaveKey": "Stock/BW800-R Drive",
   "Faction": "Stock/Protectorate",
   "ShortDescription": "Fusion Drive",
   "LongDescription": "Light civilian drive, hastily reinforced when commandeered.",
@@ -21,7 +22,7 @@
   "MaxHealth": 400,
   "Reinforced": true,
   "FunctioningThreshold": 50,
-  "DamageResistance": 50,
+  "DamageThreshold": 50,
   "DCPriority": "Critical",
   "RareDebuffSubtype": "drive",
   "RareDebuffChance": 0.05,

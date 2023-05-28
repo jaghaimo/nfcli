@@ -55,7 +55,7 @@ def update_tags():
     logging.info("Updating tags from wiki content...")
     wiki = Wiki()
     new_tags = {
-        f"Stock/{entity.name}": None
+        entity.save_key: None
         for entity in wiki.entities.values()
         if isinstance(entity, Component) and entity.type == "Surface"
     }
@@ -77,8 +77,9 @@ def update_wiki():
 
 
 class Entity:
-    def __init__(self, name: str, description: str) -> None:
+    def __init__(self, name: str, save_key: str, description: str) -> None:
         self.name = name
+        self.save_key = save_key
         self.description = description
 
     @property
@@ -111,7 +112,11 @@ class Entity:
 
 class Hull(Entity):
     def __init__(self, raw_data: dict) -> None:
-        super().__init__(raw_data["ClassName"] + " " + raw_data["HullClassification"], raw_data["LongDescription"])
+        super().__init__(
+            raw_data["ClassName"] + " " + raw_data["HullClassification"],
+            raw_data["SaveKey"],
+            raw_data["LongDescription"],
+        )
         self.class_name: str = raw_data["ClassName"]
         self.size_class: str = raw_data["SizeClass"]
         self.point_cost: int = raw_data["PointCost"]
@@ -187,7 +192,7 @@ class Hull(Entity):
 
 class Component(Entity):
     def __init__(self, raw_data: dict) -> None:
-        super().__init__(raw_data["ComponentName"], raw_data["LongDescription"])
+        super().__init__(raw_data["ComponentName"], raw_data["SaveKey"], raw_data["LongDescription"])
         self.category: str = raw_data["Category"]
         self.type: str = raw_data["Type"]
         self.point_cost: int = raw_data["PointCost"]
@@ -200,7 +205,7 @@ class Component(Entity):
         self.component_integrity: int = raw_data["MaxHealth"]
         self.reinforced: int = raw_data["Reinforced"]
         self.functioning_threshold: int = raw_data["FunctioningThreshold"]
-        self.damage_resistance: int = raw_data["DamageResistance"]
+        self.damage_threshold: int = raw_data["DamageThreshold"]
         self.crew_data: dict = raw_data["CrewOperatedComponentData"]
         ewar_data = {}
         if raw_data["TurretedEWarComponentData"]:
@@ -248,7 +253,7 @@ class Component(Entity):
             "Component Integrity": str(self.component_integrity),
             "Is Reinforced": "Yes" if self.reinforced else "No",
             "Functioning Threshold": str(self.functioning_threshold),
-            "Damage Resistance": str(self.damage_resistance),
+            "Damage Threshold": str(self.damage_threshold),
         }
 
     @property
@@ -288,7 +293,7 @@ class Component(Entity):
 
 class Munition(Entity):
     def __init__(self, raw_data: dict) -> None:
-        super().__init__(raw_data["MunitionName"], "")
+        super().__init__(raw_data["MunitionName"], raw_data["SaveKey"], "")
         self.type = raw_data["Type"]
         self.role = raw_data["Role"]
         self.point_cost = raw_data["PointCost"]

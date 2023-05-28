@@ -1,5 +1,6 @@
 {
   "ComponentName": "FR4800 Reactor",
+  "SaveKey": "Stock/FR4800 Reactor",
   "Faction": "Stock/Alliance",
   "ShortDescription": "Fusion Powerplant",
   "LongDescription": "The FR-Series is the staple power supply of the fleets for nearly over a century. The FR4800 is the most common model and provides an efficient amount of power to field most systems and weapons on warships.",
@@ -21,7 +22,7 @@
   "MaxHealth": 300,
   "Reinforced": false,
   "FunctioningThreshold": 50,
-  "DamageResistance": 40,
+  "DamageThreshold": 40,
   "DCPriority": "Critical",
   "RareDebuffSubtype": "reactor",
   "RareDebuffChance": 0.05,

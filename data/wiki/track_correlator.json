@@ -1,5 +1,6 @@
 {
   "ComponentName": "Track Correlator",
+  "SaveKey": "Stock/Track Correlator",
   "Faction": "",
   "ShortDescription": "Radar Control",
   "LongDescription": "Reduces the position and velocity deviation of sensor tracks by correlating the history of tracking data, providing a more accurate track.",
@@ -21,7 +22,7 @@
   "MaxHealth": 40,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 10,
+  "DamageThreshold": 10,
   "DCPriority": "Low",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

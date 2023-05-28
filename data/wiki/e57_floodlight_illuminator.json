@@ -1,5 +1,6 @@
 {
   "ComponentName": "E57 'Floodlight' Illuminator",
+  "SaveKey": "Stock/E57 'Floodlight' Illuminator",
   "Faction": "Stock/Alliance",
   "ShortDescription": "Illuminator (Radar)",
   "LongDescription": "A radar transmitter that deploys a high-power cone in a direction for the purpose of guiding semi-active missiles.  A side-effect of this is the boosting of the target's radar signature, making the target easier to see.\n\nThe Floodlight deploys a wider but shorter beam.",
@@ -21,7 +22,7 @@
   "MaxHealth": 75,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

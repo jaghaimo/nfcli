@@ -1,5 +1,6 @@
 {
   "ComponentName": "FM30X 'Prowler' Drive",
+  "SaveKey": "Stock/FM30X 'Prowler' Drive",
   "Faction": "Stock/Alliance",
   "ShortDescription": "Fusion Drive",
   "LongDescription": "By removing most of the high-power components and reflective drive housing, this drive greatly reduces the warship's radar signature at the cost of a significant decrease in speed and reduced drive durability.",
@@ -21,7 +22,7 @@
   "MaxHealth": 200,
   "Reinforced": false,
   "FunctioningThreshold": 30,
-  "DamageResistance": 25,
+  "DamageThreshold": 25,
   "DCPriority": "Critical",
   "RareDebuffSubtype": "drive",
   "RareDebuffChance": 0.05,

@@ -1,5 +1,6 @@
 {
   "ComponentName": "Reinforced Magazine",
+  "SaveKey": "Stock/Reinforced Magazine",
   "Faction": "",
   "ShortDescription": "Ammunition Storage",
   "LongDescription": "Magazines hold the ammunition for the warship and can carry multiple types of ammunition all at once. Destruction of the magazine will result in all stored ammunition rendered unusable until repaired.\n\nThis magazine is reinforced and has increased safety measures, reducing the likelihood of magazine explosion, but also reducing storage volume.",
@@ -21,7 +22,7 @@
   "MaxHealth": 150,
   "Reinforced": true,
   "FunctioningThreshold": 10,
-  "DamageResistance": 40,
+  "DamageThreshold": 40,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "magazine",
   "RareDebuffChance": 0.04,

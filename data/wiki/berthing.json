@@ -1,5 +1,6 @@
 {
   "ComponentName": "Berthing",
+  "SaveKey": "Stock/Berthing",
   "Faction": "",
   "ShortDescription": "Personnel",
   "LongDescription": "Berthings provide additional crew to the ship, which are required to operate systems, weapons, and other compartments.",
@@ -21,7 +22,7 @@
   "MaxHealth": 50,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "Low",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

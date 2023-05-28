@@ -1,5 +1,6 @@
 {
   "ComponentName": "RM50 'Parallax' Radar",
+  "SaveKey": "Stock/RM50 'Parallax' Radar",
   "Faction": "Stock/Alliance",
   "ShortDescription": "Multi-Function Radar",
   "LongDescription": "The RM50 Suite is a multi-function, multi-mode radar array designed for both search and fire-control applications.  By focusing tighter beams through the radar panels it is able to track a single target with high accuracy while also maintaining a volume search scan, all without the need for a separate turreted module consuming an external hardpoint.\n\nMulti-mode radars suffer from the drawback that they can only lock a target out to the maximum detection range of that target based on the sensitivity of the sensor, unlike a dedicated fire-control radar which can lock out to its maximum effective range. In other words, if the search function could not see the target on its own, it will not be able to lock a track from the sensor network.",
@@ -21,7 +22,7 @@
   "MaxHealth": 300,
   "Reinforced": false,
   "FunctioningThreshold": 30,
-  "DamageResistance": 40,
+  "DamageThreshold": 40,
   "DCPriority": "High",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

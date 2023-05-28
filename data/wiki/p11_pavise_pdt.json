@@ -1,5 +1,6 @@
 {
   "ComponentName": "P11 'Pavise' PDT",
+  "SaveKey": "Stock/P11 PDT",
   "Faction": "Stock/Protectorate",
   "ShortDescription": "Class 1 Kinetic",
   "LongDescription": "The P11 operates on the same principle as the Mk20 Defender, but makes up for the inherent inaccuracy of the Protectorate's retrofitted civilian sensors by adding a second barrel to double the number of 20mm rounds in any given point of space.",
@@ -21,7 +22,7 @@
   "MaxHealth": 100,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

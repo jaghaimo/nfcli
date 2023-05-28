@@ -1,5 +1,6 @@
 {
   "ComponentName": "Plant Control Center",
+  "SaveKey": "Stock/Plant Control Center",
   "Faction": "",
   "ShortDescription": "Reactor Control",
   "LongDescription": "A centralized control center equipped with a suite of improved monitoring, management, and control systems for a ship's reactor plant, allowing crew to operate remotely from the localized controls, for more efficient operation of the power plant.",
@@ -21,7 +22,7 @@
   "MaxHealth": 100,
   "Reinforced": false,
   "FunctioningThreshold": 15,
-  "DamageResistance": 10,
+  "DamageThreshold": 10,
   "DCPriority": "Low",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

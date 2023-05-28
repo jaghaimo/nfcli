@@ -1,5 +1,6 @@
 {
   "ComponentName": "MLS-2 Launcher",
+  "SaveKey": "Stock/MLS-2 Launcher",
   "Faction": "Stock/Protectorate",
   "ShortDescription": "Size 2 Missile Launcher",
   "LongDescription": "The MLS-2 is a roll-off missile launcher, loaded by crew members who retrieve munitions from bulk magazines. The MLS-2 can fire a volley of 4 medium-size missiles, like the SGM-series, before requiring a reload. As the reloading process is complicated, the MLS is restricted to firing currently loaded missiles, while swapping missiles requires a complete reload.\n\nThe MLS-2 comes with a special built-in system to initialize and pre-warm missiles during the loading process, skipping the lengthy pre-launch initializations and checks of an always-ready system like VLS.  This enables missiles to be launched immediately upon order, only taking a moment to load the target parameters before firing.\n\nNOTE: Rolloff-style launchers are not capable of firing defensive missiles.",
@@ -21,7 +22,7 @@
   "MaxHealth": 100,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

@@ -1,5 +1,6 @@
 {
   "ComponentName": "Ammunition Elevators",
+  "SaveKey": "Stock/Ammunition Elevators",
   "Faction": "",
   "ShortDescription": "Gunnery",
   "LongDescription": "Additional ammunition elevators allow crewmembers to rapidly deliver shells and rounds to the warship's kinetic weapons, reducing reload time for ballistic weapons.",
@@ -21,7 +22,7 @@
   "MaxHealth": 100,
   "Reinforced": false,
   "FunctioningThreshold": 15,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "Low",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

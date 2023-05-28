@@ -1,5 +1,6 @@
 {
   "ComponentName": "Container Stack Launcher",
+  "SaveKey": "Stock/Container Stack Launcher",
   "Faction": "Stock/Protectorate",
   "ShortDescription": "Container Missile Launcher",
   "LongDescription": "A small, hastily assembled platform which can mount two of the CM-4 series of cargo container missiles on the outside of the hull.",
@@ -21,7 +22,7 @@
   "MaxHealth": 200,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "container launcher",
   "RareDebuffChance": 0.05,

@@ -1,5 +1,6 @@
 {
   "ComponentName": "Mk66 Cannon",
+  "SaveKey": "Stock/Mk66 Cannon",
   "Faction": "Stock/Alliance",
   "ShortDescription": "Class 4 Cannon",
   "LongDescription": "A heavy gun battery for anti-ship warfare, typically found standard issue on capital ships like cruisers or battleships. Despite its monstrous firepower, the Mk66 is fairly slow to acquire targets and has low muzzle velocity, but provides decent accuracy and a quick reload time for its weight class.\n\nBest used in medium to short-range engagements on slow targets where the full explosive power of the guns can best be put to full effect. Fires 450mm chemical-ballistic shells.",
@@ -21,7 +22,7 @@
   "MaxHealth": 350,
   "Reinforced": false,
   "FunctioningThreshold": 30,
-  "DamageResistance": 30,
+  "DamageThreshold": 30,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

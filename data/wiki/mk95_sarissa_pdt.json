@@ -1,5 +1,6 @@
 {
   "ComponentName": "Mk95 'Sarissa' PDT",
+  "SaveKey": "Stock/Mk95 'Sarissa' PDT",
   "Faction": "Stock/Alliance",
   "ShortDescription": "Class 2 Kinetic",
   "LongDescription": "The Mk95 'Sarissa' is the Alliance's answer to the difficulty of hitting modern multi-stage missiles after the sprint vehicle separates. This long-range point defense system allows individual missiles to be engaged at extreme range, before they are able to enter their terminal sprint phase and are thus easy pickings.\n\nThis weapon fires a minuscule projectile at high velocities which can easily destroy an unprotected target like a missile. Unfortunately, the small size means the projectile will simply vaporize itself against the armored hull of a warship and cause minimal damage.",
@@ -21,7 +22,7 @@
   "MaxHealth": 150,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

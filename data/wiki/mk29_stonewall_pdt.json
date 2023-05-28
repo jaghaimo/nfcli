@@ -1,5 +1,6 @@
 {
   "ComponentName": "Mk29 'Stonewall' PDT",
+  "SaveKey": "Stock/Mk29 'Stonewall' PDT",
   "Faction": "Stock/Alliance",
   "ShortDescription": "Class 2 Kinetic",
   "LongDescription": "The Mk29 'Stonewall' is an upsized version of its cousin the Rebound.  With its four barrels firing time-fuzed 50mm explosive rounds it can be used to establish defensive perimeters around formations of warships.  As a perimeter weapon, the Stonewall targets entire missile raids at once, seeking to put a wall of explosives between the threat and the defended ship, rather than trying to hit an individual missile.",
@@ -21,7 +22,7 @@
   "MaxHealth": 150,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

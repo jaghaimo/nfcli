@@ -1,5 +1,6 @@
 {
   "ClassName": "Vauxhall",
+  "SaveKey": "Stock/Vauxhall Light Cruiser",
   "Faction": "Stock/Alliance",
   "HullClassification": "Light Cruiser",
   "LongDescription": "Light cruisers operate as a bridge between capital ships and lighter classes, often equipped with drives and armor fitting for hunting down warships lighter than its weight-class, much like the Vauxhall-class.",

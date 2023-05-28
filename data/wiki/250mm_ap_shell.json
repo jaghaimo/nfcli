@@ -1,5 +1,6 @@
 {
   "MunitionName": "250mm AP Shell",
+  "SaveKey": "Stock/250mm AP Shell",
   "Description": "Armor-piercing shells utilized by cannon weapons, such as the Mk6X series. Effective on light or medium-type warships.\n\nHas increased effectiveness against penetrating or destroying hull armor, but lacks a high-explosive payload. Best used when followed-up by high-explosive shells.\n\nType: Ballistic/Chemical\nSize: 250mm\nRole: Offensive\nArmor Penetration: 60 cm\nComponent Damage: 70 hp\nMuzzle Velocity: 800 m/s\nRange: 8,000 m\nVolume: 0.15 m³",
   "Type": "Ballistic",
   "SimMethod": "Spawned",

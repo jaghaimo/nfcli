@@ -1,5 +1,6 @@
 {
   "ComponentName": "ES32 'Scryer' Missile ID System",
+  "SaveKey": "Stock/ES32 'Scryer' Missile ID System",
   "Faction": "",
   "ShortDescription": "Electronic Support",
   "LongDescription": "The ES32 is a missile defense and support system which uses a mixture of dedicated sensors placed around the hull, as well as the warship's own integrated radar panels, to determine the capabilities of incoming missiles in order to defend against them.  Capabilities of identified missiles will be automatically tagged to the threat's sensor track.  Additionally, the Scryer can directly integrate with the point defense control systems of the host warship to determine what decoys need to be fired in order to counter a given threat, prevent waste of limited resources.",
@@ -21,7 +22,7 @@
   "MaxHealth": 150,
   "Reinforced": false,
   "FunctioningThreshold": 15,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

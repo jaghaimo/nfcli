@@ -1,5 +1,6 @@
 {
   "ComponentName": "Reinforced CIC",
+  "SaveKey": "Stock/Reinforced CIC",
   "Faction": "",
   "ShortDescription": "Command Center",
   "LongDescription": "The Combat Information Center (CIC) is the central command hub that provides command and control for the warship, and is critical in the operation of the vessel during an engagement.  This compartment has increased resistance to destruction compared to a normal CIC.\n\nDestruction of the CIC results in a loss of command and the affected warship cannot receive commands until the CIC is repaired.",
@@ -21,7 +22,7 @@
   "MaxHealth": 200,
   "Reinforced": true,
   "FunctioningThreshold": 10,
-  "DamageResistance": 40,
+  "DamageThreshold": 40,
   "DCPriority": "High",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

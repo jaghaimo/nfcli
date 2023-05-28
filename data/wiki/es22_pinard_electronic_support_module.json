@@ -1,5 +1,6 @@
 {
   "ComponentName": "ES22 'Pinard' Electronic Support Module",
+  "SaveKey": "Stock/ES22 'Pinard' Electronic Support Module",
   "Faction": "Stock/Alliance",
   "ShortDescription": "ELINT Detector",
   "LongDescription": "The 'Pinard' Electronic Support Module allows a host warship to detect radar signatures well beyond its maximum radar range in the form of ELINT signals, displaying a rough line of bearing towards the detected emitter. Two ships with ES modules will produce a crossfix track, showing the rough position of the emitter.  The accuracy of this crossfix improves as the angular separation between the sensors increases.\n\nThe Pinard can only see signals in the hemisphere above it, so two modules on opposite sides of a ship are required for full coverage.",
@@ -21,7 +22,7 @@
   "MaxHealth": 50,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

@@ -1,5 +1,6 @@
 {
   "ComponentName": "VLS-1-23 Launcher",
+  "SaveKey": "Stock/VLS-1-23 Launcher",
   "Faction": "",
   "ShortDescription": "Size 1 Missile Launcher",
   "LongDescription": "Similar to the VLS-2, the VLS-1-23 serves as a compact missile platform that allows a warship to have a wide variety of missile weapons to be used on a moment's notice, but is rated for smaller munitions like Riposte interceptors.  Unlike its larger cousin, however, it is not designed in a modular fashion and has a consistent cell count regardless of the size of the available mount.",
@@ -21,7 +22,7 @@
   "MaxHealth": 75,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "cell launcher",
   "RareDebuffChance": 0.05,

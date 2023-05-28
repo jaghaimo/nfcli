@@ -1,5 +1,6 @@
 {
   "ComponentName": "Large DC Storage",
+  "SaveKey": "Stock/Large DC Storage",
   "Faction": "Stock/Protectorate",
   "ShortDescription": "Damage Control",
   "LongDescription": "This compartment converts a large cargo bay space into a storage and organization area for spare parts and casualty control equipment.  It does not provide facilities to outfit damage control teams, but when combined with a traditional DC Locker it can help bring even the most crippled ship back into the fight.",
@@ -21,7 +22,7 @@
   "MaxHealth": 300,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "Low",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

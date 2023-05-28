@@ -1,5 +1,6 @@
 {
   "ComponentName": "CHI-9100 Long Haul Drive",
+  "SaveKey": "Stock/CHI-9100 Long Haul Drive",
   "Faction": "Stock/Protectorate",
   "ShortDescription": "Fusion Drive",
   "LongDescription": " A heavy civilian drive designed for cargo vessels making long, direct trips.  Greatly increases thrust power and top speed while reducing turning rate.",
@@ -21,7 +22,7 @@
   "MaxHealth": 700,
   "Reinforced": false,
   "FunctioningThreshold": 50,
-  "DamageResistance": 40,
+  "DamageThreshold": 40,
   "DCPriority": "Critical",
   "RareDebuffSubtype": "drive",
   "RareDebuffChance": 0.05,

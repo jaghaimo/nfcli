@@ -1,5 +1,6 @@
 {
   "MunitionName": "500mm Fracturing Block",
+  "SaveKey": "Stock/500mm Fracturing Block",
   "Description": "Fracturing blocks are commonly used in asteroid mining to burrow into large rocks or to shatter smaller ones contained in a net.  They are accelerated to high velocity by mass drivers and produce tremendous force on impact.\n\nUnlike the Alliance's weaponized mass drivers, these variants are blunt rectangles of tungsten and are not designed to punch clean through heavy armor.  Instead, they fragment on impact and produce a large explosion akin to a missile warhead.\n\nType: Ballistic/Magnetic\nSize: 500mm\nRole: Offensive\nArmor Penetration: 120 cm\nComponent Damage: 400 hp\nPenetration Depth: 30 m\nStructural Damage: 0\nMuzzle Velocity: 2000 m/s\nRange: 21,000 m\nVolume: 0.75 m³",
   "Type": "Ballistic",
   "SimMethod": "Spawned",

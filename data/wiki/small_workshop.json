@@ -1,5 +1,6 @@
 {
   "ComponentName": "Small Workshop",
+  "SaveKey": "Stock/Small Workshop",
   "Faction": "",
   "ShortDescription": "Damage Control",
   "LongDescription": "Provides a workspace for engineers to fabricate temporary parts and shoring to increase damage control team working speed.",
@@ -21,7 +22,7 @@
   "MaxHealth": 150,
   "Reinforced": false,
   "FunctioningThreshold": 15,
-  "DamageResistance": 35,
+  "DamageThreshold": 35,
   "DCPriority": "Low",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

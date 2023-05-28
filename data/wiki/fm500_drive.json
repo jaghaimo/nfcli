@@ -1,5 +1,6 @@
 {
   "ComponentName": "FM500 Drive",
+  "SaveKey": "Stock/FM500 Drive",
   "Faction": "Stock/Alliance",
   "ShortDescription": "Fusion Drive",
   "LongDescription": "This medium sized fusion drive is commonly found on cruisers and other large warships.  They have a focus on durability over power.  This drive provides both thrust for main engines and a small amount of power.",
@@ -21,7 +22,7 @@
   "MaxHealth": 1000,
   "Reinforced": false,
   "FunctioningThreshold": 50,
-  "DamageResistance": 70,
+  "DamageThreshold": 70,
   "DCPriority": "Critical",
   "RareDebuffSubtype": "drive",
   "RareDebuffChance": 0.05,

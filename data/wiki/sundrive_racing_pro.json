@@ -1,5 +1,6 @@
 {
   "ComponentName": "Sundrive Racing Pro",
+  "SaveKey": "Stock/Sundrive Racing Pro",
   "Faction": "Stock/Protectorate",
   "ShortDescription": "Fusion Drive",
   "LongDescription": "Racing drive, high speed but fragile",
@@ -21,7 +22,7 @@
   "MaxHealth": 100,
   "Reinforced": false,
   "FunctioningThreshold": 50,
-  "DamageResistance": 30,
+  "DamageThreshold": 30,
   "DCPriority": "Critical",
   "RareDebuffSubtype": "drive",
   "RareDebuffChance": 0.05,

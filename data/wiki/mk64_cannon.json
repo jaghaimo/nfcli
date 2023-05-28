@@ -1,5 +1,6 @@
 {
   "ComponentName": "Mk64 Cannon",
+  "SaveKey": "Stock/Mk64 Cannon",
   "Faction": "Stock/Alliance",
   "ShortDescription": "Class 3 Cannon",
   "LongDescription": "A medium-weight cannon, intended to operate as a middle-ground between the lighter and heavier Mk.6x series, offering excellent firepower to shred light warships while also providing a solid punch on targets above its weight class. \n\nWith a fairly quick acquisition time, the weapon can reliably train onto heavier targets, but will struggle against smaller, more evasive targets. As such, it is best used from medium-to-long range where its ample reload time and accuracy can best be used. Fires 250mm chemical-ballistic shells.",
@@ -21,7 +22,7 @@
   "MaxHealth": 225,
   "Reinforced": false,
   "FunctioningThreshold": 15,
-  "DamageResistance": 20,
+  "DamageThreshold": 20,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

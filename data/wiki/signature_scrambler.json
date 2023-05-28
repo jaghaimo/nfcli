@@ -1,5 +1,6 @@
 {
   "ComponentName": "Signature Scrambler",
+  "SaveKey": "Stock/Signature Scrambler",
   "Faction": "",
   "ShortDescription": "Electronic Deception Module",
   "LongDescription": "The signature scrambler is a complex upgrade to all installed signal generators and antennas in both radars and communications equipment.  By using an array of components and randomly aligning them for the different stages of waveform generation, and electronic and mechanical shortening/lengthening of waveguides and antennas, it complicates the identification of a warship by its electronic signatures alone.",
@@ -21,7 +22,7 @@
   "MaxHealth": 50,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 10,
+  "DamageThreshold": 10,
   "DCPriority": "Low",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

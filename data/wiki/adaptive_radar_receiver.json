@@ -1,5 +1,6 @@
 {
   "ComponentName": "Adaptive Radar Receiver",
+  "SaveKey": "Stock/Adaptive Radar Receiver",
   "Faction": "",
   "ShortDescription": "Radar Control",
   "LongDescription": "By using adaptive wave beamforming, the Adaptive Radar Receiver increases the sensitivity of the warship's sensors, allowing for earlier detection of smaller targets (such as missiles) at longer ranges.  The adaptive receiver also features advanced noise filtering technology, improving the sensor's resistance to noise and jamming but also slightly reducing its accuracy.",
@@ -21,7 +22,7 @@
   "MaxHealth": 40,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 10,
+  "DamageThreshold": 10,
   "DCPriority": "Low",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

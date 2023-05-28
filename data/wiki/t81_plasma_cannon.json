@@ -1,5 +1,6 @@
 {
   "ComponentName": "T81 Plasma Cannon",
+  "SaveKey": "Stock/T81 Plasma Cannon",
   "Faction": "Stock/Protectorate",
   "ShortDescription": "Class 4 Coilgun",
   "LongDescription": "Despite its high-tech sound, this plasma cannon is actually a relatively crude solution to the Protectorate's problem of being out-armored in every weight class.  These coilguns fire a magnetic bottle containing superheated plasma which shatters against the armor of a warship and melts large holes, opening it up for attack from lighter caliber weaponry such as 100mm.",
@@ -21,7 +22,7 @@
   "MaxHealth": 300,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,
@@ -66,7 +67,7 @@
     "MaxRange": null,
     "SimMethod": "Spawned",
     "IgnoreAccuracyModifiers": false,
-    "BaseAccuracy": 0.25,
+    "BaseAccuracy": 0.2,
     "AccuracyData": [
       {
         "Range": 0,
@@ -74,83 +75,83 @@
       },
       {
         "Range": 1000,
-        "Spread": 8.726868
+        "Spread": 6.98143053
       },
       {
         "Range": 2000,
-        "Spread": 17.4537354
+        "Spread": 13.9628611
       },
       {
         "Range": 3000,
-        "Spread": 26.180603
+        "Spread": 20.9442921
       },
       {
         "Range": 4000,
-        "Spread": 34.90747
+        "Spread": 27.9257221
       },
       {
         "Range": 5000,
-        "Spread": 43.63434
+        "Spread": 34.9071541
       },
       {
         "Range": 6000,
-        "Spread": 52.3612061
+        "Spread": 41.8885841
       },
       {
         "Range": 7000,
-        "Spread": 61.0880737
+        "Spread": 48.8700142
       },
       {
         "Range": 8000,
-        "Spread": 69.81494
+        "Spread": 55.8514442
       },
       {
         "Range": 9000,
-        "Spread": 78.54181
+        "Spread": 62.8328743
       },
       {
         "Range": 10000,
-        "Spread": 87.26868
+        "Spread": 69.81431
       },
       {
         "Range": 11000,
-        "Spread": 95.99555
+        "Spread": 76.79574
       },
       {
         "Range": 12000,
-        "Spread": 104.722412
+        "Spread": 83.77717
       },
       {
         "Range": 13000,
-        "Spread": 113.44928
+        "Spread": 90.7586
       },
       {
         "Range": 14000,
-        "Spread": 122.176147
+        "Spread": 97.74003
       },
       {
         "Range": 15000,
-        "Spread": 130.903015
+        "Spread": 104.721458
       },
       {
         "Range": 16000,
-        "Spread": 139.629883
+        "Spread": 111.702888
       },
       {
         "Range": 17000,
-        "Spread": 148.35675
+        "Spread": 118.684319
       },
       {
         "Range": 18000,
-        "Spread": 157.083618
+        "Spread": 125.665749
       },
       {
         "Range": 19000,
-        "Spread": 165.810486
+        "Spread": 132.647186
       },
       {
         "Range": 20000,
-        "Spread": 174.537354
+        "Spread": 139.628616
       }
     ]
   },

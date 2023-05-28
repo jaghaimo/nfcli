@@ -1,5 +1,6 @@
 {
   "ComponentName": "ML-9 Mine Launcher",
+  "SaveKey": "Stock/ML-9 Mine Launcher",
   "Faction": "Stock/Protectorate",
   "ShortDescription": "Mine Launcher",
   "LongDescription": "Minefields serve as an excellent force multiplier, something the Protectorate is in desperate need of.  The ML-9 is capable of launching 5 mines in rapid succession before it needs to be reloaded.  When used alone or in pairs it can rapidly create a dense minefield which will delay the advance of any enemy warships.",
@@ -21,7 +22,7 @@
   "MaxHealth": 100,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "High",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

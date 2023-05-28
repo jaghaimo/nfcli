@@ -1,5 +1,6 @@
 {
   "ClassName": "Shuttle",
+  "SaveKey": "Stock/Shuttle",
   "Faction": "Stock/Protectorate",
   "HullClassification": "Clipper",
   "LongDescription": "Small and fast, designed to transport passengers between nearby stations in orbit.  They can't travel far, but they can certainly get somewhere in a hurry.",

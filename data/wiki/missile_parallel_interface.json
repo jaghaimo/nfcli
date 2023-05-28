@@ -1,5 +1,6 @@
 {
   "ComponentName": "Missile Parallel Interface",
+  "SaveKey": "Stock/Missile Parallel Interface",
   "Faction": "",
   "ShortDescription": "Missile Support",
   "LongDescription": "By using a parallel programming bus, instead of a simpler and cheaper serial bus, the weapon control system is able to program targeting information into a given missile much faster.  This significantly decreases the amount of time between issuing an order to fire a missile and when it actually leaves the ship.",
@@ -21,7 +22,7 @@
   "MaxHealth": 100,
   "Reinforced": false,
   "FunctioningThreshold": 15,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "Low",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

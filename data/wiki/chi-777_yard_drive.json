@@ -1,5 +1,6 @@
 {
   "ComponentName": "CHI-777 Yard Drive",
+  "SaveKey": "Stock/CHI-777 Yard Drive",
   "Faction": "Stock/Protectorate",
   "ShortDescription": "Fusion Drive",
   "LongDescription": "High maneuverability drive for close quarters, delicate work.",
@@ -21,7 +22,7 @@
   "MaxHealth": 250,
   "Reinforced": false,
   "FunctioningThreshold": 50,
-  "DamageResistance": 40,
+  "DamageThreshold": 40,
   "DCPriority": "Critical",
   "RareDebuffSubtype": "drive",
   "RareDebuffChance": 0.05,

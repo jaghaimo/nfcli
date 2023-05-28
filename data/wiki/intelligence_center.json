@@ -1,5 +1,6 @@
 {
   "ComponentName": "Intelligence Center",
+  "SaveKey": "Stock/Intelligence Center",
   "Faction": "",
   "ShortDescription": "Intel Compartment",
   "LongDescription": "A large concentration of intelligence analysts who work to identify enemy ships and do battle damage assessment and determine their functional conditions in order to help the commander make decisions about where to allocate forces and when to shift fire.\n\nIntelligence effort is not additive across multiple ships, or even the same ship, and only the largest amount of effort will be used.  However, the speed of these analysts can be increased with supporting staff in other compartments.",
@@ -21,7 +22,7 @@
   "MaxHealth": 200,
   "Reinforced": false,
   "FunctioningThreshold": 15,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

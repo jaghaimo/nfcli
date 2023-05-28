@@ -1,5 +1,6 @@
 {
   "ComponentName": "Focused Particle Accelerator",
+  "SaveKey": "Stock/Focused Particle Accelerator",
   "Faction": "",
   "ShortDescription": "Gunnery",
   "LongDescription": "Accelerates the constituent particles of a coherent beam weapon like the Mk600 and Mk610 to drastically increase their damage output with a slight decrease to firing duration.",
@@ -21,7 +22,7 @@
   "MaxHealth": 150,
   "Reinforced": false,
   "FunctioningThreshold": 15,
-  "DamageResistance": 40,
+  "DamageThreshold": 40,
   "DCPriority": "Low",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

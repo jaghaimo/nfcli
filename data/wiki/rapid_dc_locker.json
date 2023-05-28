@@ -1,5 +1,6 @@
 {
   "ComponentName": "Rapid DC Locker",
+  "SaveKey": "Stock/Rapid DC Locker",
   "Faction": "",
   "ShortDescription": "Damage Control",
   "LongDescription": "Damage Control lockers provide a warship with teams capable of repairing ship components and restoring destroyed modules or compartments back into working order.\n\nThis type of locker contains a single team of elite damage control personnel who can quickly move to a damaged component, assess its condition, and execute emergency repairs.  They work more quickly than normal DC teams, but they don't have the tools to perform restorations of destroyed components.",
@@ -21,7 +22,7 @@
   "MaxHealth": 70,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "Low",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

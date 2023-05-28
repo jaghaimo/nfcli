@@ -1,5 +1,6 @@
 {
   "ComponentName": "RL18 Launcher",
+  "SaveKey": "Stock/RL18 Launcher",
   "Faction": "Stock/Protectorate",
   "ShortDescription": "Turreted Missile Launcher",
   "LongDescription": "What the Protectorate lacks in advanced missile technology, it makes up for in volume.  These rocket launchers are just a series of tubes banded together with an ignition circuit run through them but up close, where they can't miss, their damage rivals that of even a particle beam.",
@@ -21,7 +22,7 @@
   "MaxHealth": 100,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

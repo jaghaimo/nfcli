@@ -1,5 +1,6 @@
 {
   "MunitionName": "Flak Round",
+  "SaveKey": "Stock/Flak Round",
   "Description": "50mm high-explosive fragmentation round with tracer, used in flak guns such as the Rebound. Designed to destroy small threats like missiles, drones, and fighters.\n\nType: Ballistic/Chemical/Timed\nSize: 50mm\nRole: Defensive\nArmor Penetration: 5 cm\nComponent Damage: 15 hp\nPenetration Depth: 2 m\nMuzzle Velocity: 650 m/s\nRange: 2,002 m\nVolume: 0.01 m³\nFuze Margin: 0.1 Sec.\nMin Fuze: 0.5 Sec.",
   "Type": "Ballistic",
   "SimMethod": "Spawned",

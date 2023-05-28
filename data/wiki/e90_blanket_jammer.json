@@ -1,5 +1,6 @@
 {
   "ComponentName": "E90 'Blanket' Jammer",
+  "SaveKey": "Stock/E90 'Blanket' Jammer",
   "Faction": "Stock/Alliance",
   "ShortDescription": "Jammer (Radar)",
   "LongDescription": "The E90 'Blanket' overwhelms its target by sweep jamming, primarily targeting radar frequencies typically used by most military radar suites. The result makes the victim warship unable to detect its own radar returns. Also effective on missiles and point-defense, but vulnerable to home-on-jam missiles.",
@@ -21,7 +22,7 @@
   "MaxHealth": 75,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

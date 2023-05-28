@@ -1,5 +1,6 @@
 {
   "ComponentName": "RS41 'Spyglass' Radar",
+  "SaveKey": "Stock/RS41 'Spyglass' Radar",
   "Faction": "Stock/Alliance",
   "ShortDescription": "Search Radar",
   "LongDescription": "The RS41 Suite provides a long-range sensor system to the equipped warship for detecting targets at range, but at the cost of reduced sensor track accuracy and a higher power draw.",
@@ -21,7 +22,7 @@
   "MaxHealth": 200,
   "Reinforced": false,
   "FunctioningThreshold": 30,
-  "DamageResistance": 30,
+  "DamageThreshold": 30,
   "DCPriority": "High",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

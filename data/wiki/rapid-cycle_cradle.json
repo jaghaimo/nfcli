@@ -1,5 +1,6 @@
 {
   "ComponentName": "Rapid-Cycle Cradle",
+  "SaveKey": "Stock/Rapid-Cycle Cradle",
   "Faction": "",
   "ShortDescription": "Gunnery",
   "LongDescription": "Improved hydraulic drivers on a weapon's autoloader cradle, allowing it to cycle the next round into the chamber more quickly.",
@@ -21,7 +22,7 @@
   "MaxHealth": 100,
   "Reinforced": false,
   "FunctioningThreshold": 15,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "Low",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

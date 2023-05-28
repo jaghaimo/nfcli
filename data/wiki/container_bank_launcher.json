@@ -1,5 +1,6 @@
 {
   "ComponentName": "Container Bank Launcher",
+  "SaveKey": "Stock/Container Bank Launcher",
   "Faction": "Stock/Protectorate",
   "ShortDescription": "Container Missile Launcher",
   "LongDescription": "A rapid refitting of the cargo racks found on container ships has turned them into a terrifying weapon.  The addition of explosive connections, as well as programming and ignition circuits, has allowed these once-simple truss frames to support hundreds of CM-4 cargo container missiles and other utility variations.",
@@ -21,7 +22,7 @@
   "MaxHealth": 500,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "High",
   "RareDebuffSubtype": "container launcher",
   "RareDebuffChance": 0.15,

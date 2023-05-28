@@ -1,5 +1,6 @@
 {
   "ComponentName": "C81 Plasma Cannon",
+  "SaveKey": "Stock/C81 Plasma Cannon",
   "Faction": "Stock/Protectorate",
   "ShortDescription": "Class 3 Casemate Coilgun",
   "LongDescription": "Despite its high-tech sound, this plasma cannon is actually a relatively crude solution to the Protectorate's problem of being out-armored in every weight class.  These coilguns fire a magnetic bottle containing superheated plasma which shatters against the armor of a warship and melts large holes, opening it up for attack from lighter caliber weaponry such as 100mm.",
@@ -21,7 +22,7 @@
   "MaxHealth": 750,
   "Reinforced": false,
   "FunctioningThreshold": 30,
-  "DamageResistance": 50,
+  "DamageThreshold": 50,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,
@@ -55,9 +56,9 @@
   },
   "ContinuousWeaponComponentData": null,
   "DiscreteWeaponComponentData": {
-    "TimeBetweenMuzzles": 4,
-    "MagazineSize": 4,
-    "ReloadTime": 40
+    "TimeBetweenMuzzles": 1,
+    "MagazineSize": 1,
+    "ReloadTime": 12
   },
   "CellLauncherComponentData": null,
   "TubeLauncherComponentData": null,
@@ -66,7 +67,7 @@
     "MaxRange": null,
     "SimMethod": "Spawned",
     "IgnoreAccuracyModifiers": false,
-    "BaseAccuracy": 0.2,
+    "BaseAccuracy": 0.15,
     "AccuracyData": [
       {
         "Range": 0,
@@ -74,83 +75,83 @@
       },
       {
         "Range": 1000,
-        "Spread": 6.98143053
+        "Spread": 5.2360363
       },
       {
         "Range": 2000,
-        "Spread": 13.9628611
+        "Spread": 10.4720726
       },
       {
         "Range": 3000,
-        "Spread": 20.9442921
+        "Spread": 15.7081079
       },
       {
         "Range": 4000,
-        "Spread": 27.9257221
+        "Spread": 20.9441452
       },
       {
         "Range": 5000,
-        "Spread": 34.9071541
+        "Spread": 26.1801815
       },
       {
         "Range": 6000,
-        "Spread": 41.8885841
+        "Spread": 31.4162159
       },
       {
         "Range": 7000,
-        "Spread": 48.8700142
+        "Spread": 36.6522522
       },
       {
         "Range": 8000,
-        "Spread": 55.8514442
+        "Spread": 41.88829
       },
       {
         "Range": 9000,
-        "Spread": 62.8328743
+        "Spread": 47.1243248
       },
       {
         "Range": 10000,
-        "Spread": 69.81431
+        "Spread": 52.360363
       },
       {
         "Range": 11000,
-        "Spread": 76.79574
+        "Spread": 57.5963974
       },
       {
         "Range": 12000,
-        "Spread": 83.77717
+        "Spread": 62.83243
       },
       {
         "Range": 13000,
-        "Spread": 90.7586
+        "Spread": 68.0684738
       },
       {
         "Range": 14000,
-        "Spread": 97.74003
+        "Spread": 73.3045044
       },
       {
         "Range": 15000,
-        "Spread": 104.721458
+        "Spread": 78.54054
       },
       {
         "Range": 16000,
-        "Spread": 111.702888
+        "Spread": 83.77658
       },
       {
         "Range": 17000,
-        "Spread": 118.684319
+        "Spread": 89.01261
       },
       {
         "Range": 18000,
-        "Spread": 125.665749
+        "Spread": 94.24865
       },
       {
         "Range": 19000,
-        "Spread": 132.647186
+        "Spread": 99.48468
       },
       {
         "Range": 20000,
-        "Spread": 139.628616
+        "Spread": 104.720726
       }
     ]
   },

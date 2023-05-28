@@ -1,5 +1,6 @@
 {
   "ComponentName": "Ithaca Bridgemaster",
+  "SaveKey": "Stock/Ithaca Bridgemaster",
   "Faction": "Stock/Protectorate",
   "ShortDescription": "Search Radar",
   "LongDescription": "The bog-standard of civilian navigation radars, the Bridgemaster by Ithaca provides decent track quality for maneuvering in tight spaces such as busy ports, but its range and resistance to jamming leaves much to be desired.",
@@ -21,7 +22,7 @@
   "MaxHealth": 200,
   "Reinforced": false,
   "FunctioningThreshold": 30,
-  "DamageResistance": 30,
+  "DamageThreshold": 30,
   "DCPriority": "High",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

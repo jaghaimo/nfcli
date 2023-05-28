@@ -1,5 +1,6 @@
 {
   "ComponentName": "Small Reactor Booster",
+  "SaveKey": "Stock/Small Reactor Booster",
   "Faction": "",
   "ShortDescription": "Reactor Control",
   "LongDescription": "Reactor boosters optimize the efficiency of a warship’s fusion reactors, providing an increase to total power generated but also increasing the ship's radar signature size.",
@@ -21,7 +22,7 @@
   "MaxHealth": 40,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 10,
+  "DamageThreshold": 10,
   "DCPriority": "Low",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

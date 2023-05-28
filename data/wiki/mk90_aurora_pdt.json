@@ -1,5 +1,6 @@
 {
   "ComponentName": "Mk90 'Aurora' PDT",
+  "SaveKey": "Stock/Mk90 'Aurora' PDT",
   "Faction": "Stock/Alliance",
   "ShortDescription": "Class 1 Pulsed Laser",
   "LongDescription": "A tactical laser system utilizing a pulsed laser that provides unrivaled long-range point defense, highly effective against missiles and personal craft. While accurate, the weapon requires immense reserves of power and can have its own fire-control system jammed.",
@@ -21,7 +22,7 @@
   "MaxHealth": 100,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

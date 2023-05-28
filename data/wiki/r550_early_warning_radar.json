@@ -1,5 +1,6 @@
 {
   "ComponentName": "R550 Early Warning Radar",
+  "SaveKey": "Stock/R550 Early Warning Radar",
   "Faction": "Stock/Protectorate",
   "ShortDescription": "Early Warning Radar",
   "LongDescription": "Long-wave early warning radars provide tremendous range but terrible accuracy, and have fallen out of use by the Alliance over a century ago.  These radars can provide continuous dwell on an area of space, and while they can't provide a track worth firing on, they enable Protectorate fleets to maneuver with purpose and pick engagements they can win.  Be warned that due to its design this radar has enormous side- and back-lobes and can be detected from ELINT at great range.\n\nThe R550 does not provide continuous scan like a search radar, and must be manually directed at an area to search.",
@@ -21,7 +22,7 @@
   "MaxHealth": 150,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,
@@ -53,7 +54,7 @@
   "OmnidirectionalEWarComponentData": null,
   "TurretedEWarComponentData": null,
   "ISensorComponentData": {
-    "IgnoreEMCON": false,
+    "IgnoreEMCON": true,
     "CanOrderLock": false,
     "CanOrderBurnthrough": false
   },

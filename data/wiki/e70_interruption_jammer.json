@@ -1,5 +1,6 @@
 {
   "ComponentName": "E70 'Interruption' Jammer",
+  "SaveKey": "Stock/E70 'Interruption' Jammer",
   "Faction": "Stock/Alliance",
   "ShortDescription": "Jammer (Comms)",
   "LongDescription": "The E70 is a jamming suite that saturates a 360-degree radius around a host warship, disrupting communications and preventing affected warships from receiving the shared track picture from other warships.\n\nWhile an effective screening tool, the E70 lacks the high-power, extended range of directional communications jammers seen on dedicated EWar configurations.",
@@ -21,7 +22,7 @@
   "MaxHealth": 100,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

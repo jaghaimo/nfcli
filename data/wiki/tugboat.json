@@ -1,5 +1,6 @@
 {
   "ClassName": "Tugboat",
+  "SaveKey": "Stock/Tugboat",
   "Faction": "Stock/Protectorate",
   "HullClassification": "Clipper",
   "LongDescription": "These ships were designed for moving free-floating materials and ships around maintenance yards.  They have excellent maneuverability and plenty of space to support a variety of different missions now that they've been pressed into military service.",

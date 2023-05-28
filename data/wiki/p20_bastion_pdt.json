@@ -1,5 +1,6 @@
 {
   "ComponentName": "P20 'Bastion' PDT",
+  "SaveKey": "Stock/P20 Flak PDT",
   "Faction": "Stock/Protectorate",
   "ShortDescription": "Class 1 Kinetic",
   "LongDescription": "The P20 is a rotary flak turret which works well against large groups of slow, conventional missiles.",
@@ -21,7 +22,7 @@
   "MaxHealth": 150,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

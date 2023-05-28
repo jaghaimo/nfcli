@@ -1,5 +1,6 @@
 {
   "ComponentName": "Auxiliary Steering",
+  "SaveKey": "Stock/Auxiliary Steering",
   "Faction": "",
   "ShortDescription": "Command Center",
   "LongDescription": "Provides an emergency backup for steering the ship when main control is lost, allowing the ship to get to safety and effect repairs.  For best redundancy it should be located far from the CIC.",
@@ -21,7 +22,7 @@
   "MaxHealth": 300,
   "Reinforced": true,
   "FunctioningThreshold": 10,
-  "DamageResistance": 20,
+  "DamageThreshold": 20,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

@@ -1,5 +1,6 @@
 {
   "MunitionName": "20mm Slug",
+  "SaveKey": "Stock/20mm Slug",
   "Description": "20mm high-velocity metal slug utilized in rapid-fire weapons, such as the Defender PDT. Ineffective against anything with warship-grade hull armoring, but deadly against light targets such as missiles or personal craft.\n\nType: Ballistic/Chemical\nSize: 20mm\nRole: Defensive\nArmor Penetration: 3 cm\nComponent Damage: 15 hp\nPenetration Depth: 5 m\nMuzzle Velocity: 700 m/s\nRange: 1,750 m\nVolume: 0.0025 m³",
   "Type": "Ballistic",
   "SimMethod": "SteppedRaycast",

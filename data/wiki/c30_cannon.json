@@ -1,5 +1,6 @@
 {
   "ComponentName": "C30 Cannon",
+  "SaveKey": "Stock/C30 Cannon",
   "Faction": "Stock/Protectorate",
   "ShortDescription": "Class 1 Casemate Cannon",
   "LongDescription": "Engineering large turrets is difficult, but Protectorate shipyards were able to slap together the T20 and T30 series out of spare sheets and leftover parts.  They're not the prettiest turrets in known space, and they only fire small 100mm rounds, but when fired into a hole opened up by a larger weapon they can wreak havoc inside.",
@@ -21,7 +22,7 @@
   "MaxHealth": 350,
   "Reinforced": false,
   "FunctioningThreshold": 15,
-  "DamageResistance": 40,
+  "DamageThreshold": 40,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

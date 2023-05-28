@@ -1,5 +1,6 @@
 {
   "ComponentName": "Mk20 'Defender' PDT",
+  "SaveKey": "Stock/Mk20 'Defender' PDT",
   "Faction": "Stock/Alliance",
   "ShortDescription": "Class 1 Kinetic",
   "LongDescription": "The Mk20 sprays thousands of 20mm slugs at approaching threats, typically missiles, so long as the weapon is supplied sufficient ammunition. Its integrated Fire Control allows it to lock onto targets independently, but still requires cueing from the host warship's search sensors.\n\nDespite its high rate of fire and accuracy, the weapon is not effective against any warship-type targets.",
@@ -21,7 +22,7 @@
   "MaxHealth": 100,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 15,
+  "DamageThreshold": 15,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

@@ -1,5 +1,6 @@
 {
   "MunitionName": "250mm HE-RPF Shell",
+  "SaveKey": "Stock/250mm HE-RPF Shell",
   "Description": "High-explosive rounds utilized by light cannon weapons, such as the Mk6X series. Effective on light or medium-type warships.  This round features a special Radio Proximity Fuze which will detonate the shell if it detects an object in its path, greatly increasing its effectiveness against fast, maneuvering, small targets like corvettes and frigates.\n\nThese rounds can also be used for defensive purposes such as shooting down incoming missiles.  Note that the proximity fuze does not discriminate between targets, and can destroy outbound friendly missiles if not used judiciously.\n\nType: Ballistic/Chemical\nSize: 250mm\nRole: Dual-Purpose\nArmor Penetration: 20 cm\nComponent Damage: 16 hp\nPenetration Depth: 10 m\nMuzzle Velocity: 800 m/s\nRange: 8,000 m\nVolume: 0.15 m³",
   "Type": "Ballistic",
   "SimMethod": "Spawned",

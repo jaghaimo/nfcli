@@ -1,5 +1,6 @@
 {
   "ComponentName": "CR70 Antenna",
+  "SaveKey": "Stock/CR70 Antenna",
   "Faction": "Stock/Alliance",
   "ShortDescription": "Comms Antenna",
   "LongDescription": "A substantial upgrade to the CR10, the CR70 cluster provides a stronger communications path than the main array found on most hulls.  \n\nThe most powerful antenna array on a warship will serve as the active communications path, even if the integrated array is still functional.",
@@ -21,7 +22,7 @@
   "MaxHealth": 250,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 30,
+  "DamageThreshold": 30,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

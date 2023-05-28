@@ -1,5 +1,6 @@
 {
   "MunitionName": "100mm HE Shell",
+  "SaveKey": "Stock/100mm HE Shell",
   "Description": "Small high-explosive shells used in light cannon weapons.\n\nType: Ballistic/Chemical\nSize: 100mm\nRole: Offensive\nArmor Penetration: 30 cm\nComponent Damage: 45 hp\nPenetration Depth: 15 m\nExplosion Radius: 5\nMuzzle Velocity: 900 m/s\nRange: 7,200 m\nVolume: 0.05 m³",
   "Type": "Ballistic",
   "SimMethod": "Spawned",

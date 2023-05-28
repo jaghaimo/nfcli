@@ -1,5 +1,6 @@
 {
   "ComponentName": "BW800 Drive",
+  "SaveKey": "Stock/BW800 Drive",
   "Faction": "Stock/Protectorate",
   "ShortDescription": "Fusion Drive",
   "LongDescription": "Light civilian drive",
@@ -21,7 +22,7 @@
   "MaxHealth": 250,
   "Reinforced": false,
   "FunctioningThreshold": 50,
-  "DamageResistance": 40,
+  "DamageThreshold": 40,
   "DCPriority": "Critical",
   "RareDebuffSubtype": "drive",
   "RareDebuffChance": 0.05,

@@ -1,5 +1,6 @@
 {
   "ComponentName": "C53 Cannon",
+  "SaveKey": "Stock/C53 Cannon",
   "Faction": "Stock/Protectorate",
   "ShortDescription": "Class 1 Casemate Cannon",
   "LongDescription": "The C53 is a fixed version of the Alliance's 250mm Mk64 cannon.  Despite its fixed mounting, its smaller caliber and light construction allows it to feature a generous range of motion to help catch fast-moving enemy ships.  This weapon occupies an ideal middle-ground, able to damage lighter enemy ships without punching straight through but also able to inflict damage on the Alliance's heavier warships without the need to soften them up first.",
@@ -21,7 +22,7 @@
   "MaxHealth": 350,
   "Reinforced": false,
   "FunctioningThreshold": 15,
-  "DamageResistance": 40,
+  "DamageThreshold": 40,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

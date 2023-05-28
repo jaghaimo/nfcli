@@ -1,5 +1,6 @@
 {
   "ComponentName": "Analysis Annex",
+  "SaveKey": "Stock/Analysis Annex",
   "Faction": "",
   "ShortDescription": "Intel Compartment",
   "LongDescription": "A smaller off-shoot of the intelligence center with a 2500-Superbrain computer which assists in speeding up their work.",
@@ -21,7 +22,7 @@
   "MaxHealth": 100,
   "Reinforced": false,
   "FunctioningThreshold": 15,
-  "DamageResistance": 10,
+  "DamageThreshold": 10,
   "DCPriority": "Low",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

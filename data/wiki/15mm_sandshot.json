@@ -1,5 +1,6 @@
 {
   "MunitionName": "15mm Sandshot",
+  "SaveKey": "Stock/15mm Sandshot",
   "Description": "A small magnetic sled which is used to accelerate a collection of tungsten grains to incredible velocities.  Sandshot is extremely effective against missiles and other unprotected targets, but completely useless against warships.\n\nType: Ballistic/Magnetic\nSize: 15mm\nRole: Defensive\nArmor Penetration: 1 cm\nComponent Damage: 75 hp\nMuzzle Velocity: 2500 m/s\nRange: 8,000 m\nVolume: 0.0025 m³",
   "Type": "Ballistic",
   "SimMethod": "Spawned",

@@ -1,5 +1,6 @@
 {
   "ComponentName": "Magazine Sprinklers",
+  "SaveKey": "Stock/Magazine Sprinklers",
   "Faction": "",
   "ShortDescription": "",
   "LongDescription": "An emergency fire suppression system installed in general-purpose ammunition magazines, significantly reducing the probability of explosion due to fire.",
@@ -21,7 +22,7 @@
   "MaxHealth": 75,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 10,
+  "DamageThreshold": 10,
   "DCPriority": "Low",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

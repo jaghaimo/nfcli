@@ -1,5 +1,6 @@
 {
   "ComponentName": "Supplementary Radio Amplifiers",
+  "SaveKey": "Stock/Supplementary Radio Amplifiers",
   "Faction": "",
   "ShortDescription": "Comms Control",
   "LongDescription": "High-quality amplifiers installed into the warship's communications line that provides an increase to the warship's total transmitting power to combat communications jamming.",
@@ -21,7 +22,7 @@
   "MaxHealth": 40,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 10,
+  "DamageThreshold": 10,
   "DCPriority": "Low",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

@@ -1,5 +1,6 @@
 {
   "ComponentName": "RF101 'Bullseye' Radar",
+  "SaveKey": "Stock/RF101 'Bullseye' Radar",
   "Faction": "Stock/Alliance",
   "ShortDescription": "Fire Control Radar",
   "LongDescription": "The RF101 is a high-power turreted fire control system that allows the equipped warship to lock onto tracks, providing extreme accuracy for weapons. Highly effective with precision and command-guided weapons.\n\nThe RF101 cannot lock onto targets obscured by the host warship's hull or targets outside of its field of view.",
@@ -21,7 +22,7 @@
   "MaxHealth": 70,
   "Reinforced": false,
   "FunctioningThreshold": 10,
-  "DamageResistance": 10,
+  "DamageThreshold": 10,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

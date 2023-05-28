@@ -1,5 +1,6 @@
 {
   "MunitionName": "100mm AP Shell",
+  "SaveKey": "Stock/100mm AP Shell",
   "Description": "Small armor-piercing rounds used on light cannon weapons.\n\nType: Ballistic/Chemical\nSize: 100mm\nRole: Offensive\nArmor Penetration: 45 cm\nComponent Damage: 25 hp\nMuzzle Velocity: 900 m/s\nRange: 7,200 m\nVolume: 0.05 m³",
   "Type": "Ballistic",
   "SimMethod": "Spawned",
