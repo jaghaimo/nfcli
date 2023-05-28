@@ -10,6 +10,8 @@ from urllib.parse import parse_qs, urlparse
 from dotenv import load_dotenv
 from steam import webapi
 
+from nfcli import init_logger
+
 load_dotenv()
 STEAM_API_KEY = os.getenv("STEAM_API_KEY")
 STEAM_USERNAME = os.getenv("STEAM_USERNAME")
@@ -56,12 +58,14 @@ def download_bulk(workshop_ids: set[int], timeout: int = 30):
 
 
 def cache_workshop_files():
+    init_logger(None, logging.INFO)
     workshop_items = find_all()
     invalidate_cache(workshop_items)
     workshop_ids = set(workshop_items.keys())
     existing_ids = find_existing()
     missing_ids = workshop_ids.difference(existing_ids)
     if missing_ids:
+        logging.info(f"Downloading missing {len(missing_ids)} workshop files...")
         download_bulk(missing_ids, 3600)
 
 
