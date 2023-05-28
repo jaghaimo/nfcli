@@ -70,7 +70,7 @@ class MissilePrinter(Printer):
         padded_str = Text.from_markup(pad_str(text))
         return Padding(Group(Rule(Text(title, style="orange"), style="orange"), padded_str), (0, 1))
 
-    def print(self, with_title: bool, missile: "Missile"):
+    def print(self, with_title: bool, missile: Missile):
         column_width = min(2 * COLUMN_WIDTH, self.console.width)
         self.console.width = min(column_width, self.console.width)
         if with_title:
@@ -83,11 +83,11 @@ class MissilePrinter(Printer):
 
 
 class ShipPrinter(Printer):
-    def add_components(self, tree: Tree, component: "Component"):
+    def add_components(self, tree: Tree, component: Component):
         for content in component.contents:
             tree.add(Text(f"{content.name} x{content.quantity}", overflow="ignore"), style="i d")
 
-    def get_sockets(self, title: str, components: list["Component"], color: str = "white") -> Group:
+    def get_sockets(self, title: str, components: list[Component], color: str = "white") -> Group:
         elements: list[RenderableType] = [Rule(Text(f"{title}", style="orange"), style="orange")]
         for component in components:
             slot_number = str(component.slot_number)
@@ -103,7 +103,7 @@ class ShipPrinter(Printer):
             elements.append(tree)
         return Group(*elements)
 
-    def get_ship(self, ship: "Ship", column_width: int) -> RenderableType:
+    def get_ship(self, ship: Ship, column_width: int) -> RenderableType:
         if ship.is_valid:
             props = ["mountings", "compartments", "modules"]
             sockets = [Padding(self.get_sockets(prop.title(), getattr(ship, prop)), (0, 1)) for prop in props]
@@ -112,7 +112,7 @@ class ShipPrinter(Printer):
             column_width = 3 * column_width
         return Columns(sockets, width=column_width, padding=(0, 0))
 
-    def print(self, with_title: bool, ship: "Ship"):
+    def print(self, with_title: bool, ship: Ship):
         self.console.size = (min(STACK_COLUMNS * COLUMN_WIDTH, self.console.width), self.console.height)
         column_width = int(self.console.width / STACK_COLUMNS)
         if with_title:
@@ -121,7 +121,7 @@ class ShipPrinter(Printer):
 
 
 class FleetPrinter(ShipPrinter):
-    def get_ship(self, ship: "Ship", column_width: int) -> RenderableType:
+    def get_ship(self, ship: Ship, column_width: int) -> RenderableType:
         line1 = ship.name.center(column_width)
         line2 = f"{ship.hull} ({ship.cost})".center(column_width)
         text = f"\n[b]{line1}[/b]\n{line2}"
@@ -135,7 +135,7 @@ class FleetPrinter(ShipPrinter):
 
         return Padding(group, (0, 1))
 
-    def print(self, with_title: bool, fleet: "Fleet"):
+    def print(self, with_title: bool, fleet: Fleet):
         column_width = min(COLUMN_WIDTH, self.console.width)
         number_of_columns = fleet.n_ships if fleet.n_ships > 2 else 3
         self.console.size = (min(number_of_columns * column_width, self.console.width), self.console.height)
@@ -186,7 +186,8 @@ def print_any(printer: Printer, printable: Printable, mods: list[str], with_titl
 
 def write_any(printable: Printable, num_of_columns: int, title: str, png_file: str):
     width = desired_console_width(num_of_columns)
-    console = Console(width=width, record=True, theme=nfc_theme, force_terminal=True, file=open(os.devnull, "w"))
-    printable.print(console, False, [])
-    svg_content = console.export_svg(title=title, clear=False)
-    cairosvg.svg2png(bytestring=svg_content, write_to=png_file)
+    with open(os.devnull, "w") as file:
+        console = Console(width=width, record=True, theme=nfc_theme, force_terminal=True, file=file)
+        printable.print(console, False, [])
+        svg_content = console.export_svg(title=title, clear=False)
+        cairosvg.svg2png(bytestring=svg_content, write_to=png_file)

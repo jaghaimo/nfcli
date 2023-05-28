@@ -1,8 +1,8 @@
 """Handles static content in `data/hulls` folder."""
 
 import json
+import logging
 from glob import glob
-from typing import Optional
 
 
 class Hulls:
@@ -19,13 +19,13 @@ class Hulls:
 
     def _load_json(self, path: str) -> dict:
         try:
-            f = open(path, "r")
-        except EnvironmentError:
-            return {}
-        else:
-            return json.load(f)
+            with open(path) as f:
+                return json.load(f)
+        except OSError:
+            logging.warn(f"Failed to load {path}")
+        return {}
 
-    def get_component_tag(self, socket: str) -> Optional[str]:
+    def get_component_tag(self, socket: str) -> str | None:
         if socket in self.tags:
             return self.tags.get(socket)
         return None

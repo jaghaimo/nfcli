@@ -2,9 +2,10 @@
 
 import logging
 import sqlite3
+from collections import Counter
 from pathlib import Path
 from sqlite3 import Connection, Cursor, Error
-from typing import Any, Counter
+from typing import Any
 
 from discord.message import Attachment
 

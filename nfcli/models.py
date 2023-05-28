@@ -5,7 +5,6 @@ import logging
 import math
 import re
 from collections import Counter
-from typing import Optional
 
 import arrow
 from rich.console import Console
@@ -25,9 +24,9 @@ class Lobby:
 class Lobbies:
     """Parses and provides additional lobby operations."""
 
-    def __init__(self, timestamp: float, lobby_data: Optional[str]) -> None:
+    def __init__(self, timestamp: float, lobby_data: str | None) -> None:
         self.timestamp = timestamp
-        self.lobbies: Optional[list[Lobby]] = None
+        self.lobbies: list[Lobby] | None = None
         if lobby_data is not None:
             self.author, self.lobbies = self._parse_data(lobby_data)
 
@@ -87,7 +86,7 @@ class Lobbies:
     def in_progress(self) -> list[Lobby]:
         return [lobby for lobby in self.lobbies if lobby.in_progress]
 
-    def with_password(self, lobbies: Optional[list[Lobby]] = None) -> list[Lobby]:
+    def with_password(self, lobbies: list[Lobby] | None = None) -> list[Lobby]:
         if lobbies is None:
             lobbies = self.lobbies
         return [lobby for lobby in lobbies if lobby.has_password]
@@ -121,7 +120,7 @@ class Content(Named):
 class Socket(Named):
     """Models simplified socket info from a fleet/ship file."""
 
-    def __init__(self, key: str, name: str, contents: list[Content], tag: Optional[str]) -> None:
+    def __init__(self, key: str, name: str, contents: list[Content], tag: str | None) -> None:
         super().__init__(name)
         self.key = key
         self.contents = contents
@@ -225,7 +224,7 @@ class Ship(Named, Printable):
             return ""
 
         tag_counter = Counter()
-        for component in [component for component in self.mountings]:
+        for component in list(self.mountings):
             tag_counter.update({component.socket.tag: component.slot_weight})
         logging.debug(tag_counter)
         return " ".join([key for key, _ in tag_counter.most_common() if key is not None])

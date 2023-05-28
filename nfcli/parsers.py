@@ -90,7 +90,7 @@ def parse_fleet(xml_data: str) -> Fleet:
         if idx > 9:
             logging.warn("Stopping after parsing 10 ships")
             break
-        logging.debug(f"Parsing ship #{str(idx)}")
+        logging.debug(f"Parsing ship #{idx!s}")
         ship = get_ship(ship_data)
         fleet.add_ship(ship)
 
@@ -98,7 +98,7 @@ def parse_fleet(xml_data: str) -> Fleet:
         return fleet
 
     for idx, missile_template in enumerate(fleet_data["MissileTypes"]["MissileTemplate"]):
-        logging.debug(f"Parsing missile #{str(idx)}")
+        logging.debug(f"Parsing missile #{idx!s}")
         missile = get_missile(missile_template)
         fleet.add_missile(missile)
 

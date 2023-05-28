@@ -39,7 +39,7 @@ def get_temp_filename(ext: str) -> str:
 
 def is_supported(filename: str) -> bool:
     extensions = ["fleet", "missile", "ship"]
-    return any([filename.endswith(extension) for extension in extensions])
+    return any(filename.endswith(extension) for extension in extensions)
 
 
 async def process_file(message: Message, xml_data: str, filename: str, with_fleet_file: bool):
@@ -53,10 +53,10 @@ async def process_file(message: Message, xml_data: str, filename: str, with_flee
         all_files = []
         if not exists(tmp_file):
             raise RuntimeError(f"Failed to write to {tmp_file}")
-        converted_file = File(open(tmp_file, "rb"), filename=png_file)
+        converted_file = File(tmp_file, filename=png_file)
         all_files.append(converted_file)
         if with_fleet_file:
-            all_files.append(File(open(filename, "rb"), filename=os.path.basename(filename)))
+            all_files.append(File(filename, filename=os.path.basename(filename)))
         mod_deps = parse_mods(xml_data)
         mods = Printer.get_mods(mod_deps, "<", ">")
         await message.reply(f"{entity.text}{mods}", files=all_files)
@@ -177,7 +177,7 @@ async def stats_action(ctx: discord.ApplicationContext, last_days: int):
 @tasks.loop(seconds=60.0)
 async def status_changer():
     player_count = get_player_count()
-    name = f"{str(player_count)} fleets"
+    name = f"{player_count!s} fleets"
     if player_count == -1:
         name = "undisclosed number of fleets"
     elif player_count == 0:

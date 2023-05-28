@@ -1,5 +1,3 @@
-from typing import Optional
-
 import inflect
 
 
@@ -11,7 +9,7 @@ class CountAware:
         self.missiles = missiles or 0
 
     @property
-    def counts(self) -> Optional[str]:
+    def counts(self) -> str | None:
         counts = []
         p = inflect.engine()
         if self.fleets:

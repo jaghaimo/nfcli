@@ -5,7 +5,6 @@ from distutils.dir_util import remove_tree
 from glob import glob
 from os import path
 from posixpath import dirname
-from typing import Optional
 from urllib.parse import parse_qs, urlparse
 
 from dotenv import load_dotenv
@@ -15,7 +14,7 @@ load_dotenv()
 STEAM_API_KEY = os.getenv("STEAM_API_KEY")
 STEAM_USERNAME = os.getenv("STEAM_USERNAME")
 STEAM_APP_ID = 887570
-WORKSHOP_DIR = "~/.steam/steamapps/workshop/content/{}/{}"
+WORKSHOP_DIR = "~/Steam/steamapps/workshop/content/{}/{}"
 
 
 def get_player_count() -> int:
@@ -33,7 +32,7 @@ def get_files(directory: str) -> list[str]:
     return glob(path.join(directory, "*.fleet")) + glob(path.join(directory, "*.ship"))
 
 
-def get_workshop_files(workshop_id: int, throw_if_not_found: Optional[bool] = False) -> list[str]:
+def get_workshop_files(workshop_id: int, throw_if_not_found: bool | None = False) -> list[str]:
     """Get cached copy of workshop files, or download on the fly."""
     workshop_path = get_local_path(workshop_id)
     files = get_files(workshop_path)
@@ -51,7 +50,7 @@ def get_workshop_files(workshop_id: int, throw_if_not_found: Optional[bool] = Fa
 
 def download_bulk(workshop_ids: set[int], timeout: int = 30):
     steam_cmd = ["steamcmd", "+login", STEAM_USERNAME]
-    steam_cmd += ["+workshop_download_item {} {}".format(STEAM_APP_ID, workshop_id) for workshop_id in workshop_ids]
+    steam_cmd += [f"+workshop_download_item {STEAM_APP_ID} {workshop_id}" for workshop_id in workshop_ids]
     steam_cmd.append("+quit")
     subprocess.run(steam_cmd, timeout=timeout)
 
@@ -78,7 +77,7 @@ def invalidate_cache(workshop_items: dict[int, dict]) -> None:
 
 
 def is_valid(tags: list[dict]) -> bool:
-    return any([tag["tag"].lower() in ["fleet", "ship template"] for tag in tags])
+    return any(tag["tag"].lower() in ["fleet", "ship template"] for tag in tags)
 
 
 def find_all() -> dict[int, dict]:
@@ -117,7 +116,7 @@ def find_existing() -> set[int]:
     local_path = dirname(get_local_path(0))
     if not os.path.exists(local_path):
         return set()
-    return set([int(x) for x in os.listdir(local_path)])
+    return {int(x) for x in os.listdir(local_path)}
 
 
 def get_workshop_id(link: str) -> int:

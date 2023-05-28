@@ -2,19 +2,13 @@
 line-length = 120
 target-version = ['py310']
 
-[tool.isort]
-ensure_newline_before_comments = true
-force_grid_wrap = 0
-include_trailing_comma = true
-line_length = 120
-multi_line_output = 3
-profile = "black"
-py_version = 310
-use_parentheses = true
+[tool.ruff]
+line-length = 120
+select = ["F", "E", "W", "C90", "I", "UP", "C4", "SIM", "ERA", "RUF"]
 
 [tool.poetry]
 name = "nfcli"
-version = "1.14.0"
+version = "1.14.1"
 description = "A CLI tool to pretty print fleet and ship files to console."
 authors = ["Jaghaimo <1764586+jaghaimo@users.noreply.github.com>"]
 
@@ -33,10 +27,8 @@ inflect = "^6.0.0"
 
 [tool.poetry.dev-dependencies]
 black = "^22.6.0"
-flake8 = "^4.0.1"
-isort = "^5.10.1"
 debugpy = "^1.6.2"
-autoflake = "^1.5.3"
+ruff = "^0.0.270"
 
 [tool.poetry.scripts]
 nfcli = "nfcli.__main__:main"

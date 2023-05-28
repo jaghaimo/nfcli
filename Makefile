@@ -12,20 +12,16 @@ clean:
 check: format lint
 
 format:
-	poetry run black nfcli
-	poetry run isort nfcli
-	poetry run autoflake --remove-all-unused-imports --remove-unused-variables -i -r nfcli
+	poetry run black nfcli/
+	poetry run ruff check --fix nfcli/
 
 lint: black flake isort
 
 black:
-	poetry run black --check --no-color --diff nfcli
+	poetry run black --check --no-color --diff nfcli/
 
-flake:
-	poetry run flake8 nfcli
-
-isort:
-	poetry run isort nfcli --check --diff
+ruff:
+	poetry run ruff check nfcli/
 
 cache: steam wiki
 

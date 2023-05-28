@@ -3,7 +3,6 @@ import os
 import re
 from logging.handlers import TimedRotatingFileHandler
 from pathlib import Path
-from typing import Optional
 
 from rich.theme import Theme
 
@@ -30,7 +29,7 @@ def init_debugger():
             print("Debugger is now attached", flush=True)
 
 
-def init_logger(filename: Optional[str], level: int):
+def init_logger(filename: str | None, level: int):
     formatter = logging.Formatter("%(asctime)s:%(name)s:%(levelname)s: %(message)s")
     stream_handler = logging.StreamHandler()
     stream_handler.setLevel(level)
@@ -45,7 +44,7 @@ def init_logger(filename: Optional[str], level: int):
 
 
 def load_path(path: str) -> str:
-    with open(path, "r") as f:
+    with open(path) as f:
         return f.read()
 
 

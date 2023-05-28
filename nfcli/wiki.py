@@ -1,12 +1,11 @@
 """Handles static content in `data/wiki` folder."""
 
 import json
-import logging
 import os
-import shutil
 from abc import abstractproperty
+from collections.abc import Callable
 from io import BytesIO
-from typing import Callable, Optional
+from tempfile import mkdtemp
 from urllib.request import urlopen
 from zipfile import ZipFile
 
@@ -34,7 +33,7 @@ def sanitize(string: str) -> str:
     return string.replace("(", "").replace(")", "").strip()
 
 
-def str_to_dict(string: Optional[str] = None) -> dict[str, str]:
+def str_to_dict(string: str | None = None) -> dict[str, str]:
     if not string:
         return {}
     new_dict = {}
@@ -49,16 +48,10 @@ def str_to_dict(string: Optional[str] = None) -> dict[str, str]:
 
 def update_wiki():
     zip_content = urlopen(WIKI_DATA_URL)
-    zipfile = ZipFile(BytesIO(zip_content.read()))
-    for member in zipfile.namelist():
-        filename = os.path.basename(member)
-        if not filename:
-            continue
-        logging.debug(f"Extracting {filename}")
-        source = zipfile.open(member)
-        target = open(os.path.join(WIKI_DIR, filename), "wb")
-        with source, target:
-            shutil.copyfileobj(source, target)
+    tmp_dir = mkdtemp()
+    with ZipFile(BytesIO(zip_content.read())) as zip_ref:
+        zip_ref.extractall(tmp_dir)
+    print(f"Wiki content downloaded to {tmp_dir}/ - move it to {WIKI_DIR}/")
 
 
 class Entity:
