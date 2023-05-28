@@ -137,7 +137,8 @@ class FleetPrinter(ShipPrinter):
 
     def print(self, with_title: bool, fleet: Fleet):
         column_width = min(COLUMN_WIDTH, self.console.width)
-        number_of_columns = fleet.n_ships if fleet.n_ships > 2 else 3
+        number_of_rows = math.floor(math.pow(fleet.n_ships,4/9))
+        number_of_columns = math.ceil(fleet.n_ships / number_of_rows) if fleet.n_ships > 2 else 3
         self.console.size = (min(number_of_columns * column_width, self.console.width), self.console.height)
         if with_title:
             self.console.print(Panel(Text(fleet.title.center(self.console.width), style="white"), style="orange"))
