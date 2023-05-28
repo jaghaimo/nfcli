@@ -4,7 +4,10 @@
   <Version>3</Version>
   <TotalPoints>3000</TotalPoints>
   <FactionKey>Stock/Alliance</FactionKey>
-  <Description>A close range and extremely capable cannon/beam heavy cruiser, which also carries a set of 16 deadly hybrid missiles on its rearmost primary mount.  It's flanked by two support and scout corvettes to extend its reach.  With a wide variety of weapons, this group can comfortably engage many different types of threats, but beward of specialized enemies.</Description>
+  <Description>Difficulty: &lt;color=yellow&gt;MODERATE&lt;/color&gt;
+
+A close range and extremely capable cannon/beam heavy cruiser, which also carries a set of 16 deadly hybrid missiles on its rearmost primary mount.  It's flanked by two support and scout corvettes to extend its reach.  With a wide variety of weapons, this group can comfortably engage many different types of threats, but beward of specialized enemies.</Description>
+  <SortOverrideOrder>3</SortOverrideOrder>
   <Ships>
     <Ship>
       <SaveID xsi:nil="true" />

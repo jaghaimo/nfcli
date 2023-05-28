@@ -4,7 +4,10 @@
   <Version>3</Version>
   <TotalPoints>3000</TotalPoints>
   <FactionKey>Stock/Alliance</FactionKey>
-  <Description>A close range beam brawling fleet.  Consists of three destroyers and an ECM/Scout corvette.  You'll need to get in extremely close to make use of the destroyers' beams, but they can also deliver a punch from a distance with their missile complement.</Description>
+  <Description>Difficulty: &lt;color=red&gt;HARD&lt;/color&gt;
+
+A close range beam brawling fleet.  Consists of three destroyers and an ECM/Scout corvette.  You'll need to get in extremely close to make use of the destroyers' beams, but they can also deliver a punch from a distance with their missile complement.</Description>
+  <SortOverrideOrder>6</SortOverrideOrder>
   <Ships>
     <Ship>
       <SaveID xsi:nil="true" />

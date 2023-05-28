@@ -4,7 +4,9 @@
   <Version>3</Version>
   <TotalPoints>3000</TotalPoints>
   <FactionKey>Stock/Protectorate</FactionKey>
-  <Description>This squadron flips the script on typical Lineship design, requiring the support of its escorting Monitors firing plasma to open up holes in enemy armor to allow its massive volume of 100mm fire to penetrate.  The fleet has good point defenses, including 60 interceptor missiles, to protect against missile attack.  It also features a scout/ewar shuttle.</Description>
+  <Description>Difficulty: &lt;color=red&gt;HARD&lt;/color&gt;
+
+This squadron flips the script on typical Lineship design, requiring the support of its escorting Monitors firing plasma to open up holes in enemy armor to allow its massive volume of 100mm fire to penetrate.  The fleet has good point defenses, including 60 interceptor missiles, to protect against missile attack.  It also features a scout/ewar shuttle.</Description>
   <Ships>
     <Ship>
       <SaveID xsi:nil="true" />

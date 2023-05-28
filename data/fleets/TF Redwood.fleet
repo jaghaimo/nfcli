@@ -4,7 +4,10 @@
   <Version>3</Version>
   <TotalPoints>3000</TotalPoints>
   <FactionKey>Stock/Alliance</FactionKey>
-  <Description>A sniper/spotter group with very capable scouts.  Designed to be used with the cruiser hanging back and providing long-range railgun fire support while the corvettes move ahead, as a group or individually, to spot targets.</Description>
+  <Description>Difficulty: &lt;color=yellow&gt;MODERATE&lt;/color&gt;
+
+A sniper/spotter group with very capable scouts.  Designed to be used with the cruiser hanging back and providing long-range railgun fire support while the corvettes move ahead, as a group or individually, to spot targets.</Description>
+  <SortOverrideOrder>5</SortOverrideOrder>
   <Ships>
     <Ship>
       <SaveID xsi:nil="true" />

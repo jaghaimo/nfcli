@@ -4,7 +4,9 @@
   <Version>3</Version>
   <TotalPoints>3000</TotalPoints>
   <FactionKey>Stock/Protectorate</FactionKey>
-  <Description>Kyanite Squadron comprises of twin Bulk Freighter class Line ships with heavy casemate guns on one side and missile launchers on the other. It is a simple, tanky fleet perfect for engaging at mid-long ranges with evasive maneuvers and by popping in and out of cover. Heading and roll management will be critical to employ the big guns of these two ships in conjunction with the directional long range tracking radar. While vulnerable to being flanked, Kyanite Squadron has a moderate point defense net and anti-missile complement on its cannon side.</Description>
+  <Description>Difficulty: &lt;color=yellow&gt;MODERATE&lt;/color&gt;
+
+Kyanite Squadron comprises of twin Bulk Freighter class Line ships with heavy casemate guns on one side and missile launchers on the other. It is a simple, tanky fleet perfect for engaging at mid-long ranges with evasive maneuvers and by popping in and out of cover. Heading and roll management will be critical to employ the big guns of these two ships in conjunction with the directional long range tracking radar. While vulnerable to being flanked, Kyanite Squadron has a moderate point defense net and anti-missile complement on its cannon side.</Description>
   <Ships>
     <Ship>
       <SaveID xsi:nil="true" />

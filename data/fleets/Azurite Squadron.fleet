@@ -4,13 +4,15 @@
   <Version>3</Version>
   <TotalPoints>3000</TotalPoints>
   <FactionKey>Stock/Protectorate</FactionKey>
-  <Description>Frontline fighting Cannon Armed Lineship and Ocello pair, partnered with an R400 Tug to aid in piercing jamming. The Lineship has a mix of 450mm and 250mm cannons which can be brought to bear depending on the threat. You'll want to keep the two close together to defend against missile threats as alone they'll get picked off.</Description>
+  <Description>Difficulty: &lt;color=green&gt;EASY&lt;/color&gt;
+
+Frontline fighting Cannon Armed Lineship and Ocello pair, partnered with an R400 Tug to aid in piercing jamming. The Lineship has a mix of 450mm and 250mm cannons which can be brought to bear depending on the threat. You'll want to keep the two close together to defend against missile threats as alone they'll get picked off.</Description>
   <Ships>
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>da410729-e79e-4924-ad05-56bd3c95f694</Key>
       <Name>Rose Soul</Name>
-      <Cost>1623</Cost>
+      <Cost>1572</Cost>
       <Callsign />
       <Number>586</Number>
       <SymbolOption>0</SymbolOption>
@@ -101,11 +103,11 @@
         </HullSocket>
         <HullSocket>
           <Key>q5iHLt9VEU-166x4NJmr4Q</Key>
-          <ComponentName>Stock/Plant Control Center</ComponentName>
+          <ComponentName>Stock/Rapid DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>vXXZA02qQEyreCSFbtLJOA</Key>
-          <ComponentName>Stock/Berthing</ComponentName>
+          <ComponentName>Stock/Rapid DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>S03aWjfX90epbCcytu9_xw</Key>
@@ -125,7 +127,7 @@
         </HullSocket>
         <HullSocket>
           <Key>-XwaOMN6eUSsztvywrmXVQ</Key>
-          <ComponentName>Stock/CHI-777 Yard Drive</ComponentName>
+          <ComponentName>Stock/Boosted Reactor</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>26mxVeOdd0SB5ZSaG_hJ0w</Key>
@@ -186,7 +188,7 @@
       <SaveID xsi:nil="true" />
       <Key>b33e4aa7-533d-4657-8e54-c6c190b4debe</Key>
       <Name>Abject Terror</Name>
-      <Cost>1152</Cost>
+      <Cost>1166</Cost>
       <Callsign />
       <Number>258</Number>
       <SymbolOption>0</SymbolOption>
@@ -289,7 +291,7 @@
               <MagSaveData>
                 <MagazineKey>wkafEDT7jEK9TeEtYVoCjw</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-123 Defender</MunitionKey>
-                <Quantity>33</Quantity>
+                <Quantity>40</Quantity>
               </MagSaveData>
             </MissileLoad>
           </ComponentData>
@@ -433,7 +435,7 @@
       <SaveID xsi:nil="true" />
       <Key>6b49867a-5f92-4992-aa29-8ce18138c9b7</Key>
       <Name>Always Alert</Name>
-      <Cost>225</Cost>
+      <Cost>262</Cost>
       <Callsign />
       <Number>611</Number>
       <SymbolOption>0</SymbolOption>
@@ -442,6 +444,19 @@
         <HullSocket>
           <Key>03vxralGq0CFx1XKxjOcBA</Key>
           <ComponentName>Stock/R400 Radar</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>KnFHQkb9uUe98IweLYf9wg</Key>
+          <ComponentName>Stock/VLS-1-23 Launcher</ComponentName>
+          <ComponentData xsi:type="CellLauncherData">
+            <MissileLoad>
+              <MagSaveData>
+                <MagazineKey>_6LNzD6W3U2TgEnrpJH8OA</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-112 Shield</MunitionKey>
+                <Quantity>16</Quantity>
+              </MagSaveData>
+            </MissileLoad>
+          </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>F6bmJdCO3EqzXK9SBJoXUw</Key>
@@ -544,6 +559,85 @@ Failure Rate: 0 %</LongDescription>
             <Maneuvers>None</Maneuvers>
             <DefensiveDoctrine>
               <TargetSizeMask>8</TargetSizeMask>
+              <TargetSizeOrdering>Descending</TargetSizeOrdering>
+              <SalvoSize>1</SalvoSize>
+              <FarthestFirst>false</FarthestFirst>
+            </DefensiveDoctrine>
+            <ApproachAngleControl>true</ApproachAngleControl>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>2</Size>
+          <InstalledComponent>
+            <ComponentKey>Stock/Blast Fragmentation</ComponentKey>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>4</Size>
+          <InstalledComponent xsi:type="MissileEngineSettings">
+            <ComponentKey />
+            <BalanceValues>
+              <A>0.350815</A>
+              <B>0.585463166</B>
+              <C>0.0637218356</C>
+            </BalanceValues>
+          </InstalledComponent>
+        </MissileSocket>
+      </Sockets>
+    </MissileTemplate>
+    <MissileTemplate>
+      <AssociatedTemplateName>SGM-112 Shield</AssociatedTemplateName>
+      <Designation>SGM-112</Designation>
+      <Nickname>Shield</Nickname>
+      <Description>DIRECT - ACT(&lt;color=#4CFF72&gt;RADAR&lt;/color&gt;) - HE FRAG</Description>
+      <LongDescription>The SGM-112 Shield is a size 1 direct guidance missile.  It is based on the SGM-1 body, which is a nimble general-purpose missile.  This missile will deliver a Proximity Fuze, High Explosive, Blast Fragmentation warhead.  It homes in on its target using an Active Radar seeker.
+
+Control Method: DIRECT
+Targeting Modes:
+	&lt;b&gt;&lt;color=#4CFF72&gt;POSITION&lt;/color&gt;	&lt;color=#4CFF72&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+Primary Seeker: ACTIVE &lt;color=#4CFF72&gt;RADAR&lt;/color&gt;
+
+303 m/s for 6,551 m, top speed in 0.8 s
+Terminal Maneuvers: None
+
+Proximity Fuze, High Explosive, Blast Fragmentation
+Armor: 1cm   Component: 40hp
+Blast Radius: 33 m</LongDescription>
+      <Cost>2</Cost>
+      <BodyKey>Stock/SGM-1 Body</BodyKey>
+      <TemplateKey>8e6871dc-ae2d-42f5-a217-6662600d46cd</TemplateKey>
+      <BaseColor>
+        <r>1</r>
+        <g>0.4862745</g>
+        <b>0</b>
+        <a>1</a>
+      </BaseColor>
+      <StripeColor>
+        <r>0.254901975</r>
+        <g>0.254901975</g>
+        <b>0.254901975</b>
+        <a>1</a>
+      </StripeColor>
+      <Sockets>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="ActiveSeekerSettings">
+            <ComponentKey>Stock/Steerable Active Radar Seeker</ComponentKey>
+            <Mode>Targeting</Mode>
+            <RejectUnvalidated>false</RejectUnvalidated>
+            <DetectPDTargets>false</DetectPDTargets>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="DirectGuidanceSettings">
+            <ComponentKey>Stock/Direct Guidance</ComponentKey>
+            <Role>Defensive</Role>
+            <HotLaunch>false</HotLaunch>
+            <SelfDestructOnLost>false</SelfDestructOnLost>
+            <Maneuvers>None</Maneuvers>
+            <DefensiveDoctrine>
+              <TargetSizeMask>12</TargetSizeMask>
               <TargetSizeOrdering>Descending</TargetSizeOrdering>
               <SalvoSize>1</SalvoSize>
               <FarthestFirst>false</FarthestFirst>

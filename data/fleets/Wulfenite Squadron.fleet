@@ -4,7 +4,9 @@
   <Version>3</Version>
   <TotalPoints>3000</TotalPoints>
   <FactionKey>Stock/Protectorate</FactionKey>
-  <Description>This squadron is built around a steadfast capital ship with a supporting utility vessel and flight of rocket shuttles. The cruiser's imposing presence and the feeder's decoys work to distract and displace enemy forces, providing openings for the shuttles to move in and release devastating rocket barrages. Beware, the feeder and shuttles are vulnerable to direct fire and missile strikes. Keep them in cover or stay within range of the cruiser's defenses.</Description>
+  <Description>Difficulty: &lt;color=yellow&gt;MODERATE&lt;/color&gt;
+
+This squadron is built around a steadfast capital ship with a supporting utility vessel and flight of rocket shuttles. The cruiser's imposing presence and the feeder's decoys work to distract and displace enemy forces, providing openings for the shuttles to move in and release devastating rocket barrages. Beware, the feeder and shuttles are vulnerable to direct fire and missile strikes. Keep them in cover or stay within range of the cruiser's defenses.</Description>
   <Ships>
     <Ship>
       <SaveID xsi:nil="true" />

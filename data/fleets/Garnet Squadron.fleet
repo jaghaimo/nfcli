@@ -4,7 +4,9 @@
   <Version>3</Version>
   <TotalPoints>3000</TotalPoints>
   <FactionKey>Stock/Protectorate</FactionKey>
-  <Description>A quartet of Plasma and T30 Monitors form the core of an easy to use all purpose fleet. No expense is spared on damage control or point defense, resulting in an above average level of toughness well suited to pushing and brawling. To round out the utility a pair of EWR/LRT tugs provide radar support and are likewise armed with extensive PD.</Description>
+  <Description>Difficulty: &lt;color=green&gt;EASY&lt;/color&gt;
+
+A quartet of Plasma and T30 Monitors form the core of an easy to use all purpose fleet. No expense is spared on damage control or point defense, resulting in an above average level of toughness well suited to pushing and brawling. To round out the utility a pair of EWR/LRT tugs provide radar support and are likewise armed with extensive PD.</Description>
   <Ships>
     <Ship>
       <SaveID xsi:nil="true" />

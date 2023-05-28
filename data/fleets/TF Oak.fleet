@@ -4,7 +4,10 @@
   <Version>3</Version>
   <TotalPoints>3000</TotalPoints>
   <FactionKey>Stock/Alliance</FactionKey>
-  <Description>Dual heavy cruisers with all big guns. This fleet is ideal for those who struggle with multi-tasking and would like to focus more on positioning a single formation very well. Manage your range and sightlines to pound isolated enemy formations into dust with overwhelming broadside firepower while keeping in cover relative to missile threats.</Description>
+  <Description>Difficulty: &lt;color=green&gt;EASY&lt;/color&gt;
+
+Dual heavy cruisers with all big guns. This fleet is ideal for those who struggle with multi-tasking and would like to focus more on positioning a single formation very well. Manage your range and sightlines to pound isolated enemy formations into dust with overwhelming broadside firepower while keeping in cover relative to missile threats.</Description>
+  <SortOverrideOrder>1</SortOverrideOrder>
   <Ships>
     <Ship>
       <SaveID xsi:nil="true" />
@@ -12,7 +15,7 @@
       <Name>Value Judgement</Name>
       <Cost>1500</Cost>
       <Callsign />
-      <Number>450</Number>
+      <Number>451</Number>
       <SymbolOption>0</SymbolOption>
       <HullType>Stock/Axford Heavy Cruiser</HullType>
       <SocketMap>
@@ -211,7 +214,7 @@
       <Name>Moral Failing</Name>
       <Cost>1500</Cost>
       <Callsign />
-      <Number>450</Number>
+      <Number>452</Number>
       <SymbolOption>0</SymbolOption>
       <HullType>Stock/Axford Heavy Cruiser</HullType>
       <SocketMap>

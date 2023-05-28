@@ -4,7 +4,10 @@
   <Version>3</Version>
   <TotalPoints>3000</TotalPoints>
   <FactionKey>Stock/Alliance</FactionKey>
-  <Description>A combined arms fleet with a railgun heavy cruiser for fire support, two semi-active missile frigates, and a beam destroyer.  This fleet allows you to keep your options open and spread your forces out to take on different challenges.  But be warned: combined arms fleets require significant multitasking to be successful.</Description>
+  <Description>Difficulty: &lt;color=yellow&gt;MODERATE&lt;/color&gt;
+
+A combined arms fleet with a railgun heavy cruiser for fire support, two semi-active missile frigates, and a beam destroyer.  This fleet allows you to keep your options open and spread your forces out to take on different challenges.  But be warned: combined arms fleets require significant multitasking to be successful.</Description>
+  <SortOverrideOrder>4</SortOverrideOrder>
   <Ships>
     <Ship>
       <SaveID xsi:nil="true" />

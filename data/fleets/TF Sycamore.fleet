@@ -4,7 +4,10 @@
   <Version>3</Version>
   <TotalPoints>3000</TotalPoints>
   <FactionKey>Stock/Alliance</FactionKey>
-  <Description>This group is comprised of small but deadly ships.  It is heavily missile focused, with every missile type represented in some way and a variety of seeker configurations.  It is highly recommended to explore this fleet and its missiles in the editor to understand its capabilities before taking it into battle.</Description>
+  <Description>Difficulty: &lt;color=red&gt;HARD&lt;/color&gt;
+
+This group is comprised of small but deadly ships.  It is heavily missile focused, with every missile type represented in some way and a variety of seeker configurations.  It is highly recommended to explore this fleet and its missiles in the editor to understand its capabilities before taking it into battle.</Description>
+  <SortOverrideOrder>7</SortOverrideOrder>
   <Ships>
     <Ship>
       <SaveID xsi:nil="true" />

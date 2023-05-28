@@ -4,7 +4,10 @@
   <Version>3</Version>
   <TotalPoints>3000</TotalPoints>
   <FactionKey>Stock/Alliance</FactionKey>
-  <Description>Three light cruisers which excel at hunting down and destroying support ships like corvette and frigates.  When used to support a team they are excellent for poking out the enemy's eyes and leaving their own heavy-hitters exposed for you to mop up.</Description>
+  <Description>Difficulty: &lt;color=green&gt;EASY&lt;/color&gt;
+
+Three light cruisers which excel at hunting down and destroying support ships like corvette and frigates.  When used to support a team they are excellent for poking out the enemy's eyes and leaving their own heavy-hitters exposed for you to mop up.</Description>
+  <SortOverrideOrder>2</SortOverrideOrder>
   <Ships>
     <Ship>
       <SaveID xsi:nil="true" />
