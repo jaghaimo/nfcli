@@ -65,7 +65,7 @@ def init_database(connection: Connection):
     execute_query(connection, create_table_usage)
 
 
-def insert_usage_data(connection: Connection, guild: int, user: int, files: list[Attachment]):
+def insert_usage_data(connection: Connection, guild: int, user: int, files: set[Attachment]):
     extensions = [file.filename.split(".")[-1] for file in files]
     counter = Counter(extensions)
     insert_lobby_data = "INSERT INTO usage (guild, user, fleets, ships, missiles) VALUES (?, ?, ?, ?, ?)"

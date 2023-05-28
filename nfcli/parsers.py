@@ -87,9 +87,6 @@ def parse_fleet(xml_data: str) -> Fleet:
     fleet_data: dict = xmld.get("Fleet")
     fleet = Fleet(fleet_data["Name"], fleet_data["TotalPoints"], fleet_data["FactionKey"])
     for idx, ship_data in enumerate(fleet_data["Ships"]["Ship"]):
-        if idx > 9:
-            logging.warn("Stopping after parsing 10 ships")
-            break
         logging.debug(f"Parsing ship #{idx!s}")
         ship = get_ship(ship_data)
         fleet.add_ship(ship)

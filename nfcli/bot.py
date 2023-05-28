@@ -23,6 +23,7 @@ from nfcli.wiki import Wiki
 load_dotenv()
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 DISCORD_CHANNEL = int(os.getenv("DISCORD_CHANNEL"))
+MAX_UPLOAD = 0.5 * 1024 * 1024
 lobbies = Lobbies(time(), None)
 
 wiki_db = Wiki()
@@ -66,10 +67,17 @@ async def process_file(message: Message, xml_data: str, filename: str, with_flee
 
 async def process_uploads(message: Message):
     """Process uploaded files."""
-    files = [file for file in message.attachments if is_supported(file.filename) and not file.is_spoiler()]
-    if files:
+    files = {file for file in message.attachments if is_supported(file.filename) and not file.is_spoiler()}
+    valid_files = {file for file in files if file.size < MAX_UPLOAD}
+    invalid_files = files - valid_files
+    if invalid_files:
+        await message.reply(
+            "Some files could not be parsed as they were too big to fit in my small brain."
+            f"\nPlease upload files no larger than {round(MAX_UPLOAD/1024,0)}KB."
+        )
+    if valid_files:
         insert_usage_data(connection, message.guild.id, message.author.id, files)
-    for file in files:
+    for file in valid_files:
         xml_data = await file.read()
         await process_file(message, xml_data, file.filename, with_fleet_file=False)
 

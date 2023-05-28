@@ -1101,7 +1101,7 @@ jupyter = ["ipywidgets (>=7.5.1,<8.0.0)"]
 name = "ruff"
 version = "0.0.270"
 description = "An extremely fast Python linter, written in Rust."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 files = [
@@ -1362,4 +1362,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "b102f1ff9431be93b2bd546788341d67c3ef98d1cb1ff9b69fc81750ec393880"
+content-hash = "def79f8d3b6e5d9da15ec04fe5792361ef2f143b5febe88b5067d98d65a4893d"
