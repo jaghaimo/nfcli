@@ -1,5 +1,7 @@
 {
   "ComponentName": "Intelligence Center",
+  "Faction": "",
+  "ShortDescription": "Intel Compartment",
   "LongDescription": "A large concentration of intelligence analysts who work to identify enemy ships and do battle damage assessment and determine their functional conditions in order to help the commander make decisions about where to allocate forces and when to shift fire.\n\nIntelligence effort is not additive across multiple ships, or even the same ship, and only the largest amount of effort will be used.  However, the speed of these analysts can be increased with supporting staff in other compartments.",
   "FlavorText": "Sometimes called the \"Combat Diner\" for the sheer amount of donuts that wind up in the compartment. Outside of combat, it's a relaxed atmosphere and someone is usually playing some quiet music to break up the boredom of staring at numbers.\n\nIn combat, though, everything changes. Analysts are glued to their screens and rattle off intel like they're hardwired to their stations while the officers hover by the comms to constantly update the CIC. Since most boarding actions will rush to the intel center to snatch up any fleet movements, you might find guards stationed outside the compartment, watching everybody like a hawk.\n\n- T. Meadows, LT",
   "Category": "Intelligence",

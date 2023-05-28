@@ -1,6 +1,6 @@
 {
   "MunitionName": "120mm HE-RPF Shell",
-  "Description": "High-explosive rounds utilized by light cannon weapons, such as the Mk6X series. Effective on light or medium-type warships.  This round features a special Radio Proximity Fuze which will detonate the shell if it detects an object in its path, greatly increasing its effectiveness against fast, maneuvering, small targets like corvettes and frigates.\n\nThese rounds can also be used for defensive purposes such as shooting down incoming missiles.  Note that the proximity fuze does not discriminate between targets, and can destroy outbound friendly missiles if not used judiciously.\n\nType: Ballistic/Chemical\nSize: 120mm\nRole: Dual-Purpose\nArmor Penetration: 10 cm\nComponent Damage: 6 hp\nPenetration Depth: 10 m\nMuzzle Velocity: 800 m/s\nRange: 7,200 m\nVolume: 0.05 m³",
+  "Description": "High-explosive rounds utilized by light cannon weapons, such as the Mk6X series. Effective on light or medium-type warships.  This round features a special Radio Proximity Fuze which will detonate the shell if it detects an object in its path, greatly increasing its effectiveness against fast, maneuvering, small targets like corvettes and frigates.\n\nThese rounds can also be used for defensive purposes such as shooting down incoming missiles.  Note that the proximity fuze does not discriminate between targets, and can destroy outbound friendly missiles if not used judiciously.\n\nType: Ballistic/Chemical\nSize: 120mm\nRole: Dual-Purpose\nArmor Penetration: 10 cm\nComponent Damage: 8 hp\nPenetration Depth: 10 m\nMuzzle Velocity: 800 m/s\nRange: 7,200 m\nVolume: 0.05 m³",
   "Type": "Ballistic",
   "SimMethod": "Spawned",
   "Role": "-1",
@@ -25,8 +25,8 @@
     "MaxPenetrationDepth": 1,
     "HeatDamage": 0,
     "DamageBrushSize": 0.2,
-    "ComponentDamage": 6,
-    "RandomEffectMultiplier": 0.5,
+    "ComponentDamage": 8,
+    "RandomEffectMultiplier": 0.05,
     "CrewVulnerabilityMultiplier": 1,
     "IgnoreEffectiveThickness": false,
     "NeverRicochet": false

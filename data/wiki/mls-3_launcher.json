@@ -1,11 +1,13 @@
 {
   "ComponentName": "MLS-3 Launcher",
-  "LongDescription": "A roll-off launcher capable of firing heavy anti-ship munitions, typically torpedoes. The MLS-3 is manually loaded by crewmembers pulling ammunition from the bulk magazines and can fire 3 torpedoes per volley. As the ammunition is quite heavy, the MLS-3 has an extensive reload time and is restricted to firing only the currently loaded weapons.",
-  "FlavorText": "You'll find these on Sprinter-classes and nothing gets the hands shaking than when you hear the metallic clang of a torpedo rolling off the rack and hitting the deck because of newbies who underestimated the strength you'd need to move Mace torpedoes around.\n\nFor a time, we used to export these fitted with permanent safety locks to colonial flotillas to keep them from loading high-grade munitions, but of course, pirates found that they could just saw off the brackets and adapt their own missiles to fit in the slots. In response, the Alliance pulled every MLS-3 off of most colonial fleets, restricted them to military use, and upgraded them to launch not one but three torpedoes. Honestly, like most Alliance military developments, the civilians always get the short end of the stick.\n\n- T. Meadows, LT",
+  "Faction": "Stock/Protectorate",
+  "ShortDescription": "Size 3 Torpedo Launcher",
+  "LongDescription": "A roll-off launcher capable of firing heavy anti-ship munitions, typically torpedoes. The MLS-3 is manually loaded by crewmembers pulling ammunition from the bulk magazines and can fire 3 torpedoes per volley. As the ammunition is quite heavy, the MLS-3 has an extensive reload time and is restricted to firing only the currently loaded weapons.\n\nThe MLS-3 comes with a special built-in system to initialize and pre-warm missiles during the loading process, skipping the lengthy pre-launch initializations and checks of an always-ready system like VLS.  This enables missiles to be launched immediately upon order, only taking a moment to load the target parameters before firing.\n\nNOTE: Rolloff-style launchers are not capable of firing defensive missiles.",
+  "FlavorText": "TO: PROTECTORATE NAVAL COMMAND\nFROM: OTDEL\n\nConstantine, Captain Roth executed a raid into Bethel territory and managed to pull access keys to an arsenal of Core Security MLS-3 launcher systems. Given that we have no way- at least, until now- to reliably use the SGT-300 Pilum stocks outside of Ocello-class warships, we've decided to fast-track our usual materiel acquisition and take everything we could find. Vance and her flotilla have already delivered enough stock to arm 1st Flotilla and we're receiving plenty more where that came from.\n\nThanks to the forethought of the Naval Office, the modular nature means we won't have to do any specialized re-engineering to install them into our current roster- just point out whatever warship you want equipped with them and it'll be done. Also, don't worry; the safety locks have already been removed and they'll be ready for use with minimal training. This is just a personal note but it's a shame these were restricted to military and Core Security use, these could have prevented Bethel from executing what it did, but like most Alliance military developments: the civilians always get the short end of the stick.",
   "Category": "Weapons - Missile",
   "Type": "Surface",
   "CompoundingCost": false,
-  "CompoundingMultiplier": 1,
+  "CompoundingMultiplier": 2,
   "CompoundingCostClass": "MLS-3 Launcher",
   "FirstInstanceFree": false,
   "PointCost": 20,
@@ -36,7 +38,7 @@
     "PositionTargetingNoInput": false,
     "SupportsTrackTargeting": false,
     "SupportsVisualTargeting": false,
-    "SupportsTargetReferencePoints": false
+    "SupportsWaypoints": false
   },
   "WeaponComponentData": null,
   "ContinuousWeaponComponentData": null,
@@ -45,7 +47,7 @@
   "TubeLauncherComponentData": {
     "TimeBetweenLaunches": 2,
     "MissileSize": 3,
-    "LaunchesPerLoad": 3,
+    "LaunchesPerLoad": 2,
     "LoadTime": 60
   },
   "FixedContinuousWeaponComponentData": null,

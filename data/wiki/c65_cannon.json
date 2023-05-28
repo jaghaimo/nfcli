@@ -1,0 +1,181 @@
+{
+  "ComponentName": "C65 Cannon",
+  "Faction": "Stock/Protectorate",
+  "ShortDescription": "Class 4 Casemate Cannon",
+  "LongDescription": "With stockpiles of 450mm shells filling Alliance supply depots across Protectorate space, it was only natural that they would be procured for use in the Bethel Blockade.  Knowing that the blockade fleet would be facing down the heaviest of armored warships if the Alliance did decide to break through at the Kribensis gate, the C65 was designed to be the primary armament of the ships holding the line there.  Its massive autoloader allows a lineship to output as much firepower as a Solomon battleship, but it can take a while to reload.",
+  "FlavorText": "TO: PROTECTORATE NAVAL COMMAND\nFROM: CKEYS\n\nHere's the reworked specs on the C65, I finally got some time to myself on Shibuya after the whole Ekota thing went down. Some of my techs set up a working model over on JTAG-9 and we ran it through the paces. Good news is that increasing the barrel thickness gave us the means to really pump up the explosive pressure, so- Vance notwithstanding- you should see these match the Alliance's mainline guns pretty reliably, just tell your guys to keep their fingers away from the drum breech, Klaus couldn't get it any easier to handle because of the size on your recoil cylinders.\n\nSpeaking of, that's the bad news. I don't know what Vance has been telling you but there's no way you're fitting this in anything smaller than a lineship, the recoil cylinders are just way too big and they're going to have to cut pretty deep into the hull if you don't want them exposed. That also means you're going to have to stack them vertically, over-under, if you want to keep the space reqs at a minimum. Shouldn't be harder to load but it might be a bitch to aim, so, I wish you good luck. By the way, thanks for the beer, didn't know they still made this swill.",
+  "Category": "Weapons - Projectile",
+  "Type": "Surface",
+  "CompoundingCost": false,
+  "CompoundingMultiplier": 1,
+  "CompoundingCostClass": "C65 Cannon",
+  "FirstInstanceFree": false,
+  "PointCost": 40,
+  "Mass": 35,
+  "Size": {
+    "x": 6,
+    "y": 10,
+    "z": 6
+  },
+  "CanTile": false,
+  "MaxHealth": 500,
+  "Reinforced": false,
+  "FunctioningThreshold": 20,
+  "DamageResistance": 40,
+  "DCPriority": "Medium",
+  "RareDebuffSubtype": "",
+  "RareDebuffChance": 0.05,
+  "FormattedResources": "Power: <color=#FF2525>-300 kW</color>\n",
+  "ResourceDemandPriority": "High",
+  "FormattedBuffs": "",
+  "IWeaponData": {
+    "WepType": "Fixed",
+    "OptimalTargetWeight": "Heavy",
+    "PDTTargetMethod": "Direct",
+    "NeedsExternalAmmoFeed": true,
+    "SupportsAmmoSelection": true,
+    "SupportsPositionTargeting": true,
+    "PositionTargetingNoInput": false,
+    "SupportsTrackTargeting": true,
+    "SupportsVisualTargeting": true,
+    "SupportsWaypoints": false
+  },
+  "WeaponComponentData": {
+    "OptimalTargetWeight": "Heavy",
+    "AllowGrouping": true,
+    "GroupingName": "450mm Casemate",
+    "Role": "Offensive",
+    "EwType": "None",
+    "CheckFriendlyFire": true,
+    "CheckObstaclesInWay": true,
+    "RequireExternalAmmoFeed": true,
+    "AllowAmmoSelection": true,
+    "LeadTargets": true,
+    "OnTargetAngle": 2
+  },
+  "ContinuousWeaponComponentData": null,
+  "DiscreteWeaponComponentData": {
+    "TimeBetweenMuzzles": 4,
+    "MagazineSize": 8,
+    "ReloadTime": 90
+  },
+  "CellLauncherComponentData": null,
+  "TubeLauncherComponentData": null,
+  "FixedContinuousWeaponComponentData": null,
+  "MuzzleData": {
+    "MaxRange": null,
+    "SimMethod": "Spawned",
+    "IgnoreAccuracyModifiers": false,
+    "BaseAccuracy": 0.2,
+    "AccuracyData": [
+      {
+        "Range": 0,
+        "Spread": 0
+      },
+      {
+        "Range": 1000,
+        "Spread": 6.98143053
+      },
+      {
+        "Range": 2000,
+        "Spread": 13.9628611
+      },
+      {
+        "Range": 3000,
+        "Spread": 20.9442921
+      },
+      {
+        "Range": 4000,
+        "Spread": 27.9257221
+      },
+      {
+        "Range": 5000,
+        "Spread": 34.9071541
+      },
+      {
+        "Range": 6000,
+        "Spread": 41.8885841
+      },
+      {
+        "Range": 7000,
+        "Spread": 48.8700142
+      },
+      {
+        "Range": 8000,
+        "Spread": 55.8514442
+      },
+      {
+        "Range": 9000,
+        "Spread": 62.8328743
+      },
+      {
+        "Range": 10000,
+        "Spread": 69.81431
+      },
+      {
+        "Range": 11000,
+        "Spread": 76.79574
+      },
+      {
+        "Range": 12000,
+        "Spread": 83.77717
+      },
+      {
+        "Range": 13000,
+        "Spread": 90.7586
+      },
+      {
+        "Range": 14000,
+        "Spread": 97.74003
+      },
+      {
+        "Range": 15000,
+        "Spread": 104.721458
+      },
+      {
+        "Range": 16000,
+        "Spread": 111.702888
+      },
+      {
+        "Range": 17000,
+        "Spread": 118.684319
+      },
+      {
+        "Range": 18000,
+        "Spread": 125.665749
+      },
+      {
+        "Range": 19000,
+        "Spread": 132.647186
+      },
+      {
+        "Range": 20000,
+        "Spread": 139.628616
+      }
+    ]
+  },
+  "RaycastDamageCharacteristicData": null,
+  "RaycastDamageFalloffData": null,
+  "CommsAntennaComponentData": null,
+  "OmnidirectionalEWarComponentData": null,
+  "TurretedEWarComponentData": null,
+  "ISensorComponentData": null,
+  "PassiveSensorComponentData": null,
+  "SensorComponentData": null,
+  "FireControlData": null,
+  "IEWarTargetData": null,
+  "SensorTurretComponentData": null,
+  "TurretedContinuousWeaponComponentData": null,
+  "TurretedDiscreteWeaponComponentData": null,
+  "IIntelComponentData": null,
+  "CommandComponentData": null,
+  "IntelligenceComponentData": null,
+  "BerthingComponentData": null,
+  "CrewOperatedComponentData": {
+    "CrewRequired": 25,
+    "ReinforceCrewAt": -1
+  },
+  "DCLockerComponentData": null,
+  "IMagazineProviderData": null,
+  "BulkMagazineComponentData": null
+}

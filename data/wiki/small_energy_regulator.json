@@ -1,5 +1,7 @@
 {
   "ComponentName": "Small Energy Regulator",
+  "Faction": "",
+  "ShortDescription": "Gunnery",
   "LongDescription": "Additional energy reservoirs, heatsinks, and improved housing reduces the recharge time on energy-based weapons like lasers, beams, or railguns.",
   "FlavorText": "Like it says on the tin, you just make everything cleaner and smoother. Obviously, it means you need to spend more time on maintainence but that's only if something malfunctions and it's usually going to be one of the heatsinks. Just a simple replacement job.\n\n- I. Parker, CMC",
   "Category": "Weapon Support",

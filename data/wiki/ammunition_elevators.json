@@ -1,5 +1,7 @@
 {
   "ComponentName": "Ammunition Elevators",
+  "Faction": "",
+  "ShortDescription": "Gunnery",
   "LongDescription": "Additional ammunition elevators allow crewmembers to rapidly deliver shells and rounds to the warship's kinetic weapons, reducing reload time for ballistic weapons.",
   "FlavorText": "These are typically automated but sometimes you need a pair of hands to get in there and do some realignment. A good knock from a missile can shake shells loose from their brackets and that's a disaster just waiting to happen, just ask the Naval Office.\n\nOf course, once these get knocked out, your crew is going to psychically transmit insults straight into your mind. They just get that \"aura\", you know what I mean?\n\n- T. Meadows, LT",
   "Category": "Weapon Support",

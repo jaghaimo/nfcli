@@ -1,5 +1,7 @@
 {
   "ComponentName": "Small DC Locker",
+  "Faction": "",
+  "ShortDescription": "Damage Control",
   "LongDescription": "Damage Control lockers provide a warship with teams capable of repairing ship components and restoring destroyed modules or compartments back into working order.\n\nEach locker allows a certain number of restorations for destroyed modules or components, but destruction of a DC locker will completely remove all available restorations.",
   "FlavorText": "These are more like actual lockers filled with generic parts and tools for damage controlmen to run by and resupply. For the most part, they're full of atmospheric plates to seal up hull breaches and shoring to keep the hull from caving in on itself. All lockers come with spare oxygen kits and FPE, but don't expect these to be enough to repair heavy battle damage.\n\n- I. Parker, CMC",
   "Category": "Damage Control",

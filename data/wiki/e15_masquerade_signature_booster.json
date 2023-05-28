@@ -1,5 +1,7 @@
 {
   "ComponentName": "E15 'Masquerade' Signature Booster",
+  "Faction": "Stock/Alliance",
+  "ShortDescription": "Electronic Deception Module",
   "LongDescription": "The E15 is a simple electronic noisemaker.  It amplifies the electronic signature of its host warship, making it appear as a large, appealing target.  Note that this will make the warship visible at longer ranges, and does not significantly complicate identification.  In order to keep the ruse up, this module is best combined with a Signature Scrambler.",
   "FlavorText": "A device usually found on corvettes operating as torpedo sponges. Having one of these issued to your warship is usually a sign that you're due for a ride on a liberty boat to a new warship.\n\nI've heard it makes a funny sound when it's running at full power, but I can't tell you if that's a good or bad thing.\n\n- I. Parker, CMC",
   "Category": "EWar",

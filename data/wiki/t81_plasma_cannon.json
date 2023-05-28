@@ -1,29 +1,31 @@
 {
-  "ComponentName": "Mk82 Railgun",
-  "LongDescription": "The Alliance Mk8X Railgun provides a heavy warship with long-range direct-fire offensive ability, intended to pressure targets caught out in open space and foregoing cover. Alliance railguns typically lack the explosive power of their favored cannon weapons but make up for it with precision fire that can trigger fires and other debilitating effects on targets.\n\nThis model of the 8X is equipped with an additional rail at the cost of recharge time and power draw. Fires 300mm Magnetic rounds.",
-  "FlavorText": "I remember reading a report about an \"attempt\" to make a tri-railed battery but it turns out that the coils were so close to each other by that point that it would send the shells forward and then launch them back into the turret at Mach 8, completely blowing out the back because of the reversing frequencies.\n\nNaval Office wasn't happy, neither was the War Office when they got issued the field tests during the Deshima Blitz and lost a whole battery, a lot of expletives and a busted jaw on a Naval Office guy, that part's a little spotty.\n\n- T. Meadows, LT",
-  "Category": "Weapons - Projectile",
+  "ComponentName": "T81 Plasma Cannon",
+  "Faction": "Stock/Protectorate",
+  "ShortDescription": "Class 4 Coilgun",
+  "LongDescription": "Despite its high-tech sound, this plasma cannon is actually a relatively crude solution to the Protectorate's problem of being out-armored in every weight class.  These coilguns fire a magnetic bottle containing superheated plasma which shatters against the armor of a warship and melts large holes, opening it up for attack from lighter caliber weaponry such as 100mm.",
+  "FlavorText": "TO: PROTECTORATE NAVAL COMMAND\nFROM: OTDEL\nCLASSIFIED\n\nConstantine, our co-operation with Hellas Solutions bears fruit. You are being issued the first batch of the Type 81 plasma projector, codename \"Jinn\". As per standard fitting procedures, your vessels will be refitted to your specifications and the crews given the necessary training in the operation of the weapon on your next return to Pyxis. Be aware that, due to the time constraints needed to develop and deploy the weapon, many of the components are exposed and you must expect constant maintenance to be required, especially with the cooling rig and power supply.\n\nRemember, this is an experimental project. The Alliance is not prepared for their armor to be under such an intense threat that the Jinn can pose, so you are reminded to scuttle the weapon in the event of imminent capture. Do not allow the Alliance to get any intel on the Jinn, we cannot afford mistakes.\n\nGood hunting.",
+  "Category": "Weapons - Energy",
   "Type": "Surface",
   "CompoundingCost": false,
   "CompoundingMultiplier": 1,
-  "CompoundingCostClass": "Mk82 Railgun",
+  "CompoundingCostClass": "T81 Plasma Cannon",
   "FirstInstanceFree": false,
-  "PointCost": 80,
-  "Mass": 35,
+  "PointCost": 45,
+  "Mass": 80,
   "Size": {
-    "x": 8,
-    "y": 5,
-    "z": 8
+    "x": 6,
+    "y": 3,
+    "z": 6
   },
   "CanTile": false,
-  "MaxHealth": 400,
+  "MaxHealth": 300,
   "Reinforced": false,
-  "FunctioningThreshold": 30,
-  "DamageResistance": 30,
+  "FunctioningThreshold": 10,
+  "DamageResistance": 15,
   "DCPriority": "Medium",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,
-  "FormattedResources": "Power: <color=#FF2525>-1800 kW</color>\n",
+  "FormattedResources": "Power: <color=#FF2525>-1500 kW</color>\n",
   "ResourceDemandPriority": "High",
   "FormattedBuffs": "",
   "IWeaponData": {
@@ -41,21 +43,21 @@
   "WeaponComponentData": {
     "OptimalTargetWeight": "Heavy",
     "AllowGrouping": true,
-    "GroupingName": "300mm Railgun",
-    "IsPointDefense": false,
-    "IsEW": false,
+    "GroupingName": "400mm Plasma",
+    "Role": "Offensive",
+    "EwType": "None",
     "CheckFriendlyFire": true,
     "CheckObstaclesInWay": true,
     "RequireExternalAmmoFeed": true,
     "AllowAmmoSelection": true,
     "LeadTargets": true,
-    "OnTargetAngle": 0.2
+    "OnTargetAngle": 1
   },
   "ContinuousWeaponComponentData": null,
   "DiscreteWeaponComponentData": {
-    "TimeBetweenMuzzles": 2.5,
-    "MagazineSize": 2,
-    "ReloadTime": 30
+    "TimeBetweenMuzzles": 4,
+    "MagazineSize": 4,
+    "ReloadTime": 40
   },
   "CellLauncherComponentData": null,
   "TubeLauncherComponentData": null,
@@ -64,7 +66,7 @@
     "MaxRange": null,
     "SimMethod": "Spawned",
     "IgnoreAccuracyModifiers": false,
-    "BaseAccuracy": 0.075,
+    "BaseAccuracy": 0.25,
     "AccuracyData": [
       {
         "Range": 0,
@@ -72,83 +74,83 @@
       },
       {
         "Range": 1000,
-        "Spread": 2.61800027
+        "Spread": 8.726868
       },
       {
         "Range": 2000,
-        "Spread": 5.23600054
+        "Spread": 17.4537354
       },
       {
         "Range": 3000,
-        "Spread": 7.854
+        "Spread": 26.180603
       },
       {
         "Range": 4000,
-        "Spread": 10.4720011
+        "Spread": 34.90747
       },
       {
         "Range": 5000,
-        "Spread": 13.09
+        "Spread": 43.63434
       },
       {
         "Range": 6000,
-        "Spread": 15.708
+        "Spread": 52.3612061
       },
       {
         "Range": 7000,
-        "Spread": 18.326
+        "Spread": 61.0880737
       },
       {
         "Range": 8000,
-        "Spread": 20.9440022
+        "Spread": 69.81494
       },
       {
         "Range": 9000,
-        "Spread": 23.5620022
+        "Spread": 78.54181
       },
       {
         "Range": 10000,
-        "Spread": 26.18
+        "Spread": 87.26868
       },
       {
         "Range": 11000,
-        "Spread": 28.798
+        "Spread": 95.99555
       },
       {
         "Range": 12000,
-        "Spread": 31.416
+        "Spread": 104.722412
       },
       {
         "Range": 13000,
-        "Spread": 34.034
+        "Spread": 113.44928
       },
       {
         "Range": 14000,
-        "Spread": 36.652
+        "Spread": 122.176147
       },
       {
         "Range": 15000,
-        "Spread": 39.2700043
+        "Spread": 130.903015
       },
       {
         "Range": 16000,
-        "Spread": 41.8880043
+        "Spread": 139.629883
       },
       {
         "Range": 17000,
-        "Spread": 44.506
+        "Spread": 148.35675
       },
       {
         "Range": 18000,
-        "Spread": 47.1240044
+        "Spread": 157.083618
       },
       {
         "Range": 19000,
-        "Spread": 49.7420044
+        "Spread": 165.810486
       },
       {
         "Range": 20000,
-        "Spread": 52.36
+        "Spread": 174.537354
       }
     ]
   },
@@ -165,17 +167,17 @@
   "SensorTurretComponentData": null,
   "TurretedContinuousWeaponComponentData": null,
   "TurretedDiscreteWeaponComponentData": {
-    "TraverseRate": 2.5,
-    "ElevationRate": 4,
-    "MaxElevation": 25,
-    "MinElevation": -3
+    "TraverseRate": 5,
+    "ElevationRate": 5,
+    "MaxElevation": 60,
+    "MinElevation": -5
   },
   "IIntelComponentData": null,
   "CommandComponentData": null,
   "IntelligenceComponentData": null,
   "BerthingComponentData": null,
   "CrewOperatedComponentData": {
-    "CrewRequired": 25,
+    "CrewRequired": 15,
     "ReinforceCrewAt": -1
   },
   "DCLockerComponentData": null,

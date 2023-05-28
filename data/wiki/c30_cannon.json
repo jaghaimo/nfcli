@@ -1,0 +1,181 @@
+{
+  "ComponentName": "C30 Cannon",
+  "Faction": "Stock/Protectorate",
+  "ShortDescription": "Class 1 Casemate Cannon",
+  "LongDescription": "Engineering large turrets is difficult, but Protectorate shipyards were able to slap together the T20 and T30 series out of spare sheets and leftover parts.  They're not the prettiest turrets in known space, and they only fire small 100mm rounds, but when fired into a hole opened up by a larger weapon they can wreak havoc inside.",
+  "FlavorText": "TO: CKEYS\nFROM: PROTECTORATE NAVAL COMMAND\n\nKeystone, it's Constantine. I received your recommendations for the C30 from my assistant, Amelie, and I'm thankful for your input, your background notwithstanding. Unfortunately, it's not a simple task to construct a naval turret; you have to take considerations for crew space, weapon caliber, hydraulics and electronics, and a monstrous amount of safety measures. I'm sure that, given your career, you have seen the insides of an Alliance Mk66 gun battery and can appreciate the amount of engineering skill it takes to make an artillery battery operate smoothly on a warship. This is something we do not have the resources for.\n\nWe can't pour Silver into development of a whole new gun system but I believe that we can take some of the current mechanisms from the T20 and T30 to produce an excellent casemate system of a similar caliber. Amelie has already contacted Command Engineering and they'll be working with the Otdel to produce something based on your notes. I know you are eager to assist us in this war, but please slow down, we are not titans of warfare and this particular war is getting nasty very quickly.",
+  "Category": "Weapons - Projectile",
+  "Type": "Surface",
+  "CompoundingCost": false,
+  "CompoundingMultiplier": 1,
+  "CompoundingCostClass": "C30 Cannon",
+  "FirstInstanceFree": false,
+  "PointCost": 15,
+  "Mass": 15,
+  "Size": {
+    "x": 2,
+    "y": 5,
+    "z": 2
+  },
+  "CanTile": false,
+  "MaxHealth": 350,
+  "Reinforced": false,
+  "FunctioningThreshold": 15,
+  "DamageResistance": 40,
+  "DCPriority": "Medium",
+  "RareDebuffSubtype": "",
+  "RareDebuffChance": 0.05,
+  "FormattedResources": "Power: <color=#FF2525>-100 kW</color>\n",
+  "ResourceDemandPriority": "High",
+  "FormattedBuffs": "",
+  "IWeaponData": {
+    "WepType": "Fixed",
+    "OptimalTargetWeight": "Heavy",
+    "PDTTargetMethod": "Direct",
+    "NeedsExternalAmmoFeed": true,
+    "SupportsAmmoSelection": true,
+    "SupportsPositionTargeting": true,
+    "PositionTargetingNoInput": false,
+    "SupportsTrackTargeting": true,
+    "SupportsVisualTargeting": true,
+    "SupportsWaypoints": false
+  },
+  "WeaponComponentData": {
+    "OptimalTargetWeight": "Heavy",
+    "AllowGrouping": true,
+    "GroupingName": "100mm Gun",
+    "Role": "Offensive",
+    "EwType": "None",
+    "CheckFriendlyFire": true,
+    "CheckObstaclesInWay": true,
+    "RequireExternalAmmoFeed": true,
+    "AllowAmmoSelection": true,
+    "LeadTargets": true,
+    "OnTargetAngle": 1
+  },
+  "ContinuousWeaponComponentData": null,
+  "DiscreteWeaponComponentData": {
+    "TimeBetweenMuzzles": 1,
+    "MagazineSize": 16,
+    "ReloadTime": 30
+  },
+  "CellLauncherComponentData": null,
+  "TubeLauncherComponentData": null,
+  "FixedContinuousWeaponComponentData": null,
+  "MuzzleData": {
+    "MaxRange": null,
+    "SimMethod": "Spawned",
+    "IgnoreAccuracyModifiers": false,
+    "BaseAccuracy": 0.1,
+    "AccuracyData": [
+      {
+        "Range": 0,
+        "Spread": 0
+      },
+      {
+        "Range": 1000,
+        "Spread": 3.49067259
+      },
+      {
+        "Range": 2000,
+        "Spread": 6.981345
+      },
+      {
+        "Range": 3000,
+        "Spread": 10.4720173
+      },
+      {
+        "Range": 4000,
+        "Spread": 13.96269
+      },
+      {
+        "Range": 5000,
+        "Spread": 17.4533634
+      },
+      {
+        "Range": 6000,
+        "Spread": 20.9440346
+      },
+      {
+        "Range": 7000,
+        "Spread": 24.43471
+      },
+      {
+        "Range": 8000,
+        "Spread": 27.92538
+      },
+      {
+        "Range": 9000,
+        "Spread": 31.4160538
+      },
+      {
+        "Range": 10000,
+        "Spread": 34.9067268
+      },
+      {
+        "Range": 11000,
+        "Spread": 38.3974
+      },
+      {
+        "Range": 12000,
+        "Spread": 41.88807
+      },
+      {
+        "Range": 13000,
+        "Spread": 45.378746
+      },
+      {
+        "Range": 14000,
+        "Spread": 48.86942
+      },
+      {
+        "Range": 15000,
+        "Spread": 52.3600922
+      },
+      {
+        "Range": 16000,
+        "Spread": 55.85076
+      },
+      {
+        "Range": 17000,
+        "Spread": 59.3414345
+      },
+      {
+        "Range": 18000,
+        "Spread": 62.8321075
+      },
+      {
+        "Range": 19000,
+        "Spread": 66.32278
+      },
+      {
+        "Range": 20000,
+        "Spread": 69.81345
+      }
+    ]
+  },
+  "RaycastDamageCharacteristicData": null,
+  "RaycastDamageFalloffData": null,
+  "CommsAntennaComponentData": null,
+  "OmnidirectionalEWarComponentData": null,
+  "TurretedEWarComponentData": null,
+  "ISensorComponentData": null,
+  "PassiveSensorComponentData": null,
+  "SensorComponentData": null,
+  "FireControlData": null,
+  "IEWarTargetData": null,
+  "SensorTurretComponentData": null,
+  "TurretedContinuousWeaponComponentData": null,
+  "TurretedDiscreteWeaponComponentData": null,
+  "IIntelComponentData": null,
+  "CommandComponentData": null,
+  "IntelligenceComponentData": null,
+  "BerthingComponentData": null,
+  "CrewOperatedComponentData": {
+    "CrewRequired": 10,
+    "ReinforceCrewAt": -1
+  },
+  "DCLockerComponentData": null,
+  "IMagazineProviderData": null,
+  "BulkMagazineComponentData": null
+}

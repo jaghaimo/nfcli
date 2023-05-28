@@ -1,6 +1,6 @@
 {
   "MunitionName": "250mm AP Shell",
-  "Description": "Armor-piercing shells utilized by cannon weapons, such as the Mk6X series. Effective on light or medium-type warships.\n\nHas increased effectiveness against penetrating or destroying hull armor, but lacks a high-explosive payload. Best used when followed-up by high-explosive shells.\n\nType: Ballistic/Chemical\nSize: 250mm\nRole: Offensive\nArmor Penetration: 60 cm\nComponent Damage: 60 hp\nMuzzle Velocity: 800 m/s\nRange: 8,000 m\nVolume: 0.15 m³",
+  "Description": "Armor-piercing shells utilized by cannon weapons, such as the Mk6X series. Effective on light or medium-type warships.\n\nHas increased effectiveness against penetrating or destroying hull armor, but lacks a high-explosive payload. Best used when followed-up by high-explosive shells.\n\nType: Ballistic/Chemical\nSize: 250mm\nRole: Offensive\nArmor Penetration: 60 cm\nComponent Damage: 70 hp\nMuzzle Velocity: 800 m/s\nRange: 8,000 m\nVolume: 0.15 m³",
   "Type": "Ballistic",
   "SimMethod": "Spawned",
   "Role": "Offensive",
@@ -21,12 +21,12 @@
   "MissileData": null,
   "DamageCharacteristics": {
     "ArmorPenetration": 60,
-    "OverpenetrationDamageMultiplier": 0.6,
+    "OverpenetrationDamageMultiplier": 0.2,
     "MaxPenetrationDepth": null,
     "HeatDamage": 0,
     "DamageBrushSize": 0.8,
-    "ComponentDamage": 60,
-    "RandomEffectMultiplier": 0.5,
+    "ComponentDamage": 70,
+    "RandomEffectMultiplier": 0.05,
     "CrewVulnerabilityMultiplier": 0.75,
     "IgnoreEffectiveThickness": false,
     "NeverRicochet": false

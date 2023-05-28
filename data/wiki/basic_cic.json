@@ -1,5 +1,7 @@
 {
   "ComponentName": "Basic CIC",
+  "Faction": "",
+  "ShortDescription": "Command Center",
   "LongDescription": "The Combat Information Center (CIC) is the central command hub that provides command and control for the warship, and is critical in the operation of the vessel during an engagement.\n\nDestruction of the CIC results in a loss of command and the affected warship cannot receive commands until the CIC is repaired.",
   "FlavorText": "For the uninitiated, this is where the actual commanding of the ship takes place in a battlespace. Most CICs in Alliance space are typically hooked into an array of AN-2500 Superbrains, managing the radar data, tactical updates, and engineering reports.\n\nEven by itself, the typical CIC is given an acceptable level of armoring and can take a couple big hits before the entire room needs to be evacuated. Of course, should that happen, the entire chain of command will break apart and everybody will be running around like it's their first day at Bethel.\n\n- S. Ace, CWO",
   "Category": "Command",

@@ -1,5 +1,7 @@
 {
   "ComponentName": "FR3300 Micro Reactor",
+  "Faction": "Stock/Alliance",
+  "ShortDescription": "Fusion Powerplant",
   "LongDescription": "The FR-Series 3300 Reactor is typically found on Corvette-class warships. While inefficient for larger warships, the FR3300 can provide a nice backup supply of power alongside the main reactor.",
   "FlavorText": "Great at its job but it lacks the real \"strength\" of our typical FRs found on the bigger stuff. Like all of the current FRs in Alliance space, these have the unfortunate chance to turn into pure fusion bombs when the magnetic safeties get nicked and the temperature starts to run wild.\n\nGamma emissions occur, neutrons start to spread, and next thing you know, the fusion officer is calling a full evacuation from the room and DC comes rushing in. We've all seen vids of what happens when an FR gets out of control.\n\n- I. Parker, CMC",
   "Category": "Powerplant",

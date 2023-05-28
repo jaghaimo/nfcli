@@ -1,5 +1,7 @@
 {
   "ComponentName": "E55 'Spotlight' Illuminator",
+  "Faction": "Stock/Alliance",
+  "ShortDescription": "Illuminator (Radar)",
   "LongDescription": "A radar transmitter that deploys a high-power cone in a direction for the purpose of guiding semi-active missiles.  A side-effect of this is the boosting of the target's radar signature, making the target easier to see.\n\nThe Spotlight deploys a long but narrow beam.",
   "FlavorText": "Just point and shoot, says the manual. Not much to report on the E55 or E57, they're your typical naval illuminators, except these don't provide lock-on capability, that's a job left for the the RF101.\n\nI heard these had problems back on Shelter, something about liquefying birds that get too close to the emitter. Don't think I would want to see that, to tell you the truth.\n\n- I. Parker, CMC",
   "Category": "EWar",
@@ -42,8 +44,8 @@
     "OptimalTargetWeight": "Light",
     "AllowGrouping": true,
     "GroupingName": "Illuminators",
-    "IsPointDefense": false,
-    "IsEW": true,
+    "Role": "Offensive, Defensive",
+    "EwType": "Illuminator",
     "CheckFriendlyFire": false,
     "CheckObstaclesInWay": false,
     "RequireExternalAmmoFeed": false,

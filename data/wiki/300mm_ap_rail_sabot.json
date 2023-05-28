@@ -1,6 +1,6 @@
 {
   "MunitionName": "300mm AP Rail Sabot",
-  "Description": "High-velocity alloy-based shell used in railgun-type weapon systems, including mass drivers.\n\nTrades explosive power for unrivaled armor penetration, extremely effective on heavy-type warships but performance falls dramatically on lighter targets.\n\nType: Ballistic/Magnetic\nSize: 300mm\nRole: Offensive\nArmor Penetration: 200 cm\nComponent Damage: 70 hp\nMuzzle Velocity: 3000 m/s\nRange: 21,000 m\nVolume: 0.75 m³",
+  "Description": "High-velocity alloy-based shell used in railgun-type weapon systems, including mass drivers.  While the full size of the sabot package is 300mm, the needle projectile is much smaller.  These high-speed, extremely hard needles perforate delicate components and cause rapid degradation to warship systems, though they lack the explosive punch to permanently destroy them.\n\nType: Ballistic/Magnetic\nSize: 300mm\nRole: Offensive\nArmor Penetration: 200 cm\nComponent Damage: 80 hp (Ignores DR)\nStructural Damage: 0\nMuzzle Velocity: 2000 m/s\nRange: 21,000 m\nVolume: 0.75 m³",
   "Type": "Ballistic",
   "SimMethod": "Spawned",
   "Role": "Offensive",
@@ -12,8 +12,8 @@
   "SupportsTrackTargeting": true,
   "SupportsVisualTargeting": true,
   "SupportsWaypoints": false,
-  "FlightSpeed": 3000,
-  "Lifetime": 7,
+  "FlightSpeed": 2000,
+  "Lifetime": 10.5,
   "MaxRange": 21000,
   "ShellMunitionData": {
     "MaxPenetration": -10
@@ -21,12 +21,12 @@
   "MissileData": null,
   "DamageCharacteristics": {
     "ArmorPenetration": 200,
-    "OverpenetrationDamageMultiplier": 0.6,
+    "OverpenetrationDamageMultiplier": 0.5,
     "MaxPenetrationDepth": null,
     "HeatDamage": 1500,
     "DamageBrushSize": 1,
-    "ComponentDamage": 70,
-    "RandomEffectMultiplier": 2.5,
+    "ComponentDamage": 80,
+    "RandomEffectMultiplier": 100,
     "CrewVulnerabilityMultiplier": 1,
     "IgnoreEffectiveThickness": false,
     "NeverRicochet": false

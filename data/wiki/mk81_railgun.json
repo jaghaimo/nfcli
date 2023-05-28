@@ -1,5 +1,7 @@
 {
   "ComponentName": "Mk81 Railgun",
+  "Faction": "Stock/Alliance",
+  "ShortDescription": "Class 4 Railgun",
   "LongDescription": "The Alliance Mk8X Railgun provides a heavy warship with long-range direct-fire offensive ability, intended to pressure targets caught out in open space and foregoing cover. Alliance railguns typically lack the explosive power of their favored cannon weapons but make up for it with precision fire that can trigger fires and other debilitating effects on targets.\n\nRailguns defeat armor with ease but the lack of an explosive payload reduces the killing power of these weapons. Fires 300mm Magnetic rounds.",
   "FlavorText": "An Alliance favorite, Lorentz force weaponry has been a Naval Office go-to once the Venuma Coalition started slinging tungsten from GTO batteries. Turns out that just throwing really, really hard metal at something is still a viable tactic even in this day and age. Maintenance crews hate these things, though, I don't blame them. Naval Office set up a ridiculous magnetic array and just one misplaced charge coil sends the whole thing out of frequency.\n\nThe shells make a pretty nice sound when they breach atmo, crews have come to nickname the 8X as the \"Lightningbolt\" which is a pretty apt description when you hear the thunderclap from the round snapping into air. In Requisitions, though, the War Office hates it since its popularity with the Naval Office means that any kind of replacement or proposal just ends up getting binned before it even reaches prototype development.\n\n- T. Meadows, LT",
   "Category": "Weapons - Projectile",
@@ -42,8 +44,8 @@
     "OptimalTargetWeight": "Heavy",
     "AllowGrouping": true,
     "GroupingName": "300mm Railgun",
-    "IsPointDefense": false,
-    "IsEW": false,
+    "Role": "Offensive",
+    "EwType": "None",
     "CheckFriendlyFire": true,
     "CheckObstaclesInWay": true,
     "RequireExternalAmmoFeed": true,

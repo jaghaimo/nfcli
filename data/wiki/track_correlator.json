@@ -1,5 +1,7 @@
 {
   "ComponentName": "Track Correlator",
+  "Faction": "",
+  "ShortDescription": "Radar Control",
   "LongDescription": "Reduces the position and velocity deviation of sensor tracks by correlating the history of tracking data, providing a more accurate track.",
   "FlavorText": "Great for artillery or warships with precision fire, that's for sure. As soulless as Ithaca Dynamics can be, though, even they get caught up in development trouble just like the Naval Office. Turns out having the correlator attached directly to the radar suite would make the latter overpower the correlator's solutions, which is still trying to feed data into the radar.\n\nWhat resulted was this frustrating negative feedback loop of a blank scope and a mouth-frothing rage from the radar operator. Ithaca eventually made the correlator separate from the radar suite and gave it a half-second buffer to allow the radar to actually print out data without being overwhelmed. It's not perfect but it works.\n\n- I. Parker, CMC",
   "Category": "Sensors",

@@ -1,5 +1,7 @@
 {
   "ComponentName": "RS41 'Spyglass' Radar",
+  "Faction": "Stock/Alliance",
+  "ShortDescription": "Search Radar",
   "LongDescription": "The RS41 Suite provides a long-range sensor system to the equipped warship for detecting targets at range, but at the cost of reduced sensor track accuracy and a higher power draw.",
   "FlavorText": "An excellent choice for scout warships, especially given the recent ATD upgrades package issued to the RS41. These hold a notorious reputation among pirates and smugglers given the narrow beam these deploy, making it far more easier at detecting stealthy contacts.\n\nHowever, because of the narrow beam, the RS41 is unsuitable for frontline brawling and should really only be used in emergencies when at close-range engagements.\n\n- S. Ace, CWO",
   "Category": "Sensors",
@@ -59,6 +61,7 @@
     "BurnthroughPowerMultiplier": 3,
     "BurnthroughDamageProbability": 0.2,
     "BurnthroughDamage": 25,
+    "RadiationData": null,
     "DeviationData": [
       {
         "SignalLoss": 0,

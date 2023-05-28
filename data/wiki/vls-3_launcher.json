@@ -1,5 +1,7 @@
 {
   "ComponentName": "VLS-3 Launcher",
+  "Faction": "Stock/Alliance",
+  "ShortDescription": "Size 3 Missile Launcher",
   "LongDescription": "Available to nearly all warships, the VLS-3 is a modular system that allow for a mix-and-match mission profile of all large-size missiles, such as the SGT-3 series of torpedoes. Despite the ease-of-use, reloading the cells is a delicate task that can only be completed in port, so once a VLS is empty, it's useless for the remainder of an engagement.",
   "FlavorText": "As subtle as a fuel-air explosive, brings back memories of the 'good old days' for the vets from Graznovia. These operate on the same principle as their planetside counterparts issued to marine personnel, but instead of being launched at both Graznovian and Initiative bases a continent away, they've been reengineered to operate in vacuum. Winchester highly approves of the VLS-3 and that's a clear sign you're not going to see any evolution of these, just getting the CLS-3 was frustrating for everybody involved.\n\nOverall, the result of the VLS-3 is tactically competent and it's great for intimidating pirates. Some crews will even slowly open up the launch doors like some kind of threat but don't tell maintenance that they're doing that.\n\n- T. Meadows, LT",
   "Category": "Weapons - Missile",
@@ -32,11 +34,11 @@
     "PDTTargetMethod": "Direct",
     "NeedsExternalAmmoFeed": false,
     "SupportsAmmoSelection": false,
-    "SupportsPositionTargeting": false,
-    "PositionTargetingNoInput": true,
-    "SupportsTrackTargeting": false,
-    "SupportsVisualTargeting": false,
-    "SupportsWaypoints": false
+    "SupportsPositionTargeting": null,
+    "PositionTargetingNoInput": null,
+    "SupportsTrackTargeting": null,
+    "SupportsVisualTargeting": null,
+    "SupportsWaypoints": null
   },
   "WeaponComponentData": null,
   "ContinuousWeaponComponentData": null,

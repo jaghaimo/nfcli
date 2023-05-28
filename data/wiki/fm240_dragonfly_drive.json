@@ -1,5 +1,7 @@
 {
   "ComponentName": "FM240 'Dragonfly' Drive",
+  "Faction": "Stock/Alliance",
+  "ShortDescription": "Fusion Drive",
   "LongDescription": "A high-efficiency drive with the majority of power redirected to the maneuvering thrusters, pulled from mining vessels. Although it sacrifices some top speed for the warship, it significantly increases the agility of the warship, allowing much faster turns, rolls, and translations.",
   "FlavorText": "Re-routed ignition fuel to the thrusters and an underspec'd main drive means you can hold months worth of fuel and lose just a small amount of speed, something that a lot of long-haul freighter crews appreciate. 'Dragonfly' drives, though, take that concept and put it on a naval level, which means you'll usually see these on Keystones or similar. \n\nMaybe not the best for closing the distance or getting the hell out of dodge, but gunnery will love you when they're able to keep their spinal guns on target.\n\n- I. Parker, CMC",
   "Category": "Propulsion",

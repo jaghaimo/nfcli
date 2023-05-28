@@ -26,7 +26,7 @@
     "HeatDamage": 0,
     "DamageBrushSize": 1.25,
     "ComponentDamage": 100,
-    "RandomEffectMultiplier": 1,
+    "RandomEffectMultiplier": 0.2,
     "CrewVulnerabilityMultiplier": 1,
     "IgnoreEffectiveThickness": false,
     "NeverRicochet": false

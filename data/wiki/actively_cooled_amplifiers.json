@@ -1,5 +1,7 @@
 {
   "ComponentName": "Actively Cooled Amplifiers",
+  "Faction": "",
+  "ShortDescription": "",
   "LongDescription": "Additional cooling infrastructure allows emitters such as radar jammers to run longer and more often. ",
   "FlavorText": "One of my finest contributions to the Alliance. By taking the same cooling array found on the Mk8X weapons, you can take the refrigeration coils and apply a rapid \"pulse\" of cooling between every emitter cycle. Of course, this is a minor engineering feat but I am sure even Parker would approve of my handiwork.\n\nOf course, should the array take damage, the electrical frequency may suddenly shift to compensate and you run the risk of having the emitter heat up but that is a job for people like Parker to fix. Not myself.\n\n- S. Ace, CWO",
   "Category": "Weapon Support",

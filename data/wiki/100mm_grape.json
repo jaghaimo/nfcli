@@ -1,0 +1,34 @@
+{
+  "MunitionName": "100mm Grape",
+  "Description": "A cannister of small, hardened metal beads.  Can be used against unarmored targets to directly attack crew and damage delicate systems, or against missiles in flight.\n\nType: Ballistic/Chemical\nSize: 100mm\nRole: Dual-Purpose\nArmor Penetration: 10 cm\nComponent Damage: 25 hp\nMuzzle Velocity: 900 m/s\nRange: 5,400 m\nVolume: 0.05 m³",
+  "Type": "Ballistic",
+  "SimMethod": "Spawned",
+  "Role": "Offensive, Defensive",
+  "PointCost": 1,
+  "PointDivision": 100,
+  "StorageVolume": 0.05,
+  "SupportsPositionTargeting": true,
+  "PositionTargetingNoInput": false,
+  "SupportsTrackTargeting": true,
+  "SupportsVisualTargeting": true,
+  "SupportsWaypoints": false,
+  "FlightSpeed": 900,
+  "Lifetime": 6,
+  "MaxRange": 5400,
+  "ShellMunitionData": {
+    "MaxPenetration": -10
+  },
+  "MissileData": null,
+  "DamageCharacteristics": {
+    "ArmorPenetration": 10,
+    "OverpenetrationDamageMultiplier": 0.2,
+    "MaxPenetrationDepth": null,
+    "HeatDamage": 0,
+    "DamageBrushSize": 0.4,
+    "ComponentDamage": 25,
+    "RandomEffectMultiplier": 5,
+    "CrewVulnerabilityMultiplier": 5,
+    "IgnoreEffectiveThickness": false,
+    "NeverRicochet": false
+  }
+}

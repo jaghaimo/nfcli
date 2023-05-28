@@ -1,6 +1,6 @@
 {
   "MunitionName": "250mm HE Shell",
-  "Description": "High-explosive shells utilized by cannon weapons, such as the Mk6X series. Effective on light or medium-type warships, with acceptable performance on heavy-type warships.\n\nLacks the hull armor penetration power of AP shells, but utilizes a deadly high-explosive payload to destroy the interiors of targets. Best used to follow up salvos of armor-piercing shells.\n\nType: Ballistic/Chemical\nSize: 250mm\nRole: Offensive\nArmor Penetration: 40 cm\nComponent Damage: 75 hp\nPenetration Depth: 20 m\nMuzzle Velocity: 800 m/s\nRange: 8,000 m\nVolume: 0.15 m³\nExplosion Radius: 9",
+  "Description": "High-explosive shells utilized by cannon weapons, such as the Mk6X series. Effective on light or medium-type warships, with acceptable performance on heavy-type warships.\n\nLacks the hull armor penetration power of AP shells, but utilizes a deadly high-explosive payload to destroy the interiors of targets. Best used to follow up salvos of armor-piercing shells.\n\nType: Ballistic/Chemical\nSize: 250mm\nRole: Offensive\nArmor Penetration: 40 cm\nComponent Damage: 80 hp\nPenetration Depth: 25 m\nExplosion Radius: 9\nMuzzle Velocity: 800 m/s\nRange: 8,000 m\nVolume: 0.15 m³",
   "Type": "Ballistic",
   "SimMethod": "Spawned",
   "Role": "Offensive",
@@ -16,17 +16,17 @@
   "Lifetime": 10,
   "MaxRange": 8000,
   "ShellMunitionData": {
-    "MaxPenetration": 20
+    "MaxPenetration": 25
   },
   "MissileData": null,
   "DamageCharacteristics": {
     "ArmorPenetration": 40,
     "OverpenetrationDamageMultiplier": 0.2,
-    "MaxPenetrationDepth": 2,
+    "MaxPenetrationDepth": 2.5,
     "HeatDamage": 350,
     "DamageBrushSize": 0.8,
-    "ComponentDamage": 75,
-    "RandomEffectMultiplier": 1,
+    "ComponentDamage": 80,
+    "RandomEffectMultiplier": 0.25,
     "CrewVulnerabilityMultiplier": 1,
     "IgnoreEffectiveThickness": false,
     "NeverRicochet": false

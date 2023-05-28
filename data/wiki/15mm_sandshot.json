@@ -1,11 +1,11 @@
 {
   "MunitionName": "15mm Sandshot",
-  "Description": "A small magnetic sled which is used to accelerate a collection of tungsten grains to incredible velocities.  Sandshot is extremely effective against missiles and other unprotected targets, but completely useless against warships.\n\nType: Ballistic/Magnetic\nSize: 15mm\nRole: Defensive\nArmor Penetration: 1 cm\nComponent Damage: 65 hp\nMuzzle Velocity: 2500 m/s\nRange: 6,250 m\nVolume: 0.0025 m³",
+  "Description": "A small magnetic sled which is used to accelerate a collection of tungsten grains to incredible velocities.  Sandshot is extremely effective against missiles and other unprotected targets, but completely useless against warships.\n\nType: Ballistic/Magnetic\nSize: 15mm\nRole: Defensive\nArmor Penetration: 1 cm\nComponent Damage: 75 hp\nMuzzle Velocity: 2500 m/s\nRange: 8,000 m\nVolume: 0.0025 m³",
   "Type": "Ballistic",
   "SimMethod": "Spawned",
   "Role": "Defensive",
   "PointCost": 1,
-  "PointDivision": 25,
+  "PointDivision": 50,
   "StorageVolume": 0.0025,
   "SupportsPositionTargeting": true,
   "PositionTargetingNoInput": false,
@@ -13,8 +13,8 @@
   "SupportsVisualTargeting": true,
   "SupportsWaypoints": false,
   "FlightSpeed": 2500,
-  "Lifetime": 2.5,
-  "MaxRange": 6250,
+  "Lifetime": 3.2,
+  "MaxRange": 8000,
   "ShellMunitionData": {
     "MaxPenetration": -10
   },
@@ -25,7 +25,7 @@
     "MaxPenetrationDepth": null,
     "HeatDamage": 1500,
     "DamageBrushSize": 1,
-    "ComponentDamage": 65,
+    "ComponentDamage": 75,
     "RandomEffectMultiplier": 0.05,
     "CrewVulnerabilityMultiplier": 0.05,
     "IgnoreEffectiveThickness": false,

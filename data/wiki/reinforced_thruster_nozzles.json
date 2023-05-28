@@ -1,5 +1,7 @@
 {
   "ComponentName": "Reinforced Thruster Nozzles",
+  "Faction": "",
+  "ShortDescription": "Thruster Upgrade",
   "LongDescription": "An upgrade to all of the warship's thruster nozzles, making them able to withstand the increased output of operating at flank speed for prolonged period.",
   "FlavorText": "Replace the nozzles with something that won't tear apart from an errant blast and you're set, really. Coolant is also sent to swirl around thruster packs not actively applying force for quick cooling, which helps in a pinch but it's not as substantial as simply replacing the thruster nozzles with tungsten alloys.\n\nA little heavier, a little costly, sure, but when you need to get the hell out of dodge, these will definitely keep you alive.\n\n- I. Parker, CMC",
   "Category": "Engineering",

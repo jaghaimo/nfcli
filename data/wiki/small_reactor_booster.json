@@ -1,5 +1,7 @@
 {
   "ComponentName": "Small Reactor Booster",
+  "Faction": "",
+  "ShortDescription": "Reactor Control",
   "LongDescription": "Reactor boosters optimize the efficiency of a warship’s fusion reactors, providing an increase to total power generated but also increasing the ship's radar signature size.",
   "FlavorText": "This is like a smaller, more compact version of the PCC, but now it's entirely controlled by an AN-2500 Superbrain, leaving it entirely automated. An unfortunate side-effect of this, however, is that it sends out a certain power frequency that feeds back into the radar suite, making stealth more difficult.\n\nOn scout ships, this is obviously bad, but not so much on brawlers where it won't matter at that point.\n\n- I. Parker, CMC",
   "Category": "Engineering",

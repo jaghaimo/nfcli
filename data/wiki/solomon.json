@@ -1,5 +1,6 @@
 {
   "ClassName": "Solomon",
+  "Faction": "Stock/Alliance",
   "HullClassification": "Battleship",
   "LongDescription": "Battleships are hulking masses of metal, bristling with firepower and sheathed in thick armor. The Solomon-class is a prime example of this, slowly rolling onto the battlespace with its heavy guns to lay down merciless support fire.",
   "FlavorText": "Rarely does the Solomon-class Battleship grace the battlespace with its presence. Initially, the first and only of her class- the ANS Cydonia City- was merely a naval celebration of the Alliance's engineering prowess, often put on the roster for Fleet Day to excite citizens and to make nervous engineers sweat in hopes it doesn't have a critical breakdown mid-display. But as conflicts flared and fleet doctrines favoring heavier tonnage with long-reaching weapons became the standard, the Alliance called upon my shipyard to produce a new line of modernized battleships.\n\nNow, the Solomon-class reigns as a venerable anti-capital fortress of heavy fire support, boasting hull armoring so thick that even railgun-type weaponry takes effort to penetrate. The sheer mass of the ship renders stealth operations unlikely and the slow speed will require Solomons to rely on their armor for direct defense while smaller ships intercept lighter targets.\n\nSolomons are usually deployed in the rear lines, working as command and control ships that patrol around our core territories but recent doctrines have shifted them over to a role more suited for frontline support. Despite the age, I have a distinct feeling that the Solomon will be a mainstay for years to come, serving this Admiralty and the next.\n\n- F. Autumns, CEO, Falke-Tethys Drive Yards",
@@ -9,7 +10,7 @@
   "MaxSpeed": 16,
   "LinearMotor": 18,
   "MaxTurnSpeed": 4.58366251,
-  "AngularMotor": 3.1,
+  "AngularMotor": 3.85,
   "BaseIntegrity": 8000,
   "ArmorThickness": 52,
   "InteriorDensityArmorEquivalent": 1.2,

@@ -1,5 +1,7 @@
 {
   "ComponentName": "Mk25 'Rebound' PDT",
+  "Faction": "Stock/Alliance",
+  "ShortDescription": "Class 1 Kinetic",
   "LongDescription": "The Mk25 'Rebound' fires short-range 50mm flak rounds, detonating roughly in proximity of the approaching threat, typically missiles or personal craft. As the weapon lacks a Fire Control radar it is entirely reliant on the host warship's sensors, but is highly resistant to radar jamming and can operate off of visuals.",
   "FlavorText": "Flak guns will never be replaced, it's a main ingredient of warfare, like contractor kickbacks and rhetoric-spouting politicians- something the Alliance has in spades these days. A while back, Constantine tried to make a move on the Brass and get the humble Rebound struck from development doctrines but that put everybody in a bad mood and that effort got dropped pretty quick.\n\nRebounds got a nice spot in the Alliance roster after the Deshima Blitz revealed the first ammunition troubles for the AN, depots were getting drained of Defender rounds at an eye-watering speed, but the ANMD had plenty of 50mm sitting around in Badnarik for the sponson guns on the NAV-10. Naval Office took a shipment, fixed on some prox-fuze, and called it a day. Surprised everybody when it turned out to be just the solution we needed.\n\n- T. Meadows, LT",
   "Category": "Weapons - Point Defense",
@@ -8,7 +10,7 @@
   "CompoundingMultiplier": 1,
   "CompoundingCostClass": "Mk25 'Rebound' PDT",
   "FirstInstanceFree": false,
-  "PointCost": 20,
+  "PointCost": 15,
   "Mass": 3,
   "Size": {
     "x": 2,
@@ -42,8 +44,8 @@
     "OptimalTargetWeight": "Light",
     "AllowGrouping": false,
     "GroupingName": "",
-    "IsPointDefense": true,
-    "IsEW": false,
+    "Role": "Defensive",
+    "EwType": "None",
     "CheckFriendlyFire": true,
     "CheckObstaclesInWay": false,
     "RequireExternalAmmoFeed": true,

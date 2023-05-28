@@ -1,0 +1,186 @@
+{
+  "ComponentName": "P20 'Bastion' PDT",
+  "Faction": "Stock/Protectorate",
+  "ShortDescription": "Class 1 Kinetic",
+  "LongDescription": "The P20 is a rotary flak turret which works well against large groups of slow, conventional missiles.",
+  "FlavorText": "TO: PROTECTORATE NAVAL COMMAND\nFrom: CKEYS\n\nConstantine, here's the specs of the Bastion system you asked for back at Black Sands. Sorry it took so long, I've been caught up in some happenings at Shibuya, Meadows is creeping around Ekota in her carrier and we've been trying to coordinate our miners to stay under the radar, literally.\n\nYou'll find that my techs and I worked in a fluid system around the barrels that draws from the thruster refrigeration. The Black is awful at heat dispersion, so every time there's a pause in sustained firing, the mitigation system will give a quick injection of water down the flak barrel jackets. You should stop seeing melting barrels but I can't guarantee it, there's a lot of firepower going on here.",
+  "Category": "Weapons - Point Defense",
+  "Type": "Surface",
+  "CompoundingCost": false,
+  "CompoundingMultiplier": 1,
+  "CompoundingCostClass": "P20 'Bastion' PDT",
+  "FirstInstanceFree": false,
+  "PointCost": 15,
+  "Mass": 7,
+  "Size": {
+    "x": 2,
+    "y": 1,
+    "z": 2
+  },
+  "CanTile": false,
+  "MaxHealth": 150,
+  "Reinforced": false,
+  "FunctioningThreshold": 10,
+  "DamageResistance": 15,
+  "DCPriority": "Medium",
+  "RareDebuffSubtype": "",
+  "RareDebuffChance": 0.05,
+  "FormattedResources": "Power: <color=#FF2525>-40 kW</color>\n",
+  "ResourceDemandPriority": "High",
+  "FormattedBuffs": "",
+  "IWeaponData": {
+    "WepType": "Turret",
+    "OptimalTargetWeight": "Light",
+    "PDTTargetMethod": "Direct",
+    "NeedsExternalAmmoFeed": true,
+    "SupportsAmmoSelection": false,
+    "SupportsPositionTargeting": true,
+    "PositionTargetingNoInput": false,
+    "SupportsTrackTargeting": true,
+    "SupportsVisualTargeting": true,
+    "SupportsWaypoints": false
+  },
+  "WeaponComponentData": {
+    "OptimalTargetWeight": "Light",
+    "AllowGrouping": false,
+    "GroupingName": "",
+    "Role": "Defensive",
+    "EwType": "None",
+    "CheckFriendlyFire": true,
+    "CheckObstaclesInWay": false,
+    "RequireExternalAmmoFeed": true,
+    "AllowAmmoSelection": false,
+    "LeadTargets": true,
+    "OnTargetAngle": 5
+  },
+  "ContinuousWeaponComponentData": null,
+  "DiscreteWeaponComponentData": {
+    "TimeBetweenMuzzles": 0.25,
+    "MagazineSize": 100,
+    "ReloadTime": 0.25
+  },
+  "CellLauncherComponentData": null,
+  "TubeLauncherComponentData": null,
+  "FixedContinuousWeaponComponentData": null,
+  "MuzzleData": {
+    "MaxRange": null,
+    "SimMethod": "Spawned",
+    "IgnoreAccuracyModifiers": true,
+    "BaseAccuracy": 1.5,
+    "AccuracyData": [
+      {
+        "Range": 0,
+        "Spread": 0
+      },
+      {
+        "Range": 1000,
+        "Spread": 52.4077835
+      },
+      {
+        "Range": 2000,
+        "Spread": 104.815567
+      },
+      {
+        "Range": 3000,
+        "Spread": 157.223343
+      },
+      {
+        "Range": 4000,
+        "Spread": 209.631134
+      },
+      {
+        "Range": 5000,
+        "Spread": 262.0389
+      },
+      {
+        "Range": 6000,
+        "Spread": 314.4467
+      },
+      {
+        "Range": 7000,
+        "Spread": 366.8545
+      },
+      {
+        "Range": 8000,
+        "Spread": 419.262268
+      },
+      {
+        "Range": 9000,
+        "Spread": 471.670044
+      },
+      {
+        "Range": 10000,
+        "Spread": 524.0778
+      },
+      {
+        "Range": 11000,
+        "Spread": 576.4856
+      },
+      {
+        "Range": 12000,
+        "Spread": 628.8934
+      },
+      {
+        "Range": 13000,
+        "Spread": 681.3012
+      },
+      {
+        "Range": 14000,
+        "Spread": 733.709
+      },
+      {
+        "Range": 15000,
+        "Spread": 786.1167
+      },
+      {
+        "Range": 16000,
+        "Spread": 838.524536
+      },
+      {
+        "Range": 17000,
+        "Spread": 890.9323
+      },
+      {
+        "Range": 18000,
+        "Spread": 943.3401
+      },
+      {
+        "Range": 19000,
+        "Spread": 995.7478
+      },
+      {
+        "Range": 20000,
+        "Spread": 1048.15564
+      }
+    ]
+  },
+  "RaycastDamageCharacteristicData": null,
+  "RaycastDamageFalloffData": null,
+  "CommsAntennaComponentData": null,
+  "OmnidirectionalEWarComponentData": null,
+  "TurretedEWarComponentData": null,
+  "ISensorComponentData": null,
+  "PassiveSensorComponentData": null,
+  "SensorComponentData": null,
+  "FireControlData": null,
+  "IEWarTargetData": null,
+  "SensorTurretComponentData": null,
+  "TurretedContinuousWeaponComponentData": null,
+  "TurretedDiscreteWeaponComponentData": {
+    "TraverseRate": 30,
+    "ElevationRate": 30,
+    "MaxElevation": 89,
+    "MinElevation": -5
+  },
+  "IIntelComponentData": null,
+  "CommandComponentData": null,
+  "IntelligenceComponentData": null,
+  "BerthingComponentData": null,
+  "CrewOperatedComponentData": {
+    "CrewRequired": 5,
+    "ReinforceCrewAt": -1
+  },
+  "DCLockerComponentData": null,
+  "IMagazineProviderData": null,
+  "BulkMagazineComponentData": null
+}

@@ -1,5 +1,7 @@
 {
   "ComponentName": "Berthing",
+  "Faction": "",
+  "ShortDescription": "Personnel",
   "LongDescription": "Berthings provide additional crew to the ship, which are required to operate systems, weapons, and other compartments.",
   "FlavorText": "It's where the crew hangs out to avoid doing their job or getting line-of-sight tasked by a disgruntled officer. Some of the bigger ones on Alliance stations actually come with a Heritage Room (aka: a bar) where they serve watered-down Queen's Draft to crewmen in hopes of keeping their spirits up.\n\nMuch to the Naval Office's chagrin, there's talk that the OSP berthings get heated beds pulled off of space-liners, something that makes a lot of crew question their loyalty up until they find out that the OSP also have to sleep right next to the ship's magazine.\n\n- T. Meadows, LT",
   "Category": "Crew",

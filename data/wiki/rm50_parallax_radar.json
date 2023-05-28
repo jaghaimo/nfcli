@@ -1,5 +1,7 @@
 {
   "ComponentName": "RM50 'Parallax' Radar",
+  "Faction": "Stock/Alliance",
+  "ShortDescription": "Multi-Function Radar",
   "LongDescription": "The RM50 Suite is a multi-function, multi-mode radar array designed for both search and fire-control applications.  By focusing tighter beams through the radar panels it is able to track a single target with high accuracy while also maintaining a volume search scan, all without the need for a separate turreted module consuming an external hardpoint.\n\nMulti-mode radars suffer from the drawback that they can only lock a target out to the maximum detection range of that target based on the sensitivity of the sensor, unlike a dedicated fire-control radar which can lock out to its maximum effective range. In other words, if the search function could not see the target on its own, it will not be able to lock a track from the sensor network.",
   "FlavorText": "Expensive but effective. Developed by Ithaca Dynamics, the RM50 came into existence after Bethel Rebel warships began to target Alliance ships with Bullseye FCRs, meaning the ships in question would be immediately destroyed by massed weapons fire before a lock could be achieved.\n\nCombining the ability of a lock-on system and a volume scan means a warship can effectively handle targets by itself should it be a fair engagement, which is typically never. Of course, sacrifices must be made and that came in the form of weaker emitters and a less sensitive burn-through sweep. Still, it's a valuable suite and one that I'm sure will stay with the Alliance for the foreseeable future.\n\n- S. Ace, CWO",
   "Category": "Sensors",
@@ -59,6 +61,7 @@
     "BurnthroughPowerMultiplier": 12,
     "BurnthroughDamageProbability": 0.2,
     "BurnthroughDamage": 17.5,
+    "RadiationData": null,
     "DeviationData": [
       {
         "SignalLoss": 0,

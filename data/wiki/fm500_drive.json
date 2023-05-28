@@ -1,5 +1,7 @@
 {
   "ComponentName": "FM500 Drive",
+  "Faction": "Stock/Alliance",
+  "ShortDescription": "Fusion Drive",
   "LongDescription": "This medium sized fusion drive is commonly found on cruisers and other large warships.  They have a focus on durability over power.  This drive provides both thrust for main engines and a small amount of power.",
   "FlavorText": "The standard for larger warships, which are usually capital ships. Like the FM200, these are designed more for ease-of-use and versatility than specialization, something which the Naval Office graciously thought of since most newbies are going to have their first career on an Axford.\n\nThe FM500 has a tendency to suddenly go silent despite working as normal, making a lot of inexperienced crewmen panic when the MPA comes knocking for inspection.\n\n- I. Parker, CMC",
   "Category": "Propulsion",

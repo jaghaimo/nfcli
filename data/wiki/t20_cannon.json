@@ -1,0 +1,186 @@
+{
+  "ComponentName": "T20 Cannon",
+  "Faction": "Stock/Protectorate",
+  "ShortDescription": "Class 2 Cannon",
+  "LongDescription": "Engineering large turrets is difficult, but Protectorate shipyards were able to slap together the T20 and T30 series out of spare sheets and leftover parts.  They're not the prettiest turrets in known space, and they only fire small 100mm rounds, but when fired into a hole opened up by a larger weapon they can wreak havoc inside.",
+  "FlavorText": "Most people don't know what war is really like, instead deciding that a good way to \"win the war\" is to challenge tactical and engineering decisions by people who have years of in-field experience from the comfort of the STELLARNET. If you can't tell, I respect what the OSP is doing with the Type 20 and can't fault them for having to work with what they have on hand. They don't have the luxury of 400 years of military buildup, the OSP has to keep their logistics simple, their fleets mobile, and costs effective.\n\n100mm sounds like it'd be useless but keep in mind that these guns are designed for mass fire and ambush tactics, enough of these firing AP will eventually puncture the hull and ruin everybody's day. It might just be a box with a gun, but someone over there in the OSP knows effective weapon design while cutting costs to make it easily manufactured, like, hell, there's even a muzzle booster on the damn thing.\n\n- T. Meadows, LT",
+  "Category": "Weapons - Projectile",
+  "Type": "Surface",
+  "CompoundingCost": false,
+  "CompoundingMultiplier": 1,
+  "CompoundingCostClass": "T20 Cannon",
+  "FirstInstanceFree": false,
+  "PointCost": 15,
+  "Mass": 3,
+  "Size": {
+    "x": 3,
+    "y": 1,
+    "z": 3
+  },
+  "CanTile": false,
+  "MaxHealth": 150,
+  "Reinforced": false,
+  "FunctioningThreshold": 10,
+  "DamageResistance": 15,
+  "DCPriority": "Medium",
+  "RareDebuffSubtype": "",
+  "RareDebuffChance": 0.05,
+  "FormattedResources": "Power: <color=#FF2525>-30 kW</color>\n",
+  "ResourceDemandPriority": "High",
+  "FormattedBuffs": "",
+  "IWeaponData": {
+    "WepType": "Turret",
+    "OptimalTargetWeight": "Medium",
+    "PDTTargetMethod": "Direct",
+    "NeedsExternalAmmoFeed": true,
+    "SupportsAmmoSelection": true,
+    "SupportsPositionTargeting": true,
+    "PositionTargetingNoInput": false,
+    "SupportsTrackTargeting": true,
+    "SupportsVisualTargeting": true,
+    "SupportsWaypoints": false
+  },
+  "WeaponComponentData": {
+    "OptimalTargetWeight": "Medium",
+    "AllowGrouping": true,
+    "GroupingName": "100mm Gun",
+    "Role": "Offensive, Defensive",
+    "EwType": "None",
+    "CheckFriendlyFire": true,
+    "CheckObstaclesInWay": true,
+    "RequireExternalAmmoFeed": true,
+    "AllowAmmoSelection": true,
+    "LeadTargets": true,
+    "OnTargetAngle": 1
+  },
+  "ContinuousWeaponComponentData": null,
+  "DiscreteWeaponComponentData": {
+    "TimeBetweenMuzzles": 1,
+    "MagazineSize": 4,
+    "ReloadTime": 15
+  },
+  "CellLauncherComponentData": null,
+  "TubeLauncherComponentData": null,
+  "FixedContinuousWeaponComponentData": null,
+  "MuzzleData": {
+    "MaxRange": null,
+    "SimMethod": "Spawned",
+    "IgnoreAccuracyModifiers": false,
+    "BaseAccuracy": 0.05,
+    "AccuracyData": [
+      {
+        "Range": 0,
+        "Spread": 0
+      },
+      {
+        "Range": 1000,
+        "Spread": 1.745331
+      },
+      {
+        "Range": 2000,
+        "Spread": 3.490662
+      },
+      {
+        "Range": 3000,
+        "Spread": 5.23599243
+      },
+      {
+        "Range": 4000,
+        "Spread": 6.981324
+      },
+      {
+        "Range": 5000,
+        "Spread": 8.726655
+      },
+      {
+        "Range": 6000,
+        "Spread": 10.4719849
+      },
+      {
+        "Range": 7000,
+        "Spread": 12.2173166
+      },
+      {
+        "Range": 8000,
+        "Spread": 13.9626484
+      },
+      {
+        "Range": 9000,
+        "Spread": 15.7079792
+      },
+      {
+        "Range": 10000,
+        "Spread": 17.45331
+      },
+      {
+        "Range": 11000,
+        "Spread": 19.19864
+      },
+      {
+        "Range": 12000,
+        "Spread": 20.94397
+      },
+      {
+        "Range": 13000,
+        "Spread": 22.6893024
+      },
+      {
+        "Range": 14000,
+        "Spread": 24.4346333
+      },
+      {
+        "Range": 15000,
+        "Spread": 26.1799641
+      },
+      {
+        "Range": 16000,
+        "Spread": 27.9252968
+      },
+      {
+        "Range": 17000,
+        "Spread": 29.6706276
+      },
+      {
+        "Range": 18000,
+        "Spread": 31.4159584
+      },
+      {
+        "Range": 19000,
+        "Spread": 33.16129
+      },
+      {
+        "Range": 20000,
+        "Spread": 34.90662
+      }
+    ]
+  },
+  "RaycastDamageCharacteristicData": null,
+  "RaycastDamageFalloffData": null,
+  "CommsAntennaComponentData": null,
+  "OmnidirectionalEWarComponentData": null,
+  "TurretedEWarComponentData": null,
+  "ISensorComponentData": null,
+  "PassiveSensorComponentData": null,
+  "SensorComponentData": null,
+  "FireControlData": null,
+  "IEWarTargetData": null,
+  "SensorTurretComponentData": null,
+  "TurretedContinuousWeaponComponentData": null,
+  "TurretedDiscreteWeaponComponentData": {
+    "TraverseRate": 35,
+    "ElevationRate": 35,
+    "MaxElevation": 80,
+    "MinElevation": -5
+  },
+  "IIntelComponentData": null,
+  "CommandComponentData": null,
+  "IntelligenceComponentData": null,
+  "BerthingComponentData": null,
+  "CrewOperatedComponentData": {
+    "CrewRequired": 4,
+    "ReinforceCrewAt": -1
+  },
+  "DCLockerComponentData": null,
+  "IMagazineProviderData": null,
+  "BulkMagazineComponentData": null
+}

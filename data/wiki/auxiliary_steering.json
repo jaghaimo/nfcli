@@ -1,5 +1,7 @@
 {
   "ComponentName": "Auxiliary Steering",
+  "Faction": "",
+  "ShortDescription": "Command Center",
   "LongDescription": "Provides an emergency backup for steering the ship when main control is lost, allowing the ship to get to safety and effect repairs.  For best redundancy it should be located far from the CIC.",
   "FlavorText": "Not every warship has these since it's kind of difficult to steer a warship when it's already crippled, but they save lives (and the ship, for that matter) when they're installed.\n\nIt's loud, it's hot, and it's cramped, so for a lot of crewmen, it's home.\n\n- I. Parker, CMC",
   "Category": "Command",
@@ -16,8 +18,8 @@
     "z": 3
   },
   "CanTile": false,
-  "MaxHealth": 150,
-  "Reinforced": false,
+  "MaxHealth": 300,
+  "Reinforced": true,
   "FunctioningThreshold": 10,
   "DamageResistance": 20,
   "DCPriority": "Medium",

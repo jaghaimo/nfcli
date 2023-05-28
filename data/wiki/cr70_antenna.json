@@ -1,5 +1,7 @@
 {
   "ComponentName": "CR70 Antenna",
+  "Faction": "Stock/Alliance",
+  "ShortDescription": "Comms Antenna",
   "LongDescription": "A substantial upgrade to the CR10, the CR70 cluster provides a stronger communications path than the main array found on most hulls.  \n\nThe most powerful antenna array on a warship will serve as the active communications path, even if the integrated array is still functional.",
   "FlavorText": "It's an antennae. Not really much to say about it other than it has in-line impedance matching and it can catch the latest Slam Kings game. I heard Ace worked on designing these but he says that about a lot of things. Beats me.\n\n- I. Parker, CMC",
   "Category": "Communications",

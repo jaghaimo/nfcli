@@ -1,5 +1,7 @@
 {
   "ComponentName": "FM200 Drive",
+  "Faction": "Stock/Alliance",
+  "ShortDescription": "Fusion Drive",
   "LongDescription": "This small-sized drive system provides power for the main engines of smaller warships, while also providing a small amount of reactor power. With an even balance of power and durability, the FM200 can fit all manner of warships, and even provide backup drives to larger warships.",
   "FlavorText": "Your typical drive plant found on lighter warships, sometimes specialized civilian ships. There's nothing that can really replace the FM200 thanks to the Naval Office focusing on pragmatic engineering, complete with modular parts straight from Falke-Tethys Fleet Yards. There's a good number of variants on the FM200 but most warships typically stick with the standard issue plant because it's just easier to repair.\n\nOverall, nice and clean, just how I like it.\n\n- I. Parker, CMC",
   "Category": "Propulsion",

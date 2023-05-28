@@ -1,5 +1,7 @@
 {
   "ComponentName": "Small Workshop",
+  "Faction": "",
+  "ShortDescription": "Damage Control",
   "LongDescription": "Provides a workspace for engineers to fabricate temporary parts and shoring to increase damage control team working speed.",
   "FlavorText": "Usually has some kind of rock music playing off of some crewman's wristcomp, who is then promptly chewed out by the DCA for annoying the entire deck. In combat, workshops become a nightmare pit of sweaty engineers and damage controlmen frantically trying to modify parts for on-the-fly repairs to be ran up to other decks.\n\nThese work hand-in-hand with the DCC and there's usually a direct line of communication between the two.\n\n- I. Parker, CMC",
   "Category": "Damage Control",
@@ -16,10 +18,10 @@
     "z": 3
   },
   "CanTile": false,
-  "MaxHealth": 75,
+  "MaxHealth": 150,
   "Reinforced": false,
   "FunctioningThreshold": 15,
-  "DamageResistance": 25,
+  "DamageResistance": 35,
   "DCPriority": "Low",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

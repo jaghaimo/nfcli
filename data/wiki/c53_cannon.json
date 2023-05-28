@@ -1,0 +1,181 @@
+{
+  "ComponentName": "C53 Cannon",
+  "Faction": "Stock/Protectorate",
+  "ShortDescription": "Class 1 Casemate Cannon",
+  "LongDescription": "The C53 is a fixed version of the Alliance's 250mm Mk64 cannon.  Despite its fixed mounting, its smaller caliber and light construction allows it to feature a generous range of motion to help catch fast-moving enemy ships.  This weapon occupies an ideal middle-ground, able to damage lighter enemy ships without punching straight through but also able to inflict damage on the Alliance's heavier warships without the need to soften them up first.",
+  "FlavorText": "TO: LOGICOM\nFROM: CKEYS\n\nAlright, here's the specs for the C53 rework. We managed to up the caliber without requiring a major overhaul of the breech and still keeping roughly the same cost in barrel materials, this should hit much harder. I'd like to meet whoever came up with the recoil compensation on this, by the way, because it's incredibly clever and really cuts down on the realignment time after running some shells through it. We didn't make any changes to the block breech either, so this should be clean and efficient, I know how Constantine likes it.\n\nBefore I forget, your delivery boys almost got snatched up by a patrolling Raines near the meet-up. I recommend telling your guys to stop running the radar so hot on your shuttles, they're being lit up brighter than Caligos on a rainy day. I only managed to distract the Alliance with a decommissioned beacon and that was me gambling on my luck, so please keep your guys running quiet. Last thing I want is Meadows prowling around my backyard and the Sevens rubbing their grubby little hands.",
+  "Category": "Weapons - Projectile",
+  "Type": "Surface",
+  "CompoundingCost": false,
+  "CompoundingMultiplier": 1,
+  "CompoundingCostClass": "C53 Cannon",
+  "FirstInstanceFree": false,
+  "PointCost": 15,
+  "Mass": 3,
+  "Size": {
+    "x": 2,
+    "y": 4,
+    "z": 2
+  },
+  "CanTile": false,
+  "MaxHealth": 350,
+  "Reinforced": false,
+  "FunctioningThreshold": 15,
+  "DamageResistance": 40,
+  "DCPriority": "Medium",
+  "RareDebuffSubtype": "",
+  "RareDebuffChance": 0.05,
+  "FormattedResources": "Power: <color=#FF2525>-100 kW</color>\n",
+  "ResourceDemandPriority": "High",
+  "FormattedBuffs": "",
+  "IWeaponData": {
+    "WepType": "Fixed",
+    "OptimalTargetWeight": "Heavy",
+    "PDTTargetMethod": "Direct",
+    "NeedsExternalAmmoFeed": true,
+    "SupportsAmmoSelection": true,
+    "SupportsPositionTargeting": true,
+    "PositionTargetingNoInput": false,
+    "SupportsTrackTargeting": true,
+    "SupportsVisualTargeting": true,
+    "SupportsWaypoints": false
+  },
+  "WeaponComponentData": {
+    "OptimalTargetWeight": "Heavy",
+    "AllowGrouping": true,
+    "GroupingName": "250mm Casemate",
+    "Role": "Offensive",
+    "EwType": "None",
+    "CheckFriendlyFire": true,
+    "CheckObstaclesInWay": true,
+    "RequireExternalAmmoFeed": true,
+    "AllowAmmoSelection": true,
+    "LeadTargets": true,
+    "OnTargetAngle": 2
+  },
+  "ContinuousWeaponComponentData": null,
+  "DiscreteWeaponComponentData": {
+    "TimeBetweenMuzzles": 2,
+    "MagazineSize": 15,
+    "ReloadTime": 70
+  },
+  "CellLauncherComponentData": null,
+  "TubeLauncherComponentData": null,
+  "FixedContinuousWeaponComponentData": null,
+  "MuzzleData": {
+    "MaxRange": null,
+    "SimMethod": "Spawned",
+    "IgnoreAccuracyModifiers": false,
+    "BaseAccuracy": 0.15,
+    "AccuracyData": [
+      {
+        "Range": 0,
+        "Spread": 0
+      },
+      {
+        "Range": 1000,
+        "Spread": 5.2360363
+      },
+      {
+        "Range": 2000,
+        "Spread": 10.4720726
+      },
+      {
+        "Range": 3000,
+        "Spread": 15.7081079
+      },
+      {
+        "Range": 4000,
+        "Spread": 20.9441452
+      },
+      {
+        "Range": 5000,
+        "Spread": 26.1801815
+      },
+      {
+        "Range": 6000,
+        "Spread": 31.4162159
+      },
+      {
+        "Range": 7000,
+        "Spread": 36.6522522
+      },
+      {
+        "Range": 8000,
+        "Spread": 41.88829
+      },
+      {
+        "Range": 9000,
+        "Spread": 47.1243248
+      },
+      {
+        "Range": 10000,
+        "Spread": 52.360363
+      },
+      {
+        "Range": 11000,
+        "Spread": 57.5963974
+      },
+      {
+        "Range": 12000,
+        "Spread": 62.83243
+      },
+      {
+        "Range": 13000,
+        "Spread": 68.0684738
+      },
+      {
+        "Range": 14000,
+        "Spread": 73.3045044
+      },
+      {
+        "Range": 15000,
+        "Spread": 78.54054
+      },
+      {
+        "Range": 16000,
+        "Spread": 83.77658
+      },
+      {
+        "Range": 17000,
+        "Spread": 89.01261
+      },
+      {
+        "Range": 18000,
+        "Spread": 94.24865
+      },
+      {
+        "Range": 19000,
+        "Spread": 99.48468
+      },
+      {
+        "Range": 20000,
+        "Spread": 104.720726
+      }
+    ]
+  },
+  "RaycastDamageCharacteristicData": null,
+  "RaycastDamageFalloffData": null,
+  "CommsAntennaComponentData": null,
+  "OmnidirectionalEWarComponentData": null,
+  "TurretedEWarComponentData": null,
+  "ISensorComponentData": null,
+  "PassiveSensorComponentData": null,
+  "SensorComponentData": null,
+  "FireControlData": null,
+  "IEWarTargetData": null,
+  "SensorTurretComponentData": null,
+  "TurretedContinuousWeaponComponentData": null,
+  "TurretedDiscreteWeaponComponentData": null,
+  "IIntelComponentData": null,
+  "CommandComponentData": null,
+  "IntelligenceComponentData": null,
+  "BerthingComponentData": null,
+  "CrewOperatedComponentData": {
+    "CrewRequired": 15,
+    "ReinforceCrewAt": -1
+  },
+  "DCLockerComponentData": null,
+  "IMagazineProviderData": null,
+  "BulkMagazineComponentData": null
+}

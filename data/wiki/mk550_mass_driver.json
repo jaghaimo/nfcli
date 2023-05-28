@@ -1,5 +1,7 @@
 {
   "ComponentName": "Mk550 Mass Driver",
+  "Faction": "Stock/Alliance",
+  "ShortDescription": "Spinal Mass Driver",
   "LongDescription": "The Mk550 is a bow-mounted mass driver specially designed for the Keystone-class, allowing the latter to provide long range precision fire in 3-round bursts, a feat typically found on railgun-equipped cruisers. Fires 300mm Magnetic rounds.",
   "FlavorText": "Back during the Guild Riots, a team of rioting rockwranglers shanghaied an entire station's worth of ore, melted them down into superalloy rods, and then had a hell of a time of firing them out of their mass drivers to turn Alliance hulls into molten slag. Naval Office was furious.\n\nCaptain Sam Keystone came up with the idea of turning this around on them and outfitted her own destroyer with a captured mass driver. Didn't take long until the AARs started to show more miner vessels lost compared to Alliance ships. The rest is history.\n\n- T. Meadows, LT",
   "Category": "Weapons - Spinal",
@@ -27,7 +29,7 @@
   "ResourceDemandPriority": "High",
   "FormattedBuffs": "",
   "IWeaponData": {
-    "WepType": "Turret",
+    "WepType": "Fixed",
     "OptimalTargetWeight": "Heavy",
     "PDTTargetMethod": "Direct",
     "NeedsExternalAmmoFeed": true,
@@ -42,8 +44,8 @@
     "OptimalTargetWeight": "Heavy",
     "AllowGrouping": false,
     "GroupingName": "",
-    "IsPointDefense": false,
-    "IsEW": false,
+    "Role": "Offensive",
+    "EwType": "None",
     "CheckFriendlyFire": true,
     "CheckObstaclesInWay": true,
     "RequireExternalAmmoFeed": true,
@@ -54,8 +56,8 @@
   "ContinuousWeaponComponentData": null,
   "DiscreteWeaponComponentData": {
     "TimeBetweenMuzzles": 5,
-    "MagazineSize": 3,
-    "ReloadTime": 35
+    "MagazineSize": 1,
+    "ReloadTime": 15
   },
   "CellLauncherComponentData": null,
   "TubeLauncherComponentData": null,

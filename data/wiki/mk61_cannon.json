@@ -1,5 +1,7 @@
 {
   "ComponentName": "Mk61 Cannon",
+  "Faction": "Stock/Alliance",
+  "ShortDescription": "Class 2 Cannon",
   "LongDescription": "The Mk.61 is a light cannon, offering great accuracy at medium range and can provide good, steady firepower against targets that fit its intended weight class, such as destroyers, frigates, and corvettes. \n\nAs expected, however, the performance of the Mk61 falls dramatically when tasked against heavier warships and massed guns are often required to remotely dent heavy hull armor. Fires 120mm chemical-ballistic shells.\n\nThe Mk61 and Mk62 also feature a specially designed dual-purpose control computer allowing them to be automatically assigned to incoming missile threats, provided the gun is not already assigned another target and the correct ammunition is available.",
   "FlavorText": "About as simple as you can get when it comes to Alliance naval ballistics. The Naval Office pulled the gun off the NAV-9 tank, threw on an autoloader, gave it some new housing, and called it a day. To would-be pirates, these things are a death sentence because they have just enough firepower to vaporize a bulkhead, and that's not counting the proximity fused shells.\n\nBut put this up against anything bigger than a destroyer and you'll quickly find out why the Alliance always prefer the big stuff.\n\n- T. Meadows, LT",
   "Category": "Weapons - Projectile",
@@ -42,8 +44,8 @@
     "OptimalTargetWeight": "Medium",
     "AllowGrouping": true,
     "GroupingName": "120mm Gun",
-    "IsPointDefense": false,
-    "IsEW": false,
+    "Role": "-1",
+    "EwType": "None",
     "CheckFriendlyFire": true,
     "CheckObstaclesInWay": true,
     "RequireExternalAmmoFeed": true,
@@ -64,7 +66,7 @@
     "MaxRange": null,
     "SimMethod": "Spawned",
     "IgnoreAccuracyModifiers": false,
-    "BaseAccuracy": 0.25,
+    "BaseAccuracy": 0.15,
     "AccuracyData": [
       {
         "Range": 0,
@@ -72,83 +74,83 @@
       },
       {
         "Range": 1000,
-        "Spread": 8.726868
+        "Spread": 5.2360363
       },
       {
         "Range": 2000,
-        "Spread": 17.4537354
+        "Spread": 10.4720726
       },
       {
         "Range": 3000,
-        "Spread": 26.180603
+        "Spread": 15.7081079
       },
       {
         "Range": 4000,
-        "Spread": 34.90747
+        "Spread": 20.9441452
       },
       {
         "Range": 5000,
-        "Spread": 43.63434
+        "Spread": 26.1801815
       },
       {
         "Range": 6000,
-        "Spread": 52.3612061
+        "Spread": 31.4162159
       },
       {
         "Range": 7000,
-        "Spread": 61.0880737
+        "Spread": 36.6522522
       },
       {
         "Range": 8000,
-        "Spread": 69.81494
+        "Spread": 41.88829
       },
       {
         "Range": 9000,
-        "Spread": 78.54181
+        "Spread": 47.1243248
       },
       {
         "Range": 10000,
-        "Spread": 87.26868
+        "Spread": 52.360363
       },
       {
         "Range": 11000,
-        "Spread": 95.99555
+        "Spread": 57.5963974
       },
       {
         "Range": 12000,
-        "Spread": 104.722412
+        "Spread": 62.83243
       },
       {
         "Range": 13000,
-        "Spread": 113.44928
+        "Spread": 68.0684738
       },
       {
         "Range": 14000,
-        "Spread": 122.176147
+        "Spread": 73.3045044
       },
       {
         "Range": 15000,
-        "Spread": 130.903015
+        "Spread": 78.54054
       },
       {
         "Range": 16000,
-        "Spread": 139.629883
+        "Spread": 83.77658
       },
       {
         "Range": 17000,
-        "Spread": 148.35675
+        "Spread": 89.01261
       },
       {
         "Range": 18000,
-        "Spread": 157.083618
+        "Spread": 94.24865
       },
       {
         "Range": 19000,
-        "Spread": 165.810486
+        "Spread": 99.48468
       },
       {
         "Range": 20000,
-        "Spread": 174.537354
+        "Spread": 104.720726
       }
     ]
   },

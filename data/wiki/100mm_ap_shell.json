@@ -1,0 +1,34 @@
+{
+  "MunitionName": "100mm AP Shell",
+  "Description": "Small armor-piercing rounds used on light cannon weapons.\n\nType: Ballistic/Chemical\nSize: 100mm\nRole: Offensive\nArmor Penetration: 45 cm\nComponent Damage: 25 hp\nMuzzle Velocity: 900 m/s\nRange: 7,200 m\nVolume: 0.05 m³",
+  "Type": "Ballistic",
+  "SimMethod": "Spawned",
+  "Role": "Offensive",
+  "PointCost": 1,
+  "PointDivision": 100,
+  "StorageVolume": 0.05,
+  "SupportsPositionTargeting": true,
+  "PositionTargetingNoInput": false,
+  "SupportsTrackTargeting": true,
+  "SupportsVisualTargeting": true,
+  "SupportsWaypoints": false,
+  "FlightSpeed": 900,
+  "Lifetime": 8,
+  "MaxRange": 7200,
+  "ShellMunitionData": {
+    "MaxPenetration": -10
+  },
+  "MissileData": null,
+  "DamageCharacteristics": {
+    "ArmorPenetration": 45,
+    "OverpenetrationDamageMultiplier": 0.1,
+    "MaxPenetrationDepth": null,
+    "HeatDamage": 0,
+    "DamageBrushSize": 0.4,
+    "ComponentDamage": 25,
+    "RandomEffectMultiplier": 0.05,
+    "CrewVulnerabilityMultiplier": 0.5,
+    "IgnoreEffectiveThickness": false,
+    "NeverRicochet": false
+  }
+}

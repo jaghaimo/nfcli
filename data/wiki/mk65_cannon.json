@@ -1,0 +1,186 @@
+{
+  "ComponentName": "Mk65 Cannon",
+  "Faction": "Stock/Alliance",
+  "ShortDescription": "Class 4 Cannon",
+  "LongDescription": "A medium-weight cannon, intended to operate as a middle-ground between the lighter and heavier Mk.6x series, offering excellent firepower to shred light warships while also providing a solid punch on targets above its weight class. \n\nWith a fairly quick acquisition time, the weapon can reliably train onto heavier targets, but will struggle against smaller, more evasive targets. As such, it is best used from medium-to-long range where its ample reload time and accuracy can best be used. Fires 250mm chemical-ballistic shells.",
+  "FlavorText": "You know, I don't give the Naval Office enough credit. Back during the Deshima Blitz, the Mk64 had a rough time. The Collective had a lot of shell traps and sloped armor on their warships and ground warfare wasn't any different, the atmospherics make it far more difficult since you had to account for ballistic drop, wind resistance, all that usual eye-watering tanker math.\n\nInstead of, I don't know, engineering some better ballistics for both space and atmo, the Naval Office did what any self-respecting artilleryman would do: add two more guns. The maintenance is just abysmal, clearly not designed for something like this, but nobody complains about the firepower. When it rolled out across Deshima, Collective armor didn't matter much when you had three 250mm shells screaming downrange at you. Turns out it was just as effective on warships too. Funny how that works.\n\n- T. Meadows, LT",
+  "Category": "Weapons - Projectile",
+  "Type": "Surface",
+  "CompoundingCost": false,
+  "CompoundingMultiplier": 1,
+  "CompoundingCostClass": "Mk65 Cannon",
+  "FirstInstanceFree": false,
+  "PointCost": 40,
+  "Mass": 12,
+  "Size": {
+    "x": 6,
+    "y": 3,
+    "z": 6
+  },
+  "CanTile": false,
+  "MaxHealth": 325,
+  "Reinforced": false,
+  "FunctioningThreshold": 30,
+  "DamageResistance": 30,
+  "DCPriority": "Medium",
+  "RareDebuffSubtype": "",
+  "RareDebuffChance": 0.05,
+  "FormattedResources": "Power: <color=#FF2525>-180 kW</color>\n",
+  "ResourceDemandPriority": "High",
+  "FormattedBuffs": "",
+  "IWeaponData": {
+    "WepType": "Turret",
+    "OptimalTargetWeight": "Medium",
+    "PDTTargetMethod": "Direct",
+    "NeedsExternalAmmoFeed": true,
+    "SupportsAmmoSelection": true,
+    "SupportsPositionTargeting": true,
+    "PositionTargetingNoInput": false,
+    "SupportsTrackTargeting": true,
+    "SupportsVisualTargeting": true,
+    "SupportsWaypoints": false
+  },
+  "WeaponComponentData": {
+    "OptimalTargetWeight": "Medium",
+    "AllowGrouping": true,
+    "GroupingName": "250mm Gun",
+    "Role": "Offensive",
+    "EwType": "None",
+    "CheckFriendlyFire": true,
+    "CheckObstaclesInWay": true,
+    "RequireExternalAmmoFeed": true,
+    "AllowAmmoSelection": true,
+    "LeadTargets": true,
+    "OnTargetAngle": 1
+  },
+  "ContinuousWeaponComponentData": null,
+  "DiscreteWeaponComponentData": {
+    "TimeBetweenMuzzles": 0.5,
+    "MagazineSize": 3,
+    "ReloadTime": 13
+  },
+  "CellLauncherComponentData": null,
+  "TubeLauncherComponentData": null,
+  "FixedContinuousWeaponComponentData": null,
+  "MuzzleData": {
+    "MaxRange": null,
+    "SimMethod": "Spawned",
+    "IgnoreAccuracyModifiers": false,
+    "BaseAccuracy": 0.2,
+    "AccuracyData": [
+      {
+        "Range": 0,
+        "Spread": 0
+      },
+      {
+        "Range": 1000,
+        "Spread": 6.98143053
+      },
+      {
+        "Range": 2000,
+        "Spread": 13.9628611
+      },
+      {
+        "Range": 3000,
+        "Spread": 20.9442921
+      },
+      {
+        "Range": 4000,
+        "Spread": 27.9257221
+      },
+      {
+        "Range": 5000,
+        "Spread": 34.9071541
+      },
+      {
+        "Range": 6000,
+        "Spread": 41.8885841
+      },
+      {
+        "Range": 7000,
+        "Spread": 48.8700142
+      },
+      {
+        "Range": 8000,
+        "Spread": 55.8514442
+      },
+      {
+        "Range": 9000,
+        "Spread": 62.8328743
+      },
+      {
+        "Range": 10000,
+        "Spread": 69.81431
+      },
+      {
+        "Range": 11000,
+        "Spread": 76.79574
+      },
+      {
+        "Range": 12000,
+        "Spread": 83.77717
+      },
+      {
+        "Range": 13000,
+        "Spread": 90.7586
+      },
+      {
+        "Range": 14000,
+        "Spread": 97.74003
+      },
+      {
+        "Range": 15000,
+        "Spread": 104.721458
+      },
+      {
+        "Range": 16000,
+        "Spread": 111.702888
+      },
+      {
+        "Range": 17000,
+        "Spread": 118.684319
+      },
+      {
+        "Range": 18000,
+        "Spread": 125.665749
+      },
+      {
+        "Range": 19000,
+        "Spread": 132.647186
+      },
+      {
+        "Range": 20000,
+        "Spread": 139.628616
+      }
+    ]
+  },
+  "RaycastDamageCharacteristicData": null,
+  "RaycastDamageFalloffData": null,
+  "CommsAntennaComponentData": null,
+  "OmnidirectionalEWarComponentData": null,
+  "TurretedEWarComponentData": null,
+  "ISensorComponentData": null,
+  "PassiveSensorComponentData": null,
+  "SensorComponentData": null,
+  "FireControlData": null,
+  "IEWarTargetData": null,
+  "SensorTurretComponentData": null,
+  "TurretedContinuousWeaponComponentData": null,
+  "TurretedDiscreteWeaponComponentData": {
+    "TraverseRate": 7.5,
+    "ElevationRate": 15,
+    "MaxElevation": 40,
+    "MinElevation": -5
+  },
+  "IIntelComponentData": null,
+  "CommandComponentData": null,
+  "IntelligenceComponentData": null,
+  "BerthingComponentData": null,
+  "CrewOperatedComponentData": {
+    "CrewRequired": 25,
+    "ReinforceCrewAt": -1
+  },
+  "DCLockerComponentData": null,
+  "IMagazineProviderData": null,
+  "BulkMagazineComponentData": null
+}

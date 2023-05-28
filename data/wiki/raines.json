@@ -1,5 +1,6 @@
 {
   "ClassName": "Raines",
+  "Faction": "Stock/Alliance",
   "HullClassification": "Frigate",
   "LongDescription": "The Alliance Raines-class is a solid all-around warship, boasting 4 mount points and a generous swath of internal modules and compartments. In terms of overall performance, the Raines has moderate armoring, speed, and agility, while being able to function as a jack-of-trades warship.",
   "FlavorText": "Been around since before I was even born, hell, probably before Constantine. The Raines has been around forever and you'd think that Winchester would look at this thing with contempt, but it should say something that even he respects the humble frigate.\n\nA nice trifecta of utility, speed, and armoring, but don't count on it doing any of the heavy lifting. The Naval Office likes its jack-of-trades but are smart enough to know that trying to make it do everything is going to make the Raines wind up like its predecessor, the Mason-class, sitting in bureaucratic hell before getting scrapped. The Raines doesn't have to do its job any better than it's already doing, it just has to look good in the AARs. Let the missiles do the hard work.\n\n- T. Meadows, LT",
@@ -9,7 +10,7 @@
   "MaxSpeed": 22,
   "LinearMotor": 6,
   "MaxTurnSpeed": 4.58366251,
-  "AngularMotor": 1,
+  "AngularMotor": 1.1,
   "BaseIntegrity": 3000,
   "ArmorThickness": 15,
   "InteriorDensityArmorEquivalent": 0.5,

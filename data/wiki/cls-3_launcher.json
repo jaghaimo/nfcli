@@ -1,5 +1,7 @@
 {
   "ComponentName": "CLS-3 Launcher",
+  "Faction": "Stock/Alliance",
+  "ShortDescription": "Size 3 Missile Launcher",
   "LongDescription": "The Canted Launcher System 3 is similar to its vertical cousin, but provides a forward direction of travel right out of the tube to help improve the lethality of the larger, slower, and less maneuverable hybrid and torpedo weapons in the Alliance's arsenal.  Like its vertical cousins, these launchers cannot be reloaded outside of a port.",
   "FlavorText": "With the MLS being a dime-a-dozen in the cluster nowadays, the Naval Office wanted a logical upgrade for a weapon that could hammer down any of the would-be gangs trying to overwhelm security flotillas. Winchester had some hangups about the idea of an angled VLS, he was stonewalling the development budget pretty hard but I think this is some pretty ingenious engineering here. Specialized locks are put in place to keep the missiles from sliding down and touching the launch doors, but that means the extra work makes it just a little more uncommon than your typical VLS.\n\n- T.Meadows, LT",
   "Category": "Weapons - Missile",
@@ -32,11 +34,11 @@
     "PDTTargetMethod": "Direct",
     "NeedsExternalAmmoFeed": false,
     "SupportsAmmoSelection": false,
-    "SupportsPositionTargeting": false,
-    "PositionTargetingNoInput": true,
-    "SupportsTrackTargeting": false,
-    "SupportsVisualTargeting": false,
-    "SupportsWaypoints": false
+    "SupportsPositionTargeting": null,
+    "PositionTargetingNoInput": null,
+    "SupportsTrackTargeting": null,
+    "SupportsVisualTargeting": null,
+    "SupportsWaypoints": null
   },
   "WeaponComponentData": null,
   "ContinuousWeaponComponentData": null,

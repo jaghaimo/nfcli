@@ -1,5 +1,7 @@
 {
   "ComponentName": "Gun Plotting Center",
+  "Faction": "",
+  "ShortDescription": "Gunnery",
   "LongDescription": "A workspace with an extensive suite of targeting arrays, computing systems, and calculators. Provides gunnery teams the means to lay in much more accurate firing solutions, increasing overall ballistic weapon accuracy.",
   "FlavorText": "Most of these systems are automated, but it still requires a hefty number of crewmen to interpret the data. Not an easy job, I assure you, especially considering when analysts have to perform ballistic calculations while under fire and alarms are sounding.\n\n- S. Ace, CWO",
   "Category": "Weapon Support",

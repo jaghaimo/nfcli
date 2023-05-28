@@ -1,5 +1,7 @@
 {
   "ComponentName": "FM580 'Raider' Drive",
+  "Faction": "Stock/Alliance",
+  "ShortDescription": "Fusion Drive",
   "LongDescription": "A highly modified drive commonly found on scouting or quick response warships. This drive is equipped with automated safeties and reinforced housing, allowing a warship to stay in flank speed with a reduced chance for damage while also increasing overall linear speed.  Due to the increased thrust output demand, this drive generates less power than similar models.",
   "FlavorText": "Engineers nicknamed these 'Raider' drives since you'd usually find these on pirate corvettes with a worrying number of questionable modifications by the crew. I've only worked on a few of these in my career, but it's not uncommon to find even the military variants lined with jury-rigged repairs, something the Brass warns (but is powerless to stop) as a 'very dangerous practice'.\n\nDoesn't stop the maintenance crews, though. Hell, it didn't stop me either. When you start running out of parts, the idea of a little DIY repair becomes pretty tempting.\n\n- I. Parker, CMC",
   "Category": "Propulsion",

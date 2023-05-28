@@ -1,5 +1,7 @@
 {
   "ComponentName": "Mk610 Beam Turret",
+  "Faction": "Stock/Alliance",
+  "ShortDescription": "Class 5 Particle Beam",
   "LongDescription": "The Mk610 Particle Beam functions as a close-range 'knife fighting' weapon for heavy warships, capable of stripping away armor and incinerating the delicate insides of warships, but its short-range and damage falloff means the weapon is best used when the host warship is closing on a target. A mild recharge time and immense requirement for power also means this weapon needs judicious use to be effective.",
   "FlavorText": "The 610, also known as the 'Zero Point'. To be honest, I still find it hard to explain after the time I spent talking to one of the engineers that worked on these. Crewmen absolutely hate the thing but the Naval Office loves it, so that should give you an idea of what it's like. If you can't guess, this is one hell of an effective weapon system.\n\nAt a glance, it might look like a laser weapon but it fires a directed beam of super-accelerated ionized particles from the reactor's \"exhaust\", which get superheated to that green glow we've all come to love. There's a lot of raw power in this, so much that there's entire evacuation protocols if the emission chamber overloads and starts ionizing the ship. Get one of these in line with a target, though, and you'll forget about the dangers pretty quick.\n\n- T. Meadows, LT",
   "Category": "Weapons - Energy",
@@ -42,8 +44,8 @@
     "OptimalTargetWeight": "Superheavy",
     "AllowGrouping": true,
     "GroupingName": "Beam Turret",
-    "IsPointDefense": false,
-    "IsEW": false,
+    "Role": "Offensive",
+    "EwType": "None",
     "CheckFriendlyFire": true,
     "CheckObstaclesInWay": true,
     "RequireExternalAmmoFeed": false,

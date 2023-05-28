@@ -1,6 +1,6 @@
 {
   "MunitionName": "120mm HE Shell",
-  "Description": "High-explosive rounds utilized by light cannon weapons, such as the Mk6X series. Effective on light or medium-type warships.\n\nEffective at disabling components within ships, at a reduced effectiveness on armor penetration. Works best after a salvo of AP rounds.\n\nType: Ballistic/Chemical\nSize: 120mm\nRole: Offensive\nArmor Penetration: 30 cm\nComponent Damage: 45 hp\nPenetration Depth: 15 m\nMuzzle Velocity: 800 m/s\nRange: 7,200 m\nVolume: 0.05 m³\nExplosion Radius: 5",
+  "Description": "High-explosive rounds utilized by light cannon weapons, such as the Mk6X series. Effective on light or medium-type warships. Effective at disabling components within ships, at a reduced effectiveness on armor penetration.\n\nType: Ballistic/Chemical\nSize: 120mm\nRole: Offensive\nArmor Penetration: 30 cm\nComponent Damage: 50 hp\nPenetration Depth: 15 m\nExplosion Radius: 5\nMuzzle Velocity: 800 m/s\nRange: 7,200 m\nVolume: 0.05 m³",
   "Type": "Ballistic",
   "SimMethod": "Spawned",
   "Role": "Offensive",
@@ -25,8 +25,8 @@
     "MaxPenetrationDepth": 1.5,
     "HeatDamage": 200,
     "DamageBrushSize": 0.4,
-    "ComponentDamage": 45,
-    "RandomEffectMultiplier": 1,
+    "ComponentDamage": 50,
+    "RandomEffectMultiplier": 0.25,
     "CrewVulnerabilityMultiplier": 1,
     "IgnoreEffectiveThickness": false,
     "NeverRicochet": false

@@ -1,5 +1,7 @@
 {
   "ComponentName": "Citadel CIC",
+  "Faction": "",
+  "ShortDescription": "Command Center",
   "LongDescription": "The Combat Information Center (CIC) is the central command hub that provides command and control for the warship, and is critical in the operation of the vessel during an engagement.  This compartment is heavily reinforced and resistant to damage.\n\nThis CIC also features a workspace for a small team of intelligence analysts to speed up target identification and do basic battle damage assessment, though they lack the ability to process tracks from the rest of the fleet.\n\nDestruction of the CIC results in a loss of command and the affected warship cannot receive commands until the CIC is repaired.",
   "FlavorText": "When the Solomon-class rolled out of Falke-Tethys, the first thing Vice Admiral Sullivan Hauer set out to do was to strongarm the Naval Office into spending a little more of the budget in supplying warship armor. By this point, there had been a, frankly, worrying number of accidents involving errant asteroids and fightercraft strafing the CIC.\n\nPretty soon, capital ships started to be armored up in what we called \"citadels\", reinforced and given extra room for some intel teams to quickly give reports to Command.\n\nNever improved on the lighting situation, though.\n\n- T. Meadows, LT",
   "Category": "Command",

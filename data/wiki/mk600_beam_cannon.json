@@ -1,5 +1,7 @@
 {
   "ComponentName": "Mk600 Beam Cannon",
+  "Faction": "Stock/Alliance",
+  "ShortDescription": "Spinal Particle Beam",
   "LongDescription": "The Mk600 is a bow-mounted particle beam, specially designed for the Keystone-class. Capable of gutting the insides of targets, the Mk600 is an excellent tool for knife-fighting, but suffers from a very short range and damage falloff. The weapon can be battleshorted to fire longer at the risk of damage to the weapon.",
   "FlavorText": "Didn't take long before the Naval Office thought about giving the Keystone-class the Mk610. Who can blame them? A good beam to the aft of a ship and you'll fry the entire drive bay, hell, maybe you'll set off the magazines if they have any back there.\n\nBut since the Keystone can actually hook up a dedicated power line to the reactor, the Mk600 can fire a jet of superaccelerated particles before superheating them into the trademark bright green \"beam\" that can punch straight through warship armor when kept on target, even better if you have the courage to trigger a battleshort on it.\n\nJust watch the heat because once the chamber melts from the overheating energy, the CSO is going to make your day a living hell, trust me on that.\n\n- T. Meadows, LT",
   "Category": "Weapons - Spinal",
@@ -27,7 +29,7 @@
   "ResourceDemandPriority": "High",
   "FormattedBuffs": "",
   "IWeaponData": {
-    "WepType": "Turret",
+    "WepType": "Fixed",
     "OptimalTargetWeight": "Heavy",
     "PDTTargetMethod": "Direct",
     "NeedsExternalAmmoFeed": false,
@@ -42,8 +44,8 @@
     "OptimalTargetWeight": "Heavy",
     "AllowGrouping": false,
     "GroupingName": "",
-    "IsPointDefense": false,
-    "IsEW": false,
+    "Role": "Offensive",
+    "EwType": "None",
     "CheckFriendlyFire": true,
     "CheckObstaclesInWay": true,
     "RequireExternalAmmoFeed": false,

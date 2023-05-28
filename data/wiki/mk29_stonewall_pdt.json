@@ -1,5 +1,7 @@
 {
   "ComponentName": "Mk29 'Stonewall' PDT",
+  "Faction": "Stock/Alliance",
+  "ShortDescription": "Class 2 Kinetic",
   "LongDescription": "The Mk29 'Stonewall' is an upsized version of its cousin the Rebound.  With its four barrels firing time-fuzed 50mm explosive rounds it can be used to establish defensive perimeters around formations of warships.  As a perimeter weapon, the Stonewall targets entire missile raids at once, seeking to put a wall of explosives between the threat and the defended ship, rather than trying to hit an individual missile.",
   "FlavorText": "Sort of a generalized term for a box loaded with flak guns, but that's because 'wall' and 'clouds of hot metal' tend to go hand-in-hand with the Naval Office's naming schema. The usual Alliance doctrine for point-defense is two-step: Either kill it from range or, if that fails, kill it with a big wall, hence the 'Stonewall'. A very simple idea, just fill the Battlespace with an impenetrable cloud of fragments.\n\nProbably not the most expensive thing in the Alliance PD roster, but that doesn't mean it's not effective. Adding three cannons to the Rebound means you get flak firepower that would make a Graznovian sweat but the Naval Office decided to skip the chassis upgrade, I mean there's just enough structural support here to barely keep it from shaking itself apart when all four of those guns are firing at high rates. A messy weapon, but one that really gets the morale soaring when they let loose.\n\n- T. Meadows, LT",
   "Category": "Weapons - Point Defense",
@@ -29,7 +31,7 @@
   "IWeaponData": {
     "WepType": "Turret",
     "OptimalTargetWeight": "Light",
-    "PDTTargetMethod": "Direct",
+    "PDTTargetMethod": "DirectBurst",
     "NeedsExternalAmmoFeed": true,
     "SupportsAmmoSelection": false,
     "SupportsPositionTargeting": true,
@@ -42,8 +44,8 @@
     "OptimalTargetWeight": "Light",
     "AllowGrouping": false,
     "GroupingName": "",
-    "IsPointDefense": true,
-    "IsEW": false,
+    "Role": "Defensive",
+    "EwType": "None",
     "CheckFriendlyFire": true,
     "CheckObstaclesInWay": false,
     "RequireExternalAmmoFeed": true,
@@ -53,9 +55,9 @@
   },
   "ContinuousWeaponComponentData": null,
   "DiscreteWeaponComponentData": {
-    "TimeBetweenMuzzles": 0.25,
-    "MagazineSize": 100,
-    "ReloadTime": 0.25
+    "TimeBetweenMuzzles": 0.15,
+    "MagazineSize": 16,
+    "ReloadTime": 1.5
   },
   "CellLauncherComponentData": null,
   "TubeLauncherComponentData": null,
@@ -64,7 +66,7 @@
     "MaxRange": null,
     "SimMethod": "Spawned",
     "IgnoreAccuracyModifiers": true,
-    "BaseAccuracy": 1.5,
+    "BaseAccuracy": 1,
     "AccuracyData": [
       {
         "Range": 0,
@@ -72,83 +74,83 @@
       },
       {
         "Range": 1000,
-        "Spread": 52.4077835
+        "Spread": 34.9207726
       },
       {
         "Range": 2000,
-        "Spread": 104.815567
+        "Spread": 69.8415451
       },
       {
         "Range": 3000,
-        "Spread": 157.223343
+        "Spread": 104.762314
       },
       {
         "Range": 4000,
-        "Spread": 209.631134
+        "Spread": 139.68309
       },
       {
         "Range": 5000,
-        "Spread": 262.0389
+        "Spread": 174.603867
       },
       {
         "Range": 6000,
-        "Spread": 314.4467
+        "Spread": 209.524628
       },
       {
         "Range": 7000,
-        "Spread": 366.8545
+        "Spread": 244.4454
       },
       {
         "Range": 8000,
-        "Spread": 419.262268
+        "Spread": 279.36618
       },
       {
         "Range": 9000,
-        "Spread": 471.670044
+        "Spread": 314.286926
       },
       {
         "Range": 10000,
-        "Spread": 524.0778
+        "Spread": 349.207733
       },
       {
         "Range": 11000,
-        "Spread": 576.4856
+        "Spread": 384.128479
       },
       {
         "Range": 12000,
-        "Spread": 628.8934
+        "Spread": 419.049255
       },
       {
         "Range": 13000,
-        "Spread": 681.3012
+        "Spread": 453.970032
       },
       {
         "Range": 14000,
-        "Spread": 733.709
+        "Spread": 488.8908
       },
       {
         "Range": 15000,
-        "Spread": 786.1167
+        "Spread": 523.8116
       },
       {
         "Range": 16000,
-        "Spread": 838.524536
+        "Spread": 558.732361
       },
       {
         "Range": 17000,
-        "Spread": 890.9323
+        "Spread": 593.6531
       },
       {
         "Range": 18000,
-        "Spread": 943.3401
+        "Spread": 628.573853
       },
       {
         "Range": 19000,
-        "Spread": 995.7478
+        "Spread": 663.4946
       },
       {
         "Range": 20000,
-        "Spread": 1048.15564
+        "Spread": 698.415466
       }
     ]
   },

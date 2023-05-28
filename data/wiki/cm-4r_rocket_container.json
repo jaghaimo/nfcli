@@ -1,0 +1,24 @@
+{
+  "MunitionName": "CM-4R Rocket Container",
+  "Description": "A special submunition container which carries four R-2 Piranha rockets over long distances.  The missile has an active radar seeker to steer it into line with the target before deploying its rockets.\n\nSize: 3\nCruise Speed: 175 m/s\nRange: 17,500 m\n\n<b>Warhead:</b>\nType: Submunition Delivery\nCount: 4\n\nSubmunition Information: R-2 'Piranha' Rocket\nA simple, unguided rocket meant to be fired from turreted rocket launchers.  Devastatingly effective at close range, but their accuracy falls off dramatically towards the end of their fuel limits.\n\nSize: 1\nCruise Speed: 350 m/s\nRange: 7,000 m\n\n<b>Warhead:</b>\nType: Explosive Impact\nArmor Penetration: 70 cm\nComponent Damage: 850 hp\nBlast Angle: 90\n\n<i><color=#FFEF9E>SHIBUYA LINK\nOA/OBSCURE-602\nRECIP: CKEYS\n////\n\nCass, Levett. I've got the schematics for the rockets, thanks for the data. I've already looked them over and it seems that Bethel has modified these to hit far harder than normal, they've replaced the motor with a high-thrust variant that I think is pulled from a Blackrock Walleye. The warhead's now a penetrator-type and it looks like the rocket attempts to puncture hulls before detonating, probably makes a hell of a mess if it gets a flat shot on armor. Honestly, I think it's trying go more for the shock factor instead of sheer destruction but I can't be sure, Bethel engineers are on a whole different level of engineering philosophy.\n\nI modified the general fuselage and had Anna come up with a different propellant mixture, as well as upping the overall weight of the payload. It'll fit the Protectorate's RL-series and I think Constantine will be pretty happy about it. Cost in Silver is minimal and, to tell you the truth, this was just a quick-n-simple job, Bethel did the work for us already. I'm sending Amelie the schematics and slamming back a Reserve, so catch me later at the Breach, we'll go over the rest of the projects.\n\nCiao</color></i>\n\n<b>Seeker:</b>\nType: Active - <color=#4CFF72>RADAR</color>\nRange: 2,000 m\nFOV: 50 deg\nGain: 25 dB\nPower: 150 kW\nSupports TRPs: Yes",
+  "Type": "Missile",
+  "SimMethod": "Spawned",
+  "Role": "Offensive",
+  "PointCost": 10,
+  "PointDivision": 1,
+  "StorageVolume": 30,
+  "SupportsPositionTargeting": true,
+  "PositionTargetingNoInput": false,
+  "SupportsTrackTargeting": true,
+  "SupportsVisualTargeting": false,
+  "SupportsWaypoints": true,
+  "FlightSpeed": 175,
+  "Lifetime": 100,
+  "MaxRange": 17500,
+  "ShellMunitionData": null,
+  "MissileData": {
+    "Size": 3,
+    "SignatureData": null
+  },
+  "DamageCharacteristics": null
+}

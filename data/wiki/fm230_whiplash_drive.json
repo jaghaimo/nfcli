@@ -1,5 +1,7 @@
 {
   "ComponentName": "FM230 'Whiplash' Drive",
+  "Faction": "Stock/Alliance",
+  "ShortDescription": "Fusion Drive",
   "LongDescription": "A high-power drive equipped with additional bunkerage support for supplying the engines with more raw power from the reactor. Significantly increases top speed, but the extra power increases the chance for damage from flank speed and reduces overall agility.",
   "FlavorText": "Codenamed 'Whiplash', probably because the engines will make the entire ship jolt and send crewmen all over the deck when Helm sets it to full burn. The Naval Office liked the idea of applying some of the Sprinter's speed to the larger warships, and so does the Lee Helm when they hit a full ahead bell.\n\nOverall, Whiplash drives are an Alliance favorite, until the engine room is filled with the drive grinding and the Chief Engineer is going off on one of their legendary litanies of swearing. It's a real treat.\n\n- I. Parker, CMC",
   "Category": "Propulsion",

@@ -1,6 +1,6 @@
 {
   "MunitionName": "450mm HE Shell",
-  "Description": "High-Explosive shells for use in heavy ballistic weapons, effective against medium and heavy warships.\n\nLow-velocity shells with a large explosive payload for destroying the interiors of warships, but lacks the armor penetration of AP shells. Best used against slow, heavy targets in broadside volleys, following a salvo of AP shells.\n\nType: Ballistic/Chemical\nSize: 450mm\nRole: Offensive\nArmor Penetration: 65 cm\nComponent Damage: 150 hp\nPenetration Depth: 30 m\nMuzzle Velocity: 750 m/s\nRange: 11,250 m\nVolume: 0.8 m³\nExplosion Radius: 15",
+  "Description": "High-Explosive shells for use in heavy ballistic weapons, effective against medium and heavy warships.\n\nLow-velocity shells with a large explosive payload for destroying the interiors of warships, but lacks the armor penetration of AP shells. Best used against slow, heavy targets in broadside volleys, following a salvo of AP shells.\n\nType: Ballistic/Chemical\nSize: 450mm\nRole: Offensive\nArmor Penetration: 65 cm\nComponent Damage: 150 hp\nPenetration Depth: 30 m\nExplosion Radius: 15\nMuzzle Velocity: 750 m/s\nRange: 11,250 m\nVolume: 0.8 m³",
   "Type": "Ballistic",
   "SimMethod": "Spawned",
   "Role": "Offensive",
@@ -26,7 +26,7 @@
     "HeatDamage": 500,
     "DamageBrushSize": 1.25,
     "ComponentDamage": 150,
-    "RandomEffectMultiplier": 1,
+    "RandomEffectMultiplier": 0.4,
     "CrewVulnerabilityMultiplier": 1,
     "IgnoreEffectiveThickness": false,
     "NeverRicochet": false

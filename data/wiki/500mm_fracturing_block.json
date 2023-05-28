@@ -1,0 +1,34 @@
+{
+  "MunitionName": "500mm Fracturing Block",
+  "Description": "Fracturing blocks are commonly used in asteroid mining to burrow into large rocks or to shatter smaller ones contained in a net.  They are accelerated to high velocity by mass drivers and produce tremendous force on impact.\n\nUnlike the Alliance's weaponized mass drivers, these variants are blunt rectangles of tungsten and are not designed to punch clean through heavy armor.  Instead, they fragment on impact and produce a large explosion akin to a missile warhead.\n\nType: Ballistic/Magnetic\nSize: 500mm\nRole: Offensive\nArmor Penetration: 120 cm\nComponent Damage: 400 hp\nPenetration Depth: 30 m\nStructural Damage: 0\nMuzzle Velocity: 2000 m/s\nRange: 21,000 m\nVolume: 0.75 m³",
+  "Type": "Ballistic",
+  "SimMethod": "Spawned",
+  "Role": "Offensive",
+  "PointCost": 1,
+  "PointDivision": 25,
+  "StorageVolume": 0.75,
+  "SupportsPositionTargeting": true,
+  "PositionTargetingNoInput": false,
+  "SupportsTrackTargeting": true,
+  "SupportsVisualTargeting": true,
+  "SupportsWaypoints": false,
+  "FlightSpeed": 2000,
+  "Lifetime": 10.5,
+  "MaxRange": 21000,
+  "ShellMunitionData": {
+    "MaxPenetration": 30
+  },
+  "MissileData": null,
+  "DamageCharacteristics": {
+    "ArmorPenetration": 120,
+    "OverpenetrationDamageMultiplier": 0.2,
+    "MaxPenetrationDepth": 3,
+    "HeatDamage": 1500,
+    "DamageBrushSize": 1.5,
+    "ComponentDamage": 400,
+    "RandomEffectMultiplier": 0.1,
+    "CrewVulnerabilityMultiplier": 1,
+    "IgnoreEffectiveThickness": false,
+    "NeverRicochet": false
+  }
+}

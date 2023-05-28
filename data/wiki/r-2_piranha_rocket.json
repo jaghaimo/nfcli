@@ -1,0 +1,35 @@
+{
+  "MunitionName": "R-2 'Piranha' Rocket",
+  "Description": "A simple, unguided rocket meant to be fired from turreted rocket launchers.  Devastatingly effective at close range, but their accuracy falls off dramatically towards the end of their fuel limits.\n\nSize: 1\nCruise Speed: 350 m/s\nRange: 7,000 m\n\n<b>Warhead:</b>\nType: Explosive Impact\nArmor Penetration: 70 cm\nComponent Damage: 850 hp\nBlast Angle: 90\n\n<i><color=#FFEF9E>SHIBUYA LINK\nOA/OBSCURE-602\nRECIP: CKEYS\n////\n\nCass, Levett. I've got the schematics for the rockets, thanks for the data. I've already looked them over and it seems that Bethel has modified these to hit far harder than normal, they've replaced the motor with a high-thrust variant that I think is pulled from a Blackrock Walleye. The warhead's now a penetrator-type and it looks like the rocket attempts to puncture hulls before detonating, probably makes a hell of a mess if it gets a flat shot on armor. Honestly, I think it's trying go more for the shock factor instead of sheer destruction but I can't be sure, Bethel engineers are on a whole different level of engineering philosophy.\n\nI modified the general fuselage and had Anna come up with a different propellant mixture, as well as upping the overall weight of the payload. It'll fit the Protectorate's RL-series and I think Constantine will be pretty happy about it. Cost in Silver is minimal and, to tell you the truth, this was just a quick-n-simple job, Bethel did the work for us already. I'm sending Amelie the schematics and slamming back a Reserve, so catch me later at the Breach, we'll go over the rest of the projects.\n\nCiao</color></i>",
+  "Type": "Missile",
+  "SimMethod": "Spawned",
+  "Role": "Offensive",
+  "PointCost": 3,
+  "PointDivision": 1,
+  "StorageVolume": 6,
+  "SupportsPositionTargeting": true,
+  "PositionTargetingNoInput": false,
+  "SupportsTrackTargeting": true,
+  "SupportsVisualTargeting": true,
+  "SupportsWaypoints": false,
+  "FlightSpeed": 350,
+  "Lifetime": 20,
+  "MaxRange": 7000,
+  "ShellMunitionData": null,
+  "MissileData": {
+    "Size": 1,
+    "SignatureData": null
+  },
+  "DamageCharacteristics": {
+    "ArmorPenetration": 70,
+    "OverpenetrationDamageMultiplier": 1,
+    "MaxPenetrationDepth": null,
+    "HeatDamage": 1500,
+    "DamageBrushSize": 3,
+    "ComponentDamage": 850,
+    "RandomEffectMultiplier": 0.25,
+    "CrewVulnerabilityMultiplier": 1,
+    "IgnoreEffectiveThickness": true,
+    "NeverRicochet": true
+  }
+}

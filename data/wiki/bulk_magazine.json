@@ -1,5 +1,7 @@
 {
   "ComponentName": "Bulk Magazine",
+  "Faction": "",
+  "ShortDescription": "Ammunition Storage",
   "LongDescription": "Magazines hold the ammunition for the warship and can carry multiple types of ammunition all at once. Destruction of the magazine will result in all stored ammunition rendered unusable until repaired.\n\nMagazines are especially vulnerable to fires and have a chance to catastrophically explode, dealing extreme damage to a ship's internals.",
   "FlavorText": "Absolutely the most dangerous part of the ship in combat, hands down. You're in a room lined with high-grade explosives and ammunition while the enemy is using their own high-grade explosives against you.\n\nBecause of this, crewmen relegated to magazine duty often develop a unique form of gallows humor, always talking about how easy it is for the ship to go up in flames and often hiding the FPE from their fellow ordinance specialists as a \"prank\".\n\n- T. Meadows, LT",
   "Category": "Storage",

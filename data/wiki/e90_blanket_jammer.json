@@ -1,5 +1,7 @@
 {
   "ComponentName": "E90 'Blanket' Jammer",
+  "Faction": "Stock/Alliance",
+  "ShortDescription": "Jammer (Radar)",
   "LongDescription": "The E90 'Blanket' overwhelms its target by sweep jamming, primarily targeting radar frequencies typically used by most military radar suites. The result makes the victim warship unable to detect its own radar returns. Also effective on missiles and point-defense, but vulnerable to home-on-jam missiles.",
   "FlavorText": "One of the few to break out of bureaucratic development hell is the Blanket jammer and wow, it's a real piece of work. Ithaca Dynamics managed to snag the contract (blowing Schtiel Co. out of the water) and put some of their own expertise into the original design, giving us the E90 around 445 IY. The date's argued but official tech-docs were written up at that time.\n\nSweep jamming has become the standard function, manages to dig into standard search and fire control radar, you know how the Naval Office loves it general purpose stuff. Downside with Ithaca's engineering, though, is that the sweeps will start to affect one another and you'll lose effectiveness very quickly.\n\n- I. Parker, CMC",
   "Category": "EWar",
@@ -42,8 +44,8 @@
     "OptimalTargetWeight": "Light",
     "AllowGrouping": true,
     "GroupingName": "Jammers",
-    "IsPointDefense": false,
-    "IsEW": true,
+    "Role": "Offensive",
+    "EwType": "Jammer",
     "CheckFriendlyFire": false,
     "CheckObstaclesInWay": false,
     "RequireExternalAmmoFeed": false,

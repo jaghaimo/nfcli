@@ -1,5 +1,7 @@
 {
   "ComponentName": "Strike Planning Center",
+  "Faction": "",
+  "ShortDescription": "Missile Support Compartment",
   "LongDescription": "A compartment dedicated to the planning and execution of rapid missile strikes.  Highly trained missile fire control specialists can quickly coordinate fire missions using a combination of their experience and the databases of pre-planned missions contained within.",
   "FlavorText": "Lots of arguments like to break out over the proper name for these compartments but the Naval Office insists on its current name for schematic reasons. A while back, these also covered the same purpose as the Gun Plotting Center but it turned out that the Superbrains attached to the ballistic calculators were feeding projectile data to the missile fire mission servers. Long story short, a lot of technicians got their asses handed to them by Constantine when he watched a Tempest perform an acrobatic pirouette straight into the launching Solomon's bow and docked it in port for a good five months needing repairs.\n\nSPCs combine the hard logic of programming arrays with the creativity of math nerds fresh out of Bradford, a real think-tank in there. A lot of funds are poured into the equipment and training of these compartments which is something the Naval Office eagerly reminds missile-based warships when complaints come up about the delicate equipment on-board.\n\n- I. Parker, CMC",
   "Category": "Weapon Support",

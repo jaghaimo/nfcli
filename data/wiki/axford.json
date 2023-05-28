@@ -1,5 +1,6 @@
 {
   "ClassName": "Axford",
+  "Faction": "Stock/Alliance",
   "HullClassification": "Heavy Cruiser",
   "LongDescription": "Heavy cruisers are slow, heavily armored, and armed to take on multiple targets as the situation dictates. The Axford-class is no different, with heavy sloped armor and dual Class 4 weapon mounts, with a single Class 5 mount for heavy fire support.",
   "FlavorText": "A modern force of nature, as one should expect from the Alliance Naval Office. While certainly not as old as the Raines, the Axford has become a posterchild of the Shelter Alliance, meaning its predecessor the Ocello-class is treated by the ANO as something considered a humiliating design, which is a ridiculous stance to have. The Ocello was a blight upon the the enemy during the Deshima Blitz and it served with distinction.\n\nNow it's being commandeered by the OSP after defectors ran off with archived schematics and access keys to the mothballed fleets. Whatever the enemy, however, the Axford will be there to meet them with its heavyweight punch and the engineering of my shipyards.\n\n- F. Autumns, CEO, Falke-Tethys Drive Yards",
@@ -9,7 +10,7 @@
   "MaxSpeed": 18,
   "LinearMotor": 14,
   "MaxTurnSpeed": 4.58366251,
-  "AngularMotor": 1.9,
+  "AngularMotor": 2.55,
   "BaseIntegrity": 6500,
   "ArmorThickness": 40,
   "InteriorDensityArmorEquivalent": 1.2,

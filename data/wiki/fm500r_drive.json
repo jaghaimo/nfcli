@@ -1,5 +1,7 @@
 {
   "ComponentName": "FM500R Drive",
+  "Faction": "Stock/Alliance",
+  "ShortDescription": "Fusion Drive",
   "LongDescription": "This medium sized fusion drive is commonly found on cruisers and other large warships.  They have a focus on durability over power.  This drive provides both thrust for main engines and a small amount of power.\n\nThe FM500R is a specially designed reinforced version of the standard version.",
   "FlavorText": "Like the FM500, just now sporting some heavier housing. Not much to say here. Still a nightmare to service, though.\n\n- I. Parker, CMC",
   "Category": "Propulsion",

@@ -1,0 +1,35 @@
+{
+  "MunitionName": "M-30 'Mattock' Mine",
+  "Description": "A loitering missile which will float nearby its launch point until a ship enters its activation zone.  When a ship's magnetic signature is detected, the mine will orient towards the direction and activate a radar seeker.\n\nSize: 3\nCruise Speed: 250 m/s\nRange: 3,750 m\n\n<b>Warhead:</b>\nType: Explosive Impact\nArmor Penetration: 200 cm\nComponent Damage: 5000 hp\nBlast Angle: 100\n\n<b>Seeker:</b>\nType: Active - <color=#4CFF72>RADAR</color>\nRange: 1,750 m\nFOV: 30 deg\nGain: 25 dB\nPower: 150 kW\nSupports TRPs: Yes\nPushoff Distance: 200m\nArming Time: 90s\nBattery Life: Unlimited\nActivation Range: 2,000m\nNetworked: <color=#FF2525>No</color>\n\n<i><color=#FFEF9E>ANS ETERNAL CHAPTER\r\n--CIC TRANSCRIPTION--\r\nOrganized - WO. Evans\r\n\n07:43 - Impact\r\n07:44 - 2MC: DCA Lt. Kellogg reports propulsion engineering casualty\r\n- CAPT June: What the [expletive removed] was that?\r\n- LT Lambert: I have no idea. We entered the sector and suddenly the scope lit up with spikers, no database entry or anything, just a radar lock. CIWS barely had time to react.\r\n- CAPT June: There are no other vessels in the battlespace?\r\n- OS-PO2 Rowell: Battlespace is empty, Captain. \r\n- LT Kellogg: Propulsion is disabled but not destroyed, Captain. We're already working on restoring mobility.\r\n07:45 - Radar, positive contact alarm\r\n- OS2 Rowell: Spiker, spiker! 45 degrees down, starboard!\r\n- OS3 Withrow: Spiker contact, 86 degrees positive, incoming from port! Starboard! All directions!\r\n- LT Lambert: Mines! Defenders to full scan, away countermeasures.\r\n- OS3 Withrow: Closing fast!\r\n- CAPT June: All hands, brace for impact.\r\n[Data ends]</color></i>",
+  "Type": "Missile",
+  "SimMethod": "Spawned",
+  "Role": "Utility",
+  "PointCost": 6,
+  "PointDivision": 1,
+  "StorageVolume": 30,
+  "SupportsPositionTargeting": true,
+  "PositionTargetingNoInput": true,
+  "SupportsTrackTargeting": false,
+  "SupportsVisualTargeting": false,
+  "SupportsWaypoints": false,
+  "FlightSpeed": 250,
+  "Lifetime": 15,
+  "MaxRange": 3750,
+  "ShellMunitionData": null,
+  "MissileData": {
+    "Size": 3,
+    "SignatureData": null
+  },
+  "DamageCharacteristics": {
+    "ArmorPenetration": 200,
+    "OverpenetrationDamageMultiplier": 1,
+    "MaxPenetrationDepth": null,
+    "HeatDamage": 2000,
+    "DamageBrushSize": 6.5,
+    "ComponentDamage": 5000,
+    "RandomEffectMultiplier": 1,
+    "CrewVulnerabilityMultiplier": 3,
+    "IgnoreEffectiveThickness": true,
+    "NeverRicochet": true
+  }
+}

@@ -1,5 +1,6 @@
 {
   "ClassName": "Vauxhall",
+  "Faction": "Stock/Alliance",
   "HullClassification": "Light Cruiser",
   "LongDescription": "Light cruisers operate as a bridge between capital ships and lighter classes, often equipped with drives and armor fitting for hunting down warships lighter than its weight-class, much like the Vauxhall-class.",
   "FlavorText": "Vauxhalls came around as a runner-up during the competition bid that gave the Alliance the Sprinter. Initially, the Naval Office resisted it but when the Admiralty saw the value in the Vauxhall, I was immediately set to work on manufacturing the warship. It's nothing like the Sprinter-class, more expensive to construct, but its modernized systems have earned it some pretty dedicated followers, or so I hear.\n\nVauxhall-class Light Cruisers are about as modern as they come. These serve as hunter-killers, made for slipping into asteroid fields or gas clouds to single out warships of a lighter class while also more than capable of taking the fight to heavier warships. As expected, the threat a Vauxhall can pose to a flotilla of, say, frigates is incredibly dangerous, especially as the warship is marginally faster than its intended prey.\n\nOverall, this is a warship that I am pleased to manufacture and study, though I understand the Alliance engineers tend to have a lukewarm view towards the warship's complex drive housing. I do not share this sentiment, obviously.\n\n- F. Autumns, CEO, Falke-Tethys Drive Yards",
@@ -9,7 +10,7 @@
   "MaxSpeed": 26,
   "LinearMotor": 13,
   "MaxTurnSpeed": 4.58366251,
-  "AngularMotor": 1.7,
+  "AngularMotor": 3,
   "BaseIntegrity": 5500,
   "ArmorThickness": 30,
   "InteriorDensityArmorEquivalent": 1,

@@ -1,5 +1,6 @@
 {
   "ClassName": "Keystone",
+  "Faction": "Stock/Alliance",
   "HullClassification": "Destroyer",
   "LongDescription": "Destroyers are typically medium-weight specialized warships, equipped with a generous amount of armor and utility space to fulfill specific roles. The Keystone, in particular, can equip spinal weapons fixed to the bow, often giving the ship deadly efficiency to punch above its weight class.",
   "FlavorText": "Sam Keystone- there's a name you won't be seeing in the coming days- is responsible for coming up with the modern day Keystone-class. Nobody cares about this but me, but the Keystone-class Destroyer is just an up-sized Raines with an oversized reactor bay and about half of the bow gutted to fit its spinal weapon. The earlier model was one of those ill-advised engineering mishaps where nobody knew what they were doing, just the usual thing with the Naval Office.\n\nFor the record, it was known as the Thatcher-class and it just wasn't very good. It was undergunned, far too slow for its hull class, and had some of the most inefficient cost overruns ever seen by that point, a real piece of work that would have made Winchester declare martial law from how utterly furious he would have been. t had its uses as an exploration vessel and intimidating non-Alliance locals but it just didn't have good marks to be a mainline warship until Sam nearly made a fistfight break out on Boardman when she marched into the Naval Office and firmly demanded a trial run with the Mk550 Mass Driver. We all know what happened after that.\n\nIf anything, Sam could turn the lowliest vessel into a deadly weapon and many still hold her as a revolutionary of Alliance naval doctrine, and trust me, her namesake delivers.\n\n- T. Meadows, LT",
@@ -9,7 +10,7 @@
   "MaxSpeed": 20,
   "LinearMotor": 9,
   "MaxTurnSpeed": 4.58366251,
-  "AngularMotor": 1.1,
+  "AngularMotor": 1.2,
   "BaseIntegrity": 4000,
   "ArmorThickness": 22,
   "InteriorDensityArmorEquivalent": 0.5,

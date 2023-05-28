@@ -1,5 +1,7 @@
 {
   "ComponentName": "Missile Parallel Interface",
+  "Faction": "",
+  "ShortDescription": "Missile Support",
   "LongDescription": "By using a parallel programming bus, instead of a simpler and cheaper serial bus, the weapon control system is able to program targeting information into a given missile much faster.  This significantly decreases the amount of time between issuing an order to fire a missile and when it actually leaves the ship.",
   "FlavorText": "An elegant solution from Ithaca Dynamics, not to discredit the Naval Office's work on the stock interface. Modern missile interfaces are quite streamlined these days; the controller is given the list of appropriate targets and they simply select what weapon to use on their target. A 2500-Superbrain does the necessary calculations, relays a fire mission profile to the missile, and then executes the launch order, a clean and smooth process, excluding minor details that I'm not including, of course.\n\n\nUnfortunately, the stock interface provided by the Naval Office was only ever given the processing strength to execute orders on a single mission basis; ordering multiple strikes ties up the Superbrain and forces it to queue the launches, wasting- frankly- the controller's and the enemy's time as the latter casually destroys each incoming missile one-by-one. Ironically, the parallel interface is one of Winchester's approved solutions and I believe Ithaca is more than happy to please our ever-illustrious Admiral.\n\n\n- S. Ace, CWO",
   "Category": "Weapon Support",

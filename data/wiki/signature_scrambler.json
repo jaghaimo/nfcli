@@ -1,5 +1,7 @@
 {
   "ComponentName": "Signature Scrambler",
+  "Faction": "",
+  "ShortDescription": "Electronic Deception Module",
   "LongDescription": "The signature scrambler is a complex upgrade to all installed signal generators and antennas in both radars and communications equipment.  By using an array of components and randomly aligning them for the different stages of waveform generation, and electronic and mechanical shortening/lengthening of waveguides and antennas, it complicates the identification of a warship by its electronic signatures alone.",
   "FlavorText": "Signature scramblers became a popular tactic during the Guild Riots when rogue haulers would scare off patrolling frigates by making themselves appear as big as a heavy cruiser. They fell out of popularity when the Alliance would just show up with heavy fleets and bruteforce their way into miner lines.\n\nBut when the Bethel Rebels started to deploy multiprong probing attacks on Alliance lines to find weak links, the Naval Office started to look back on the signature scrambler. The Alliance just can't let assets go to waste. Everything gets sent to the front, no matter how relict.\n\n- I. Parker, CMC",
   "Category": "EWar",

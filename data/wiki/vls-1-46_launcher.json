@@ -1,5 +1,7 @@
 {
   "ComponentName": "VLS-1-46 Launcher",
+  "Faction": "",
+  "ShortDescription": "Size 1 Missile Launcher",
   "LongDescription": "Similar to the VLS-2, the VLS-1-46 serves as a compact missile platform that allows a warship to have a wide variety of missile weapons to be used on a moment's notice, but is rated for smaller munitions like Riposte interceptors.  Unlike its larger cousin, however, it is not designed in a modular fashion and has a consistent cell count regardless of the size of the available mount.",
   "FlavorText": "\"More tubes!\" Shouted the Alliance War Office rep of 401 IY, having just blown half of the upgrade budget on coffee makers. \"More tubes now! Admiral Steinhammer wants more Ripostes!\"\n\nThe Naval Office asks and the Naval Office receives. Look, I'm all for more extended magazines, longer barrels, better optics, but man, you can't convince me that this wasn't just an excuse to empty out the massive reserves of Riposte missiles sitting around.\n\n- T. Meadows, LT",
   "Category": "Weapons - Missile",
@@ -32,11 +34,11 @@
     "PDTTargetMethod": "Direct",
     "NeedsExternalAmmoFeed": false,
     "SupportsAmmoSelection": false,
-    "SupportsPositionTargeting": false,
-    "PositionTargetingNoInput": true,
-    "SupportsTrackTargeting": false,
-    "SupportsVisualTargeting": false,
-    "SupportsWaypoints": false
+    "SupportsPositionTargeting": null,
+    "PositionTargetingNoInput": null,
+    "SupportsTrackTargeting": null,
+    "SupportsVisualTargeting": null,
+    "SupportsWaypoints": null
   },
   "WeaponComponentData": null,
   "ContinuousWeaponComponentData": null,

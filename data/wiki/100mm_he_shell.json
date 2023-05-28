@@ -1,0 +1,34 @@
+{
+  "MunitionName": "100mm HE Shell",
+  "Description": "Small high-explosive shells used in light cannon weapons.\n\nType: Ballistic/Chemical\nSize: 100mm\nRole: Offensive\nArmor Penetration: 30 cm\nComponent Damage: 45 hp\nPenetration Depth: 15 m\nExplosion Radius: 5\nMuzzle Velocity: 900 m/s\nRange: 7,200 m\nVolume: 0.05 m³",
+  "Type": "Ballistic",
+  "SimMethod": "Spawned",
+  "Role": "Offensive",
+  "PointCost": 1,
+  "PointDivision": 100,
+  "StorageVolume": 0.05,
+  "SupportsPositionTargeting": true,
+  "PositionTargetingNoInput": false,
+  "SupportsTrackTargeting": true,
+  "SupportsVisualTargeting": true,
+  "SupportsWaypoints": false,
+  "FlightSpeed": 900,
+  "Lifetime": 8,
+  "MaxRange": 7200,
+  "ShellMunitionData": {
+    "MaxPenetration": 15
+  },
+  "MissileData": null,
+  "DamageCharacteristics": {
+    "ArmorPenetration": 30,
+    "OverpenetrationDamageMultiplier": 0.2,
+    "MaxPenetrationDepth": 1.5,
+    "HeatDamage": 200,
+    "DamageBrushSize": 0.4,
+    "ComponentDamage": 45,
+    "RandomEffectMultiplier": 0.25,
+    "CrewVulnerabilityMultiplier": 1,
+    "IgnoreEffectiveThickness": false,
+    "NeverRicochet": false
+  }
+}

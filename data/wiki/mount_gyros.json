@@ -1,5 +1,7 @@
 {
   "ComponentName": "Mount Gyros",
+  "Faction": "",
+  "ShortDescription": "Gunnery",
   "LongDescription": "Equips a warship's turreted weapons with self-correcting gyroscopic rings, improving turret traversal speed and increasing overall accuracy.",
   "FlavorText": "Contrary to popular belief, these will not make a turret rotate against the warship's current angle. Instead, it steadies the gun during sudden shifts in the engine speed and shocks from weapon impacts.\n\nOverall, a valuable asset for any direct-fire warship, especially those with cannons or railguns.\n\n- I. Parker, CMC",
   "Category": "Weapon Support",
@@ -25,7 +27,7 @@
   "RareDebuffChance": 0.05,
   "FormattedResources": "Power: <color=#FF2525>-150 kW</color>\n",
   "ResourceDemandPriority": "Medium",
-  "FormattedBuffs": "Spread: <color=#4CFF72>-7.5%</color>\nTraverse Rate: <color=#4CFF72>+25%</color>\nElevation Rate: <color=#4CFF72>+20%</color>\n",
+  "FormattedBuffs": "Spread: <color=#4CFF72>-7.5%</color>\nTraverse Rate: <color=#4CFF72>+25%</color>\nElevation Rate: <color=#4CFF72>+20%</color>\nCasemate Traverse Rate: <color=#4CFF72>+15%</color>\nCasemate Elevation Rate: <color=#4CFF72>+15%</color>\n",
   "IWeaponData": null,
   "WeaponComponentData": null,
   "ContinuousWeaponComponentData": null,

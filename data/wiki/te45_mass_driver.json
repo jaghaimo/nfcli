@@ -1,0 +1,181 @@
+{
+  "ComponentName": "TE45 Mass Driver",
+  "Faction": "Stock/Protectorate",
+  "ShortDescription": "Spinal Mass Driver",
+  "LongDescription": "The TE45 is a repurposed piece of mining equipment, able to sling a massive block of tungsten at high velocities and crack open asteroids.  These railguns don't have the same armor penetration as an Alliance railgun due to the shape of their projectile, but having a heavy block of metal stop instantly when hitting an armored warship creates quite the explosion.",
+  "FlavorText": "TO: PROTECTORATE NAVAL COMMAND\nFROM: NOVANCE\n\nI've taken the liberty of requisitioning a seized stock of Hellas Solutions \"Longbow\" Mass Drivers for my flotilla, they were just gathering dust on Pyxis so I figured nobody's gonna miss them. Turns out the Guild had the right idea back in the riots, a couple of tungsten rods sent through these and they'll vaporize anything on the receiving end. I asked Command Engineering if they could work up anything with my tungsten supply and Holt got back to me pretty quick.\n\nYou remember the fracture blocks over in Samedi? One of these put through a rock will utterly annihilate it and I know for a fact that if we shot one of these into an Alliance warship, we'd get the same result. Section-K is working up a set that 'splinter' on impact and with speeds this high, we're looking at an explosive effect as an added bonus. Winchester's going to love this.",
+  "Category": "Weapons - Spinal",
+  "Type": "Surface",
+  "CompoundingCost": false,
+  "CompoundingMultiplier": 1,
+  "CompoundingCostClass": "TE45 Mass Driver",
+  "FirstInstanceFree": false,
+  "PointCost": 100,
+  "Mass": 100,
+  "Size": {
+    "x": 4,
+    "y": 10,
+    "z": 4
+  },
+  "CanTile": false,
+  "MaxHealth": 450,
+  "Reinforced": false,
+  "FunctioningThreshold": 20,
+  "DamageResistance": 40,
+  "DCPriority": "Medium",
+  "RareDebuffSubtype": "",
+  "RareDebuffChance": 0.05,
+  "FormattedResources": "Power: <color=#FF2525>-4250 kW</color>\n",
+  "ResourceDemandPriority": "High",
+  "FormattedBuffs": "",
+  "IWeaponData": {
+    "WepType": "Fixed",
+    "OptimalTargetWeight": "Heavy",
+    "PDTTargetMethod": "Direct",
+    "NeedsExternalAmmoFeed": true,
+    "SupportsAmmoSelection": true,
+    "SupportsPositionTargeting": true,
+    "PositionTargetingNoInput": false,
+    "SupportsTrackTargeting": true,
+    "SupportsVisualTargeting": true,
+    "SupportsWaypoints": false
+  },
+  "WeaponComponentData": {
+    "OptimalTargetWeight": "Heavy",
+    "AllowGrouping": true,
+    "GroupingName": "",
+    "Role": "Offensive",
+    "EwType": "None",
+    "CheckFriendlyFire": true,
+    "CheckObstaclesInWay": true,
+    "RequireExternalAmmoFeed": true,
+    "AllowAmmoSelection": true,
+    "LeadTargets": true,
+    "OnTargetAngle": 2.5
+  },
+  "ContinuousWeaponComponentData": null,
+  "DiscreteWeaponComponentData": {
+    "TimeBetweenMuzzles": 5,
+    "MagazineSize": 1,
+    "ReloadTime": 25
+  },
+  "CellLauncherComponentData": null,
+  "TubeLauncherComponentData": null,
+  "FixedContinuousWeaponComponentData": null,
+  "MuzzleData": {
+    "MaxRange": null,
+    "SimMethod": "Spawned",
+    "IgnoreAccuracyModifiers": false,
+    "BaseAccuracy": 0.065,
+    "AccuracyData": [
+      {
+        "Range": 0,
+        "Spread": 0
+      },
+      {
+        "Range": 1000,
+        "Spread": 2.26893187
+      },
+      {
+        "Range": 2000,
+        "Spread": 4.53786373
+      },
+      {
+        "Range": 3000,
+        "Spread": 6.8067956
+      },
+      {
+        "Range": 4000,
+        "Spread": 9.075727
+      },
+      {
+        "Range": 5000,
+        "Spread": 11.34466
+      },
+      {
+        "Range": 6000,
+        "Spread": 13.6135912
+      },
+      {
+        "Range": 7000,
+        "Spread": 15.8825226
+      },
+      {
+        "Range": 8000,
+        "Spread": 18.1514549
+      },
+      {
+        "Range": 9000,
+        "Spread": 20.4203873
+      },
+      {
+        "Range": 10000,
+        "Spread": 22.68932
+      },
+      {
+        "Range": 11000,
+        "Spread": 24.95825
+      },
+      {
+        "Range": 12000,
+        "Spread": 27.2271824
+      },
+      {
+        "Range": 13000,
+        "Spread": 29.4961147
+      },
+      {
+        "Range": 14000,
+        "Spread": 31.7650452
+      },
+      {
+        "Range": 15000,
+        "Spread": 34.0339775
+      },
+      {
+        "Range": 16000,
+        "Spread": 36.30291
+      },
+      {
+        "Range": 17000,
+        "Spread": 38.5718422
+      },
+      {
+        "Range": 18000,
+        "Spread": 40.8407745
+      },
+      {
+        "Range": 19000,
+        "Spread": 43.1097031
+      },
+      {
+        "Range": 20000,
+        "Spread": 45.37864
+      }
+    ]
+  },
+  "RaycastDamageCharacteristicData": null,
+  "RaycastDamageFalloffData": null,
+  "CommsAntennaComponentData": null,
+  "OmnidirectionalEWarComponentData": null,
+  "TurretedEWarComponentData": null,
+  "ISensorComponentData": null,
+  "PassiveSensorComponentData": null,
+  "SensorComponentData": null,
+  "FireControlData": null,
+  "IEWarTargetData": null,
+  "SensorTurretComponentData": null,
+  "TurretedContinuousWeaponComponentData": null,
+  "TurretedDiscreteWeaponComponentData": null,
+  "IIntelComponentData": null,
+  "CommandComponentData": null,
+  "IntelligenceComponentData": null,
+  "BerthingComponentData": null,
+  "CrewOperatedComponentData": {
+    "CrewRequired": 15,
+    "ReinforceCrewAt": -1
+  },
+  "DCLockerComponentData": null,
+  "IMagazineProviderData": null,
+  "BulkMagazineComponentData": null
+}

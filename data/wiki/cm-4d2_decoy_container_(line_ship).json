@@ -1,0 +1,24 @@
+{
+  "MunitionName": "CM-4D2 Decoy Container (Line Ship)",
+  "Description": "Decoy Containers are specialized missiles packed with electronic equipment hastily stripped from damaged or destroyed ships.  They fly slowly, at the same speed as the ship they are meant to mimic, and emit a strong electronic signature to confuse enemy intelligence gathering efforts.  Properly deployed, these decoys can disguise offensive fronts, cover retreats, or perform a feint.\n\nThis decoy mimics the signature of a Bulker Freighter line ship.\n\nSize: 3\nCruise Speed: 24 m/s\nRange: 15,600 m\n\n<i><color=#FFEF9E>TO: NOVANCE\nFROM: COMMAND ENGINEERING SCT-K\n\nVance, Schtiel got back to us, we got a whole new slew of reflective paint that we're going to issue to your lineship, just point out the containers and we'll get it ready. Depending on the coating and some adjustments to the container engine, you could easily turn these things into decoys as big as a Ferryman or, hell, even a Lineship.\n\nObviously, you can't use these in an explosive format, but they're durable and they can go /very/ far, so I'll leave it to you how you want to use them. Constantine thinks it's a fantastic idea and he's already issuing some repaints to other container ships. Just a heads up, though, don't get any on your skin, it takes weeks to wash off and may or may not leave a nasty rash if it gets on your hands. Just make sure you're wearing gloves, alright?</color></i>",
+  "Type": "Missile",
+  "SimMethod": "Spawned",
+  "Role": "Utility",
+  "PointCost": 6,
+  "PointDivision": 1,
+  "StorageVolume": 30,
+  "SupportsPositionTargeting": true,
+  "PositionTargetingNoInput": false,
+  "SupportsTrackTargeting": false,
+  "SupportsVisualTargeting": false,
+  "SupportsWaypoints": true,
+  "FlightSpeed": 24,
+  "Lifetime": 650,
+  "MaxRange": 15600.001,
+  "ShellMunitionData": null,
+  "MissileData": {
+    "Size": 3,
+    "SignatureData": null
+  },
+  "DamageCharacteristics": null
+}

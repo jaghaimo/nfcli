@@ -1,5 +1,7 @@
 {
   "ComponentName": "Large DC Locker",
+  "Faction": "",
+  "ShortDescription": "Damage Control",
   "LongDescription": "Damage Control lockers provide a warship with teams capable of repairing ship components and restoring destroyed modules or compartments back into working order.\n\nEach locker allows a certain number of restorations for destroyed modules or components, but destruction of a DC locker will completely remove all available restorations.",
   "FlavorText": "Just a bigger room for greasemonkeys to hang around in. More parts, more shoring. This is usually where you'll find me since the DC teams stationed here like to set up comfy little hangouts when nothing's going wrong (which is, as expected, rare).\n\n- I. Parker, CMC",
   "Category": "Damage Control",

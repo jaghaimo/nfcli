@@ -1,5 +1,7 @@
 {
   "ComponentName": "Damage Control Central",
+  "Faction": "",
+  "ShortDescription": "Damage Control",
   "LongDescription": "The DCC operates as a hub for damage control teams, allowing coordinated response and pooling of repair equipment. Increases the effectiveness of damage control teams on the warship.",
   "FlavorText": "About as hectic as it sounds. Damage controlmen are some of the most exhausted individuals I've ever spoken to and having to be on constant watch for trouble means you're going to smell some pretty strong coffee when you walk by.\n\nIn combat, it only gets worse. The room will quickly devolve into the DC Leader shouting over the clang of shell impacts and alarms while spacesuit-clad engineers rush in and out to snag spare equipment and parts. Either career has the unfortunate side effect of destroying any kind of feeling for humor and a constant state of disappointment, a lethal combination for deadend positions.\n\n- I. Parker, CMC",
   "Category": "Damage Control",
@@ -16,10 +18,10 @@
     "z": 3
   },
   "CanTile": false,
-  "MaxHealth": 125,
+  "MaxHealth": 200,
   "Reinforced": false,
   "FunctioningThreshold": 15,
-  "DamageResistance": 25,
+  "DamageResistance": 35,
   "DCPriority": "Low",
   "RareDebuffSubtype": "",
   "RareDebuffChance": 0.05,

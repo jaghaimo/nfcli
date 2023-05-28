@@ -1,5 +1,7 @@
 {
   "ComponentName": "Launcher Deluge System",
+  "Faction": "",
+  "ShortDescription": "",
   "LongDescription": "An emergency system installed into vertical cell missile launchers which fills the entire launcher with water to stop the spread of fire to ammunition.  Significantly reduces the chances of a launcher exploding when hit by enemy fire.",
   "FlavorText": "Oh no! Hot slag punctured the launch door and now you're grinding your teeth as your missile control officer is shouting \"FIRE!\" into your ear! What do you do?\n\nEasy! Just flood it with water and then vent it to vacuum! Better yet, drain it and serve it to the ensigns when they start acting up in the mess deck.\n\n- T. Meadows, LT",
   "Category": "Damage Control",

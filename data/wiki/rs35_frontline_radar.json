@@ -1,5 +1,7 @@
 {
   "ComponentName": "RS35 'Frontline' Radar",
+  "Faction": "Stock/Alliance",
+  "ShortDescription": "Search Radar",
   "LongDescription": "The RS35 Suite utilizes a short-range radar system useful for targeting and situational awareness in the immediate vicinity of the equipped warship with high accuracy.",
   "FlavorText": "The Alliance standard, considered a \"medium-range\" radar suite with an acceptable margin for positional error. As the name suggests, these are typically found on warships equipped for brawling where the close ranges can forego the use of a Bullseye radar.\n\nIthaca Dynamics is widely considered one of the best manufacturers in Alliance space, especially where naval technology is concerned, although the dizzying amount of radiators installed into panels makes the lengthy maintainence process a common source of endless complaints towards the corporation.\n\n- S. Ace, CWO",
   "Category": "Sensors",
@@ -59,6 +61,7 @@
     "BurnthroughPowerMultiplier": 8,
     "BurnthroughDamageProbability": 0.2,
     "BurnthroughDamage": 25,
+    "RadiationData": null,
     "DeviationData": [
       {
         "SignalLoss": 0,

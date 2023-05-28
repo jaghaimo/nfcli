@@ -1,0 +1,35 @@
+{
+  "MunitionName": "M-50 'Auger' Sprint Mine",
+  "Description": "A loitering missile which will float nearby its launch point until a ship enters its activation zone.  When a ship's magnetic signature is detected, the mine will orient towards the direction and activate a radar seeker.\n\nSize: 3\nCruise Speed: 700 m/s\nRange: 3,850 m\n\n<b>Warhead:</b>\nType: Explosive Impact\nArmor Penetration: 200 cm\nComponent Damage: 5000 hp\nBlast Angle: 100\n\n<b>Seeker:</b>\nType: Active - <color=#4CFF72>RADAR</color>\nRange: 1,750 m\nFOV: 30 deg\nGain: 25 dB\nPower: 150 kW\nSupports TRPs: Yes\nPushoff Distance: 200m\nArming Time: 90s\nBattery Life: Unlimited\nActivation Range: 2,000m\nNetworked: <color=#FF2525>No</color>",
+  "Type": "Missile",
+  "SimMethod": "Spawned",
+  "Role": "Utility",
+  "PointCost": 10,
+  "PointDivision": 1,
+  "StorageVolume": 30,
+  "SupportsPositionTargeting": true,
+  "PositionTargetingNoInput": true,
+  "SupportsTrackTargeting": false,
+  "SupportsVisualTargeting": false,
+  "SupportsWaypoints": false,
+  "FlightSpeed": 700,
+  "Lifetime": 5.5,
+  "MaxRange": 3850,
+  "ShellMunitionData": null,
+  "MissileData": {
+    "Size": 3,
+    "SignatureData": null
+  },
+  "DamageCharacteristics": {
+    "ArmorPenetration": 200,
+    "OverpenetrationDamageMultiplier": 1,
+    "MaxPenetrationDepth": null,
+    "HeatDamage": 2000,
+    "DamageBrushSize": 6.5,
+    "ComponentDamage": 5000,
+    "RandomEffectMultiplier": 1,
+    "CrewVulnerabilityMultiplier": 3,
+    "IgnoreEffectiveThickness": true,
+    "NeverRicochet": true
+  }
+}

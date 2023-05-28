@@ -1,5 +1,7 @@
 {
   "ComponentName": "Mk62 Cannon",
+  "Faction": "Stock/Alliance",
+  "ShortDescription": "Class 2 Cannon",
   "LongDescription": "Like its single-barreled variant, the Mk62 is a light 120mm naval gun, now sporting an additional gun to provide twice the firepower. Also like the Mk61, the Mk62 is an excellent weapon for tackling warships of its intended weight. However, the additional barrel increases the reload time significantly.\n\nOverall, the Mk62 is identical to its single-barreled variant, with all the strengths and weaknesses as the latter. Fires 120mm chemical-ballistic shells.\n\nThe Mk61 and Mk62 also feature a specially designed dual-purpose control computer allowing them to be automatically assigned to incoming missile threats, provided the gun is not already assigned another target and the correct ammunition is available.",
   "FlavorText": "The Mk62, a prime example of the current Naval Office's design doctrine: Boring, hi-tech, and deadlier than it looks. Autumns says the Mk62 makes us look like we're being too modest, as if we're supposed to roll into the Battlespace with cutlasses and flintlocks \"like men\" and start swinging away, which is the dumbest thing I've ever heard in my line of work and I've been doing my job for years now.\n\nGiven the choice, the Naval Office will equip ships with these over the Mk61 which is to be expected, it puts out respectable firepower, enough to make OSP captains think twice during a raid. 120mm shells will punch a hole in most armor on a straight shot but put it up against anything bigger than a destroyer and you'll be wanting the bigger stuff.\n\nBy the way, keep your fingers away from the autoloader. Heard bad things.\n\n- T. Meadows, LT",
   "Category": "Weapons - Projectile",
@@ -42,8 +44,8 @@
     "OptimalTargetWeight": "Medium",
     "AllowGrouping": true,
     "GroupingName": "120mm Gun",
-    "IsPointDefense": false,
-    "IsEW": false,
+    "Role": "-1",
+    "EwType": "None",
     "CheckFriendlyFire": true,
     "CheckObstaclesInWay": true,
     "RequireExternalAmmoFeed": true,
@@ -64,7 +66,7 @@
     "MaxRange": null,
     "SimMethod": "Spawned",
     "IgnoreAccuracyModifiers": false,
-    "BaseAccuracy": 0.25,
+    "BaseAccuracy": 0.15,
     "AccuracyData": [
       {
         "Range": 0,
@@ -72,83 +74,83 @@
       },
       {
         "Range": 1000,
-        "Spread": 8.726868
+        "Spread": 5.2360363
       },
       {
         "Range": 2000,
-        "Spread": 17.4537354
+        "Spread": 10.4720726
       },
       {
         "Range": 3000,
-        "Spread": 26.180603
+        "Spread": 15.7081079
       },
       {
         "Range": 4000,
-        "Spread": 34.90747
+        "Spread": 20.9441452
       },
       {
         "Range": 5000,
-        "Spread": 43.63434
+        "Spread": 26.1801815
       },
       {
         "Range": 6000,
-        "Spread": 52.3612061
+        "Spread": 31.4162159
       },
       {
         "Range": 7000,
-        "Spread": 61.0880737
+        "Spread": 36.6522522
       },
       {
         "Range": 8000,
-        "Spread": 69.81494
+        "Spread": 41.88829
       },
       {
         "Range": 9000,
-        "Spread": 78.54181
+        "Spread": 47.1243248
       },
       {
         "Range": 10000,
-        "Spread": 87.26868
+        "Spread": 52.360363
       },
       {
         "Range": 11000,
-        "Spread": 95.99555
+        "Spread": 57.5963974
       },
       {
         "Range": 12000,
-        "Spread": 104.722412
+        "Spread": 62.83243
       },
       {
         "Range": 13000,
-        "Spread": 113.44928
+        "Spread": 68.0684738
       },
       {
         "Range": 14000,
-        "Spread": 122.176147
+        "Spread": 73.3045044
       },
       {
         "Range": 15000,
-        "Spread": 130.903015
+        "Spread": 78.54054
       },
       {
         "Range": 16000,
-        "Spread": 139.629883
+        "Spread": 83.77658
       },
       {
         "Range": 17000,
-        "Spread": 148.35675
+        "Spread": 89.01261
       },
       {
         "Range": 18000,
-        "Spread": 157.083618
+        "Spread": 94.24865
       },
       {
         "Range": 19000,
-        "Spread": 165.810486
+        "Spread": 99.48468
       },
       {
         "Range": 20000,
-        "Spread": 174.537354
+        "Spread": 104.720726
       }
     ]
   },

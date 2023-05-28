@@ -1,5 +1,7 @@
 {
   "ComponentName": "FM200R Drive",
+  "Faction": "Stock/Alliance",
+  "ShortDescription": "Fusion Drive",
   "LongDescription": "This small-sized drive system provides power for the main engines of smaller warships, while also providing a small amount of reactor power.\n\nThe FM200R is a specially designed reinforced version of the mainstay drive module of the Alliance fleet.",
   "FlavorText": "Same thing as a base FM200, just now with armored housing so you don't have to worry about the occasional micro-meteorite perforating the drive controller or a missile impact shaking the radial loose. Not fun to work on, though, the armor weighs a ton.\n\n- I. Parker, CMC",
   "Category": "Propulsion",

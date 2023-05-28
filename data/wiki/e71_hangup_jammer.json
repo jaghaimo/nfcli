@@ -1,5 +1,7 @@
 {
   "ComponentName": "E71 'Hangup' Jammer",
+  "Faction": "Stock/Alliance",
+  "ShortDescription": "Jammer (Comms)",
   "LongDescription": "Once activated, the E71 floods a region of the battlespace with random noise and radio waves, disrupting communications and preventing targets from receiving track data from other sources, such as scouts. However, it does not prevent sending data, only receiving.",
   "FlavorText": "The 'Hangup' jammer has garnered a vicious reputation among pirate circles, its activation often being followed up by the sudden appearance of heavily-armed military flotillas burning in to sweep up sentries while they jam their homebase.\n\nMostly operates on a continuous waveform pattern, the subtle variety. If they're bored, the operators might swap the sound over to thrash metal played at full blast, usually when all the bad guys are asleep. It's fun, just don't let the EWO catch you or you'll get a nice visit to the mast.\n\n- I. Parker, CMC",
   "Category": "EWar",
@@ -42,8 +44,8 @@
     "OptimalTargetWeight": "Light",
     "AllowGrouping": true,
     "GroupingName": "Jammers",
-    "IsPointDefense": false,
-    "IsEW": true,
+    "Role": "Offensive",
+    "EwType": "Jammer",
     "CheckFriendlyFire": false,
     "CheckObstaclesInWay": false,
     "RequireExternalAmmoFeed": false,

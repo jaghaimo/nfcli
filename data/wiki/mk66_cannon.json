@@ -1,5 +1,7 @@
 {
   "ComponentName": "Mk66 Cannon",
+  "Faction": "Stock/Alliance",
+  "ShortDescription": "Class 4 Cannon",
   "LongDescription": "A heavy gun battery for anti-ship warfare, typically found standard issue on capital ships like cruisers or battleships. Despite its monstrous firepower, the Mk66 is fairly slow to acquire targets and has low muzzle velocity, but provides decent accuracy and a quick reload time for its weight class.\n\nBest used in medium to short-range engagements on slow targets where the full explosive power of the guns can best be put to full effect. Fires 450mm chemical-ballistic shells.",
   "FlavorText": "Nothing says \"Alliance Navy\" like the Mk66. Crewmen nicknamed the Mk66 as the \"Lockdown\" after the crippling firepower when a mass of these hit their target- or rather, if they hit their target. The Naval Office chose to cut down the length of the barrel and instead put that extra weight towards a thicker barrel, meaning you can get far greater ignition pressure without having to worry about barrel integrity, just at the cost of overall accuracy.\n\nIt's not a bad thing, mind you, the Mk66 is accurate enough to put a serious hole into a reactor bay if you aim it properly but, being an artillery piece, don't expect it thread the needle.\n\n- T. Meadows, LT",
   "Category": "Weapons - Projectile",
@@ -42,8 +44,8 @@
     "OptimalTargetWeight": "Heavy",
     "AllowGrouping": true,
     "GroupingName": "450mm Gun",
-    "IsPointDefense": false,
-    "IsEW": false,
+    "Role": "Offensive",
+    "EwType": "None",
     "CheckFriendlyFire": true,
     "CheckObstaclesInWay": true,
     "RequireExternalAmmoFeed": true,

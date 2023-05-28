@@ -1,5 +1,7 @@
 {
   "ComponentName": "Adaptive Radar Receiver",
+  "Faction": "",
+  "ShortDescription": "Radar Control",
   "LongDescription": "By using adaptive wave beamforming, the Adaptive Radar Receiver increases the sensitivity of the warship's sensors, allowing for earlier detection of smaller targets (such as missiles) at longer ranges.  The adaptive receiver also features advanced noise filtering technology, improving the sensor's resistance to noise and jamming but also slightly reducing its accuracy.",
   "FlavorText": "Also great for detecting smaller meteorites on a collision course, which happens pretty frequently out in the Eight Ball Belt or Kribensis. Paired up with some Aurora support, these can help picket ships \"snipe\" at incoming missiles, which is always a good thing, don't let RadarOps tell you otherwise.\n\n- I. Parker, CMC",
   "Category": "Sensors",
