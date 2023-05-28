@@ -1,7 +1,9 @@
 """Handles static content in `data/wiki` folder."""
 
 import json
+import logging
 import os
+import shutil
 from abc import abstractproperty
 from collections.abc import Callable
 from io import BytesIO
@@ -10,17 +12,19 @@ from urllib.request import urlopen
 from zipfile import ZipFile
 
 from fuzzywuzzy import process
-from fuzzywuzzy.fuzz import partial_token_sort_ratio, token_sort_ratio
+from fuzzywuzzy.fuzz import partial_token_set_ratio, token_set_ratio
 
-from nfcli import load_path, strip_tags
+from nfcli import init_logger, load_path, strip_tags
+from nfcli.data import Tags
 
 WIKI_DATA_URL = "https://gitlab.com/nebfltcom/data/-/archive/main/data-main.zip?path=wiki"
 WIKI_DIR = "data/wiki"
+WIKI_GITHUB_SUBDIR = "data-main-wiki/wiki"
 WIKI_URL = "http://nebfltcom.wikidot.com/"
 
 
-def list_to_str(list: list[str]) -> str:
-    filtered_list = [element for element in list if element]
+def list_to_str(full_list: list[str]) -> str:
+    filtered_list = [element for element in full_list if element]
     return "\n".join(filtered_list)
 
 
@@ -46,12 +50,30 @@ def str_to_dict(string: str | None = None) -> dict[str, str]:
     return new_dict
 
 
+def update_tags():
+    init_logger(None, logging.INFO)
+    logging.info("Updating tags from wiki content...")
+    wiki = Wiki()
+    new_tags = {
+        f"Stock/{entity.name}": None
+        for entity in wiki.entities.values()
+        if isinstance(entity, Component) and entity.type == "Surface"
+    }
+    Tags.merge(new_tags)
+    Tags.save()
+
+
 def update_wiki():
+    init_logger(None, logging.INFO)
+    logging.info("Fetching new wiki content...")
     zip_content = urlopen(WIKI_DATA_URL)
     tmp_dir = mkdtemp()
     with ZipFile(BytesIO(zip_content.read())) as zip_ref:
         zip_ref.extractall(tmp_dir)
-    print(f"Wiki content downloaded to {tmp_dir}/ - move it to {WIKI_DIR}/")
+    logging.info(f"Wiki content downloaded to: {tmp_dir}/")
+    shutil.rmtree(WIKI_DIR)
+    shutil.move(os.path.join(tmp_dir, WIKI_GITHUB_SUBDIR), os.path.dirname(WIKI_DIR))
+    logging.info("Wiki content replaced.")
 
 
 class Entity:
@@ -314,14 +336,14 @@ class Wiki:
         self.entities = {}
         self._load()
 
-    def get(self, key: str, scorer: Callable = token_sort_ratio, score_cutoff: int = 0) -> Entity:
+    def get(self, key: str, scorer: Callable = token_set_ratio, score_cutoff: int = 0) -> Entity:
         best_key = process.extractOne(key, self.entities.keys(), scorer=scorer, score_cutoff=score_cutoff)
         if not best_key:
             raise ValueError
         if best_key[1] > 51:
             return self.entities[best_key[0]]
 
-        return self.get(key, partial_token_sort_ratio, 51)
+        return self.get(key, partial_token_set_ratio, 51)
 
     def _add_hull(self, hull: dict) -> None:
         self._add(Hull(hull))
