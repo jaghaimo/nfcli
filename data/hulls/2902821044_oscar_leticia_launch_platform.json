@@ -1,0 +1,34 @@
+{
+  "key": "oscar/Leticia Launch Platform",
+  "name": "'Leticia' class Launch Platform",
+  "mounts": {
+    "W1": "3x4x5",
+    "W2": "3x4x5",
+    "W3": "3x4x5",
+    "W4": "3x4x5",
+    "W5": "3x4x5",
+    "W6": "3x4x5",
+    "W7": "2x1x2"
+  },
+  "compartments": {
+    "C1": "6x1x8",
+    "C2": "4x1x6",
+    "C3": "4x1x6",
+    "C4": "4x1x6",
+    "C5": "4x1x6",
+    "C6": "4x1x6",
+    "C7": "4x1x6"
+  },
+  "modules": {
+    "M1": "6x3x6",
+    "M2": "6x3x6",
+    "M3": "3x3x3",
+    "M4": "3x3x3",
+    "M5": "3x3x3",
+    "M6": "3x3x3",
+    "M7": "3x3x3",
+    "M8": "3x3x3",
+    "M9": "3x3x3",
+    "M10": "3x3x3"
+  }
+}
