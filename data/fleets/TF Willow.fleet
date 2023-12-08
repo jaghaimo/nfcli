@@ -6,14 +6,14 @@
   <FactionKey>Stock/Alliance</FactionKey>
   <Description>Difficulty: &lt;color=yellow&gt;MODERATE&lt;/color&gt;
 
-A combined arms fleet with a railgun heavy cruiser for fire support, two semi-active missile frigates, and a beam destroyer.  This fleet allows you to keep your options open and spread your forces out to take on different challenges.  But be warned: combined arms fleets require significant multitasking to be successful.</Description>
+A combined arms fleet with a mixed cannon/beam heavy cruiser for the frontline, along with an electronic warfare frigate, missile frigate, and rail destroyer. This fleet allows you to keep your options open and spread your forces out to take on different challenges. But be warned: combined arms fleets require significant multitasking to be successful.</Description>
   <SortOverrideOrder>4</SortOverrideOrder>
   <Ships>
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>16f1a4b6-d754-4060-aaae-21864ca19ec1</Key>
       <Name>Conclusion Absolute</Name>
-      <Cost>1607</Cost>
+      <Cost>1585</Cost>
       <Callsign />
       <Number>537</Number>
       <SymbolOption>0</SymbolOption>
@@ -21,28 +21,19 @@ A combined arms fleet with a railgun heavy cruiser for fire support, two semi-ac
       <SocketMap>
         <HullSocket>
           <Key>whDP9rtbukKsocnrqnqaLQ</Key>
-          <ComponentName>Stock/Mk81 Railgun</ComponentName>
+          <ComponentName>Stock/Mk66 Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>8CtCKPLfZEOOFvm1DhV-oQ</Key>
-          <ComponentName>Stock/VLS-1-46 Launcher</ComponentName>
-          <ComponentData xsi:type="CellLauncherData">
-            <MissileLoad>
-              <MagSaveData>
-                <MagazineKey>f6ol2bK37kO1FZn3rITt0A</MagazineKey>
-                <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>46</Quantity>
-              </MagSaveData>
-            </MissileLoad>
-          </ComponentData>
+          <ComponentName>Stock/Mk66 Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>N7yRYYUuG0uOzd5aufgViA</Key>
-          <ComponentName>Stock/Mk81 Railgun</ComponentName>
+          <ComponentName>Stock/Mk610 Beam Turret</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>lYEQo4jJvEGxRqJa2MB25A</Key>
-          <ComponentName>Stock/E90 'Blanket' Jammer</ComponentName>
+          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>9qreGP2Iw0KwuloNpNFTSg</Key>
@@ -50,7 +41,7 @@ A combined arms fleet with a railgun heavy cruiser for fire support, two semi-ac
         </HullSocket>
         <HullSocket>
           <Key>v9Sqa5DcCkibdi29AkakNg</Key>
-          <ComponentName>Stock/E90 'Blanket' Jammer</ComponentName>
+          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>3MoeYUx1HUS6xNDBMsssig</Key>
@@ -77,6 +68,10 @@ A combined arms fleet with a railgun heavy cruiser for fire support, two semi-ac
           <ComponentName>Stock/Berthing</ComponentName>
         </HullSocket>
         <HullSocket>
+          <Key>TX2TktZe7EWB9s-MqlDQgA</Key>
+          <ComponentName>Stock/Rapid DC Locker</ComponentName>
+        </HullSocket>
+        <HullSocket>
           <Key>cMs0g0g3WUeZJQASb7omew</Key>
           <ComponentName>Stock/Plant Control Center</ComponentName>
         </HullSocket>
@@ -86,14 +81,24 @@ A combined arms fleet with a railgun heavy cruiser for fire support, two semi-ac
           <ComponentData xsi:type="BulkMagazineData">
             <Load>
               <MagSaveData>
-                <MagazineKey>kvKUA2xFRE29kQaQoerWIw</MagazineKey>
-                <MunitionKey>Stock/300mm AP Rail Sabot</MunitionKey>
-                <Quantity>350</Quantity>
-              </MagSaveData>
-              <MagSaveData>
                 <MagazineKey>ztRjSrmj9kaIXtxNj6vlnw</MagazineKey>
                 <MunitionKey>Stock/Flak Round</MunitionKey>
-                <Quantity>2000</Quantity>
+                <Quantity>900</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>AShuCeOCUEevWqTx1aivMw</MagazineKey>
+                <MunitionKey>Stock/450mm HE Shell</MunitionKey>
+                <Quantity>300</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>By6J2Z_gA0e78bcWsaViNw</MagazineKey>
+                <MunitionKey>Stock/450mm AP Shell</MunitionKey>
+                <Quantity>200</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>AwgADSUo40Wx9HMN2VDhdw</MagazineKey>
+                <MunitionKey>Stock/20mm Slug</MunitionKey>
+                <Quantity>16000</Quantity>
               </MagSaveData>
             </Load>
           </ComponentData>
@@ -104,19 +109,23 @@ A combined arms fleet with a railgun heavy cruiser for fire support, two semi-ac
         </HullSocket>
         <HullSocket>
           <Key>SV_4BgcxwU24YIbep-k74g</Key>
-          <ComponentName>Stock/Large DC Locker</ComponentName>
+          <ComponentName>Stock/Reinforced DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>A8e_Z_d8WU2qzo6HTQwCBA</Key>
-          <ComponentName>Stock/Large DC Locker</ComponentName>
+          <ComponentName>Stock/Reinforced DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>2xmOS4ns_EaMYjBXrrhhig</Key>
-          <ComponentName>Stock/Basic CIC</ComponentName>
+          <ComponentName>Stock/Rapid DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>y1xLixKUzUSKT7Nz7aUkLQ</Key>
           <ComponentName>Stock/Damage Control Central</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>RmUeePb-8EGbFaRgVjCXsA</Key>
+          <ComponentName>Stock/Rapid DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>eYp1IPfupUGVITrkVhgZJw</Key>
@@ -144,7 +153,7 @@ A combined arms fleet with a railgun heavy cruiser for fire support, two semi-ac
         </HullSocket>
         <HullSocket>
           <Key>oyAxfnepkEG46VjtvQWXpw</Key>
-          <ComponentName>Stock/Energy Regulator</ComponentName>
+          <ComponentName>Stock/Focused Particle Accelerator</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>Yo9hPw6Mf060B3vqwSO4GA</Key>
@@ -152,36 +161,35 @@ A combined arms fleet with a railgun heavy cruiser for fire support, two semi-ac
         </HullSocket>
         <HullSocket>
           <Key>CgpRQa-660KEed1wTRL4vw</Key>
-          <ComponentName>Stock/Mount Gyros</ComponentName>
+          <ComponentName>Stock/Ammunition Elevators</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>awwdeDnNs0G-RceQF1TByA</Key>
-          <ComponentName>Stock/Mount Gyros</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>tnZD-B5Ls0qAyBtdz4yoTA</Key>
-          <ComponentName>Stock/Adaptive Radar Receiver</ComponentName>
+          <ComponentName>Stock/Ammunition Elevators</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>S8ALcpOMYEqJog1v2q8UMQ</Key>
-          <ComponentName>Stock/RS35 'Frontline' Radar</ComponentName>
+          <ComponentName>Stock/RM50 'Parallax' Radar</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>rQWETsDGdE-AR8N3NPfwXg</Key>
-          <ComponentName>Stock/Mount Gyros</ComponentName>
+          <ComponentName>Stock/Ammunition Elevators</ComponentName>
         </HullSocket>
       </SocketMap>
       <WeaponGroups>
-        <WepGroup Name="Railguns">
+        <WepGroup Name="Front Gun">
           <MemberKeys>
             <string>whDP9rtbukKsocnrqnqaLQ</string>
-            <string>N7yRYYUuG0uOzd5aufgViA</string>
           </MemberKeys>
         </WepGroup>
-        <WepGroup Name="Jammer">
+        <WepGroup Name="Aft Gun">
           <MemberKeys>
-            <string>lYEQo4jJvEGxRqJa2MB25A</string>
-            <string>v9Sqa5DcCkibdi29AkakNg</string>
+            <string>8CtCKPLfZEOOFvm1DhV-oQ</string>
+          </MemberKeys>
+        </WepGroup>
+        <WepGroup Name="Beam">
+          <MemberKeys>
+            <string>N7yRYYUuG0uOzd5aufgViA</string>
           </MemberKeys>
         </WepGroup>
       </WeaponGroups>
@@ -191,114 +199,9 @@ A combined arms fleet with a railgun heavy cruiser for fire support, two semi-ac
       <SaveID xsi:nil="true" />
       <Key>aff5bd9f-a8e0-4643-8daf-c7b6e15723ab</Key>
       <Name>Word Cadence</Name>
-      <Cost>468</Cost>
-      <Callsign />
-      <Number>614</Number>
-      <SymbolOption>1</SymbolOption>
-      <HullType>Stock/Raines Frigate</HullType>
-      <SocketMap>
-        <HullSocket>
-          <Key>PDKmGfvpykODc3XHDQ7WBw</Key>
-          <ComponentName>Stock/VLS-2 Launcher</ComponentName>
-          <ComponentData xsi:type="ResizableCellLauncherData">
-            <MissileLoad>
-              <MagSaveData>
-                <MagazineKey>m3GQVQTKsUawUbJNIgaeCA</MagazineKey>
-                <MunitionKey>$MODMIS$/SGM-233 Gale</MunitionKey>
-                <Quantity>16</Quantity>
-              </MagSaveData>
-            </MissileLoad>
-            <ConfiguredSize>
-              <x>1</x>
-              <y>2</y>
-            </ConfiguredSize>
-          </ComponentData>
-        </HullSocket>
-        <HullSocket>
-          <Key>WwMGqYiU7E6lp7ID47phqA</Key>
-          <ComponentName>Stock/E55 'Spotlight' Illuminator</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>gkfIwYzn7kGhG6MW9uxBmw</Key>
-          <ComponentName>Stock/VLS-2 Launcher</ComponentName>
-          <ComponentData xsi:type="ResizableCellLauncherData">
-            <MissileLoad>
-              <MagSaveData>
-                <MagazineKey>82pv4YTObkSmsFmB3XOXyA</MagazineKey>
-                <MunitionKey>$MODMIS$/SGM-233 Gale</MunitionKey>
-                <Quantity>24</Quantity>
-              </MagSaveData>
-            </MissileLoad>
-            <ConfiguredSize>
-              <x>1</x>
-              <y>3</y>
-            </ConfiguredSize>
-          </ComponentData>
-        </HullSocket>
-        <HullSocket>
-          <Key>D3zoB0PetEC973iUck_mNQ</Key>
-          <ComponentName>Stock/VLS-1-23 Launcher</ComponentName>
-          <ComponentData xsi:type="CellLauncherData">
-            <MissileLoad>
-              <MagSaveData>
-                <MagazineKey>4Il23BEsy0-H8BvAPzSlpw</MagazineKey>
-                <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>23</Quantity>
-              </MagSaveData>
-            </MissileLoad>
-          </ComponentData>
-        </HullSocket>
-        <HullSocket>
-          <Key>98N-YI_1WUOs--qPYlt-7g</Key>
-          <ComponentName>Stock/Basic CIC</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>6Tzo7268MEqgyFxnGvLKUg</Key>
-          <ComponentName>Stock/Plant Control Center</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>O_Y-AJc7r0alOg36rvY6MQ</Key>
-          <ComponentName>Stock/Rapid DC Locker</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>5APOD4UfSkGdkm9WWdAvLA</Key>
-          <ComponentName>Stock/Rapid DC Locker</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>lorATFhkTkeZQYThYOHazg</Key>
-          <ComponentName>Stock/Berthing</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>bRgUlaoQJ0S7M91zMpdAdA</Key>
-          <ComponentName>Stock/FR4800 Reactor</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>Jmtnwo0KQki5QyEPPlBHrA</Key>
-          <ComponentName>Stock/FM200 Drive</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>V42tXibIR0e4u6riIHYZOw</Key>
-          <ComponentName>Stock/RS41 'Spyglass' Radar</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>p-m7ijS6ukuqzuBT5NE_lA</Key>
-          <ComponentName>Stock/Adaptive Radar Receiver</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>foApM84hT0GpEw4GaFv38w</Key>
-          <ComponentName>Stock/Adaptive Radar Receiver</ComponentName>
-        </HullSocket>
-      </SocketMap>
-      <WeaponGroups />
-      <TemplateMissileTypes />
-    </Ship>
-    <Ship>
-      <SaveID xsi:nil="true" />
-      <Key>811a447a-b0bc-47e2-beee-164ab395575d</Key>
-      <Name>The Amber Crash</Name>
       <Cost>470</Cost>
       <Callsign />
-      <Number>126</Number>
+      <Number>614</Number>
       <SymbolOption>1</SymbolOption>
       <HullType>Stock/Raines Frigate</HullType>
       <SocketMap>
@@ -308,9 +211,14 @@ A combined arms fleet with a railgun heavy cruiser for fire support, two semi-ac
           <ComponentData xsi:type="CellLauncherData">
             <MissileLoad>
               <MagSaveData>
-                <MagazineKey>9CWbg7JuZ0io7Ed-qH8HVg</MagazineKey>
+                <MagazineKey>EM-Z4WrrhEy8dO6v_iTaVA</MagazineKey>
                 <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>22</Quantity>
+                <Quantity>13</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>OAv0qlZ2a0edzxB7spptIQ</MagazineKey>
+                <MunitionKey>Stock/EA99 Active Decoy</MunitionKey>
+                <Quantity>6</Quantity>
               </MagSaveData>
             </MissileLoad>
           </ComponentData>
@@ -342,9 +250,9 @@ A combined arms fleet with a railgun heavy cruiser for fire support, two semi-ac
           <ComponentData xsi:type="ResizableCellLauncherData">
             <MissileLoad>
               <MagSaveData>
-                <MagazineKey>NYtBIoGqDUScXrkGSLy_qg</MagazineKey>
+                <MagazineKey>QXVTjDjJzUeg6qcz2z4Sfw</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-233 Gale</MunitionKey>
-                <Quantity>17</Quantity>
+                <Quantity>24</Quantity>
               </MagSaveData>
             </MissileLoad>
             <ConfiguredSize>
@@ -359,7 +267,81 @@ A combined arms fleet with a railgun heavy cruiser for fire support, two semi-ac
         </HullSocket>
         <HullSocket>
           <Key>6Tzo7268MEqgyFxnGvLKUg</Key>
-          <ComponentName>Stock/Plant Control Center</ComponentName>
+          <ComponentName>Stock/Reinforced Magazine</ComponentName>
+          <ComponentData xsi:type="BulkMagazineData">
+            <Load />
+          </ComponentData>
+        </HullSocket>
+        <HullSocket>
+          <Key>O_Y-AJc7r0alOg36rvY6MQ</Key>
+          <ComponentName>Stock/Rapid DC Locker</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>lorATFhkTkeZQYThYOHazg</Key>
+          <ComponentName>Stock/Berthing</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>bRgUlaoQJ0S7M91zMpdAdA</Key>
+          <ComponentName>Stock/FR4800 Reactor</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>Jmtnwo0KQki5QyEPPlBHrA</Key>
+          <ComponentName>Stock/FM200 Drive</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>V42tXibIR0e4u6riIHYZOw</Key>
+          <ComponentName>Stock/RS35 'Frontline' Radar</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>foApM84hT0GpEw4GaFv38w</Key>
+          <ComponentName>Stock/Missile Programming Bus Array</ComponentName>
+        </HullSocket>
+      </SocketMap>
+      <WeaponGroups>
+        <WepGroup Name="Target Painter">
+          <MemberKeys>
+            <string>WwMGqYiU7E6lp7ID47phqA</string>
+          </MemberKeys>
+        </WepGroup>
+      </WeaponGroups>
+      <TemplateMissileTypes />
+    </Ship>
+    <Ship>
+      <SaveID xsi:nil="true" />
+      <Key>1c4a478b-5582-45bb-85f2-aec5180505f2</Key>
+      <Name>Amber Crash</Name>
+      <Cost>425</Cost>
+      <Callsign />
+      <Number>126</Number>
+      <SymbolOption>2</SymbolOption>
+      <HullType>Stock/Raines Frigate</HullType>
+      <SocketMap>
+        <HullSocket>
+          <Key>PDKmGfvpykODc3XHDQ7WBw</Key>
+          <ComponentName>Stock/E90 'Blanket' Jammer</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>WwMGqYiU7E6lp7ID47phqA</Key>
+          <ComponentName>Stock/E71 'Hangup' Jammer</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>gkfIwYzn7kGhG6MW9uxBmw</Key>
+          <ComponentName>Stock/E90 'Blanket' Jammer</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>D3zoB0PetEC973iUck_mNQ</Key>
+          <ComponentName>Stock/E70 'Interruption' Jammer</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>98N-YI_1WUOs--qPYlt-7g</Key>
+          <ComponentName>Stock/Basic CIC</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>6Tzo7268MEqgyFxnGvLKUg</Key>
+          <ComponentName>Stock/Reinforced Magazine</ComponentName>
+          <ComponentData xsi:type="BulkMagazineData">
+            <Load />
+          </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>O_Y-AJc7r0alOg36rvY6MQ</Key>
@@ -367,7 +349,7 @@ A combined arms fleet with a railgun heavy cruiser for fire support, two semi-ac
         </HullSocket>
         <HullSocket>
           <Key>5APOD4UfSkGdkm9WWdAvLA</Key>
-          <ComponentName>Stock/Rapid DC Locker</ComponentName>
+          <ComponentName>Stock/Plant Control Center</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>lorATFhkTkeZQYThYOHazg</Key>
@@ -386,22 +368,40 @@ A combined arms fleet with a railgun heavy cruiser for fire support, two semi-ac
           <ComponentName>Stock/RS41 'Spyglass' Radar</ComponentName>
         </HullSocket>
         <HullSocket>
-          <Key>p-m7ijS6ukuqzuBT5NE_lA</Key>
-          <ComponentName>Stock/Adaptive Radar Receiver</ComponentName>
-        </HullSocket>
-        <HullSocket>
           <Key>foApM84hT0GpEw4GaFv38w</Key>
-          <ComponentName>Stock/Adaptive Radar Receiver</ComponentName>
+          <ComponentName>Stock/FR3300 Micro Reactor</ComponentName>
         </HullSocket>
       </SocketMap>
-      <WeaponGroups />
+      <WeaponGroups>
+        <WepGroup Name="Radar 1">
+          <MemberKeys />
+        </WepGroup>
+        <WepGroup Name="Comms">
+          <MemberKeys />
+        </WepGroup>
+        <WepGroup Name="Radar 2">
+          <MemberKeys />
+        </WepGroup>
+        <WepGroup Name="Missile Shield">
+          <MemberKeys>
+            <string>D3zoB0PetEC973iUck_mNQ</string>
+          </MemberKeys>
+        </WepGroup>
+        <WepGroup Name="Jammers">
+          <MemberKeys>
+            <string>PDKmGfvpykODc3XHDQ7WBw</string>
+            <string>WwMGqYiU7E6lp7ID47phqA</string>
+            <string>gkfIwYzn7kGhG6MW9uxBmw</string>
+          </MemberKeys>
+        </WepGroup>
+      </WeaponGroups>
       <TemplateMissileTypes />
     </Ship>
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>6987c592-d06a-47df-8dfe-68e9db17d31d</Key>
       <Name>Early Blooming</Name>
-      <Cost>455</Cost>
+      <Cost>520</Cost>
       <Callsign />
       <Number>837</Number>
       <SymbolOption>2</SymbolOption>
@@ -416,29 +416,16 @@ A combined arms fleet with a railgun heavy cruiser for fire support, two semi-ac
           <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
         </HullSocket>
         <HullSocket>
-          <Key>JpOU9MgWXEmfLcQoAK4otA</Key>
-          <ComponentName>Stock/VLS-1-23 Launcher</ComponentName>
-          <ComponentData xsi:type="CellLauncherData">
-            <MissileLoad>
-              <MagSaveData>
-                <MagazineKey>xBwOly-ztEqZcgMnq_Ie6w</MagazineKey>
-                <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>23</Quantity>
-              </MagSaveData>
-            </MissileLoad>
-          </ComponentData>
-        </HullSocket>
-        <HullSocket>
-          <Key>LCosRblddUCjPogeJ5eSeA</Key>
-          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
-        </HullSocket>
-        <HullSocket>
           <Key>hGeid9yk80GqIN5IUlp8aw</Key>
-          <ComponentName>Stock/Mk600 Beam Cannon</ComponentName>
+          <ComponentName>Stock/Mk550 Mass Driver</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>ytRGy84X_kW1odHYCBICDQ</Key>
+          <ComponentName>Stock/Plant Control Center</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>yM3Am4PqyUOIByTKzM6sPA</Key>
-          <ComponentName>Stock/Rapid DC Locker</ComponentName>
+          <ComponentName>Stock/Basic CIC</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>H1ekC2-9c02VyNXY4IeLYA</Key>
@@ -446,7 +433,7 @@ A combined arms fleet with a railgun heavy cruiser for fire support, two semi-ac
         </HullSocket>
         <HullSocket>
           <Key>ln5c_ZvdCUSMVWZL_-m3yw</Key>
-          <ComponentName>Stock/Reinforced CIC</ComponentName>
+          <ComponentName>Stock/Rapid DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>H-oABJbYw0qgKd4QzU0WaA</Key>
@@ -460,7 +447,12 @@ A combined arms fleet with a railgun heavy cruiser for fire support, two semi-ac
               <MagSaveData>
                 <MagazineKey>5RasId42-0qRTG4hjUE31g</MagazineKey>
                 <MunitionKey>Stock/20mm Slug</MunitionKey>
-                <Quantity>14000</Quantity>
+                <Quantity>8000</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>O_EjMvJlEEO2l3RRdQuPQA</MagazineKey>
+                <MunitionKey>Stock/300mm AP Rail Sabot</MunitionKey>
+                <Quantity>150</Quantity>
               </MagSaveData>
             </Load>
           </ComponentData>
@@ -474,12 +466,24 @@ A combined arms fleet with a railgun heavy cruiser for fire support, two semi-ac
           <ComponentName>Stock/FM200 Drive</ComponentName>
         </HullSocket>
         <HullSocket>
+          <Key>m5J1jQdOfUKM9r7NZjMpKA</Key>
+          <ComponentName>Stock/Energy Regulator</ComponentName>
+        </HullSocket>
+        <HullSocket>
           <Key>h29TSNGRo0m_DmeRr2BqDw</Key>
-          <ComponentName>Stock/FR3300 Micro Reactor</ComponentName>
+          <ComponentName>Stock/Energy Regulator</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>E9sMCEquVk-NNj5heGmIlQ</Key>
           <ComponentName>Stock/RS35 'Frontline' Radar</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>gx2UKetKWUm5BfZhiD5phQ</Key>
+          <ComponentName>Stock/Small Energy Regulator</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>ZJTmbGdjAk-XEKihIYHEuw</Key>
+          <ComponentName>Stock/Energy Regulator</ComponentName>
         </HullSocket>
       </SocketMap>
       <WeaponGroups />
@@ -505,6 +509,7 @@ Terminal Maneuvers: None
 Contact Fuze, High Explosive, Shaped
 Armor: 54cm   Component: 960hp
 Blast Angle: 70 deg
+Damage Per Fragment: 50.0
 
 Body Integrity: 30 
 Programming Time: 8 s
@@ -551,6 +556,7 @@ Failure Rate: 0 %</LongDescription>
             <Maneuvers>None</Maneuvers>
             <DefensiveDoctrine>
               <TargetSizeMask>12</TargetSizeMask>
+              <TargetType>All</TargetType>
               <TargetSizeOrdering>Descending</TargetSizeOrdering>
               <SalvoSize>0</SalvoSize>
               <FarthestFirst>false</FarthestFirst>

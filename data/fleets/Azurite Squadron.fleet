@@ -4,15 +4,16 @@
   <Version>3</Version>
   <TotalPoints>3000</TotalPoints>
   <FactionKey>Stock/Protectorate</FactionKey>
-  <Description>Difficulty: &lt;color=green&gt;EASY&lt;/color&gt;
+  <Description>Difficulty: &lt;color=yellow&gt;MODERATE&lt;/color&gt;
 
-Frontline fighting Cannon Armed Lineship and Ocello pair, partnered with an R400 Tug to aid in piercing jamming. The Lineship has a mix of 450mm and 250mm cannons which can be brought to bear depending on the threat. You'll want to keep the two close together to defend against missile threats as alone they'll get picked off.</Description>
+Azurite Squadron features a fighting lineship and Ocello pair armed with cannons, partnered with an R400 tugboat to aid in piercing jamming. The lineship has a heavier cannon loadout than the Ocello, but a harder time bringing it to bear - aligning before the engagement with the hold heading command will prove useful. You'll also want to keep the two close together to defend against missile threats, with the spotting tugboat safely in the rear.</Description>
+  <SortOverrideOrder>4</SortOverrideOrder>
   <Ships>
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>da410729-e79e-4924-ad05-56bd3c95f694</Key>
       <Name>Rose Soul</Name>
-      <Cost>1572</Cost>
+      <Cost>1585</Cost>
       <Callsign />
       <Number>586</Number>
       <SymbolOption>0</SymbolOption>
@@ -32,23 +33,51 @@ Frontline fighting Cannon Armed Lineship and Ocello pair, partnered with an R400
         </HullSocket>
         <HullSocket>
           <Key>4v5e01-gEUiTNnQJevNpGg</Key>
-          <ComponentName>Stock/Mk95 'Sarissa' PDT</ComponentName>
+          <ComponentName>Stock/Mk90 'Aurora' PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>o78jebL2nkezXdHJ6xA3WA</Key>
-          <ComponentName>Stock/Mk95 'Sarissa' PDT</ComponentName>
+          <ComponentName>Stock/Mk90 'Aurora' PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>Gpm2KFKPCU-0ECKr0YsJAw</Key>
-          <ComponentName>Stock/E70 'Interruption' Jammer</ComponentName>
+          <ComponentName>Stock/VLS-1-46 Launcher</ComponentName>
+          <ComponentData xsi:type="CellLauncherData">
+            <MissileLoad>
+              <MagSaveData>
+                <MagazineKey>kWIFt_PS50CehXlY0Li5mw</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-123 Defender</MunitionKey>
+                <Quantity>35</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>_yNca5m-8kqHgFWjhC5u_g</MagazineKey>
+                <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
+                <Quantity>7</Quantity>
+              </MagSaveData>
+            </MissileLoad>
+          </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>-lwFeyvDUECyC-AuVfATog</Key>
-          <ComponentName>Stock/J360 Jammer</ComponentName>
+          <ComponentName>Stock/VLS-1-46 Launcher</ComponentName>
+          <ComponentData xsi:type="CellLauncherData">
+            <MissileLoad>
+              <MagSaveData>
+                <MagazineKey>2o4EHcyt8EeWFQaJwy16Nw</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-123 Defender</MunitionKey>
+                <Quantity>35</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>lZbMXSt2hkWcr2JFcH6yqA</MagazineKey>
+                <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
+                <Quantity>7</Quantity>
+              </MagSaveData>
+            </MissileLoad>
+          </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>rI5k7ytZH0S7yQLZnFB_nQ</Key>
-          <ComponentName>Stock/L50 Laser Dazzler</ComponentName>
+          <ComponentName>Stock/Mk90 'Aurora' PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>0J9pyeFp6U6KMEAXiuNHHw</Key>
@@ -56,11 +85,11 @@ Frontline fighting Cannon Armed Lineship and Ocello pair, partnered with an R400
         </HullSocket>
         <HullSocket>
           <Key>mP5XoHZ3Wk-DsFk3YLAxzg</Key>
-          <ComponentName>Stock/P60 Laser PDT</ComponentName>
+          <ComponentName>Stock/P20 Flak PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>xe7LNTrStUuS8PMCn6KYsQ</Key>
-          <ComponentName>Stock/P60 Laser PDT</ComponentName>
+          <ComponentName>Stock/P20 Flak PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>4NKBOsswyUGpVA-YP-T5ng</Key>
@@ -78,16 +107,16 @@ Frontline fighting Cannon Armed Lineship and Ocello pair, partnered with an R400
                 <Quantity>375</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>3gyvUdJYXUuKleqbI-TM-Q</MagazineKey>
-                <MunitionKey>Stock/15mm Sandshot</MunitionKey>
-                <Quantity>200</Quantity>
+                <MagazineKey>zPM04epwVk-fvCMeZHomaQ</MagazineKey>
+                <MunitionKey>Stock/Flak Round</MunitionKey>
+                <Quantity>600</Quantity>
               </MagSaveData>
             </Load>
           </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>bzRgWNrBdE6BjUaGy8G1tg</Key>
-          <ComponentName>Stock/Large DC Locker</ComponentName>
+          <ComponentName>Stock/Rapid DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>foWiXJZCEEKQx0LmO1IMnw</Key>
@@ -103,11 +132,11 @@ Frontline fighting Cannon Armed Lineship and Ocello pair, partnered with an R400
         </HullSocket>
         <HullSocket>
           <Key>q5iHLt9VEU-166x4NJmr4Q</Key>
-          <ComponentName>Stock/Rapid DC Locker</ComponentName>
+          <ComponentName>Stock/Reinforced DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>vXXZA02qQEyreCSFbtLJOA</Key>
-          <ComponentName>Stock/Rapid DC Locker</ComponentName>
+          <ComponentName>Stock/Reinforced DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>S03aWjfX90epbCcytu9_xw</Key>
@@ -115,7 +144,7 @@ Frontline fighting Cannon Armed Lineship and Ocello pair, partnered with an R400
         </HullSocket>
         <HullSocket>
           <Key>aImgD6jcq0GZXRi5MmyeWw</Key>
-          <ComponentName>Stock/Reinforced DC Locker</ComponentName>
+          <ComponentName>Stock/Large DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>hjHxzsG5iUCkaG0eGd52bA</Key>
@@ -123,11 +152,11 @@ Frontline fighting Cannon Armed Lineship and Ocello pair, partnered with an R400
         </HullSocket>
         <HullSocket>
           <Key>Fp6_NyEq1E-ZGeZxM9kjUg</Key>
-          <ComponentName>Stock/FM280 'Raider' Drive</ComponentName>
+          <ComponentName>Stock/Boosted Reactor</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>-XwaOMN6eUSsztvywrmXVQ</Key>
-          <ComponentName>Stock/Boosted Reactor</ComponentName>
+          <ComponentName>Stock/FM580 'Raider' Drive</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>26mxVeOdd0SB5ZSaG_hJ0w</Key>
@@ -166,21 +195,6 @@ Frontline fighting Cannon Armed Lineship and Ocello pair, partnered with an R400
             <string>iJzzxinSN0uJIjrt9M3aGA</string>
           </MemberKeys>
         </WepGroup>
-        <WepGroup Name="OmiRadar jammer">
-          <MemberKeys>
-            <string>-lwFeyvDUECyC-AuVfATog</string>
-          </MemberKeys>
-        </WepGroup>
-        <WepGroup Name="Omicom Jam">
-          <MemberKeys>
-            <string>Gpm2KFKPCU-0ECKr0YsJAw</string>
-          </MemberKeys>
-        </WepGroup>
-        <WepGroup Name="EO">
-          <MemberKeys>
-            <string>rI5k7ytZH0S7yQLZnFB_nQ</string>
-          </MemberKeys>
-        </WepGroup>
       </WeaponGroups>
       <TemplateMissileTypes />
     </Ship>
@@ -188,7 +202,7 @@ Frontline fighting Cannon Armed Lineship and Ocello pair, partnered with an R400
       <SaveID xsi:nil="true" />
       <Key>b33e4aa7-533d-4657-8e54-c6c190b4debe</Key>
       <Name>Abject Terror</Name>
-      <Cost>1166</Cost>
+      <Cost>1134</Cost>
       <Callsign />
       <Number>258</Number>
       <SymbolOption>0</SymbolOption>
@@ -244,20 +258,8 @@ Frontline fighting Cannon Armed Lineship and Ocello pair, partnered with an R400
           <ComponentName>Stock/C65 Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
-          <Key>auQ7ijGeX0evdikZQeBxTg</Key>
-          <ComponentName>Stock/C53 Cannon</ComponentName>
-        </HullSocket>
-        <HullSocket>
           <Key>d3N-B_JnDUKAdVRBJ6nvFQ</Key>
           <ComponentName>Stock/C65 Cannon</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>xvNT1_DYcUuSpU6rrmL_4A</Key>
-          <ComponentName>Stock/C53 Cannon</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>t0T4CSAPnEq4rvHAVl84-Q</Key>
-          <ComponentName>Stock/C53 Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>grYBjxIS3E--lmrqenuK8A</Key>
@@ -268,20 +270,16 @@ Frontline fighting Cannon Armed Lineship and Ocello pair, partnered with an R400
           <ComponentName>Stock/C65 Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
-          <Key>tcQfj6XOHUWFSAx_W0cc1A</Key>
-          <ComponentName>Stock/C53 Cannon</ComponentName>
-        </HullSocket>
-        <HullSocket>
           <Key>bxvsvg5znk6TqiIKq8H0kg</Key>
-          <ComponentName>Stock/P11 PDT</ComponentName>
+          <ComponentName>Stock/P20 Flak PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>9EF9u0V1eUetleBnkQhHkA</Key>
-          <ComponentName>Stock/P11 PDT</ComponentName>
+          <ComponentName>Stock/P20 Flak PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>I68tNng-K0yG-AoUx0HcSw</Key>
-          <ComponentName>Stock/P20 Flak PDT</ComponentName>
+          <ComponentName>Stock/P11 PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>Sb5-VSuwlkWpT6ViRiJ3vg</Key>
@@ -291,22 +289,27 @@ Frontline fighting Cannon Armed Lineship and Ocello pair, partnered with an R400
               <MagSaveData>
                 <MagazineKey>wkafEDT7jEK9TeEtYVoCjw</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-123 Defender</MunitionKey>
-                <Quantity>40</Quantity>
+                <Quantity>30</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>dQyU52z-h0ipSyVhoEB5VA</MagazineKey>
+                <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
+                <Quantity>16</Quantity>
               </MagSaveData>
             </MissileLoad>
           </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>6ZiODnoXqkaNWvaqyGjnwg</Key>
-          <ComponentName>Stock/P20 Flak PDT</ComponentName>
+          <ComponentName>Stock/P11 PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>87PSgg9GREmGU9MIRAXXhg</Key>
-          <ComponentName>Stock/P11 PDT</ComponentName>
+          <ComponentName>Stock/P20 Flak PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>VDQhZPo-rkWkzwozat27fw</Key>
-          <ComponentName>Stock/P11 PDT</ComponentName>
+          <ComponentName>Stock/P20 Flak PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>y1Cs8LR0KUyCKUAJBIOyOg</Key>
@@ -314,45 +317,35 @@ Frontline fighting Cannon Armed Lineship and Ocello pair, partnered with an R400
         </HullSocket>
         <HullSocket>
           <Key>fYoX2amTl0KrZurPKjU9gg</Key>
-          <ComponentName>Stock/Reinforced Magazine</ComponentName>
+          <ComponentName>Stock/Citadel Magazine</ComponentName>
           <ComponentData xsi:type="BulkMagazineData">
             <Load>
               <MagSaveData>
-                <MagazineKey>qg0dGebu8Ea7DqrfOXSvLg</MagazineKey>
+                <MagazineKey>Fg-WtFNWV0iRVLOjvn_mfw</MagazineKey>
                 <MunitionKey>Stock/20mm Slug</MunitionKey>
-                <Quantity>12000</Quantity>
+                <Quantity>16000</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>P7qKWnH6nEePDdptOVn9oQ</MagazineKey>
-                <MunitionKey>Stock/250mm AP Shell</MunitionKey>
-                <Quantity>200</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>-0B68voUZkGX_VyZHvjlaA</MagazineKey>
-                <MunitionKey>Stock/250mm HE Shell</MunitionKey>
-                <Quantity>200</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>ADhGkROWakGVgOJDsFq9dQ</MagazineKey>
+                <MagazineKey>_aBsy6av30qMaF5rNHRnlw</MagazineKey>
                 <MunitionKey>Stock/450mm AP Shell</MunitionKey>
                 <Quantity>300</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>akixVqHJG0uIavWsZ1fQVw</MagazineKey>
+                <MagazineKey>HLH3FIBJ7UCiOAh_7G9LkA</MagazineKey>
                 <MunitionKey>Stock/450mm HE Shell</MunitionKey>
-                <Quantity>300</Quantity>
+                <Quantity>400</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>vrMAdHzr5k-kCZGcCLQAUg</MagazineKey>
+                <MagazineKey>z7swNzDs_UmEY8QjsMQ7Yg</MagazineKey>
                 <MunitionKey>Stock/Flak Round</MunitionKey>
-                <Quantity>600</Quantity>
+                <Quantity>1275</Quantity>
               </MagSaveData>
             </Load>
           </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>3Ky8PvdxqUKMRXZa0xLF2A</Key>
-          <ComponentName>Stock/Large DC Storage</ComponentName>
+          <ComponentName>Stock/Damage Control Complex</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>T9TN0ZYumUaCxcSRjO_qTw</Key>
@@ -360,7 +353,7 @@ Frontline fighting Cannon Armed Lineship and Ocello pair, partnered with an R400
         </HullSocket>
         <HullSocket>
           <Key>T4d-8WnA_UiHSJh6PXiXpA</Key>
-          <ComponentName>Stock/Rapid DC Locker</ComponentName>
+          <ComponentName>Stock/Auxiliary Steering</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>6LpDL27QuEW0PZCm35Nx5w</Key>
@@ -372,19 +365,19 @@ Frontline fighting Cannon Armed Lineship and Ocello pair, partnered with an R400
         </HullSocket>
         <HullSocket>
           <Key>FVcPIcV_00eu62NQQK3oLg</Key>
-          <ComponentName>Stock/Large DC Locker</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>1FrTJ5o850ynlq4dRDmMbA</Key>
           <ComponentName>Stock/Reinforced CIC</ComponentName>
         </HullSocket>
         <HullSocket>
+          <Key>1FrTJ5o850ynlq4dRDmMbA</Key>
+          <ComponentName>Stock/Large DC Locker</ComponentName>
+        </HullSocket>
+        <HullSocket>
           <Key>vOzzHo4KfE60wZ3Q1s38GA</Key>
-          <ComponentName>Stock/CHI-777 Yard Drive</ComponentName>
+          <ComponentName>Stock/CHI-9100 Long Haul Drive</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>6evWdeLGT0uALe075-nhgw</Key>
-          <ComponentName>Stock/Sundrive Racing Pro</ComponentName>
+          <ComponentName>Stock/CHI-777 Yard Drive</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>JVCLf3RKKUOBEXaWWkVLMw</Key>
@@ -396,11 +389,11 @@ Frontline fighting Cannon Armed Lineship and Ocello pair, partnered with an R400
         </HullSocket>
         <HullSocket>
           <Key>yryHYXgMWEy969gRuaDO6w</Key>
-          <ComponentName>Stock/Rapid-Cycle Cradle</ComponentName>
+          <ComponentName>Stock/Ammunition Elevators</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>MQyTgOLGCkyeljdvbkkFDA</Key>
-          <ComponentName>Stock/Rapid-Cycle Cradle</ComponentName>
+          <ComponentName>Stock/Ammunition Elevators</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>S-rQo19r20K0L0PRer3yMw</Key>
@@ -412,14 +405,6 @@ Frontline fighting Cannon Armed Lineship and Ocello pair, partnered with an R400
         </HullSocket>
       </SocketMap>
       <WeaponGroups>
-        <WepGroup Name="250">
-          <MemberKeys>
-            <string>auQ7ijGeX0evdikZQeBxTg</string>
-            <string>xvNT1_DYcUuSpU6rrmL_4A</string>
-            <string>t0T4CSAPnEq4rvHAVl84-Q</string>
-            <string>tcQfj6XOHUWFSAx_W0cc1A</string>
-          </MemberKeys>
-        </WepGroup>
         <WepGroup Name="450">
           <MemberKeys>
             <string>d3N-B_JnDUKAdVRBJ6nvFQ</string>
@@ -435,7 +420,7 @@ Frontline fighting Cannon Armed Lineship and Ocello pair, partnered with an R400
       <SaveID xsi:nil="true" />
       <Key>6b49867a-5f92-4992-aa29-8ce18138c9b7</Key>
       <Name>Always Alert</Name>
-      <Cost>262</Cost>
+      <Cost>281</Cost>
       <Callsign />
       <Number>611</Number>
       <SymbolOption>0</SymbolOption>
@@ -451,16 +436,21 @@ Frontline fighting Cannon Armed Lineship and Ocello pair, partnered with an R400
           <ComponentData xsi:type="CellLauncherData">
             <MissileLoad>
               <MagSaveData>
-                <MagazineKey>_6LNzD6W3U2TgEnrpJH8OA</MagazineKey>
-                <MunitionKey>$MODMIS$/SGM-112 Shield</MunitionKey>
-                <Quantity>16</Quantity>
+                <MagazineKey>l1P_shOSoEaeiYCrkX2_rA</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-123 Defender</MunitionKey>
+                <Quantity>15</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>6E_yv2BJn066Ax2yWPlcGw</MagazineKey>
+                <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
+                <Quantity>6</Quantity>
               </MagSaveData>
             </MissileLoad>
           </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>F6bmJdCO3EqzXK9SBJoXUw</Key>
-          <ComponentName>Stock/Basic CIC</ComponentName>
+          <ComponentName>Stock/Reinforced CIC</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>-PqoLKimSUOZtKMLo5QHXg</Key>
@@ -510,12 +500,12 @@ Targeting Modes:
 	&lt;b&gt;&lt;color=#4CFF72&gt;POSITION&lt;/color&gt;	&lt;color=#4CFF72&gt;TRACK&lt;/color&gt;&lt;/b&gt;
 Primary Seeker: ACTIVE &lt;color=#4CFF72&gt;RADAR&lt;/color&gt;
 
-303 m/s for 6,551 m, top speed in 0.8 s
+304 m/s for 2,325 m, top speed in 0.5 s
 Terminal Maneuvers: None
 
 Proximity Fuze, High Explosive, Blast Fragmentation
-Armor: 1cm   Component: 40hp
-Blast Radius: 33 m
+Armor: 2cm   Component: 65hp
+Blast Radius: 47 m
 
 Body Integrity: 10 
 Programming Time: 6 s
@@ -554,111 +544,33 @@ Failure Rate: 0 %</LongDescription>
           <InstalledComponent xsi:type="DirectGuidanceSettings">
             <ComponentKey>Stock/Direct Guidance</ComponentKey>
             <Role>Defensive</Role>
-            <HotLaunch>false</HotLaunch>
-            <SelfDestructOnLost>false</SelfDestructOnLost>
-            <Maneuvers>None</Maneuvers>
-            <DefensiveDoctrine>
-              <TargetSizeMask>8</TargetSizeMask>
-              <TargetSizeOrdering>Descending</TargetSizeOrdering>
-              <SalvoSize>1</SalvoSize>
-              <FarthestFirst>false</FarthestFirst>
-            </DefensiveDoctrine>
-            <ApproachAngleControl>true</ApproachAngleControl>
-          </InstalledComponent>
-        </MissileSocket>
-        <MissileSocket>
-          <Size>2</Size>
-          <InstalledComponent>
-            <ComponentKey>Stock/Blast Fragmentation</ComponentKey>
-          </InstalledComponent>
-        </MissileSocket>
-        <MissileSocket>
-          <Size>4</Size>
-          <InstalledComponent xsi:type="MissileEngineSettings">
-            <ComponentKey />
-            <BalanceValues>
-              <A>0.350815</A>
-              <B>0.585463166</B>
-              <C>0.0637218356</C>
-            </BalanceValues>
-          </InstalledComponent>
-        </MissileSocket>
-      </Sockets>
-    </MissileTemplate>
-    <MissileTemplate>
-      <AssociatedTemplateName>SGM-112 Shield</AssociatedTemplateName>
-      <Designation>SGM-112</Designation>
-      <Nickname>Shield</Nickname>
-      <Description>DIRECT - ACT(&lt;color=#4CFF72&gt;RADAR&lt;/color&gt;) - HE FRAG</Description>
-      <LongDescription>The SGM-112 Shield is a size 1 direct guidance missile.  It is based on the SGM-1 body, which is a nimble general-purpose missile.  This missile will deliver a Proximity Fuze, High Explosive, Blast Fragmentation warhead.  It homes in on its target using an Active Radar seeker.
-
-Control Method: DIRECT
-Targeting Modes:
-	&lt;b&gt;&lt;color=#4CFF72&gt;POSITION&lt;/color&gt;	&lt;color=#4CFF72&gt;TRACK&lt;/color&gt;&lt;/b&gt;
-Primary Seeker: ACTIVE &lt;color=#4CFF72&gt;RADAR&lt;/color&gt;
-
-303 m/s for 6,551 m, top speed in 0.8 s
-Terminal Maneuvers: None
-
-Proximity Fuze, High Explosive, Blast Fragmentation
-Armor: 1cm   Component: 40hp
-Blast Radius: 33 m</LongDescription>
-      <Cost>2</Cost>
-      <BodyKey>Stock/SGM-1 Body</BodyKey>
-      <TemplateKey>8e6871dc-ae2d-42f5-a217-6662600d46cd</TemplateKey>
-      <BaseColor>
-        <r>1</r>
-        <g>0.4862745</g>
-        <b>0</b>
-        <a>1</a>
-      </BaseColor>
-      <StripeColor>
-        <r>0.254901975</r>
-        <g>0.254901975</g>
-        <b>0.254901975</b>
-        <a>1</a>
-      </StripeColor>
-      <Sockets>
-        <MissileSocket>
-          <Size>1</Size>
-          <InstalledComponent xsi:type="ActiveSeekerSettings">
-            <ComponentKey>Stock/Steerable Active Radar Seeker</ComponentKey>
-            <Mode>Targeting</Mode>
-            <RejectUnvalidated>false</RejectUnvalidated>
-            <DetectPDTargets>false</DetectPDTargets>
-          </InstalledComponent>
-        </MissileSocket>
-        <MissileSocket>
-          <Size>1</Size>
-          <InstalledComponent xsi:type="DirectGuidanceSettings">
-            <ComponentKey>Stock/Direct Guidance</ComponentKey>
-            <Role>Defensive</Role>
-            <HotLaunch>false</HotLaunch>
+            <HotLaunch>true</HotLaunch>
             <SelfDestructOnLost>false</SelfDestructOnLost>
             <Maneuvers>None</Maneuvers>
             <DefensiveDoctrine>
               <TargetSizeMask>12</TargetSizeMask>
+              <TargetType>Hybrid</TargetType>
               <TargetSizeOrdering>Descending</TargetSizeOrdering>
-              <SalvoSize>1</SalvoSize>
+              <SalvoSize>0</SalvoSize>
               <FarthestFirst>false</FarthestFirst>
             </DefensiveDoctrine>
             <ApproachAngleControl>true</ApproachAngleControl>
           </InstalledComponent>
         </MissileSocket>
         <MissileSocket>
-          <Size>2</Size>
+          <Size>4</Size>
           <InstalledComponent>
             <ComponentKey>Stock/Blast Fragmentation</ComponentKey>
           </InstalledComponent>
         </MissileSocket>
         <MissileSocket>
-          <Size>4</Size>
+          <Size>3</Size>
           <InstalledComponent xsi:type="MissileEngineSettings">
             <ComponentKey />
             <BalanceValues>
-              <A>0.350815</A>
-              <B>0.585463166</B>
-              <C>0.0637218356</C>
+              <A>0.360532731</A>
+              <B>0.106361784</B>
+              <C>0.5331055</C>
             </BalanceValues>
           </InstalledComponent>
         </MissileSocket>

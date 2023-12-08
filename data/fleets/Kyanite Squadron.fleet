@@ -4,15 +4,16 @@
   <Version>3</Version>
   <TotalPoints>3000</TotalPoints>
   <FactionKey>Stock/Protectorate</FactionKey>
-  <Description>Difficulty: &lt;color=yellow&gt;MODERATE&lt;/color&gt;
+  <Description>Difficulty: &lt;color=green&gt;EASY&lt;/color&gt;
 
-Kyanite Squadron comprises of twin Bulk Freighter class Line ships with heavy casemate guns on one side and missile launchers on the other. It is a simple, tanky fleet perfect for engaging at mid-long ranges with evasive maneuvers and by popping in and out of cover. Heading and roll management will be critical to employ the big guns of these two ships in conjunction with the directional long range tracking radar. While vulnerable to being flanked, Kyanite Squadron has a moderate point defense net and anti-missile complement on its cannon side.</Description>
+Kyanite Squadron is comprised of dual lineships with heavy guns on one side and missile launchers on the other. It is a simple, semi-durable fleet perfect for engaging at mid-long ranges by popping in and out of cover to dump bursts of fire. Use of the hold heading command will be critical to pre-align the fleet's big guns and tracking radar. While vulnerable to being flanked, the fleet has a significant point defense net and interceptor missile complement. The fleet's offensive missiles are suited for finishing off damaged warships or dealing with small scouts.</Description>
+  <SortOverrideOrder>2</SortOverrideOrder>
   <Ships>
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>0ad9e563-d7aa-4326-be4a-faa822cf5e49</Key>
       <Name>No Other Way</Name>
-      <Cost>1503</Cost>
+      <Cost>1482</Cost>
       <Callsign />
       <Number>344</Number>
       <SymbolOption>0</SymbolOption>
@@ -90,7 +91,7 @@ Kyanite Squadron comprises of twin Bulk Freighter class Line ships with heavy ca
         </HullSocket>
         <HullSocket>
           <Key>bxvsvg5znk6TqiIKq8H0kg</Key>
-          <ComponentName>Stock/P60 Laser PDT</ComponentName>
+          <ComponentName>Stock/P20 Flak PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>9EF9u0V1eUetleBnkQhHkA</Key>
@@ -106,9 +107,9 @@ Kyanite Squadron comprises of twin Bulk Freighter class Line ships with heavy ca
           <ComponentData xsi:type="CellLauncherData">
             <MissileLoad>
               <MagSaveData>
-                <MagazineKey>XtEk6ydzqUuGCaTBI88Bzw</MagazineKey>
-                <MunitionKey>$MODMIS$/SGM-100 Riposte II Block V</MunitionKey>
-                <Quantity>31</Quantity>
+                <MagazineKey>E_N7G4kg_U-2bVOZxp4KgQ</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-1 Mk.9 Counter</MunitionKey>
+                <Quantity>33</Quantity>
               </MagSaveData>
             </MissileLoad>
           </ComponentData>
@@ -131,7 +132,7 @@ Kyanite Squadron comprises of twin Bulk Freighter class Line ships with heavy ca
         </HullSocket>
         <HullSocket>
           <Key>3Ky8PvdxqUKMRXZa0xLF2A</Key>
-          <ComponentName>Stock/Large DC Storage</ComponentName>
+          <ComponentName>Stock/Damage Control Complex</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>fYoX2amTl0KrZurPKjU9gg</Key>
@@ -141,54 +142,54 @@ Kyanite Squadron comprises of twin Bulk Freighter class Line ships with heavy ca
               <MagSaveData>
                 <MagazineKey>fhDzeisGD0K0uBG7fPcPIg</MagazineKey>
                 <MunitionKey>Stock/450mm AP Shell</MunitionKey>
-                <Quantity>275</Quantity>
+                <Quantity>350</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>cV3HgXPCPUuz7ACwRThpzw</MagazineKey>
                 <MunitionKey>Stock/450mm HE Shell</MunitionKey>
-                <Quantity>600</Quantity>
+                <Quantity>325</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>praYgX873kK5QSu95E4iMg</MagazineKey>
                 <MunitionKey>Stock/Flak Round</MunitionKey>
-                <Quantity>825</Quantity>
+                <Quantity>875</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>4B3q_OHi5U-r5OFuGd_DlQ</MagazineKey>
                 <MunitionKey>Stock/20mm Slug</MunitionKey>
-                <Quantity>20000</Quantity>
+                <Quantity>8000</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>CEyahSEfxUO8ZbpB2MzDmw</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-289 Type 14</MunitionKey>
-                <Quantity>34</Quantity>
+                <Quantity>24</Quantity>
               </MagSaveData>
             </Load>
           </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>T9TN0ZYumUaCxcSRjO_qTw</Key>
-          <ComponentName>Stock/Gun Plotting Center</ComponentName>
+          <ComponentName>Stock/Plant Control Center</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>T4d-8WnA_UiHSJh6PXiXpA</Key>
-          <ComponentName>Stock/Large DC Locker</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>6LpDL27QuEW0PZCm35Nx5w</Key>
           <ComponentName>Stock/Gun Plotting Center</ComponentName>
         </HullSocket>
         <HullSocket>
-          <Key>QIOFQpQSKESIdNzf_JEFyA</Key>
-          <ComponentName>Stock/Large DC Locker</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>FVcPIcV_00eu62NQQK3oLg</Key>
+          <Key>6LpDL27QuEW0PZCm35Nx5w</Key>
           <ComponentName>Stock/Reinforced CIC</ComponentName>
         </HullSocket>
         <HullSocket>
+          <Key>QIOFQpQSKESIdNzf_JEFyA</Key>
+          <ComponentName>Stock/Reinforced DC Locker</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>FVcPIcV_00eu62NQQK3oLg</Key>
+          <ComponentName>Stock/Reinforced DC Locker</ComponentName>
+        </HullSocket>
+        <HullSocket>
           <Key>1FrTJ5o850ynlq4dRDmMbA</Key>
-          <ComponentName>Stock/Damage Control Central</ComponentName>
+          <ComponentName>Stock/Reinforced DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>vOzzHo4KfE60wZ3Q1s38GA</Key>
@@ -200,7 +201,7 @@ Kyanite Squadron comprises of twin Bulk Freighter class Line ships with heavy ca
         </HullSocket>
         <HullSocket>
           <Key>JVCLf3RKKUOBEXaWWkVLMw</Key>
-          <ComponentName>Stock/Ammunition Elevators</ComponentName>
+          <ComponentName>Stock/Light Civilian Reactor</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>JHJi2y5Xskytpw5-Qbu95A</Key>
@@ -216,11 +217,11 @@ Kyanite Squadron comprises of twin Bulk Freighter class Line ships with heavy ca
         </HullSocket>
         <HullSocket>
           <Key>S-rQo19r20K0L0PRer3yMw</Key>
-          <ComponentName>Stock/Light Civilian Reactor</ComponentName>
+          <ComponentName>Stock/Track Correlator</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>M3mc7A4WOU-2fq5XgRSECA</Key>
-          <ComponentName>Stock/Light Civilian Reactor</ComponentName>
+          <ComponentName>Stock/Track Correlator</ComponentName>
         </HullSocket>
       </SocketMap>
       <WeaponGroups>
@@ -244,7 +245,7 @@ Kyanite Squadron comprises of twin Bulk Freighter class Line ships with heavy ca
       <SaveID xsi:nil="true" />
       <Key>47fba6f0-c961-457a-a19d-1373288733b1</Key>
       <Name>Final Orders</Name>
-      <Cost>1497</Cost>
+      <Cost>1518</Cost>
       <Callsign />
       <Number>366</Number>
       <SymbolOption>0</SymbolOption>
@@ -298,15 +299,15 @@ Kyanite Squadron comprises of twin Bulk Freighter class Line ships with heavy ca
           <ComponentName>Stock/C65 Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
+          <Key>auQ7ijGeX0evdikZQeBxTg</Key>
+          <ComponentName>Stock/MLS-2 Launcher</ComponentName>
+        </HullSocket>
+        <HullSocket>
           <Key>d3N-B_JnDUKAdVRBJ6nvFQ</Key>
           <ComponentName>Stock/C65 Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>xvNT1_DYcUuSpU6rrmL_4A</Key>
-          <ComponentName>Stock/MLS-2 Launcher</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>t0T4CSAPnEq4rvHAVl84-Q</Key>
           <ComponentName>Stock/MLS-2 Launcher</ComponentName>
         </HullSocket>
         <HullSocket>
@@ -335,16 +336,16 @@ Kyanite Squadron comprises of twin Bulk Freighter class Line ships with heavy ca
           <ComponentData xsi:type="CellLauncherData">
             <MissileLoad>
               <MagSaveData>
-                <MagazineKey>uE75x1kwiUi6NK8-lr7MgA</MagazineKey>
-                <MunitionKey>$MODMIS$/SGM-100 Riposte II Block V</MunitionKey>
-                <Quantity>31</Quantity>
+                <MagazineKey>J7C-7z3TmUGl3WwkycZiDw</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-1 Mk.9 Counter</MunitionKey>
+                <Quantity>33</Quantity>
               </MagSaveData>
             </MissileLoad>
           </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>6ZiODnoXqkaNWvaqyGjnwg</Key>
-          <ComponentName>Stock/P11 PDT</ComponentName>
+          <ComponentName>Stock/P20 Flak PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>87PSgg9GREmGU9MIRAXXhg</Key>
@@ -352,7 +353,7 @@ Kyanite Squadron comprises of twin Bulk Freighter class Line ships with heavy ca
         </HullSocket>
         <HullSocket>
           <Key>VDQhZPo-rkWkzwozat27fw</Key>
-          <ComponentName>Stock/P20 Flak PDT</ComponentName>
+          <ComponentName>Stock/P11 PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>y1Cs8LR0KUyCKUAJBIOyOg</Key>
@@ -366,34 +367,34 @@ Kyanite Squadron comprises of twin Bulk Freighter class Line ships with heavy ca
               <MagSaveData>
                 <MagazineKey>fhDzeisGD0K0uBG7fPcPIg</MagazineKey>
                 <MunitionKey>Stock/450mm AP Shell</MunitionKey>
-                <Quantity>275</Quantity>
+                <Quantity>500</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>cV3HgXPCPUuz7ACwRThpzw</MagazineKey>
                 <MunitionKey>Stock/450mm HE Shell</MunitionKey>
-                <Quantity>600</Quantity>
+                <Quantity>450</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>praYgX873kK5QSu95E4iMg</MagazineKey>
                 <MunitionKey>Stock/Flak Round</MunitionKey>
-                <Quantity>750</Quantity>
+                <Quantity>875</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>4B3q_OHi5U-r5OFuGd_DlQ</MagazineKey>
                 <MunitionKey>Stock/20mm Slug</MunitionKey>
-                <Quantity>20000</Quantity>
+                <Quantity>8000</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>CEyahSEfxUO8ZbpB2MzDmw</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-289 Type 14</MunitionKey>
-                <Quantity>34</Quantity>
+                <Quantity>24</Quantity>
               </MagSaveData>
             </Load>
           </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>3Ky8PvdxqUKMRXZa0xLF2A</Key>
-          <ComponentName>Stock/Large DC Storage</ComponentName>
+          <ComponentName>Stock/Damage Control Complex</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>T9TN0ZYumUaCxcSRjO_qTw</Key>
@@ -401,15 +402,15 @@ Kyanite Squadron comprises of twin Bulk Freighter class Line ships with heavy ca
         </HullSocket>
         <HullSocket>
           <Key>T4d-8WnA_UiHSJh6PXiXpA</Key>
-          <ComponentName>Stock/Large DC Locker</ComponentName>
+          <ComponentName>Stock/Reinforced DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>6LpDL27QuEW0PZCm35Nx5w</Key>
-          <ComponentName>Stock/Gun Plotting Center</ComponentName>
+          <ComponentName>Stock/Reinforced DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>QIOFQpQSKESIdNzf_JEFyA</Key>
-          <ComponentName>Stock/Large DC Locker</ComponentName>
+          <ComponentName>Stock/Reinforced DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>FVcPIcV_00eu62NQQK3oLg</Key>
@@ -417,7 +418,7 @@ Kyanite Squadron comprises of twin Bulk Freighter class Line ships with heavy ca
         </HullSocket>
         <HullSocket>
           <Key>1FrTJ5o850ynlq4dRDmMbA</Key>
-          <ComponentName>Stock/Damage Control Central</ComponentName>
+          <ComponentName>Stock/Reinforced DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>vOzzHo4KfE60wZ3Q1s38GA</Key>
@@ -447,6 +448,10 @@ Kyanite Squadron comprises of twin Bulk Freighter class Line ships with heavy ca
           <Key>S-rQo19r20K0L0PRer3yMw</Key>
           <ComponentName>Stock/Light Civilian Reactor</ComponentName>
         </HullSocket>
+        <HullSocket>
+          <Key>M3mc7A4WOU-2fq5XgRSECA</Key>
+          <ComponentName>Stock/Light Civilian Reactor</ComponentName>
+        </HullSocket>
       </SocketMap>
       <WeaponGroups>
         <WepGroup Name="Gun">
@@ -459,11 +464,19 @@ Kyanite Squadron comprises of twin Bulk Freighter class Line ships with heavy ca
         </WepGroup>
         <WepGroup Name="MLS">
           <MemberKeys>
+            <string>auQ7ijGeX0evdikZQeBxTg</string>
             <string>xvNT1_DYcUuSpU6rrmL_4A</string>
-            <string>t0T4CSAPnEq4rvHAVl84-Q</string>
           </MemberKeys>
         </WepGroup>
       </WeaponGroups>
+      <InitialFormation>
+        <GuideKey>0ad9e563-d7aa-4326-be4a-faa822cf5e49</GuideKey>
+        <RelativePosition>
+          <x>-0.09498596</x>
+          <y>0</y>
+          <z>-60.15754</z>
+        </RelativePosition>
+      </InitialFormation>
       <TemplateMissileTypes />
     </Ship>
   </Ships>
@@ -480,12 +493,13 @@ Targeting Modes:
 Primary Seeker: ACTIVE &lt;color=#4CFF72&gt;RADAR&lt;/color&gt;
 Validation Seeker(s): COMMAND (&lt;color=#FBFF4C&gt;Requires COMMS Enabled&lt;/color&gt;)
 
-294 m/s for 9,052 m, top speed in 1.8 s
+251 m/s for 9,002 m, top speed in 1.5 s
 Terminal Maneuvers: Weave
 
 Contact Fuze, High Explosive, Shaped
-Armor: 60cm   Component: 1,200hp
+Armor: 66cm   Component: 1,440hp
 Blast Angle: 70 deg
+Damage Per Fragment: 50.0
 
 Body Integrity: 30 
 Programming Time: 8 s
@@ -496,7 +510,7 @@ Boost-Phase Turn Rate: 100 %
 Failure Rate: 0 %</LongDescription>
       <Cost>10</Cost>
       <BodyKey>Stock/SGM-2 Body</BodyKey>
-      <TemplateKey>ebd7901e-b38e-4f16-acfc-b781b539b3ca</TemplateKey>
+      <TemplateKey>ddf56f14-7f14-4e5c-8c61-cf0a5d1ccd80</TemplateKey>
       <BaseColor>
         <r>0.178571567</r>
         <g>0.9999999</g>
@@ -515,7 +529,7 @@ Failure Rate: 0 %</LongDescription>
           <InstalledComponent xsi:type="ActiveSeekerSettings">
             <ComponentKey>Stock/Steerable Active Radar Seeker</ComponentKey>
             <Mode>Targeting</Mode>
-            <RejectUnvalidated>true</RejectUnvalidated>
+            <RejectUnvalidated>false</RejectUnvalidated>
             <DetectPDTargets>false</DetectPDTargets>
           </InstalledComponent>
         </MissileSocket>
@@ -537,6 +551,7 @@ Failure Rate: 0 %</LongDescription>
             <Maneuvers>Weave</Maneuvers>
             <DefensiveDoctrine>
               <TargetSizeMask>12</TargetSizeMask>
+              <TargetType>All</TargetType>
               <TargetSizeOrdering>Descending</TargetSizeOrdering>
               <SalvoSize>0</SalvoSize>
               <FarthestFirst>false</FarthestFirst>
@@ -545,41 +560,41 @@ Failure Rate: 0 %</LongDescription>
           </InstalledComponent>
         </MissileSocket>
         <MissileSocket>
-          <Size>5</Size>
+          <Size>6</Size>
           <InstalledComponent>
             <ComponentKey>Stock/HE Impact</ComponentKey>
           </InstalledComponent>
         </MissileSocket>
         <MissileSocket>
-          <Size>5</Size>
+          <Size>4</Size>
           <InstalledComponent xsi:type="MissileEngineSettings">
             <ComponentKey />
             <BalanceValues>
-              <A>0.7177391</A>
-              <B>0.146790564</B>
-              <C>0.135470331</C>
+              <A>0.504627</A>
+              <B>0.322223365</B>
+              <C>0.173149645</C>
             </BalanceValues>
           </InstalledComponent>
         </MissileSocket>
       </Sockets>
     </MissileTemplate>
     <MissileTemplate>
-      <Designation>SGM-100</Designation>
-      <Nickname>Riposte II Block V</Nickname>
+      <Designation>SGM-1</Designation>
+      <Nickname>Mk.9 Counter</Nickname>
       <Description>DIRECT - ACT(&lt;color=#4CFF72&gt;RADAR&lt;/color&gt;) - HE FRAG</Description>
-      <LongDescription>The SGM-100 Riposte II Block V is a size 1 direct guidance missile.  It is based on the SGM-1 body, which is a nimble general-purpose missile.  This missile will deliver a Proximity Fuze, High Explosive, Blast Fragmentation warhead.  It homes in on its target using an Active Radar seeker.
+      <LongDescription>The SGM-1 Mk.9 Counter is a size 1 direct guidance missile.  It is based on the SGM-1 body, which is a nimble general-purpose missile.  This missile will deliver a Proximity Fuze, High Explosive, Blast Fragmentation warhead.  It homes in on its target using an Active Radar seeker.
 
 Control Method: DIRECT
 Targeting Modes:
 	&lt;b&gt;&lt;color=#4CFF72&gt;POSITION&lt;/color&gt;	&lt;color=#4CFF72&gt;TRACK&lt;/color&gt;&lt;/b&gt;
 Primary Seeker: ACTIVE &lt;color=#4CFF72&gt;RADAR&lt;/color&gt;
 
-346 m/s for 5,022 m, top speed in 0.9 s
+250 m/s for 2,958 m, top speed in 0.3 s
 Terminal Maneuvers: None
 
 Proximity Fuze, High Explosive, Blast Fragmentation
-Armor: 1cm   Component: 48hp
-Blast Radius: 40 m
+Armor: 2cm   Component: 33hp
+Blast Radius: 30 m
 
 Body Integrity: 10 
 Programming Time: 6 s
@@ -588,19 +603,19 @@ Boost-Phase Duration: 3 s
 Boost-Phase Strafe: 100 %
 Boost-Phase Turn Rate: 100 %
 Failure Rate: 0 %</LongDescription>
-      <Cost>2</Cost>
+      <Cost>3</Cost>
       <BodyKey>Stock/SGM-1 Body</BodyKey>
-      <TemplateKey>d24af149-d834-49b6-af1b-d84c776d4676</TemplateKey>
+      <TemplateKey>d96855e6-7b43-4162-8281-650450d4a1dd</TemplateKey>
       <BaseColor>
-        <r>0.092857115</r>
-        <g>0.9999999</g>
+        <r>0.9999999</r>
+        <g>0.7874478</g>
         <b>0</b>
         <a>1</a>
       </BaseColor>
       <StripeColor>
-        <r>0.254901975</r>
-        <g>0.254901975</g>
-        <b>0.254901975</b>
+        <r>0.7475385</r>
+        <g>0</g>
+        <b>0.9999999</b>
         <a>1</a>
       </StripeColor>
       <Sockets>
@@ -623,27 +638,28 @@ Failure Rate: 0 %</LongDescription>
             <Maneuvers>None</Maneuvers>
             <DefensiveDoctrine>
               <TargetSizeMask>12</TargetSizeMask>
+              <TargetType>Hybrid</TargetType>
               <TargetSizeOrdering>Descending</TargetSizeOrdering>
-              <SalvoSize>0</SalvoSize>
-              <FarthestFirst>false</FarthestFirst>
+              <SalvoSize>1</SalvoSize>
+              <FarthestFirst>true</FarthestFirst>
             </DefensiveDoctrine>
             <ApproachAngleControl>true</ApproachAngleControl>
           </InstalledComponent>
         </MissileSocket>
         <MissileSocket>
-          <Size>3</Size>
+          <Size>1</Size>
           <InstalledComponent>
-            <ComponentKey>Stock/Blast Fragmentation</ComponentKey>
+            <ComponentKey>Stock/Blast Fragmentation EL</ComponentKey>
           </InstalledComponent>
         </MissileSocket>
         <MissileSocket>
-          <Size>4</Size>
+          <Size>6</Size>
           <InstalledComponent xsi:type="MissileEngineSettings">
             <ComponentKey />
             <BalanceValues>
-              <A>0.6416276</A>
-              <B>0.2901872</B>
-              <C>0.06818518</C>
+              <A>0</A>
+              <B>-0</B>
+              <C>1</C>
             </BalanceValues>
           </InstalledComponent>
         </MissileSocket>
