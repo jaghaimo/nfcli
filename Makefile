@@ -1,6 +1,6 @@
 SOURCES = $(shell find data/ -iname '*.fleet' -o -iname '*.missile' -o -iname '*.ship' | sed 's/ /\\ /g')
 
-.PHONY: $(SOURCES) all clean check format lint black flake isort cache steam wiki
+.PHONY: $(SOURCES) all clean check format cache steam wiki
 
 all: $(SOURCES)
 
@@ -9,19 +9,12 @@ clean:
 	rm -f *.log
 	rm -f *.log.*
 
-check: format lint
+check:
+	poetry run ruff check nfcli/
 
 format:
-	poetry run black nfcli/
 	poetry run ruff check --fix nfcli/
-
-lint: black flake isort
-
-black:
-	poetry run black --check --no-color --diff nfcli/
-
-ruff:
-	poetry run ruff check nfcli/
+	poetry run ruff format nfcli/
 
 cache: steam wiki
 

@@ -3,7 +3,7 @@ import logging
 import xmltodict
 
 from nfcli import strip_tags
-from nfcli.data import Hulls, Tags, Components, Munitions
+from nfcli.data import Components, Hulls, Munitions, Tags
 from nfcli.models import Content, Fleet, Missile, Ship, Socket
 from nfcli.printers import Printable
 
