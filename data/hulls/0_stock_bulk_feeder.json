@@ -2,7 +2,7 @@
   "key": "Stock/Bulk Feeder",
   "name": "'Cargo Feeder' class Monitor",
   "mounts": {
-    "4V6twrIUcEKE11tom-tDXQ": "4x10x4",
+    "4V6twrIUcEKE11tom-tDXQ": "6x12x6",
     "yN7f-9tEXEKlBNskqP6EbA": "6x4x6",
     "Z2uDs34J-ESu64-i9YGnxQ": "6x4x6",
     "gb6_3kWBY0KlEWeex3ruDg": "3x2x5",
@@ -21,6 +21,8 @@
     "HNv6B-78FEuhV8YT9A6uZw": "10x5x8",
     "HvdEBsnpUUypPN4uW67paQ": "3x3x3",
     "iDdlfFwKkUO9HbumzymceA": "3x3x3",
-    "DaqWEX-8gEeIzYrhp8NIMw": "3x3x3"
+    "DaqWEX-8gEeIzYrhp8NIMw": "3x3x3",
+    "EvZ6JN5xV0aUlKEeeKxFTQ": "2x2x2",
+    "CU_oraqJxEaB3dTzZW2MkA": "2x2x2"
   }
 }
