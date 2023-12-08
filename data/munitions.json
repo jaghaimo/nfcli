@@ -1,0 +1,196 @@
+{
+  "Munitions": [
+    {
+      "Key": "Stock/250mm HE Shell",
+      "Name": "250mm HE Shell",
+      "PointCost": "1",
+      "PointDivision": "50"
+    },
+    {
+      "Key": "Stock/250mm AP Shell",
+      "Name": "250mm AP Shell",
+      "PointCost": "1",
+      "PointDivision": "50"
+    },
+    {
+      "Key": "Stock/250mm HE-RPF Shell",
+      "Name": "250mm HE-RPF Shell",
+      "PointCost": "1",
+      "PointDivision": "50"
+    },
+    {
+      "Key": "Stock/450mm HE Shell",
+      "Name": "450mm HE Shell",
+      "PointCost": "1",
+      "PointDivision": "25"
+    },
+    {
+      "Key": "Stock/450mm AP Shell",
+      "Name": "450mm AP Shell",
+      "PointCost": "1",
+      "PointDivision": "25"
+    },
+    {
+      "Key": "Stock/20mm Slug",
+      "Name": "20mm Slug",
+      "PointCost": "1",
+      "PointDivision": "2000"
+    },
+    {
+      "Key": "Stock/Flak Round",
+      "Name": "Flak Round",
+      "PointCost": "1",
+      "PointDivision": "75"
+    },
+    {
+      "Key": "Stock/120mm HE Shell",
+      "Name": "120mm HE Shell",
+      "PointCost": "1",
+      "PointDivision": "100"
+    },
+    {
+      "Key": "Stock/120mm AP Shell",
+      "Name": "120mm AP Shell",
+      "PointCost": "1",
+      "PointDivision": "100"
+    },
+    {
+      "Key": "Stock/120mm HE-RPF Shell",
+      "Name": "120mm HE-RPF Shell",
+      "PointCost": "1",
+      "PointDivision": "100"
+    },
+    {
+      "Key": "Stock/15mm Sandshot",
+      "Name": "15mm Sandshot",
+      "PointCost": "1",
+      "PointDivision": "50"
+    },
+    {
+      "Key": "Stock/300mm AP Rail Sabot",
+      "Name": "300mm AP Rail Sabot",
+      "PointCost": "1",
+      "PointDivision": "25"
+    },
+    {
+      "Key": "Stock/EA12 Chaff Decoy",
+      "Name": "EA12 Chaff Decoy",
+      "PointCost": "1",
+      "PointDivision": "1"
+    },
+    {
+      "Key": "Stock/EA20 Flare Decoy",
+      "Name": "EA20 Flare Decoy",
+      "PointCost": "1",
+      "PointDivision": "1"
+    },
+    {
+      "Key": "Stock/EA99 Active Decoy",
+      "Name": "EA99 Active Decoy",
+      "PointCost": "8",
+      "PointDivision": "1"
+    },
+    {
+      "Key": "Stock/100mm HE Shell",
+      "Name": "100mm HE Shell",
+      "PointCost": "1",
+      "PointDivision": "250"
+    },
+    {
+      "Key": "Stock/100mm HE-HC Shell",
+      "Name": "100mm HE-HC Shell",
+      "PointCost": "1",
+      "PointDivision": "250"
+    },
+    {
+      "Key": "Stock/100mm AP Shell",
+      "Name": "100mm AP Shell",
+      "PointCost": "1",
+      "PointDivision": "250"
+    },
+    {
+      "Key": "Stock/100mm Grapeshot",
+      "Name": "100mm Grape",
+      "PointCost": "1",
+      "PointDivision": "250"
+    },
+    {
+      "Key": "Stock/400mm Plasma Ampoule",
+      "Name": "400mm Plasma Ampoule",
+      "PointCost": "1",
+      "PointDivision": "25"
+    },
+    {
+      "Key": "Stock/500mm Fracturing Block",
+      "Name": "500mm Fracturing Block",
+      "PointCost": "1",
+      "PointDivision": "25"
+    },
+    {
+      "Key": "Stock/600mm HE Shell",
+      "Name": "600mm HE-SH Shell",
+      "PointCost": "1",
+      "PointDivision": "25"
+    },
+    {
+      "Key": "Stock/600mm Bomb Shell",
+      "Name": "600mm Bomb Shell",
+      "PointCost": "1",
+      "PointDivision": "25"
+    },
+    {
+      "Key": "Stock/S1 Rocket",
+      "Name": "R-2 'Piranha' Rocket",
+      "PointCost": "3",
+      "PointDivision": "1"
+    },
+    {
+      "Key": "Stock/S3 Mine",
+      "Name": "M-30 'Mattock' Mine",
+      "PointCost": "6",
+      "PointDivision": "1"
+    },
+    {
+      "Key": "Stock/S3 Net Mine",
+      "Name": "M-30-N 'Mattock' Cooperative Mine",
+      "PointCost": "6",
+      "PointDivision": "1"
+    },
+    {
+      "Key": "Stock/S3 Sprint Mine",
+      "Name": "M-50 'Auger' Sprint Mine",
+      "PointCost": "10",
+      "PointDivision": "1"
+    },
+    {
+      "Key": "Stock/Mine Container",
+      "Name": "CM-4M Mine Container",
+      "PointCost": "15",
+      "PointDivision": "1"
+    },
+    {
+      "Key": "Stock/Rocket Container",
+      "Name": "CM-4R6 Rocket Container",
+      "PointCost": "10",
+      "PointDivision": "1"
+    },
+    {
+      "Key": "Stock/Rocket Container 12",
+      "Name": "CM-4R12 Rocket Container",
+      "PointCost": "35",
+      "PointDivision": "1"
+    },
+    {
+      "Key": "Stock/Decoy Container (Clipper)",
+      "Name": "CM-4D1 Decoy Container (Clipper)",
+      "PointCost": "4",
+      "PointDivision": "1"
+    },
+    {
+      "Key": "Stock/Decoy Container (Line Ship)",
+      "Name": "CM-4D2 Decoy Container (Line Ship)",
+      "PointCost": "6",
+      "PointDivision": "1"
+    }
+  ]
+}

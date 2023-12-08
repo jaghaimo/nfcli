@@ -1,0 +1,1192 @@
+{
+  "Components": [
+    {
+      "Key": "Stock/Basic CIC",
+      "Name": "Basic CIC",
+      "MaxHP": "200",
+      "MinHP": "10",
+      "Crew": "20",
+      "Restores": "0",
+      "Priority": "High"
+    },
+    {
+      "Key": "Stock/Reinforced CIC",
+      "Name": "Reinforced CIC",
+      "MaxHP": "200",
+      "MinHP": "10",
+      "Crew": "20",
+      "Restores": "0",
+      "Priority": "High"
+    },
+    {
+      "Key": "Stock/Citadel CIC",
+      "Name": "Citadel CIC",
+      "MaxHP": "400",
+      "MinHP": "20",
+      "Crew": "40",
+      "Restores": "0",
+      "Priority": "High"
+    },
+    {
+      "Key": "Stock/Auxiliary Steering",
+      "Name": "Auxiliary Steering",
+      "MaxHP": "300",
+      "MinHP": "10",
+      "Crew": "5",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/Berthing",
+      "Name": "Berthing",
+      "MaxHP": "50",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Small DC Locker",
+      "Name": "Small DC Locker",
+      "MaxHP": "100",
+      "MinHP": "10",
+      "Crew": "10",
+      "Restores": "1",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Reinforced DC Locker",
+      "Name": "Reinforced DC Locker",
+      "MaxHP": "200",
+      "MinHP": "20",
+      "Crew": "10",
+      "Restores": "1",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Large DC Locker",
+      "Name": "Large DC Locker",
+      "MaxHP": "150",
+      "MinHP": "10",
+      "Crew": "15",
+      "Restores": "2",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Rapid DC Locker",
+      "Name": "Rapid DC Locker",
+      "MaxHP": "70",
+      "MinHP": "10",
+      "Crew": "5",
+      "Restores": "0",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Damage Control Central",
+      "Name": "Damage Control Central",
+      "MaxHP": "200",
+      "MinHP": "15",
+      "Crew": "10",
+      "Restores": "0",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Small Workshop",
+      "Name": "Small Workshop",
+      "MaxHP": "150",
+      "MinHP": "15",
+      "Crew": "10",
+      "Restores": "0",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Bulk Magazine",
+      "Name": "Bulk Magazine",
+      "MaxHP": "100",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/Reinforced Magazine",
+      "Name": "Reinforced Magazine",
+      "MaxHP": "150",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/Gun Plotting Center",
+      "Name": "Gun Plotting Center",
+      "MaxHP": "100",
+      "MinHP": "15",
+      "Crew": "30",
+      "Restores": "0",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Battle Dressing Station",
+      "Name": "Battle Dressing Station",
+      "MaxHP": "125",
+      "MinHP": "15",
+      "Crew": "8",
+      "Restores": "0",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Analysis Annex",
+      "Name": "Analysis Annex",
+      "MaxHP": "100",
+      "MinHP": "15",
+      "Crew": "20",
+      "Restores": "0",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Intelligence Center",
+      "Name": "Intelligence Center",
+      "MaxHP": "200",
+      "MinHP": "15",
+      "Crew": "45",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/Plant Control Center",
+      "Name": "Plant Control Center",
+      "MaxHP": "100",
+      "MinHP": "15",
+      "Crew": "15",
+      "Restores": "0",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Small Reactor Booster",
+      "Name": "Small Reactor Booster",
+      "MaxHP": "40",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Adaptive Radar Receiver",
+      "Name": "Adaptive Radar Receiver",
+      "MaxHP": "40",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Track Correlator",
+      "Name": "Track Correlator",
+      "MaxHP": "40",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Strobe Correlator",
+      "Name": "Strobe Correlator",
+      "MaxHP": "40",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Mount Gyros",
+      "Name": "Mount Gyros",
+      "MaxHP": "40",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Supplementary Radio Amplifiers",
+      "Name": "Supplementary Radio Amplifiers",
+      "MaxHP": "40",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Launcher Deluge System",
+      "Name": "Launcher Deluge System",
+      "MaxHP": "75",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Magazine Sprinklers",
+      "Name": "Magazine Sprinklers",
+      "MaxHP": "75",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Redundant Reactor Failsafes",
+      "Name": "Redundant Reactor Failsafes",
+      "MaxHP": "75",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Reinforced Thruster Nozzles",
+      "Name": "Reinforced Thruster Nozzles",
+      "MaxHP": "50",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Energy Regulator",
+      "Name": "Energy Regulator",
+      "MaxHP": "100",
+      "MinHP": "15",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Small Energy Regulator",
+      "Name": "Small Energy Regulator",
+      "MaxHP": "75",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Focused Particle Accelerator",
+      "Name": "Focused Particle Accelerator",
+      "MaxHP": "150",
+      "MinHP": "15",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Ammunition Elevators",
+      "Name": "Ammunition Elevators",
+      "MaxHP": "100",
+      "MinHP": "15",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Rapid-Cycle Cradle",
+      "Name": "Rapid-Cycle Cradle",
+      "MaxHP": "100",
+      "MinHP": "15",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Actively Cooled Amplifiers",
+      "Name": "Actively Cooled Amplifiers",
+      "MaxHP": "40",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Missile Programming Bus",
+      "Name": "Missile Programming Bus",
+      "MaxHP": "80",
+      "MinHP": "15",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Missile Programming Bus Array",
+      "Name": "Missile Programming Bus Array",
+      "MaxHP": "100",
+      "MinHP": "15",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Missile Parallel Interface",
+      "Name": "Missile Parallel Interface",
+      "MaxHP": "100",
+      "MinHP": "15",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/CR10 Antenna",
+      "Name": "CR10 Antenna",
+      "MaxHP": "100",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/VLS-1-23 Launcher",
+      "Name": "VLS-1-23 Launcher",
+      "MaxHP": "75",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/VLS-1-46 Launcher",
+      "Name": "VLS-1-46 Launcher",
+      "MaxHP": "125",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/Strike Planning Center",
+      "Name": "Strike Planning Center",
+      "MaxHP": "100",
+      "MinHP": "15",
+      "Crew": "20",
+      "Restores": "0",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/FM200 Drive",
+      "Name": "FM200 Drive",
+      "MaxHP": "250",
+      "MinHP": "50",
+      "Crew": "10",
+      "Restores": "0",
+      "Priority": "Critical"
+    },
+    {
+      "Key": "Stock/FM200R Drive",
+      "Name": "FM200R Drive",
+      "MaxHP": "500",
+      "MinHP": "25",
+      "Crew": "10",
+      "Restores": "0",
+      "Priority": "Critical"
+    },
+    {
+      "Key": "Stock/FM230 'Whiplash' Drive",
+      "Name": "FM230 'Whiplash' Drive",
+      "MaxHP": "250",
+      "MinHP": "50",
+      "Crew": "10",
+      "Restores": "0",
+      "Priority": "Critical"
+    },
+    {
+      "Key": "Stock/FM240 'Dragonfly' Drive",
+      "Name": "FM240 'Dragonfly' Drive",
+      "MaxHP": "250",
+      "MinHP": "50",
+      "Crew": "10",
+      "Restores": "0",
+      "Priority": "Critical"
+    },
+    {
+      "Key": "Stock/FM280 'Raider' Drive",
+      "Name": "FM280 'Raider' Drive",
+      "MaxHP": "250",
+      "MinHP": "50",
+      "Crew": "10",
+      "Restores": "0",
+      "Priority": "Critical"
+    },
+    {
+      "Key": "Stock/FM30X 'Prowler' Drive",
+      "Name": "FM30X 'Prowler' Drive",
+      "MaxHP": "200",
+      "MinHP": "30",
+      "Crew": "10",
+      "Restores": "0",
+      "Priority": "Critical"
+    },
+    {
+      "Key": "Stock/FM500 Drive",
+      "Name": "FM500 Drive",
+      "MaxHP": "1000",
+      "MinHP": "50",
+      "Crew": "10",
+      "Restores": "0",
+      "Priority": "Critical"
+    },
+    {
+      "Key": "Stock/FM500R Drive",
+      "Name": "FM500R Drive",
+      "MaxHP": "1500",
+      "MinHP": "50",
+      "Crew": "10",
+      "Restores": "0",
+      "Priority": "Critical"
+    },
+    {
+      "Key": "Stock/FM530 'Whiplash' Drive",
+      "Name": "FM530 'Whiplash' Drive",
+      "MaxHP": "1000",
+      "MinHP": "50",
+      "Crew": "10",
+      "Restores": "0",
+      "Priority": "Critical"
+    },
+    {
+      "Key": "Stock/FM540 'Dragonfly' Drive",
+      "Name": "FM540 'Dragonfly' Drive",
+      "MaxHP": "1000",
+      "MinHP": "50",
+      "Crew": "10",
+      "Restores": "0",
+      "Priority": "Critical"
+    },
+    {
+      "Key": "Stock/FM580 'Raider' Drive",
+      "Name": "FM580 'Raider' Drive",
+      "MaxHP": "1000",
+      "MinHP": "50",
+      "Crew": "10",
+      "Restores": "0",
+      "Priority": "Critical"
+    },
+    {
+      "Key": "Stock/FR3300 Micro Reactor",
+      "Name": "FR3300 Micro Reactor",
+      "MaxHP": "200",
+      "MinHP": "50",
+      "Crew": "5",
+      "Restores": "0",
+      "Priority": "Critical"
+    },
+    {
+      "Key": "Stock/FR4800 Reactor",
+      "Name": "FR4800 Reactor",
+      "MaxHP": "300",
+      "MinHP": "50",
+      "Crew": "10",
+      "Restores": "0",
+      "Priority": "Critical"
+    },
+    {
+      "Key": "Stock/RS35 'Frontline' Radar",
+      "Name": "RS35 'Frontline' Radar",
+      "MaxHP": "200",
+      "MinHP": "30",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "High"
+    },
+    {
+      "Key": "Stock/RS41 'Spyglass' Radar",
+      "Name": "RS41 'Spyglass' Radar",
+      "MaxHP": "200",
+      "MinHP": "30",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "High"
+    },
+    {
+      "Key": "Stock/RM50 'Parallax' Radar",
+      "Name": "RM50 'Parallax' Radar",
+      "MaxHP": "300",
+      "MinHP": "30",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "High"
+    },
+    {
+      "Key": "Stock/Mk61 Cannon",
+      "Name": "Mk61 Cannon",
+      "MaxHP": "150",
+      "MinHP": "10",
+      "Crew": "4",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/Mk62 Cannon",
+      "Name": "Mk62 Cannon",
+      "MaxHP": "150",
+      "MinHP": "10",
+      "Crew": "8",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/Mk64 Cannon",
+      "Name": "Mk64 Cannon",
+      "MaxHP": "225",
+      "MinHP": "15",
+      "Crew": "15",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/Mk65 Cannon",
+      "Name": "Mk65 Cannon",
+      "MaxHP": "450",
+      "MinHP": "30",
+      "Crew": "25",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/Mk66 Cannon",
+      "Name": "Mk66 Cannon",
+      "MaxHP": "550",
+      "MinHP": "30",
+      "Crew": "25",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/Mk68 Cannon",
+      "Name": "Mk68 Cannon",
+      "MaxHP": "650",
+      "MinHP": "30",
+      "Crew": "40",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/Mk81 Railgun",
+      "Name": "Mk81 Railgun",
+      "MaxHP": "300",
+      "MinHP": "30",
+      "Crew": "15",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/Mk550 Mass Driver",
+      "Name": "Mk550 Railgun",
+      "MaxHP": "450",
+      "MinHP": "20",
+      "Crew": "15",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/Mk600 Beam Cannon",
+      "Name": "Mk600 Beam Cannon",
+      "MaxHP": "450",
+      "MinHP": "20",
+      "Crew": "15",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/Mk610 Beam Turret",
+      "Name": "Mk610 Beam Turret",
+      "MaxHP": "400",
+      "MinHP": "30",
+      "Crew": "20",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/VLS-2 Launcher",
+      "Name": "VLS-2 Launcher",
+      "MaxHP": "100",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "High"
+    },
+    {
+      "Key": "Stock/VLS-3 Launcher",
+      "Name": "VLS-3 Launcher",
+      "MaxHP": "175",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "High"
+    },
+    {
+      "Key": "Stock/CLS-3 Launcher",
+      "Name": "CLS-3 Launcher",
+      "MaxHP": "175",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "High"
+    },
+    {
+      "Key": "Stock/Torpedo Turret",
+      "Name": "TLS-3 Launcher",
+      "MaxHP": "350",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/Mk20 'Defender' PDT",
+      "Name": "Mk20 'Defender' PDT",
+      "MaxHP": "100",
+      "MinHP": "10",
+      "Crew": "3",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/Mk25 'Rebound' PDT",
+      "Name": "Mk25 'Rebound' PDT",
+      "MaxHP": "100",
+      "MinHP": "10",
+      "Crew": "3",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/Mk29 'Stonewall' PDT",
+      "Name": "Mk29 'Stonewall' PDT",
+      "MaxHP": "150",
+      "MinHP": "10",
+      "Crew": "5",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/Mk90 'Aurora' PDT",
+      "Name": "Mk90 'Aurora' PDT",
+      "MaxHP": "100",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/Mk95 'Sarissa' PDT",
+      "Name": "Mk95 'Sarissa' PDT",
+      "MaxHP": "150",
+      "MinHP": "10",
+      "Crew": "4",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/ES22 'Pinard' Electronic Support Module",
+      "Name": "ES22 'Pinard' Electronic Support Module",
+      "MaxHP": "50",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/ES32 'Scryer' Missile ID System",
+      "Name": "ES32 'Scryer' Missile ID System",
+      "MaxHP": "150",
+      "MinHP": "15",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/E55 'Spotlight' Illuminator",
+      "Name": "E55 'Spotlight' Illuminator",
+      "MaxHP": "75",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/E57 'Floodlight' Illuminator",
+      "Name": "E57 'Floodlight' Illuminator",
+      "MaxHP": "75",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/E71 'Hangup' Jammer",
+      "Name": "E71 'Hangup' Jammer",
+      "MaxHP": "75",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/E70 'Interruption' Jammer",
+      "Name": "E70 'Interruption' Jammer",
+      "MaxHP": "100",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/E90 'Blanket' Jammer",
+      "Name": "E90 'Blanket' Jammer",
+      "MaxHP": "75",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/RF101 'Bullseye' Radar",
+      "Name": "RF101 'Bullseye' Radar",
+      "MaxHP": "70",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/E15 'Masquerade' Signature Booster",
+      "Name": "E15 'Masquerade' Deception Module",
+      "MaxHP": "100",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Signature Scrambler",
+      "Name": "Signature Scrambler",
+      "MaxHP": "50",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/CR70 Antenna",
+      "Name": "CR70 Antenna",
+      "MaxHP": "250",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/Civilian Reactor",
+      "Name": "Civilian Reactor",
+      "MaxHP": "300",
+      "MinHP": "50",
+      "Crew": "10",
+      "Restores": "0",
+      "Priority": "Critical"
+    },
+    {
+      "Key": "Stock/Light Civilian Reactor",
+      "Name": "Light Civilian Reactor",
+      "MaxHP": "200",
+      "MinHP": "50",
+      "Crew": "5",
+      "Restores": "0",
+      "Priority": "Critical"
+    },
+    {
+      "Key": "Stock/Boosted Reactor",
+      "Name": "Boosted Reactor",
+      "MaxHP": "300",
+      "MinHP": "50",
+      "Crew": "10",
+      "Restores": "0",
+      "Priority": "Critical"
+    },
+    {
+      "Key": "Stock/Large DC Storage",
+      "Name": "Large DC Storage",
+      "MaxHP": "300",
+      "MinHP": "10",
+      "Crew": "5",
+      "Restores": "4",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Citadel Magazine",
+      "Name": "Citadel Magazine",
+      "MaxHP": "300",
+      "MinHP": "20",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/Damage Control Complex",
+      "Name": "Damage Control Complex",
+      "MaxHP": "600",
+      "MinHP": "20",
+      "Crew": "50",
+      "Restores": "2",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Jury-Rigged Reactor",
+      "Name": "Jury-Rigged Reactor",
+      "MaxHP": "300",
+      "MinHP": "100",
+      "Crew": "30",
+      "Restores": "0",
+      "Priority": "Critical"
+    },
+    {
+      "Key": "Stock/BW800 Drive",
+      "Name": "BW800 Drive",
+      "MaxHP": "250",
+      "MinHP": "50",
+      "Crew": "10",
+      "Restores": "0",
+      "Priority": "Critical"
+    },
+    {
+      "Key": "Stock/BW800-R Drive",
+      "Name": "BW800-R Drive",
+      "MaxHP": "400",
+      "MinHP": "50",
+      "Crew": "10",
+      "Restores": "0",
+      "Priority": "Critical"
+    },
+    {
+      "Key": "Stock/BW1500 Drive",
+      "Name": "BW1500 Drive",
+      "MaxHP": "700",
+      "MinHP": "50",
+      "Crew": "10",
+      "Restores": "0",
+      "Priority": "Critical"
+    },
+    {
+      "Key": "Stock/BW1500-R Drive",
+      "Name": "BW1500-R Drive",
+      "MaxHP": "1400",
+      "MinHP": "50",
+      "Crew": "10",
+      "Restores": "0",
+      "Priority": "Critical"
+    },
+    {
+      "Key": "Stock/BW2000 Drive",
+      "Name": "BW2000 Drive",
+      "MaxHP": "700",
+      "MinHP": "50",
+      "Crew": "10",
+      "Restores": "0",
+      "Priority": "Critical"
+    },
+    {
+      "Key": "Stock/CHI-777 Yard Drive",
+      "Name": "CHI-777 Yard Drive",
+      "MaxHP": "250",
+      "MinHP": "50",
+      "Crew": "10",
+      "Restores": "0",
+      "Priority": "Critical"
+    },
+    {
+      "Key": "Stock/CHI-7700 Drive",
+      "Name": "CHI-7700 Drive",
+      "MaxHP": "700",
+      "MinHP": "50",
+      "Crew": "10",
+      "Restores": "0",
+      "Priority": "Critical"
+    },
+    {
+      "Key": "Stock/CHI-9100 Long Haul Drive",
+      "Name": "CHI-9100 Long Haul Drive",
+      "MaxHP": "700",
+      "MinHP": "50",
+      "Crew": "10",
+      "Restores": "0",
+      "Priority": "Critical"
+    },
+    {
+      "Key": "Stock/Sundrive Racing Pro",
+      "Name": "Sundrive Racing Pro",
+      "MaxHP": "100",
+      "MinHP": "50",
+      "Crew": "10",
+      "Restores": "0",
+      "Priority": "Critical"
+    },
+    {
+      "Key": "Stock/Ithaca Bridgemaster",
+      "Name": "Ithaca Bridgemaster",
+      "MaxHP": "200",
+      "MinHP": "30",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "High"
+    },
+    {
+      "Key": "Stock/Bulwark Huntress",
+      "Name": "Bulwark Huntress",
+      "MaxHP": "200",
+      "MinHP": "30",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "High"
+    },
+    {
+      "Key": "Stock/R550 Early Warning Radar",
+      "Name": "R550 Early Warning Radar",
+      "MaxHP": "150",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/R400 Radar",
+      "Name": "R400 'Bloodhound' LRT Radar",
+      "MaxHP": "200",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/RF44 'Pinpoint' Radar",
+      "Name": "RF44 'Pinpoint' Radar",
+      "MaxHP": "70",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/T20 Cannon",
+      "Name": "T20 Cannon",
+      "MaxHP": "150",
+      "MinHP": "10",
+      "Crew": "4",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/T30 Cannon",
+      "Name": "T30 Cannon",
+      "MaxHP": "200",
+      "MinHP": "10",
+      "Crew": "10",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/T81 Plasma Cannon",
+      "Name": "T81 Plasma Cannon",
+      "MaxHP": "300",
+      "MinHP": "10",
+      "Crew": "15",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/C30 Cannon",
+      "Name": "C30 Cannon",
+      "MaxHP": "350",
+      "MinHP": "15",
+      "Crew": "10",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/C53 Cannon",
+      "Name": "C53 Cannon",
+      "MaxHP": "300",
+      "MinHP": "15",
+      "Crew": "15",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/C54 Cannon",
+      "Name": "C56 Cannon",
+      "MaxHP": "350",
+      "MinHP": "15",
+      "Crew": "15",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/C65 Cannon",
+      "Name": "C65 Cannon",
+      "MaxHP": "500",
+      "MinHP": "20",
+      "Crew": "25",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/C81 Plasma Cannon",
+      "Name": "C81 Plasma Cannon",
+      "MaxHP": "500",
+      "MinHP": "20",
+      "Crew": "25",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/C90 Cannon",
+      "Name": "C90 Cannon",
+      "MaxHP": "500",
+      "MinHP": "30",
+      "Crew": "25",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/TE45 Mass Driver",
+      "Name": "TE45 Mass Driver",
+      "MaxHP": "450",
+      "MinHP": "20",
+      "Crew": "15",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/P11 PDT",
+      "Name": "P11 'Pavise' PDT",
+      "MaxHP": "100",
+      "MinHP": "10",
+      "Crew": "3",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/P20 Flak PDT",
+      "Name": "P20 'Bastion' PDT",
+      "MaxHP": "150",
+      "MinHP": "10",
+      "Crew": "5",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/P60 Laser PDT",
+      "Name": "P60 'Grazer' PDT",
+      "MaxHP": "100",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/L50 Laser Dazzler",
+      "Name": "L50 'Blackjack' Laser Dazzler",
+      "MaxHP": "75",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/J15 Jammer",
+      "Name": "J15 'Bellbird' Jammer",
+      "MaxHP": "150",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/J360 Jammer",
+      "Name": "J360 'Lyrebird' Jammer",
+      "MaxHP": "100",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/E20 'Lighthouse' Illuminator",
+      "Name": "E20 'Lighthouse' Illuminator",
+      "MaxHP": "75",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/RL18 Launcher",
+      "Name": "RL18 Launcher",
+      "MaxHP": "100",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/RL36 Launcher",
+      "Name": "RL36 Launcher",
+      "MaxHP": "175",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/Container Bank Launcher",
+      "Name": "Container Bank Launcher",
+      "MaxHP": "500",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "High"
+    },
+    {
+      "Key": "Stock/Container Stack Launcher",
+      "Name": "Container Stack Launcher",
+      "MaxHP": "200",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/MLS-2 Launcher",
+      "Name": "MLS-2 Launcher",
+      "MaxHP": "100",
+      "MinHP": "10",
+      "Crew": "10",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/MLS-3 Launcher",
+      "Name": "MLS-3 Launcher",
+      "MaxHP": "100",
+      "MinHP": "10",
+      "Crew": "12",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/ML-9 Mine Launcher",
+      "Name": "ML-9 Mine Launcher",
+      "MaxHP": "100",
+      "MinHP": "10",
+      "Crew": "10",
+      "Restores": "0",
+      "Priority": "High"
+    }
+  ]
+}
