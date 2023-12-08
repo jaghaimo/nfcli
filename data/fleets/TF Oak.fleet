@@ -13,7 +13,7 @@ Dual heavy cruisers with all big guns. This fleet is ideal for those who struggl
       <SaveID xsi:nil="true" />
       <Key>15fe45e3-d169-402d-a6fa-4cf9e595c962</Key>
       <Name>Value Judgement</Name>
-      <Cost>1500</Cost>
+      <Cost>1499</Cost>
       <Callsign />
       <Number>451</Number>
       <SymbolOption>0</SymbolOption>
@@ -50,19 +50,6 @@ Dual heavy cruisers with all big guns. This fleet is ideal for those who struggl
         <HullSocket>
           <Key>LbD9Txe-S0a_nODTqtrk7g</Key>
           <ComponentName>Stock/RF101 'Bullseye' Radar</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>KxV0hkkGBE2AOUCo5axQbg</Key>
-          <ComponentName>Stock/VLS-1-23 Launcher</ComponentName>
-          <ComponentData xsi:type="CellLauncherData">
-            <MissileLoad>
-              <MagSaveData>
-                <MagazineKey>QoE_1Dz3bU28Bc5wRFwvzw</MagazineKey>
-                <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>7</Quantity>
-              </MagSaveData>
-            </MissileLoad>
-          </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>ylUvmASKlEiyCtyCsNRKWg</Key>
@@ -127,17 +114,21 @@ Dual heavy cruisers with all big guns. This fleet is ideal for those who struggl
               <MagSaveData>
                 <MagazineKey>GiE2Umbv2Ee2Swjls9HSFQ</MagazineKey>
                 <MunitionKey>Stock/Flak Round</MunitionKey>
-                <Quantity>750</Quantity>
+                <Quantity>450</Quantity>
               </MagSaveData>
             </Load>
           </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>SV_4BgcxwU24YIbep-k74g</Key>
-          <ComponentName>Stock/Damage Control Central</ComponentName>
+          <ComponentName>Stock/Small Workshop</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>A8e_Z_d8WU2qzo6HTQwCBA</Key>
+          <ComponentName>Stock/Rapid DC Locker</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>2xmOS4ns_EaMYjBXrrhhig</Key>
           <ComponentName>Stock/Reinforced DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
@@ -162,7 +153,7 @@ Dual heavy cruisers with all big guns. This fleet is ideal for those who struggl
         </HullSocket>
         <HullSocket>
           <Key>2ZLEJvxYf0CATl1lBi3cuQ</Key>
-          <ComponentName>Stock/FM580 'Raider' Drive</ComponentName>
+          <ComponentName>Stock/FM500 Drive</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>ba-3VQ-zGEmDCfU12uaqaA</Key>
@@ -182,6 +173,10 @@ Dual heavy cruisers with all big guns. This fleet is ideal for those who struggl
         </HullSocket>
         <HullSocket>
           <Key>CgpRQa-660KEed1wTRL4vw</Key>
+          <ComponentName>Stock/Ammunition Elevators</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>awwdeDnNs0G-RceQF1TByA</Key>
           <ComponentName>Stock/Mount Gyros</ComponentName>
         </HullSocket>
         <HullSocket>
@@ -212,7 +207,7 @@ Dual heavy cruisers with all big guns. This fleet is ideal for those who struggl
       <SaveID xsi:nil="true" />
       <Key>e0afb606-1caf-4f15-9abf-2d54ae422b5a</Key>
       <Name>Moral Failing</Name>
-      <Cost>1500</Cost>
+      <Cost>1501</Cost>
       <Callsign />
       <Number>452</Number>
       <SymbolOption>0</SymbolOption>
@@ -256,9 +251,9 @@ Dual heavy cruisers with all big guns. This fleet is ideal for those who struggl
           <ComponentData xsi:type="CellLauncherData">
             <MissileLoad>
               <MagSaveData>
-                <MagazineKey>QoE_1Dz3bU28Bc5wRFwvzw</MagazineKey>
+                <MagazineKey>DZUx10a3ZkWZEMBbh3nyvw</MagazineKey>
                 <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>17</Quantity>
+                <Quantity>7</Quantity>
               </MagSaveData>
             </MissileLoad>
           </ComponentData>
@@ -326,17 +321,21 @@ Dual heavy cruisers with all big guns. This fleet is ideal for those who struggl
               <MagSaveData>
                 <MagazineKey>HEuAApq_8EGHF-ftJxu2Rg</MagazineKey>
                 <MunitionKey>Stock/Flak Round</MunitionKey>
-                <Quantity>750</Quantity>
+                <Quantity>450</Quantity>
               </MagSaveData>
             </Load>
           </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>SV_4BgcxwU24YIbep-k74g</Key>
-          <ComponentName>Stock/Damage Control Central</ComponentName>
+          <ComponentName>Stock/Small Workshop</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>A8e_Z_d8WU2qzo6HTQwCBA</Key>
+          <ComponentName>Stock/Rapid DC Locker</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>2xmOS4ns_EaMYjBXrrhhig</Key>
           <ComponentName>Stock/Reinforced DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
@@ -361,7 +360,7 @@ Dual heavy cruisers with all big guns. This fleet is ideal for those who struggl
         </HullSocket>
         <HullSocket>
           <Key>2ZLEJvxYf0CATl1lBi3cuQ</Key>
-          <ComponentName>Stock/FM580 'Raider' Drive</ComponentName>
+          <ComponentName>Stock/FM500 Drive</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>ba-3VQ-zGEmDCfU12uaqaA</Key>
@@ -381,6 +380,10 @@ Dual heavy cruisers with all big guns. This fleet is ideal for those who struggl
         </HullSocket>
         <HullSocket>
           <Key>CgpRQa-660KEed1wTRL4vw</Key>
+          <ComponentName>Stock/Ammunition Elevators</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>awwdeDnNs0G-RceQF1TByA</Key>
           <ComponentName>Stock/Mount Gyros</ComponentName>
         </HullSocket>
         <HullSocket>
@@ -401,6 +404,14 @@ Dual heavy cruisers with all big guns. This fleet is ideal for those who struggl
           </MemberKeys>
         </WepGroup>
       </WeaponGroups>
+      <InitialFormation>
+        <GuideKey>15fe45e3-d169-402d-a6fa-4cf9e595c962</GuideKey>
+        <RelativePosition>
+          <x>22.4676476</x>
+          <y>21.2985153</y>
+          <z>0.004055023</z>
+        </RelativePosition>
+      </InitialFormation>
       <TemplateMissileTypes />
     </Ship>
   </Ships>
