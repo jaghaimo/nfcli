@@ -3,7 +3,7 @@ import logging
 import xmltodict
 
 from nfcli import strip_tags
-from nfcli.data import Hulls, Tags
+from nfcli.data import Components, Hulls, Munitions, Tags
 from nfcli.models import Content, Fleet, Missile, Ship, Socket
 from nfcli.printers import Printable
 
@@ -16,7 +16,7 @@ def get_content(content_data: dict) -> list[Content]:
             all_loads += content_data[key]["MagSaveData"]
 
     for load in all_loads:
-        content.append(Content(load["MunitionKey"], load["Quantity"]))
+        content.append(Content(Munitions.get_name_or_key(load["MunitionKey"]), load["Quantity"]))
 
     return content
 
@@ -26,7 +26,7 @@ def get_socket(socket_data: dict) -> Socket:
     content = []
     if "ComponentData" in socket_data:
         content = get_content(socket_data["ComponentData"])
-    return Socket(socket_data["Key"], name, content, Tags.get(name))
+    return Socket(socket_data["Key"], Components.get_name_or_key(name), content, Tags.get(name))
 
 
 def get_ship(ship_data: dict) -> Ship:

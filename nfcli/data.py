@@ -5,6 +5,8 @@ import logging
 from glob import glob
 
 TAGS_FILE = "data/tags.json"
+COMPONENTS_FILE = "data/components.json"
+MUNITIONS_FILE = "data/munitions.json"
 
 
 def load_json(path: str) -> dict:
@@ -61,5 +63,43 @@ class _Tags:
             self.tags.pop(key)
 
 
+class _Components:
+    def __init__(self) -> None:
+        self.components = load_json(COMPONENTS_FILE).get("Components")
+
+    def get_name(self, key: str) -> str | None:
+        for component in self.components:
+            if component.get("Key") == key:
+                return component.get("Name")
+        return None
+
+    def get_name_or_key(self, key: str) -> str:
+        name = self.get_name(key)
+        if name is None:
+            return key
+        else:
+            return name
+
+
+class _Munitions:
+    def __init__(self) -> None:
+        self.munitions = load_json(MUNITIONS_FILE).get("Munitions")
+
+    def get_name(self, key: str) -> str | None:
+        for munition in self.munitions:
+            if munition.get("Key") == key:
+                return munition.get("Name")
+        return None
+
+    def get_name_or_key(self, key: str) -> str:
+        name = self.get_name(key)
+        if name is None:
+            return key
+        else:
+            return name
+
+
 Hulls = _Hulls()
 Tags = _Tags()
+Components = _Components()
+Munitions = _Munitions()

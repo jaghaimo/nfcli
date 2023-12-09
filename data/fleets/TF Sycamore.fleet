@@ -6,14 +6,14 @@
   <FactionKey>Stock/Alliance</FactionKey>
   <Description>Difficulty: &lt;color=red&gt;HARD&lt;/color&gt;
 
-This group is comprised of small but deadly ships.  It is heavily missile focused, with every missile type represented in some way and a variety of seeker configurations.  It is highly recommended to explore this fleet and its missiles in the editor to understand its capabilities before taking it into battle.</Description>
+This group is comprised of small but deadly ships. It is heavily missile focused, with every missile type represented in some way with a variety of seeker configurations. It is highly recommended to explore this fleet and its missiles in the editor to understand its capabilities before taking it into battle.</Description>
   <SortOverrideOrder>7</SortOverrideOrder>
   <Ships>
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>93ddee0c-3096-4bfa-b8ec-a5c0dffa02ed</Key>
       <Name>Eye of Providence</Name>
-      <Cost>824</Cost>
+      <Cost>837</Cost>
       <Callsign />
       <Number>660</Number>
       <SymbolOption>1</SymbolOption>
@@ -27,22 +27,22 @@ This group is comprised of small but deadly ships.  It is heavily missile focuse
               <MagSaveData>
                 <MagazineKey>79znoH0Lo0KF6s0aIH0U5g</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-160 Rampart</MunitionKey>
-                <Quantity>26</Quantity>
+                <Quantity>27</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>g2nLB74zkUGMg7Iqgad3Qg</MagazineKey>
                 <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>8</Quantity>
+                <Quantity>9</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>ViPKNp7ZhkW7oMONAgFTRw</MagazineKey>
                 <MunitionKey>Stock/EA20 Flare Decoy</MunitionKey>
-                <Quantity>6</Quantity>
+                <Quantity>4</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>61oPMNjTz0OM5msWP0cwqw</MagazineKey>
                 <MunitionKey>Stock/EA99 Active Decoy</MunitionKey>
-                <Quantity>6</Quantity>
+                <Quantity>4</Quantity>
               </MagSaveData>
             </MissileLoad>
           </ComponentData>
@@ -59,12 +59,12 @@ This group is comprised of small but deadly ships.  It is heavily missile focuse
               <MagSaveData>
                 <MagazineKey>Vho5BaGVv0uxN6cCUfTAAg</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-H-280 Vortex</MunitionKey>
-                <Quantity>4</Quantity>
+                <Quantity>6</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>CrQ06lRapE-ePIdV5wmkdw</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-210 Thundercloud</MunitionKey>
-                <Quantity>20</Quantity>
+                <Quantity>18</Quantity>
               </MagSaveData>
             </MissileLoad>
             <ConfiguredSize>
@@ -81,12 +81,12 @@ This group is comprised of small but deadly ships.  It is heavily missile focuse
               <MagSaveData>
                 <MagazineKey>NjCBPa4pxU-Lk1NTgGDSKw</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-H-280 Vortex</MunitionKey>
-                <Quantity>4</Quantity>
+                <Quantity>6</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>_nIvZhGvCUmx8-6uwSSgFg</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-210 Thundercloud</MunitionKey>
-                <Quantity>20</Quantity>
+                <Quantity>18</Quantity>
               </MagSaveData>
             </MissileLoad>
             <ConfiguredSize>
@@ -143,7 +143,7 @@ This group is comprised of small but deadly ships.  It is heavily missile focuse
       <SaveID xsi:nil="true" />
       <Key>8e84cd8d-f17d-4d84-b771-181c5fd0b576</Key>
       <Name>Rod of Iron</Name>
-      <Cost>847</Cost>
+      <Cost>864</Cost>
       <Callsign />
       <Number>970</Number>
       <SymbolOption>0</SymbolOption>
@@ -160,21 +160,29 @@ This group is comprised of small but deadly ships.  It is heavily missile focuse
                 <Quantity>11</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>1aALcNS7AU6-R3wvMBacPQ</MagazineKey>
-                <MunitionKey>Stock/EA20 Flare Decoy</MunitionKey>
-                <Quantity>2</Quantity>
-              </MagSaveData>
-              <MagSaveData>
                 <MagazineKey>PeNfNqFqo060vkEVux44dA</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-160 Rampart</MunitionKey>
-                <Quantity>21</Quantity>
+                <Quantity>12</Quantity>
               </MagSaveData>
             </MissileLoad>
           </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>WwMGqYiU7E6lp7ID47phqA</Key>
-          <ComponentName>Stock/E55 'Spotlight' Illuminator</ComponentName>
+          <ComponentName>Stock/VLS-3 Launcher</ComponentName>
+          <ComponentData xsi:type="ResizableCellLauncherData">
+            <MissileLoad>
+              <MagSaveData>
+                <MagazineKey>ZUMtYL1mb0-sbIcfk6xyWw</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-H-360 Shipwreck Block II</MunitionKey>
+                <Quantity>4</Quantity>
+              </MagSaveData>
+            </MissileLoad>
+            <ConfiguredSize>
+              <x>1</x>
+              <y>2</y>
+            </ConfiguredSize>
+          </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>gkfIwYzn7kGhG6MW9uxBmw</Key>
@@ -184,7 +192,12 @@ This group is comprised of small but deadly ships.  It is heavily missile focuse
               <MagSaveData>
                 <MagazineKey>FFGkUSfD-EmTdSR-exhULQ</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-H-360 Shipwreck</MunitionKey>
-                <Quantity>6</Quantity>
+                <Quantity>4</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>I530jpzHVkWqyDrOthYuLQ</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-H-360 Shipwreck Block II</MunitionKey>
+                <Quantity>2</Quantity>
               </MagSaveData>
             </MissileLoad>
             <ConfiguredSize>
@@ -201,7 +214,12 @@ This group is comprised of small but deadly ships.  It is heavily missile focuse
               <MagSaveData>
                 <MagazineKey>JmlUTubMFkOfsDhXdi84yQ</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-H-360 Shipwreck</MunitionKey>
-                <Quantity>6</Quantity>
+                <Quantity>4</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>rNlMamNxwUO8tGIzcMOYHQ</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-H-360 Shipwreck Block II</MunitionKey>
+                <Quantity>2</Quantity>
               </MagSaveData>
             </MissileLoad>
             <ConfiguredSize>
@@ -261,7 +279,7 @@ This group is comprised of small but deadly ships.  It is heavily missile focuse
       <SaveID xsi:nil="true" />
       <Key>bd1cc2e8-735c-4794-bae2-88bbb6cfb8ce</Key>
       <Name>Black Flanks</Name>
-      <Cost>439</Cost>
+      <Cost>464</Cost>
       <Callsign />
       <Number>475</Number>
       <SymbolOption>0</SymbolOption>
@@ -273,7 +291,7 @@ This group is comprised of small but deadly ships.  It is heavily missile focuse
           <ComponentData xsi:type="ResizableCellLauncherData">
             <MissileLoad>
               <MagSaveData>
-                <MagazineKey>k8CZD_jf-E2gEmHmAS9eaA</MagazineKey>
+                <MagazineKey>3MSpTb8qEUurZKClXxJJ6Q</MagazineKey>
                 <MunitionKey>$MODMIS$/SGT-340 Gravestone Block II</MunitionKey>
                 <Quantity>6</Quantity>
               </MagSaveData>
@@ -324,6 +342,10 @@ This group is comprised of small but deadly ships.  It is heavily missile focuse
           <ComponentName>Stock/FM230 'Whiplash' Drive</ComponentName>
         </HullSocket>
         <HullSocket>
+          <Key>TSPPW9ECe06-MGzR1i0WvQ</Key>
+          <ComponentName>Stock/Actively Cooled Amplifiers</ComponentName>
+        </HullSocket>
+        <HullSocket>
           <Key>MBOvGazj6UWpt2OOy44s7w</Key>
           <ComponentName>Stock/Missile Programming Bus</ComponentName>
         </HullSocket>
@@ -342,7 +364,7 @@ This group is comprised of small but deadly ships.  It is heavily missile focuse
       <SaveID xsi:nil="true" />
       <Key>e9464b37-fe25-4f22-b80f-6cfbaf7ac5ab</Key>
       <Name>Charger</Name>
-      <Cost>466</Cost>
+      <Cost>441</Cost>
       <Callsign />
       <Number>773</Number>
       <SymbolOption>0</SymbolOption>
@@ -354,7 +376,7 @@ This group is comprised of small but deadly ships.  It is heavily missile focuse
           <ComponentData xsi:type="ResizableCellLauncherData">
             <MissileLoad>
               <MagSaveData>
-                <MagazineKey>k8CZD_jf-E2gEmHmAS9eaA</MagazineKey>
+                <MagazineKey>ulAQmEcvNEKMLi7rPMlAyA</MagazineKey>
                 <MunitionKey>$MODMIS$/SGT-340 Gravestone Block II</MunitionKey>
                 <Quantity>6</Quantity>
               </MagSaveData>
@@ -373,7 +395,7 @@ This group is comprised of small but deadly ships.  It is heavily missile focuse
               <MagSaveData>
                 <MagazineKey>mlYKQ3ivm0OqiTNLi7Udhw</MagazineKey>
                 <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>9</Quantity>
+                <Quantity>6</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>r83t4oo-bkGknogkxOwLiQ</MagazineKey>
@@ -381,14 +403,9 @@ This group is comprised of small but deadly ships.  It is heavily missile focuse
                 <Quantity>2</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>RNRVA62N4kSwL04kRie6ow</MagazineKey>
-                <MunitionKey>Stock/EA99 Active Decoy</MunitionKey>
-                <Quantity>3</Quantity>
-              </MagSaveData>
-              <MagSaveData>
                 <MagazineKey>8GAgdxOQMESaVv2hrQ_jXg</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-160 Rampart</MunitionKey>
-                <Quantity>27</Quantity>
+                <Quantity>22</Quantity>
               </MagSaveData>
             </MissileLoad>
           </ComponentData>
@@ -430,7 +447,13 @@ This group is comprised of small but deadly ships.  It is heavily missile focuse
           <ComponentName>Stock/Missile Programming Bus</ComponentName>
         </HullSocket>
       </SocketMap>
-      <WeaponGroups />
+      <WeaponGroups>
+        <WepGroup Name="Blankets">
+          <MemberKeys>
+            <string>IUdNSVZm2Eu9n3F5HnSAng</string>
+          </MemberKeys>
+        </WepGroup>
+      </WeaponGroups>
       <InitialFormation>
         <GuideKey>bd1cc2e8-735c-4794-bae2-88bbb6cfb8ce</GuideKey>
         <RelativePosition>
@@ -445,7 +468,7 @@ This group is comprised of small but deadly ships.  It is heavily missile focuse
       <SaveID xsi:nil="true" />
       <Key>a0a020de-ee0a-4108-a837-f8c88967bf1e</Key>
       <Name>Harrier</Name>
-      <Cost>424</Cost>
+      <Cost>394</Cost>
       <Callsign />
       <Number>1277</Number>
       <SymbolOption>0</SymbolOption>
@@ -457,7 +480,7 @@ This group is comprised of small but deadly ships.  It is heavily missile focuse
           <ComponentData xsi:type="ResizableCellLauncherData">
             <MissileLoad>
               <MagSaveData>
-                <MagazineKey>k8CZD_jf-E2gEmHmAS9eaA</MagazineKey>
+                <MagazineKey>w06XzT9lNE6c9jj_D65vdQ</MagazineKey>
                 <MunitionKey>$MODMIS$/SGT-340 Gravestone Block II</MunitionKey>
                 <Quantity>6</Quantity>
               </MagSaveData>
@@ -478,7 +501,7 @@ This group is comprised of small but deadly ships.  It is heavily missile focuse
         </HullSocket>
         <HullSocket>
           <Key>ZxY9ONYz80SiLNSObvjNzQ</Key>
-          <ComponentName>Stock/E71 'Hangup' Jammer</ComponentName>
+          <ComponentName>Stock/E55 'Spotlight' Illuminator</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>XPaYCjBqdEqBxEIsVLP0oA</Key>
@@ -518,7 +541,7 @@ This group is comprised of small but deadly ships.  It is heavily missile focuse
             <string>IUdNSVZm2Eu9n3F5HnSAng</string>
           </MemberKeys>
         </WepGroup>
-        <WepGroup Name="Hangups">
+        <WepGroup Name="Spotlight">
           <MemberKeys>
             <string>ZxY9ONYz80SiLNSObvjNzQ</string>
           </MemberKeys>
@@ -547,15 +570,16 @@ Targeting Modes:
 	&lt;b&gt;&lt;color=#FF2525&gt;POSITION&lt;/color&gt;	&lt;color=#4CFF72&gt;TRACK&lt;/color&gt;&lt;/b&gt;
 Primary Seeker: COMMAND (&lt;color=#FBFF4C&gt;Requires COMMS Enabled&lt;/color&gt;)
 
-148 m/s for 7,102 m, top speed in 1.2 s
+185 m/s for 4,502 m, top speed in 1.0 s
 Terminal Maneuvers: Corkscrew
 
 Contact Fuze, High Explosive, Shaped
-Armor: 123cm   Component: 5,040hp
+Armor: 104cm   Component: 3,600hp
 Blast Angle: 70 deg
+Damage Per Fragment: 50.0
 
-Body Integrity: 110 
-Programming Time: 6 s
+Body Integrity: 160 
+Programming Time: 3 s
 Radar Signature Bonus: 100 %
 Boost-Phase Duration: 3 s
 Boost-Phase Strafe: 250 % (&lt;color=#4CFF72&gt;+150%&lt;/color&gt;)
@@ -565,15 +589,15 @@ Failure Rate: 0 %</LongDescription>
       <BodyKey>Stock/SGT-3 Body</BodyKey>
       <TemplateKey>295340de-e2d8-475c-b10c-d8d8a5baa1a0</TemplateKey>
       <BaseColor>
-        <r>0.2627451</r>
-        <g>0.2627451</g>
-        <b>0.2627451</b>
+        <r>0.8269358</r>
+        <g>0.0153443245</g>
+        <b>0.0153443245</b>
         <a>1</a>
       </BaseColor>
       <StripeColor>
-        <r>0.0486429669</r>
-        <g>0.551552832</g>
-        <b>0.394533783</b>
+        <r>0.9999999</r>
+        <g>0.9802647</g>
+        <b>0.005894362</b>
         <a>1</a>
       </StripeColor>
       <Sockets>
@@ -601,27 +625,28 @@ Failure Rate: 0 %</LongDescription>
             <Maneuvers>Corkscrew</Maneuvers>
             <DefensiveDoctrine>
               <TargetSizeMask>12</TargetSizeMask>
+              <TargetType>All</TargetType>
               <TargetSizeOrdering>Descending</TargetSizeOrdering>
               <SalvoSize>0</SalvoSize>
               <FarthestFirst>false</FarthestFirst>
             </DefensiveDoctrine>
-            <ApproachAngleControl>true</ApproachAngleControl>
+            <ApproachAngleControl>false</ApproachAngleControl>
           </InstalledComponent>
         </MissileSocket>
         <MissileSocket>
-          <Size>7</Size>
+          <Size>5</Size>
           <InstalledComponent>
             <ComponentKey>Stock/HE Impact</ComponentKey>
           </InstalledComponent>
         </MissileSocket>
         <MissileSocket>
-          <Size>7</Size>
+          <Size>9</Size>
           <InstalledComponent xsi:type="MissileEngineSettings">
             <ComponentKey />
             <BalanceValues>
-              <A>0.308009863</A>
-              <B>0.281300247</B>
-              <C>0.4106899</C>
+              <A>0.08347691</A>
+              <B>0.500385761</B>
+              <C>0.416137338</C>
             </BalanceValues>
           </InstalledComponent>
         </MissileSocket>
@@ -638,12 +663,12 @@ Targeting Modes:
 	&lt;b&gt;&lt;color=#4CFF72&gt;POSITION&lt;/color&gt;	&lt;color=#4CFF72&gt;TRACK&lt;/color&gt;&lt;/b&gt;
 Primary Seeker: ACTIVE &lt;color=#4CFF72&gt;RADAR&lt;/color&gt;
 
-300 m/s for 4,707 m, top speed in 0.6 s
+270 m/s for 5,023 m, top speed in 0.7 s
 Terminal Maneuvers: None
 
 Proximity Fuze, High Explosive, Blast Fragmentation
-Armor: 1cm   Component: 40hp
-Blast Radius: 33 m
+Armor: 2cm   Component: 65hp
+Blast Radius: 47 m
 
 Body Integrity: 10 
 Programming Time: 6 s
@@ -671,10 +696,10 @@ Failure Rate: 0 %</LongDescription>
         <MissileSocket>
           <Size>1</Size>
           <InstalledComponent xsi:type="ActiveSeekerSettings">
-            <ComponentKey>Stock/Fixed Active Radar Seeker</ComponentKey>
+            <ComponentKey>Stock/Steerable Active Radar Seeker</ComponentKey>
             <Mode>Targeting</Mode>
             <RejectUnvalidated>false</RejectUnvalidated>
-            <DetectPDTargets>true</DetectPDTargets>
+            <DetectPDTargets>false</DetectPDTargets>
           </InstalledComponent>
         </MissileSocket>
         <MissileSocket>
@@ -682,32 +707,33 @@ Failure Rate: 0 %</LongDescription>
           <InstalledComponent xsi:type="DirectGuidanceSettings">
             <ComponentKey>Stock/Direct Guidance</ComponentKey>
             <Role>Defensive</Role>
-            <HotLaunch>false</HotLaunch>
+            <HotLaunch>true</HotLaunch>
             <SelfDestructOnLost>false</SelfDestructOnLost>
             <Maneuvers>None</Maneuvers>
             <DefensiveDoctrine>
               <TargetSizeMask>12</TargetSizeMask>
+              <TargetType>All</TargetType>
               <TargetSizeOrdering>Descending</TargetSizeOrdering>
-              <SalvoSize>0</SalvoSize>
+              <SalvoSize>1</SalvoSize>
               <FarthestFirst>false</FarthestFirst>
             </DefensiveDoctrine>
             <ApproachAngleControl>true</ApproachAngleControl>
           </InstalledComponent>
         </MissileSocket>
         <MissileSocket>
-          <Size>2</Size>
+          <Size>4</Size>
           <InstalledComponent>
             <ComponentKey>Stock/Blast Fragmentation</ComponentKey>
           </InstalledComponent>
         </MissileSocket>
         <MissileSocket>
-          <Size>4</Size>
+          <Size>3</Size>
           <InstalledComponent xsi:type="MissileEngineSettings">
             <ComponentKey />
             <BalanceValues>
-              <A>0.333333343</A>
-              <B>0.333333343</B>
-              <C>0.333333343</C>
+              <A>0.134217873</A>
+              <B>0.7181097</B>
+              <C>0.1476724</C>
             </BalanceValues>
           </InstalledComponent>
         </MissileSocket>
@@ -726,13 +752,14 @@ Primary Seeker: SEMI-ACTIVE &lt;color=#4CFF72&gt;RADAR&lt;/color&gt;
 Validation Seeker(s): PASSIVE (&lt;color=#53FFFF&gt;EO&lt;/color&gt;)
 
 Cruise: 200 m/s for 15,667 m, top speed in 3.3 s
-Sprint: 838 m/s for 4,531 m, top speed in 1.0 s
+Sprint: 791 m/s for 4,728 m, top speed in 0.9 s
    Stage Trigger on Target Detection (&lt;color=#FBFF4C&gt;Direction-Only Seeker&lt;/color&gt;)
 Terminal Maneuvers: Weave
 
 Contact Fuze, High Explosive, Shaped
 Armor: 80cm   Component: 2,160hp
 Blast Angle: 70 deg
+Damage Per Fragment: 50.0
 
 Body Integrity: 60 
 Programming Time: 16 s
@@ -741,7 +768,7 @@ Boost-Phase Duration: 3 s
 Boost-Phase Strafe: 100 %
 Boost-Phase Turn Rate: 100 %
 Failure Rate: 0 %</LongDescription>
-      <Cost>36</Cost>
+      <Cost>23</Cost>
       <BodyKey>Stock/SGM-H-3 Body</BodyKey>
       <TemplateKey>d64a2477-f089-49f3-b7bc-719d21ee3b97</TemplateKey>
       <BaseColor>
@@ -777,9 +804,6 @@ Failure Rate: 0 %</LongDescription>
         </MissileSocket>
         <MissileSocket>
           <Size>1</Size>
-          <InstalledComponent>
-            <ComponentKey>Stock/Decoy Launcher</ComponentKey>
-          </InstalledComponent>
         </MissileSocket>
         <MissileSocket>
           <Size>1</Size>
@@ -791,6 +815,7 @@ Failure Rate: 0 %</LongDescription>
             <Maneuvers>Weave</Maneuvers>
             <DefensiveDoctrine>
               <TargetSizeMask>12</TargetSizeMask>
+              <TargetType>All</TargetType>
               <TargetSizeOrdering>Descending</TargetSizeOrdering>
               <SalvoSize>0</SalvoSize>
               <FarthestFirst>false</FarthestFirst>
@@ -808,9 +833,9 @@ Failure Rate: 0 %</LongDescription>
           <InstalledComponent xsi:type="MissileEngineSettings">
             <ComponentKey />
             <BalanceValues>
-              <A>0.640891433</A>
-              <B>0.173926115</B>
-              <C>0.185182452</C>
+              <A>0.535071552</A>
+              <B>0.230021164</B>
+              <C>0.234907284</C>
             </BalanceValues>
           </InstalledComponent>
         </MissileSocket>
@@ -839,14 +864,15 @@ Targeting Modes:
 Primary Seeker: SEMI-ACTIVE &lt;color=#4CFF72&gt;RADAR&lt;/color&gt;
 Validation Seeker(s): PASSIVE (&lt;color=#FF2525&gt;WAKE&lt;/color&gt;)
 
-Cruise: 285 m/s for 12,117 m, top speed in 2.8 s
-Sprint: 770 m/s for 4,493 m, top speed in 0.8 s
+Cruise: 285 m/s for 16,166 m, top speed in 3.2 s
+Sprint: 603 m/s for 4,500 m, top speed in 0.6 s
    Stage Trigger on Target Detection (&lt;color=#FBFF4C&gt;Direction-Only Seeker&lt;/color&gt;)
 Terminal Maneuvers: Weave
 
 Contact Fuze, High Explosive, Shaped
-Armor: 48cm   Component: 768hp
+Armor: 54cm   Component: 960hp
 Blast Angle: 70 deg
+Damage Per Fragment: 50.0
 
 Body Integrity: 25 
 Programming Time: 10 s
@@ -855,19 +881,19 @@ Boost-Phase Duration: 3 s
 Boost-Phase Strafe: 100 %
 Boost-Phase Turn Rate: 100 %
 Failure Rate: 0 %</LongDescription>
-      <Cost>13</Cost>
+      <Cost>11</Cost>
       <BodyKey>Stock/SGM-H-2 Body</BodyKey>
       <TemplateKey>3ca37f6e-588b-4d9b-94e3-7cfa4f61d274</TemplateKey>
       <BaseColor>
-        <r>1</r>
-        <g>1</g>
-        <b>1</b>
+        <r>0.0107289571</r>
+        <g>0.01742046</g>
+        <b>0.244516492</b>
         <a>1</a>
       </BaseColor>
       <StripeColor>
-        <r>0.129411772</r>
-        <g>0.6313726</g>
-        <b>0.7058824</b>
+        <r>0.0713833</r>
+        <g>0.6686697</g>
+        <b>0.0314566046</b>
         <a>1</a>
       </StripeColor>
       <Sockets>
@@ -876,7 +902,7 @@ Failure Rate: 0 %</LongDescription>
           <InstalledComponent xsi:type="ActiveSeekerSettings">
             <ComponentKey>Stock/Fixed Semi-Active Radar Seeker</ComponentKey>
             <Mode>Targeting</Mode>
-            <RejectUnvalidated>true</RejectUnvalidated>
+            <RejectUnvalidated>false</RejectUnvalidated>
             <DetectPDTargets>false</DetectPDTargets>
           </InstalledComponent>
         </MissileSocket>
@@ -899,6 +925,7 @@ Failure Rate: 0 %</LongDescription>
             <Maneuvers>Weave</Maneuvers>
             <DefensiveDoctrine>
               <TargetSizeMask>12</TargetSizeMask>
+              <TargetType>All</TargetType>
               <TargetSizeOrdering>Descending</TargetSizeOrdering>
               <SalvoSize>0</SalvoSize>
               <FarthestFirst>false</FarthestFirst>
@@ -907,18 +934,18 @@ Failure Rate: 0 %</LongDescription>
           </InstalledComponent>
         </MissileSocket>
         <MissileSocket>
-          <Size>4</Size>
+          <Size>5</Size>
           <InstalledComponent>
             <ComponentKey>Stock/HE Impact</ComponentKey>
           </InstalledComponent>
         </MissileSocket>
         <MissileSocket>
-          <Size>4</Size>
+          <Size>3</Size>
           <InstalledComponent xsi:type="MissileEngineSettings">
             <ComponentKey />
             <BalanceValues>
-              <A>0.5401372</A>
-              <B>0.459862828</B>
+              <A>0.205962837</A>
+              <B>0.794037163</B>
               <C>0</C>
             </BalanceValues>
           </InstalledComponent>
@@ -929,8 +956,8 @@ Failure Rate: 0 %</LongDescription>
             <ComponentKey />
             <BalanceValues>
               <A>0.6725945</A>
-              <B>0.0441603065</B>
-              <C>0.2832452</C>
+              <B>0.20448412</B>
+              <C>0.122921392</C>
             </BalanceValues>
           </InstalledComponent>
         </MissileSocket>
@@ -948,12 +975,13 @@ Targeting Modes:
 Primary Seeker: SEMI-ACTIVE &lt;color=#4CFF72&gt;RADAR&lt;/color&gt;
 Backup Seeker(s): HOME-ON-JAM (&lt;color=#4CFF72&gt;RADAR&lt;/color&gt; JAMMING Signals Only)
 
-252 m/s for 10,114 m, top speed in 1.4 s
+253 m/s for 10,017 m, top speed in 1.4 s
 Terminal Maneuvers: Weave
 
 Contact Fuze, High Explosive, Shaped
 Armor: 60cm   Component: 1,200hp
 Blast Angle: 70 deg
+Damage Per Fragment: 50.0
 
 Body Integrity: 30 
 Programming Time: 8 s
@@ -1006,6 +1034,7 @@ Failure Rate: 0 %</LongDescription>
             <Maneuvers>Weave</Maneuvers>
             <DefensiveDoctrine>
               <TargetSizeMask>12</TargetSizeMask>
+              <TargetType>All</TargetType>
               <TargetSizeOrdering>Descending</TargetSizeOrdering>
               <SalvoSize>0</SalvoSize>
               <FarthestFirst>false</FarthestFirst>
@@ -1024,9 +1053,125 @@ Failure Rate: 0 %</LongDescription>
           <InstalledComponent xsi:type="MissileEngineSettings">
             <ComponentKey />
             <BalanceValues>
-              <A>0.5087956</A>
-              <B>0.2610692</B>
-              <C>0.230135173</C>
+              <A>0.5140794</A>
+              <B>0.254208267</B>
+              <C>0.231712341</C>
+            </BalanceValues>
+          </InstalledComponent>
+        </MissileSocket>
+      </Sockets>
+    </MissileTemplate>
+    <MissileTemplate>
+      <Designation>SGM-H-360</Designation>
+      <Nickname>Shipwreck Block II</Nickname>
+      <Description>CRUISE - SAH(&lt;color=#4CFF72&gt;RADAR&lt;/color&gt;)/[PSV(&lt;color=#53FFFF&gt;EO&lt;/color&gt;)] - HE SHAPED</Description>
+      <LongDescription>The SGM-H-360 Shipwreck Block II is a size 3 waypoint-capable cruise missile.  It is based on the SGM-H-3 body, which is a high speed hybrid missile designed to strike heavy targets.  This missile will deliver a Contact Fuze, High Explosive, Shaped warhead.  It homes in on its target using a Semi-Active Radar seeker, validating that it is the correct target using a Passive Electro-Optical seeker.
+
+Control Method: CRUISE (Waypoint Capable)
+Targeting Modes:
+	&lt;b&gt;&lt;color=#4CFF72&gt;POSITION&lt;/color&gt;	&lt;color=#4CFF72&gt;TRACK[+TRP]&lt;/color&gt;&lt;/b&gt;
+Primary Seeker: SEMI-ACTIVE &lt;color=#4CFF72&gt;RADAR&lt;/color&gt;
+Validation Seeker(s): PASSIVE (&lt;color=#53FFFF&gt;EO&lt;/color&gt;)
+
+Cruise: 200 m/s for 15,667 m, top speed in 3.3 s
+Sprint: 791 m/s for 4,699 m, top speed in 0.9 s
+   Stage Trigger on Target Detection (&lt;color=#FBFF4C&gt;Direction-Only Seeker&lt;/color&gt;)
+Terminal Maneuvers: Weave
+
+Contact Fuze, High Explosive, Shaped
+Armor: 80cm   Component: 2,160hp
+Blast Angle: 70 deg
+Damage Per Fragment: 50.0
+
+Body Integrity: 60 
+Programming Time: 16 s
+Radar Signature Bonus: 100 %
+Boost-Phase Duration: 3 s
+Boost-Phase Strafe: 100 %
+Boost-Phase Turn Rate: 100 %
+Failure Rate: 0 %</LongDescription>
+      <Cost>35</Cost>
+      <BodyKey>Stock/SGM-H-3 Body</BodyKey>
+      <TemplateKey>4852f21a-7ef9-41fd-8891-4a8548d9a033</TemplateKey>
+      <BaseColor>
+        <r>1</r>
+        <g>1</g>
+        <b>1</b>
+        <a>1</a>
+      </BaseColor>
+      <StripeColor>
+        <r>0.117647059</r>
+        <g>0.6313726</g>
+        <b>0.192156866</b>
+        <a>1</a>
+      </StripeColor>
+      <Sockets>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="ActiveSeekerSettings">
+            <ComponentKey>Stock/Fixed Semi-Active Radar Seeker</ComponentKey>
+            <Mode>Targeting</Mode>
+            <RejectUnvalidated>true</RejectUnvalidated>
+            <DetectPDTargets>false</DetectPDTargets>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="PassiveSeekerSettings">
+            <ComponentKey>Stock/Electro-Optical Seeker</ComponentKey>
+            <Mode>Validation</Mode>
+            <RejectUnvalidated>false</RejectUnvalidated>
+            <DetectPDTargets>false</DetectPDTargets>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent>
+            <ComponentKey>Stock/Decoy Launcher</ComponentKey>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="CruiseGuidanceSettings">
+            <ComponentKey>Stock/Cruise Guidance</ComponentKey>
+            <Role>Offensive</Role>
+            <HotLaunch>false</HotLaunch>
+            <SelfDestructOnLost>false</SelfDestructOnLost>
+            <Maneuvers>Weave</Maneuvers>
+            <DefensiveDoctrine>
+              <TargetSizeMask>12</TargetSizeMask>
+              <TargetType>All</TargetType>
+              <TargetSizeOrdering>Descending</TargetSizeOrdering>
+              <SalvoSize>0</SalvoSize>
+              <FarthestFirst>false</FarthestFirst>
+            </DefensiveDoctrine>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>5</Size>
+          <InstalledComponent>
+            <ComponentKey>Stock/HE Impact</ComponentKey>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>5</Size>
+          <InstalledComponent xsi:type="MissileEngineSettings">
+            <ComponentKey />
+            <BalanceValues>
+              <A>0.535071552</A>
+              <B>0.2259696</B>
+              <C>0.238958851</C>
+            </BalanceValues>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="MissileEngineSettings">
+            <ComponentKey />
+            <BalanceValues>
+              <A>1</A>
+              <B>0</B>
+              <C>0</C>
             </BalanceValues>
           </InstalledComponent>
         </MissileSocket>
