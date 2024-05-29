@@ -4,16 +4,63 @@
   <Version>3</Version>
   <TotalPoints>3000</TotalPoints>
   <FactionKey>Stock/Alliance</FactionKey>
-  <Description>Difficulty: &lt;color=red&gt;HARD&lt;/color&gt;
+  <Description>Difficulty: &lt;color=yellow&gt;MODERATE&lt;/color&gt;
 
-A close range beam brawling fleet. Consists of three beam destroyers and an ECM corvette. You'll need to get in close to make use of the destroyers' beams, but they can also deliver a punch from a distance with their missile complement. Use of jamming and/or careful ambush planning is absolutely crucial to get the destroyers to firing range.</Description>
-  <SortOverrideOrder>6</SortOverrideOrder>
+A close range beam brawling fleet. Task Force Ash's primary formation consists of three beam destroyers and an ECM corvette. You'll need to get in close to make use of the destroyers' particle beams, but they can also deliver a punch from a distance with their missile complement. Use of jamming and/or careful ambush planning is absolutely crucial to get the destroyers to firing range. The detached scouting corvette can be used to keep an eye on potential prey while the main formation lies in wait.
+  </Description>
+  <SortOverrideOrder>4</SortOverrideOrder>
   <Ships>
+    <Ship>
+      <SaveID xsi:nil="true" />
+      <Key>a47472a0-0ce7-4993-a0bb-2ade08b4b9e7</Key>
+      <Name>Eyes</Name>
+      <Cost>230</Cost>
+      <Callsign>SCOUT</Callsign>
+      <Number>1015</Number>
+      <SymbolOption>0</SymbolOption>
+      <HullType>Stock/Sprinter Corvette</HullType>
+      <SocketMap>
+        <HullSocket>
+          <Key>XPaYCjBqdEqBxEIsVLP0oA</Key>
+          <ComponentName>Stock/Berthing</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>xRYIkvssd0mPY3VIgrnQ5A</Key>
+          <ComponentName>Stock/Reinforced CIC</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>rXO8xwG1MkqzI_2pU-O_qQ</Key>
+          <ComponentName>Stock/Plant Control Center</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>GefqwCQzg0qXA3EFRmDtPw</Key>
+          <ComponentName>Stock/Small DC Locker</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>4WpJyiOKVEqCwR99l47MkA</Key>
+          <ComponentName>Stock/FR3300 Micro Reactor</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>4EHx4mQhNUi-WuuQtQF5fA</Key>
+          <ComponentName>Stock/FM230 'Whiplash' Drive</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>TSPPW9ECe06-MGzR1i0WvQ</Key>
+          <ComponentName>Stock/RM50 'Parallax' Radar</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>MBOvGazj6UWpt2OOy44s7w</Key>
+          <ComponentName>Stock/Small Reactor Booster</ComponentName>
+        </HullSocket>
+      </SocketMap>
+      <WeaponGroups />
+      <TemplateMissileTypes />
+    </Ship>
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>f9cd78f4-7015-4364-a3de-e36fc28eb38a</Key>
       <Name>Static Noise</Name>
-      <Cost>445</Cost>
+      <Cost>410</Cost>
       <Callsign>EWAR</Callsign>
       <Number>1011</Number>
       <SymbolOption>0</SymbolOption>
@@ -83,21 +130,25 @@ A close range beam brawling fleet. Consists of three beam destroyers and an ECM 
       <SaveID xsi:nil="true" />
       <Key>0fb347e8-cdbc-4ebe-8603-a1f606e1e491</Key>
       <Name>Apply Damage</Name>
-      <Cost>852</Cost>
+      <Cost>787</Cost>
       <Callsign />
       <Number>1012</Number>
-      <SymbolOption>0</SymbolOption>
+      <SymbolOption>1</SymbolOption>
       <HullType>Stock/Keystone Destroyer</HullType>
       <SocketMap>
         <HullSocket>
           <Key>NpYYAkA5Z0uAElOjDg3Rag</Key>
+          <ComponentName>Stock/Mk64 Cannon</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>fSYv4j5-eEObwJEVhoBSvg</Key>
           <ComponentName>Stock/VLS-2 Launcher</ComponentName>
           <ComponentData xsi:type="ResizableCellLauncherData">
             <MissileLoad>
               <MagSaveData>
-                <MagazineKey>IxCsxc_hJkGieVXQyW9LQw</MagazineKey>
+                <MagazineKey>Yaqjf7WZTk-JTJ9ueHkf3A</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-207 Rain</MunitionKey>
-                <Quantity>24</Quantity>
+                <Quantity>19</Quantity>
               </MagSaveData>
             </MissileLoad>
             <ConfiguredSize>
@@ -107,25 +158,12 @@ A close range beam brawling fleet. Consists of three beam destroyers and an ECM 
           </ComponentData>
         </HullSocket>
         <HullSocket>
-          <Key>fSYv4j5-eEObwJEVhoBSvg</Key>
-          <ComponentName>Stock/Torpedo Turret</ComponentName>
-          <ComponentData xsi:type="CellLauncherData">
-            <MissileLoad>
-              <MagSaveData>
-                <MagazineKey>ms1oFCCuwUu2ltlfjdpdlg</MagazineKey>
-                <MunitionKey>$MODMIS$/SGT-300 Hail</MunitionKey>
-                <Quantity>6</Quantity>
-              </MagSaveData>
-            </MissileLoad>
-          </ComponentData>
-        </HullSocket>
-        <HullSocket>
           <Key>x21sadthgE2FtDWSJKINGQ</Key>
-          <ComponentName>Stock/Mk62 Cannon</ComponentName>
+          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>IxKwpY5d9EicYRRTMn8xVw</Key>
-          <ComponentName>Stock/Mk62 Cannon</ComponentName>
+          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>JpOU9MgWXEmfLcQoAK4otA</Key>
@@ -135,12 +173,12 @@ A close range beam brawling fleet. Consists of three beam destroyers and an ECM 
               <MagSaveData>
                 <MagazineKey>y1y33bb31E-ua9RV0CGafw</MagazineKey>
                 <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>6</Quantity>
+                <Quantity>8</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>4znP_s3JUkCk5z_8QcFMKQ</MagazineKey>
                 <MunitionKey>Stock/EA20 Flare Decoy</MunitionKey>
-                <Quantity>1</Quantity>
+                <Quantity>2</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>U__yY1f26E6F4ReTizMpLw</MagazineKey>
@@ -168,19 +206,24 @@ A close range beam brawling fleet. Consists of three beam destroyers and an ECM 
           <ComponentData xsi:type="BulkMagazineData">
             <Load>
               <MagSaveData>
-                <MagazineKey>bT5xO9gucEC-NY89W53vsg</MagazineKey>
-                <MunitionKey>Stock/120mm HE-RPF Shell</MunitionKey>
-                <Quantity>400</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>v74zBbCTvUePb43oSde7JQ</MagazineKey>
-                <MunitionKey>Stock/120mm HE Shell</MunitionKey>
-                <Quantity>300</Quantity>
-              </MagSaveData>
-              <MagSaveData>
                 <MagazineKey>akVUlDi7QkeFCXLlKr_FGg</MagazineKey>
                 <MunitionKey>Stock/20mm Slug</MunitionKey>
-                <Quantity>4000</Quantity>
+                <Quantity>10000</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>2a9Awxp8GE-mp4JdCCA_iw</MagazineKey>
+                <MunitionKey>Stock/250mm HE-RPF Shell</MunitionKey>
+                <Quantity>50</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>dzn8_YtrxEKAayWVSvtU7A</MagazineKey>
+                <MunitionKey>Stock/250mm HE Shell</MunitionKey>
+                <Quantity>50</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>xRdQ8XkDTUWj1qErcxlFvQ</MagazineKey>
+                <MunitionKey>Stock/250mm AP Shell</MunitionKey>
+                <Quantity>50</Quantity>
               </MagSaveData>
             </Load>
           </ComponentData>
@@ -195,7 +238,7 @@ A close range beam brawling fleet. Consists of three beam destroyers and an ECM 
         </HullSocket>
         <HullSocket>
           <Key>ln5c_ZvdCUSMVWZL_-m3yw</Key>
-          <ComponentName>Stock/Reinforced DC Locker</ComponentName>
+          <ComponentName>Stock/Small DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>H-oABJbYw0qgKd4QzU0WaA</Key>
@@ -207,7 +250,7 @@ A close range beam brawling fleet. Consists of three beam destroyers and an ECM 
         </HullSocket>
         <HullSocket>
           <Key>AWYvQUZ26k20yHOrVQKg6Q</Key>
-          <ComponentName>Stock/FM240 'Dragonfly' Drive</ComponentName>
+          <ComponentName>Stock/FR4800 Reactor</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>tmHTz6HkrE-RUtN94W6lyQ</Key>
@@ -219,7 +262,7 @@ A close range beam brawling fleet. Consists of three beam destroyers and an ECM 
         </HullSocket>
         <HullSocket>
           <Key>h29TSNGRo0m_DmeRr2BqDw</Key>
-          <ComponentName>Stock/FR3300 Micro Reactor</ComponentName>
+          <ComponentName>Stock/Focused Particle Accelerator</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>E9sMCEquVk-NNj5heGmIlQ</Key>
@@ -227,7 +270,7 @@ A close range beam brawling fleet. Consists of three beam destroyers and an ECM 
         </HullSocket>
         <HullSocket>
           <Key>gx2UKetKWUm5BfZhiD5phQ</Key>
-          <ComponentName>Stock/Small Reactor Booster</ComponentName>
+          <ComponentName>Stock/Adaptive Radar Receiver</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>ZJTmbGdjAk-XEKihIYHEuw</Key>
@@ -237,8 +280,7 @@ A close range beam brawling fleet. Consists of three beam destroyers and an ECM 
       <WeaponGroups>
         <WepGroup Name="GUNS">
           <MemberKeys>
-            <string>x21sadthgE2FtDWSJKINGQ</string>
-            <string>IxKwpY5d9EicYRRTMn8xVw</string>
+            <string>NpYYAkA5Z0uAElOjDg3Rag</string>
           </MemberKeys>
         </WepGroup>
       </WeaponGroups>
@@ -256,21 +298,25 @@ A close range beam brawling fleet. Consists of three beam destroyers and an ECM 
       <SaveID xsi:nil="true" />
       <Key>64784cb3-276c-481f-9a1d-1579f7e7a9c8</Key>
       <Name>Energy Transfer</Name>
-      <Cost>852</Cost>
+      <Cost>787</Cost>
       <Callsign />
       <Number>1013</Number>
-      <SymbolOption>0</SymbolOption>
+      <SymbolOption>1</SymbolOption>
       <HullType>Stock/Keystone Destroyer</HullType>
       <SocketMap>
         <HullSocket>
           <Key>NpYYAkA5Z0uAElOjDg3Rag</Key>
+          <ComponentName>Stock/Mk64 Cannon</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>fSYv4j5-eEObwJEVhoBSvg</Key>
           <ComponentName>Stock/VLS-2 Launcher</ComponentName>
           <ComponentData xsi:type="ResizableCellLauncherData">
             <MissileLoad>
               <MagSaveData>
-                <MagazineKey>IxCsxc_hJkGieVXQyW9LQw</MagazineKey>
+                <MagazineKey>86yeP076tU6X9MYN0Aeydg</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-207 Rain</MunitionKey>
-                <Quantity>24</Quantity>
+                <Quantity>19</Quantity>
               </MagSaveData>
             </MissileLoad>
             <ConfiguredSize>
@@ -280,25 +326,12 @@ A close range beam brawling fleet. Consists of three beam destroyers and an ECM 
           </ComponentData>
         </HullSocket>
         <HullSocket>
-          <Key>fSYv4j5-eEObwJEVhoBSvg</Key>
-          <ComponentName>Stock/Torpedo Turret</ComponentName>
-          <ComponentData xsi:type="CellLauncherData">
-            <MissileLoad>
-              <MagSaveData>
-                <MagazineKey>CybmMvV2tkyii7jqIJFMWw</MagazineKey>
-                <MunitionKey>$MODMIS$/SGT-300 Hail</MunitionKey>
-                <Quantity>6</Quantity>
-              </MagSaveData>
-            </MissileLoad>
-          </ComponentData>
-        </HullSocket>
-        <HullSocket>
           <Key>x21sadthgE2FtDWSJKINGQ</Key>
-          <ComponentName>Stock/Mk62 Cannon</ComponentName>
+          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>IxKwpY5d9EicYRRTMn8xVw</Key>
-          <ComponentName>Stock/Mk62 Cannon</ComponentName>
+          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>JpOU9MgWXEmfLcQoAK4otA</Key>
@@ -308,12 +341,12 @@ A close range beam brawling fleet. Consists of three beam destroyers and an ECM 
               <MagSaveData>
                 <MagazineKey>y1y33bb31E-ua9RV0CGafw</MagazineKey>
                 <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>6</Quantity>
+                <Quantity>8</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>4znP_s3JUkCk5z_8QcFMKQ</MagazineKey>
                 <MunitionKey>Stock/EA20 Flare Decoy</MunitionKey>
-                <Quantity>1</Quantity>
+                <Quantity>2</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>U__yY1f26E6F4ReTizMpLw</MagazineKey>
@@ -341,19 +374,24 @@ A close range beam brawling fleet. Consists of three beam destroyers and an ECM 
           <ComponentData xsi:type="BulkMagazineData">
             <Load>
               <MagSaveData>
-                <MagazineKey>bT5xO9gucEC-NY89W53vsg</MagazineKey>
-                <MunitionKey>Stock/120mm HE-RPF Shell</MunitionKey>
-                <Quantity>400</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>v74zBbCTvUePb43oSde7JQ</MagazineKey>
-                <MunitionKey>Stock/120mm HE Shell</MunitionKey>
-                <Quantity>300</Quantity>
-              </MagSaveData>
-              <MagSaveData>
                 <MagazineKey>bcgjKIloZ0ifApNa8Ac48Q</MagazineKey>
                 <MunitionKey>Stock/20mm Slug</MunitionKey>
-                <Quantity>4000</Quantity>
+                <Quantity>10000</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>UHbR9HjGhk69I621dmlFew</MagazineKey>
+                <MunitionKey>Stock/250mm HE Shell</MunitionKey>
+                <Quantity>50</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>BC-OdC6tXEq6GwLeOpIboQ</MagazineKey>
+                <MunitionKey>Stock/250mm HE-RPF Shell</MunitionKey>
+                <Quantity>50</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>arEGWXxtzUC3N_292w93UQ</MagazineKey>
+                <MunitionKey>Stock/250mm AP Shell</MunitionKey>
+                <Quantity>50</Quantity>
               </MagSaveData>
             </Load>
           </ComponentData>
@@ -368,7 +406,7 @@ A close range beam brawling fleet. Consists of three beam destroyers and an ECM 
         </HullSocket>
         <HullSocket>
           <Key>ln5c_ZvdCUSMVWZL_-m3yw</Key>
-          <ComponentName>Stock/Reinforced DC Locker</ComponentName>
+          <ComponentName>Stock/Small DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>H-oABJbYw0qgKd4QzU0WaA</Key>
@@ -380,7 +418,7 @@ A close range beam brawling fleet. Consists of three beam destroyers and an ECM 
         </HullSocket>
         <HullSocket>
           <Key>AWYvQUZ26k20yHOrVQKg6Q</Key>
-          <ComponentName>Stock/FM240 'Dragonfly' Drive</ComponentName>
+          <ComponentName>Stock/FR4800 Reactor</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>tmHTz6HkrE-RUtN94W6lyQ</Key>
@@ -392,7 +430,7 @@ A close range beam brawling fleet. Consists of three beam destroyers and an ECM 
         </HullSocket>
         <HullSocket>
           <Key>h29TSNGRo0m_DmeRr2BqDw</Key>
-          <ComponentName>Stock/FR3300 Micro Reactor</ComponentName>
+          <ComponentName>Stock/Focused Particle Accelerator</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>E9sMCEquVk-NNj5heGmIlQ</Key>
@@ -400,7 +438,7 @@ A close range beam brawling fleet. Consists of three beam destroyers and an ECM 
         </HullSocket>
         <HullSocket>
           <Key>gx2UKetKWUm5BfZhiD5phQ</Key>
-          <ComponentName>Stock/Small Reactor Booster</ComponentName>
+          <ComponentName>Stock/Adaptive Radar Receiver</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>ZJTmbGdjAk-XEKihIYHEuw</Key>
@@ -410,8 +448,7 @@ A close range beam brawling fleet. Consists of three beam destroyers and an ECM 
       <WeaponGroups>
         <WepGroup Name="GUNS">
           <MemberKeys>
-            <string>x21sadthgE2FtDWSJKINGQ</string>
-            <string>IxKwpY5d9EicYRRTMn8xVw</string>
+            <string>NpYYAkA5Z0uAElOjDg3Rag</string>
           </MemberKeys>
         </WepGroup>
       </WeaponGroups>
@@ -429,21 +466,25 @@ A close range beam brawling fleet. Consists of three beam destroyers and an ECM 
       <SaveID xsi:nil="true" />
       <Key>44d24d3a-0e95-448b-abeb-620481d33a8e</Key>
       <Name>Consider This</Name>
-      <Cost>851</Cost>
+      <Cost>786</Cost>
       <Callsign />
       <Number>1014</Number>
-      <SymbolOption>0</SymbolOption>
+      <SymbolOption>1</SymbolOption>
       <HullType>Stock/Keystone Destroyer</HullType>
       <SocketMap>
         <HullSocket>
           <Key>NpYYAkA5Z0uAElOjDg3Rag</Key>
+          <ComponentName>Stock/Mk64 Cannon</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>fSYv4j5-eEObwJEVhoBSvg</Key>
           <ComponentName>Stock/VLS-2 Launcher</ComponentName>
           <ComponentData xsi:type="ResizableCellLauncherData">
             <MissileLoad>
               <MagSaveData>
-                <MagazineKey>IxCsxc_hJkGieVXQyW9LQw</MagazineKey>
+                <MagazineKey>c7UNFY6nI0qJ52lb7iQXvA</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-207 Rain</MunitionKey>
-                <Quantity>24</Quantity>
+                <Quantity>19</Quantity>
               </MagSaveData>
             </MissileLoad>
             <ConfiguredSize>
@@ -453,25 +494,12 @@ A close range beam brawling fleet. Consists of three beam destroyers and an ECM 
           </ComponentData>
         </HullSocket>
         <HullSocket>
-          <Key>fSYv4j5-eEObwJEVhoBSvg</Key>
-          <ComponentName>Stock/Torpedo Turret</ComponentName>
-          <ComponentData xsi:type="CellLauncherData">
-            <MissileLoad>
-              <MagSaveData>
-                <MagazineKey>XcQxYLq1Bk6n7xI291W6yQ</MagazineKey>
-                <MunitionKey>$MODMIS$/SGT-300 Hail</MunitionKey>
-                <Quantity>6</Quantity>
-              </MagSaveData>
-            </MissileLoad>
-          </ComponentData>
-        </HullSocket>
-        <HullSocket>
           <Key>x21sadthgE2FtDWSJKINGQ</Key>
-          <ComponentName>Stock/Mk62 Cannon</ComponentName>
+          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>IxKwpY5d9EicYRRTMn8xVw</Key>
-          <ComponentName>Stock/Mk62 Cannon</ComponentName>
+          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>JpOU9MgWXEmfLcQoAK4otA</Key>
@@ -481,12 +509,12 @@ A close range beam brawling fleet. Consists of three beam destroyers and an ECM 
               <MagSaveData>
                 <MagazineKey>y1y33bb31E-ua9RV0CGafw</MagazineKey>
                 <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>5</Quantity>
+                <Quantity>7</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>4znP_s3JUkCk5z_8QcFMKQ</MagazineKey>
                 <MunitionKey>Stock/EA20 Flare Decoy</MunitionKey>
-                <Quantity>1</Quantity>
+                <Quantity>2</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>U__yY1f26E6F4ReTizMpLw</MagazineKey>
@@ -514,19 +542,24 @@ A close range beam brawling fleet. Consists of three beam destroyers and an ECM 
           <ComponentData xsi:type="BulkMagazineData">
             <Load>
               <MagSaveData>
-                <MagazineKey>bT5xO9gucEC-NY89W53vsg</MagazineKey>
-                <MunitionKey>Stock/120mm HE-RPF Shell</MunitionKey>
-                <Quantity>400</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>v74zBbCTvUePb43oSde7JQ</MagazineKey>
-                <MunitionKey>Stock/120mm HE Shell</MunitionKey>
-                <Quantity>300</Quantity>
-              </MagSaveData>
-              <MagSaveData>
                 <MagazineKey>RCVbvlP8r0ySd-Mt1Em1AQ</MagazineKey>
                 <MunitionKey>Stock/20mm Slug</MunitionKey>
-                <Quantity>4000</Quantity>
+                <Quantity>10000</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>caMnNSc26EiSmKQahYNAcQ</MagazineKey>
+                <MunitionKey>Stock/250mm HE Shell</MunitionKey>
+                <Quantity>50</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>fAnAX9DkP02J2E5ji8xS1w</MagazineKey>
+                <MunitionKey>Stock/250mm HE-RPF Shell</MunitionKey>
+                <Quantity>50</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>uO2HJJ1KV06iGLVWKRInBA</MagazineKey>
+                <MunitionKey>Stock/250mm AP Shell</MunitionKey>
+                <Quantity>50</Quantity>
               </MagSaveData>
             </Load>
           </ComponentData>
@@ -541,7 +574,7 @@ A close range beam brawling fleet. Consists of three beam destroyers and an ECM 
         </HullSocket>
         <HullSocket>
           <Key>ln5c_ZvdCUSMVWZL_-m3yw</Key>
-          <ComponentName>Stock/Reinforced DC Locker</ComponentName>
+          <ComponentName>Stock/Small DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>H-oABJbYw0qgKd4QzU0WaA</Key>
@@ -553,7 +586,7 @@ A close range beam brawling fleet. Consists of three beam destroyers and an ECM 
         </HullSocket>
         <HullSocket>
           <Key>AWYvQUZ26k20yHOrVQKg6Q</Key>
-          <ComponentName>Stock/FM240 'Dragonfly' Drive</ComponentName>
+          <ComponentName>Stock/FR4800 Reactor</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>tmHTz6HkrE-RUtN94W6lyQ</Key>
@@ -565,7 +598,7 @@ A close range beam brawling fleet. Consists of three beam destroyers and an ECM 
         </HullSocket>
         <HullSocket>
           <Key>h29TSNGRo0m_DmeRr2BqDw</Key>
-          <ComponentName>Stock/FR3300 Micro Reactor</ComponentName>
+          <ComponentName>Stock/Focused Particle Accelerator</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>E9sMCEquVk-NNj5heGmIlQ</Key>
@@ -573,7 +606,7 @@ A close range beam brawling fleet. Consists of three beam destroyers and an ECM 
         </HullSocket>
         <HullSocket>
           <Key>gx2UKetKWUm5BfZhiD5phQ</Key>
-          <ComponentName>Stock/Small Reactor Booster</ComponentName>
+          <ComponentName>Stock/Adaptive Radar Receiver</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>ZJTmbGdjAk-XEKihIYHEuw</Key>
@@ -583,8 +616,7 @@ A close range beam brawling fleet. Consists of three beam destroyers and an ECM 
       <WeaponGroups>
         <WepGroup Name="GUNS">
           <MemberKeys>
-            <string>x21sadthgE2FtDWSJKINGQ</string>
-            <string>IxKwpY5d9EicYRRTMn8xVw</string>
+            <string>NpYYAkA5Z0uAElOjDg3Rag</string>
           </MemberKeys>
         </WepGroup>
       </WeaponGroups>
@@ -601,18 +633,17 @@ A close range beam brawling fleet. Consists of three beam destroyers and an ECM 
   </Ships>
   <MissileTypes>
     <MissileTemplate>
-      <AssociatedTemplateName>SGM-206 Thunderhead</AssociatedTemplateName>
       <Designation>SGM-207</Designation>
       <Nickname>Rain</Nickname>
-      <Description>DIRECT - ACT(&lt;color=#4CFF72&gt;RADAR&lt;/color&gt;) - HE SHAPED</Description>
-      <LongDescription>The SGM-207 Rain is a size 2 direct guidance missile.  It is based on the SGM-2 body, which is a flexible mainstay anti-ship missile.  This missile will deliver a Contact Fuze, High Explosive, Shaped warhead.  It homes in on its target using an Active Radar seeker.
+      <Description>DIRECT - ACT(&lt;color=#3BC81E&gt;RADAR&lt;/color&gt;) - HE SHAPED</Description>
+      <LongDescription>The &lt;noparse&gt;SGM-207 Rain&lt;/noparse&gt; is a size 2 direct guidance missile.  It is based on the SGM-2 body, which is a flexible mainstay anti-ship missile.  This missile will deliver a Contact Fuze, High Explosive, Shaped warhead.  It homes in on its target using an Active Radar seeker.
 
 Control Method: DIRECT
 Targeting Modes:
-	&lt;b&gt;&lt;color=#4CFF72&gt;POSITION&lt;/color&gt;	&lt;color=#4CFF72&gt;TRACK&lt;/color&gt;&lt;/b&gt;
-Primary Seeker: ACTIVE &lt;color=#4CFF72&gt;RADAR&lt;/color&gt;
+	&lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+Primary Seeker: ACTIVE &lt;color=#3BC81E&gt;RADAR&lt;/color&gt;
 
-319 m/s for 12,000 m, top speed in 2.3 s
+323 m/s for 12,085 m, top speed in 2.3 s
 Terminal Maneuvers: None
 
 Contact Fuze, High Explosive, Shaped
@@ -621,6 +652,7 @@ Blast Angle: 70 deg
 Damage Per Fragment: 50.0
 
 Body Integrity: 30 
+Wall Thickness: 0.5
 Programming Time: 8 s
 Radar Signature Bonus: 100 %
 Boost-Phase Duration: 3 s
@@ -684,102 +716,9 @@ Failure Rate: 0 %</LongDescription>
           <InstalledComponent xsi:type="MissileEngineSettings">
             <ComponentKey />
             <BalanceValues>
-              <A>0.8466765</A>
-              <B>0.153323486</B>
-              <C>0</C>
-            </BalanceValues>
-          </InstalledComponent>
-        </MissileSocket>
-      </Sockets>
-    </MissileTemplate>
-    <MissileTemplate>
-      <Designation>SGT-300</Designation>
-      <Nickname>Hail</Nickname>
-      <Description>DIRECT - &lt;color=#FBFF4C&gt;CMD&lt;/color&gt; - HE SHAPED</Description>
-      <LongDescription>The SGT-300 Hail is a size 3 direct guidance missile.  It is based on the SGT-3 body, which is a heavy anti-ship torpedo.  This missile will deliver a Contact Fuze, High Explosive, Shaped warhead.  It homes in on its target using command guidance from its launching ship.
-
-Control Method: DIRECT
-Targeting Modes:
-	&lt;b&gt;&lt;color=#FF2525&gt;POSITION&lt;/color&gt;	&lt;color=#4CFF72&gt;TRACK&lt;/color&gt;&lt;/b&gt;
-Primary Seeker: COMMAND (&lt;color=#FBFF4C&gt;Requires COMMS Enabled&lt;/color&gt;)
-
-264 m/s for 2,563 m, top speed in 1.6 s
-Terminal Maneuvers: None
-
-Contact Fuze, High Explosive, Shaped
-Armor: 123cm   Component: 5,040hp
-Blast Angle: 70 deg
-Damage Per Fragment: 50.0
-
-Body Integrity: 160 
-Programming Time: 3 s
-Radar Signature Bonus: 100 %
-Boost-Phase Duration: 3 s
-Boost-Phase Strafe: 250 % (&lt;color=#4CFF72&gt;+150%&lt;/color&gt;)
-Boost-Phase Turn Rate: 200 % (&lt;color=#4CFF72&gt;+100%&lt;/color&gt;)
-Failure Rate: 0 %</LongDescription>
-      <Cost>12</Cost>
-      <BodyKey>Stock/SGT-3 Body</BodyKey>
-      <TemplateKey>3ccf279c-9f6f-4f45-ae95-87aebf36b729</TemplateKey>
-      <BaseColor>
-        <r>0.9999999</r>
-        <g>0</g>
-        <b>0</b>
-        <a>1</a>
-      </BaseColor>
-      <StripeColor>
-        <r>0.9999999</r>
-        <g>0.9999999</g>
-        <b>0.9999998</b>
-        <a>1</a>
-      </StripeColor>
-      <Sockets>
-        <MissileSocket>
-          <Size>1</Size>
-          <InstalledComponent xsi:type="CommandSeekerSettings">
-            <ComponentKey>Stock/Command Receiver</ComponentKey>
-            <Mode>Targeting</Mode>
-            <RejectUnvalidated>false</RejectUnvalidated>
-          </InstalledComponent>
-        </MissileSocket>
-        <MissileSocket>
-          <Size>1</Size>
-          <InstalledComponent>
-            <ComponentKey>Stock/Cold Gas Bottle</ComponentKey>
-          </InstalledComponent>
-        </MissileSocket>
-        <MissileSocket>
-          <Size>1</Size>
-          <InstalledComponent xsi:type="DirectGuidanceSettings">
-            <ComponentKey>Stock/Direct Guidance</ComponentKey>
-            <Role>Offensive</Role>
-            <HotLaunch>true</HotLaunch>
-            <SelfDestructOnLost>false</SelfDestructOnLost>
-            <Maneuvers>None</Maneuvers>
-            <DefensiveDoctrine>
-              <TargetSizeMask>12</TargetSizeMask>
-              <TargetType>All</TargetType>
-              <TargetSizeOrdering>Descending</TargetSizeOrdering>
-              <SalvoSize>0</SalvoSize>
-              <FarthestFirst>false</FarthestFirst>
-            </DefensiveDoctrine>
-            <ApproachAngleControl>false</ApproachAngleControl>
-          </InstalledComponent>
-        </MissileSocket>
-        <MissileSocket>
-          <Size>7</Size>
-          <InstalledComponent>
-            <ComponentKey>Stock/HE Impact</ComponentKey>
-          </InstalledComponent>
-        </MissileSocket>
-        <MissileSocket>
-          <Size>7</Size>
-          <InstalledComponent xsi:type="MissileEngineSettings">
-            <ComponentKey />
-            <BalanceValues>
-              <A>0.712664962</A>
-              <B>0.143250257</B>
-              <C>0.144084781</C>
+              <A>0.8420544</A>
+              <B>0.151483819</B>
+              <C>0.00646175444</C>
             </BalanceValues>
           </InstalledComponent>
         </MissileSocket>
