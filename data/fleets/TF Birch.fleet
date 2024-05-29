@@ -6,14 +6,15 @@
   <FactionKey>Stock/Alliance</FactionKey>
   <Description>Difficulty: &lt;color=green&gt;EASY&lt;/color&gt;
 
-Triple light cruisers with medium cannons and electronic warfare. This fleet excels at hunting down scouts and escorts, but its weapons can struggle against armoured opponents. Use superior mobility and jammers to pick fights you can win and escape from fights that you can't, but beware of ambushes. Light cruisers can be easily dismantled if caught up close where they can't evade incoming fire.</Description>
+Task Force Birch is comprised of three light cruisers with medium cannons and electronic warfare. This fleet excels at hunting down scouts and escorts, but its weapons can struggle against armoured opponents. Use superior mobility and jammers to pick fights you can win and escape from fights that you can't, but beware of ambushes. Light cruisers can be easily dismantled if caught up close where they can't dodge incoming fire. Setting the MNVR toggle to EVADE when under fire will be of great utility when commanding this taskforce.
+  </Description>
   <SortOverrideOrder>2</SortOverrideOrder>
   <Ships>
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>75c4adc0-7093-4fd7-af94-dcee5adc2687</Key>
       <Name>Mark The Time</Name>
-      <Cost>992</Cost>
+      <Cost>996</Cost>
       <Callsign />
       <Number>140</Number>
       <SymbolOption>0</SymbolOption>
@@ -43,7 +44,7 @@ Triple light cruisers with medium cannons and electronic warfare. This fleet exc
               <MagSaveData>
                 <MagazineKey>xui-ZCNOCEqqmPIKSO4X9g</MagazineKey>
                 <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>13</Quantity>
+                <Quantity>19</Quantity>
               </MagSaveData>
             </MissileLoad>
           </ComponentData>
@@ -94,7 +95,7 @@ Triple light cruisers with medium cannons and electronic warfare. This fleet exc
         </HullSocket>
         <HullSocket>
           <Key>DAcDeA0yskSjje92CY-F7w</Key>
-          <ComponentName>Stock/Large DC Locker</ComponentName>
+          <ComponentName>Stock/Small DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>jKvCg9nYmkKfAn4-ht_Y6A</Key>
@@ -104,17 +105,17 @@ Triple light cruisers with medium cannons and electronic warfare. This fleet exc
               <MagSaveData>
                 <MagazineKey>CYStXEBOc0evZ5NmEGGQXg</MagazineKey>
                 <MunitionKey>Stock/250mm AP Shell</MunitionKey>
-                <Quantity>550</Quantity>
+                <Quantity>600</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>-f09k0cANU-1q-iBazQ8uQ</MagazineKey>
                 <MunitionKey>Stock/250mm HE Shell</MunitionKey>
-                <Quantity>550</Quantity>
+                <Quantity>600</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>ZBtRcOGI2EaeLk99EzprnQ</MagazineKey>
                 <MunitionKey>Stock/250mm HE-RPF Shell</MunitionKey>
-                <Quantity>550</Quantity>
+                <Quantity>600</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>XdGaSjzkfE2BIc3mGTjcHA</MagazineKey>
@@ -177,7 +178,7 @@ Triple light cruisers with medium cannons and electronic warfare. This fleet exc
       <SaveID xsi:nil="true" />
       <Key>26b0dde7-4845-49a5-b282-9f25a14ffa20</Key>
       <Name>Exit Criteria Met</Name>
-      <Cost>1004</Cost>
+      <Cost>1002</Cost>
       <Callsign />
       <Number>141</Number>
       <SymbolOption>0</SymbolOption>
@@ -245,7 +246,7 @@ Triple light cruisers with medium cannons and electronic warfare. This fleet exc
         </HullSocket>
         <HullSocket>
           <Key>DAcDeA0yskSjje92CY-F7w</Key>
-          <ComponentName>Stock/Large DC Locker</ComponentName>
+          <ComponentName>Stock/Small DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>jKvCg9nYmkKfAn4-ht_Y6A</Key>
@@ -255,17 +256,17 @@ Triple light cruisers with medium cannons and electronic warfare. This fleet exc
               <MagSaveData>
                 <MagazineKey>CYStXEBOc0evZ5NmEGGQXg</MagazineKey>
                 <MunitionKey>Stock/250mm AP Shell</MunitionKey>
-                <Quantity>550</Quantity>
+                <Quantity>600</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>-f09k0cANU-1q-iBazQ8uQ</MagazineKey>
                 <MunitionKey>Stock/250mm HE Shell</MunitionKey>
-                <Quantity>550</Quantity>
+                <Quantity>600</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>ZBtRcOGI2EaeLk99EzprnQ</MagazineKey>
                 <MunitionKey>Stock/250mm HE-RPF Shell</MunitionKey>
-                <Quantity>550</Quantity>
+                <Quantity>600</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>XdGaSjzkfE2BIc3mGTjcHA</MagazineKey>
@@ -330,9 +331,9 @@ Triple light cruisers with medium cannons and electronic warfare. This fleet exc
       <InitialFormation>
         <GuideKey>75c4adc0-7093-4fd7-af94-dcee5adc2687</GuideKey>
         <RelativePosition>
-          <x>-29.9858685</x>
-          <y>0</y>
-          <z>-0.0815887451</z>
+          <x>-29.9614315</x>
+          <y>18.0081062</y>
+          <z>-0.128601074</z>
         </RelativePosition>
       </InitialFormation>
       <TemplateMissileTypes />
@@ -341,7 +342,7 @@ Triple light cruisers with medium cannons and electronic warfare. This fleet exc
       <SaveID xsi:nil="true" />
       <Key>adc596be-d421-4ffa-b9be-9f7954ff5d75</Key>
       <Name>The Proven Factor</Name>
-      <Cost>1004</Cost>
+      <Cost>1002</Cost>
       <Callsign />
       <Number>142</Number>
       <SymbolOption>0</SymbolOption>
@@ -409,7 +410,7 @@ Triple light cruisers with medium cannons and electronic warfare. This fleet exc
         </HullSocket>
         <HullSocket>
           <Key>DAcDeA0yskSjje92CY-F7w</Key>
-          <ComponentName>Stock/Large DC Locker</ComponentName>
+          <ComponentName>Stock/Small DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>jKvCg9nYmkKfAn4-ht_Y6A</Key>
@@ -419,17 +420,17 @@ Triple light cruisers with medium cannons and electronic warfare. This fleet exc
               <MagSaveData>
                 <MagazineKey>CYStXEBOc0evZ5NmEGGQXg</MagazineKey>
                 <MunitionKey>Stock/250mm AP Shell</MunitionKey>
-                <Quantity>550</Quantity>
+                <Quantity>600</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>-f09k0cANU-1q-iBazQ8uQ</MagazineKey>
                 <MunitionKey>Stock/250mm HE Shell</MunitionKey>
-                <Quantity>550</Quantity>
+                <Quantity>600</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>ZBtRcOGI2EaeLk99EzprnQ</MagazineKey>
                 <MunitionKey>Stock/250mm HE-RPF Shell</MunitionKey>
-                <Quantity>550</Quantity>
+                <Quantity>600</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>XdGaSjzkfE2BIc3mGTjcHA</MagazineKey>
@@ -494,9 +495,9 @@ Triple light cruisers with medium cannons and electronic warfare. This fleet exc
       <InitialFormation>
         <GuideKey>75c4adc0-7093-4fd7-af94-dcee5adc2687</GuideKey>
         <RelativePosition>
-          <x>30.0192738</x>
-          <y>0</y>
-          <z>-0.118125916</z>
+          <x>30.02491</x>
+          <y>17.9733658</y>
+          <z>-0.04122162</z>
         </RelativePosition>
       </InitialFormation>
       <TemplateMissileTypes />

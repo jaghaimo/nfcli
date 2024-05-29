@@ -6,14 +6,15 @@
   <FactionKey>Stock/Protectorate</FactionKey>
   <Description>Difficulty: &lt;color=yellow&gt;MODERATE&lt;/color&gt;
 
-Garnet Squadron is a multi-role heavy attack fleet featuring a swarm of monitors. The C90 cannon forms the backbone of the fleet, and its 600mm bombs combined with 100mm fire will quickly shred any lightly armored foe. Against heavy targets, swap to 600mm HE-SH and call in support fire from the plasma cannons. Once the target is nice and crispy, 100mm HE-HC shells can devastate even the mightiest ship. To prevent being caught out in the open, a pair of jammers should be used with battle-short. The EWR tugboat can help you plan ambushes, but keep it safe in the rear, as it lacks layered defenses. Success with Garnet depends on choosing ammo types to suit your targets and engaging on your terms.</Description>
+Garnet Squadron is a multi-role heavy attack fleet featuring a swarm of monitors. The C90 cannon forms the backbone of the fleet, and its 600mm bombs combined with 100mm HE fire will quickly shred any lightly armored foe. Against heavy targets, swap to 600mm HE-SH and call in support fire from the plasma cannons. Once the target's armor is shredded, 100mm HE-HC shells will devastate it. A pair of jammers can keep the squadron alive during short crossings between cover. The EWR tugboat can help you plan ambushes, but keep it safe in the rear, as it lacks strong defenses. Success with Garnet depends on choosing ammo types to suit your targets and engaging on your terms.
+  </Description>
   <SortOverrideOrder>3</SortOverrideOrder>
   <Ships>
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>224e5998-56d0-4c78-9859-5e7f1d7a1473</Key>
       <Name>See It My Way</Name>
-      <Cost>616</Cost>
+      <Cost>622</Cost>
       <Callsign />
       <Number>1439</Number>
       <SymbolOption>0</SymbolOption>
@@ -51,27 +52,27 @@ Garnet Squadron is a multi-role heavy attack fleet featuring a swarm of monitors
               <MagSaveData>
                 <MagazineKey>CzA4LWaOZkq1lhmcBlDtEA</MagazineKey>
                 <MunitionKey>Stock/100mm AP Shell</MunitionKey>
-                <Quantity>500</Quantity>
+                <Quantity>750</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>6PDeYjmayk-DPthtJnbFEw</MagazineKey>
                 <MunitionKey>Stock/100mm HE Shell</MunitionKey>
-                <Quantity>500</Quantity>
+                <Quantity>750</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>Z4QOeHoX6Em53WaTcForwQ</MagazineKey>
                 <MunitionKey>Stock/100mm HE-HC Shell</MunitionKey>
-                <Quantity>250</Quantity>
+                <Quantity>500</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>7ehNfQLSmUOK261qTyveAQ</MagazineKey>
                 <MunitionKey>Stock/600mm HE Shell</MunitionKey>
-                <Quantity>100</Quantity>
+                <Quantity>125</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>NydEkOWW0EaD0vWy_TKR4A</MagazineKey>
                 <MunitionKey>Stock/600mm Bomb Shell</MunitionKey>
-                <Quantity>50</Quantity>
+                <Quantity>100</Quantity>
               </MagSaveData>
             </Load>
           </ComponentData>
@@ -122,18 +123,18 @@ Garnet Squadron is a multi-role heavy attack fleet featuring a swarm of monitors
         </HullSocket>
       </SocketMap>
       <WeaponGroups>
-        <WepGroup Name="T30">
+        <WepGroup Name="100mm Turrets">
           <MemberKeys>
             <string>yN7f-9tEXEKlBNskqP6EbA</string>
             <string>Z2uDs34J-ESu64-i9YGnxQ</string>
           </MemberKeys>
         </WepGroup>
-        <WepGroup Name="Cannon">
+        <WepGroup Name="600mm Cannon">
           <MemberKeys>
             <string>4V6twrIUcEKE11tom-tDXQ</string>
           </MemberKeys>
         </WepGroup>
-        <WepGroup Name="Raspberry">
+        <WepGroup Name="Raspberry Jam">
           <MemberKeys>
             <string>_y-Bd-EWjUeMIrmzG3UxvQ</string>
             <string>gb6_3kWBY0KlEWeex3ruDg</string>
@@ -145,8 +146,8 @@ Garnet Squadron is a multi-role heavy attack fleet featuring a swarm of monitors
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>e6b741ce-1c47-4839-ba74-7d0c12c48d54</Key>
-      <Name>Right Scary</Name>
-      <Cost>513</Cost>
+      <Name>Serious Callers Only</Name>
+      <Cost>527</Cost>
       <Callsign />
       <Number>1337</Number>
       <SymbolOption>0</SymbolOption>
@@ -166,7 +167,7 @@ Garnet Squadron is a multi-role heavy attack fleet featuring a swarm of monitors
         </HullSocket>
         <HullSocket>
           <Key>gb6_3kWBY0KlEWeex3ruDg</Key>
-          <ComponentName>Stock/P11 PDT</ComponentName>
+          <ComponentName>Stock/RF44 'Pinpoint' Radar</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>_y-Bd-EWjUeMIrmzG3UxvQ</Key>
@@ -184,32 +185,32 @@ Garnet Squadron is a multi-role heavy attack fleet featuring a swarm of monitors
               <MagSaveData>
                 <MagazineKey>CzA4LWaOZkq1lhmcBlDtEA</MagazineKey>
                 <MunitionKey>Stock/100mm AP Shell</MunitionKey>
-                <Quantity>500</Quantity>
+                <Quantity>750</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>6PDeYjmayk-DPthtJnbFEw</MagazineKey>
                 <MunitionKey>Stock/100mm HE Shell</MunitionKey>
-                <Quantity>500</Quantity>
+                <Quantity>750</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>Z4QOeHoX6Em53WaTcForwQ</MagazineKey>
                 <MunitionKey>Stock/100mm HE-HC Shell</MunitionKey>
-                <Quantity>250</Quantity>
+                <Quantity>500</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>7ehNfQLSmUOK261qTyveAQ</MagazineKey>
                 <MunitionKey>Stock/600mm HE Shell</MunitionKey>
-                <Quantity>100</Quantity>
+                <Quantity>125</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>NydEkOWW0EaD0vWy_TKR4A</MagazineKey>
                 <MunitionKey>Stock/600mm Bomb Shell</MunitionKey>
-                <Quantity>50</Quantity>
+                <Quantity>100</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>cMsZuF8Q3ki17dsHfdKfhw</MagazineKey>
                 <MunitionKey>Stock/20mm Slug</MunitionKey>
-                <Quantity>14000</Quantity>
+                <Quantity>10000</Quantity>
               </MagSaveData>
             </Load>
           </ComponentData>
@@ -260,13 +261,13 @@ Garnet Squadron is a multi-role heavy attack fleet featuring a swarm of monitors
         </HullSocket>
       </SocketMap>
       <WeaponGroups>
-        <WepGroup Name="T30">
+        <WepGroup Name="100mm Turrets">
           <MemberKeys>
             <string>yN7f-9tEXEKlBNskqP6EbA</string>
             <string>Z2uDs34J-ESu64-i9YGnxQ</string>
           </MemberKeys>
         </WepGroup>
-        <WepGroup Name="Cannon">
+        <WepGroup Name="600mm Cannon">
           <MemberKeys>
             <string>4V6twrIUcEKE11tom-tDXQ</string>
           </MemberKeys>
@@ -285,8 +286,8 @@ Garnet Squadron is a multi-role heavy attack fleet featuring a swarm of monitors
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>a99d1e1c-e237-48a1-8c5b-fd840271f867</Key>
-      <Name>Tasty Pains</Name>
-      <Cost>513</Cost>
+      <Name>Just Passing Through</Name>
+      <Cost>570</Cost>
       <Callsign />
       <Number>375</Number>
       <SymbolOption>0</SymbolOption>
@@ -310,7 +311,21 @@ Garnet Squadron is a multi-role heavy attack fleet featuring a swarm of monitors
         </HullSocket>
         <HullSocket>
           <Key>_y-Bd-EWjUeMIrmzG3UxvQ</Key>
-          <ComponentName>Stock/P11 PDT</ComponentName>
+          <ComponentName>Stock/VLS-1-46 Launcher</ComponentName>
+          <ComponentData xsi:type="CellLauncherData">
+            <MissileLoad>
+              <MagSaveData>
+                <MagazineKey>8x_1yvV0YkOWKq5q-yWCJw</MagazineKey>
+                <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
+                <Quantity>12</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>cKbXbwbLeEqzmQVvg4JhDg</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-108 Anchor</MunitionKey>
+                <Quantity>28</Quantity>
+              </MagSaveData>
+            </MissileLoad>
+          </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>gDQghm5iik2syYcoJqUPFg</Key>
@@ -324,32 +339,32 @@ Garnet Squadron is a multi-role heavy attack fleet featuring a swarm of monitors
               <MagSaveData>
                 <MagazineKey>CzA4LWaOZkq1lhmcBlDtEA</MagazineKey>
                 <MunitionKey>Stock/100mm AP Shell</MunitionKey>
-                <Quantity>500</Quantity>
+                <Quantity>750</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>6PDeYjmayk-DPthtJnbFEw</MagazineKey>
                 <MunitionKey>Stock/100mm HE Shell</MunitionKey>
-                <Quantity>500</Quantity>
+                <Quantity>750</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>Z4QOeHoX6Em53WaTcForwQ</MagazineKey>
                 <MunitionKey>Stock/100mm HE-HC Shell</MunitionKey>
-                <Quantity>250</Quantity>
+                <Quantity>500</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>7ehNfQLSmUOK261qTyveAQ</MagazineKey>
                 <MunitionKey>Stock/600mm HE Shell</MunitionKey>
-                <Quantity>100</Quantity>
+                <Quantity>125</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>NydEkOWW0EaD0vWy_TKR4A</MagazineKey>
                 <MunitionKey>Stock/600mm Bomb Shell</MunitionKey>
-                <Quantity>50</Quantity>
+                <Quantity>100</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>mjx8AC3YMkuBaJ0PJQf5uQ</MagazineKey>
                 <MunitionKey>Stock/20mm Slug</MunitionKey>
-                <Quantity>14000</Quantity>
+                <Quantity>10000</Quantity>
               </MagSaveData>
             </Load>
           </ComponentData>
@@ -396,17 +411,17 @@ Garnet Squadron is a multi-role heavy attack fleet featuring a swarm of monitors
         </HullSocket>
         <HullSocket>
           <Key>CU_oraqJxEaB3dTzZW2MkA</Key>
-          <ComponentName>Stock/Bulwark Huntress</ComponentName>
+          <ComponentName>Stock/Ithaca Bridgemaster</ComponentName>
         </HullSocket>
       </SocketMap>
       <WeaponGroups>
-        <WepGroup Name="T30">
+        <WepGroup Name="100mm Turrets">
           <MemberKeys>
             <string>yN7f-9tEXEKlBNskqP6EbA</string>
             <string>Z2uDs34J-ESu64-i9YGnxQ</string>
           </MemberKeys>
         </WepGroup>
-        <WepGroup Name="Cannon">
+        <WepGroup Name="600mm Cannon">
           <MemberKeys>
             <string>4V6twrIUcEKE11tom-tDXQ</string>
           </MemberKeys>
@@ -426,7 +441,7 @@ Garnet Squadron is a multi-role heavy attack fleet featuring a swarm of monitors
       <SaveID xsi:nil="true" />
       <Key>e70ec13d-8565-4e92-b4fe-f0238b8d2d3a</Key>
       <Name>Any Port in a Storm</Name>
-      <Cost>570</Cost>
+      <Cost>540</Cost>
       <Callsign />
       <Number>2</Number>
       <SymbolOption>0</SymbolOption>
@@ -464,12 +479,12 @@ Garnet Squadron is a multi-role heavy attack fleet featuring a swarm of monitors
               <MagSaveData>
                 <MagazineKey>KT0DgU0u-kKffMUQLio5_A</MagazineKey>
                 <MunitionKey>Stock/400mm Plasma Ampoule</MunitionKey>
-                <Quantity>200</Quantity>
+                <Quantity>250</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>jJZVsNkjx0yVS-vBRKYgYQ</MagazineKey>
                 <MunitionKey>Stock/Flak Round</MunitionKey>
-                <Quantity>450</Quantity>
+                <Quantity>750</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>TKZLK5hM_kiI6TJ1BXdZ-Q</MagazineKey>
@@ -479,7 +494,7 @@ Garnet Squadron is a multi-role heavy attack fleet featuring a swarm of monitors
               <MagSaveData>
                 <MagazineKey>uDW4iR2Qv0e8fCLE-Y2h_w</MagazineKey>
                 <MunitionKey>Stock/250mm HE Shell</MunitionKey>
-                <Quantity>150</Quantity>
+                <Quantity>100</Quantity>
               </MagSaveData>
             </Load>
           </ComponentData>
@@ -498,7 +513,7 @@ Garnet Squadron is a multi-role heavy attack fleet featuring a swarm of monitors
         </HullSocket>
         <HullSocket>
           <Key>N4KIOsNqeUGVAUrx5OW3DQ</Key>
-          <ComponentName>Stock/Damage Control Complex</ComponentName>
+          <ComponentName>Stock/Reinforced DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>9K_1ZNCgFESrvaoQMOH3yw</Key>
@@ -536,7 +551,7 @@ Garnet Squadron is a multi-role heavy attack fleet featuring a swarm of monitors
             <string>Z2uDs34J-ESu64-i9YGnxQ</string>
           </MemberKeys>
         </WepGroup>
-        <WepGroup Name="250">
+        <WepGroup Name="250mm Cannon">
           <MemberKeys>
             <string>4V6twrIUcEKE11tom-tDXQ</string>
           </MemberKeys>
@@ -556,7 +571,7 @@ Garnet Squadron is a multi-role heavy attack fleet featuring a swarm of monitors
       <SaveID xsi:nil="true" />
       <Key>407ccc96-a909-405e-9cf0-ca350bf5e837</Key>
       <Name>Open for Business</Name>
-      <Cost>570</Cost>
+      <Cost>540</Cost>
       <Callsign />
       <Number>436</Number>
       <SymbolOption>0</SymbolOption>
@@ -594,12 +609,12 @@ Garnet Squadron is a multi-role heavy attack fleet featuring a swarm of monitors
               <MagSaveData>
                 <MagazineKey>KT0DgU0u-kKffMUQLio5_A</MagazineKey>
                 <MunitionKey>Stock/400mm Plasma Ampoule</MunitionKey>
-                <Quantity>200</Quantity>
+                <Quantity>250</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>jJZVsNkjx0yVS-vBRKYgYQ</MagazineKey>
                 <MunitionKey>Stock/Flak Round</MunitionKey>
-                <Quantity>450</Quantity>
+                <Quantity>750</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>gJmc9TEyX0egVzFgbABPPw</MagazineKey>
@@ -609,7 +624,7 @@ Garnet Squadron is a multi-role heavy attack fleet featuring a swarm of monitors
               <MagSaveData>
                 <MagazineKey>w1uoDmjgV0-J1MiZYZVeCA</MagazineKey>
                 <MunitionKey>Stock/250mm HE Shell</MunitionKey>
-                <Quantity>150</Quantity>
+                <Quantity>100</Quantity>
               </MagSaveData>
             </Load>
           </ComponentData>
@@ -628,7 +643,7 @@ Garnet Squadron is a multi-role heavy attack fleet featuring a swarm of monitors
         </HullSocket>
         <HullSocket>
           <Key>N4KIOsNqeUGVAUrx5OW3DQ</Key>
-          <ComponentName>Stock/Damage Control Complex</ComponentName>
+          <ComponentName>Stock/Reinforced DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>9K_1ZNCgFESrvaoQMOH3yw</Key>
@@ -666,7 +681,7 @@ Garnet Squadron is a multi-role heavy attack fleet featuring a swarm of monitors
             <string>Z2uDs34J-ESu64-i9YGnxQ</string>
           </MemberKeys>
         </WepGroup>
-        <WepGroup Name="250">
+        <WepGroup Name="250mm Cannon">
           <MemberKeys>
             <string>4V6twrIUcEKE11tom-tDXQ</string>
           </MemberKeys>
@@ -686,7 +701,7 @@ Garnet Squadron is a multi-role heavy attack fleet featuring a swarm of monitors
       <SaveID xsi:nil="true" />
       <Key>fa6e7c43-a004-4b59-94c9-5baa60f3ede6</Key>
       <Name>Somewhere Out There</Name>
-      <Cost>218</Cost>
+      <Cost>201</Cost>
       <Callsign />
       <Number>70</Number>
       <SymbolOption>0</SymbolOption>
@@ -698,19 +713,14 @@ Garnet Squadron is a multi-role heavy attack fleet featuring a swarm of monitors
           <ComponentData xsi:type="CellLauncherData">
             <MissileLoad>
               <MagSaveData>
-                <MagazineKey>tNTc0zonsEKQdn3tQrLQxw</MagazineKey>
-                <MunitionKey>$MODMIS$/SGM-112 Parry</MunitionKey>
-                <Quantity>14</Quantity>
-              </MagSaveData>
-              <MagSaveData>
                 <MagazineKey>t90eTwY_KEyr4sA6UCcK7Q</MagazineKey>
                 <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
                 <Quantity>4</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>GfEqgSwXSkqkqSGSKsdCqQ</MagazineKey>
-                <MunitionKey>Stock/EA20 Flare Decoy</MunitionKey>
-                <Quantity>1</Quantity>
+                <MagazineKey>cMxDS7rtHkKcdJ18pVhn9A</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-108 Anchor</MunitionKey>
+                <Quantity>6</Quantity>
               </MagSaveData>
             </MissileLoad>
           </ComponentData>
@@ -748,7 +758,7 @@ Garnet Squadron is a multi-role heavy attack fleet featuring a swarm of monitors
         </HullSocket>
       </SocketMap>
       <WeaponGroups>
-        <WepGroup Name="EWR">
+        <WepGroup Name="Early Warning Radar">
           <MemberKeys>
             <string>cIGspM4oYU2etRfjIcuCCA</string>
           </MemberKeys>
@@ -759,17 +769,18 @@ Garnet Squadron is a multi-role heavy attack fleet featuring a swarm of monitors
   </Ships>
   <MissileTypes>
     <MissileTemplate>
-      <Designation>SGM-112</Designation>
-      <Nickname>Parry</Nickname>
-      <Description>DIRECT - ACT(&lt;color=#4CFF72&gt;RADAR&lt;/color&gt;) - HE FRAG</Description>
-      <LongDescription>The SGM-112 Parry is a size 1 direct guidance missile.  It is based on the SGM-1 body, which is a nimble general-purpose missile.  This missile will deliver a Proximity Fuze, High Explosive, Blast Fragmentation warhead.  It homes in on its target using an Active Radar seeker.
+      <AssociatedTemplateName>SGM-108 Anchor</AssociatedTemplateName>
+      <Designation>SGM-108</Designation>
+      <Nickname>Anchor</Nickname>
+      <Description>DIRECT - ACT(&lt;color=#3BC81E&gt;RADAR&lt;/color&gt;) - HE FRAG</Description>
+      <LongDescription>The &lt;noparse&gt;SGM-108 Anchor&lt;/noparse&gt; is a size 1 direct guidance missile.  It is based on the SGM-1 body, which is a nimble general-purpose missile.  This missile will deliver a Proximity Fuze, High Explosive, Blast Fragmentation warhead.  It homes in on its target using an Active Radar seeker.
 
 Control Method: DIRECT
 Targeting Modes:
-	&lt;b&gt;&lt;color=#4CFF72&gt;POSITION&lt;/color&gt;	&lt;color=#4CFF72&gt;TRACK&lt;/color&gt;&lt;/b&gt;
-Primary Seeker: ACTIVE &lt;color=#4CFF72&gt;RADAR&lt;/color&gt;
+	&lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+Primary Seeker: ACTIVE &lt;color=#3BC81E&gt;RADAR&lt;/color&gt;
 
-250 m/s for 2,520 m, top speed in 0.4 s
+250 m/s for 2,982 m, top speed in 0.4 s
 Terminal Maneuvers: None
 
 Proximity Fuze, High Explosive, Blast Fragmentation
@@ -777,6 +788,7 @@ Armor: 2cm   Component: 65hp
 Blast Radius: 47 m
 
 Body Integrity: 10 
+Wall Thickness: 0.5
 Programming Time: 6 s
 Radar Signature Bonus: 100 %
 Boost-Phase Duration: 3 s
@@ -785,27 +797,27 @@ Boost-Phase Turn Rate: 100 %
 Failure Rate: 0 %</LongDescription>
       <Cost>2</Cost>
       <BodyKey>Stock/SGM-1 Body</BodyKey>
-      <TemplateKey>7153b71a-096a-4028-852c-bc25ede4917b</TemplateKey>
+      <TemplateKey>780a456b-86ee-4a85-a444-c0cd2672aa06</TemplateKey>
       <BaseColor>
-        <r>0.9999999</r>
-        <g>0.9999999</g>
-        <b>0.9999998</b>
+        <r>1</r>
+        <g>0.4862745</g>
+        <b>0</b>
         <a>1</a>
       </BaseColor>
       <StripeColor>
-        <r>0</r>
-        <g>0.01778845</g>
-        <b>0.905606031</b>
+        <r>0.254901975</r>
+        <g>0.254901975</g>
+        <b>0.254901975</b>
         <a>1</a>
       </StripeColor>
       <Sockets>
         <MissileSocket>
           <Size>1</Size>
           <InstalledComponent xsi:type="ActiveSeekerSettings">
-            <ComponentKey>Stock/Steerable Active Radar Seeker</ComponentKey>
+            <ComponentKey>Stock/Fixed Active Radar Seeker</ComponentKey>
             <Mode>Targeting</Mode>
             <RejectUnvalidated>false</RejectUnvalidated>
-            <DetectPDTargets>true</DetectPDTargets>
+            <DetectPDTargets>false</DetectPDTargets>
           </InstalledComponent>
         </MissileSocket>
         <MissileSocket>
@@ -838,8 +850,8 @@ Failure Rate: 0 %</LongDescription>
             <ComponentKey />
             <BalanceValues>
               <A>0</A>
-              <B>0.2372433</B>
-              <C>0.7627567</C>
+              <B>0.340558469</B>
+              <C>0.659441531</C>
             </BalanceValues>
           </InstalledComponent>
         </MissileSocket>

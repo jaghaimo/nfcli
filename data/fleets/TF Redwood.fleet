@@ -6,17 +6,17 @@
   <FactionKey>Stock/Alliance</FactionKey>
   <Description>Difficulty: &lt;color=yellow&gt;MODERATE&lt;/color&gt;
 
-Featuring a core trio of railgun destroyers and a pair of sprinters to provide spotting and fire control, this fleet is designed to find and then deliver long range supporting fire against the enemy. The corvettes are built around employing Pinard emission-tracking modules to help the fleet find targets and Bullseye FCRs to lock onto them. While unable to defend themselves against larger vessels, the corvettes have offensive mini-missiles that can be used as self-defense against smaller enemies. It is advised that the fragile destroyers are kept away from dangerous threats. However, they can close on smaller ships or those sufficiently disabled by railgun fire and employ their 250mm cannon when the opportunity strikes.
-</Description>
-  <SortOverrideOrder>5</SortOverrideOrder>
+Featuring a core trio of railgun destroyers and a pair of sprinters to provide spotting and fire control, this fleet is designed to find and deliver long range supporting fire against the opposing fleet. The corvettes can target lock foes while using jamming to prevent themselves from being tracked in return, but are practically unarmed otherwise. While the destroyers are fragile, they can choose to close on smaller ships or those sufficiently damaged by railgun fire in order to finish them off with 250mm cannons. The lead destroyer also features a powerful radar that can get semi-accurate tracks in a pinch, so long as the track correlators within remain undamaged.
+  </Description>
+  <SortOverrideOrder>3</SortOverrideOrder>
   <Ships>
     <Ship>
       <SaveID xsi:nil="true" />
-      <Key>8d56faf8-3d0a-4391-8cbb-49e6aa3901b5</Key>
+      <Key>98ffc34d-7af8-471b-b6f1-819511c0aa6d</Key>
       <Name>Star of Atlas</Name>
       <Cost>870</Cost>
-      <Callsign>Intel/Radar</Callsign>
-      <Number>1000</Number>
+      <Callsign>Intel/Spotter</Callsign>
+      <Number>1031</Number>
       <SymbolOption>2</SymbolOption>
       <HullType>Stock/Keystone Destroyer</HullType>
       <SocketMap>
@@ -26,7 +26,26 @@ Featuring a core trio of railgun destroyers and a pair of sprinters to provide s
         </HullSocket>
         <HullSocket>
           <Key>fSYv4j5-eEObwJEVhoBSvg</Key>
-          <ComponentName>Stock/Mk64 Cannon</ComponentName>
+          <ComponentName>Stock/VLS-1-46 Launcher</ComponentName>
+          <ComponentData xsi:type="CellLauncherData">
+            <MissileLoad>
+              <MagSaveData>
+                <MagazineKey>m5CTTOHbvEKX4Jn8ivpI4w</MagazineKey>
+                <MunitionKey>Stock/EA99 Active Decoy</MunitionKey>
+                <Quantity>2</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>pNjMw2YQC0Ge4AdXnLzO3g</MagazineKey>
+                <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
+                <Quantity>20</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>MxnvPJjRKkuE8QGiFFIBbw</MagazineKey>
+                <MunitionKey>Stock/EA20 Flare Decoy</MunitionKey>
+                <Quantity>3</Quantity>
+              </MagSaveData>
+            </MissileLoad>
+          </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>x21sadthgE2FtDWSJKINGQ</Key>
@@ -38,26 +57,7 @@ Featuring a core trio of railgun destroyers and a pair of sprinters to provide s
         </HullSocket>
         <HullSocket>
           <Key>JpOU9MgWXEmfLcQoAK4otA</Key>
-          <ComponentName>Stock/VLS-1-23 Launcher</ComponentName>
-          <ComponentData xsi:type="CellLauncherData">
-            <MissileLoad>
-              <MagSaveData>
-                <MagazineKey>rWDIVyJbk0Sjx5awMxewYg</MagazineKey>
-                <MunitionKey>Stock/EA99 Active Decoy</MunitionKey>
-                <Quantity>3</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>_lZGZIS7qkiw-Ef8zNEbHA</MagazineKey>
-                <MunitionKey>Stock/EA20 Flare Decoy</MunitionKey>
-                <Quantity>2</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>_IrnqFIbWk2SGgXg8zcVww</MagazineKey>
-                <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>3</Quantity>
-              </MagSaveData>
-            </MissileLoad>
-          </ComponentData>
+          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>LCosRblddUCjPogeJ5eSeA</Key>
@@ -89,45 +89,45 @@ Featuring a core trio of railgun destroyers and a pair of sprinters to provide s
           <ComponentData xsi:type="BulkMagazineData">
             <Load>
               <MagSaveData>
-                <MagazineKey>mS8khaGWWEKe9VwlCjXHhQ</MagazineKey>
+                <MagazineKey>5MYs0GuJYkytzE_wiHo9zQ</MagazineKey>
                 <MunitionKey>Stock/300mm AP Rail Sabot</MunitionKey>
-                <Quantity>150</Quantity>
+                <Quantity>100</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>Z_hycRyIGUuA6zmhoCEMhw</MagazineKey>
-                <MunitionKey>Stock/Flak Round</MunitionKey>
-                <Quantity>675</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>roE4Gtkc9EGlhIWWdcJKsg</MagazineKey>
-                <MunitionKey>Stock/20mm Slug</MunitionKey>
-                <Quantity>6000</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>lBA4WM4NrUaLJE_TmT8zIw</MagazineKey>
+                <MagazineKey>s-MaZPcMnkyPds2V7uKTdQ</MagazineKey>
                 <MunitionKey>Stock/250mm HE-RPF Shell</MunitionKey>
-                <Quantity>150</Quantity>
+                <Quantity>100</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>vlcOfEdwMES_yWHJbgnojA</MagazineKey>
+                <MagazineKey>ndfw9Sr_mEaytf0rLxr_sw</MagazineKey>
                 <MunitionKey>Stock/250mm HE Shell</MunitionKey>
-                <Quantity>150</Quantity>
+                <Quantity>100</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>csTEo4G8_kiUlVWOR4aTXA</MagazineKey>
+                <MagazineKey>LdX22lvg9ESS1cqiVDNUWw</MagazineKey>
                 <MunitionKey>Stock/250mm AP Shell</MunitionKey>
                 <Quantity>100</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>r2q83f3WxECQGKiDdzJDUw</MagazineKey>
+                <MunitionKey>Stock/Flak Round</MunitionKey>
+                <Quantity>900</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>ZGae31GS1UeKd0eL16Y18w</MagazineKey>
+                <MunitionKey>Stock/20mm Slug</MunitionKey>
+                <Quantity>8000</Quantity>
               </MagSaveData>
             </Load>
           </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>H-oABJbYw0qgKd4QzU0WaA</Key>
-          <ComponentName>Stock/Rapid DC Locker</ComponentName>
+          <ComponentName>Stock/Plant Control Center</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>tCBEdcIUhk6AL-X6sCujsQ</Key>
-          <ComponentName>Stock/Gun Plotting Center</ComponentName>
+          <ComponentName>Stock/Plant Control Center</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>AWYvQUZ26k20yHOrVQKg6Q</Key>
@@ -139,30 +139,29 @@ Featuring a core trio of railgun destroyers and a pair of sprinters to provide s
         </HullSocket>
         <HullSocket>
           <Key>m5J1jQdOfUKM9r7NZjMpKA</Key>
-          <ComponentName>Stock/Energy Regulator</ComponentName>
+          <ComponentName>Stock/Track Correlator</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>h29TSNGRo0m_DmeRr2BqDw</Key>
-          <ComponentName>Stock/Energy Regulator</ComponentName>
+          <ComponentName>Stock/Track Correlator</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>E9sMCEquVk-NNj5heGmIlQ</Key>
-          <ComponentName>Stock/Adaptive Radar Receiver</ComponentName>
+          <ComponentName>Stock/Track Correlator</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>gx2UKetKWUm5BfZhiD5phQ</Key>
-          <ComponentName>Stock/RM50 'Parallax' Radar</ComponentName>
+          <ComponentName>Stock/RS41 'Spyglass' Radar</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>ZJTmbGdjAk-XEKihIYHEuw</Key>
-          <ComponentName>Stock/FR3300 Micro Reactor</ComponentName>
+          <ComponentName>Stock/Track Correlator</ComponentName>
         </HullSocket>
       </SocketMap>
       <WeaponGroups>
-        <WepGroup Name="Gun!">
+        <WepGroup Name="250 CIWS">
           <MemberKeys>
             <string>NpYYAkA5Z0uAElOjDg3Rag</string>
-            <string>fSYv4j5-eEObwJEVhoBSvg</string>
           </MemberKeys>
         </WepGroup>
       </WeaponGroups>
@@ -170,11 +169,11 @@ Featuring a core trio of railgun destroyers and a pair of sprinters to provide s
     </Ship>
     <Ship>
       <SaveID xsi:nil="true" />
-      <Key>f943a009-15b6-48d9-8ce9-b4a9425ab0ba</Key>
+      <Key>d1a303e6-8e4a-4175-b648-a981ba13e41a</Key>
       <Name>Arc of Solitas</Name>
-      <Cost>730</Cost>
-      <Callsign>Rail-1</Callsign>
-      <Number>2000</Number>
+      <Cost>765</Cost>
+      <Callsign>Railgun 1</Callsign>
+      <Number>209</Number>
       <SymbolOption>0</SymbolOption>
       <HullType>Stock/Keystone Destroyer</HullType>
       <SocketMap>
@@ -200,12 +199,12 @@ Featuring a core trio of railgun destroyers and a pair of sprinters to provide s
           <ComponentData xsi:type="CellLauncherData">
             <MissileLoad>
               <MagSaveData>
-                <MagazineKey>bR3wteR0_ka6yLfn-eqjUQ</MagazineKey>
+                <MagazineKey>66OYgSASuk2MaAtmC2Slsw</MagazineKey>
                 <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>5</Quantity>
+                <Quantity>8</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>jTEwMuqvsUeAG0PZXMksEg</MagazineKey>
+                <MagazineKey>s8BlKJan7kqg7h2tlytkiw</MagazineKey>
                 <MunitionKey>Stock/EA20 Flare Decoy</MunitionKey>
                 <Quantity>2</Quantity>
               </MagSaveData>
@@ -226,11 +225,45 @@ Featuring a core trio of railgun destroyers and a pair of sprinters to provide s
         </HullSocket>
         <HullSocket>
           <Key>ytRGy84X_kW1odHYCBICDQ</Key>
-          <ComponentName>Stock/Gun Plotting Center</ComponentName>
+          <ComponentName>Stock/Reinforced Magazine</ComponentName>
+          <ComponentData xsi:type="BulkMagazineData">
+            <Load>
+              <MagSaveData>
+                <MagazineKey>bBW2RtoDIUmr2VXRMUzmHw</MagazineKey>
+                <MunitionKey>Stock/300mm AP Rail Sabot</MunitionKey>
+                <Quantity>225</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>_BoxilXAtEuV1E6t2QYe2A</MagazineKey>
+                <MunitionKey>Stock/250mm HE-RPF Shell</MunitionKey>
+                <Quantity>150</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>rGScvlkLOEeG530QpfQmyw</MagazineKey>
+                <MunitionKey>Stock/250mm HE Shell</MunitionKey>
+                <Quantity>200</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>NZjFgCzBfkq2jIYTM6PiIg</MagazineKey>
+                <MunitionKey>Stock/250mm AP Shell</MunitionKey>
+                <Quantity>150</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>Msd2xY4BLEWgozKN3tEkIw</MagazineKey>
+                <MunitionKey>Stock/Flak Round</MunitionKey>
+                <Quantity>900</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>26g2pDVcR02Y-ZN2OplKPA</MagazineKey>
+                <MunitionKey>Stock/20mm Slug</MunitionKey>
+                <Quantity>8000</Quantity>
+              </MagSaveData>
+            </Load>
+          </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>yM3Am4PqyUOIByTKzM6sPA</Key>
-          <ComponentName>Stock/Basic CIC</ComponentName>
+          <ComponentName>Stock/Reinforced CIC</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>H1ekC2-9c02VyNXY4IeLYA</Key>
@@ -238,45 +271,11 @@ Featuring a core trio of railgun destroyers and a pair of sprinters to provide s
         </HullSocket>
         <HullSocket>
           <Key>ln5c_ZvdCUSMVWZL_-m3yw</Key>
-          <ComponentName>Stock/Reinforced Magazine</ComponentName>
-          <ComponentData xsi:type="BulkMagazineData">
-            <Load>
-              <MagSaveData>
-                <MagazineKey>mS8khaGWWEKe9VwlCjXHhQ</MagazineKey>
-                <MunitionKey>Stock/300mm AP Rail Sabot</MunitionKey>
-                <Quantity>200</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>Z_hycRyIGUuA6zmhoCEMhw</MagazineKey>
-                <MunitionKey>Stock/Flak Round</MunitionKey>
-                <Quantity>675</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>ZOICjA17LkKdWCVtLABPbw</MagazineKey>
-                <MunitionKey>Stock/20mm Slug</MunitionKey>
-                <Quantity>6000</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>00LI9InExEG_22z3cn4pJg</MagazineKey>
-                <MunitionKey>Stock/250mm HE-RPF Shell</MunitionKey>
-                <Quantity>150</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>RWX3Z_WAhk-F752xygzNtA</MagazineKey>
-                <MunitionKey>Stock/250mm HE Shell</MunitionKey>
-                <Quantity>150</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>ngS3RahesEqc-LAFWvQ4tQ</MagazineKey>
-                <MunitionKey>Stock/250mm AP Shell</MunitionKey>
-                <Quantity>100</Quantity>
-              </MagSaveData>
-            </Load>
-          </ComponentData>
+          <ComponentName>Stock/Gun Plotting Center</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>H-oABJbYw0qgKd4QzU0WaA</Key>
-          <ComponentName>Stock/Rapid DC Locker</ComponentName>
+          <ComponentName>Stock/Plant Control Center</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>AWYvQUZ26k20yHOrVQKg6Q</Key>
@@ -296,11 +295,11 @@ Featuring a core trio of railgun destroyers and a pair of sprinters to provide s
         </HullSocket>
         <HullSocket>
           <Key>E9sMCEquVk-NNj5heGmIlQ</Key>
-          <ComponentName>Stock/Small Energy Regulator</ComponentName>
+          <ComponentName>Stock/Ammunition Elevators</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>gx2UKetKWUm5BfZhiD5phQ</Key>
-          <ComponentName>Stock/Small Energy Regulator</ComponentName>
+          <ComponentName>Stock/RS35 'Frontline' Radar</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>ZJTmbGdjAk-XEKihIYHEuw</Key>
@@ -308,7 +307,7 @@ Featuring a core trio of railgun destroyers and a pair of sprinters to provide s
         </HullSocket>
       </SocketMap>
       <WeaponGroups>
-        <WepGroup Name="Gun!">
+        <WepGroup Name="250mm CIWS">
           <MemberKeys>
             <string>NpYYAkA5Z0uAElOjDg3Rag</string>
             <string>fSYv4j5-eEObwJEVhoBSvg</string>
@@ -316,22 +315,22 @@ Featuring a core trio of railgun destroyers and a pair of sprinters to provide s
         </WepGroup>
       </WeaponGroups>
       <InitialFormation>
-        <GuideKey>8d56faf8-3d0a-4391-8cbb-49e6aa3901b5</GuideKey>
+        <GuideKey>98ffc34d-7af8-471b-b6f1-819511c0aa6d</GuideKey>
         <RelativePosition>
-          <x>30.2194366</x>
-          <y>39.38228</y>
-          <z>0.104979515</z>
+          <x>39.99265</x>
+          <y>0</y>
+          <z>-0.0278320313</z>
         </RelativePosition>
       </InitialFormation>
       <TemplateMissileTypes />
     </Ship>
     <Ship>
       <SaveID xsi:nil="true" />
-      <Key>098344c3-783c-4d43-9db3-00e45d1b8de0</Key>
+      <Key>9973df09-27b0-4573-a00c-b9ed9e69016f</Key>
       <Name>Singing Mantle</Name>
-      <Cost>730</Cost>
-      <Callsign>Rail-2</Callsign>
-      <Number>2500</Number>
+      <Cost>765</Cost>
+      <Callsign>Railgun 2</Callsign>
+      <Number>666</Number>
       <SymbolOption>0</SymbolOption>
       <HullType>Stock/Keystone Destroyer</HullType>
       <SocketMap>
@@ -357,12 +356,12 @@ Featuring a core trio of railgun destroyers and a pair of sprinters to provide s
           <ComponentData xsi:type="CellLauncherData">
             <MissileLoad>
               <MagSaveData>
-                <MagazineKey>dWlwYD2vBEaY2xrt1R38RA</MagazineKey>
+                <MagazineKey>KQ4gq1YKeEmyyRssIiTlVw</MagazineKey>
                 <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>5</Quantity>
+                <Quantity>8</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>eNzfz1hQIUiUwAp3LI9h1g</MagazineKey>
+                <MagazineKey>dbCaz1jyNE2M8fUVpXtBbw</MagazineKey>
                 <MunitionKey>Stock/EA20 Flare Decoy</MunitionKey>
                 <Quantity>2</Quantity>
               </MagSaveData>
@@ -383,11 +382,45 @@ Featuring a core trio of railgun destroyers and a pair of sprinters to provide s
         </HullSocket>
         <HullSocket>
           <Key>ytRGy84X_kW1odHYCBICDQ</Key>
-          <ComponentName>Stock/Gun Plotting Center</ComponentName>
+          <ComponentName>Stock/Reinforced Magazine</ComponentName>
+          <ComponentData xsi:type="BulkMagazineData">
+            <Load>
+              <MagSaveData>
+                <MagazineKey>bBW2RtoDIUmr2VXRMUzmHw</MagazineKey>
+                <MunitionKey>Stock/300mm AP Rail Sabot</MunitionKey>
+                <Quantity>225</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>_BoxilXAtEuV1E6t2QYe2A</MagazineKey>
+                <MunitionKey>Stock/250mm HE-RPF Shell</MunitionKey>
+                <Quantity>150</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>rGScvlkLOEeG530QpfQmyw</MagazineKey>
+                <MunitionKey>Stock/250mm HE Shell</MunitionKey>
+                <Quantity>200</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>NZjFgCzBfkq2jIYTM6PiIg</MagazineKey>
+                <MunitionKey>Stock/250mm AP Shell</MunitionKey>
+                <Quantity>150</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>Msd2xY4BLEWgozKN3tEkIw</MagazineKey>
+                <MunitionKey>Stock/Flak Round</MunitionKey>
+                <Quantity>900</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>26g2pDVcR02Y-ZN2OplKPA</MagazineKey>
+                <MunitionKey>Stock/20mm Slug</MunitionKey>
+                <Quantity>8000</Quantity>
+              </MagSaveData>
+            </Load>
+          </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>yM3Am4PqyUOIByTKzM6sPA</Key>
-          <ComponentName>Stock/Basic CIC</ComponentName>
+          <ComponentName>Stock/Reinforced CIC</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>H1ekC2-9c02VyNXY4IeLYA</Key>
@@ -395,45 +428,11 @@ Featuring a core trio of railgun destroyers and a pair of sprinters to provide s
         </HullSocket>
         <HullSocket>
           <Key>ln5c_ZvdCUSMVWZL_-m3yw</Key>
-          <ComponentName>Stock/Reinforced Magazine</ComponentName>
-          <ComponentData xsi:type="BulkMagazineData">
-            <Load>
-              <MagSaveData>
-                <MagazineKey>mS8khaGWWEKe9VwlCjXHhQ</MagazineKey>
-                <MunitionKey>Stock/300mm AP Rail Sabot</MunitionKey>
-                <Quantity>200</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>Z_hycRyIGUuA6zmhoCEMhw</MagazineKey>
-                <MunitionKey>Stock/Flak Round</MunitionKey>
-                <Quantity>675</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>ZOICjA17LkKdWCVtLABPbw</MagazineKey>
-                <MunitionKey>Stock/20mm Slug</MunitionKey>
-                <Quantity>6000</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>0PU11oIUW0OvQB61jzYa2Q</MagazineKey>
-                <MunitionKey>Stock/250mm HE-RPF Shell</MunitionKey>
-                <Quantity>150</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>Oy0sO0o-sUaQPK2pokAVkg</MagazineKey>
-                <MunitionKey>Stock/250mm HE Shell</MunitionKey>
-                <Quantity>150</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>VUTKqa3mzUeBQbsqZt22Mw</MagazineKey>
-                <MunitionKey>Stock/250mm AP Shell</MunitionKey>
-                <Quantity>100</Quantity>
-              </MagSaveData>
-            </Load>
-          </ComponentData>
+          <ComponentName>Stock/Gun Plotting Center</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>H-oABJbYw0qgKd4QzU0WaA</Key>
-          <ComponentName>Stock/Rapid DC Locker</ComponentName>
+          <ComponentName>Stock/Plant Control Center</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>AWYvQUZ26k20yHOrVQKg6Q</Key>
@@ -453,11 +452,11 @@ Featuring a core trio of railgun destroyers and a pair of sprinters to provide s
         </HullSocket>
         <HullSocket>
           <Key>E9sMCEquVk-NNj5heGmIlQ</Key>
-          <ComponentName>Stock/Small Energy Regulator</ComponentName>
+          <ComponentName>Stock/Ammunition Elevators</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>gx2UKetKWUm5BfZhiD5phQ</Key>
-          <ComponentName>Stock/Small Energy Regulator</ComponentName>
+          <ComponentName>Stock/RS35 'Frontline' Radar</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>ZJTmbGdjAk-XEKihIYHEuw</Key>
@@ -465,7 +464,7 @@ Featuring a core trio of railgun destroyers and a pair of sprinters to provide s
         </HullSocket>
       </SocketMap>
       <WeaponGroups>
-        <WepGroup Name="Gun!">
+        <WepGroup Name="250mm CIWS">
           <MemberKeys>
             <string>NpYYAkA5Z0uAElOjDg3Rag</string>
             <string>fSYv4j5-eEObwJEVhoBSvg</string>
@@ -473,28 +472,28 @@ Featuring a core trio of railgun destroyers and a pair of sprinters to provide s
         </WepGroup>
       </WeaponGroups>
       <InitialFormation>
-        <GuideKey>8d56faf8-3d0a-4391-8cbb-49e6aa3901b5</GuideKey>
+        <GuideKey>98ffc34d-7af8-471b-b6f1-819511c0aa6d</GuideKey>
         <RelativePosition>
-          <x>-30.1803036</x>
-          <y>40.1105957</y>
-          <z>0.37345314</z>
+          <x>-39.95809</x>
+          <y>0</y>
+          <z>0.04122162</z>
         </RelativePosition>
       </InitialFormation>
       <TemplateMissileTypes />
     </Ship>
     <Ship>
       <SaveID xsi:nil="true" />
-      <Key>d74962dc-a197-44c4-b8e0-086cf68a457b</Key>
+      <Key>1056f5e1-0073-4745-9a62-a94d0e05b956</Key>
       <Name>Northern Wind</Name>
-      <Cost>335</Cost>
-      <Callsign>Scout-1</Callsign>
-      <Number>610</Number>
+      <Cost>300</Cost>
+      <Callsign>Scout 1</Callsign>
+      <Number>1221</Number>
       <SymbolOption>0</SymbolOption>
       <HullType>Stock/Sprinter Corvette</HullType>
       <SocketMap>
         <HullSocket>
           <Key>wDsRnL5nKkyYvKgD6VcPHg</Key>
-          <ComponentName>Stock/ES22 'Pinard' Electronic Support Module</ComponentName>
+          <ComponentName>Stock/E90 'Blanket' Jammer</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>Z48ot_dQfkWb6AVYjaM_gA</Key>
@@ -506,51 +505,23 @@ Featuring a core trio of railgun destroyers and a pair of sprinters to provide s
           <ComponentData xsi:type="CellLauncherData">
             <MissileLoad>
               <MagSaveData>
-                <MagazineKey>-bl4YQa7SU-zZ2TA4ajlZg</MagazineKey>
+                <MagazineKey>zQOolcpSrUG6tWXCRQ6jhg</MagazineKey>
                 <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>3</Quantity>
+                <Quantity>10</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>M3kLFQim70qQlGjimE-jOA</MagazineKey>
-                <MunitionKey>Stock/EA99 Active Decoy</MunitionKey>
-                <Quantity>1</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>i1U0oG2nukW9T7zqo7M9-w</MagazineKey>
+                <MagazineKey>DmTRlGAW60KOsaQoZPM7XA</MagazineKey>
                 <MunitionKey>Stock/EA20 Flare Decoy</MunitionKey>
                 <Quantity>2</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>nUDVayKo7kKzd7SoqqiHPQ</MagazineKey>
-                <MunitionKey>$MODMIS$/SGM-133 'Red Scythe' Anti-Clipper</MunitionKey>
-                <Quantity>5</Quantity>
-              </MagSaveData>
-            </MissileLoad>
-          </ComponentData>
-        </HullSocket>
-        <HullSocket>
-          <Key>ZxY9ONYz80SiLNSObvjNzQ</Key>
-          <ComponentName>Stock/VLS-1-23 Launcher</ComponentName>
-          <ComponentData xsi:type="CellLauncherData">
-            <MissileLoad>
-              <MagSaveData>
-                <MagazineKey>wF0cRohjTEOgu5sSmvs6jA</MagazineKey>
-                <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>3</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>RNXiy_Ck-U2pQGOxJx0h8A</MagazineKey>
+                <MagazineKey>-mzAtoCUdEqdYXOuvuwYww</MagazineKey>
                 <MunitionKey>Stock/EA99 Active Decoy</MunitionKey>
                 <Quantity>1</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>jiGGqMBZO0Cb_MEMTKSURg</MagazineKey>
-                <MunitionKey>Stock/EA20 Flare Decoy</MunitionKey>
-                <Quantity>1</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>z59mJGROtkWMbk_JdsPyrw</MagazineKey>
-                <MunitionKey>$MODMIS$/SGM-133 'Red Scythe' Anti-Clipper</MunitionKey>
+                <MagazineKey>3zZBudj2zUCnD3YtyyARnA</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-102 Starshard</MunitionKey>
                 <Quantity>5</Quantity>
               </MagSaveData>
             </MissileLoad>
@@ -558,22 +529,19 @@ Featuring a core trio of railgun destroyers and a pair of sprinters to provide s
         </HullSocket>
         <HullSocket>
           <Key>XPaYCjBqdEqBxEIsVLP0oA</Key>
-          <ComponentName>Stock/Reinforced Magazine</ComponentName>
-          <ComponentData xsi:type="BulkMagazineData">
-            <Load />
-          </ComponentData>
-        </HullSocket>
-        <HullSocket>
-          <Key>xRYIkvssd0mPY3VIgrnQ5A</Key>
-          <ComponentName>Stock/Basic CIC</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>rXO8xwG1MkqzI_2pU-O_qQ</Key>
           <ComponentName>Stock/Rapid DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
-          <Key>GefqwCQzg0qXA3EFRmDtPw</Key>
+          <Key>xRYIkvssd0mPY3VIgrnQ5A</Key>
+          <ComponentName>Stock/Reinforced CIC</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>rXO8xwG1MkqzI_2pU-O_qQ</Key>
           <ComponentName>Stock/Berthing</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>GefqwCQzg0qXA3EFRmDtPw</Key>
+          <ComponentName>Stock/Plant Control Center</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>4WpJyiOKVEqCwR99l47MkA</Key>
@@ -588,22 +556,28 @@ Featuring a core trio of railgun destroyers and a pair of sprinters to provide s
           <ComponentName>Stock/RS35 'Frontline' Radar</ComponentName>
         </HullSocket>
       </SocketMap>
-      <WeaponGroups />
+      <WeaponGroups>
+        <WepGroup Name="Radar Jamming">
+          <MemberKeys>
+            <string>wDsRnL5nKkyYvKgD6VcPHg</string>
+          </MemberKeys>
+        </WepGroup>
+      </WeaponGroups>
       <TemplateMissileTypes />
     </Ship>
     <Ship>
       <SaveID xsi:nil="true" />
-      <Key>3a972c1a-7004-4cef-8f90-f7583070bfa4</Key>
+      <Key>07fe97c9-3520-4bf2-8f3d-9c5496464dbf</Key>
       <Name>Southern Squall</Name>
-      <Cost>335</Cost>
-      <Callsign>Scout-2</Callsign>
-      <Number>89</Number>
+      <Cost>300</Cost>
+      <Callsign>Scout 2</Callsign>
+      <Number>620</Number>
       <SymbolOption>0</SymbolOption>
       <HullType>Stock/Sprinter Corvette</HullType>
       <SocketMap>
         <HullSocket>
           <Key>wDsRnL5nKkyYvKgD6VcPHg</Key>
-          <ComponentName>Stock/ES22 'Pinard' Electronic Support Module</ComponentName>
+          <ComponentName>Stock/E90 'Blanket' Jammer</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>Z48ot_dQfkWb6AVYjaM_gA</Key>
@@ -615,51 +589,23 @@ Featuring a core trio of railgun destroyers and a pair of sprinters to provide s
           <ComponentData xsi:type="CellLauncherData">
             <MissileLoad>
               <MagSaveData>
-                <MagazineKey>-bl4YQa7SU-zZ2TA4ajlZg</MagazineKey>
+                <MagazineKey>zQOolcpSrUG6tWXCRQ6jhg</MagazineKey>
                 <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>3</Quantity>
+                <Quantity>10</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>M3kLFQim70qQlGjimE-jOA</MagazineKey>
-                <MunitionKey>Stock/EA99 Active Decoy</MunitionKey>
-                <Quantity>1</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>i1U0oG2nukW9T7zqo7M9-w</MagazineKey>
+                <MagazineKey>DmTRlGAW60KOsaQoZPM7XA</MagazineKey>
                 <MunitionKey>Stock/EA20 Flare Decoy</MunitionKey>
                 <Quantity>2</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>33Bq7npC6EGZOzYVtLqipQ</MagazineKey>
-                <MunitionKey>$MODMIS$/SGM-133 'Red Scythe' Anti-Clipper</MunitionKey>
-                <Quantity>5</Quantity>
-              </MagSaveData>
-            </MissileLoad>
-          </ComponentData>
-        </HullSocket>
-        <HullSocket>
-          <Key>ZxY9ONYz80SiLNSObvjNzQ</Key>
-          <ComponentName>Stock/VLS-1-23 Launcher</ComponentName>
-          <ComponentData xsi:type="CellLauncherData">
-            <MissileLoad>
-              <MagSaveData>
-                <MagazineKey>T7Xj_2obyUCJ_nYFmOq87w</MagazineKey>
-                <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>3</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>GwlE5S-LFEaptsbHlY8riQ</MagazineKey>
+                <MagazineKey>eOAJB59IF0eXqsuoidpALQ</MagazineKey>
                 <MunitionKey>Stock/EA99 Active Decoy</MunitionKey>
                 <Quantity>1</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>qYOvnYuUdkq3uTf6R3nAiQ</MagazineKey>
-                <MunitionKey>Stock/EA20 Flare Decoy</MunitionKey>
-                <Quantity>1</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>9VysatVey0yzklFwz7zaPA</MagazineKey>
-                <MunitionKey>$MODMIS$/SGM-133 'Red Scythe' Anti-Clipper</MunitionKey>
+                <MagazineKey>Nvbtkp4xMEKbcaaBWS0KEA</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-102 Starshard</MunitionKey>
                 <Quantity>5</Quantity>
               </MagSaveData>
             </MissileLoad>
@@ -667,22 +613,19 @@ Featuring a core trio of railgun destroyers and a pair of sprinters to provide s
         </HullSocket>
         <HullSocket>
           <Key>XPaYCjBqdEqBxEIsVLP0oA</Key>
-          <ComponentName>Stock/Reinforced Magazine</ComponentName>
-          <ComponentData xsi:type="BulkMagazineData">
-            <Load />
-          </ComponentData>
-        </HullSocket>
-        <HullSocket>
-          <Key>xRYIkvssd0mPY3VIgrnQ5A</Key>
-          <ComponentName>Stock/Basic CIC</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>rXO8xwG1MkqzI_2pU-O_qQ</Key>
           <ComponentName>Stock/Rapid DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
-          <Key>GefqwCQzg0qXA3EFRmDtPw</Key>
+          <Key>xRYIkvssd0mPY3VIgrnQ5A</Key>
+          <ComponentName>Stock/Reinforced CIC</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>rXO8xwG1MkqzI_2pU-O_qQ</Key>
           <ComponentName>Stock/Berthing</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>GefqwCQzg0qXA3EFRmDtPw</Key>
+          <ComponentName>Stock/Plant Control Center</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>4WpJyiOKVEqCwR99l47MkA</Key>
@@ -697,24 +640,31 @@ Featuring a core trio of railgun destroyers and a pair of sprinters to provide s
           <ComponentName>Stock/RS35 'Frontline' Radar</ComponentName>
         </HullSocket>
       </SocketMap>
-      <WeaponGroups />
+      <WeaponGroups>
+        <WepGroup Name="Radar Jamming">
+          <MemberKeys>
+            <string>wDsRnL5nKkyYvKgD6VcPHg</string>
+          </MemberKeys>
+        </WepGroup>
+      </WeaponGroups>
       <TemplateMissileTypes />
     </Ship>
   </Ships>
   <MissileTypes>
     <MissileTemplate>
-      <Designation>SGM-133</Designation>
-      <Nickname>'Red Scythe' Anti-Clipper</Nickname>
-      <Description>DIRECT - &lt;color=#FBFF4C&gt;CMD&lt;/color&gt; - HE SHAPED</Description>
-      <LongDescription>The SGM-133 'Red Scythe' Anti-Clipper is a size 1 direct guidance missile.  It is based on the SGM-1 body, which is a nimble general-purpose missile.  This missile will deliver a Contact Fuze, High Explosive, Shaped warhead.  It homes in on its target using command guidance from its launching ship.
+      <AssociatedTemplateName>SGM-102 Starshard</AssociatedTemplateName>
+      <Designation>SGM-102</Designation>
+      <Nickname>Starshard</Nickname>
+      <Description>DIRECT - ACT(&lt;color=#3BC81E&gt;RADAR&lt;/color&gt;) - HE SHAPED</Description>
+      <LongDescription>The &lt;noparse&gt;SGM-102 Starshard&lt;/noparse&gt; is a size 1 direct guidance missile.  It is based on the SGM-1 body, which is a nimble general-purpose missile.  This missile will deliver a Contact Fuze, High Explosive, Shaped warhead.  It homes in on its target using an Active Radar seeker.
 
 Control Method: DIRECT
 Targeting Modes:
-	&lt;b&gt;&lt;color=#FF2525&gt;POSITION&lt;/color&gt;	&lt;color=#4CFF72&gt;TRACK&lt;/color&gt;&lt;/b&gt;
-Primary Seeker: COMMAND (&lt;color=#FBFF4C&gt;Requires COMMS Enabled&lt;/color&gt;)
+	&lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+Primary Seeker: ACTIVE &lt;color=#3BC81E&gt;RADAR&lt;/color&gt;
 
-300 m/s for 4,500 m, top speed in 0.7 s
-Terminal Maneuvers: Corkscrew
+330 m/s for 4,592 m, top speed in 0.9 s
+Terminal Maneuvers: None
 
 Contact Fuze, High Explosive, Shaped
 Armor: 31cm   Component: 317hp
@@ -722,34 +672,36 @@ Blast Angle: 70 deg
 Damage Per Fragment: 50.0
 
 Body Integrity: 10 
+Wall Thickness: 0.5
 Programming Time: 6 s
 Radar Signature Bonus: 100 %
 Boost-Phase Duration: 3 s
 Boost-Phase Strafe: 100 %
 Boost-Phase Turn Rate: 100 %
 Failure Rate: 0 %</LongDescription>
-      <Cost>7</Cost>
+      <Cost>2</Cost>
       <BodyKey>Stock/SGM-1 Body</BodyKey>
-      <TemplateKey>ef6cf8bf-99e4-401c-8ee0-e0abf86526b6</TemplateKey>
+      <TemplateKey>86e4d662-4df9-46c2-a406-b36921a96f61</TemplateKey>
       <BaseColor>
-        <r>0.9999999</r>
-        <g>0</g>
-        <b>0</b>
+        <r>0</r>
+        <g>0.9999999</g>
+        <b>0.07730626</b>
         <a>1</a>
       </BaseColor>
       <StripeColor>
-        <r>-7.07805157E-08</r>
-        <g>-0</g>
-        <b>-6.14209839E-08</b>
+        <r>0.9999999</r>
+        <g>0</g>
+        <b>0.867766738</b>
         <a>1</a>
       </StripeColor>
       <Sockets>
         <MissileSocket>
           <Size>1</Size>
-          <InstalledComponent xsi:type="CommandSeekerSettings">
-            <ComponentKey>Stock/Command Receiver</ComponentKey>
+          <InstalledComponent xsi:type="ActiveSeekerSettings">
+            <ComponentKey>Stock/Steerable Active Radar Seeker</ComponentKey>
             <Mode>Targeting</Mode>
             <RejectUnvalidated>false</RejectUnvalidated>
+            <DetectPDTargets>false</DetectPDTargets>
           </InstalledComponent>
         </MissileSocket>
         <MissileSocket>
@@ -757,9 +709,9 @@ Failure Rate: 0 %</LongDescription>
           <InstalledComponent xsi:type="DirectGuidanceSettings">
             <ComponentKey>Stock/Direct Guidance</ComponentKey>
             <Role>Offensive</Role>
-            <HotLaunch>true</HotLaunch>
+            <HotLaunch>false</HotLaunch>
             <SelfDestructOnLost>false</SelfDestructOnLost>
-            <Maneuvers>Corkscrew</Maneuvers>
+            <Maneuvers>None</Maneuvers>
             <DefensiveDoctrine>
               <TargetSizeMask>12</TargetSizeMask>
               <TargetType>All</TargetType>
@@ -767,7 +719,7 @@ Failure Rate: 0 %</LongDescription>
               <SalvoSize>0</SalvoSize>
               <FarthestFirst>false</FarthestFirst>
             </DefensiveDoctrine>
-            <ApproachAngleControl>true</ApproachAngleControl>
+            <ApproachAngleControl>false</ApproachAngleControl>
           </InstalledComponent>
         </MissileSocket>
         <MissileSocket>
@@ -781,9 +733,9 @@ Failure Rate: 0 %</LongDescription>
           <InstalledComponent xsi:type="MissileEngineSettings">
             <ComponentKey />
             <BalanceValues>
-              <A>0.3300649</A>
-              <B>0.5217163</B>
-              <C>0.148218811</C>
+              <A>0.5344076</A>
+              <B>0.465592384</B>
+              <C>0</C>
             </BalanceValues>
           </InstalledComponent>
         </MissileSocket>

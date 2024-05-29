@@ -6,14 +6,15 @@
   <FactionKey>Stock/Alliance</FactionKey>
   <Description>Difficulty: &lt;color=green&gt;EASY&lt;/color&gt;
 
-Dual heavy cruisers with all big guns. This fleet is ideal for those who struggle with multi-tasking and would like to focus more on positioning a single formation very well. Manage your range and sightlines to pound isolated enemy formations into dust with overwhelming broadside firepower while keeping in cover relative to missile threats.</Description>
+Dual heavy cruisers with all big guns. Task Force Oak is ideal for those who struggle with multi-tasking and would like to focus more on positioning a single formation very well. Manage your range and sightlines to pound isolated enemy formations into dust with overwhelming broadside firepower while keeping in cover relative to missile threats. Smart commanders will make frequent use of the HDG order to face their broadsides towards the current target.
+  </Description>
   <SortOverrideOrder>1</SortOverrideOrder>
   <Ships>
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>15fe45e3-d169-402d-a6fa-4cf9e595c962</Key>
       <Name>Value Judgement</Name>
-      <Cost>1499</Cost>
+      <Cost>1478</Cost>
       <Callsign />
       <Number>451</Number>
       <SymbolOption>0</SymbolOption>
@@ -52,6 +53,14 @@ Dual heavy cruisers with all big guns. This fleet is ideal for those who struggl
           <ComponentName>Stock/RF101 'Bullseye' Radar</ComponentName>
         </HullSocket>
         <HullSocket>
+          <Key>tyGXrucCjUe0FVyP1YDpUw</Key>
+          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>rXZhdtbK3EC8K_cu6-r_Xg</Key>
+          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
+        </HullSocket>
+        <HullSocket>
           <Key>ylUvmASKlEiyCtyCsNRKWg</Key>
           <ComponentName>Stock/Reinforced Magazine</ComponentName>
           <ComponentData xsi:type="BulkMagazineData">
@@ -69,23 +78,23 @@ Dual heavy cruisers with all big guns. This fleet is ideal for those who struggl
               <MagSaveData>
                 <MagazineKey>hbRrwP69ZUuDrLGOtg-PIw</MagazineKey>
                 <MunitionKey>Stock/20mm Slug</MunitionKey>
-                <Quantity>8000</Quantity>
+                <Quantity>12000</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>sdI6FnMA0EWe3DJ1zNYr5A</MagazineKey>
                 <MunitionKey>Stock/Flak Round</MunitionKey>
-                <Quantity>750</Quantity>
+                <Quantity>600</Quantity>
               </MagSaveData>
             </Load>
           </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>TX2TktZe7EWB9s-MqlDQgA</Key>
-          <ComponentName>Stock/Large DC Locker</ComponentName>
+          <ComponentName>Stock/Small DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>cMs0g0g3WUeZJQASb7omew</Key>
-          <ComponentName>Stock/Large DC Locker</ComponentName>
+          <ComponentName>Stock/Small DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>iHYg3DdYAUKS-uIBaRpNqA</Key>
@@ -109,12 +118,12 @@ Dual heavy cruisers with all big guns. This fleet is ideal for those who struggl
               <MagSaveData>
                 <MagazineKey>GszKM9wvHEGnv_aQOmuRzQ</MagazineKey>
                 <MunitionKey>Stock/20mm Slug</MunitionKey>
-                <Quantity>4000</Quantity>
+                <Quantity>6000</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>GiE2Umbv2Ee2Swjls9HSFQ</MagazineKey>
                 <MunitionKey>Stock/Flak Round</MunitionKey>
-                <Quantity>450</Quantity>
+                <Quantity>300</Quantity>
               </MagSaveData>
             </Load>
           </ComponentData>
@@ -141,7 +150,7 @@ Dual heavy cruisers with all big guns. This fleet is ideal for those who struggl
         </HullSocket>
         <HullSocket>
           <Key>eYp1IPfupUGVITrkVhgZJw</Key>
-          <ComponentName>Stock/Reinforced DC Locker</ComponentName>
+          <ComponentName>Stock/Small DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>lxkgmNwqjUua0sRee2pDJg</Key>
@@ -153,7 +162,7 @@ Dual heavy cruisers with all big guns. This fleet is ideal for those who struggl
         </HullSocket>
         <HullSocket>
           <Key>2ZLEJvxYf0CATl1lBi3cuQ</Key>
-          <ComponentName>Stock/FM500 Drive</ComponentName>
+          <ComponentName>Stock/FM580 'Raider' Drive</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>ba-3VQ-zGEmDCfU12uaqaA</Key>
@@ -174,10 +183,6 @@ Dual heavy cruisers with all big guns. This fleet is ideal for those who struggl
         <HullSocket>
           <Key>CgpRQa-660KEed1wTRL4vw</Key>
           <ComponentName>Stock/Ammunition Elevators</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>awwdeDnNs0G-RceQF1TByA</Key>
-          <ComponentName>Stock/Mount Gyros</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>S8ALcpOMYEqJog1v2q8UMQ</Key>
@@ -207,7 +212,7 @@ Dual heavy cruisers with all big guns. This fleet is ideal for those who struggl
       <SaveID xsi:nil="true" />
       <Key>e0afb606-1caf-4f15-9abf-2d54ae422b5a</Key>
       <Name>Moral Failing</Name>
-      <Cost>1501</Cost>
+      <Cost>1522</Cost>
       <Callsign />
       <Number>452</Number>
       <SymbolOption>0</SymbolOption>
@@ -251,12 +256,25 @@ Dual heavy cruisers with all big guns. This fleet is ideal for those who struggl
           <ComponentData xsi:type="CellLauncherData">
             <MissileLoad>
               <MagSaveData>
+                <MagazineKey>W__pXx7JW0KaEMY8dHZU-g</MagazineKey>
+                <MunitionKey>Stock/EA99 Active Decoy</MunitionKey>
+                <Quantity>4</Quantity>
+              </MagSaveData>
+              <MagSaveData>
                 <MagazineKey>DZUx10a3ZkWZEMBbh3nyvw</MagazineKey>
                 <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>7</Quantity>
+                <Quantity>17</Quantity>
               </MagSaveData>
             </MissileLoad>
           </ComponentData>
+        </HullSocket>
+        <HullSocket>
+          <Key>tyGXrucCjUe0FVyP1YDpUw</Key>
+          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>rXZhdtbK3EC8K_cu6-r_Xg</Key>
+          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>ylUvmASKlEiyCtyCsNRKWg</Key>
@@ -276,23 +294,23 @@ Dual heavy cruisers with all big guns. This fleet is ideal for those who struggl
               <MagSaveData>
                 <MagazineKey>VFvzF7No8Eq78hE21Gbjgw</MagazineKey>
                 <MunitionKey>Stock/20mm Slug</MunitionKey>
-                <Quantity>8000</Quantity>
+                <Quantity>12000</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>A_74emGRW0q56kvZ1fwQGg</MagazineKey>
                 <MunitionKey>Stock/Flak Round</MunitionKey>
-                <Quantity>750</Quantity>
+                <Quantity>600</Quantity>
               </MagSaveData>
             </Load>
           </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>TX2TktZe7EWB9s-MqlDQgA</Key>
-          <ComponentName>Stock/Large DC Locker</ComponentName>
+          <ComponentName>Stock/Small DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>cMs0g0g3WUeZJQASb7omew</Key>
-          <ComponentName>Stock/Large DC Locker</ComponentName>
+          <ComponentName>Stock/Small DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>iHYg3DdYAUKS-uIBaRpNqA</Key>
@@ -316,12 +334,12 @@ Dual heavy cruisers with all big guns. This fleet is ideal for those who struggl
               <MagSaveData>
                 <MagazineKey>ERSjp1pIXkm4hG1ZnIFUqw</MagazineKey>
                 <MunitionKey>Stock/20mm Slug</MunitionKey>
-                <Quantity>4000</Quantity>
+                <Quantity>6000</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>HEuAApq_8EGHF-ftJxu2Rg</MagazineKey>
                 <MunitionKey>Stock/Flak Round</MunitionKey>
-                <Quantity>450</Quantity>
+                <Quantity>300</Quantity>
               </MagSaveData>
             </Load>
           </ComponentData>
@@ -348,7 +366,7 @@ Dual heavy cruisers with all big guns. This fleet is ideal for those who struggl
         </HullSocket>
         <HullSocket>
           <Key>eYp1IPfupUGVITrkVhgZJw</Key>
-          <ComponentName>Stock/Reinforced DC Locker</ComponentName>
+          <ComponentName>Stock/Small DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>lxkgmNwqjUua0sRee2pDJg</Key>
@@ -360,7 +378,7 @@ Dual heavy cruisers with all big guns. This fleet is ideal for those who struggl
         </HullSocket>
         <HullSocket>
           <Key>2ZLEJvxYf0CATl1lBi3cuQ</Key>
-          <ComponentName>Stock/FM500 Drive</ComponentName>
+          <ComponentName>Stock/FM580 'Raider' Drive</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>ba-3VQ-zGEmDCfU12uaqaA</Key>
@@ -381,10 +399,6 @@ Dual heavy cruisers with all big guns. This fleet is ideal for those who struggl
         <HullSocket>
           <Key>CgpRQa-660KEed1wTRL4vw</Key>
           <ComponentName>Stock/Ammunition Elevators</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>awwdeDnNs0G-RceQF1TByA</Key>
-          <ComponentName>Stock/Mount Gyros</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>S8ALcpOMYEqJog1v2q8UMQ</Key>
