@@ -30,14 +30,18 @@ class Lobbies:
         if lobby_data is not None:
             self.author, self.lobbies = self._parse_data(lobby_data)
 
+    @property
+    def total_lobbies(self) -> int:
+        if self.lobbies is None:
+            return 0
+        return len(self.lobbies)
+
     @classmethod
     def _parse_data(cls, lobby_data: str) -> tuple[int, list[Lobby]]:
         data = json.loads(lobby_data)
         user = int(data["u"])
         lobbies = data["l"]
-        lobby_list = []
-        for lobby in lobbies:
-            lobby_list.append(Lobby(lobby["i"], lobby["h"]))
+        lobby_list = [(Lobby(lobby["i"], lobby["h"])) for lobby in lobbies]
         return user, lobby_list
 
     def __str__(self) -> str:
@@ -48,10 +52,11 @@ class Lobbies:
                 "Mod: <https://steamcommunity.com/sharedfiles/filedetails/?id=2849396705>\n"
                 "App: <https://github.com/jaghaimo/nfcli/releases/download/lw/LobbyWatcher.zip>"
             )
-        total_lobbies = len(self.lobbies)
-        if total_lobbies == 0:
+        if self.total_lobbies == 0:
             return f"As of {self.time} there were no lobbies present in the game."
-        lobby_or_lobbies = "there was one lobby" if total_lobbies == 1 else f"there were {total_lobbies} lobbies"
+        lobby_or_lobbies = (
+            "there was one lobby" if self.total_lobbies == 1 else f"there were {self.total_lobbies} lobbies"
+        )
         open_lobbies = len(self.open)
         open_private = len(self.with_password(self.open))
         open_public = open_lobbies - open_private
@@ -80,15 +85,21 @@ class Lobbies:
 
     @property
     def open(self) -> list[Lobby]:
+        if self.lobbies is None:
+            return []
         return [lobby for lobby in self.lobbies if not lobby.in_progress]
 
     @property
     def in_progress(self) -> list[Lobby]:
+        if self.lobbies is None:
+            return []
         return [lobby for lobby in self.lobbies if lobby.in_progress]
 
     def with_password(self, lobbies: list[Lobby] | None = None) -> list[Lobby]:
         if lobbies is None:
             lobbies = self.lobbies
+        if lobbies is None:
+            return []
         return [lobby for lobby in lobbies if lobby.has_password]
 
 
@@ -173,7 +184,7 @@ class Missile(Named, Printable):
 
     @property
     def size(self) -> str:
-        return re.search("[1-9]+", self.name).group()
+        return re.search("[1-9]+", self.name).group()  # type: ignore
 
     @property
     def title(self) -> str:
@@ -214,9 +225,10 @@ class Ship(Named, Printable):
 
     @property
     def hull(self) -> str:
-        if "name" in self._data:
-            return self._data.get("name")
-        return self.get_name(self._hull)
+        name = self._data.get("name", None)
+        if name is None:
+            return self.get_name(self._hull)
+        return name
 
     @property
     def tags(self) -> str:
@@ -260,7 +272,8 @@ class Ship(Named, Printable):
 
     def _get_components(self, type: str) -> list[Component]:
         return [
-            Component(self._get_socket(key), i + 1, size) for i, (key, size) in enumerate(self._data.get(type).items())
+            Component(self._get_socket(key), i + 1, size)
+            for i, (key, size) in enumerate(self._data.get(type, []).items())
         ]
 
     def _get_socket(self, key: str) -> Socket:

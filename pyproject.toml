@@ -1,10 +1,19 @@
-[tool.black]
-line-length = 120
-target-version = ['py310']
-
 [tool.ruff]
 line-length = 120
-select = ["F", "E", "W", "C90", "I", "UP", "C4", "SIM", "ERA", "RUF"]
+lint.select = [
+    "F",
+    "E",
+    "W",
+    "C90",
+    "I",
+    "N",
+    "UP",
+    "C4",
+    "SIM",
+    "ERA",
+    "PERF",
+    "RUF",
+]
 
 [tool.poetry]
 name = "nfcli"
