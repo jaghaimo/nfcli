@@ -6,14 +6,15 @@
   <FactionKey>Stock/Protectorate</FactionKey>
   <Description>Difficulty: &lt;color=yellow&gt;MODERATE&lt;/color&gt;
 
-Azurite Squadron features a fighting lineship and Ocello pair armed with cannons, partnered with an R400 tugboat to aid in piercing jamming. The lineship has a heavier cannon loadout than the Ocello, but a harder time bringing it to bear - aligning before the engagement with the hold heading command will prove useful. You'll also want to keep the two close together to defend against missile threats, with the spotting tugboat safely in the rear.</Description>
-  <SortOverrideOrder>4</SortOverrideOrder>
+Azurite Squadron features a fighting lineship and Ocello cruiser armed with cannons, partnered with an LRT tugboat to aid in piercing jamming. The lineship has a heavy cannon loadout, but a hard time bringing it to bear - aligning before the engagement with the HDG command will prove useful. You'll also want to keep the two close together to defend against missile threats, with the spotting tugboat safely in the rear. The Ocello has lower damage output for its cost than a lineship but its sensors, antenna, and fire control are of great benefit to the team.
+  </Description>
+  <SortOverrideOrder>5</SortOverrideOrder>
   <Ships>
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>da410729-e79e-4924-ad05-56bd3c95f694</Key>
       <Name>Rose Soul</Name>
-      <Cost>1585</Cost>
+      <Cost>1581</Cost>
       <Callsign />
       <Number>586</Number>
       <SymbolOption>0</SymbolOption>
@@ -52,7 +53,7 @@ Azurite Squadron features a fighting lineship and Ocello pair armed with cannons
               <MagSaveData>
                 <MagazineKey>_yNca5m-8kqHgFWjhC5u_g</MagazineKey>
                 <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>7</Quantity>
+                <Quantity>10</Quantity>
               </MagSaveData>
             </MissileLoad>
           </ComponentData>
@@ -70,7 +71,7 @@ Azurite Squadron features a fighting lineship and Ocello pair armed with cannons
               <MagSaveData>
                 <MagazineKey>lZbMXSt2hkWcr2JFcH6yqA</MagazineKey>
                 <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>7</Quantity>
+                <Quantity>10</Quantity>
               </MagSaveData>
             </MissileLoad>
           </ComponentData>
@@ -202,7 +203,7 @@ Azurite Squadron features a fighting lineship and Ocello pair armed with cannons
       <SaveID xsi:nil="true" />
       <Key>b33e4aa7-533d-4657-8e54-c6c190b4debe</Key>
       <Name>Abject Terror</Name>
-      <Cost>1134</Cost>
+      <Cost>1148</Cost>
       <Callsign />
       <Number>258</Number>
       <SymbolOption>0</SymbolOption>
@@ -258,8 +259,34 @@ Azurite Squadron features a fighting lineship and Ocello pair armed with cannons
           <ComponentName>Stock/C65 Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
+          <Key>auQ7ijGeX0evdikZQeBxTg</Key>
+          <ComponentName>Stock/Container Stack Launcher</ComponentName>
+          <ComponentData xsi:type="CellLauncherData">
+            <MissileLoad>
+              <MagSaveData>
+                <MagazineKey>BBdnurjr80mK6WmZYf3S9w</MagazineKey>
+                <MunitionKey>Stock/Decoy Container (Line Ship)</MunitionKey>
+                <Quantity>2</Quantity>
+              </MagSaveData>
+            </MissileLoad>
+          </ComponentData>
+        </HullSocket>
+        <HullSocket>
           <Key>d3N-B_JnDUKAdVRBJ6nvFQ</Key>
           <ComponentName>Stock/C65 Cannon</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>xvNT1_DYcUuSpU6rrmL_4A</Key>
+          <ComponentName>Stock/Container Stack Launcher</ComponentName>
+          <ComponentData xsi:type="CellLauncherData">
+            <MissileLoad>
+              <MagSaveData>
+                <MagazineKey>3_qoMNUCVU2_ySRFlbkH0g</MagazineKey>
+                <MunitionKey>Stock/Decoy Container (Line Ship)</MunitionKey>
+                <Quantity>2</Quantity>
+              </MagSaveData>
+            </MissileLoad>
+          </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>grYBjxIS3E--lmrqenuK8A</Key>
@@ -420,7 +447,7 @@ Azurite Squadron features a fighting lineship and Ocello pair armed with cannons
       <SaveID xsi:nil="true" />
       <Key>6b49867a-5f92-4992-aa29-8ce18138c9b7</Key>
       <Name>Always Alert</Name>
-      <Cost>281</Cost>
+      <Cost>271</Cost>
       <Callsign />
       <Number>611</Number>
       <SymbolOption>0</SymbolOption>
@@ -492,13 +519,13 @@ Azurite Squadron features a fighting lineship and Ocello pair armed with cannons
     <MissileTemplate>
       <Designation>SGM-123</Designation>
       <Nickname>Defender</Nickname>
-      <Description>DIRECT - ACT(&lt;color=#4CFF72&gt;RADAR&lt;/color&gt;) - HE FRAG</Description>
-      <LongDescription>The SGM-123 Defender is a size 1 direct guidance missile.  It is based on the SGM-1 body, which is a nimble general-purpose missile.  This missile will deliver a Proximity Fuze, High Explosive, Blast Fragmentation warhead.  It homes in on its target using an Active Radar seeker.
+      <Description>DIRECT - ACT(&lt;color=#3BC81E&gt;RADAR&lt;/color&gt;) - HE FRAG</Description>
+      <LongDescription>The &lt;noparse&gt;SGM-123 Defender&lt;/noparse&gt; is a size 1 direct guidance missile.  It is based on the SGM-1 body, which is a nimble general-purpose missile.  This missile will deliver a Proximity Fuze, High Explosive, Blast Fragmentation warhead.  It homes in on its target using an Active Radar seeker.
 
 Control Method: DIRECT
 Targeting Modes:
-	&lt;b&gt;&lt;color=#4CFF72&gt;POSITION&lt;/color&gt;	&lt;color=#4CFF72&gt;TRACK&lt;/color&gt;&lt;/b&gt;
-Primary Seeker: ACTIVE &lt;color=#4CFF72&gt;RADAR&lt;/color&gt;
+	&lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+Primary Seeker: ACTIVE &lt;color=#3BC81E&gt;RADAR&lt;/color&gt;
 
 304 m/s for 2,325 m, top speed in 0.5 s
 Terminal Maneuvers: None
@@ -508,6 +535,7 @@ Armor: 2cm   Component: 65hp
 Blast Radius: 47 m
 
 Body Integrity: 10 
+Wall Thickness: 0.5
 Programming Time: 6 s
 Radar Signature Bonus: 100 %
 Boost-Phase Duration: 3 s

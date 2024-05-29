@@ -21,9 +21,13 @@ WORKSHOP_DIR = "~/Steam/steamapps/workshop/content/{}/{}"
 
 def get_player_count() -> int:
     params = {"appid": STEAM_APP_ID}
-    results = webapi.get("ISteamUserStats", "GetNumberOfCurrentPlayers", params=params)["response"]
-    player_count = results["player_count"] if "player_count" in results else -1
-    return player_count
+    query = webapi.get("ISteamUserStats", "GetNumberOfCurrentPlayers", params=params)
+    if query is None:
+        return -1
+    results = query.get("response")
+    if results is None:
+        return -1
+    return results.get("player_count", -1)
 
 
 def get_local_path(workshop_id: int) -> str:
@@ -97,8 +101,11 @@ def find_all() -> dict[int, dict]:
             "numperpage": 100,
             "query_type": 21,
         }
-        results = webapi.get("IPublishedFileService", "QueryFiles", params=params)["response"]
-        if "publishedfiledetails" not in results:
+        query = webapi.get("IPublishedFileService", "QueryFiles", params=params)
+        if query is None:
+            break
+        results = query.get("response")
+        if results is None or "publishedfiledetails" not in results:
             break
         cursor = results["next_cursor"]
         items = results["publishedfiledetails"]

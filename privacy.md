@@ -60,7 +60,7 @@ The Company may use Personal Data for the following purposes:
 
 - __To provide and maintain our Service__, including to monitor the usage of our Service.
 - __To manage Your requests:__ To attend and manage Your requests to Us.
-- __For other purposes__: We may use Your information for other purposes, such as data analysis, identifying usage trends, determining the effectiveness of our promotional campaigns and to evaluate and improve our Service, products, services, marketing and your experience. 
+- __For other purposes__: We may use Your information for other purposes, such as data analysis, identifying usage trends, determining the effectiveness of our promotional campaigns and to evaluate and improve our Service, products, services, marketing and your experience.
 
 ### Retention of Your Personal Data
 

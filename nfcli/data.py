@@ -3,6 +3,7 @@
 import json
 import logging
 from glob import glob
+from typing import Any
 
 TAGS_FILE = "data/tags.json"
 COMPONENTS_FILE = "data/components.json"
@@ -30,21 +31,19 @@ class _Hulls:
             self.hulls[key] = hull
 
     def get_data(self, hull: str) -> dict:
-        if hull in self.hulls:
-            return self.hulls.get(hull)
-        return {}
+        return self.hulls.get(hull, {})
 
 
 class _Tags:
     def __init__(self) -> None:
-        self.tags = load_json(TAGS_FILE)
+        self.tags: dict[str, Any] = load_json(TAGS_FILE)
 
     def get(self, name: str) -> str | None:
         if name in self.tags:
             return self.tags.get(name)
         return None
 
-    def merge(self, new_dict: dict):
+    def merge(self, new_dict: dict[str, Any]):
         current_keys = self.tags.keys()
         new_keys = new_dict.keys()
         self.remove_keys(current_keys - new_keys)
@@ -55,7 +54,7 @@ class _Tags:
         with open(TAGS_FILE, "w") as file:
             json.dump(self.tags, file, indent=4, sort_keys=True)
 
-    def remove_keys(self, removed_keys: list[str]):
+    def remove_keys(self, removed_keys: list[str] | set[str]):
         if not removed_keys:
             return
         logging.info(f"Removing old entires: {removed_keys}")
@@ -68,6 +67,8 @@ class _Components:
         self.components = load_json(COMPONENTS_FILE).get("Components")
 
     def get_name(self, key: str) -> str | None:
+        if self.components is None:
+            return None
         for component in self.components:
             if component.get("Key") == key:
                 return component.get("Name")
@@ -86,6 +87,8 @@ class _Munitions:
         self.munitions = load_json(MUNITIONS_FILE).get("Munitions")
 
     def get_name(self, key: str) -> str | None:
+        if self.munitions is None:
+            return None
         for munition in self.munitions:
             if munition.get("Key") == key:
                 return munition.get("Name")

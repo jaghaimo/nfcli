@@ -3,6 +3,7 @@ import logging
 import os
 import re
 import tempfile
+from genericpath import exists
 from time import time
 
 import discord
@@ -10,7 +11,6 @@ from discord import Message
 from discord.ext import tasks
 from discord.file import File
 from dotenv import load_dotenv
-from genericpath import exists
 
 from nfcli import determine_output_png, init_logger, load_path
 from nfcli.models import Lobbies
