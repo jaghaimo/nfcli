@@ -21,11 +21,13 @@ from nfcli.steam import get_player_count, get_workshop_files, get_workshop_id
 from nfcli.wiki import Wiki
 
 load_dotenv()
+
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 DISCORD_CHANNEL = int(os.getenv("DISCORD_CHANNEL"))
+OWNER_ID = int(os.getenv("OWNER_ID"))
 MAX_UPLOAD = 0.5 * 1024 * 1024
-lobbies = Lobbies(time(), None)
 
+lobbies = Lobbies(time(), None)
 wiki_db = Wiki()
 connection = create_connection()
 intents = discord.Intents.default()
@@ -75,7 +77,7 @@ async def process_uploads(message: Message):
             "Some files could not be parsed as they were too big to fit in my small brain."
             f"\nPlease upload files no larger than {round(MAX_UPLOAD/1024,0)}KB."
         )
-    if valid_files:
+    if valid_files and message.guild is not None:
         insert_usage_data(connection, message.guild.id, message.author.id, files)
     for file in valid_files:
         xml_data = await file.read()
@@ -93,19 +95,6 @@ async def process_workshop(message: Message, workshop_id: int):
     except RuntimeError as exception:
         logging.error(exception)
         await message.reply(exception)
-
-
-async def process_old_wiki(message: Message):
-    """Adds a friendly reminded to use slash command instead."""
-    is_wiki = message.content[1:5].lower() == "wiki"
-    if is_wiki:
-        reply = await message.reply(
-            "Hey dummy, stop spamming the channel and use `/wiki` command instead!\n"
-            "In case you missed the tutorial: type `/wiki`, press enter, type keywords, press enter again.\n"
-            "This message will self destruct in few seconds. I hope yours too!"
-        )
-        await asyncio.sleep(9)
-        await reply.delete()
 
 
 async def process_workshops(message: Message):
@@ -155,7 +144,6 @@ async def on_message(message: discord.Message):
     if message.channel.id == DISCORD_CHANNEL and message.author.bot:
         await process_lobby_data(message)
     else:
-        await process_old_wiki(message)
         await process_workshops(message)
         await process_uploads(message)
 

@@ -21,6 +21,10 @@ cache: steam wiki
 steam:
 	poetry run steam
 
+update:
+	poetry update
+	pre-commit autoupdate
+
 wiki:
 	poetry run wiki
 
