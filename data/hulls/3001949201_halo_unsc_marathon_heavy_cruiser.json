@@ -1,0 +1,45 @@
+{
+  "key": "Halo/UNSC/Marathon Heavy Cruiser",
+  "name": "'Marathon' class Heavy Cruiser",
+  "mounts": {
+    "MT1": "4x12x4",
+    "MT2": "6x4x6",
+    "MT3": "6x4x6",
+    "MT4": "3x4x5",
+    "MT5": "3x4x5",
+    "MT6": "3x4x5",
+    "MT7": "3x4x5",
+    "MT8": "3x4x5",
+    "MT9": "3x4x5",
+    "MT10": "3x4x5",
+    "MT11": "3x2x3",
+    "MT12": "3x2x3",
+    "MT13": "2x1x2"
+  },
+  "compartments": {
+    "C1": "6x1x8",
+    "C2": "6x1x8",
+    "C3": "6x1x8",
+    "C4": "6x1x8",
+    "C5": "6x1x8",
+    "C6": "6x1x8",
+    "C7": "6x1x4",
+    "C8": "6x1x4",
+    "C9": "6x1x4",
+    "C10": "6x1x4"
+  },
+  "modules": {
+    "M1": "8x12x10",
+    "M2": "6x6x6",
+    "M3": "6x6x6",
+    "M4": "3x3x3",
+    "M5": "3x3x3",
+    "M6": "3x3x3",
+    "M7": "3x3x3",
+    "M8": "3x3x3",
+    "M9": "2x2x2",
+    "M10": "2x2x2",
+    "M11": "2x2x2",
+    "M12": "2x2x2"
+  }
+}

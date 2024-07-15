@@ -1,0 +1,24 @@
+{
+  "key": "Halo/UNSC/Halberd Light Destroyer",
+  "name": "'Halberd' class Light Destroyer",
+  "mounts": {
+    "MT1": "1x12x1",
+    "MT2": "3x4x3",
+    "MT3": "3x2x3",
+    "MT4": "3x1x3",
+    "MT5": "3x1x3"
+  },
+  "compartments": {
+    "C1": "4x1x6",
+    "C2": "4x1x6",
+    "C3": "3x1x3",
+    "C4": "3x1x3",
+    "C5": "3x1x3"
+  },
+  "modules": {
+    "M1": "5x3x5",
+    "M2": "3x3x3",
+    "M3": "3x3x3",
+    "M4": "2x2x2"
+  }
+}

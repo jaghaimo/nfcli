@@ -1,0 +1,30 @@
+{
+  "key": "Halo/UNSC/Paris Heavy Frigate",
+  "name": "'Paris' class Heavy Frigate",
+  "mounts": {
+    "MT1": "1x12x1",
+    "MT2": "1x4x11",
+    "MT3": "1x4x11",
+    "MT4": "3x4x5",
+    "MT5": "3x1x3",
+    "MT6": "3x1x3",
+    "MT7": "3x1x3",
+    "MT8": "3x1x3",
+    "MT9": "2x1x2"
+  },
+  "compartments": {
+    "C1": "4x1x6",
+    "C2": "4x1x6",
+    "C3": "4x1x3",
+    "C4": "4x1x3",
+    "C5": "4x1x3",
+    "C6": "1x1x6",
+    "C7": "1x1x6"
+  },
+  "modules": {
+    "M1": "5x3x5",
+    "M2": "5x3x5",
+    "M3": "3x3x3",
+    "M4": "2x2x2"
+  }
+}
