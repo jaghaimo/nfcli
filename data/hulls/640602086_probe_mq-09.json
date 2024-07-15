@@ -1,0 +1,52 @@
+{
+  "key": "Probe/MQ-09",
+  "name": "'MQ-09' class Strike Cruiser",
+  "mounts": {
+    "mount616_1": "6x1x6",
+    "mount616_2": "6x1x6",
+    "mount616_3": "6x1x6",
+    "mount616_4": "6x1x6",
+    "mount232_1": "2x3x2",
+    "mount232_2": "2x3x2",
+    "mount343_1": "3x4x3",
+    "mount343_2": "3x4x3",
+    "mount343_3": "3x4x3",
+    "mount343_4": "3x4x3"
+  },
+  "compartments": {
+    
+  },
+  "modules": {
+    "Drive_1": "12x12x12",
+    "Module666_1": "6x6x6",
+    "Module666_2": "6x6x6",
+    "Module444_1": "4x4x4",
+    "Module444_2": "4x4x4",
+    "Module333_1": "3x3x3",
+    "Module333_2": "3x3x3",
+    "Module333_3": "3x3x3",
+    "Module333_4": "3x3x3",
+    "Module444_3": "4x4x4",
+    "Module444_4": "4x4x4",
+    "Module333_5": "3x3x3",
+    "Module333_6": "3x3x3",
+    "Module333_7": "3x3x3",
+    "Module333_8": "3x3x3",
+    "Module333_9": "3x3x3",
+    "Module333_10": "3x3x3",
+    "Module333_11": "3x3x3",
+    "Module333_12": "3x3x3",
+    "Module222_1": "2x2x2",
+    "Module222_2": "2x2x2",
+    "Module222_3": "2x2x2",
+    "Module222_4": "2x2x2",
+    "Module222_5": "2x2x2",
+    "Module222_6": "2x2x2",
+    "Module222_7": "2x2x2",
+    "Module222_8": "2x2x2",
+    "Module222_9": "2x2x2",
+    "Module222_10": "2x2x2",
+    "Module222_11": "2x2x2",
+    "Module222_12": "2x2x2"
+  }
+}

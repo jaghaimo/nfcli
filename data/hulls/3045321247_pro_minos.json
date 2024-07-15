@@ -1,0 +1,37 @@
+{
+  "key": "PRO/Minos",
+  "name": "'Forma-C \"Minos\"' class Frigate",
+  "mounts": {
+    "mount345_1": "3x4x5",
+    "mount345_2": "3x4x5",
+    "mount646_1": "6x4x6",
+    "mount5155_1": "5x15x5",
+    "mount222_1": "2x2x2",
+    "mount222_2": "2x2x2",
+    "mount222_3": "2x2x2",
+    "mount222_4": "2x2x2"
+  },
+  "compartments": {
+    "comp618_1": "6x1x8",
+    "comp618_2": "6x1x8",
+    "comp618_3": "6x1x8",
+    "comp618_4": "6x1x8",
+    "comp618_5": "6x1x8",
+    "comp614_1": "6x1x4",
+    "comp614_2": "6x1x4",
+    "comp614_3": "6x1x4",
+    "comp614_4": "6x1x4"
+  },
+  "modules": {
+    "module12810drive_1": "12x8x10",
+    "module12810drive_2": "12x8x10",
+    "module555_1": "5x5x5",
+    "module333_1": "3x3x3",
+    "module333_2": "3x3x3",
+    "module333_3": "3x3x3",
+    "module222_1": "2x2x2",
+    "module222_2": "2x2x2",
+    "module222_3": "2x2x2",
+    "module222_4": "2x2x2"
+  }
+}

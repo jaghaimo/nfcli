@@ -1,0 +1,19 @@
+{
+  "key": "Probe/MQ-04",
+  "name": "' MQ-04 'Shrike'' class  Automated Drone",
+  "mounts": {
+    "MissileMount1": "1x1x4",
+    "GunMount1": "1x2x1"
+  },
+  "compartments": {
+    
+  },
+  "modules": {
+    "module214": "2x1x4",
+    "module111_1": "1x1x1",
+    "module111_2": "1x1x1",
+    "module115_1": "1x1x5",
+    "Module114_1": "1x1x4",
+    "Module114_2": "1x1x4"
+  }
+}

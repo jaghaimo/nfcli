@@ -1,0 +1,23 @@
+{
+  "key": "REP/Pelta",
+  "name": "'Pelta' class Frigate",
+  "mounts": {
+    "mount323_1": "3x2x3",
+    "mount323_2": "3x2x3",
+    "mount222_1": "2x2x2",
+    "mount222_2": "2x2x2",
+    "mount222_3": "2x2x2"
+  },
+  "compartments": {
+    "comp614_1": "6x1x4",
+    "comp614_2": "6x1x4",
+    "comp614_3": "6x1x4",
+    "comp313_1": "3x1x3"
+  },
+  "modules": {
+    "module666drive_": "5x3x5",
+    "module222radar_": "2x2x2",
+    "module111shield_": "1x1x1",
+    "module333_1": "3x3x3"
+  }
+}

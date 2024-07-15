@@ -1,0 +1,43 @@
+{
+  "key": "Probe/ACQ-05",
+  "name": "'ACG-15 \"Trigger\"' class Artillery Cruiser",
+  "mounts": {
+    "mount345_Top1": "3x4x5",
+    "mount345_Top2": "3x4x5",
+    "mount345_Bottom1": "3x4x5",
+    "mount345_Bottom2": "3x4x5",
+    "mount345_Side1": "3x4x5",
+    "mount345_Side2": "3x4x5",
+    "mount222_Top": "8x5x8",
+    "mount222_Bottom": "8x5x8"
+  },
+  "compartments": {
+    
+  },
+  "modules": {
+    "module666drive_1": "6x6x6",
+    "module666drive_2": "6x6x6",
+    "module666drive_3": "6x6x6",
+    "module666drive_4": "6x6x6",
+    "module666reactor_": "6x6x6",
+    "module222radar_": "2x2x2",
+    "module222_1": "2x2x2",
+    "module222_2": "2x2x2",
+    "module222_3": "2x2x2",
+    "module222_4": "2x2x2",
+    "module222_5": "2x2x2",
+    "module222_6": "2x2x2",
+    "module222_7": "2x2x2",
+    "module222_8": "2x2x2",
+    "module333_1": "3x3x3",
+    "module333_3": "3x3x3",
+    "module333_4": "3x3x3",
+    "module333_5": "3x3x3",
+    "module333_6": "3x3x3",
+    "module333_7": "3x3x3",
+    "module333_8": "4x4x4",
+    "module333_9": "4x4x4",
+    "module333_2": "3x3x3",
+    "module333_10": "3x3x3"
+  }
+}
