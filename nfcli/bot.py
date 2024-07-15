@@ -24,7 +24,6 @@ load_dotenv()
 
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 DISCORD_CHANNEL = int(os.getenv("DISCORD_CHANNEL"))
-OWNER_ID = int(os.getenv("OWNER_ID"))
 MAX_UPLOAD = 0.5 * 1024 * 1024
 
 lobbies = Lobbies(time(), None)
@@ -164,7 +163,7 @@ async def lobbies_action(ctx: discord.ApplicationContext):
 
 @bot.slash_command(name="stats")
 async def stats_action(ctx: discord.ApplicationContext, last_days: int):
-    """Show basic usage statics."""
+    """Show basic usage statistics."""
     last_days = max(1, min(last_days, 30))
     guilds_stats = fetch_usage_servers(connection, last_days)
     await process_interaction(ctx, str(guilds_stats))

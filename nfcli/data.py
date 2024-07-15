@@ -57,7 +57,7 @@ class _Tags:
     def remove_keys(self, removed_keys: list[str] | set[str]):
         if not removed_keys:
             return
-        logging.info(f"Removing old entires: {removed_keys}")
+        logging.info(f"Removing old entries: {removed_keys}")
         for key in removed_keys:
             self.tags.pop(key)
 
