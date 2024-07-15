@@ -1,0 +1,27 @@
+{
+  "key": "Halo/Covenant/Mutan Et-pattern Storm Cutter",
+  "name": "Mutan Et-pattern Storm Cutter",
+  "mounts": {
+    "MT1": "1x1x1",
+    "MT2": "1x1x1",
+    "MT3": "1x1x1",
+    "MT4": "1x1x1",
+    "LM1": "1x2x1",
+    "LM2": "1x2x1",
+    "LM3": "1x2x1",
+    "LM4": "1x2x1",
+    "LM5": "1x2x1"
+  },
+  "compartments": {
+    "C1": "2x1x2",
+    "C2": "2x1x1"
+  },
+  "modules": {
+    "M1": "3x3x3",
+    "M2": "3x3x3",
+    "M3": "2x2x2",
+    "M4": "2x2x2",
+    "M5": "2x2x2",
+    "M6": "2x2x2"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "key": "Halo/UNSC/Halcyon Light Cruiser",
+  "name": "'Halcyon' class Light Cruiser",
+  "mounts": {
+    "MT1": "1x12x1",
+    "MT2": "3x4x5",
+    "MT3": "3x4x5",
+    "MT4": "3x4x5",
+    "MT5": "3x2x3",
+    "MT6": "3x2x3",
+    "MT7": "3x2x3",
+    "MT8": "3x2x3",
+    "MT9": "3x2x3",
+    "MT10": "3x2x3",
+    "MT11": "3x2x3",
+    "MT12": "2x4x3",
+    "MT13": "2x4x3",
+    "MT14": "2x4x3",
+    "MT15": "2x4x3",
+    "MT16": "2x4x3",
+    "MT17": "2x4x3",
+    "MT18": "2x4x3",
+    "MT19": "2x4x3"
+  },
+  "compartments": {
+    "C1": "6x1x8",
+    "C2": "6x1x8",
+    "C3": "6x1x8",
+    "C4": "6x1x8",
+    "C5": "6x1x8",
+    "C6": "6x1x8",
+    "C7": "6x1x8",
+    "C8": "6x1x8"
+  },
+  "modules": {
+    "M1": "8x12x10",
+    "M2": "6x6x6",
+    "M3": "6x6x6",
+    "M4": "3x3x3",
+    "M5": "3x3x3",
+    "M6": "2x2x2",
+    "M7": "2x2x2",
+    "M8": "2x2x2",
+    "M9": "2x2x2"
+  }
+}

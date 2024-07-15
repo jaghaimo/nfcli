@@ -1,0 +1,20 @@
+{
+  "key": "Halo/UNSC/Gladius Heavy Corvette",
+  "name": "'Gladius' class Heavy Corvette",
+  "mounts": {
+    "MT1": "1x8x1",
+    "MT2": "1x1x2",
+    "MT3": "1x1x2",
+    "MT4": "1x1x2",
+    "MT5": "1x1x2",
+    "MT6": "1x1x2"
+  },
+  "compartments": {
+    "C1": "1x1x1",
+    "C2": "1x1x1",
+    "C3": "1x1x1"
+  },
+  "modules": {
+    "M1": "2x2x2"
+  }
+}

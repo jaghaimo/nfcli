@@ -1,0 +1,46 @@
+{
+  "key": "Halo/Covenant/Ester-pattern Armored Frigate",
+  "name": "Ester-pattern Armored Frigate",
+  "mounts": {
+    "MT1": "4x5x4",
+    "MT2": "2x2x2",
+    "MT3": "2x2x2",
+    "MT4": "2x2x2",
+    "MT5": "2x2x2",
+    "MT6": "2x2x2",
+    "MT7": "2x2x2",
+    "LM1": "1x2x1",
+    "LM2": "1x2x1",
+    "LM3": "1x2x1",
+    "LM4": "1x2x1",
+    "LM5": "1x2x1",
+    "LM6": "1x2x1",
+    "LM7": "1x2x1",
+    "LM8": "1x2x1",
+    "LM9": "1x2x1",
+    "TM1": "1x2x1",
+    "TM2": "1x2x1",
+    "TM3": "1x2x1",
+    "TM4": "1x2x1"
+  },
+  "compartments": {
+    "C1": "6x1x8",
+    "C2": "6x1x8",
+    "C3": "4x1x6",
+    "C4": "4x1x6",
+    "C5": "4x1x6",
+    "C6": "4x1x6"
+  },
+  "modules": {
+    "M1": "6x4x12",
+    "M2": "6x4x12",
+    "M3": "3x3x3",
+    "M4": "3x3x3",
+    "M5": "3x3x3",
+    "M6": "3x3x3",
+    "M7": "2x2x2",
+    "M8": "2x2x2",
+    "M9": "2x2x2",
+    "M10": "2x2x2"
+  }
+}
