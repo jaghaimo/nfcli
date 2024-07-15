@@ -1,0 +1,26 @@
+{
+  "key": "EAW/Centurion Corvette",
+  "name": "'Centurion' class Corvette",
+  "mounts": {
+    "YH6beqxec0eGFEG50o2AoA": "3x4x3",
+    "Xo9TA95AFEWNPNaDmVpAGQ": "2x2x2",
+    "iItc0o0Yx0y7Xbj-91EgnA": "2x2x2",
+    "9coNtUn4n0yJIGxROmi1hQ": "2x2x2",
+    "qL1CMhh3AUqQWfJPGhOv8g": "2x2x2",
+    "ZZAsCZOpHEG6d4PgRbnGSA": "2x2x2"
+  },
+  "compartments": {
+    "6dZvCDO1fE2OT5Bt8J9rxw": "4x1x6",
+    "vc38piwg6UivcldQI3B_bQ": "4x1x6",
+    "DLcmnVzJh0uMY-YORG3HNA": "3x1x3",
+    "bnPaYclAgk-c-3Gi0SD2dA": "3x1x3",
+    "cuENsCYBhUuRuCOXGbK0Bw": "3x1x3"
+  },
+  "modules": {
+    "tWX5NxuHqUqBc7q55GuswQ": "3x3x3",
+    "Q4A1xCFetUCjWA5VdbM6Gw": "8x3x6",
+    "GUcRejGdZ0SWwpB79qQrWg": "2x2x2",
+    "ZQEb_ubW5UKByE6ZG0_1Ag": "2x2x2",
+    "mZhTJMgO4EWqUVdjdU4HrA": "3x3x3"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "key": "EAW/Skybound Cruiser",
+  "name": "'Skybound' class Cruiser",
+  "mounts": {
+    "LJEtICsx-UuU02BsDiopOg": "3x4x5",
+    "NfT7h0xFWEGg9SdmdWHrOQ": "3x4x5",
+    "NX9Fw5sITUSMHIWW4AnggQ": "3x4x5",
+    "9oZtZuO9MkWYI2f3TeLETg": "3x4x5",
+    "vxeItTqps0a157iUta95iA": "3x4x5",
+    "3UziFYPyJUuLoL2ckK09Sw": "3x4x3",
+    "EJkBWn62c0GJ9TlCmWQ6mA": "3x4x3",
+    "Bh7dqggFUkWG4MjVbwkLXQ": "2x2x2",
+    "Lq5Sbf5MyECNq-PI_4jDbw": "2x2x2",
+    "SCyOYCDIAUaAjWyVBrn9SQ": "2x2x2",
+    "cknNN9OA30SPwNCMM5wkJw": "2x2x2",
+    "p3yOYNlEsk--eBwXv34_eg": "2x2x2",
+    "AAd4e7tRHkCbM7Cu2u9Jdg": "2x2x2"
+  },
+  "compartments": {
+    "5UyNyL1rv0eJo1rw7W5IcQ": "6x1x8",
+    "d9kVvuA2E0Wyqnd1u1RH3A": "6x1x8",
+    "h0dDCw_LJESjcCeckWw08A": "6x1x8",
+    "6peNcezjmUG_UKzyPkzjog": "6x1x8",
+    "JUkKwc8KfkmzypTRqWG_Hw": "6x1x4",
+    "iZx2C6nqWUyGDgCzoNJuIQ": "6x1x4",
+    "Lj2cnRVKzk2rJmKrNm86_g": "6x1x8",
+    "94tEHFaW1EeQn2iMoU5OvA": "6x1x8",
+    "RWgzQhsm20mbSVz_m9suZg": "6x1x4",
+    "1tDc0XTY2EKGOWp4qsUffA": "6x1x4",
+    "GJchzumpfk2vptMctnODaQ": "6x1x4"
+  },
+  "modules": {
+    "WpoV5-vdMECvuqNLb_lRmQ": "6x6x6",
+    "xKjymW2PykWyxdYXgGUVEQ": "8x12x10",
+    "3YG8WACAKEma4_KhOltjqg": "3x3x3",
+    "R1N8nMT2AE2KpVoob0Jxfw": "3x3x3",
+    "3axwAvkWCEqArHYRoaa1Vg": "2x2x2",
+    "VoMqxsBYHkmzlqOT5paRwQ": "3x3x3",
+    "MU3RzHsz2EKcjwL4MaSK4w": "2x2x2",
+    "00m4zeFelk-IMRYeM4cIjA": "2x2x2",
+    "XDiYtSMqW0Su9DDHBKARQQ": "2x2x2",
+    "F_U9Hl7goEWmC2Dt1Ogq1g": "3x3x3"
+  }
+}

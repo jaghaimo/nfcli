@@ -1,0 +1,47 @@
+{
+  "key": "EAW/Subjugator Cruiser",
+  "name": "'Subjugator' class Cruiser",
+  "mounts": {
+    "cI9dQETVAEGvql32q3Z7JA": "6x4x6",
+    "6GNA_hRpA02T5IlP6axcEw": "6x4x6",
+    "4jPpQ89KEE2rvivfISf7cg": "3x4x5",
+    "DPalC7XJ5kW2JhGre2B_XQ": "3x4x5",
+    "Szm1Gt1HJUiNH4QMu0smzA": "3x4x5",
+    "dIM0-nzVHEqSkqDWgMS3Kg": "3x4x5",
+    "7pHqjzxz9Ui8EM5HYpYjqQ": "3x4x3",
+    "7Khzg6MrLkKkuA5pmVbuyA": "3x4x3",
+    "bYYEqFhKpk260EbHpMGJtQ": "2x2x2",
+    "-9FA4hbKZkGPyWsQIlS1Fw": "2x2x2",
+    "G_S_XnNWBEur0Ugx-JHWaw": "2x2x2",
+    "w8123ShavEmtA5f-eQCdDg": "2x2x2",
+    "L6MvW01YqEiX-0PvR8YCdw": "4x12x4",
+    "H-Bgm5EqBkWET6mQxwC8hA": "4x12x4"
+  },
+  "compartments": {
+    "sFH6TwWvDk-JuJvMuYZH2A": "6x1x8",
+    "-meTr5xHO0eoxWF-Jn1seg": "6x1x8",
+    "bjbQ91HsVka8Rms3fMQAGw": "6x1x8",
+    "AXtJh45Bg0C9o4UVeijY7w": "6x2x8",
+    "kO7b1jC5pkqiNk_bC0grxA": "6x1x8",
+    "bgDAA0eJWE2mrLB0XNHXtA": "6x1x6",
+    "XNWjO1Tzb0ieyrUKROatYA": "6x1x6",
+    "WeUMDu5QGkiQsrwB8u-VoQ": "6x1x4",
+    "UFB2hR3CmEGtCmU5i_6S-Q": "6x1x4",
+    "CMHOapvW106kC4OjJqW6uA": "6x1x4",
+    "rfohvssE0E-Oxet-yXQJTw": "6x1x4"
+  },
+  "modules": {
+    "vF3FojxUIkyNr16RC7gI1Q": "6x6x6",
+    "YZU5I9uRGky4439iNDIsvw": "6x6x6",
+    "DSJdt4EKmESGRWN61Gv91A": "12x8x10",
+    "1axXlxka30e5JsF1JGWqaA": "3x3x3",
+    "OGnZG5YGBUKfDppJQEKyew": "3x3x3",
+    "SOFF7tDcTUaYfjeMdilDzg": "3x3x3",
+    "IrIPYf4CrEG8OhNuk85I0g": "3x3x3",
+    "1fOZZ3gJS0Os1Ejwc_WdFQ": "2x2x2",
+    "O5YvcRqll0yqylJqSNUfvg": "2x2x2",
+    "X-_PvDjTxUO5slfdcWS-ww": "2x2x2",
+    "HBfEak3xfESKsmzdxilzDA": "2x2x2",
+    "i5uZVJyPrU2L1K-NVIgj0g": "2x2x2"
+  }
+}

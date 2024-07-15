@@ -1,0 +1,52 @@
+{
+  "key": "EAW/Hammer Destroyer",
+  "name": "'Hammer' class Destroyer",
+  "mounts": {
+    "-ZwIOvBSfkWww6WR8M6YPQ": "8x7x8",
+    "oI0Hxf_2cEmaU-EQisMACA": "3x2x5",
+    "BhWF3eLNWUaI_75ZletAgw": "3x2x5",
+    "5bwl_6ofs0SPL8uDp22l1g": "3x2x5",
+    "kwQW8GUjK0yOuQnMwioHHw": "3x2x5",
+    "QlHOlFeem0alQC5wzOO5YQ": "3x2x5",
+    "OIaTcRjw2UeWb7sq2BxpnA": "3x2x5",
+    "XcnNVFAwXkqUE3m9OQe_1w": "3x2x5",
+    "c_jC5xm6e0mr9gI8KjEYrg": "3x2x5",
+    "oHG2BZfUt0uRmQV4sAegjA": "3x13x6",
+    "f9PphG_M3EWknZXEoeIeZw": "3x13x6",
+    "qJQE-YYGqE6gkWkuDeAhLQ": "3x4x3",
+    "qnaZO3jEP02VX-tUEwIbYg": "3x4x3",
+    "GZzhpXRH6k66yzEwd7OOVg": "3x4x3",
+    "foAw3hj28UK3nlhm_31oKw": "3x4x3",
+    "2chEVjlW10emm_9iapm0yQ": "2x2x2",
+    "c5g75wjnAkGIkrWa9YAVcw": "2x2x2",
+    "-9lloCjgv0WZ4RYuNjSv2A": "2x2x2",
+    "IYTzn7hzcESwXWCHnOvspw": "2x2x2"
+  },
+  "compartments": {
+    "yivUsxdhQUSmIMq6oN9JEw": "6x1x8",
+    "HaP9yA2PWk-2jvRIJXWyZg": "6x1x8",
+    "WFEsezZs70mgF9auQkYfPg": "6x1x8",
+    "xemfW3SHO0G_d_Rxn9htBg": "6x1x8",
+    "4pw2IhArtEat9H6LfTn69g": "6x1x4",
+    "YwhboFQ4yEi81kSdi1CAmw": "6x1x4",
+    "3h0-kXmt40qXvUK-bD6uKA": "6x2x8",
+    "ytvEvfoQm0WX-X6-gbijOQ": "6x1x6",
+    "bl6ZyaL79ky-KeSaD8TugQ": "6x1x6",
+    "4Oo0UBuG1U-J9EfNrXHn6A": "6x1x8",
+    "MxbQ2k-8aU6Q1AXSWjgH4Q": "4x1x6"
+  },
+  "modules": {
+    "1KzYv6NjGEaQ8GH_oE1MLw": "6x6x6",
+    "Pwc8tRwgckSuXPgF7oo31g": "6x6x6",
+    "VvkyIFKo60Coq_miAxIO1Q": "12x8x10",
+    "Iw_8zFg0OE6melM3QZkAFw": "3x3x3",
+    "GfMoKfSoCUWC25mlS4L2sQ": "3x3x3",
+    "NfGCK1sVE0KtpipzjntEvw": "3x3x3",
+    "rRwXk0vdWk-MCxK59s_zhQ": "3x3x3",
+    "3_SVGIx-lU6mCIjgHtVGHQ": "2x2x2",
+    "Ct7sQ5I2MUC5oIWx_HUFDw": "2x2x2",
+    "XLKDfxwyrEGX4PFGFyoKfg": "2x2x2",
+    "6D-YV8rk40iMJFnxu-3Auw": "2x2x2",
+    "5Nrj4TO3yUGSG8z75Rk8cg": "2x2x2"
+  }
+}

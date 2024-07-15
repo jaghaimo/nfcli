@@ -1,0 +1,22 @@
+{
+  "key": "EAW/Orion Omen Corvette",
+  "name": "'Omen' class Corvette",
+  "mounts": {
+    "8cPFxCJlMEKuvjX0NfPApA": "3x4x3",
+    "n_S7o_15Y0K31uaLTCfE6w": "2x2x2",
+    "UDXf6O6rDk2NRLyQ55KwcA": "2x2x2",
+    "HneWA7mWqke2ki4EQs54zg": "2x2x2"
+  },
+  "compartments": {
+    "5aA_lX9Cc02-YN1nRR4AYw": "4x1x6",
+    "NO1iENj0IkOwgELXiXSdAA": "4x1x6",
+    "F-0PEfdE7keIOF0oLt5lCg": "3x1x3",
+    "8eSETuzPE0e-eT--c5mFTA": "3x1x3"
+  },
+  "modules": {
+    "WI5QU2zX20eMuSEV_mNWYw": "3x3x3",
+    "fAdvkjomHUOsq7QvsqRSnQ": "8x3x6",
+    "8WEGi0rUHkaJMIIqA6dAPg": "2x2x2",
+    "xFKk1c9rZUSnDJzvfg3mnA": "2x2x2"
+  }
+}

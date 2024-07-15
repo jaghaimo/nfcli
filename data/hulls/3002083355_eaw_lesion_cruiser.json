@@ -1,0 +1,37 @@
+{
+  "key": "EAW/Lesion Cruiser",
+  "name": "'Lesion' class Cruiser",
+  "mounts": {
+    "56c7yrTLVU-ch3YPLB6olg": "3x4x5",
+    "US1A8pEAoUiAfECa2tMeCQ": "3x4x5",
+    "_KHGUf-aFkOWkR-AfMvV9Q": "3x4x5",
+    "BIcVAbxJ5UOPOxigcMTL8w": "3x4x5",
+    "jjyfyPbxOUuRmmoDdlKjww": "2x2x2",
+    "wPeImHZaBUC5Ml41gq3CPw": "2x2x2",
+    "b_3GxXaRb0a9HoF7MDTrIw": "2x2x2",
+    "ontDQshioEKAXEE0qtaljg": "2x2x2",
+    "uYRCJnsLS0eGyZLNn9kYug": "4x12x4"
+  },
+  "compartments": {
+    "7vwt0DsZR0KXdp_7K06WjQ": "6x1x8",
+    "u-0MBcr7Wky1cqqqTaeB6Q": "6x1x8",
+    "pRiQyjJBZk-YBh7x8EIt1g": "6x1x8",
+    "EO8TkHbLNUmWfM7ISAwghw": "6x1x8",
+    "2ASrwLrir0yAVHIOwTCCQg": "6x1x4",
+    "Hi_5lo0kkEqgDodKyRUZSg": "6x1x4",
+    "OJJ9z617lU2XBybuEkXamg": "6x1x8",
+    "G8g1iBPGRUaaTlsBS2NdgQ": "6x1x4",
+    "bE2mXr0nEE2R8zS9lF-ZJw": "6x1x8"
+  },
+  "modules": {
+    "YHNbZeL1kkGZHqhuVqBLCA": "6x6x6",
+    "kK79tqe-m02xGH5co-nDjA": "3x3x3",
+    "jxfXk0daTEeYzNyKjMTe0w": "8x12x10",
+    "mWZPFVulykuWAnL0QBQ9vw": "3x3x3",
+    "ZwTYVPl32UGceU4gX_Wzdw": "2x2x2",
+    "WWPr35sNUEOR-j-mpxBa-w": "3x3x3",
+    "FokYhp3DC0uqnTGRJsyprQ": "2x2x2",
+    "1tK6tfgghEe_tgbbzlfmxw": "2x2x2",
+    "YpKymllZAE-nSyBwwT2XWw": "2x2x2"
+  }
+}

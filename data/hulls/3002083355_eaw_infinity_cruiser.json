@@ -1,0 +1,34 @@
+{
+  "key": "EAW/Infinity Cruiser",
+  "name": "'Infinity' class Cruiser",
+  "mounts": {
+    "fQCKXGnh8Eqz91X0HbhGLQ": "3x9x5",
+    "YWdYav4w8EmnhziB-lcOnQ": "3x4x3",
+    "0j4Zjs8JvUexTQ_D-nwOJg": "3x4x3",
+    "K6jKF11qi0eqeR2YSUvJZg": "2x2x2",
+    "Illn0ktrGk-nZ8U2tB2CXQ": "2x2x2",
+    "pqVitdfUyEetA2TnX5m5zQ": "2x2x2",
+    "QqBtBQJQdUaM1ORqXwUipA": "2x2x2",
+    "odGIpOARH0OkzaL7SW9V7w": "2x2x2",
+    "ttCF3Di55keZCR3M_wD4Lg": "4x12x4"
+  },
+  "compartments": {
+    "vxbPcHoZf0SmbhOX9rPz9w": "6x1x8",
+    "5PSPppJw2UuWjg6wBdVJdg": "6x1x8",
+    "TfvVPMGsGU2geQIp6De1CQ": "6x1x8",
+    "D7OrVnwXnUydFSLchAGF7w": "6x1x4",
+    "WGUj99Wlbkmdbg-vpWtmCQ": "6x1x4",
+    "xdb2PVtXtkObCtlzIPM9PA": "6x1x8",
+    "j-ZVqpM220WDI2ULGV44ew": "6x1x4"
+  },
+  "modules": {
+    "A1npliUA50qIkdm3I76dEA": "6x6x6",
+    "AVcXYd2F-Emi_JCA0Gu7hg": "3x3x3",
+    "0WFwrcf5wE2qrwz4h48l_w": "8x12x10",
+    "PaPZS394kkO1Vtaz0g6rMw": "3x3x3",
+    "xD3cxthRi0CWZkkuMlJvdg": "2x2x2",
+    "Ed-9kWSAk0i8MXf4DQjoCA": "3x3x3",
+    "kJ34Xy4mSE-uKY4fb2NceA": "2x2x2",
+    "ci8l5DiHak2fErmMTi_mog": "2x2x2"
+  }
+}

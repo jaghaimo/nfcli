@@ -1,0 +1,26 @@
+{
+  "key": "EAW/Dagger Corvette",
+  "name": "'Dagger' class Corvette",
+  "mounts": {
+    "gqmNUor300Ot3nUqOC-jRA": "3x4x5",
+    "de8I4Q_u-06quoOCMlJbIQ": "3x4x5",
+    "Rp32y3gqvU2YSkrRenBsLA": "2x2x2",
+    "E2BsMaIxI0aMwxuO9ixdQg": "2x2x2",
+    "gverHaxnRU2DdmbdMq00TQ": "2x2x2",
+    "n-1096qB_USQvlth0zAVeQ": "2x2x2"
+  },
+  "compartments": {
+    "Q0BCAu_zGUWfGacRGnhnJQ": "4x1x6",
+    "v7r1bfL-a0G1haqWhgPdLw": "4x1x6",
+    "lUYWcgjVFkaXu7pgCp-31A": "3x1x3",
+    "tZs9qhA4iUGlOra7rJJcMQ": "3x1x3",
+    "v3XHizGwpUKqxwP3iK8Zzg": "3x1x3"
+  },
+  "modules": {
+    "__iUdoSoGUCGqG-X6Zg50Q": "3x3x3",
+    "vmnjzTJNyUaa7sqIAyXCjg": "8x3x6",
+    "IZ1c7nnoGkSbajRSZ0P4Eg": "2x2x2",
+    "eIiu3Gd-uUWig4uPkr8hlA": "3x3x3",
+    "5Z1c7nnoGkSbajRSZ0P4Eg": "3x3x3"
+  }
+}

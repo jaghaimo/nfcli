@@ -1,0 +1,29 @@
+{
+  "key": "EAW/Flail Frigate",
+  "name": "'Flail' class Frigate",
+  "mounts": {
+    "9CTywDdlNEyBE1d2LwINbw": "3x4x6",
+    "VTHtn0oU9k2PYZHLO7VOZw": "3x4x6",
+    "SAjdOxdQ6UqZC6dyRXteSw": "3x4x5",
+    "vny6DSY51kC9miNwZsjUeQ": "3x4x5",
+    "0JgccHE9tk6n5pxDRnEoNA": "2x2x2",
+    "w5W4hTtU00eWweBjIozEcQ": "2x2x2",
+    "2JgccHE9tk6n5pxDRnEoNA": "2x2x2",
+    "25W4hTtU00eWweBjIozEcQ": "2x2x2"
+  },
+  "compartments": {
+    "KIC2l6-FFkGr37CRIM_lXg": "4x1x6",
+    "KRLdDB2ypEeIBbLYV8qsoQ": "4x1x6",
+    "-d2O0_KtjEi6p2uDFZXKrw": "3x1x3",
+    "a_B64pjLtkaXpYeVLqQ3tA": "3x1x3",
+    "bYJpOOAKlUSzoo-HrKfGCg": "3x1x5"
+  },
+  "modules": {
+    "ibVrwXnYKUWUnTWjhNW_CA": "6x6x6",
+    "8h3sJAgNIEanmSfCjt3Lig": "8x3x6",
+    "0rRR8TAVN06GJuEr38HPog": "3x3x3",
+    "o8lMH7h05UqepRSzaZX-_A": "3x3x3",
+    "5xap3vSw60WXDWnhGIFcbw": "3x3x3",
+    "2rRR8TAVN06GJuEr38HPog": "2x2x2"
+  }
+}

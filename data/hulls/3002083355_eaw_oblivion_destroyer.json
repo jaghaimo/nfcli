@@ -1,0 +1,27 @@
+{
+  "key": "EAW/Oblivion Destroyer",
+  "name": "'Oblivion' class Destroyer",
+  "mounts": {
+    "OPrdDxBH8UOId1NxiDAkXw": "3x4x5",
+    "fePT0LoeAkmKeOY_g97Iww": "3x4x5",
+    "e47PxJfAuUe2jbHK7zK3ig": "2x2x2",
+    "E4q1Ss8nHUq_DCQwjPLhYw": "2x2x2",
+    "xBsOSfdJAkKVsuzLWla12w": "4x12x4"
+  },
+  "compartments": {
+    "1U-StlwI4kaoQE0r2f7JXA": "6x1x8",
+    "3P6lzwqMNkSC73kvSoc2tQ": "6x1x8",
+    "ezcbsK9PcESrJtE7TeXvNQ": "6x1x4",
+    "yR900pwsn06TaVRoPIEixw": "6x1x4",
+    "mZhYJpo2hE63nyiAK3u-Ug": "6x1x4",
+    "GxLQPun0ZEypItYmnhkStg": "6x1x4"
+  },
+  "modules": {
+    "KdTCwlWGWEyjiBJ4w69KyQ": "6x6x6",
+    "IhDwbU2SD0qb4fJLXgXJBQ": "8x8x6",
+    "wvp2H5PuCEuvZQ-4PwtxBQ": "3x3x3",
+    "IKR94l_mfk2taSwEXPaGOA": "3x3x3",
+    "lM_VxIg73kmFWxh_9OjlXw": "2x2x2",
+    "LSqEQR4HnkSQN_lCt1bhsw": "2x2x2"
+  }
+}

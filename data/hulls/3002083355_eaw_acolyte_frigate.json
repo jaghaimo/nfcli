@@ -1,0 +1,25 @@
+{
+  "key": "EAW/Acolyte Frigate",
+  "name": "'Acolyte' class Frigate",
+  "mounts": {
+    "KzLl0-WbT0WD9j41rOdWxw": "3x4x5",
+    "kR0TDyvAOEu59PdW34403Q": "3x4x5",
+    "Va7z2tUIrUaVMC6kdgK5yQ": "3x4x5",
+    "nTGuvWBDr06UUdOxBkgfng": "2x2x2",
+    "Hhx_iJ5gZ0GGxcSXEHcDCA": "2x2x2"
+  },
+  "compartments": {
+    "ZBaBk6bCp0a0URMzrdrDFg": "4x1x6",
+    "K3LvZqGAq0e6r4WogxRMiw": "4x1x6",
+    "_hK6hr1AMUKBkEAF2DH-9w": "3x1x3",
+    "szcpYhZSRU2CaocQNqutLg": "3x1x3",
+    "vTKaKBJs1ECEZteAOdF3bw": "3x1x5"
+  },
+  "modules": {
+    "gxgKiUCOGEuFpK5G3oMrRQ": "6x6x6",
+    "xwQUvya7GkmV7Q5VnoQ3nw": "8x3x6",
+    "0NEZpBr68UO0UrYq6bzStA": "3x3x3",
+    "ccApHhgyhkmznKxP-koRsg": "2x2x2",
+    "8RrC7RZh802qY0M-JQXmGA": "2x2x2"
+  }
+}

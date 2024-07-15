@@ -1,0 +1,22 @@
+{
+  "key": "EAW/Hatred Corvette",
+  "name": "'Hatred' class Corvette",
+  "mounts": {
+    "PAxV7iluwE-e1i3oWZrbLg": "3x4x5",
+    "Bqh5pU8zZUKH6Vss9h018g": "3x4x3",
+    "RDTcH2Sq3k2wZojl4ai0PA": "2x2x2",
+    "OpKXgAipdEKNY2Muh8Oc_Q": "2x2x2"
+  },
+  "compartments": {
+    "nwIhICTEIkuV8o9r823vbw": "4x1x6",
+    "MJ7kiTWup0adITBV5zOXpA": "4x1x6",
+    "xfCvZ8kFc0is9W2eN2MKtA": "3x1x3",
+    "ylA1dlRCTUmIlWHrpE5DVA": "3x1x3"
+  },
+  "modules": {
+    "ZVG0mQ0XAEGSoxROK65T4w": "3x3x3",
+    "qjrESofptUOY8mGCnmVSdQ": "8x3x6",
+    "bynd5VUBpU-pDvLtpkbIVw": "2x2x2",
+    "pxWpZcGXdUas61inN8Gv8g": "2x2x2"
+  }
+}

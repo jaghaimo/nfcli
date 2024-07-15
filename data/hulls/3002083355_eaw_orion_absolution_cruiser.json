@@ -1,0 +1,37 @@
+{
+  "key": "EAW/Orion Absolution Cruiser",
+  "name": "'Absolution' class Cruiser",
+  "mounts": {
+    "lO0eoTm0B0-KAh87t8eCyA": "3x4x5",
+    "T41tzhmSh0qAMIQg1_n8zw": "3x4x5",
+    "Ayu5PPDXaUSjy1uTOCfvBA": "3x4x5",
+    "-_VP81nG-0GXvGhB-Ee36w": "3x4x5",
+    "_DnRcDLYFES3S2Za25VSJA": "3x4x3",
+    "tHYzilVIZUic8tJmVCXHTQ": "3x4x3",
+    "r6wQpMFdOUG_jdZztNqLWA": "2x2x2",
+    "zVJeTMjMG0mTlvaSbGjFEA": "2x2x2",
+    "bcPZCfdBYEONXvDCSRydpw": "2x2x2"
+  },
+  "compartments": {
+    "CqetDgUcm0Sl4KLFHdAWBg": "6x1x8",
+    "n9nX0sJPKEKfBrP4GKwM_A": "6x1x8",
+    "5qiGzGVNMEKk8gpFyA6i7Q": "6x1x8",
+    "3nYak09SV0yePsZgpBR58g": "6x1x8",
+    "qw6fjOK4UkC3R-Se1nUdjQ": "6x1x8",
+    "b7j6VDKKnkCUCU7ISo3Njw": "6x1x4",
+    "qaXH1l3YHU2xd6rRhAxehQ": "6x1x4",
+    "dWxlrdKGbEGTpN1-ZZGrQA": "6x1x4",
+    "If_6B4ZKD0imuXp-rRmgsA": "4x1x8"
+  },
+  "modules": {
+    "o6ydd88a3EuLoesjbMek0g": "6x6x6",
+    "7BtXK7MFIkm2YaXJ1Jgzlw": "8x12x10",
+    "GUd-zD2FaEqicqW1rvZEqw": "3x3x3",
+    "hxkxuSeZsk2bSJUOyKB8zA": "3x3x3",
+    "0wnlg8IickaAJgOJCTvU4g": "3x3x3",
+    "L9bdk-cbX0GVHBrm_o3yug": "2x2x2",
+    "gu8MsRcrrE2Wsg3ytnqg_g": "2x2x2",
+    "CjP4mcHg_EKzRL8v6A7aNQ": "2x2x2",
+    "Nednqyex0UqUdyzqakoXCw": "2x2x2"
+  }
+}

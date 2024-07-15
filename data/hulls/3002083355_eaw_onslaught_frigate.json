@@ -1,0 +1,31 @@
+{
+  "key": "EAW/Onslaught Frigate",
+  "name": "'Onslaught' class Frigate",
+  "mounts": {
+    "taJXjAz3mEKTAbsxkaDK2A": "3x2x5",
+    "FQ77DZdWfkGqkOOI6ynGCA": "3x2x5",
+    "CRaeBULrK0KzCOgfhKHhtA": "3x4x3",
+    "HqklCd7NL0OTvE6r5oylsw": "3x4x3",
+    "PNf32n-G1EmAoeaI46MxVA": "2x2x2",
+    "A2hOcDMdqkOMoCsNdSH2bw": "2x2x2",
+    "AnQ_ST83aUKY85Dgzr1Y8Q": "4x12x4"
+  },
+  "compartments": {
+    "YEA7fPpook-Svr9g15RNnA": "6x1x8",
+    "Dqsb95IrXUKXXkE79EKglQ": "6x1x8",
+    "R86Tql91MkCUwyNbruLKjw": "6x1x4",
+    "TzR_jFqIxUSnwu82IUxJsg": "6x1x4",
+    "mHfblugjLkSrE9MuXYQryQ": "6x1x4",
+    "eBtkUY4m0UKobJhIWecvlQ": "6x1x4",
+    "RzMXR4rM1UOAX7gYuugbxg": "6x1x4"
+  },
+  "modules": {
+    "e-sTH_y8L0OeDjfWVX-g_Q": "6x6x6",
+    "ziedbHXsAEisOMiOMZYWdg": "8x8x6",
+    "P3IJGdZtjUW2LAHb4x8IZw": "3x3x3",
+    "VIMtkt2UBUGNbQ1NwMpX5w": "3x3x3",
+    "Cqijx0FmfkGY98GTQLLerg": "2x2x2",
+    "cSPJikvLQ02oxUusY4mppg": "2x2x2",
+    "fGk1WSsNCkWpKJngYy7VHw": "3x3x3"
+  }
+}

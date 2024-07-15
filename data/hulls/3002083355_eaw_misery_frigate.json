@@ -1,0 +1,25 @@
+{
+  "key": "EAW/Misery Frigate",
+  "name": "'Misery' class Frigate",
+  "mounts": {
+    "323211H_yvW48EaURIoaDqO_fw": "3x4x3",
+    "FqoJ5Bgmh0OzyfyBbg2SIA": "3x4x3",
+    "oi6ygTt0Dkafe_0kdJZGew": "3x4x5",
+    "Jij4Goz13k6P3ZgmI_CIwQ": "2x2x2",
+    "SwpCN6f6ukSrRzgdLrf_ZQ": "2x2x2"
+  },
+  "compartments": {
+    "Ww7NVAeG7UmNpKy-XrXfnw": "4x1x6",
+    "fdUxjEfTh0Wps7tvqbkNpQ": "4x2x6",
+    "Q-CHX06OhEShCnAkJMgKNQ": "3x1x3",
+    "aF6_oBeNRU-1P7k2ZZSMCg": "3x1x3",
+    "aCGtH8_8ZkmKGzGXOc90BQ": "5x3x5"
+  },
+  "modules": {
+    "2YKmhOxG9E-SmD6TaS2Nhw": "6x6x6",
+    "Bg-5bmscIkin-w9oQWZPzA": "8x3x6",
+    "NypuLp0pmUapoL1catDGsA": "2x2x2",
+    "sPfkbrHijEyA2HVVi6wdng": "2x2x2",
+    "U7G4grPb20iGWQGsQuw2LA": "3x3x3"
+  }
+}

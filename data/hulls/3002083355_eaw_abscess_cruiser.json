@@ -1,0 +1,38 @@
+{
+  "key": "EAW/Abscess Cruiser",
+  "name": "'Abscess' class Cruiser",
+  "mounts": {
+    "Bw_0Qmkg7kO0Q5sCa498CQ": "6x4x6",
+    "GgtT0J3G50yqWM7A2zydOA": "6x4x6",
+    "avoOIHuS-UWvbSpjJeUoug": "6x4x6",
+    "71ha0hZGeUuSpIuYOBav6w": "6x4x6",
+    "Pnlo6dlLKUKERCqIe1lNzQ": "2x2x2",
+    "ZRGqcKTirEaqNqz97la7vA": "2x2x2",
+    "2KeimQWVz0-LPUsWbjOSqQ": "4x12x4"
+  },
+  "compartments": {
+    "b_LKNQuW6UKbqWmI7SpTLw": "6x1x8",
+    "cxL7D-Z0mEWyEs4bLI9w8w": "6x1x8",
+    "jAwE9e6HqkmszP4ZLUVZfQ": "6x1x8",
+    "mUYuAmNWfk-PBUETJpGX0w": "6x1x8",
+    "Vg2Kq3oea0WE6qwZfCj09w": "6x1x8",
+    "TLuquSeh9Ee3CdqKGZvoDw": "6x1x4",
+    "HKXPLXiewE6mvmlstgqM7w": "6x1x4",
+    "cC1zlZt_l0m6Txyc0fJIgg": "6x1x4",
+    "ZQ5jQXCve06aoLMIY8zwkQ": "6x1x4",
+    "jrf11McEr0q1O1Y08pTggA": "6x1x4"
+  },
+  "modules": {
+    "UVK94NCER0uktc0JGRtGUA": "6x6x6",
+    "R6YIhXQrqEenSMX45wY-Dg": "6x6x6",
+    "RFIQtvQO8E2fSXgHDYXFNw": "12x8x10",
+    "ZlrEGOCRikGuPccrI2XFoQ": "3x3x3",
+    "SDRu81TdUU2Ax2EAbRmPfw": "3x3x3",
+    "5mkKaPFjXEujslSAO_a3PQ": "3x3x3",
+    "e5v7l62t7U-0oXrj9Z8IBg": "3x3x3",
+    "6Wm3id4r8UWj76OxWYfQZg": "2x2x2",
+    "1r-LfWbu1Um_hbNIqDqmIg": "2x2x2",
+    "LWA7_NKjhkiYYp5uTzmZbw": "2x2x2",
+    "hoxBni974kyz9mq7c9omng": "2x2x2"
+  }
+}
