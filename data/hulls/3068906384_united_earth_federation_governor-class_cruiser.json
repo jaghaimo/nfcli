@@ -1,0 +1,39 @@
+{
+  "key": "United Earth Federation/Governor-class Cruiser",
+  "name": "'Governor' class Cruiser",
+  "mounts": {
+    "GovVLS": "7x2x10",
+    "C3_1": "3x4x5",
+    "C2_1": "3x4x3",
+    "C2_2": "3x4x3",
+    "C2_3": "3x4x3",
+    "C2_4": "3x4x3",
+    "C2_5": "3x4x3",
+    "C1_1": "2x2x2",
+    "C1_2": "2x2x2",
+    "C1_3": "2x2x2"
+  },
+  "compartments": {
+    "LargeComp1": "6x1x8",
+    "LargeComp2": "6x1x8",
+    "LargeComp3": "6x1x8",
+    "MissileMag": "6x1x8",
+    "SmallComp1": "4x1x6",
+    "SmallComp2": "4x1x6",
+    "SmallComp3": "4x1x6",
+    "SmallComp4": "4x1x6",
+    "SmallComp5": "4x1x6"
+  },
+  "modules": {
+    "SmallDrive1": "6x6x6",
+    "SmallDrive2": "6x6x6",
+    "LargeModule1": "3x3x3",
+    "LargeModule2": "3x3x3",
+    "LargeModule3": "3x3x3",
+    "LargeModule4": "3x3x3",
+    "SmallModule1": "2x2x2",
+    "SmallModule2": "2x2x2",
+    "SmallModule3": "2x2x2",
+    "SmallModule4": "2x2x2"
+  }
+}

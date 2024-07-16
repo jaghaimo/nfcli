@@ -1,0 +1,25 @@
+{
+  "key": "United Earth Federation/Cooper-class Torpedo Boat",
+  "name": "'Cooper' class Torpedo Boat",
+  "mounts": {
+    "CoopTorps": "2x1x3",
+    "Mines": "3x1x1",
+    "C2_1": "3x2x3",
+    "C1_1": "2x2x2",
+    "C1_2": "2x2x2"
+  },
+  "compartments": {
+    "TorpMag": "6x1x8",
+    "SmallComp1": "4x1x6",
+    "SmallComp2": "4x1x6",
+    "TinyComp1": "3x1x3",
+    "TinyComp2": "3x1x3"
+  },
+  "modules": {
+    "Drive1": "5x3x5",
+    "LargeModule1": "3x3x3",
+    "LargeModule2": "3x3x3",
+    "SmallModule1": "2x2x2",
+    "SmallModule2": "2x2x2"
+  }
+}

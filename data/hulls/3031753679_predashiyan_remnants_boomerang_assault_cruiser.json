@@ -1,0 +1,39 @@
+{
+  "key": "Predashiyan Remnants/Boomerang Assault Cruiser",
+  "name": "'Boomerang' class Assault Cruiser",
+  "mounts": {
+    "C5_1": "8x7x8",
+    "C5_2": "8x7x8",
+    "C2_1": "3x4x3",
+    "C2_2": "3x4x3",
+    "C1_1": "2x2x2",
+    "C1_2": "2x2x2",
+    "C1_3": "2x2x2",
+    "C1_4": "2x2x2"
+  },
+  "compartments": {
+    "LargeComp1": "6x1x8",
+    "LargeComp2": "6x1x8",
+    "LargeComp3": "6x1x8",
+    "MediumComp1": "6x1x6",
+    "MediumComp2": "6x1x6",
+    "MediumComp3": "6x1x6",
+    "MediumComp4": "6x1x6",
+    "SmallComp1": "4x1x6",
+    "SmallComp2": "4x1x6",
+    "SmallComp3": "4x1x6"
+  },
+  "modules": {
+    "Drive1": "10x8x10",
+    "Drive2": "10x8x10",
+    "Power1": "5x5x5",
+    "Power2": "5x5x5",
+    "LargeMod1": "3x3x3",
+    "LargeMod2": "3x3x3",
+    "SmallMod1": "2x2x2",
+    "SmallMod2": "2x2x2",
+    "SmallMod3": "2x2x2",
+    "SmallMod4": "2x2x2",
+    "SpecialMod1": "30x30x30"
+  }
+}

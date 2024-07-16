@@ -1,0 +1,48 @@
+{
+  "key": "Marduk Clan Collective/Shamhat Cruiser",
+  "name": "'Shamhat' class Light Cruiser",
+  "mounts": {
+    "C4_1": "6x4x6",
+    "C3_1": "3x4x5",
+    "C3_2": "3x4x5",
+    "C3_3": "3x4x5",
+    "C2_1": "3x4x3",
+    "C2_2": "3x4x3",
+    "C1_1": "2x2x2",
+    "C1_2": "2x2x2",
+    "C1_3": "2x2x2",
+    "C1_4": "2x2x2"
+  },
+  "compartments": {
+    "JumboComp1": "6x3x8",
+    "JumboComp2": "6x3x8",
+    "LargeComp1": "6x1x8",
+    "LargeComp2": "6x1x8",
+    "MediumComp1": "6x1x6",
+    "MediumComp2": "6x1x6",
+    "MediumComp3": "6x1x6",
+    "MediumComp4": "6x1x6",
+    "SmallComp1": "4x1x6",
+    "SmallComp2": "4x1x6",
+    "SmallComp3": "4x1x6",
+    "SmallComp4": "4x1x6",
+    "TinyComp1": "3x1x3",
+    "TinyComp2": "3x1x3",
+    "TinyComp3": "3x1x3"
+  },
+  "modules": {
+    "Reactor1": "6x6x6",
+    "Reactor2": "6x6x6",
+    "Drive1": "10x8x10",
+    "Drive2": "10x8x10",
+    "LargeModule1": "3x3x3",
+    "LargeModule2": "3x3x3",
+    "LargeModule3": "3x3x3",
+    "LargeModule4": "3x3x3",
+    "SmallModule1": "2x2x2",
+    "SmallModule2": "2x2x2",
+    "SmallModule3": "2x2x2",
+    "SmallModule4": "2x2x2",
+    "SmallModule5": "2x2x2"
+  }
+}
