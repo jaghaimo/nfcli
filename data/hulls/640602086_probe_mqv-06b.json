@@ -1,0 +1,28 @@
+{
+  "key": "Probe/MQV-06b",
+  "name": "'MQV-06b' class Support Carrier",
+  "mounts": {
+    "mount343_1": "3x4x3",
+    "mount343_2": "3x4x3",
+    "mount222_1": "2x2x2",
+    "mount222_2": "2x2x2",
+    "mount222_3": "2x2x2",
+    "mount222_4": "2x2x2"
+  },
+  "compartments": {
+    
+  },
+  "modules": {
+    "Hangar": "9x12x4",
+    "module666drive_": "6x6x6",
+    "module666reactor_": "6x6x6",
+    "module222radar_": "2x2x2",
+    "module222_1": "2x2x2",
+    "module222_2": "2x2x2",
+    "module222_3": "2x2x2",
+    "module222_4": "2x2x2",
+    "module333_1": "3x3x3",
+    "module333_2": "3x3x3",
+    "module333_3": "3x3x3"
+  }
+}
