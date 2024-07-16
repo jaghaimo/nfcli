@@ -1,0 +1,41 @@
+{
+  "key": "EAW/Oppressor Cruiser",
+  "name": "'Oppressor' class Cruiser",
+  "mounts": {
+    "poOMSUDv-0yEsG_GiV0_Hw": "3x4x5",
+    "q-IcEkqsOEyEhSLl8AryMQ": "3x4x5",
+    "9PxCwtCvC0W7a4i9QCehOA": "3x4x5",
+    "lzoaBshpxkG6HPD-EfVvMw": "3x4x5",
+    "6mdk0GlXY0GES1wcmkWHyw": "3x9x5",
+    "zi1ClikpWku6L0w1OJbkEw": "3x4x3",
+    "cy8SNPqk10WT4D8wiQKrAA": "3x9x5",
+    "2EF8cj37eEOX2ME-uQXkVw": "2x2x2",
+    "AMTRJ9r8iEelL-nDfw3jkQ": "2x2x2",
+    "UlJ6uABjOkqtkmjX1r1L_A": "2x2x2",
+    "w5E2E9J6V0C6pX2TZd9uJA": "2x2x2",
+    "cYbRZARFr0O1GW_Uas-Wig": "2x2x2",
+    "ShUXGWouUE6lb9Z92IVqRw": "2x2x2"
+  },
+  "compartments": {
+    "7vwt0DsZR0KXdp_7K06WjQ": "6x1x8",
+    "u-0MBcr7Wky1cqqqTaeB6Q": "6x1x8",
+    "pRiQyjJBZk-YBh7x8EIt1g": "6x1x8",
+    "EO8TkHbLNUmWfM7ISAwghw": "6x1x8",
+    "2ASrwLrir0yAVHIOwTCCQg": "6x1x4",
+    "Hi_5lo0kkEqgDodKyRUZSg": "6x1x4",
+    "OJJ9z617lU2XBybuEkXamg": "6x1x8",
+    "G8g1iBPGRUaaTlsBS2NdgQ": "6x1x4",
+    "bE2mXr0nEE2R8zS9lF-ZJw": "6x1x8"
+  },
+  "modules": {
+    "YHNbZeL1kkGZHqhuVqBLCA": "6x6x6",
+    "kK79tqe-m02xGH5co-nDjA": "3x3x3",
+    "jxfXk0daTEeYzNyKjMTe0w": "8x12x10",
+    "mWZPFVulykuWAnL0QBQ9vw": "3x3x3",
+    "ZwTYVPl32UGceU4gX_Wzdw": "2x2x2",
+    "WWPr35sNUEOR-j-mpxBa-w": "3x3x3",
+    "FokYhp3DC0uqnTGRJsyprQ": "2x2x2",
+    "1tK6tfgghEe_tgbbzlfmxw": "2x2x2",
+    "YpKymllZAE-nSyBwwT2XWw": "2x2x2"
+  }
+}

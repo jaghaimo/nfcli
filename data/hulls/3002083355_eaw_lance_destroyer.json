@@ -1,0 +1,46 @@
+{
+  "key": "EAW/Lance Destroyer",
+  "name": "'Lance' class Destroyer",
+  "mounts": {
+    "EzhyNltlLE-z2uAfMbuj6A": "3x13x5",
+    "jtK5a9mKH0WG94ccuHZ4dQ": "3x13x5",
+    "VBeN7VhLIUCXnLHRkSNSMQ": "3x4x3",
+    "P89-r5f6fEOgT2neZovtPg": "3x4x3",
+    "6QwnKHqvcEeJoAnkQpkUoA": "3x4x3",
+    "U4iP5vYff0Cqhay8NNPdDQ": "3x4x3",
+    "M-RJvnvh3Eyt-v0l1YgPCg": "3x4x3",
+    "styxoUAct0uP6I525UK8iw": "3x4x3",
+    "QdEUVTFODUSqIQoGpJjZzA": "3x4x3",
+    "ePbUD6JHX0WBVe2Jfog6QA": "3x4x3",
+    "WshFP94e0ke6vU9lp50J8Q": "2x2x2",
+    "lTlqFK5NQEqBsnxjN3mU2w": "2x2x2",
+    "wlM8Rxw9BUSyeuS26les-g": "2x2x2",
+    "0IyV-YMlIEi3oEnJs5D1SQ": "2x2x2",
+    "Jg20sS3VD0WR1mm6ZFrhIw": "2x2x2",
+    "nSdBE7YYEkKf5DCpL6x58g": "2x2x2",
+    "C47nBlM4yECSOv5jHgbtRw": "2x2x2",
+    "kUTlbs5Rhkedfnu4jD0SnQ": "2x2x2"
+  },
+  "compartments": {
+    "73plDGCLdkaWEv_w78inAQ": "6x1x8",
+    "0v-X3RKPMEKaR4m1kBfIrg": "6x1x8",
+    "V3RxhHo620CcjDEjeZFhyA": "6x1x8",
+    "URTVHfFYaECbBcYGJM0ObA": "6x1x8",
+    "BQTtFs1kBkKdN7sxb4LIBQ": "6x1x8",
+    "qTrDNeGNOUyNInWt3zko0w": "6x1x8",
+    "SOMDSHRsiEKOQyqaAfSmZg": "6x1x8",
+    "vckmGFyotUu2xuoJDcdyuA": "6x1x4",
+    "VDXvRApBO0-pgy6-kI_EtQ": "6x1x4"
+  },
+  "modules": {
+    "6RTzlAz0aU6Ip0tZf32X_g": "6x6x6",
+    "vyX9_vVhpkOW3poni_OUwA": "3x3x3",
+    "mKlFrOq6RkyXpS5Cc9uoQg": "8x12x10",
+    "3F_D_X66Ekqo2r20uRE-qw": "3x3x3",
+    "BXyiIji2YUmmaS-MIF-x3A": "3x3x3",
+    "WQ98Db93PkqYq7GsbVQH3g": "2x2x2",
+    "O0vCykUqsUaPrCX_alvawg": "2x2x2",
+    "dqIp8tUQ10i5o715_waDUA": "2x2x2",
+    "4uXSLqhYoUmGE-jA5ED3kg": "2x2x2"
+  }
+}

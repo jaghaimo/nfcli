@@ -1,0 +1,42 @@
+{
+  "key": "EAW/Discord Cruiser",
+  "name": "'Discord' class Cruiser",
+  "mounts": {
+    "ylxzToCvtkaK9eb2BbO-pg": "8x6x8",
+    "p0KjtmhTw0-xr1m49zV7RA": "8x6x8",
+    "wxuanGn8UkW0vgRtIOeQ0Q": "3x4x5",
+    "6M7_fAL5_ESDWUa67eByqg": "3x4x5",
+    "8caz7XsfTE26jq0NcYHKzw": "3x4x3",
+    "LGw4raIDPEOPYgnksBONxA": "3x4x3",
+    "fZLvUKvkzUGhUDhyaOkHzQ": "3x4x3",
+    "hfdefAJRoEOw7xMaQqmV2w": "2x2x2",
+    "S5eiShXUfUaWA0h2ajXa1A": "2x2x2",
+    "bmYOaamxTk-gP2exFLdTag": "2x2x2",
+    "j_kGZRNMNUG7eqKRHH5BFg": "4x12x4"
+  },
+  "compartments": {
+    "ZJfaE3DZUEOBz77H7Cbipw": "6x1x8",
+    "JB5HPhTx1UecSCJszqsUYQ": "6x1x8",
+    "oUJk7gpdAkaNvvy1Kf434A": "6x1x8",
+    "qzjgOVkyEE6SHJwI7rNo_w": "6x1x8",
+    "lLSTdM_z7keQCsSsd8LfZQ": "6x1x8",
+    "2VIyo9aPIEyZInrxqMFPpA": "6x1x4",
+    "2hG7C2Tu806LXqSl8bRzCg": "6x1x4",
+    "jwgSQ8yX-EWtwtXlvzZoEw": "6x1x4",
+    "vxh3ruV43UqceTHNOcFN_w": "6x1x4",
+    "QA1PMywAM0iOll641xpCTw": "6x1x4"
+  },
+  "modules": {
+    "p8MO_j-Y_EKfObpbSsx45Q": "6x6x6",
+    "t6un50PW-0iBsVRvuB4vqA": "6x6x6",
+    "D6B4QXBO-k29C_xTSZFYaQ": "12x8x10",
+    "csO2zYC0W0CFswN4pKyzKQ": "3x3x3",
+    "xmAdSUza80GR1zYfNEhbag": "3x3x3",
+    "qHQTPasSoEit2zdrO4vd1A": "3x3x3",
+    "XgDHLq_7bEyFnuiL4Ebv0g": "3x3x3",
+    "CZBafElxw0mHTevmvkRxEQ": "2x2x2",
+    "jSnHUviVV0mcIEXJNaV1GQ": "2x2x2",
+    "Zj8ClOWuu0eEUFPuKsI5YA": "2x2x2",
+    "t0FFjet_CUi3xZpAodEn1Q": "2x2x2"
+  }
+}

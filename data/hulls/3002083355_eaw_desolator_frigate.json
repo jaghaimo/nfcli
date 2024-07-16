@@ -1,0 +1,26 @@
+{
+  "key": "EAW/Desolator Frigate",
+  "name": "'Desolator' class Frigate",
+  "mounts": {
+    "Fp0ID4IeCk2GFBjKxsgmTg": "2x2x2",
+    "4sfnD_VNkk2FR77PXqTTrw": "2x2x2",
+    "54Xmw9l1TE-3KG7GqzGbxg": "4x12x4",
+    "E_uqUm_tbkibt7sAXR9c5g": "4x12x4"
+  },
+  "compartments": {
+    "zPuKoZzLqEC0JTwa7FDbfg": "6x1x8",
+    "W7dEs6eBz0enbjdPTcOQCQ": "6x1x8",
+    "Z7bsM9BQeEmjLrK3togjcw": "6x1x4",
+    "8gI2wh19RkWWhZpgz-Qp3g": "6x1x4",
+    "30GPCrJML0Sl50527JRgIg": "6x1x4"
+  },
+  "modules": {
+    "xHbY49YteUO7Eq4HTBOvpw": "6x6x6",
+    "uwcXFvb9yk-sN9R3jKtT3A": "6x6x6",
+    "Eq9zQIY9xEOgZ0tXg1E3Kw": "3x3x3",
+    "MuSZmuKXCU6jXb6nLnUY2A": "3x3x3",
+    "Y0RbgobuFkeYLKVovbn5pw": "2x2x2",
+    "An9ToMmeWUWKK82JZjM6HA": "2x2x2",
+    "AB9ToMmeWUWKK82JZjM6H2": "2x2x2"
+  }
+}

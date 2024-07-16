@@ -1,0 +1,48 @@
+{
+  "key": "EAW/Canker Cruiser",
+  "name": "'Canker' class Cruiser",
+  "mounts": {
+    "507YKONEpEqCwftkIAePmg": "6x4x6",
+    "1JP-4Zb2QEWqgUAWHlhJKg": "6x4x6",
+    "55HhrH4sVk2ibdm77HrEfQ": "3x4x5",
+    "tJbRgCJp5ES7rn5QjefsTw": "3x4x5",
+    "GVFIg8fPs0GcmFeSeg0-7Q": "3x4x5",
+    "iXApcdw1T0qRLT1sgAjBhw": "3x4x5",
+    "KBoe8FQp8E6blxQEJBgoiw": "3x4x5",
+    "mFpshlLZD0myyX5yknTi9g": "3x4x5",
+    "SBRw52u96UWmf4lJ8BBHbg": "3x4x5",
+    "VhL-xfINq0Swl7mC5c-p7Q": "2x2x2",
+    "nqF0V3c3TEOHA_9omLdjpQ": "2x2x2",
+    "7p03743qCU6CEVEnJHwj_Q": "2x2x2",
+    "ScTLOOj4Dkig74leHfV4qw": "2x2x2",
+    "Cm6Rvr3KQE2K8MP7yWNvyA": "2x2x2",
+    "_NabPPKHYESivlxqCIhtjQ": "2x2x2",
+    "YIgX2IZeRUaHNKUoizefdA": "2x2x2",
+    "ZdI25_WPGES4oE0BEMbmHA": "2x2x2"
+  },
+  "compartments": {
+    "b_LKNQuW6UKbqWmI7SpTLw": "6x1x8",
+    "cxL7D-Z0mEWyEs4bLI9w8w": "6x1x8",
+    "jAwE9e6HqkmszP4ZLUVZfQ": "6x1x8",
+    "mUYuAmNWfk-PBUETJpGX0w": "6x2x8",
+    "Vg2Kq3oea0WE6qwZfCj09w": "6x2x8",
+    "TLuquSeh9Ee3CdqKGZvoDw": "6x1x4",
+    "HKXPLXiewE6mvmlstgqM7w": "6x1x4",
+    "cC1zlZt_l0m6Txyc0fJIgg": "6x1x4",
+    "ZQ5jQXCve06aoLMIY8zwkQ": "6x1x4",
+    "jrf11McEr0q1O1Y08pTggA": "6x1x4"
+  },
+  "modules": {
+    "UVK94NCER0uktc0JGRtGUA": "6x6x6",
+    "R6YIhXQrqEenSMX45wY-Dg": "6x6x6",
+    "RFIQtvQO8E2fSXgHDYXFNw": "12x8x10",
+    "ZlrEGOCRikGuPccrI2XFoQ": "3x3x3",
+    "SDRu81TdUU2Ax2EAbRmPfw": "3x3x3",
+    "5mkKaPFjXEujslSAO_a3PQ": "3x3x3",
+    "e5v7l62t7U-0oXrj9Z8IBg": "3x3x3",
+    "6Wm3id4r8UWj76OxWYfQZg": "2x2x2",
+    "1r-LfWbu1Um_hbNIqDqmIg": "2x2x2",
+    "LWA7_NKjhkiYYp5uTzmZbw": "2x2x2",
+    "hoxBni974kyz9mq7c9omng": "2x2x2"
+  }
+}

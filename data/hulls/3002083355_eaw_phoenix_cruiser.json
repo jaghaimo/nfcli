@@ -1,0 +1,48 @@
+{
+  "key": "EAW/Phoenix Cruiser",
+  "name": "'Phoenix' class Cruiser",
+  "mounts": {
+    "IAV7l3Nkj0Gyo702iP0lPA": "8x6x8",
+    "XLz_AfiBJUWNvfVBX8tuXQ": "8x6x8",
+    "7nUd61_S7ke7JEJPM4eavw": "3x4x5",
+    "UYCitYIDS0Ozi1A_ie3IlA": "3x4x5",
+    "Yqla5X2sz0mPnq9ZJBtRPg": "3x4x3",
+    "rbn4Yrjep0uPmphcH0RgMw": "3x4x3",
+    "2qaEcz8sb0qtjbxEstcZyg": "3x4x3",
+    "WzbvUO5CqE2azGsey8-__A": "3x4x3",
+    "4Pbxd7Y2m0uHrv-35Ot86g": "3x4x3",
+    "1GszSXXI9kyZ83OLhX3oNg": "3x4x3",
+    "zedAPBSKOUeXq6Qll0wT2g": "2x2x2",
+    "fSHf-Tih0kuXN8siTktdTQ": "2x2x2",
+    "ad4fRCyuxkKXAQmkqidyAw": "2x2x2"
+  },
+  "compartments": {
+    "EfX6JgOCvkqPy1ChacdiEg": "6x1x8",
+    "EJ-r89b8g02y-qiPIgsyCQ": "6x1x8",
+    "YeZ13jQXD0OKmcJSBHHTkw": "6x1x8",
+    "nn-NU0SCkk2m0JgLqXL8tA": "6x1x8",
+    "RAcxeVGNv0OE4p5bAHe5-A": "6x1x4",
+    "ZNh5J1Zja06K5PG4eUnRqQ": "6x1x4",
+    "7q_ISd1KOEudXux5T1lGJg": "4x1x6",
+    "8l0LGyzVrkO7EGZn2F4lsw": "6x1x6",
+    "Lprm54bRpUKgjaqTwTzx2Q": "6x1x6",
+    "N2725XN_60O8AilL16KCZA": "6x1x4",
+    "VeUKuAmkjU-5qZCrXwXcVg": "6x1x4",
+    "miv25mI_gUSYYsbPoUaNgA": "6x1x4"
+  },
+  "modules": {
+    "dfS5kYCNyESm7FS3T251yA": "6x6x6",
+    "uOr-Nm-1IUSncMECZHKLEw": "6x6x6",
+    "fUbH4kfqW0mV6Gi9FOxoUQ": "12x8x10",
+    "YqTnDUh8FUafVkXmGxR-zw": "3x3x3",
+    "YH3bXI4PfUeok0BPJ0PYGw": "3x3x3",
+    "rDaMrD7oUUuBJVEKwkzw3g": "3x3x3",
+    "-_wpIrcPYkequIQrycRQ6w": "3x3x3",
+    "BPzfsdv1cEmyj8jKgkutZg": "3x3x3",
+    "VBv2AWVORk2YNULiRM53Qw": "3x3x3",
+    "WPQcRiIJ7kWrLKy1A33hsw": "2x2x2",
+    "XEI_TQ3Z60-vG6pzmUR0ng": "2x2x2",
+    "HUfk08_F80-fUerU6S6L9w": "2x2x2",
+    "SCb5c_lbUkiUbkWOUcqCpw": "2x2x2"
+  }
+}

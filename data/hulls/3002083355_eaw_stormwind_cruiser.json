@@ -1,0 +1,43 @@
+{
+  "key": "EAW/Stormwind Cruiser",
+  "name": "'Stormwind' class Cruiser",
+  "mounts": {
+    "86pJHolzS0eol1BvTOVYWA": "6x9x6",
+    "vrC0hrea4kCuyY1mtR8l8A": "6x9x6",
+    "C8yIIKcIoECJvAv3PMxk-g": "3x9x5",
+    "WGJWS6NFFUCoFtf1IVy5lA": "3x9x5",
+    "skcgVKoMKkaTlw0x7PpTrw": "3x4x5",
+    "lbEdp7M3S0eBPLXx3XKPbQ": "3x4x3",
+    "HODF28ezdU6nXbF3Ma13ow": "3x4x3",
+    "UPnuaJzsgk2OJSaZxm_W1Q": "3x4x3",
+    "6xlvE5bR9Emq60pQ93Q_mw": "2x2x2",
+    "zyvIFifjGUazskYxGDMZiw": "2x2x2",
+    "foXWX7MNSEu2j-xWMSwoaw": "2x2x2",
+    "wKxYjgKhiUuMdvkZqy2OAw": "2x2x2"
+  },
+  "compartments": {
+    "ZJfaE3DZUEOBz77H7Cbipw": "6x1x8",
+    "JB5HPhTx1UecSCJszqsUYQ": "6x1x8",
+    "oUJk7gpdAkaNvvy1Kf434A": "6x1x8",
+    "qzjgOVkyEE6SHJwI7rNo_w": "6x1x8",
+    "lLSTdM_z7keQCsSsd8LfZQ": "6x1x8",
+    "2VIyo9aPIEyZInrxqMFPpA": "6x1x4",
+    "2hG7C2Tu806LXqSl8bRzCg": "6x1x4",
+    "jwgSQ8yX-EWtwtXlvzZoEw": "6x1x4",
+    "vxh3ruV43UqceTHNOcFN_w": "6x1x4",
+    "QA1PMywAM0iOll641xpCTw": "6x1x4"
+  },
+  "modules": {
+    "p8MO_j-Y_EKfObpbSsx45Q": "6x6x6",
+    "t6un50PW-0iBsVRvuB4vqA": "6x6x6",
+    "D6B4QXBO-k29C_xTSZFYaQ": "12x8x10",
+    "csO2zYC0W0CFswN4pKyzKQ": "3x3x3",
+    "xmAdSUza80GR1zYfNEhbag": "3x3x3",
+    "qHQTPasSoEit2zdrO4vd1A": "3x3x3",
+    "XgDHLq_7bEyFnuiL4Ebv0g": "3x3x3",
+    "CZBafElxw0mHTevmvkRxEQ": "2x2x2",
+    "jSnHUviVV0mcIEXJNaV1GQ": "2x2x2",
+    "Zj8ClOWuu0eEUFPuKsI5YA": "2x2x2",
+    "t0FFjet_CUi3xZpAodEn1Q": "2x2x2"
+  }
+}

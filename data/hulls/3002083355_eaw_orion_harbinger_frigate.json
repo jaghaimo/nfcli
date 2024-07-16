@@ -1,0 +1,24 @@
+{
+  "key": "EAW/Orion Harbinger Frigate",
+  "name": "'Harbinger' class Frigate",
+  "mounts": {
+    "xIOpy4VspUqhrXG9JnnS4A": "3x14x5",
+    "pN-cVB0YsEi19jvw4Nr1dg": "3x4x3",
+    "6vAjjr-jaEmlFRJNLDih3g": "3x4x3",
+    "Po7Zq3JG6EqZUOR3LtDy3Q": "2x2x2"
+  },
+  "compartments": {
+    "-YCWEvbiLUmELJ5pV76kag": "4x1x6",
+    "td7Keie1DUucstwAhjV3KQ": "4x1x7",
+    "J-5pyfk2f0WmpFENQmfX-A": "3x1x3",
+    "_-UwDFWgk0Os3U-o-IovWQ": "3x1x3",
+    "CuaNMyGfAU-3GaX1N3dYJg": "3x1x5"
+  },
+  "modules": {
+    "s-4BJawlO0mk-ypUBXag6Q": "6x6x6",
+    "nqckyJbc_U2Ru97lDK_scg": "8x3x6",
+    "UoMnPbx6g0mlgd06tohWFw": "3x3x3",
+    "rkJSYkX85UqLx3FAuHYoNg": "2x2x2",
+    "TV5tMNcR7kGGzOcrzFgRLQ": "2x2x2"
+  }
+}

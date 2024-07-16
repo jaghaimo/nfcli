@@ -1,0 +1,50 @@
+{
+  "key": "EAW/Orion Purifier Battleship",
+  "name": "'Purifier' class Battleship",
+  "mounts": {
+    "cRe-qYrsqEegdx-pHlhiIg": "4x15x4",
+    "3BtxEJOn0kWDYJd9MbVQ7A": "4x15x4",
+    "LtYd4qhc8Ea6WeFLbTY8Bw": "4x15x4",
+    "UHLsrZKefES88wmSw7u-yg": "4x15x4",
+    "smSxPwaYHEqY6_YqoQr1Bg": "4x15x4",
+    "BxYKlK1qtkOt2CSGc2sILA": "4x15x4",
+    "YQZUccbxsEKM9_K49OU8FQ": "4x15x4",
+    "W5AgPY-FuUCmTXECN3E-hA": "4x15x4",
+    "eGPbc3X8UUyxxP1rqtrnxw": "2x2x2",
+    "qhAgErHT50ajhoVLMI4j6Q": "2x2x2",
+    "2FK2PlumW0uidY-GlVbbcw": "2x2x2",
+    "wbdtCJcwNUaQbESwCMQKDg": "2x2x2",
+    "LE0hJ0XN_0GPR-0YRmiFcA": "2x2x2"
+  },
+  "compartments": {
+    "4CrpO4Jlu0GnBPFSaz6Ntg": "6x1x8",
+    "yPv33ov7A0aRM56MP3l4DQ": "6x1x8",
+    "6gPPjfqyCU6MrcVU46IEoQ": "6x1x8",
+    "ScOCfY4pakaIWFEAmrQgNQ": "6x1x8",
+    "1UpZILdqU0eZhcn1qu_J6A": "6x1x8",
+    "g1fY9Ov6ZUCZH3xZ7J1KSw": "6x1x8",
+    "Kn0VFfPVhE-W-Mnt-c14eA": "6x1x8",
+    "wQCEDOl-xkiF8OF_pEWNRA": "6x1x8",
+    "-u_pFDEc6US-niTr70YXaw": "6x1x8",
+    "MlofIvDhakep-BDP6BRoUw": "6x1x4",
+    "MIICHqZMSUektWUhIVu0Dg": "6x1x4",
+    "VlSPyllS_E-zeVDL7pekeQ": "6x1x4",
+    "eSUN0ZgOR0qHKFI_tDvzwA": "6x1x4",
+    "74g3tB_eS0yzLZMP9vcXEw": "6x1x4"
+  },
+  "modules": {
+    "xAnk-N4Eb0Chhs8BV_GYlQ": "8x8x8",
+    "pJ4496TML0uLTP6t1tHi_g": "8x8x8",
+    "6O6jkgtfgUCqzhyd_7ypQA": "16x8x10",
+    "0cYoTIUx6E-7swasaDxFZQ": "12x8x10",
+    "j0axt8imVkiKYBzvkJYJNw": "3x3x3",
+    "PRlrKfhEoka74WIEnggKyA": "3x3x3",
+    "d9u2yNNqqEeiMKDK-SvlMg": "3x3x3",
+    "pag7Eqb5UEqo1hbNjWwmIg": "3x3x3",
+    "qk1QP_3GMUe0eldaKeJ9bA": "3x3x3",
+    "8gR_bbPNCEOSXnjaG5w7wg": "3x3x3",
+    "Z0pmgJST5EOewVGEWr9CvA": "3x3x3",
+    "8aEKDzvWBU-WaLYnrmTEMg": "2x2x2",
+    "fJw3CrBDKE2aFsEFkbx71A": "2x2x2"
+  }
+}

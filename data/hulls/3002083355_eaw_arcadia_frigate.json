@@ -1,0 +1,43 @@
+{
+  "key": "EAW/Arcadia Frigate",
+  "name": "'Arcadia' class Frigate",
+  "mounts": {
+    "veGAGN4S6UCbq8Pw1PIEMw": "3x4x5",
+    "7Cj90ZRiAE6-eHdegNyt6A": "3x4x3",
+    "eKXyvjCiEkuEyEMmNxDEaw": "3x4x3",
+    "fzyHymYkUUmCyorip1UFZw": "3x4x3",
+    "Ptja4yTbVE2QXtZrFVGyxA": "3x4x3",
+    "-hD4NfvheU-_3FjfId8J2A": "3x4x3",
+    "FzwH9P_SGECpgaBPW18nLQ": "3x4x3",
+    "MmxGjZDKvEmWLRaoloK52A": "3x4x3",
+    "fKe-sQna2kK3Z2XIGiU2hg": "3x4x3",
+    "l-5LoKXS4ku2tf6a187h-g": "3x4x3",
+    "VPRUzo98e02ynV22hX8IAQ": "3x4x3",
+    "bNNe1oHbekmQuOGSP6pSyg": "3x4x3",
+    "kjhXnI-FdkSaJUCTcjX2Jw": "3x4x3",
+    "Ujx2feW8OEuHspXvrSCBrg": "2x2x2",
+    "DNImPHSYXE-pZ4sV9eeImA": "2x2x2",
+    "V1V6rngVUUa3J0_gZGEJdQ": "2x2x2",
+    "c7cL7lqFAEKwbwvklNlzaw": "2x2x2"
+  },
+  "compartments": {
+    "AWReJYXLCkeb9iuCqIfmGQ": "6x1x8",
+    "Ih1LGTnsc0uX59ZiVjtNWA": "6x1x8",
+    "0XJzvI-SWEquNx19g91_2A": "6x1x4",
+    "-UBHyj9HckeYmn3_jx9JIQ": "6x1x4",
+    "eLlskfY-bEeI1RrrdZ7lFA": "6x1x4",
+    "4icfS5uC9UG8Yzol0x8UVQ": "6x1x4",
+    "o6zoa8Bt6kKxgGPK7YKCzw": "6x1x4",
+    "bjiA7gGJSUygyrYiKuOIrg": "6x1x4"
+  },
+  "modules": {
+    "czvWQkZjIki6BPVxQ4m-hg": "6x6x6",
+    "CNnDlXLgvkW4D42VGprTMQ": "8x8x6",
+    "wnfedMjKKUiTgkdyo253ag": "3x3x3",
+    "83BqTUWW80uLvXWUAU3xtQ": "3x3x3",
+    "FiuwMMYK_EWjqn9QuyfndA": "3x3x3",
+    "9mzBmTnx502YgX8SuBLycQ": "3x3x3",
+    "tduuGnjIuUSoRMkvNFrYDw": "2x2x2",
+    "NkP-KX2TRUicghn6cHCQyQ": "2x2x2"
+  }
+}

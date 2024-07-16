@@ -1,0 +1,30 @@
+{
+  "key": "EAW/Pathseeker Frigate",
+  "name": "'Pathseeker' class Frigate",
+  "mounts": {
+    "IqTte4iKWEWSAW1Ef7hqwg": "3x4x5",
+    "og2FP_PS10iEZgFAmR_N-Q": "3x4x5",
+    "qiYJPCb_v06ILR6S4VKyew": "2x2x2",
+    "GNEtY_ShhkSD5mjy4XL7Ug": "2x2x2",
+    "VfX0E8CyCUqmme081peYeA": "2x2x2",
+    "7qRh9xURW067pKfRw-1JTg": "2x2x2",
+    "OQtiPesT80uLqsc18ih1Sg": "2x2x2",
+    "AC09TtSUS0iuq-4f8Wdt3Q": "2x2x2"
+  },
+  "compartments": {
+    "sSbPg1qhIUqu8UARjRXwow": "4x1x6",
+    "FROcA7HwPEKan_yfZfGRTA": "4x1x6",
+    "5qfzm8hj0Uql_Ymwxq9BAQ": "3x1x3",
+    "9zNULIwgVUysJreW9LjV0A": "3x1x3",
+    "EHoYgJDWd0-cK2r7R9sZ6Q": "3x1x5",
+    "ghVSncv-TECmMyPP0BO5zw": "4x2x6"
+  },
+  "modules": {
+    "_y-Aeat2lkap8lXm4RnKAw": "6x6x6",
+    "Cy139yLlS0uv-khqFHiL9g": "8x3x6",
+    "6mVt0TXXUkWm9Y7qzXebTg": "2x2x2",
+    "lJADQYDZRkGRevqHmXE3mA": "2x2x2",
+    "cqdWEf2Dakqpp-hYhSXUnw": "3x3x3",
+    "eFwmWuznzkKjXKLHaNPFLQ": "3x3x3"
+  }
+}

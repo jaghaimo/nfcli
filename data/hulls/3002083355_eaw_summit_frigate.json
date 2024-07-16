@@ -1,0 +1,37 @@
+{
+  "key": "EAW/Summit Frigate",
+  "name": "'Summit' class Frigate",
+  "mounts": {
+    "1tAQnf1LfUqTRFPar3HjOw": "3x4x5",
+    "SfKUD4T5tkyJumr-VhFGQA": "3x4x5",
+    "qlMWqy2TJUiLbeyu_xii-w": "3x4x5",
+    "SW-gvxThBkSetXr8FqzYMQ": "3x4x5",
+    "qXpYTdUWLE2h7v5tTNcSzw": "3x2x3",
+    "k36J1QOzakS09FmPjHxuXQ": "3x2x3",
+    "XU1H6t4FGEWwRN3GMiE0Sg": "2x2x2",
+    "FoabIbRco0uSMGzvj_UPqA": "2x2x2",
+    "Cf50zbLk3kyHQJuRTJfKTQ": "2x2x2",
+    "spgkHg9GGk6l0paBM15esg": "2x2x2",
+    "juIt3vd0gkGuhggfaAOIdw": "2x2x2",
+    "am8t323456kGuYGmeeeGHHhj": "2x2x2",
+    "am8t3vd0gkGuYGmhaAOIdw": "2x2x2"
+  },
+  "compartments": {
+    "P5Zd21DIsUKBGY5EoMPpdg": "6x1x8",
+    "KaH2uvwIfUGXDFq9hWs8sw": "6x1x8",
+    "qmTTUQ31l0yrq3FGGCFM3A": "6x1x4",
+    "ptWu8zA0jEiPER2QjX5OeA": "6x1x4",
+    "0_LBv-ziSUW-tDGWRmBrBQ": "6x1x4",
+    "LyT0kGhraku1nWwer7cUcw": "6x1x4",
+    "Kdthex5z9EyEOcSa1KSWsg": "6x1x4"
+  },
+  "modules": {
+    "mSoDjl3iOkGUHX7oDFmVSg": "6x6x6",
+    "KjAGaHo_iUut52slAo2Gdw": "6x8x6",
+    "JwiFkmqpukyapgHNcZzLcg": "3x3x3",
+    "_ezU6CPNlUOIp7kdBEKiOw": "3x3x3",
+    "a2W6jzmt2UW3dugPNGUK3A": "3x3x3",
+    "Hc931YHIGk29Im-6jqcWgg": "2x2x2",
+    "-B5q0AelZUiddK20udrXRA": "2x2x2"
+  }
+}

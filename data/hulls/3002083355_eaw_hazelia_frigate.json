@@ -1,0 +1,35 @@
+{
+  "key": "EAW/Hazelia Frigate",
+  "name": "'Hazelia' class Frigate",
+  "mounts": {
+    "R1H_yvW48EaURIoaDqO_fw": "3x4x5",
+    "cTy5pjtNvEqT8bCPM_i6yA": "3x4x5",
+    "IQoz6C7hvU24-ifCoa5z3A": "3x4x3",
+    "uMJ0fFXnwEWMgP6WaZ3Urg": "3x4x3",
+    "TX1yCNu4Pkiufp3cJJXlvw": "2x2x2",
+    "LPDmlUO3eEykevan4qOZYg": "2x2x2",
+    "TX2yCNu4Pkiufp3cJJXlvw": "2x2x2",
+    "TX3yCNu4Pkiufp3cJJXlvw": "2x2x2",
+    "OR3rl57aZE6AGw-ebxfyzw": "4x12x4"
+  },
+  "compartments": {
+    "-8-dpG3Iy06_Nz8D8pI5Ww": "6x1x6",
+    "AUOe2Fkg1UCJbVYUPgnaaQ": "6x1x8",
+    "7YZj0vKbZUiKX-PFt4VhwQ": "6x1x4",
+    "GcWD-5OeUECNAvrhjEs2AQ": "6x1x4",
+    "FZ5Ob66n9UqIJ4Q_zXK1SQ": "6x1x4",
+    "gPwrIPpb5kKI9l8p7_Il4w": "6x1x4",
+    "ytKTgtGuAESi7ldn8tEmeQ": "6x1x4",
+    "j_gJs-WY-0e4A1z1oKSFvw": "6x1x4"
+  },
+  "modules": {
+    "6Z_HAAf1T0W6-0Df_e-4ZA": "6x6x6",
+    "dqfv414BtUubKe2phxZAUw": "8x8x6",
+    "HVYKzj0QqU6nTULBLEfnHw": "3x3x3",
+    "VBIwIyooWE26yE_JQ0lJfQ": "3x3x3",
+    "aZ8sgiJ-GUunqvvl7LqeeQ": "2x2x2",
+    "OSeSUrqF4k69d5eG1pH22Q": "2x2x2",
+    "0_L6ECN4jUyb-Ir9OUc_2A": "3x3x3",
+    "KSw3r8UZKkuMGThgcNSBLw": "3x3x3"
+  }
+}

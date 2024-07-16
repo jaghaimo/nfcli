@@ -1,0 +1,31 @@
+{
+  "key": "EAW/Glaive Frigate",
+  "name": "'Glaive' class Frigate",
+  "mounts": {
+    "RO7MHAE0_kqjQoRpsq4lTg": "2x2x2",
+    "4AVHyY0yD06yd05RXPoAtw": "2x2x2",
+    "65Dm-OYe1Emy4xoCVJtg9w": "2x2x2",
+    "p4ewic8ze02VEa-TbecDDQ": "2x2x2",
+    "U-YCv43iIUqTaz8ymf6_vw": "4x12x4",
+    "3Mp2AFhQyUqAI6_GW4ag_A": "4x13x3",
+    "v2MtXh-mhUKl9JC4pgPyNA": "4x13x3"
+  },
+  "compartments": {
+    "ScmcOjHY10u_bVd5FSk7LA": "6x1x8",
+    "X-OPTVWcTkqJtf33sgsszA": "6x1x8",
+    "AxRn6xI1L0qWFHcrapDzmQ": "6x1x4",
+    "zMtjC3daL0mC16ebQ4MEQQ": "6x1x4",
+    "ci8o-eSFTE6RAgtMKLA9oA": "6x1x4",
+    "LIs-ToVHWUyN08sR1Ux1Qw": "6x1x4",
+    "bQkudJSuA0G5ndvijOL25g": "6x1x4"
+  },
+  "modules": {
+    "CchGoi6EGEelpRLR2Ao9pA": "6x6x6",
+    "55boswca80qn7_Fz50oubg": "8x8x6",
+    "qFC9A9lWzUe-D3CpVGW_nw": "3x3x3",
+    "eqSEImTzWU69azcZ6aLTrg": "3x3x3",
+    "vpUeqVE6qk-0l2jryKxj2A": "2x2x2",
+    "HrDfqrC2XkW1Id-MS2calg": "3x3x3",
+    "1QOalYzDGEynQ42ken8Mdg": "3x3x3"
+  }
+}
