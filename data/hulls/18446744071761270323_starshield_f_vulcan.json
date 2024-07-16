@@ -1,0 +1,28 @@
+{
+  "key": "Starshield/F_Vulcan",
+  "name": "'Vulcan' class Frigate",
+  "mounts": {
+    "F_Vulcan_Mount_1": "3x1x5",
+    "F_Vulcan_Mount_2": "2x4x5",
+    "F_Vulcan_Mount_3": "2x4x5",
+    "F_Vulcan_Mount_4": "3x2x3",
+    "F_Vulcan_Mount_5": "2x2x2",
+    "F_Vulcan_Mount_6": "2x2x2",
+    "F_Vulcan_Mount_7": "2x2x2",
+    "F_Vulcan_Mount_8": "2x2x2"
+  },
+  "compartments": {
+    "F_Vulcan_Component_1": "6x1x4",
+    "F_Vulcan_Component_2": "6x3x8",
+    "F_Vulcan_Component_3": "6x1x4",
+    "F_Vulcan_Component_4": "6x3x4",
+    "F_Vulcan_Component_5": "6x1x4"
+  },
+  "modules": {
+    "F_Vulcan_Module_1": "5x5x5",
+    "F_Vulcan_Module_2": "5x3x5",
+    "F_Vulcan_Module_3": "2x2x2",
+    "F_Vulcan_Module_4": "3x3x3",
+    "F_Vulcan_Module_5": "2x2x2"
+  }
+}
