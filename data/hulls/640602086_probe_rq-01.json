@@ -1,0 +1,16 @@
+{
+  "key": "Probe/RQ-01",
+  "name": "'RQ-01 Autonomous Intelligent Sensor' class Probe",
+  "mounts": {
+    "mount222": "2x2x2"
+  },
+  "compartments": {
+    
+  },
+  "modules": {
+    "Drive333": "3x3x3",
+    "Reactor333": "3x3x3",
+    "module221": "2x2x2",
+    "module222": "2x2x2"
+  }
+}

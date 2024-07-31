@@ -1,0 +1,21 @@
+{
+  "key": "Colonial Navy/Trespasser-class Corvette",
+  "name": "'Trespasser' class Corvette",
+  "mounts": {
+    "CorvetteGun": "2x4x2",
+    "PD_1": "8x1x1",
+    "PD_2": "8x1x1"
+  },
+  "compartments": {
+    "MediumComp1": "6x1x6",
+    "MediumComp2": "6x1x6",
+    "SmallComp1": "4x1x6",
+    "SmallComp2": "4x1x6"
+  },
+  "modules": {
+    "Drive1": "5x5x5",
+    "LargeModule": "3x3x3",
+    "SmallModule1": "2x2x2",
+    "SmallModule2": "2x2x2"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "key": "Starshield/LC_Apollo",
+  "name": "'Apollo' class Light Crusier",
+  "mounts": {
+    "LC_Apollo_Mount_1": "3x2x5",
+    "LC_Apollo_Mount_2": "3x2x5",
+    "LC_Apollo_Mount_3": "3x5x5",
+    "LC_Apollo_Mount_4": "3x5x5",
+    "LC_Apollo_Mount_5": "2x6x2",
+    "LC_Apollo_Mount_6": "2x6x2",
+    "LC_Apollo_Mount_7": "2x6x2",
+    "LC_Apollo_Mount_8": "2x6x2",
+    "LC_Apollo_Mount_9": "2x6x2",
+    "LC_Apollo_Mount_10": "2x6x2",
+    "LC_Apollo_Mount_11": "2x6x2",
+    "LC_Apollo_Mount_12": "2x6x2",
+    "LC_Apollo_Mount_13": "3x2x3",
+    "LC_Apollo_Mount_14": "2x2x2",
+    "LC_Apollo_Mount_15": "2x2x2",
+    "LC_Apollo_Mount_16": "2x2x2",
+    "LC_Apollo_Mount_17": "2x2x2",
+    "LC_Apollo_Mount_18": "2x2x2"
+  },
+  "compartments": {
+    "LC_Apollo_Component_1": "6x1x8",
+    "LC_Apollo_Component_2": "8x1x8",
+    "LC_Apollo_Component_4": "6x3x8",
+    "LC_Apollo_Component_5": "8x1x8",
+    "LC_Apollo_Component_8": "8x3x8",
+    "LC_Apollo_Component_9": "8x3x8"
+  },
+  "modules": {
+    "LC_Apollo_Module_1": "6x6x6",
+    "LC_Apollo_Module_2": "10x8x10",
+    "LC_Apollo_Module_3": "2x2x2",
+    "LC_Apollo_Module_4": "2x2x2",
+    "LC_Apollo_Module_5": "3x3x3",
+    "LC_Apollo_Module_6": "3x3x3",
+    "LC_Apollo_Module_7": "3x3x3",
+    "LC_Apollo_Module_8": "3x3x3"
+  }
+}

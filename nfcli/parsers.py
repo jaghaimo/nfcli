@@ -79,15 +79,18 @@ def parse_fleet(xml_data: str) -> Fleet:
     xmld = xmltodict.parse(xml_data, force_list=("MagSaveData", "Ship", "HullSocket", "MissileTemplate"))
     fleet_data: dict = xmld.get("Fleet")  # type: ignore
     fleet = Fleet(fleet_data["Name"], fleet_data["TotalPoints"], fleet_data["FactionKey"])
+    logging.debug("Parsing ships.")
     for idx, ship_data in enumerate(fleet_data["Ships"]["Ship"]):
         logging.debug(f"Parsing ship #{idx!s}")
         ship = get_ship(ship_data)
         fleet.add_ship(ship)
 
-    if "MissileTypes" not in fleet_data:
+    missile_templates = fleet_data.get("MisilleTypes", {}).get("MissileTemplate", [])
+    if not missile_templates:
         return fleet
 
-    for idx, missile_template in enumerate(fleet_data["MissileTypes"]["MissileTemplate"]):
+    logging.debug("Parsing missiles.")
+    for idx, missile_template in enumerate(missile_templates):
         logging.debug(f"Parsing missile #{idx!s}")
         missile = get_missile(missile_template)
         fleet.add_missile(missile)
@@ -96,14 +99,11 @@ def parse_fleet(xml_data: str) -> Fleet:
 
 
 def parse_any(filename: str, xml_data: str) -> Printable:
-    try:
-        if filename.endswith("fleet"):
-            return parse_fleet(xml_data)
-        elif filename.endswith("ship"):
-            return parse_ship(xml_data)
-        elif filename.endswith("missile"):
-            return parse_missile(xml_data)
-    except Exception as exc:
-        logging.error(exc.with_traceback(None))
+    if filename.endswith("fleet"):
+        return parse_fleet(xml_data)
+    elif filename.endswith("ship"):
+        return parse_ship(xml_data)
+    elif filename.endswith("missile"):
+        return parse_missile(xml_data)
 
     raise ValueError("Unrecognizable file format")

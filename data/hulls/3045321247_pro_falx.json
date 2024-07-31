@@ -1,0 +1,26 @@
+{
+  "key": "PRO/Falx",
+  "name": "'VX \"Falx\"' class Strike Gunship",
+  "mounts": {
+    "mount343_1": "3x4x3",
+    "mount343_2": "3x4x3",
+    "mount222_1": "2x2x2",
+    "mount222_2": "2x2x2",
+    "mount3103spinal_1": "3x10x3"
+  },
+  "compartments": {
+    "comp614_1": "6x1x4",
+    "comp614_2": "6x1x4",
+    "comp315_1": "5x1x3",
+    "comp315_2": "3x1x5",
+    "comp315_3": "3x1x5"
+  },
+  "modules": {
+    "module535drive_": "5x3x5",
+    "module333reactor_1": "3x3x3",
+    "module333reactor_2": "3x3x3",
+    "module222radar_": "2x2x2",
+    "module222_2": "2x2x2",
+    "module333_1": "3x3x3"
+  }
+}

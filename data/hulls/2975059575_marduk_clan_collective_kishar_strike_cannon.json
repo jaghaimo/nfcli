@@ -1,0 +1,27 @@
+{
+  "key": "Marduk Clan Collective/Kishar Strike Cannon",
+  "name": "'Kishar' class Strike Cannon",
+  "mounts": {
+    "Spinal+1": "4x20x4",
+    "C2_1": "3x2x3",
+    "C1_1": "2x2x2",
+    "C1_2": "2x2x2"
+  },
+  "compartments": {
+    "LargeComp1": "6x1x8",
+    "MediumComp1": "6x1x6",
+    "MediumComp2": "6x1x6",
+    "SmallComp1": "4x1x6",
+    "SmallComp2": "4x1x6",
+    "SmallComp": "4x1x6"
+  },
+  "modules": {
+    "Drive1": "6x6x6",
+    "IPR-8500": "2x2x6",
+    "LargeModule1": "3x3x3",
+    "LargeModule2": "3x3x3",
+    "SmallModule1": "2x2x2",
+    "SmallModule2": "2x2x2",
+    "SmallModule3": "2x2x2"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "key": "PRO/Gladius",
+  "name": "'ARK-5X \"Gladius\"' class Multi-Mission Variable Fightercraft ",
+  "mounts": {
+    "MissileMount1": "1x1x2",
+    "MissileMount2": "1x1x2",
+    "MissileMount3": "1x1x2",
+    "MissileMount4": "1x1x2",
+    "GunMount1": "1x2x1",
+    "GunMount2": "1x2x1"
+  },
+  "compartments": {
+    "comp112_1": "1x1x2"
+  },
+  "modules": {
+    "module334": "3x3x4",
+    "module222_1": "2x2x2",
+    "Module113_1": "1x1x3",
+    "Module113_2": "1x1x3"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "key": "Probe/AACP-1",
+  "name": "'AAC(P)-1' class Anomalous Automated Craft",
+  "mounts": {
+    "mount222": "2x2x2"
+  },
+  "compartments": {
+    
+  },
+  "modules": {
+    "Drive333": "3x3x3",
+    "Reactor333": "3x3x3",
+    "module221": "2x2x2",
+    "module222": "2x2x2"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "key": "Colonial Navy/Infiltrator-class Frigate",
+  "name": "'Infiltrator' class Frigate",
+  "mounts": {
+    "FrigBeam": "3x6x3",
+    "C1C_1": "2x4x2",
+    "PD_1": "13x1x1",
+    "PD_2": "13x1x1",
+    "PD_3": "13x1x1",
+    "PD_4": "13x1x1"
+  },
+  "compartments": {
+    "Hangar": "10x3x10",
+    "MediumComp1": "6x1x6",
+    "MediumComp2": "6x1x6",
+    "SmallComp1": "4x1x6",
+    "SmallComp2": "4x1x6",
+    "SmallComp3": "4x1x6"
+  },
+  "modules": {
+    "Drive1": "5x5x5",
+    "Drive2": "5x5x5",
+    "Drive3": "5x5x5",
+    "LargeModule1": "3x3x3",
+    "LargeModule2": "3x3x3",
+    "SmallModule1": "2x2x2",
+    "SmallModule2": "2x2x2"
+  }
+}
