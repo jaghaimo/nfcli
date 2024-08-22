@@ -1,0 +1,53 @@
+{
+  "key": "EAW/Vorniket Heavy-Duty",
+  "name": "'Vorniket' class Heavy-Duty",
+  "mounts": {
+    "qJE0w_jFSU-PkYT57BIW1g": "6x4x6",
+    "bgN4GG30r0uTRR_SGPwasQ": "6x4x6",
+    "rZc9-L-92EiCFt_MZGD8JQ": "3x4x5",
+    "CumDZr9GhEmcr9OwHq055w": "3x4x5",
+    "jVHAdmKnyUOAqVPZnTu9xw": "3x4x5",
+    "GIuFebiXDEaJwNkrbv8dgQ": "3x4x5",
+    "AoEcVui0G0-19kOw98WddQ": "3x4x5",
+    "Ijjnj9-8uEKxj2xvQc5JVw": "3x4x3",
+    "3AJdD6mw-0mucI0wVBIllw": "3x4x3",
+    "CUtmBi5XvEaEnisDrsojlw": "3x4x3",
+    "icTMsG4hc0KqWDa63nnnuw": "3x4x3",
+    "Y8e-i-G5uEOvZEIN5H1EjQ": "3x4x3",
+    "XRlnhwXJj0WJUmLYPdPaxw": "3x4x3",
+    "kWF1Abwz-UeYoq1QuHnOWA": "2x2x2",
+    "AKWky1IeDEib46K7XrNZ3w": "2x2x2",
+    "9GGVVIrR1EaNVdsr7I-Kxw": "2x2x2",
+    "Q8b6Qt64IUCwA0bD5Q71nA": "2x2x2",
+    "BYqIgMmXv0O8386SBs1xiw": "2x2x2",
+    "tAeqEoyA2Ua_CDf8jpDI2w": "2x2x2",
+    "-7uF8wx4q0-b72JX-OG0fQ": "2x2x2",
+    "G6IIJnCI202mPKEckhq9Og": "2x2x2"
+  },
+  "compartments": {
+    "zHfH6JALgUqqHBq6qn0A5g": "6x1x8",
+    "DDwzI1ZldU-5-ptA9yqvGQ": "6x1x8",
+    "9bZ9oBcXmUWQA8AVvQ9-HA": "6x1x8",
+    "M2jDx6DMMkecICOHxnwRVg": "6x1x8",
+    "zKwz21IzNE2EeEwyAk2B8A": "6x1x8",
+    "GJg-RlM2X0STtAF4M0UaCg": "6x4x6",
+    "w3dpmIFQCE6YtPsifQz4ng": "6x1x6",
+    "ASPH8thdK06yF2wt8WbmRw": "6x1x6",
+    "wPQle3018kORv-sL8WoB1A": "6x1x4",
+    "EoUe4bgF70SPCbeNmkt3GQ": "6x1x4",
+    "9APfnDy8jUKPhXxUiEY9Cg": "6x1x4"
+  },
+  "modules": {
+    "I3G4Tq2N3Ey07vo04e9oew": "12x8x10",
+    "pVFd7xEXE0KMkWfhuvpXcQ": "6x6x6",
+    "iIDJ-1N_sk6bosYL9bIN6A": "6x6x6",
+    "jhuDXf8QHkCwzpFUnxMGCA": "3x3x3",
+    "3dbTwWp3V0uuSnfbOvpYNQ": "3x3x3",
+    "9fHgfwn3A0a57WcIqq6q8A": "3x3x3",
+    "z5lpxcZTg0KZkpx4ER8-Ig": "3x3x3",
+    "QgPpcpH5KUS-kfcjE2P7jQ": "2x2x2",
+    "4pP3jx8mtE-2WoD7EysDow": "2x2x2",
+    "PCyB1VFZx0GaXDS8y86E5w": "2x2x2",
+    "0W3_ohfai0qvzPEpelQ2KQ": "2x2x2"
+  }
+}

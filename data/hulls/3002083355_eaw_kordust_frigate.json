@@ -1,0 +1,30 @@
+{
+  "key": "EAW/Kordust Frigate",
+  "name": "'Kordust' class Frigate",
+  "mounts": {
+    "gU41SYQWRUihBZHCqX0j2A": "2x10x2",
+    "tD8g8vJMck696LcTCeHEwg": "2x10x2",
+    "gxhHwhzYjECOWNhfqhXsOw": "3x4x5",
+    "BawSddbgWkiLubgS-L_l_A": "3x4x5",
+    "zBJNJRxBdkmu8zqbu1VCxA": "3x4x5",
+    "qVdf01TNfE6QzSzBr9bUrQ": "2x2x2",
+    "pWz_8Y5OG0q88vsKdWOMVA": "2x2x2"
+  },
+  "compartments": {
+    "czqU725ookGKVfpLt4AIWA": "6x1x8",
+    "QiVgCsiakUu41OL_pf9iJw": "6x1x8",
+    "DG_DAwCo70-C2sPDaxk1rg": "6x1x4",
+    "qg5j8aCjUU-IldbjlhTRoA": "6x1x4",
+    "AQ2iNGCK4U6XyMB4TsNSRw": "6x1x4",
+    "T4vXobc_VEKH7au8JxkoJw": "6x1x4",
+    "JX1Z2N9KA0qkx0YnNLi0rQ": "6x1x4"
+  },
+  "modules": {
+    "N9ggGlZTekK_RDXZhKLnyw": "6x6x6",
+    "yPIVV9WNAkuqja38YeP0fw": "6x3x6",
+    "qGP_eUeA_EiqnY6cHQ3c_Q": "3x3x3",
+    "EUqQrZxTT06wnu0HgPHuCA": "3x3x3",
+    "xEMiwJO0qEea1nhmSX8b9g": "2x2x2",
+    "e4JJxwvyB0yhp3g4n3Lx_g": "2x2x2"
+  }
+}
