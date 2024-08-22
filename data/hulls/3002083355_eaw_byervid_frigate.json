@@ -1,0 +1,22 @@
+{
+  "key": "EAW/Byervid Frigate",
+  "name": "'Byervid' class Frigate",
+  "mounts": {
+    "5z8U_qGY1EOvsLt9j159AA": "3x4x3",
+    "DGsa__egVEOdoJl0D5dC9A": "3x4x3",
+    "Qv6HAbl-MUu_5yAeVcC5GQ": "2x2x2",
+    "JUgtfdU_50mc7T1itGJnCw": "2x2x2"
+  },
+  "compartments": {
+    "cO8D84AsnkuqZEtpLT4-Iw": "4x1x6",
+    "2poAWmqVwUGwrGvT8iIobw": "4x1x6",
+    "Z-d3K9zfFU60OD6DmQfB5Q": "3x1x3",
+    "l_ErX7-moUW4_5iHhwvtLg": "3x1x3"
+  },
+  "modules": {
+    "deOhYKSfGk-uHWeuAVjB1g": "6x3x6",
+    "k0jAnMJ8_UOVM9hXG5Un_Q": "3x3x3",
+    "PHX8aveygE2ZwrW7Lr4Mrg": "2x2x2",
+    "my6acixG50eoZdAA8TYy1g": "2x2x2"
+  }
+}

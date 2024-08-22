@@ -1,0 +1,23 @@
+{
+  "key": "EAW/Bokat Frigate",
+  "name": "'Bokat' class Frigate",
+  "mounts": {
+    "rGSRHHndP0i06lSH3Oj8Yg": "3x3x5",
+    "zcCJX9wtUkKhcPZ6USZu8A": "3x2x3",
+    "Bv7g_tP_ykOAuuNoOzvFxw": "2x2x2",
+    "01C9-JPAEEmS7nMPgu3Hcg": "2x2x2"
+  },
+  "compartments": {
+    "sOWjq4sg60OQY6Sk6l02fw": "4x2x6",
+    "myJKutxNIEWrLP-IpAyaUQ": "4x1x6",
+    "fnFnjYDeykW7NO2_y_OvjQ": "3x1x5",
+    "mh9hit-DpkadvuGFZnnqiQ": "3x1x3"
+  },
+  "modules": {
+    "or8Bs8i8ykypi-BZk7ctgQ": "6x6x6",
+    "KiZgWnQXaEqofGh1NKyNqQ": "5x3x5",
+    "8Aps2XwOWU2WpMI4iBo6fA": "3x3x3",
+    "hJzXKP31BUS4zStnG2v3RA": "2x2x2",
+    "cn1gTbqRxUOktmoBjJPbnw": "2x2x2"
+  }
+}

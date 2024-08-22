@@ -1,0 +1,40 @@
+{
+  "key": "EAW/Irukon Destroyer",
+  "name": "'Irukon' class Destroyer",
+  "mounts": {
+    "Jb7WL5o5KUagUVqS7nvCQg": "2x10x2",
+    "M-_CYdxHn0qs5o3wzTeoXQ": "2x10x2",
+    "Zkj_L4IL9ES4mi11OoAqsw": "3x4x5",
+    "TMoo8t3KvkCGd8ByMkW1hA": "3x4x5",
+    "IbNF6rxN4UKToPfYdX8j-g": "3x4x5",
+    "ReF1l4cHb0q_L4xl5P26_w": "3x4x5",
+    "mz3qDgW7kE2_2vXBYDPmIQ": "3x4x3",
+    "FjNBNBqfEUK4gWKxoZiEKQ": "3x4x3",
+    "uF1HkjnI30i-3VCvuo6uHA": "2x2x2",
+    "C9ycqtftmk-DuXNgp3nUBw": "2x2x2",
+    "0MIzJR8xKUSOllIXfAewQA": "2x2x2",
+    "gjfSlIJqwk2m11q7yhPezA": "2x2x2"
+  },
+  "compartments": {
+    "Ebp8AneOEESDPl4H0VoO4g": "6x1x8",
+    "HYGNBIcsXUymuSKr366xnQ": "6x1x8",
+    "DEM0hQO2hEijjkH93XS5Tg": "6x1x8",
+    "3Su5bszkHUqtaaL9cnpM9Q": "6x1x8",
+    "FDI3HCxLWUCU2Ka3uBuBPQ": "6x1x8",
+    "gLS-7q5CfUmpvvILJ7irSA": "6x1x4",
+    "Q7TC7F_yP0GQKZbirS68Eg": "6x1x4",
+    "le9OFcgzekqv5MOhLHj-Cg": "6x1x4",
+    "KJ-oRzTQrU2Atx0-C0N13w": "6x1x4"
+  },
+  "modules": {
+    "ZQ4YCXHad0Se8Zv4c5dJhA": "8x12x10",
+    "xEgN4ry-lUycfRi1GIk_DQ": "6x6x6",
+    "wgLSTh2M002xzlDjkbi-PQ": "3x3x3",
+    "GaXl_8Wdl0Sv6yhu7HmPfA": "3x3x3",
+    "NKkOfrYHNEWs-wduqnGgtw": "3x3x3",
+    "IMbo3pRufUGa9EDu5E6uOw": "2x2x2",
+    "my_LFtiOAU66TJ-KvkkNXA": "2x2x2",
+    "8j2Cf6YIZk2feuIBFEH9sw": "2x2x2",
+    "lN2EoG5SGEO18oGYWtWUVA": "2x2x2"
+  }
+}

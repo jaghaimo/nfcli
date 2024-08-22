@@ -1,0 +1,26 @@
+{
+  "key": "EAW/Holnok Frigate",
+  "name": "'Holnok' class Frigate",
+  "mounts": {
+    "uyOJmFay_k2NYt_n0px8jg": "3x10x3",
+    "OW2DRZJoVE6JA0a_Jj7LSA": "3x10x3",
+    "pxnv11pCkEuoLS4ZhBruFg": "3x10x3",
+    "oFCeDdCcykumwyk77vPnzw": "3x10x3",
+    "eDf03e24sk6RLX0fxicB7Q": "2x2x2"
+  },
+  "compartments": {
+    "s8tt_K2JbEO-sm0EW8TtiA": "4x2x6",
+    "3Dbbvz3nokmLNp3m4vWA_w": "4x1x6",
+    "72Warx_1FUudSGFSdh6xzQ": "3x2x5",
+    "FD-XoQkgGUCY6hl4AwCIAA": "3x1x5",
+    "grKWuc7e00iCe3zW2gOL0Q": "3x1x3"
+  },
+  "modules": {
+    "8AFuf1fkTkixuJuv-ps_hA": "6x6x6",
+    "UiaISAUcC0uAvXPwfc4-Jw": "5x3x5",
+    "Bk0G7hlrqEu9XSyG4Fv9zA": "3x3x3",
+    "k3altcK3dkirGops--tejA": "3x3x3",
+    "nxfdd2wx00GwXJP4bTTX7Q": "2x2x2",
+    "Y3W9SoQqYkmcwkuQxxn2LQ": "2x2x2"
+  }
+}
