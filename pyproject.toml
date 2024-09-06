@@ -17,7 +17,7 @@ lint.select = [
 
 [tool.poetry]
 name = "nfcli"
-version = "1.17.6"
+version = "1.17.7"
 description = "A CLI tool to pretty print fleet and ship files to console."
 authors = ["Jaghaimo <1764586+jaghaimo@users.noreply.github.com>"]
 

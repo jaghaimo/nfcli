@@ -1,13 +1,15 @@
 {
-  "key": "prism/CH_descartes",
-  "name": "'Descartes' class Heavy Torchship",
+  "key": "prism/BC_euclid",
+  "name": "'Euclid' class Super-Heavy Torchship",
   "mounts": {
-    "spinalmount1": "4x12x4",
-    "spinalmount2": "4x12x4",
+    "c5mount1": "8x7x8",
     "c4mount1": "6x4x6",
-    "c4mount2": "6x4x6",
+    "c3mount1": "3x4x5",
+    "c3mount2": "3x4x5",
     "c3mount3": "3x4x5",
     "c3mount4": "3x4x5",
+    "c3mount5": "3x4x5",
+    "c3mount6": "3x4x5",
     "c2mount1": "3x4x3",
     "c2mount2": "3x4x3",
     "c2mount3": "3x4x3",
@@ -24,18 +26,21 @@
     "hugecompartment4": "6x1x8",
     "hugecompartment5": "6x1x8",
     "hugecompartment6": "6x1x8",
-    "mediumcompartment1": "6x1x4",
-    "mediumcompartment2": "6x1x4",
-    "mediumcompartment3": "6x1x4",
-    "mediumcompartment4": "6x1x4",
+    "hugecompartment7": "6x1x8",
+    "mediumcompartment1": "4x1x6",
+    "mediumcompartment2": "4x1x6",
+    "mediumcompartment3": "4x1x6",
+    "mediumcompartment4": "4x1x6",
+    "mediumcompartment5": "4x1x6",
     "smallcompartment1": "3x1x3",
     "smallcompartment2": "3x1x3",
-    "smallcompartment3": "3x1x3"
+    "smallcompartment3": "3x1x3",
+    "smallcompartment4": "3x1x3"
   },
   "modules": {
-    "hugemodule1": "16x8x10",
-    "largemodule1": "8x8x8",
-    "largemodule2": "8x8x8",
+    "largemodule1": "6x6x6",
+    "largemodule2": "6x6x6",
+    "hugemodule1": "12x8x10",
     "mediummodule1": "3x3x3",
     "mediummodule2": "3x3x3",
     "mediummodule3": "3x3x3",
@@ -45,6 +50,7 @@
     "smallmodule2": "2x2x2",
     "smallmodule3": "2x2x2",
     "smallmodule4": "2x2x2",
+    "smallmodule5": "2x2x2",
     "livery": "0x0x0"
   }
 }

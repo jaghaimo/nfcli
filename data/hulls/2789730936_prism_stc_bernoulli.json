@@ -1,0 +1,32 @@
+{
+  "key": "prism/STC_bernoulli",
+  "name": "'Bernoulli' class Static",
+  "mounts": {
+    "mount646_1": "6x4x6",
+    "mount646_2": "6x4x6",
+    "mount222_1": "2x2x2",
+    "mount222_2": "2x2x2",
+    "mount222_3": "2x2x2",
+    "mount222_4": "2x2x2",
+    "mount222_5": "2x2x2",
+    "mount222_6": "2x2x2"
+  },
+  "compartments": {
+    "compartment416_1": "4x1x6",
+    "compartment416_2": "4x1x6",
+    "compartment416_3": "4x1x6",
+    "compartment416_4": "4x1x6",
+    "compartment416_5": "4x1x6",
+    "compartment313_1": "3x1x3",
+    "compartment313_2": "3x1x3"
+  },
+  "modules": {
+    "module666_1": "6x6x6",
+    "module222_1": "2x2x2",
+    "module222_2": "2x2x2",
+    "module222_3": "2x2x2",
+    "module222_4": "2x2x2",
+    "module222_5": "2x2x2",
+    "livery": "0x0x0"
+  }
+}

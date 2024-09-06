@@ -2,24 +2,26 @@
   "key": "prism/FF_euler",
   "name": "'Euler' class Light Torchship",
   "mounts": {
-    "AiLyweqRf0GHk9fP-5Hyawa": "3x4x5",
-    "6x7hX-NBqUyEM80kJXxu9gb": "3x4x3",
-    "3EwSgEOj5UGQUqGrF6t5_gc": "3x4x3",
-    "3EwSgEOj5UGQUqGrF6t5_gd": "3x4x3"
+    "class3mount1": "3x4x5",
+    "class2mount1": "3x4x3",
+    "class2mount2": "3x4x3",
+    "class1mount1": "2x2x2",
+    "class1mount2": "2x2x2"
   },
   "compartments": {
-    "pipSayFCn02A3Uov_rOk6Qa": "6x1x8",
-    "pipSayFCn02A3Uov_rOk6Q2b": "6x1x6",
-    "pipSayFCn02A3Uov_rOk6Q2d": "4x1x6",
-    "pipSayFCn02A3Uov_rOk6Q231": "3x1x3",
-    "pipSayFCn02A3Uov_rOk6Q232": "3x1x3"
+    "hugecompartment1": "6x1x8",
+    "largecompartment1": "6x1x6",
+    "mediumcompartment1": "4x1x6",
+    "smallcompartment1": "3x1x3",
+    "smallcompartment2": "3x1x3"
   },
   "modules": {
-    "0GMte5rYLE6w1SAsLPKgXQa": "6x6x6",
-    "TAgBFGiv-UOo4GOrNxWckga": "6x6x6",
-    "Bisi0t3FmE2yYxB340uvFQa": "3x3x3",
-    "KfMisTMUF0um0QOtylrOcwa": "3x3x3",
-    "eMUMYEJ2Fk62RHFvPC22qAa": "2x2x2",
-    "eMUMYEJ2Fk62RHFvPC22qAb": "2x2x2"
+    "largemodule1": "6x6x6",
+    "largemodule2": "6x6x6",
+    "mediummodule1": "3x3x3",
+    "mediummodule2": "3x3x3",
+    "smallmodule1": "2x2x2",
+    "smallmodule2": "2x2x2",
+    "livery": "0x0x0"
   }
 }

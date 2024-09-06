@@ -1,6 +1,6 @@
 {
   "key": "prism/BB_pythagoras",
-  "name": "'Pythagoras' class Heavy Torchship",
+  "name": "'Pythagoras' class Super-Heavy Torchship",
   "mounts": {
     "c5mount1": "8x7x8",
     "c5mount2": "8x7x8",
@@ -12,14 +12,13 @@
     "c2mount2": "3x4x3",
     "c2mount3": "3x4x3",
     "c2mount4": "3x4x3",
-    "c2mount5": "3x4x3",
-    "c2mount6": "3x4x3",
-    "c2mount7": "3x4x3",
-    "c2mount8": "3x4x3",
     "c1mount1": "2x2x2",
     "c1mount2": "2x2x2",
     "c1mount3": "2x2x2",
-    "c1mount4": "2x2x2"
+    "c1mount4": "2x2x2",
+    "c1mount5": "2x2x2",
+    "c1mount6": "2x2x2",
+    "c1mount7": "2x2x2"
   },
   "compartments": {
     "specialcompartment1": "8x2x8",
@@ -42,12 +41,10 @@
     "smallcompartment4": "3x1x3"
   },
   "modules": {
-    "largemodule1": "8x8x8",
-    "largemodule2": "8x8x8",
-    "hugemodule1": "18x5x10",
-    "hugemodule2": "18x5x10",
-    "mediummodule1": "3x3x3",
-    "mediummodule2": "3x3x3",
+    "largemodule1": "10x6x11",
+    "largemodule2": "10x6x11",
+    "hugemodule1": "10x8x12",
+    "hugemodule2": "10x8x12",
     "mediummodule3": "3x3x3",
     "mediummodule4": "3x3x3",
     "mediummodule5": "3x3x3",
@@ -57,6 +54,9 @@
     "smallmodule1": "2x2x2",
     "smallmodule2": "2x2x2",
     "smallmodule3": "2x2x2",
-    "smallmodule4": "2x2x2"
+    "smallmodule4": "2x2x2",
+    "smallmodule5": "2x2x2",
+    "smallmodule6": "2x2x2",
+    "livery": "0x0x0"
   }
 }
