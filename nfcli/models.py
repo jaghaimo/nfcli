@@ -174,13 +174,21 @@ class Missile(Named, Printable):
         full_stats = [stats.replace("\n\t", " ") for stats in long_description.split("\n\n")]
         if len(full_stats) == 4:
             full_stats.append("")
+        if len(full_stats) == 5:
+            full_stats.append("")
         (
             self.long_description,
             self.avionics,
             self.flight_characteristics,
             self.damage,
             self.additional_stats,
+            self.extra_field,
         ) = full_stats
+        if self.extra_field:
+            self.flight_characteristics += self.damage
+            self.damage = self.additional_stats
+            self.additional_stats = self.extra_field
+            self.extra_field = ""
 
     @property
     def size(self) -> str:
