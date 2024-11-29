@@ -2,8 +2,6 @@
   "key": "Starshield/BB_Jupiter",
   "name": "'Jupiter' class Battleship",
   "mounts": {
-    "BB_Jupiter_Mount_1": "6x4x6",
-    "BB_Jupiter_Mount_2": "6x4x6",
     "BB_Jupiter_Mount_3": "6x12x6",
     "BB_Jupiter_Mount_4": "6x12x6",
     "BB_Jupiter_Mount_5": "6x12x6",
@@ -12,24 +10,24 @@
     "BB_Jupiter_Mount_8": "3x6x5",
     "BB_Jupiter_Mount_9": "3x6x5",
     "BB_Jupiter_Mount_10": "3x6x5",
-    "BB_Jupiter_Mount_11": "3x6x3",
-    "BB_Jupiter_Mount_12": "3x6x3",
-    "BB_Jupiter_Mount_13": "3x6x3",
-    "BB_Jupiter_Mount_14": "3x6x3",
-    "BB_Jupiter_Mount_15": "3x2x5",
-    "BB_Jupiter_Mount_16": "3x2x5",
-    "BB_Jupiter_Mount_17": "3x2x3",
-    "BB_Jupiter_Mount_18": "3x2x3",
-    "BB_Jupiter_Mount_19": "3x2x3",
-    "BB_Jupiter_Mount_20": "3x2x3",
+    "BB_Jupiter_Mount_1": "6x10x6",
+    "BB_Jupiter_Mount_2": "6x10x6",
+    "BB_Jupiter_Mount_11": "3x2x5",
+    "BB_Jupiter_Mount_12": "3x2x5",
+    "BB_Jupiter_Mount_13": "3x4x3",
+    "BB_Jupiter_Mount_14": "3x4x3",
+    "BB_Jupiter_Mount_15": "3x4x3",
+    "BB_Jupiter_Mount_16": "3x4x3",
+    "BB_Jupiter_Mount_17": "3x4x3",
+    "BB_Jupiter_Mount_18": "3x4x3",
+    "BB_Jupiter_Mount_19": "3x4x3",
+    "BB_Jupiter_Mount_20": "3x4x3",
     "BB_Jupiter_Mount_21": "3x2x3",
     "BB_Jupiter_Mount_22": "3x2x3",
-    "BB_Jupiter_Mount_23": "3x2x3",
+    "BB_Jupiter_Mount_23": "2x2x2",
     "BB_Jupiter_Mount_24": "2x2x2",
     "BB_Jupiter_Mount_25": "2x2x2",
-    "BB_Jupiter_Mount_26": "2x2x2",
-    "BB_Jupiter_Mount_27": "2x2x2",
-    "BB_Jupiter_Mount_28": "2x2x2"
+    "BB_Jupiter_Mount_26": "2x2x2"
   },
   "compartments": {
     "BB_Jupiter_Component_1": "8x3x8",
@@ -57,6 +55,6 @@
     "BB_Jupiter_Module_9": "3x3x3",
     "BB_Jupiter_Module_10": "3x3x3",
     "BB_Jupiter_Module_11": "3x3x3",
-    "BB_Jupiter_Module_12": "3x3x3"
+    "BB_Jupiter_Module_12": "2x2x2"
   }
 }
