@@ -2,7 +2,6 @@
   "key": "Starshield/HC_Mars",
   "name": "'Mars' class Heavy Crusier",
   "mounts": {
-    "HC_Mars_Mount_1": "6x4x6",
     "HC_Mars_Mount_2": "3x6x3",
     "HC_Mars_Mount_3": "3x6x3",
     "HC_Mars_Mount_4": "3x6x3",
@@ -11,39 +10,38 @@
     "HC_Mars_Mount_7": "3x6x3",
     "HC_Mars_Mount_8": "3x6x3",
     "HC_Mars_Mount_9": "3x6x3",
+    "HC_Mars_Mount_1": "6x10x6",
     "HC_Mars_Mount_10": "3x2x5",
     "HC_Mars_Mount_11": "3x2x5",
-    "HC_Mars_Mount_12": "3x2x5",
+    "HC_Mars_Mount_12": "3x4x3",
     "HC_Mars_Mount_13": "3x2x3",
-    "HC_Mars_Mount_14": "2x2x2",
+    "HC_Mars_Mount_14": "3x4x3",
     "HC_Mars_Mount_15": "3x2x3",
-    "HC_Mars_Mount_16": "2x2x2",
+    "HC_Mars_Mount_16": "3x2x3",
     "HC_Mars_Mount_17": "2x2x2",
-    "HC_Mars_Mount_18": "2x2x2",
-    "HC_Mars_Mount_19": "2x2x2",
-    "HC_Mars_Mount_20": "2x2x2"
+    "HC_Mars_Mount_18": "2x2x2"
   },
   "compartments": {
-    "HC_Mars_Component_1": "6x1x8",
+    "HC_Mars_Component_1": "8x3x8",
     "HC_Mars_Component_2": "8x3x8",
-    "HC_Mars_Component_3": "6x1x8",
-    "HC_Mars_Component_4": "6x1x8",
+    "HC_Mars_Component_3": "8x3x8",
+    "HC_Mars_Component_4": "8x1x8",
     "HC_Mars_Component_5": "8x1x8",
-    "HC_Mars_Component_6": "8x3x8",
-    "HC_Mars_Component_7": "8x3x8",
-    "HC_Mars_Component_8": "8x1x8",
-    "HC_Mars_Component_9": "8x1x8"
+    "HC_Mars_Component_6": "6x1x8",
+    "HC_Mars_Component_7": "8x1x8",
+    "HC_Mars_Component_8": "6x1x8",
+    "HC_Mars_Component_9": "4x1x6"
   },
   "modules": {
-    "HC_Mars_Module_1": "6x6x6",
+    "HC_Mars_Module_1": "8x10x10",
     "HC_Mars_Module_2": "6x6x6",
-    "HC_Mars_Module_3": "8x10x10",
-    "HC_Mars_Module_4": "2x2x2",
-    "HC_Mars_Module_5": "2x2x2",
+    "HC_Mars_Module_3": "6x6x6",
+    "HC_Mars_Module_4": "3x3x3",
+    "HC_Mars_Module_5": "3x3x3",
     "HC_Mars_Module_6": "3x3x3",
-    "HC_Mars_Module_7": "3x3x3",
+    "HC_Mars_Module_7": "2x2x2",
     "HC_Mars_Module_8": "2x2x2",
     "HC_Mars_Module_9": "2x2x2",
-    "HC_Mars_Module_10": "3x3x3"
+    "HC_Mars_Module_10": "2x2x2"
   }
 }

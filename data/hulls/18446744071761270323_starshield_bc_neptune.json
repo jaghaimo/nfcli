@@ -20,14 +20,12 @@
     "BC_Mount_16": "3x2x3",
     "BC_Mount_17": "3x2x3",
     "BC_Mount_18": "3x2x3",
-    "BC_Mount_19": "3x2x3",
+    "BC_Mount_19": "2x2x2",
     "BC_Mount_20": "2x2x2",
     "BC_Mount_21": "2x2x2",
     "BC_Mount_22": "2x2x2",
     "BC_Mount_23": "2x2x2",
-    "BC_Mount_24": "2x2x2",
-    "BC_Mount_25": "2x2x2",
-    "BC_Mount_26": "2x2x2"
+    "BC_Mount_24": "2x2x2"
   },
   "compartments": {
     "BC_Component_1": "8x3x8",
