@@ -13,8 +13,8 @@ check:
 	poetry run ruff check nfcli/
 
 format:
-	poetry run ruff check --fix nfcli/
 	poetry run ruff format nfcli/
+	poetry run ruff check --fix nfcli/
 
 cache: steam wiki
 
