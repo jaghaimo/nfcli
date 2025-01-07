@@ -9,8 +9,12 @@ repos:
       - id: check-yaml
       - id: check-added-large-files
 
-  - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.6.9
+  - repo: local
     hooks:
-      - id: ruff
-      - id: ruff-format
+      - id: lint
+        fail_fast: true
+        name: lint via ruff
+        entry: make
+        args: ["check"]
+        language: system
+        pass_filenames: false
