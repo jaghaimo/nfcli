@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<MissileTemplate xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AssociatedTemplateName>SDM-252 Tsawassen</AssociatedTemplateName>
+  <Designation>SDM-252</Designation>
+  <Nickname>Tsawassen</Nickname>
+  <Description>DIRECT - &lt;color=#D3D11F&gt;CMD&lt;/color&gt;/PSV(&lt;color=#D4211D&gt;WAKE&lt;/color&gt;) - HE FRAG</Description>
+  <LongDescription>The &lt;noparse&gt;SDM-252 Tsawassen&lt;/noparse&gt; is a size 2 direct guidance missile.  It is based on the SDM-2 body, which is a flexible defensive missile with a booster.  This missile will deliver a Proximity Fuze, High Explosive, Blast Fragmentation warhead.  It homes in on its target using command guidance from its launching ship  If the primary seeker does not find a target or is jammed, it can fall back on a Passive Wake seeker.
+
+Control Method: DIRECT
+Targeting Modes: &lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+
+Primary Seeker: COMMAND (&lt;color=#D3D11F&gt;Requires COMMS Enabled&lt;/color&gt;)
+Backup Seeker: PASSIVE (&lt;color=#D4211D&gt;WAKE&lt;/color&gt;)
+
+&lt;b&gt;Boost&lt;/b&gt;
+Speed: 737 m/s
+Distance: 9,000 m
+Top Speed In: 1.2 s
+Turn Rate: 4.7 G
+
+&lt;b&gt;Main&lt;/b&gt;
+Speed: 150 m/s
+Distance: 1,165 m
+Top Speed In: 0.5 s
+Turn Rate: 8.2 G
+
+: Stage Trigger at 530m from Target or On Burnout
+
+Terminal Maneuvers: None
+
+Warhead: Proximity Fuze, High Explosive, Blast Fragmentation
+Armor: 0.35cm
+Component: 110.12hp
+Blast Radius: 79 m
+
+Body Integrity: 25 
+Wall Thickness: 0.05
+Programming Time: 10 s
+Radar Signature Bonus: 100 %
+Boost-Phase Duration: 3 s
+Boost-Phase Strafe: 100 %
+Boost-Phase Turn Rate: 100 %
+Failure Rate: 0 %</LongDescription>
+  <Cost>7</Cost>
+  <BodyKey>Stock/SDM-2 Body</BodyKey>
+  <TemplateKey>f034f09d-3561-4c20-bd81-cf3f0451dfac</TemplateKey>
+  <BaseColor>
+    <r>0.384356856</r>
+    <g>0.384356856</g>
+    <b>0.384356856</b>
+    <a>1</a>
+  </BaseColor>
+  <StripeColor>
+    <r>0.129411772</r>
+    <g>0.262856424</g>
+    <b>0.7058824</b>
+    <a>1</a>
+  </StripeColor>
+  <Sockets>
+    <MissileSocket>
+      <Size>1</Size>
+      <InstalledComponent xsi:type="CommandSeekerSettings">
+        <ComponentKey>Stock/Command Receiver</ComponentKey>
+        <Mode>Targeting</Mode>
+        <RejectUnvalidated>false</RejectUnvalidated>
+      </InstalledComponent>
+    </MissileSocket>
+    <MissileSocket>
+      <Size>1</Size>
+      <InstalledComponent xsi:type="PassiveSeekerSettings">
+        <ComponentKey>Stock/Wake-Homing Seeker</ComponentKey>
+        <Mode>Targeting</Mode>
+        <RejectUnvalidated>false</RejectUnvalidated>
+        <DetectPDTargets>true</DetectPDTargets>
+      </InstalledComponent>
+    </MissileSocket>
+    <MissileSocket>
+      <Size>1</Size>
+      <InstalledComponent xsi:type="DirectGuidanceSettings">
+        <ComponentKey>Stock/Direct Guidance</ComponentKey>
+        <Role>Defensive</Role>
+        <HotLaunch>false</HotLaunch>
+        <SelfDestructOnLost>false</SelfDestructOnLost>
+        <Maneuvers>None</Maneuvers>
+        <DefensiveDoctrine>
+          <TargetSizeMask>14</TargetSizeMask>
+          <TargetType>SmallCraft</TargetType>
+          <TargetSizeOrdering>Descending</TargetSizeOrdering>
+          <SalvoSize>0</SalvoSize>
+          <FarthestFirst>false</FarthestFirst>
+        </DefensiveDoctrine>
+        <ApproachAngleControl>true</ApproachAngleControl>
+      </InstalledComponent>
+    </MissileSocket>
+    <MissileSocket>
+      <Size>5</Size>
+      <InstalledComponent>
+        <ComponentKey>Stock/Blast Fragmentation</ComponentKey>
+      </InstalledComponent>
+    </MissileSocket>
+    <MissileSocket>
+      <Size>2</Size>
+      <InstalledComponent xsi:type="MissileEngineSettings">
+        <ComponentKey />
+        <BalanceValues>
+          <A>0</A>
+          <B>0</B>
+          <C>1</C>
+        </BalanceValues>
+      </InstalledComponent>
+    </MissileSocket>
+    <MissileSocket>
+      <Size>1</Size>
+      <InstalledComponent xsi:type="MissileEngineSettings">
+        <ComponentKey />
+        <BalanceValues>
+          <A>0.434351921</A>
+          <B>0.5656481</B>
+          <C>0</C>
+        </BalanceValues>
+      </InstalledComponent>
+    </MissileSocket>
+  </Sockets>
+</MissileTemplate>

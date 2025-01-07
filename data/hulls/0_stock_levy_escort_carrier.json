@@ -1,0 +1,32 @@
+{
+  "key": "Stock/Levy Escort Carrier",
+  "name": "'Levy' class Escort Carrier",
+  "mounts": {
+    "g6Jp1xMKeEeNFOgfjnt3hQ": "3x4x3",
+    "VOg7-lRNWkGpjpj3W7QEoQ": "3x4x3",
+    "nrWmlB7t7E2eR6gjOVmDtA": "3x4x3",
+    "CsgECqHZc0Kannrt6VIhUw": "3x4x3"
+  },
+  "compartments": {
+    "NysR9qLdykCdsphUx1foSg": "4x1x6",
+    "S0-J1cMwUEKF72p---79_w": "4x1x6",
+    "3XttIkpGh0yh8AMcSK0_9g": "4x1x6",
+    "Z8askbBTfkm1Z1R8wX48Lw": "4x1x6",
+    "ww85-B3EY02T4hEoPQBLPg": "6x1x8",
+    "_yC35vSVhU6ziXsLtVwSAg": "6x1x8",
+    "J0fhl0E9OE2qbBM4dNSlIQ": "12x3x12",
+    "n9Ru447zt0O2PqoeCqEDKw": "12x3x18",
+    "TCnobRXZTUmbBhWLB2_bMA": "12x3x12",
+    "Rqj_R1kXHkC9Il-jpVDWAA": "6x3x16"
+  },
+  "modules": {
+    "VRT4JesYZUmXgqX1BK03vw": "6x6x6",
+    "tRoUxR8d7E2g8VMuBvtgPA": "12x8x10",
+    "dsNyjGBVUkWbOJ_DhpBlWg": "3x3x3",
+    "QPu81rov_k2q0TUPljf1wQ": "3x3x3",
+    "olToS4WUzkSEjp0m_GDswA": "3x3x3",
+    "DGXa9LWen0qyodt0DDHxcA": "3x3x3",
+    "2L34-TzEokaF5Ic3R-Majw": "2x2x2",
+    "aUJW0fBCR0mJc2o0WtSTtg": "2x2x2"
+  }
+}

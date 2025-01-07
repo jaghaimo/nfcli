@@ -10,6 +10,24 @@ from nfcli.printers import Printable
 
 def get_content(content_data: dict) -> list[Content]:
     all_loads = []
+    
+    if content_data.get("StoredCraft"):
+        all_loads += content_data["StoredCraft"]["SavedStoredCraft"]
+        
+        craft_dict = {}
+        for load in all_loads:
+            if isinstance(load, dict):
+                if load["CraftTemplateKey"] in craft_dict:
+                    craft_dict[load["CraftTemplateKey"]] = craft_dict.get(load["CraftTemplateKey"]) + 1
+                else:
+                    craft_dict[load["CraftTemplateKey"]] = 1
+        
+        all_content = []
+        for craft in craft_dict:
+            all_content.append(Content(craft, craft_dict[craft]))
+        
+        return all_content
+    
     for key in ["MissileLoad", "Load"]:
         if content_data.get(key):
             all_loads += content_data[key]["MagSaveData"]

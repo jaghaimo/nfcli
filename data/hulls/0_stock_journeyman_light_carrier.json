@@ -1,0 +1,27 @@
+{
+  "key": "Stock/Ore Carrier",
+  "name": "'Journeyman' class Light Carrier",
+  "mounts": {
+    "tW4zUlc7-UagVFXCOGl63g": "6x4x6",
+    "qfEBVY3HjUiyhpq9YQGAOQ": "3x4x5",
+    "O5f_mflyPEKi1lfh7sBXEQ": "3x4x5"
+  },
+  "compartments": {
+    "F6bmJdCO3EqzXK9SBJoXUw": "4x1x6",
+    "9EA-sLPvv0yedARGhtJv3Q": "4x1x6",
+    "utS8omLdfUCo4DXRpR4Hyw": "6x1x8",
+    "ZwILnhyKLkigJgek0cM9Lw": "6x1x8",
+    "-F3V0WPprkWQ7ktL8CwXXg": "6x1x8",
+    "gi0EFXIps0q_499wfJPBVA": "6x3x8",
+    "8FSEH_EpRUasipRoRQz8GA": "12x3x12",
+    "ezH8FOVSDEOrs8eyc1KSLQ": "12x3x12"
+  },
+  "modules": {
+    "lI4IkFx-REuV2AXbvC5iFg": "6x6x6",
+    "_UqBymnw70G2AZvAW49lOg": "5x10x8",
+    "LCuzzD0pwEyDvYSCs_g2CA": "3x3x3",
+    "fafk0RBeJUicFDn6OLLP4A": "3x3x3",
+    "TtYHca1GZESvz0szdY3BMA": "2x2x2",
+    "UAaselEnVECxHp9c4R1Izw": "2x2x2"
+  }
+}

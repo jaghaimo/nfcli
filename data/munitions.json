@@ -37,8 +37,14 @@
       "PointDivision": "2000"
     },
     {
+      "Key": "Stock/50mm Slug",
+      "Name": "35mm Slug",
+      "PointCost": "1",
+      "PointDivision": "1000"
+    },
+    {
       "Key": "Stock/Flak Round",
-      "Name": "Flak Round",
+      "Name": "50mm Flak Shell",
       "PointCost": "1",
       "PointDivision": "75"
     },
@@ -86,9 +92,39 @@
     },
     {
       "Key": "Stock/EA99 Active Decoy",
-      "Name": "EA99 Active Decoy",
+      "Name": "EA99 'Conure' Active Decoy",
       "PointCost": "8",
       "PointDivision": "1"
+    },
+    {
+      "Key": "Stock/S1 Glide Bomb",
+      "Name": "KBU-15 Bomb",
+      "PointCost": "1",
+      "PointDivision": "1"
+    },
+    {
+      "Key": "Stock/S1 Boosted Bomb",
+      "Name": "RBU-15 Boosted Bomb",
+      "PointCost": "3",
+      "PointDivision": "1"
+    },
+    {
+      "Key": "Stock/S2 Glide Bomb",
+      "Name": "KBU-22 Bomb",
+      "PointCost": "1",
+      "PointDivision": "1"
+    },
+    {
+      "Key": "Stock/S3 Cluster Bomb",
+      "Name": "CBU-40 Cluster Bomb",
+      "PointCost": "10",
+      "PointDivision": "1"
+    },
+    {
+      "Key": "Stock/35mm Flechette",
+      "Name": "35mm Flechette",
+      "PointCost": "1",
+      "PointDivision": "500"
     },
     {
       "Key": "Stock/100mm HE Shell",
@@ -111,6 +147,12 @@
     {
       "Key": "Stock/100mm Grapeshot",
       "Name": "100mm Grape",
+      "PointCost": "1",
+      "PointDivision": "250"
+    },
+    {
+      "Key": "Stock/100mm Flak",
+      "Name": "100mm Flak Shell",
       "PointCost": "1",
       "PointDivision": "250"
     },
@@ -139,15 +181,27 @@
       "PointDivision": "25"
     },
     {
+      "Key": "Stock/S0 Rocket",
+      "Name": "R-1 'Perch' Rocket",
+      "PointCost": "1",
+      "PointDivision": "1"
+    },
+    {
       "Key": "Stock/S1 Rocket",
       "Name": "R-2 'Piranha' Rocket",
-      "PointCost": "3",
+      "PointCost": "2",
+      "PointDivision": "1"
+    },
+    {
+      "Key": "Stock/S3 Rocket",
+      "Name": "R-3 'Spearfish' Rocket",
+      "PointCost": "2",
       "PointDivision": "1"
     },
     {
       "Key": "Stock/S3 Mine",
       "Name": "M-30 'Mattock' Mine",
-      "PointCost": "6",
+      "PointCost": "5",
       "PointDivision": "1"
     },
     {
@@ -163,24 +217,6 @@
       "PointDivision": "1"
     },
     {
-      "Key": "Stock/Mine Container",
-      "Name": "CM-4M Mine Container",
-      "PointCost": "15",
-      "PointDivision": "1"
-    },
-    {
-      "Key": "Stock/Rocket Container",
-      "Name": "CM-4R6 Rocket Container",
-      "PointCost": "10",
-      "PointDivision": "1"
-    },
-    {
-      "Key": "Stock/Rocket Container 12",
-      "Name": "CM-4R12 Rocket Container",
-      "PointCost": "35",
-      "PointDivision": "1"
-    },
-    {
       "Key": "Stock/Decoy Container (Clipper)",
       "Name": "CM-4D1 Decoy Container (Clipper)",
       "PointCost": "4",
@@ -190,6 +226,12 @@
       "Key": "Stock/Decoy Container (Line Ship)",
       "Name": "CM-4D2 Decoy Container (Line Ship)",
       "PointCost": "6",
+      "PointDivision": "1"
+    },
+    {
+      "Key": "Stock/EA14 Chaff Decoy",
+      "Name": "EA14 Chaff Decoy",
+      "PointCost": "2",
       "PointDivision": "1"
     }
   ]
