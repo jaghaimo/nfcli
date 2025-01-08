@@ -104,7 +104,7 @@ class Lobbies:
 
 
 class Named:
-    """Adds a cleaned, unnamespaced name."""
+    """Adds a cleaned, un-namespaced name."""
 
     def __init__(self, name: str) -> None:
         self._name = str(name)
@@ -121,7 +121,7 @@ class Named:
 
 
 class Content(Named):
-    """Models content of a socket (ammo in magazine / launcher)."""
+    """Models content of a socket (ammo in magazine / launcher or a craft type)."""
 
     def __init__(self, name: str, quantity: int) -> None:
         super().__init__(name)
@@ -171,11 +171,13 @@ class Missile(Named, Printable):
         self.full_name = f"{designation} {nickname}"
         self.description = description
         self.cost = cost
+
         full_stats = [stats.replace("\n\t", " ") for stats in long_description.split("\n\n")]
+        avionics_end = 3 if len(full_stats) > 5 else 2
 
         self.long_description = full_stats[0]
-        self.avionics = "\n".join(full_stats[1:2])
-        self.flight_characteristics = "\n".join(full_stats[3:-2])
+        self.avionics = "\n".join(full_stats[1:avionics_end])
+        self.flight_characteristics = "\n".join(full_stats[avionics_end:-2])
         self.damage = full_stats[-2]
         self.additional_stats = full_stats[-1]
 
