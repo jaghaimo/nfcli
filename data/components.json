@@ -37,18 +37,9 @@
       "Priority": "Medium"
     },
     {
-      "Key": "Stock/Berthing",
-      "Name": "Berthing",
-      "MaxHP": "50",
-      "MinHP": "10",
-      "Crew": "0",
-      "Restores": "0",
-      "Priority": "Low"
-    },
-    {
       "Key": "Stock/Small DC Locker",
       "Name": "Small DC Locker",
-      "MaxHP": "100",
+      "MaxHP": "150",
       "MinHP": "10",
       "Crew": "10",
       "Restores": "1",
@@ -57,7 +48,7 @@
     {
       "Key": "Stock/Reinforced DC Locker",
       "Name": "Reinforced DC Locker",
-      "MaxHP": "200",
+      "MaxHP": "250",
       "MinHP": "20",
       "Crew": "10",
       "Restores": "1",
@@ -66,7 +57,7 @@
     {
       "Key": "Stock/Large DC Locker",
       "Name": "Large DC Locker",
-      "MaxHP": "150",
+      "MaxHP": "200",
       "MinHP": "10",
       "Crew": "15",
       "Restores": "2",
@@ -75,7 +66,7 @@
     {
       "Key": "Stock/Rapid DC Locker",
       "Name": "Rapid DC Locker",
-      "MaxHP": "70",
+      "MaxHP": "100",
       "MinHP": "10",
       "Crew": "5",
       "Restores": "0",
@@ -127,15 +118,6 @@
       "Priority": "Low"
     },
     {
-      "Key": "Stock/Battle Dressing Station",
-      "Name": "Battle Dressing Station",
-      "MaxHP": "125",
-      "MinHP": "15",
-      "Crew": "8",
-      "Restores": "0",
-      "Priority": "Low"
-    },
-    {
       "Key": "Stock/Analysis Annex",
       "Name": "Analysis Annex",
       "MaxHP": "100",
@@ -161,6 +143,42 @@
       "Crew": "15",
       "Restores": "0",
       "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Bulk Internal Hangar",
+      "Name": "Bulk Internal Hangar",
+      "MaxHP": "200",
+      "MinHP": "20",
+      "Crew": "20",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/Spacecraft Repair Station",
+      "Name": "Spacecraft Repair Station",
+      "MaxHP": "150",
+      "MinHP": "10",
+      "Crew": "15",
+      "Restores": "0",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Spacecraft Strikedown Station",
+      "Name": "Spacecraft Strikedown Station",
+      "MaxHP": "150",
+      "MinHP": "10",
+      "Crew": "15",
+      "Restores": "0",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Deck Gear Locker",
+      "Name": "Deck Gear Locker",
+      "MaxHP": "120",
+      "MinHP": "10",
+      "Crew": "20",
+      "Restores": "0",
+      "Priority": "Medium"
     },
     {
       "Key": "Stock/Small Reactor Booster",
@@ -217,18 +235,9 @@
       "Priority": "Low"
     },
     {
-      "Key": "Stock/Launcher Deluge System",
-      "Name": "Launcher Deluge System",
-      "MaxHP": "75",
-      "MinHP": "10",
-      "Crew": "0",
-      "Restores": "0",
-      "Priority": "Low"
-    },
-    {
-      "Key": "Stock/Magazine Sprinklers",
-      "Name": "Magazine Sprinklers",
-      "MaxHP": "75",
+      "Key": "Stock/Fire Suppression System",
+      "Name": "Fire Suppression System",
+      "MaxHP": "150",
       "MinHP": "10",
       "Crew": "0",
       "Restores": "0",
@@ -237,7 +246,7 @@
     {
       "Key": "Stock/Redundant Reactor Failsafes",
       "Name": "Redundant Reactor Failsafes",
-      "MaxHP": "75",
+      "MaxHP": "150",
       "MinHP": "10",
       "Crew": "0",
       "Restores": "0",
@@ -302,6 +311,15 @@
       "Name": "Actively Cooled Amplifiers",
       "MaxHP": "40",
       "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Low"
+    },
+    {
+      "Key": "Stock/Flight Deck Traversal System",
+      "Name": "Flight Deck Traversal System",
+      "MaxHP": "100",
+      "MinHP": "15",
       "Crew": "0",
       "Restores": "0",
       "Priority": "Low"
@@ -552,7 +570,7 @@
     {
       "Key": "Stock/Mk66 Cannon",
       "Name": "Mk66 Cannon",
-      "MaxHP": "550",
+      "MaxHP": "450",
       "MinHP": "30",
       "Crew": "25",
       "Restores": "0",
@@ -561,7 +579,7 @@
     {
       "Key": "Stock/Mk68 Cannon",
       "Name": "Mk68 Cannon",
-      "MaxHP": "650",
+      "MaxHP": "550",
       "MinHP": "30",
       "Crew": "40",
       "Restores": "0",
@@ -570,7 +588,7 @@
     {
       "Key": "Stock/Mk81 Railgun",
       "Name": "Mk81 Railgun",
-      "MaxHP": "300",
+      "MaxHP": "125",
       "MinHP": "30",
       "Crew": "15",
       "Restores": "0",
@@ -606,7 +624,7 @@
     {
       "Key": "Stock/VLS-2 Launcher",
       "Name": "VLS-2 Launcher",
-      "MaxHP": "100",
+      "MaxHP": "200",
       "MinHP": "10",
       "Crew": "0",
       "Restores": "0",
@@ -615,7 +633,7 @@
     {
       "Key": "Stock/VLS-3 Launcher",
       "Name": "VLS-3 Launcher",
-      "MaxHP": "175",
+      "MaxHP": "250",
       "MinHP": "10",
       "Crew": "0",
       "Restores": "0",
@@ -624,7 +642,7 @@
     {
       "Key": "Stock/CLS-3 Launcher",
       "Name": "CLS-3 Launcher",
-      "MaxHP": "175",
+      "MaxHP": "250",
       "MinHP": "10",
       "Crew": "0",
       "Restores": "0",
@@ -784,6 +802,24 @@
       "Priority": "Medium"
     },
     {
+      "Key": "Stock/C4 Medium Mount Hangar",
+      "Name": "Medium Mounted Hangar",
+      "MaxHP": "200",
+      "MinHP": "10",
+      "Crew": "12",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/C5 Large Mount Hangar",
+      "Name": "Large Mounted Hangar",
+      "MaxHP": "200",
+      "MinHP": "10",
+      "Crew": "12",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
       "Key": "Stock/Civilian Reactor",
       "Name": "Civilian Reactor",
       "MaxHP": "300",
@@ -845,6 +881,15 @@
       "Crew": "30",
       "Restores": "0",
       "Priority": "Critical"
+    },
+    {
+      "Key": "Stock/Container Datalink Array",
+      "Name": "Container Datalink Array",
+      "MaxHP": "300",
+      "MinHP": "100",
+      "Crew": "30",
+      "Restores": "0",
+      "Priority": "Low"
     },
     {
       "Key": "Stock/BW800 Drive",
@@ -921,7 +966,7 @@
     {
       "Key": "Stock/Sundrive Racing Pro",
       "Name": "Sundrive Racing Pro",
-      "MaxHP": "100",
+      "MaxHP": "200",
       "MinHP": "50",
       "Crew": "10",
       "Restores": "0",
@@ -1056,7 +1101,7 @@
     {
       "Key": "Stock/TE45 Mass Driver",
       "Name": "TE45 Mass Driver",
-      "MaxHP": "450",
+      "MaxHP": "150",
       "MinHP": "20",
       "Crew": "15",
       "Restores": "0",
@@ -1102,6 +1147,15 @@
       "Key": "Stock/J15 Jammer",
       "Name": "J15 'Bellbird' Jammer",
       "MaxHP": "150",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/J75 Jammer",
+      "Name": "J75 'Warbler' Jammer",
+      "MaxHP": "100",
       "MinHP": "10",
       "Crew": "0",
       "Restores": "0",
@@ -1164,7 +1218,7 @@
     {
       "Key": "Stock/MLS-2 Launcher",
       "Name": "MLS-2 Launcher",
-      "MaxHP": "100",
+      "MaxHP": "200",
       "MinHP": "10",
       "Crew": "10",
       "Restores": "0",
@@ -1173,7 +1227,7 @@
     {
       "Key": "Stock/MLS-3 Launcher",
       "Name": "MLS-3 Launcher",
-      "MaxHP": "100",
+      "MaxHP": "200",
       "MinHP": "10",
       "Crew": "12",
       "Restores": "0",
@@ -1182,11 +1236,47 @@
     {
       "Key": "Stock/ML-9 Mine Launcher",
       "Name": "ML-9 Mine Launcher",
-      "MaxHP": "100",
+      "MaxHP": "200",
       "MinHP": "10",
       "Crew": "10",
       "Restores": "0",
       "Priority": "High"
+    },
+    {
+      "Key": "Stock/S2 Bandit Launcher",
+      "Name": "SALS-2 'Ward' Launcher",
+      "MaxHP": "100",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/S2 Twin Bandit Launcher",
+      "Name": "TALS-2 'Talisman' Launcher",
+      "MaxHP": "150",
+      "MinHP": "10",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/Container Bank Hangar",
+      "Name": "Container Bank Hangar",
+      "MaxHP": "200",
+      "MinHP": "20",
+      "Crew": "0",
+      "Restores": "0",
+      "Priority": "Medium"
+    },
+    {
+      "Key": "Stock/C4 Mount Hangar",
+      "Name": "Small Mounted Hangar",
+      "MaxHP": "300",
+      "MinHP": "10",
+      "Crew": "8",
+      "Restores": "0",
+      "Priority": "Medium"
     }
   ]
 }

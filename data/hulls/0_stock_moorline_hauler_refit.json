@@ -1,0 +1,35 @@
+{
+  "key": "Stock/Container Hauler Refit",
+  "name": "'Moorline' class Line Ship",
+  "mounts": {
+    "uLHDwjLFekuYaY3h0JwZoQ": "20x5x30",
+    "44SMwZSbRkOQyQmJ458Y1Q": "20x5x30",
+    "VkODw--0zk-K4FkajpPjwQ": "20x5x20",
+    "F-nHNZm4Z0WZMJakJAwlPw": "20x5x20",
+    "6HbbAtLFGUOi-kq06ErQdA": "6x4x6",
+    "3WEnDKibY0-WJvtq9-tmuA": "6x4x6",
+    "y70HHuLWd0uphO2H-hvZGQ": "3x4x5",
+    "NjfVPFfJqUmkw-AR_2KBjg": "3x4x3",
+    "bF4isjieO0m0PsOlE-zgkQ": "3x4x3",
+    "KuKTAiCM50uIV7XV1S8wrw": "3x4x3"
+  },
+  "compartments": {
+    "iWiBr9uCyUCBub-IIW2bZg": "8x3x16",
+    "y1Cs8LR0KUyCKUAJBIOyOg": "8x3x8",
+    "QhdtovcTk0WSpMAUsBIF6Q": "8x3x8",
+    "T4d-8WnA_UiHSJh6PXiXpA": "8x1x8",
+    "T9TN0ZYumUaCxcSRjO_qTw": "8x1x8",
+    "hs-SaPpehUu8ZbwsuJSvXw": "8x1x8",
+    "OE8qVccIYEGwfvJXsiFgoA": "8x1x8",
+    "jhY0RlqxLkW69clFCGXELA": "8x1x8",
+    "UAmAj39M3E2zPnVXF46kZA": "8x1x8"
+  },
+  "modules": {
+    "yxnQxeuUHUO22pm-LQu4Cg": "12x12x12",
+    "_uEQzHKRzEqqIqa1c8wJcw": "6x6x6",
+    "M0ewvimLKU2vXoznZNDoYQ": "3x3x3",
+    "cXpBal32p0-R2pA6hN056w": "3x3x3",
+    "OY726V7rAUKDR92MQM7gnQ": "3x3x3",
+    "SmUC0Jc9FEuCeKc_ZJMxIg": "3x3x3"
+  }
+}

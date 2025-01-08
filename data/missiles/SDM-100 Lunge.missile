@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<MissileTemplate xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Designation>SDM-100</Designation>
+  <Nickname>Lunge</Nickname>
+  <Description>DIRECT - &lt;color=#D3D11F&gt;CMD&lt;/color&gt; - HE FRAG</Description>
+  <LongDescription>The &lt;noparse&gt;SDM-100 Lunge&lt;/noparse&gt; is a size 1 direct guidance missile.  It is based on the SDM-1 body, which is a flexible defensive missile with a booster.  This missile will deliver a Proximity Fuze, High Explosive, Blast Fragmentation warhead.  It homes in on its target using command guidance from its launching ship.
+
+Control Method: DIRECT
+Targeting Modes: &lt;b&gt;&lt;color=#D4211D&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+
+Primary Seeker: COMMAND (&lt;color=#D3D11F&gt;Requires COMMS Enabled&lt;/color&gt;)
+
+&lt;b&gt;Boost&lt;/b&gt;
+Speed: 650 m/s
+Distance: 3,759 m
+Top Speed In: 0.4 s
+Turn Rate: 6.5 G
+
+&lt;b&gt;Main&lt;/b&gt;
+Speed: 295 m/s
+Distance: 1,701 m
+Top Speed In: 0.5 s
+Turn Rate: 11.6 G
+
+: Stage Trigger at 1,340m from Target or On Burnout
+
+Terminal Maneuvers: None
+
+Warhead: Proximity Fuze, High Explosive, Blast Fragmentation
+Armor: 0.31cm
+Component: 65.34hp
+Blast Radius: 61 m
+
+Body Integrity: 10 
+Wall Thickness: 0.05
+Programming Time: 6 s
+Radar Signature Bonus: 100 %
+Boost-Phase Duration: 3 s
+Boost-Phase Strafe: 100 %
+Boost-Phase Turn Rate: 100 %
+Failure Rate: 0 %</LongDescription>
+  <Cost>9</Cost>
+  <BodyKey>Stock/SDM-1 Body</BodyKey>
+  <TemplateKey>b0c6834c-b347-4926-8d09-06f54a5370a0</TemplateKey>
+  <BaseColor>
+    <r>1</r>
+    <g>0.4862745</g>
+    <b>0</b>
+    <a>1</a>
+  </BaseColor>
+  <StripeColor>
+    <r>0.254901975</r>
+    <g>0.254901975</g>
+    <b>0.254901975</b>
+    <a>1</a>
+  </StripeColor>
+  <Sockets>
+    <MissileSocket>
+      <Size>1</Size>
+      <InstalledComponent xsi:type="CommandSeekerSettings">
+        <ComponentKey>Stock/Command Receiver</ComponentKey>
+        <Mode>Targeting</Mode>
+        <RejectUnvalidated>false</RejectUnvalidated>
+      </InstalledComponent>
+    </MissileSocket>
+    <MissileSocket>
+      <Size>1</Size>
+      <InstalledComponent xsi:type="DirectGuidanceSettings">
+        <ComponentKey>Stock/Direct Guidance</ComponentKey>
+        <Role>Offensive</Role>
+        <HotLaunch>false</HotLaunch>
+        <SelfDestructOnLost>false</SelfDestructOnLost>
+        <Maneuvers>None</Maneuvers>
+        <DefensiveDoctrine>
+          <TargetSizeMask>12</TargetSizeMask>
+          <TargetType>All</TargetType>
+          <TargetSizeOrdering>Descending</TargetSizeOrdering>
+          <SalvoSize>0</SalvoSize>
+          <FarthestFirst>false</FarthestFirst>
+        </DefensiveDoctrine>
+        <ApproachAngleControl>true</ApproachAngleControl>
+      </InstalledComponent>
+    </MissileSocket>
+    <MissileSocket>
+      <Size>4</Size>
+      <InstalledComponent>
+        <ComponentKey>Stock/Blast Fragmentation EL</ComponentKey>
+      </InstalledComponent>
+    </MissileSocket>
+    <MissileSocket>
+      <Size>3</Size>
+      <InstalledComponent xsi:type="MissileEngineSettings">
+        <ComponentKey />
+        <BalanceValues>
+          <A>0.300303042</A>
+          <B>1.93631111E-09</B>
+          <C>0.699696958</C>
+        </BalanceValues>
+      </InstalledComponent>
+    </MissileSocket>
+    <MissileSocket>
+      <Size>1</Size>
+      <InstalledComponent xsi:type="MissileEngineSettings">
+        <ComponentKey />
+        <BalanceValues>
+          <A>0</A>
+          <B>1</B>
+          <C>0</C>
+        </BalanceValues>
+      </InstalledComponent>
+    </MissileSocket>
+  </Sockets>
+</MissileTemplate>

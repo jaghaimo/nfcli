@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<MissileTemplate xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Designation>CM-442</Designation>
+  <Nickname>Lockley</Nickname>
+  <Description>CRUISE - ACT(&lt;color=#3BC81E&gt;RADAR&lt;/color&gt;)/[PSV(&lt;color=#D4211D&gt;WAKE&lt;/color&gt;)]/HOJ(&lt;color=#3BC81E&gt;RADAR&lt;/color&gt;) - SUBMN</Description>
+  <LongDescription>The &lt;noparse&gt;CM-442 Lockley&lt;/noparse&gt; is a size 4 waypoint-capable cruise missile.  It is based on the CM-4 body, which is a heavy anti-ship torpedo.  This missile will deliver a Submunition Delivery warhead.  It homes in on its target using an Active Radar seeker, validating that it is the correct target using a Passive Wake seeker  If the primary seeker does not find a target or is jammed, it can fall back on a Radar Home-on-Jam seeker.
+
+Control Method: CRUISE (Waypoint Capable)
+Targeting Modes: &lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK[+TRP]&lt;/color&gt;&lt;/b&gt;
+
+Primary Seeker: ACTIVE &lt;color=#3BC81E&gt;RADAR&lt;/color&gt;
+Validation Seeker: PASSIVE (&lt;color=#D4211D&gt;WAKE&lt;/color&gt;)
+Backup Seeker: HOME-ON-JAM (&lt;color=#3BC81E&gt;RADAR&lt;/color&gt; JAMMING Signals Only)
+
+Speed: 200 m/s
+Distance: 24,000 m
+Top Speed In: 2.6 s
+Turn Rate: 1.6 G
+Terminal Maneuvers: None
+
+Warhead: Submunition Delivery
+Submunition Type: R-2 'Piranha' Rocket
+Submunition Count: 4
+Total Volume: 38.00 m&lt;sup&gt;2&lt;/sup&gt;
+Spread Angle: NARROW CONE
+Release Time: LONG (1s)
+
+Body Integrity: 150 
+Wall Thickness: 0.2
+Programming Time: 20 s
+Radar Signature Bonus: 100 %
+Boost-Phase Duration: 3 s
+Boost-Phase Strafe: 100 %
+Boost-Phase Turn Rate: 100 %
+Failure Rate: 0 %</LongDescription>
+  <Cost>7</Cost>
+  <BodyKey>Stock/CM-4 Body</BodyKey>
+  <TemplateKey>d60686ea-af24-4a8d-954a-96ecd2aa3e70</TemplateKey>
+  <BaseColor>
+    <r>0</r>
+    <g>0</g>
+    <b>0</b>
+    <a>1</a>
+  </BaseColor>
+  <StripeColor>
+    <r>0</r>
+    <g>0</g>
+    <b>0</b>
+    <a>1</a>
+  </StripeColor>
+  <Sockets>
+    <MissileSocket>
+      <Size>1</Size>
+      <InstalledComponent xsi:type="ActiveSeekerSettings">
+        <ComponentKey>Stock/Steerable Active Radar Seeker</ComponentKey>
+        <Mode>Targeting</Mode>
+        <RejectUnvalidated>false</RejectUnvalidated>
+        <DetectPDTargets>false</DetectPDTargets>
+      </InstalledComponent>
+    </MissileSocket>
+    <MissileSocket>
+      <Size>1</Size>
+      <InstalledComponent xsi:type="PassiveSeekerSettings">
+        <ComponentKey>Stock/Wake-Homing Seeker</ComponentKey>
+        <Mode>Validation</Mode>
+        <RejectUnvalidated>false</RejectUnvalidated>
+        <DetectPDTargets>false</DetectPDTargets>
+      </InstalledComponent>
+    </MissileSocket>
+    <MissileSocket>
+      <Size>1</Size>
+      <InstalledComponent xsi:type="CruiseGuidanceSettings">
+        <ComponentKey>Stock/Cruise Guidance</ComponentKey>
+        <Role>Offensive</Role>
+        <HotLaunch>true</HotLaunch>
+        <SelfDestructOnLost>false</SelfDestructOnLost>
+        <Maneuvers>None</Maneuvers>
+        <DefensiveDoctrine>
+          <TargetSizeMask>12</TargetSizeMask>
+          <TargetType>All</TargetType>
+          <TargetSizeOrdering>Descending</TargetSizeOrdering>
+          <SalvoSize>0</SalvoSize>
+          <FarthestFirst>false</FarthestFirst>
+        </DefensiveDoctrine>
+      </InstalledComponent>
+    </MissileSocket>
+    <MissileSocket>
+      <Size>7</Size>
+      <InstalledComponent xsi:type="SelectableSubmunitionWarheadSettings">
+        <ComponentKey>Stock/Selectable Submunition</ComponentKey>
+        <Mode>TargetAcquisition</Mode>
+        <SpreadOption>0</SpreadOption>
+        <Range>205</Range>
+        <SubmunitionKey>Stock/S1 Rocket</SubmunitionKey>
+        <Interval>3</Interval>
+      </InstalledComponent>
+    </MissileSocket>
+    <MissileSocket>
+      <Size>7</Size>
+      <InstalledComponent xsi:type="MissileEngineSettings">
+        <ComponentKey />
+        <BalanceValues>
+          <A>0.500804543</A>
+          <B>0.387017727</B>
+          <C>0.11217773</C>
+        </BalanceValues>
+      </InstalledComponent>
+    </MissileSocket>
+    <MissileSocket>
+      <Size>1</Size>
+      <InstalledComponent xsi:type="PassiveARHSeekerSettings">
+        <ComponentKey>Stock/Fixed Anti-Radiation Seeker</ComponentKey>
+        <Mode>Targeting</Mode>
+        <RejectUnvalidated>false</RejectUnvalidated>
+        <TargetType>JammingOnly</TargetType>
+      </InstalledComponent>
+    </MissileSocket>
+  </Sockets>
+</MissileTemplate>
