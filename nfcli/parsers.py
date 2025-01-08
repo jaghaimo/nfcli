@@ -9,30 +9,35 @@ from nfcli.printers import Printable
 
 
 def get_content(content_data: dict) -> list[Content]:
-    all_loads = []
-    
-    if content_data.get("StoredCraft"):
-        all_loads += content_data["StoredCraft"]["SavedStoredCraft"]
-        
-        craft_dict = {}
-        for load in all_loads:
-            if isinstance(load, dict):
-                if load["CraftTemplateKey"] in craft_dict:
-                    craft_dict[load["CraftTemplateKey"]] = craft_dict.get(load["CraftTemplateKey"]) + 1
-                else:
-                    craft_dict[load["CraftTemplateKey"]] = 1
-        
-        all_content = []
-        for craft in craft_dict:
-            all_content.append(Content(craft, craft_dict[craft]))
-        
-        return all_content
-    
+    all_magazine_loads = []
+    all_hangar_loads = []
+
     for key in ["MissileLoad", "Load"]:
         if content_data.get(key):
-            all_loads += content_data[key]["MagSaveData"]
+            all_magazine_loads += content_data[key]["MagSaveData"]
 
-    return [Content(Munitions.get_name_or_key(load["MunitionKey"]), load["Quantity"]) for load in all_loads]
+    all_munitions = [
+        Content(Munitions.get_name_or_key(load["MunitionKey"]), load["Quantity"])
+        for load in all_magazine_loads
+    ]
+
+    for key in ["StoredCraft"]:
+        if content_data.get(key):
+            all_hangar_loads += content_data[key]["SavedStoredCraft"]
+
+    craft_dict = {}
+    for load in all_hangar_loads:
+        if load["CraftTemplateKey"] in craft_dict:
+            craft_dict[load["CraftTemplateKey"]] = craft_dict.get(load["CraftTemplateKey"]) + 1
+        else:
+            craft_dict[load["CraftTemplateKey"]] = 1
+
+    all_craft = [
+        Content(craft, craft_dict[craft])
+        for craft in craft_dict
+    ]
+
+    return all_munitions + all_craft
 
 
 def get_socket(socket_data: dict) -> Socket:
@@ -88,13 +93,23 @@ def parse_missile(xml_data: str) -> Missile:
 
 
 def parse_ship(xml_data: str) -> Ship:
-    xmld = xmltodict.parse(xml_data, force_list=("MagSaveData", "HullSocket"))
+    xmld = xmltodict.parse(xml_data, force_list=(
+        "MagSaveData",
+        "HullSocket",
+        "SavedStoredCraft"
+    ))
     ship_data: dict = xmld.get("Ship")  # type: ignore
     return get_ship(ship_data)
 
 
 def parse_fleet(xml_data: str) -> Fleet:
-    xmld = xmltodict.parse(xml_data, force_list=("MagSaveData", "Ship", "HullSocket", "MissileTemplate"))
+    xmld = xmltodict.parse(xml_data, force_list=(
+        "MagSaveData",
+        "Ship",
+        "HullSocket",
+        "MissileTemplate",
+        "SavedStoredCraft"
+    ))
     fleet_data: dict = xmld.get("Fleet")  # type: ignore
     fleet = Fleet(fleet_data["Name"], fleet_data["TotalPoints"], fleet_data["FactionKey"])
     logging.debug("Parsing ships.")

@@ -172,21 +172,12 @@ class Missile(Named, Printable):
         self.description = description
         self.cost = cost
         full_stats = [stats.replace("\n\t", " ") for stats in long_description.split("\n\n")]
-        
+
         self.long_description = full_stats[0]
-        self.avionics = ""
-        self.avionics += full_stats[1]
-        self.avionics += "\n"
-        self.avionics += full_stats[2]
-        
-        self.flight_characteristics = ""
-        for x in range(3, len(full_stats)-2):
-            self.flight_characteristics += full_stats[x]
-            if x < len(full_stats)-3:
-                self.flight_characteristics += "\n"
-        
-        self.damage = full_stats[len(full_stats)-2]
-        self.additional_stats = full_stats[len(full_stats)-1]
+        self.avionics = "\n".join(full_stats[1:2])
+        self.flight_characteristics = "\n".join(full_stats[3:-2])
+        self.damage = full_stats[-2]
+        self.additional_stats = full_stats[-1]
 
     @property
     def size(self) -> str:
