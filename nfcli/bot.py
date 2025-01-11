@@ -16,7 +16,7 @@ from nfcli import determine_output_png, init_logger, load_path
 from nfcli.models import Lobbies
 from nfcli.parsers import parse_any, parse_mods
 from nfcli.printers import Printer
-from nfcli.sqlite import create_connection, fetch_usage_servers, insert_usage_data
+from nfcli.sqlite import create_connection, fetch_inactive_guilds, fetch_usage_servers, insert_usage_data
 from nfcli.steam import get_player_count, get_workshop_files, get_workshop_id
 from nfcli.wiki import Wiki
 
@@ -24,6 +24,7 @@ load_dotenv()
 
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 DISCORD_CHANNEL = int(os.getenv("DISCORD_CHANNEL"))
+DISCORD_GUILDS = [int(guild) for guild in os.getenv("DISCORD_GUILD", "").split(",")]
 MAX_UPLOAD = 0.5 * 1024 * 1024
 
 lobbies = Lobbies(time(), None)
@@ -42,6 +43,15 @@ def get_temp_filename(ext: str) -> str:
 def is_supported(filename: str) -> bool:
     extensions = ["fleet", "missile", "ship"]
     return any(filename.endswith(extension) for extension in extensions)
+
+
+def get_inactive_guilds() -> None:
+    inactive_guilds = fetch_inactive_guilds(connection)
+    logging.info(f"Protected guilds: {DISCORD_GUILDS}")
+    logging.info(f"Inactive guilds: {len(inactive_guilds)}")
+    for guild, last_used in inactive_guilds:
+        logging.info(f"Inactive guild {guild} (last used on {last_used})")
+    return [guild for guild, _ in inactive_guilds if guild not in DISCORD_GUILDS]
 
 
 async def process_file(message: Message, xml_data: str, filename: str, with_fleet_file: bool):
@@ -108,7 +118,7 @@ async def process_workshops(message: Message):
         await process_workshop(message, workshop_id)
 
 
-async def process_lobby_data(message: Message):
+def process_lobby_data(message: Message):
     """Extract and process lobby data from subscribed channel."""
     logging.debug("Checking incoming message")
     if not len(message.content):
@@ -129,11 +139,17 @@ async def process_interaction(ctx: discord.ApplicationContext, reply: str, timeo
 
 
 @bot.event
-async def on_ready():
+async def on_ready() -> None:
     logging.info("Discord bot initialized")
+    inactive_guilds = get_inactive_guilds()
     for guild in bot.guilds:
+        if guild.id in inactive_guilds:
+            logging.info(f"Leaving inactive guild: {guild.name} (id: {guild.id})")
+            await guild.leave()
+            continue
         logging.info(f"Connected to the guild: {guild.name} (id: {guild.id})")
-    status_changer.start()
+    logging.info(f"Bot is connected to {len(bot.guilds)} guilds")
+    await status_changer.start()
 
 
 @bot.event
@@ -141,28 +157,28 @@ async def on_message(message: discord.Message):
     if message.author == bot.user:
         return
     if message.channel.id == DISCORD_CHANNEL and message.author.bot:
-        await process_lobby_data(message)
+        process_lobby_data(message)
     else:
         await process_workshops(message)
         await process_uploads(message)
 
 
 @bot.slash_command(name="wiki")
-async def wiki_action(ctx: discord.ApplicationContext, *, keywords: str):
+async def wiki_action(ctx: discord.ApplicationContext, *, keywords: str) -> None:
     """Search N:FC wiki data dumps provided by @Alexbay218#0295"""
     entity = wiki_db.get(keywords)
     await process_interaction(ctx, entity.text)
 
 
 @bot.slash_command(name="lobbies")
-async def lobbies_action(ctx: discord.ApplicationContext):
+async def lobbies_action(ctx: discord.ApplicationContext) -> None:
     """Report number of lobbies in the game (semi-live data provided by volunteers)."""
     global lobbies
     await process_interaction(ctx, str(lobbies))
 
 
 @bot.slash_command(name="stats")
-async def stats_action(ctx: discord.ApplicationContext, last_days: int):
+async def stats_action(ctx: discord.ApplicationContext, last_days: int) -> None:
     """Show basic usage statistics."""
     last_days = max(1, min(last_days, 30))
     guilds_stats = fetch_usage_servers(connection, last_days)
@@ -170,7 +186,7 @@ async def stats_action(ctx: discord.ApplicationContext, last_days: int):
 
 
 @tasks.loop(seconds=60.0)
-async def status_changer():
+async def status_changer() -> None:
     player_count = get_player_count()
     name = f"{player_count!s} fleets"
     if player_count == -1:
@@ -183,7 +199,7 @@ async def status_changer():
     await bot.change_presence(activity=activity)
 
 
-def start():
+def start() -> None:
     bot.run(DISCORD_TOKEN)
 
 

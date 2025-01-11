@@ -337,7 +337,7 @@ class Fleet(Named, Printable):
 
     @property
     def ship_list(self) -> str:
-        longest_name = max([len(ship.name) for ship in self.ships])
+        longest_name = max(len(ship.name) for ship in self.ships)
         ship_list = [f"{ship.name.rjust(longest_name)} : {ship.hull} [{ship.tags}]" for ship in self.ships]
         return f"{self.title}:\n```yaml\n" + "\n".join(ship_list) + "\n```"
 
@@ -345,7 +345,7 @@ class Fleet(Named, Printable):
     def missile_list(self) -> str:
         if not self._missiles:
             return ""
-        longest_name = max([len(missile.full_name) for missile in self.missiles])
+        longest_name = max(len(missile.full_name) for missile in self.missiles)
         missile_list = [
             f"{missile.full_name.rjust(longest_name)} : {missile.description} [{missile.cost}pts]"
             for missile in self.missiles
