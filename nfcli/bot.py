@@ -41,7 +41,7 @@ def get_temp_filename(ext: str) -> str:
 
 
 def is_supported(filename: str) -> bool:
-    extensions = ["fleet", "missile", "ship"]
+    extensions = ["craft", "fleet", "missile", "ship"]
     return any(filename.endswith(extension) for extension in extensions)
 
 
@@ -84,7 +84,7 @@ async def process_uploads(message: Message):
     if invalid_files:
         await message.reply(
             "Some files could not be parsed as they were too big to fit in my small brain."
-            f"\nPlease upload files no larger than {round(MAX_UPLOAD/1024,0)}KB."
+            f"\nPlease upload files no larger than {round(MAX_UPLOAD / 1024, 0)}KB."
         )
     if valid_files and message.guild is not None:
         insert_usage_data(connection, message.guild.id, message.author.id, files)

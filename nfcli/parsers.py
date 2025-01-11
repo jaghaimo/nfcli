@@ -5,7 +5,7 @@ import xmltodict
 
 from nfcli import strip_tags
 from nfcli.data import Components, Hulls, Munitions, Tags
-from nfcli.models import Content, Fleet, Missile, Ship, Socket
+from nfcli.models import Content, Craft, Fleet, Missile, Ship, Socket
 from nfcli.printers import Printable
 
 
@@ -66,12 +66,28 @@ def get_missile(missile_data: dict) -> Missile:
     )
 
 
+def get_craft(craft_data: dict) -> Craft:
+    return Craft(
+        craft_data["DesignationSuffix"],
+        craft_data["Nickname"],
+        strip_tags(craft_data["LongDescription"]),
+        int(craft_data["Cost"]),
+        craft_data["FrameKey"],
+    )
+
+
 def parse_mods(xml_data: str) -> list[str]:
     xmld = xmltodict.parse(xml_data, force_list=("unsignedLong"))
     _, entity = xmld.popitem()
     mod_deps_node = entity.get("ModDependencies") or {}
     mod_deps = mod_deps_node.get("unsignedLong") or []
     return list(mod_deps)
+
+
+def parse_craft(xml_data: str) -> Craft:
+    xmld = xmltodict.parse(xml_data)
+    craft_template: dict = xmld.get("CraftTemplate")  # type: ignore
+    return get_craft(craft_template)
 
 
 def parse_missile(xml_data: str) -> Missile:
@@ -118,5 +134,7 @@ def parse_any(filename: str, xml_data: str) -> Printable:
         return parse_ship(xml_data)
     elif filename.endswith("missile"):
         return parse_missile(xml_data)
+    elif filename.endswith("craft"):
+        return parse_craft(xml_data)
 
     raise ValueError("Unrecognizable file format")
