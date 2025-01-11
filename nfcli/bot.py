@@ -16,12 +16,19 @@ from nfcli import determine_output_png, init_logger, load_path
 from nfcli.models import Lobbies
 from nfcli.parsers import parse_any, parse_mods
 from nfcli.printers import Printer
-from nfcli.sqlite import create_connection, fetch_inactive_guilds, fetch_usage_servers, insert_usage_data
+from nfcli.sqlite import (
+    create_connection,
+    delete_usage_data,
+    fetch_inactive_guilds,
+    fetch_usage_servers,
+    insert_usage_data,
+)
 from nfcli.steam import get_player_count, get_workshop_files, get_workshop_id
 from nfcli.wiki import Wiki
 
 load_dotenv()
 
+DISCORD_GRACE_TIME = 365
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 DISCORD_CHANNEL = int(os.getenv("DISCORD_CHANNEL"))
 DISCORD_GUILDS = [int(guild) for guild in os.getenv("DISCORD_GUILD", "").split(",")]
@@ -46,7 +53,7 @@ def is_supported(filename: str) -> bool:
 
 
 def get_inactive_guilds() -> None:
-    inactive_guilds = fetch_inactive_guilds(connection)
+    inactive_guilds = fetch_inactive_guilds(connection, cut_off_days=DISCORD_GRACE_TIME)
     logging.info(f"Protected guilds: {DISCORD_GUILDS}")
     logging.info(f"Inactive guilds: {len(inactive_guilds)}")
     for guild, last_used in inactive_guilds:
@@ -148,6 +155,7 @@ async def on_ready() -> None:
             await guild.leave()
             continue
         logging.info(f"Connected to the guild: {guild.name} (id: {guild.id})")
+    delete_usage_data(connection, inactive_guilds)
     logging.info(f"Bot is connected to {len(bot.guilds)} guilds")
     await status_changer.start()
 

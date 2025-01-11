@@ -75,12 +75,22 @@ def init_database(connection: Connection):
     execute_query(connection, create_table_usage)
 
 
-def insert_usage_data(connection: Connection, guild: int, user: int, files: set[Attachment]):
+def insert_usage_data(connection: Connection, guild: int, user: int, files: set[Attachment]) -> None:
     extensions = [file.filename.split(".")[-1] for file in files]
     counter = Counter(extensions)
     insert_lobby_data = "INSERT INTO usage (guild, user, fleets, ships, missiles) VALUES (?, ?, ?, ?, ?)"
     cursor = connection.cursor()
     cursor.execute(insert_lobby_data, (guild, user, counter["fleet"], counter["ship"], counter["missile"]))
+    connection.commit()
+
+
+def delete_usage_data(connection: Connection, guilds: list[int]) -> None:
+    if not guilds:
+        return
+    insert_lobby_data = "DELETE FROM usage WHERE guild = ?"
+    cursor = connection.cursor()
+    for guild in guilds:
+        cursor.execute(insert_lobby_data, (guild,))
     connection.commit()
 
 
@@ -105,7 +115,7 @@ def fetch_usage_users(connection: Connection, days: int = 30) -> User:
     return User(*row, days)
 
 
-def fetch_inactive_guilds(connection: Connection, cut_off_days: int = 365) -> list[int, datetime]:
+def fetch_inactive_guilds(connection: Connection, *args, cut_off_days: int) -> list[int, datetime]:
     fetch_inactive_servers = (
         "SELECT guild, MAX(timestamp) AS last_used FROM usage GROUP BY guild"
         f" HAVING last_used < DATETIME('now', '-{cut_off_days} day') ORDER BY last_used"
