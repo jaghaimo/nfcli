@@ -14,7 +14,7 @@ Zircon Squadron is an ambush fleet capable of exceptional burst damage against h
       <SaveID xsi:nil="true" />
       <Key>1f59f501-9669-47a2-9730-826d49aac37a</Key>
       <Name>Top Towards Enemy</Name>
-      <Cost>1193</Cost>
+      <Cost>1195</Cost>
       <Callsign />
       <Number>1095</Number>
       <SymbolOption>0</SymbolOption>
@@ -76,20 +76,20 @@ Zircon Squadron is an ambush fleet capable of exceptional burst damage against h
           <ComponentName>Stock/T30 Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
-          <Key>d3N-B_JnDUKAdVRBJ6nvFQ</Key>
-          <ComponentName>Stock/T30 Cannon</ComponentName>
-        </HullSocket>
-        <HullSocket>
           <Key>xvNT1_DYcUuSpU6rrmL_4A</Key>
           <ComponentName>Stock/T30 Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
-          <Key>t0T4CSAPnEq4rvHAVl84-Q</Key>
+          <Key>d3N-B_JnDUKAdVRBJ6nvFQ</Key>
           <ComponentName>Stock/T30 Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>grYBjxIS3E--lmrqenuK8A</Key>
           <ComponentName>Stock/T81 Plasma Cannon</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>t0T4CSAPnEq4rvHAVl84-Q</Key>
+          <ComponentName>Stock/T30 Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>8pltGexHAEyFL2ljOe0oMQ</Key>
@@ -101,56 +101,67 @@ Zircon Squadron is an ambush fleet capable of exceptional burst damage against h
         </HullSocket>
         <HullSocket>
           <Key>bxvsvg5znk6TqiIKq8H0kg</Key>
+          <ComponentName>Stock/P11 PDT</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>9EF9u0V1eUetleBnkQhHkA</Key>
           <ComponentName>Stock/VLS-1-46 Launcher</ComponentName>
           <ComponentData xsi:type="CellLauncherData">
             <MissileLoad>
               <MagSaveData>
                 <MagazineKey>VwIjgLLK7UaukUUdJnSOJw</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-156 Guardian</MunitionKey>
-                <Quantity>30</Quantity>
+                <Quantity>24</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>1llSyDUuhU-TUMNi9TbZQw</MagazineKey>
                 <MunitionKey>Stock/EA14 Chaff Decoy</MunitionKey>
-                <Quantity>8</Quantity>
+                <Quantity>4</Quantity>
               </MagSaveData>
             </MissileLoad>
           </ComponentData>
-        </HullSocket>
-        <HullSocket>
-          <Key>9EF9u0V1eUetleBnkQhHkA</Key>
-          <ComponentName>Stock/P11 PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>I68tNng-K0yG-AoUx0HcSw</Key>
           <ComponentName>Stock/P11 PDT</ComponentName>
         </HullSocket>
         <HullSocket>
-          <Key>Sb5-VSuwlkWpT6ViRiJ3vg</Key>
-          <ComponentName>Stock/P11 PDT</ComponentName>
+          <Key>6ZiODnoXqkaNWvaqyGjnwg</Key>
+          <ComponentName>Stock/T20 Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
-          <Key>6ZiODnoXqkaNWvaqyGjnwg</Key>
-          <ComponentName>Stock/P11 PDT</ComponentName>
+          <Key>Sb5-VSuwlkWpT6ViRiJ3vg</Key>
+          <ComponentName>Stock/T20 Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>87PSgg9GREmGU9MIRAXXhg</Key>
-          <ComponentName>Stock/P20 Flak PDT</ComponentName>
+          <ComponentName>Stock/S2 Bandit Launcher</ComponentName>
+          <ComponentData xsi:type="TurretedLauncherData">
+            <MissileLoad />
+            <FireOutsideLimits>true</FireOutsideLimits>
+          </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>VDQhZPo-rkWkzwozat27fw</Key>
-          <ComponentName>Stock/P20 Flak PDT</ComponentName>
+          <ComponentName>Stock/S2 Bandit Launcher</ComponentName>
+          <ComponentData xsi:type="TurretedLauncherData">
+            <MissileLoad />
+            <FireOutsideLimits>true</FireOutsideLimits>
+          </ComponentData>
+        </HullSocket>
+        <HullSocket>
+          <Key>JZ1htG-iLE-VFOBegJXCJw</Key>
+          <ComponentName>Stock/P11 PDT</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>eBuzS9wNkECmPqJ9vVsa0A</Key>
+          <ComponentName>Stock/P11 PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>y1Cs8LR0KUyCKUAJBIOyOg</Key>
           <ComponentName>Stock/Citadel Magazine</ComponentName>
           <ComponentData xsi:type="BulkMagazineData">
             <Load>
-              <MagSaveData>
-                <MagazineKey>ogtbsthdF0OBVnxwIUkitg</MagazineKey>
-                <MunitionKey>Stock/400mm Plasma Ampoule</MunitionKey>
-                <Quantity>450</Quantity>
-              </MagSaveData>
               <MagSaveData>
                 <MagazineKey>bDep5SbqJEmRv17gxcMW9g</MagazineKey>
                 <MunitionKey>Stock/100mm HE Shell</MunitionKey>
@@ -159,22 +170,32 @@ Zircon Squadron is an ambush fleet capable of exceptional burst damage against h
               <MagSaveData>
                 <MagazineKey>uGTo8atGiUiSD_oyYhKfZQ</MagazineKey>
                 <MunitionKey>Stock/100mm AP Shell</MunitionKey>
-                <Quantity>1500</Quantity>
+                <Quantity>750</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>pGtbwKNT2k2UKdQhkktKQA</MagazineKey>
                 <MunitionKey>Stock/100mm HE-HC Shell</MunitionKey>
-                <Quantity>2000</Quantity>
+                <Quantity>1750</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>ruQYAbg1m0yNWSX01CEUQA</MagazineKey>
+                <MagazineKey>tL4L0xy72Emb4nMFs7pKVQ</MagazineKey>
+                <MunitionKey>Stock/100mm Flak</MunitionKey>
+                <Quantity>1000</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>SVshAw7zY0Wv3ZsM8Pa4Pw</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-200 Scion AB</MunitionKey>
+                <Quantity>4</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>_qNUR-15FU2zCG7aYX8-Dw</MagazineKey>
                 <MunitionKey>Stock/20mm Slug</MunitionKey>
                 <Quantity>20000</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>Vau82Cds_UqwXfigjz8hPQ</MagazineKey>
-                <MunitionKey>Stock/Flak Round</MunitionKey>
-                <Quantity>450</Quantity>
+                <MagazineKey>tFqnHabaEk-Jb9FsHZi55A</MagazineKey>
+                <MunitionKey>Stock/400mm Plasma Ampoule</MunitionKey>
+                <Quantity>300</Quantity>
               </MagSaveData>
             </Load>
           </ComponentData>
@@ -196,20 +217,55 @@ Zircon Squadron is an ambush fleet capable of exceptional burst damage against h
           <ComponentName>Stock/Reinforced DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
-          <Key>6LpDL27QuEW0PZCm35Nx5w</Key>
-          <ComponentName>Stock/Berthing</ComponentName>
+          <Key>QIOFQpQSKESIdNzf_JEFyA</Key>
+          <ComponentName>Stock/Rapid DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
-          <Key>QIOFQpQSKESIdNzf_JEFyA</Key>
-          <ComponentName>Stock/Small DC Locker</ComponentName>
+          <Key>6LpDL27QuEW0PZCm35Nx5w</Key>
+          <ComponentName>Stock/Reinforced Magazine</ComponentName>
+          <ComponentData xsi:type="BulkMagazineData">
+            <Load>
+              <MagSaveData>
+                <MagazineKey>3NDgAQv06EWP_Gnr7oDcNg</MagazineKey>
+                <MunitionKey>Stock/100mm HE Shell</MunitionKey>
+                <Quantity>500</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>AQUkk9OdSECjEf1WShARTA</MagazineKey>
+                <MunitionKey>Stock/100mm AP Shell</MunitionKey>
+                <Quantity>250</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>R6wBiqR2FUKno34vLNdn_w</MagazineKey>
+                <MunitionKey>Stock/100mm Flak</MunitionKey>
+                <Quantity>500</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>v2LuknfmIEucNFGYxZiErA</MagazineKey>
+                <MunitionKey>Stock/100mm HE-HC Shell</MunitionKey>
+                <Quantity>1250</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>4409jOYBLE2V-7R4FOt90Q</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-200 Scion AB</MunitionKey>
+                <Quantity>2</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>8XgQMmddt0-iEhHUT1R-SA</MagazineKey>
+                <MunitionKey>Stock/20mm Slug</MunitionKey>
+                <Quantity>12000</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>Zz2yEruI8k-WCgqpdx-4kw</MagazineKey>
+                <MunitionKey>Stock/400mm Plasma Ampoule</MunitionKey>
+                <Quantity>150</Quantity>
+              </MagSaveData>
+            </Load>
+          </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>FVcPIcV_00eu62NQQK3oLg</Key>
           <ComponentName>Stock/Basic CIC</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>1FrTJ5o850ynlq4dRDmMbA</Key>
-          <ComponentName>Stock/Small DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>vOzzHo4KfE60wZ3Q1s38GA</Key>
@@ -245,15 +301,6 @@ Zircon Squadron is an ambush fleet capable of exceptional burst damage against h
         </HullSocket>
       </SocketMap>
       <WeaponGroups>
-        <WepGroup Name="GUN">
-          <MemberKeys>
-            <string>E9IMUD_Uz0661-nYgJh4Mg</string>
-            <string>auQ7ijGeX0evdikZQeBxTg</string>
-            <string>d3N-B_JnDUKAdVRBJ6nvFQ</string>
-            <string>xvNT1_DYcUuSpU6rrmL_4A</string>
-            <string>t0T4CSAPnEq4rvHAVl84-Q</string>
-          </MemberKeys>
-        </WepGroup>
         <WepGroup Name="PLASMA">
           <MemberKeys>
             <string>8pltGexHAEyFL2ljOe0oMQ</string>
@@ -261,63 +308,78 @@ Zircon Squadron is an ambush fleet capable of exceptional burst damage against h
             <string>grYBjxIS3E--lmrqenuK8A</string>
           </MemberKeys>
         </WepGroup>
+        <WepGroup Name="SECONDARY GUN">
+          <MemberKeys>
+            <string>6ZiODnoXqkaNWvaqyGjnwg</string>
+            <string>Sb5-VSuwlkWpT6ViRiJ3vg</string>
+          </MemberKeys>
+        </WepGroup>
+        <WepGroup Name="PRIMARY GUN">
+          <MemberKeys>
+            <string>E9IMUD_Uz0661-nYgJh4Mg</string>
+            <string>auQ7ijGeX0evdikZQeBxTg</string>
+            <string>xvNT1_DYcUuSpU6rrmL_4A</string>
+            <string>d3N-B_JnDUKAdVRBJ6nvFQ</string>
+            <string>t0T4CSAPnEq4rvHAVl84-Q</string>
+          </MemberKeys>
+        </WepGroup>
       </WeaponGroups>
       <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
     </Ship>
     <Ship>
       <SaveID xsi:nil="true" />
-      <Key>839f0a72-ff11-4cdc-a35a-2bacd744874c</Key>
+      <Key>2098bdd2-55ec-4248-a8e2-923b381c82ac</Key>
       <Name>This Side Up</Name>
-      <Cost>1193</Cost>
+      <Cost>1195</Cost>
       <Callsign />
-      <Number>1096</Number>
+      <Number>1198</Number>
       <SymbolOption>0</SymbolOption>
       <HullType>Stock/Bulk Hauler</HullType>
       <HullConfig xsi:type="RandomHullConfiguration">
         <PrimaryStructure>
           <SegmentConfiguration>
-            <Key>29eb9c63-6c47-40f2-8f46-4ed4da8d3386</Key>
+            <Key>38e7a28f-1b06-4b73-98ee-f03d1d8a81fe</Key>
             <Dressing>
               <int>1</int>
               <int>1</int>
-              <int>0</int>
-            </Dressing>
-          </SegmentConfiguration>
-          <SegmentConfiguration>
-            <Key>e2c11e02-b770-495e-a3c2-3dc998eac5a6</Key>
-            <Dressing>
-              <int>0</int>
-              <int>1</int>
-              <int>0</int>
-              <int>1</int>
-              <int>1</int>
-              <int>1</int>
-              <int>0</int>
               <int>1</int>
             </Dressing>
           </SegmentConfiguration>
           <SegmentConfiguration>
-            <Key>a8bf77b9-b7e3-4498-bf91-d3e777a7f688</Key>
+            <Key>d4c9a66d-81e6-49ee-9b33-82d7a1522bbf</Key>
+            <Dressing>
+              <int>0</int>
+              <int>1</int>
+              <int>1</int>
+              <int>1</int>
+              <int>1</int>
+              <int>0</int>
+              <int>1</int>
+            </Dressing>
+          </SegmentConfiguration>
+          <SegmentConfiguration>
+            <Key>78d72a9a-893c-41c6-bddd-f198dfcf77ee</Key>
             <Dressing />
           </SegmentConfiguration>
         </PrimaryStructure>
         <SecondaryStructure>
           <SecondaryStructureConfig>
-            <Key>59344a67-9e7b-43df-9f7c-505ad9a0ab87</Key>
-            <Segment>0</Segment>
+            <Key>42d07c1a-156b-4057-aaca-7a2024751423</Key>
+            <Segment>2</Segment>
             <SnapPoint>0</SnapPoint>
           </SecondaryStructureConfig>
         </SecondaryStructure>
         <HullTint>
-          <r>0.5282286</r>
-          <g>0.5282286</g>
-          <b>0.5282286</b>
+          <r>0.4215203</r>
+          <g>0.4215203</g>
+          <b>0.4215203</b>
           <a>1</a>
         </HullTint>
         <TextureVariation>
-          <x>963.1515</x>
-          <y>461.39856</y>
-          <z>99.65262</z>
+          <x>771.0285</x>
+          <y>639.4563</y>
+          <z>-905.5281</z>
         </TextureVariation>
       </HullConfig>
       <SocketMap>
@@ -330,11 +392,11 @@ Zircon Squadron is an ambush fleet capable of exceptional burst damage against h
           <ComponentName>Stock/T30 Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
-          <Key>d3N-B_JnDUKAdVRBJ6nvFQ</Key>
+          <Key>xvNT1_DYcUuSpU6rrmL_4A</Key>
           <ComponentName>Stock/T30 Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
-          <Key>xvNT1_DYcUuSpU6rrmL_4A</Key>
+          <Key>d3N-B_JnDUKAdVRBJ6nvFQ</Key>
           <ComponentName>Stock/T30 Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
@@ -346,34 +408,30 @@ Zircon Squadron is an ambush fleet capable of exceptional burst damage against h
           <ComponentName>Stock/T81 Plasma Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
-          <Key>8pltGexHAEyFL2ljOe0oMQ</Key>
-          <ComponentName>Stock/T81 Plasma Cannon</ComponentName>
-        </HullSocket>
-        <HullSocket>
           <Key>tcQfj6XOHUWFSAx_W0cc1A</Key>
           <ComponentName>Stock/T81 Plasma Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
-          <Key>bxvsvg5znk6TqiIKq8H0kg</Key>
+          <Key>8pltGexHAEyFL2ljOe0oMQ</Key>
+          <ComponentName>Stock/T81 Plasma Cannon</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>9EF9u0V1eUetleBnkQhHkA</Key>
           <ComponentName>Stock/VLS-1-46 Launcher</ComponentName>
           <ComponentData xsi:type="CellLauncherData">
             <MissileLoad>
               <MagSaveData>
                 <MagazineKey>VwIjgLLK7UaukUUdJnSOJw</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-156 Guardian</MunitionKey>
-                <Quantity>30</Quantity>
+                <Quantity>24</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>1llSyDUuhU-TUMNi9TbZQw</MagazineKey>
                 <MunitionKey>Stock/EA14 Chaff Decoy</MunitionKey>
-                <Quantity>8</Quantity>
+                <Quantity>4</Quantity>
               </MagSaveData>
             </MissileLoad>
           </ComponentData>
-        </HullSocket>
-        <HullSocket>
-          <Key>9EF9u0V1eUetleBnkQhHkA</Key>
-          <ComponentName>Stock/P11 PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>I68tNng-K0yG-AoUx0HcSw</Key>
@@ -381,30 +439,45 @@ Zircon Squadron is an ambush fleet capable of exceptional burst damage against h
         </HullSocket>
         <HullSocket>
           <Key>Sb5-VSuwlkWpT6ViRiJ3vg</Key>
-          <ComponentName>Stock/P11 PDT</ComponentName>
+          <ComponentName>Stock/T20 Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>6ZiODnoXqkaNWvaqyGjnwg</Key>
-          <ComponentName>Stock/P11 PDT</ComponentName>
+          <ComponentName>Stock/T20 Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>87PSgg9GREmGU9MIRAXXhg</Key>
-          <ComponentName>Stock/P20 Flak PDT</ComponentName>
+          <ComponentName>Stock/S2 Bandit Launcher</ComponentName>
+          <ComponentData xsi:type="TurretedLauncherData">
+            <MissileLoad />
+            <FireOutsideLimits>true</FireOutsideLimits>
+          </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>VDQhZPo-rkWkzwozat27fw</Key>
-          <ComponentName>Stock/P20 Flak PDT</ComponentName>
+          <ComponentName>Stock/S2 Bandit Launcher</ComponentName>
+          <ComponentData xsi:type="TurretedLauncherData">
+            <MissileLoad />
+            <FireOutsideLimits>true</FireOutsideLimits>
+          </ComponentData>
+        </HullSocket>
+        <HullSocket>
+          <Key>PRLtjo7PfECpLy8CGW9T8A</Key>
+          <ComponentName>Stock/P11 PDT</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>eBuzS9wNkECmPqJ9vVsa0A</Key>
+          <ComponentName>Stock/P11 PDT</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>JZ1htG-iLE-VFOBegJXCJw</Key>
+          <ComponentName>Stock/P11 PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>y1Cs8LR0KUyCKUAJBIOyOg</Key>
           <ComponentName>Stock/Citadel Magazine</ComponentName>
           <ComponentData xsi:type="BulkMagazineData">
             <Load>
-              <MagSaveData>
-                <MagazineKey>ogtbsthdF0OBVnxwIUkitg</MagazineKey>
-                <MunitionKey>Stock/400mm Plasma Ampoule</MunitionKey>
-                <Quantity>450</Quantity>
-              </MagSaveData>
               <MagSaveData>
                 <MagazineKey>bDep5SbqJEmRv17gxcMW9g</MagazineKey>
                 <MunitionKey>Stock/100mm HE Shell</MunitionKey>
@@ -413,22 +486,32 @@ Zircon Squadron is an ambush fleet capable of exceptional burst damage against h
               <MagSaveData>
                 <MagazineKey>uGTo8atGiUiSD_oyYhKfZQ</MagazineKey>
                 <MunitionKey>Stock/100mm AP Shell</MunitionKey>
-                <Quantity>1500</Quantity>
+                <Quantity>750</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>pGtbwKNT2k2UKdQhkktKQA</MagazineKey>
                 <MunitionKey>Stock/100mm HE-HC Shell</MunitionKey>
-                <Quantity>2000</Quantity>
+                <Quantity>1750</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>ruQYAbg1m0yNWSX01CEUQA</MagazineKey>
+                <MagazineKey>tL4L0xy72Emb4nMFs7pKVQ</MagazineKey>
+                <MunitionKey>Stock/100mm Flak</MunitionKey>
+                <Quantity>1000</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>SVshAw7zY0Wv3ZsM8Pa4Pw</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-200 Scion AB</MunitionKey>
+                <Quantity>4</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>_qNUR-15FU2zCG7aYX8-Dw</MagazineKey>
                 <MunitionKey>Stock/20mm Slug</MunitionKey>
                 <Quantity>20000</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>Vau82Cds_UqwXfigjz8hPQ</MagazineKey>
-                <MunitionKey>Stock/Flak Round</MunitionKey>
-                <Quantity>450</Quantity>
+                <MagazineKey>tFqnHabaEk-Jb9FsHZi55A</MagazineKey>
+                <MunitionKey>Stock/400mm Plasma Ampoule</MunitionKey>
+                <Quantity>300</Quantity>
               </MagSaveData>
             </Load>
           </ComponentData>
@@ -442,28 +525,63 @@ Zircon Squadron is an ambush fleet capable of exceptional burst damage against h
           <ComponentName>Stock/Large DC Storage</ComponentName>
         </HullSocket>
         <HullSocket>
-          <Key>T9TN0ZYumUaCxcSRjO_qTw</Key>
-          <ComponentName>Stock/Reinforced CIC</ComponentName>
-        </HullSocket>
-        <HullSocket>
           <Key>T4d-8WnA_UiHSJh6PXiXpA</Key>
           <ComponentName>Stock/Reinforced DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
+          <Key>T9TN0ZYumUaCxcSRjO_qTw</Key>
+          <ComponentName>Stock/Reinforced CIC</ComponentName>
+        </HullSocket>
+        <HullSocket>
           <Key>6LpDL27QuEW0PZCm35Nx5w</Key>
-          <ComponentName>Stock/Berthing</ComponentName>
+          <ComponentName>Stock/Reinforced Magazine</ComponentName>
+          <ComponentData xsi:type="BulkMagazineData">
+            <Load>
+              <MagSaveData>
+                <MagazineKey>3NDgAQv06EWP_Gnr7oDcNg</MagazineKey>
+                <MunitionKey>Stock/100mm HE Shell</MunitionKey>
+                <Quantity>500</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>AQUkk9OdSECjEf1WShARTA</MagazineKey>
+                <MunitionKey>Stock/100mm AP Shell</MunitionKey>
+                <Quantity>250</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>R6wBiqR2FUKno34vLNdn_w</MagazineKey>
+                <MunitionKey>Stock/100mm Flak</MunitionKey>
+                <Quantity>500</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>v2LuknfmIEucNFGYxZiErA</MagazineKey>
+                <MunitionKey>Stock/100mm HE-HC Shell</MunitionKey>
+                <Quantity>1250</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>4409jOYBLE2V-7R4FOt90Q</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-200 Scion AB</MunitionKey>
+                <Quantity>2</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>8XgQMmddt0-iEhHUT1R-SA</MagazineKey>
+                <MunitionKey>Stock/20mm Slug</MunitionKey>
+                <Quantity>12000</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>Zz2yEruI8k-WCgqpdx-4kw</MagazineKey>
+                <MunitionKey>Stock/400mm Plasma Ampoule</MunitionKey>
+                <Quantity>150</Quantity>
+              </MagSaveData>
+            </Load>
+          </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>QIOFQpQSKESIdNzf_JEFyA</Key>
-          <ComponentName>Stock/Small DC Locker</ComponentName>
+          <ComponentName>Stock/Rapid DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>FVcPIcV_00eu62NQQK3oLg</Key>
           <ComponentName>Stock/Basic CIC</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>1FrTJ5o850ynlq4dRDmMbA</Key>
-          <ComponentName>Stock/Small DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>vOzzHo4KfE60wZ3Q1s38GA</Key>
@@ -486,28 +604,19 @@ Zircon Squadron is an ambush fleet capable of exceptional burst damage against h
           <ComponentName>Stock/Light Civilian Reactor</ComponentName>
         </HullSocket>
         <HullSocket>
+          <Key>MQyTgOLGCkyeljdvbkkFDA</Key>
+          <ComponentName>Stock/Rapid-Cycle Cradle</ComponentName>
+        </HullSocket>
+        <HullSocket>
           <Key>M3mc7A4WOU-2fq5XgRSECA</Key>
           <ComponentName>Stock/Rapid-Cycle Cradle</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>S-rQo19r20K0L0PRer3yMw</Key>
-          <ComponentName>Stock/Rapid-Cycle Cradle</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>MQyTgOLGCkyeljdvbkkFDA</Key>
           <ComponentName>Stock/Ithaca Bridgemaster</ComponentName>
         </HullSocket>
       </SocketMap>
       <WeaponGroups>
-        <WepGroup Name="GUN">
-          <MemberKeys>
-            <string>E9IMUD_Uz0661-nYgJh4Mg</string>
-            <string>auQ7ijGeX0evdikZQeBxTg</string>
-            <string>d3N-B_JnDUKAdVRBJ6nvFQ</string>
-            <string>xvNT1_DYcUuSpU6rrmL_4A</string>
-            <string>t0T4CSAPnEq4rvHAVl84-Q</string>
-          </MemberKeys>
-        </WepGroup>
         <WepGroup Name="PLASMA">
           <MemberKeys>
             <string>8pltGexHAEyFL2ljOe0oMQ</string>
@@ -515,22 +624,30 @@ Zircon Squadron is an ambush fleet capable of exceptional burst damage against h
             <string>grYBjxIS3E--lmrqenuK8A</string>
           </MemberKeys>
         </WepGroup>
+        <WepGroup Name="SECONDARY GUN">
+          <MemberKeys>
+            <string>6ZiODnoXqkaNWvaqyGjnwg</string>
+            <string>Sb5-VSuwlkWpT6ViRiJ3vg</string>
+          </MemberKeys>
+        </WepGroup>
+        <WepGroup Name="PRIMARY GUN">
+          <MemberKeys>
+            <string>E9IMUD_Uz0661-nYgJh4Mg</string>
+            <string>auQ7ijGeX0evdikZQeBxTg</string>
+            <string>xvNT1_DYcUuSpU6rrmL_4A</string>
+            <string>d3N-B_JnDUKAdVRBJ6nvFQ</string>
+            <string>t0T4CSAPnEq4rvHAVl84-Q</string>
+          </MemberKeys>
+        </WepGroup>
       </WeaponGroups>
-      <InitialFormation>
-        <GuideKey>1f59f501-9669-47a2-9730-826d49aac37a</GuideKey>
-        <RelativePosition>
-          <x>-38.8222466</x>
-          <y>39.5597153</y>
-          <z>0.020324707</z>
-        </RelativePosition>
-      </InitialFormation>
       <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
     </Ship>
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>6eaf921c-a88e-4a3b-82c6-7a9c51dddbec</Key>
       <Name>Tyrannical Gaze</Name>
-      <Cost>614</Cost>
+      <Cost>610</Cost>
       <Callsign />
       <Number>199</Number>
       <SymbolOption>0</SymbolOption>
@@ -552,7 +669,7 @@ Zircon Squadron is an ambush fleet capable of exceptional burst damage against h
               <MagSaveData>
                 <MagazineKey>MaCqYBzb0UiHaOH75yukAg</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-156 Guardian</MunitionKey>
-                <Quantity>15</Quantity>
+                <Quantity>13</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>kBDHL4IgAUqPYWOyzJnpiA</MagazineKey>
@@ -563,14 +680,6 @@ Zircon Squadron is an ambush fleet capable of exceptional burst damage against h
           </ComponentData>
         </HullSocket>
         <HullSocket>
-          <Key>gb6_3kWBY0KlEWeex3ruDg</Key>
-          <ComponentName>Stock/P20 Flak PDT</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>_y-Bd-EWjUeMIrmzG3UxvQ</Key>
-          <ComponentName>Stock/P20 Flak PDT</ComponentName>
-        </HullSocket>
-        <HullSocket>
           <Key>gDQghm5iik2syYcoJqUPFg</Key>
           <ComponentName>Stock/Basic CIC</ComponentName>
         </HullSocket>
@@ -579,25 +688,12 @@ Zircon Squadron is an ambush fleet capable of exceptional burst damage against h
           <ComponentName>Stock/Jury-Rigged Reactor</ComponentName>
         </HullSocket>
         <HullSocket>
-          <Key>TTM8O-MUDky06__LwvSo8w</Key>
-          <ComponentName>Stock/Reinforced Magazine</ComponentName>
-          <ComponentData xsi:type="BulkMagazineData">
-            <Load>
-              <MagSaveData>
-                <MagazineKey>AS2fdIsGmUiNkdjhRSJUpA</MagazineKey>
-                <MunitionKey>Stock/Flak Round</MunitionKey>
-                <Quantity>375</Quantity>
-              </MagSaveData>
-            </Load>
-          </ComponentData>
-        </HullSocket>
-        <HullSocket>
           <Key>rGVFgJ8GyUePoRkz33c1sw</Key>
           <ComponentName>Stock/Small DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>_hUvj899GkWP0bnjDN1ODw</Key>
-          <ComponentName>Stock/Berthing</ComponentName>
+          <ComponentName>Stock/Jury-Rigged Reactor</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>N4KIOsNqeUGVAUrx5OW3DQ</Key>
@@ -613,7 +709,7 @@ Zircon Squadron is an ambush fleet capable of exceptional burst damage against h
         </HullSocket>
         <HullSocket>
           <Key>HvdEBsnpUUypPN4uW67paQ</Key>
-          <ComponentName>Stock/Light Civilian Reactor</ComponentName>
+          <ComponentName>Stock/Track Correlator</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>iDdlfFwKkUO9HbumzymceA</Key>
@@ -634,6 +730,7 @@ Zircon Squadron is an ambush fleet capable of exceptional burst damage against h
       </SocketMap>
       <WeaponGroups />
       <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
     </Ship>
   </Ships>
   <MissileTypes>
@@ -644,19 +741,23 @@ Zircon Squadron is an ambush fleet capable of exceptional burst damage against h
       <LongDescription>The &lt;noparse&gt;SGM-156 Guardian&lt;/noparse&gt; is a size 1 direct guidance missile.  It is based on the SGM-1 body, which is a nimble general-purpose missile.  This missile will deliver a Proximity Fuze, High Explosive, Blast Fragmentation warhead.  It homes in on its target using an Active Radar seeker.
 
 Control Method: DIRECT
-Targeting Modes:
-	&lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+Targeting Modes: &lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+
 Primary Seeker: ACTIVE &lt;color=#3BC81E&gt;RADAR&lt;/color&gt;
 
-250 m/s for 2,995 m, top speed in 0.4 s
+Speed: 250 m/s
+Distance: 2,995 m
+Top Speed In: 0.4 s
+Turn Rate: 9.9 G
 Terminal Maneuvers: None
 
-Proximity Fuze, High Explosive, Blast Fragmentation
-Armor: 2cm   Component: 65hp
+Warhead: Proximity Fuze, High Explosive, Blast Fragmentation
+Armor: 0.21cm
+Component: 65.34hp
 Blast Radius: 47 m
 
-Body Integrity: 10 
-Wall Thickness: 0.5
+Body Integrity: 10
+Wall Thickness: 0.05
 Programming Time: 6 s
 Radar Signature Bonus: 100 %
 Boost-Phase Duration: 3 s
@@ -698,7 +799,7 @@ Failure Rate: 0 %</LongDescription>
             <Maneuvers>None</Maneuvers>
             <DefensiveDoctrine>
               <TargetSizeMask>12</TargetSizeMask>
-              <TargetType>Hybrid</TargetType>
+              <TargetType>All</TargetType>
               <TargetSizeOrdering>Descending</TargetSizeOrdering>
               <SalvoSize>1</SalvoSize>
               <FarthestFirst>false</FarthestFirst>
@@ -720,6 +821,107 @@ Failure Rate: 0 %</LongDescription>
               <A>0</A>
               <B>0.3435971</B>
               <C>0.6564029</C>
+            </BalanceValues>
+          </InstalledComponent>
+        </MissileSocket>
+      </Sockets>
+    </MissileTemplate>
+    <MissileTemplate>
+      <Designation>SGM-200</Designation>
+      <Nickname>Scion AB</Nickname>
+      <Description>DIRECT - PSV(&lt;color=#D4211D&gt;WAKE&lt;/color&gt;)/&lt;color=#D3D11F&gt;CMD&lt;/color&gt; - HE FRAG</Description>
+      <LongDescription>The &lt;noparse&gt;SGM-200 Scion AB&lt;/noparse&gt; is a size 2 direct guidance missile.  It is based on the SGM-2 body, which is a flexible mainstay anti-ship missile.  This missile will deliver a Proximity Fuze, High Explosive, Blast Fragmentation warhead.  It homes in on its target using a Passive Wake seeker  If the primary seeker does not find a target or is jammed, it can fall back on command guidance from its launching ship.
+
+Control Method: DIRECT
+Targeting Modes: &lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+
+Primary Seeker: PASSIVE (&lt;color=#D4211D&gt;WAKE&lt;/color&gt;)
+Backup Seeker: COMMAND (&lt;color=#D3D11F&gt;Requires COMMS Enabled&lt;/color&gt;)
+
+Speed: 227 m/s
+Distance: 7,337 m
+Top Speed In: 1.1 s
+Turn Rate: 4.0 G
+Terminal Maneuvers: None
+
+Warhead: Proximity Fuze, High Explosive, Blast Fragmentation
+Armor: 0.44cm
+Component: 139.30hp
+Blast Radius: 99 m
+
+Body Integrity: 30
+Wall Thickness: 0.05
+Programming Time: 8 s
+Radar Signature Bonus: 100 %
+Boost-Phase Duration: 3 s
+Boost-Phase Strafe: 100 %
+Boost-Phase Turn Rate: 100 %
+Failure Rate: 0 %</LongDescription>
+      <Cost>7</Cost>
+      <BodyKey>Stock/SGM-2 Body</BodyKey>
+      <TemplateKey>35b24076-de51-4a79-b5d5-a03c5db3d98b</TemplateKey>
+      <BaseColor>
+        <r>0.07142841</r>
+        <g>0.9999999</g>
+        <b>0</b>
+        <a>1</a>
+      </BaseColor>
+      <StripeColor>
+        <r>0.1773082</r>
+        <g>0.7058824</g>
+        <b>0.129411772</b>
+        <a>1</a>
+      </StripeColor>
+      <Sockets>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="PassiveSeekerSettings">
+            <ComponentKey>Stock/Wake-Homing Seeker</ComponentKey>
+            <Mode>Targeting</Mode>
+            <RejectUnvalidated>false</RejectUnvalidated>
+            <DetectPDTargets>true</DetectPDTargets>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="CommandSeekerSettings">
+            <ComponentKey>Stock/Command Receiver</ComponentKey>
+            <Mode>Targeting</Mode>
+            <RejectUnvalidated>false</RejectUnvalidated>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="DirectGuidanceSettings">
+            <ComponentKey>Stock/Direct Guidance</ComponentKey>
+            <Role>Defensive</Role>
+            <HotLaunch>false</HotLaunch>
+            <SelfDestructOnLost>false</SelfDestructOnLost>
+            <Maneuvers>None</Maneuvers>
+            <DefensiveDoctrine>
+              <TargetSizeMask>8</TargetSizeMask>
+              <TargetType>SmallCraft</TargetType>
+              <TargetSizeOrdering>Descending</TargetSizeOrdering>
+              <SalvoSize>0</SalvoSize>
+              <FarthestFirst>false</FarthestFirst>
+            </DefensiveDoctrine>
+            <ApproachAngleControl>false</ApproachAngleControl>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>6</Size>
+          <InstalledComponent>
+            <ComponentKey>Stock/Blast Fragmentation</ComponentKey>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>4</Size>
+          <InstalledComponent xsi:type="MissileEngineSettings">
+            <ComponentKey />
+            <BalanceValues>
+              <A>0.273903042</A>
+              <B>0.264258772</B>
+              <C>0.4618382</C>
             </BalanceValues>
           </InstalledComponent>
         </MissileSocket>

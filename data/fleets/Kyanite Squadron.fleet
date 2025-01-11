@@ -4,17 +4,17 @@
   <Version>3</Version>
   <TotalPoints>3000</TotalPoints>
   <FactionKey>Stock/Protectorate</FactionKey>
-  <Description>Difficulty: &lt;color=green&gt;EASY&lt;/color&gt;
+  <Description>Difficulty: &lt;color=yellow&gt;MODERATE&lt;/color&gt;
 
-Kyanite Squadron is comprised of a pair of lineships with heavy guns and missile launchers, as well as a tugboat with a directional tracking radar. It is a powerful offensive fleet designed to engage at mid-to-long range by popping in and out of cover to dump bursts of fire. Use of the HDG command will be critical to pre-align the fleet's gun broadside and the tugboat's tracking radar. Though vulnerable to being flanked by gunships, the squadron has a robust point defense net. The lineships' offensive missiles are designed for executing damaged warships or dealing with smaller scouts.
+Kyanite Squadron is comprised of a pair of lineships with heavy gun broadsides, defensive secondary batteries, and carrying escort fighters along for the ride. An additional tugboat with a directional tracking radar provides accurate fire control. It is a simple, semi-durable fleet perfect for engaging at mid-to-long range by popping in and out of cover to dump bursts of fire. Use of the HDG command will be critical to pre-align the lineships' gun broadside and the tugboat's tracking radar. Though vulnerable to being flanked by gunships, the squadron is reasonably well defended against missiles with the tugboat's jammers and the escort fighters. The fighters can also be detached to attack light ships with rockets and finish off damaged heavy ships with bombs.
   </Description>
-  <SortOverrideOrder>2</SortOverrideOrder>
+  <SortOverrideOrder>3</SortOverrideOrder>
   <Ships>
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>0ad9e563-d7aa-4326-be4a-faa822cf5e49</Key>
       <Name>No Other Way</Name>
-      <Cost>1338</Cost>
+      <Cost>1337</Cost>
       <Callsign />
       <Number>344</Number>
       <SymbolOption>0</SymbolOption>
@@ -72,35 +72,67 @@ Kyanite Squadron is comprised of a pair of lineships with heavy guns and missile
         </HullSocket>
         <HullSocket>
           <Key>auQ7ijGeX0evdikZQeBxTg</Key>
-          <ComponentName>Stock/MLS-2 Launcher</ComponentName>
+          <ComponentName>Stock/C4 Mount Hangar</ComponentName>
+          <ComponentData xsi:type="CraftHangarData">
+            <StoredCraft>
+              <SavedStoredCraft>
+                <CraftTemplateKey>$CRAFT$/PF-386K Barracuda</CraftTemplateKey>
+              </SavedStoredCraft>
+            </StoredCraft>
+          </ComponentData>
+        </HullSocket>
+        <HullSocket>
+          <Key>xvNT1_DYcUuSpU6rrmL_4A</Key>
+          <ComponentName>Stock/C4 Mount Hangar</ComponentName>
+          <ComponentData xsi:type="CraftHangarData">
+            <StoredCraft>
+              <SavedStoredCraft>
+                <CraftTemplateKey>$CRAFT$/PF-386K Barracuda</CraftTemplateKey>
+              </SavedStoredCraft>
+            </StoredCraft>
+          </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>d3N-B_JnDUKAdVRBJ6nvFQ</Key>
           <ComponentName>Stock/C65 Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
-          <Key>xvNT1_DYcUuSpU6rrmL_4A</Key>
-          <ComponentName>Stock/MLS-2 Launcher</ComponentName>
+          <Key>t0T4CSAPnEq4rvHAVl84-Q</Key>
+          <ComponentName>Stock/C4 Mount Hangar</ComponentName>
+          <ComponentData xsi:type="CraftHangarData">
+            <StoredCraft>
+              <SavedStoredCraft>
+                <CraftTemplateKey>$CRAFT$/PF-386K Barracuda</CraftTemplateKey>
+              </SavedStoredCraft>
+            </StoredCraft>
+          </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>grYBjxIS3E--lmrqenuK8A</Key>
           <ComponentName>Stock/C65 Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
+          <Key>tcQfj6XOHUWFSAx_W0cc1A</Key>
+          <ComponentName>Stock/C4 Mount Hangar</ComponentName>
+          <ComponentData xsi:type="CraftHangarData">
+            <StoredCraft>
+              <SavedStoredCraft>
+                <CraftTemplateKey>$CRAFT$/PF-386K Barracuda</CraftTemplateKey>
+              </SavedStoredCraft>
+            </StoredCraft>
+          </ComponentData>
+        </HullSocket>
+        <HullSocket>
           <Key>8pltGexHAEyFL2ljOe0oMQ</Key>
           <ComponentName>Stock/C65 Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
-          <Key>tcQfj6XOHUWFSAx_W0cc1A</Key>
-          <ComponentName>Stock/MLS-2 Launcher</ComponentName>
-        </HullSocket>
-        <HullSocket>
           <Key>bxvsvg5znk6TqiIKq8H0kg</Key>
-          <ComponentName>Stock/P11 PDT</ComponentName>
+          <ComponentName>Stock/T20 Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>9EF9u0V1eUetleBnkQhHkA</Key>
-          <ComponentName>Stock/P20 Flak PDT</ComponentName>
+          <ComponentName>Stock/T20 Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>I68tNng-K0yG-AoUx0HcSw</Key>
@@ -108,33 +140,53 @@ Kyanite Squadron is comprised of a pair of lineships with heavy guns and missile
         </HullSocket>
         <HullSocket>
           <Key>Sb5-VSuwlkWpT6ViRiJ3vg</Key>
-          <ComponentName>Stock/VLS-1-46 Launcher</ComponentName>
+          <ComponentName>Stock/S2 Bandit Launcher</ComponentName>
+          <ComponentData xsi:type="TurretedLauncherData">
+            <MissileLoad />
+            <FireOutsideLimits>true</FireOutsideLimits>
+          </ComponentData>
+        </HullSocket>
+        <HullSocket>
+          <Key>6ZiODnoXqkaNWvaqyGjnwg</Key>
+          <ComponentName>Stock/P11 PDT</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>87PSgg9GREmGU9MIRAXXhg</Key>
+          <ComponentName>Stock/T20 Cannon</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>VDQhZPo-rkWkzwozat27fw</Key>
+          <ComponentName>Stock/T20 Cannon</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>sTr26YTLmkOZTo_rNevp-g</Key>
+          <ComponentName>Stock/P11 PDT</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>PRLtjo7PfECpLy8CGW9T8A</Key>
+          <ComponentName>Stock/P11 PDT</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>eBuzS9wNkECmPqJ9vVsa0A</Key>
+          <ComponentName>Stock/VLS-1-23 Launcher</ComponentName>
           <ComponentData xsi:type="CellLauncherData">
             <MissileLoad>
               <MagSaveData>
-                <MagazineKey>lgDreJhF00KyFO53SYfukg</MagazineKey>
+                <MagazineKey>t8F8lRNNtE2sTPqCUxW62A</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-101 Interceptor</MunitionKey>
-                <Quantity>24</Quantity>
+                <Quantity>20</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>_B0qtzrx-UqhXGqrR-yaqg</MagazineKey>
+                <MagazineKey>9W74VcAJ8ESBDF2wStba9A</MagazineKey>
                 <MunitionKey>Stock/EA14 Chaff Decoy</MunitionKey>
-                <Quantity>5</Quantity>
+                <Quantity>3</Quantity>
               </MagSaveData>
             </MissileLoad>
           </ComponentData>
         </HullSocket>
         <HullSocket>
-          <Key>6ZiODnoXqkaNWvaqyGjnwg</Key>
-          <ComponentName>Stock/P20 Flak PDT</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>87PSgg9GREmGU9MIRAXXhg</Key>
+          <Key>JZ1htG-iLE-VFOBegJXCJw</Key>
           <ComponentName>Stock/P11 PDT</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>VDQhZPo-rkWkzwozat27fw</Key>
-          <ComponentName>Stock/P20 Flak PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>y1Cs8LR0KUyCKUAJBIOyOg</Key>
@@ -144,54 +196,84 @@ Kyanite Squadron is comprised of a pair of lineships with heavy guns and missile
               <MagSaveData>
                 <MagazineKey>cS8K8MGQ7kG_iSfDDxYhOQ</MagazineKey>
                 <MunitionKey>Stock/450mm HE Shell</MunitionKey>
-                <Quantity>450</Quantity>
+                <Quantity>425</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>slc2Z-WWZ0WicFQDdsPqrg</MagazineKey>
                 <MunitionKey>Stock/450mm AP Shell</MunitionKey>
-                <Quantity>450</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>97k4ZlUl5k-ZdYxU5MGFyA</MagazineKey>
-                <MunitionKey>Stock/Flak Round</MunitionKey>
-                <Quantity>1125</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>Tnz3N9KOC0WnbiApGGmrYg</MagazineKey>
-                <MunitionKey>$MODMIS$/SGM-289 Corvette Swatter</MunitionKey>
-                <Quantity>24</Quantity>
+                <Quantity>425</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>NFgONrCNlkKumSFLj6p_Kw</MagazineKey>
                 <MunitionKey>Stock/20mm Slug</MunitionKey>
-                <Quantity>12000</Quantity>
+                <Quantity>18000</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>DUXsGrSQMkuTlgWP8h9OOQ</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-262 Bomber Deterrent</MunitionKey>
+                <Quantity>11</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>GVRiuYP2IEqR_CUMugxmtQ</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-161 Voidsweeper</MunitionKey>
+                <Quantity>8</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>141dV_Ns5EG7fA2YP4bjGw</MagazineKey>
+                <MunitionKey>Stock/100mm HE Shell</MunitionKey>
+                <Quantity>1000</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>Rjdi8l1pDUO7yZFI4G84kQ</MagazineKey>
+                <MunitionKey>Stock/100mm Flak</MunitionKey>
+                <Quantity>1000</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>vpekzQ2LSUqBKlgn_cFUTQ</MagazineKey>
+                <MunitionKey>Stock/100mm AP Shell</MunitionKey>
+                <Quantity>750</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>x_PaLoT6CEaxXiLBnUmhuQ</MagazineKey>
+                <MunitionKey>Stock/35mm Flechette</MunitionKey>
+                <Quantity>6000</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>ccgA5x6xlUasJQYuSp_CNQ</MagazineKey>
+                <MunitionKey>Stock/S2 Glide Bomb</MunitionKey>
+                <Quantity>8</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>-pHbEHdUFEOF9TPFJg72IA</MagazineKey>
+                <MunitionKey>Stock/S0 Rocket</MunitionKey>
+                <Quantity>24</Quantity>
               </MagSaveData>
             </Load>
           </ComponentData>
-        </HullSocket>
-        <HullSocket>
-          <Key>3Ky8PvdxqUKMRXZa0xLF2A</Key>
-          <ComponentName>Stock/Large DC Storage</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>fYoX2amTl0KrZurPKjU9gg</Key>
           <ComponentName>Stock/Damage Control Complex</ComponentName>
         </HullSocket>
         <HullSocket>
-          <Key>T9TN0ZYumUaCxcSRjO_qTw</Key>
-          <ComponentName>Stock/Reinforced CIC</ComponentName>
+          <Key>3Ky8PvdxqUKMRXZa0xLF2A</Key>
+          <ComponentName>Stock/Large DC Storage</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>T4d-8WnA_UiHSJh6PXiXpA</Key>
           <ComponentName>Stock/Reinforced DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
+          <Key>T9TN0ZYumUaCxcSRjO_qTw</Key>
+          <ComponentName>Stock/Reinforced CIC</ComponentName>
+        </HullSocket>
+        <HullSocket>
           <Key>6LpDL27QuEW0PZCm35Nx5w</Key>
-          <ComponentName>Stock/Rapid DC Locker</ComponentName>
+          <ComponentName>Stock/Auxiliary Steering</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>QIOFQpQSKESIdNzf_JEFyA</Key>
-          <ComponentName>Stock/Berthing</ComponentName>
+          <ComponentName>Stock/Gun Plotting Center</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>FVcPIcV_00eu62NQQK3oLg</Key>
@@ -199,7 +281,7 @@ Kyanite Squadron is comprised of a pair of lineships with heavy guns and missile
         </HullSocket>
         <HullSocket>
           <Key>1FrTJ5o850ynlq4dRDmMbA</Key>
-          <ComponentName>Stock/Reinforced DC Locker</ComponentName>
+          <ComponentName>Stock/Damage Control Central</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>vOzzHo4KfE60wZ3Q1s38GA</Key>
@@ -215,22 +297,22 @@ Kyanite Squadron is comprised of a pair of lineships with heavy guns and missile
         </HullSocket>
         <HullSocket>
           <Key>JHJi2y5Xskytpw5-Qbu95A</Key>
-          <ComponentName>Stock/Ammunition Elevators</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>yryHYXgMWEy969gRuaDO6w</Key>
           <ComponentName>Stock/Rapid-Cycle Cradle</ComponentName>
         </HullSocket>
         <HullSocket>
-          <Key>MQyTgOLGCkyeljdvbkkFDA</Key>
-          <ComponentName>Stock/ES32 'Scryer' Missile ID System</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>S-rQo19r20K0L0PRer3yMw</Key>
+          <Key>yryHYXgMWEy969gRuaDO6w</Key>
           <ComponentName>Stock/Ammunition Elevators</ComponentName>
         </HullSocket>
         <HullSocket>
+          <Key>MQyTgOLGCkyeljdvbkkFDA</Key>
+          <ComponentName>Stock/Rapid-Cycle Cradle</ComponentName>
+        </HullSocket>
+        <HullSocket>
           <Key>M3mc7A4WOU-2fq5XgRSECA</Key>
+          <ComponentName>Stock/Ammunition Elevators</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>S-rQo19r20K0L0PRer3yMw</Key>
           <ComponentName>Stock/Ammunition Elevators</ComponentName>
         </HullSocket>
       </SocketMap>
@@ -243,21 +325,26 @@ Kyanite Squadron is comprised of a pair of lineships with heavy guns and missile
             <string>d3N-B_JnDUKAdVRBJ6nvFQ</string>
           </MemberKeys>
         </WepGroup>
-        <WepGroup Name="Launchers (Total Salvo 12)">
+        <WepGroup Name="T20 Dual Purpose Secondary Battery">
+          <MemberKeys />
+        </WepGroup>
+        <WepGroup Name="100mm Defensive Battery">
           <MemberKeys>
-            <string>auQ7ijGeX0evdikZQeBxTg</string>
-            <string>xvNT1_DYcUuSpU6rrmL_4A</string>
-            <string>tcQfj6XOHUWFSAx_W0cc1A</string>
+            <string>bxvsvg5znk6TqiIKq8H0kg</string>
+            <string>9EF9u0V1eUetleBnkQhHkA</string>
+            <string>87PSgg9GREmGU9MIRAXXhg</string>
+            <string>VDQhZPo-rkWkzwozat27fw</string>
           </MemberKeys>
         </WepGroup>
       </WeaponGroups>
       <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
     </Ship>
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>47fba6f0-c961-457a-a19d-1373288733b1</Key>
       <Name>Final Orders</Name>
-      <Cost>1326</Cost>
+      <Cost>1317</Cost>
       <Callsign />
       <Number>366</Number>
       <SymbolOption>0</SymbolOption>
@@ -307,12 +394,19 @@ Kyanite Squadron is comprised of a pair of lineships with heavy guns and missile
       </HullConfig>
       <SocketMap>
         <HullSocket>
-          <Key>E9IMUD_Uz0661-nYgJh4Mg</Key>
-          <ComponentName>Stock/C65 Cannon</ComponentName>
+          <Key>auQ7ijGeX0evdikZQeBxTg</Key>
+          <ComponentName>Stock/C4 Mount Hangar</ComponentName>
+          <ComponentData xsi:type="CraftHangarData">
+            <StoredCraft>
+              <SavedStoredCraft>
+                <CraftTemplateKey>$CRAFT$/PF-386K Barracuda</CraftTemplateKey>
+              </SavedStoredCraft>
+            </StoredCraft>
+          </ComponentData>
         </HullSocket>
         <HullSocket>
-          <Key>auQ7ijGeX0evdikZQeBxTg</Key>
-          <ComponentName>Stock/MLS-2 Launcher</ComponentName>
+          <Key>E9IMUD_Uz0661-nYgJh4Mg</Key>
+          <ComponentName>Stock/C65 Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>d3N-B_JnDUKAdVRBJ6nvFQ</Key>
@@ -320,11 +414,25 @@ Kyanite Squadron is comprised of a pair of lineships with heavy guns and missile
         </HullSocket>
         <HullSocket>
           <Key>xvNT1_DYcUuSpU6rrmL_4A</Key>
-          <ComponentName>Stock/MLS-2 Launcher</ComponentName>
+          <ComponentName>Stock/C4 Mount Hangar</ComponentName>
+          <ComponentData xsi:type="CraftHangarData">
+            <StoredCraft>
+              <SavedStoredCraft>
+                <CraftTemplateKey>$CRAFT$/PF-386K Barracuda</CraftTemplateKey>
+              </SavedStoredCraft>
+            </StoredCraft>
+          </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>t0T4CSAPnEq4rvHAVl84-Q</Key>
-          <ComponentName>Stock/MLS-2 Launcher</ComponentName>
+          <ComponentName>Stock/C4 Mount Hangar</ComponentName>
+          <ComponentData xsi:type="CraftHangarData">
+            <StoredCraft>
+              <SavedStoredCraft>
+                <CraftTemplateKey>$CRAFT$/PF-386K Barracuda</CraftTemplateKey>
+              </SavedStoredCraft>
+            </StoredCraft>
+          </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>grYBjxIS3E--lmrqenuK8A</Key>
@@ -335,46 +443,77 @@ Kyanite Squadron is comprised of a pair of lineships with heavy guns and missile
           <ComponentName>Stock/C65 Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
+          <Key>tcQfj6XOHUWFSAx_W0cc1A</Key>
+          <ComponentName>Stock/C4 Mount Hangar</ComponentName>
+          <ComponentData xsi:type="CraftHangarData">
+            <StoredCraft>
+              <SavedStoredCraft>
+                <CraftTemplateKey>$CRAFT$/PF-386K Barracuda</CraftTemplateKey>
+              </SavedStoredCraft>
+            </StoredCraft>
+          </ComponentData>
+        </HullSocket>
+        <HullSocket>
           <Key>9EF9u0V1eUetleBnkQhHkA</Key>
-          <ComponentName>Stock/P11 PDT</ComponentName>
+          <ComponentName>Stock/T20 Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>bxvsvg5znk6TqiIKq8H0kg</Key>
-          <ComponentName>Stock/P60 Laser PDT</ComponentName>
+          <ComponentName>Stock/T20 Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>I68tNng-K0yG-AoUx0HcSw</Key>
           <ComponentName>Stock/RF44 'Pinpoint' Radar</ComponentName>
         </HullSocket>
         <HullSocket>
-          <Key>Sb5-VSuwlkWpT6ViRiJ3vg</Key>
-          <ComponentName>Stock/VLS-1-46 Launcher</ComponentName>
-          <ComponentData xsi:type="CellLauncherData">
-            <MissileLoad>
-              <MagSaveData>
-                <MagazineKey>zbPgrX-Wl0uoAi6XTCmj-w</MagazineKey>
-                <MunitionKey>$MODMIS$/SGM-101 Interceptor</MunitionKey>
-                <Quantity>24</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>3xmWgzmobki2bGzA30ibig</MagazineKey>
-                <MunitionKey>Stock/EA14 Chaff Decoy</MunitionKey>
-                <Quantity>5</Quantity>
-              </MagSaveData>
-            </MissileLoad>
-          </ComponentData>
-        </HullSocket>
-        <HullSocket>
           <Key>6ZiODnoXqkaNWvaqyGjnwg</Key>
           <ComponentName>Stock/P11 PDT</ComponentName>
         </HullSocket>
         <HullSocket>
+          <Key>Sb5-VSuwlkWpT6ViRiJ3vg</Key>
+          <ComponentName>Stock/S2 Bandit Launcher</ComponentName>
+          <ComponentData xsi:type="TurretedLauncherData">
+            <MissileLoad />
+            <FireOutsideLimits>true</FireOutsideLimits>
+          </ComponentData>
+        </HullSocket>
+        <HullSocket>
           <Key>87PSgg9GREmGU9MIRAXXhg</Key>
-          <ComponentName>Stock/P60 Laser PDT</ComponentName>
+          <ComponentName>Stock/T20 Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>VDQhZPo-rkWkzwozat27fw</Key>
+          <ComponentName>Stock/T20 Cannon</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>PRLtjo7PfECpLy8CGW9T8A</Key>
           <ComponentName>Stock/P11 PDT</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>sTr26YTLmkOZTo_rNevp-g</Key>
+          <ComponentName>Stock/P11 PDT</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>JZ1htG-iLE-VFOBegJXCJw</Key>
+          <ComponentName>Stock/P11 PDT</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>eBuzS9wNkECmPqJ9vVsa0A</Key>
+          <ComponentName>Stock/VLS-1-23 Launcher</ComponentName>
+          <ComponentData xsi:type="CellLauncherData">
+            <MissileLoad>
+              <MagSaveData>
+                <MagazineKey>wU5dycQBKk6QxtSrpsRMkg</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-101 Interceptor</MunitionKey>
+                <Quantity>20</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>jpgoADTUPU2DZcxiY3L4JA</MagazineKey>
+                <MunitionKey>Stock/EA14 Chaff Decoy</MunitionKey>
+                <Quantity>3</Quantity>
+              </MagSaveData>
+            </MissileLoad>
+          </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>y1Cs8LR0KUyCKUAJBIOyOg</Key>
@@ -382,23 +521,58 @@ Kyanite Squadron is comprised of a pair of lineships with heavy guns and missile
           <ComponentData xsi:type="BulkMagazineData">
             <Load>
               <MagSaveData>
-                <MagazineKey>JKRwV6zjdUaJEEiVVfiTHg</MagazineKey>
+                <MagazineKey>cS8K8MGQ7kG_iSfDDxYhOQ</MagazineKey>
                 <MunitionKey>Stock/450mm HE Shell</MunitionKey>
-                <Quantity>450</Quantity>
+                <Quantity>425</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>28vtXa6nh0-FPc10FW7MqQ</MagazineKey>
+                <MagazineKey>slc2Z-WWZ0WicFQDdsPqrg</MagazineKey>
                 <MunitionKey>Stock/450mm AP Shell</MunitionKey>
-                <Quantity>450</Quantity>
+                <Quantity>425</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>Ei99VrpdhkKr5zFbP3BaYQ</MagazineKey>
+                <MagazineKey>NFgONrCNlkKumSFLj6p_Kw</MagazineKey>
                 <MunitionKey>Stock/20mm Slug</MunitionKey>
                 <Quantity>18000</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>dCTC7WUsuEyHWLlPNm0tfA</MagazineKey>
-                <MunitionKey>$MODMIS$/SGM-289 Corvette Swatter</MunitionKey>
+                <MagazineKey>DUXsGrSQMkuTlgWP8h9OOQ</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-262 Bomber Deterrent</MunitionKey>
+                <Quantity>11</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>GVRiuYP2IEqR_CUMugxmtQ</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-161 Voidsweeper</MunitionKey>
+                <Quantity>8</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>141dV_Ns5EG7fA2YP4bjGw</MagazineKey>
+                <MunitionKey>Stock/100mm HE Shell</MunitionKey>
+                <Quantity>1000</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>Rjdi8l1pDUO7yZFI4G84kQ</MagazineKey>
+                <MunitionKey>Stock/100mm Flak</MunitionKey>
+                <Quantity>1000</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>vpekzQ2LSUqBKlgn_cFUTQ</MagazineKey>
+                <MunitionKey>Stock/100mm AP Shell</MunitionKey>
+                <Quantity>750</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>x_PaLoT6CEaxXiLBnUmhuQ</MagazineKey>
+                <MunitionKey>Stock/35mm Flechette</MunitionKey>
+                <Quantity>6000</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>ccgA5x6xlUasJQYuSp_CNQ</MagazineKey>
+                <MunitionKey>Stock/S2 Glide Bomb</MunitionKey>
+                <Quantity>8</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>-pHbEHdUFEOF9TPFJg72IA</MagazineKey>
+                <MunitionKey>Stock/S0 Rocket</MunitionKey>
                 <Quantity>24</Quantity>
               </MagSaveData>
             </Load>
@@ -421,12 +595,12 @@ Kyanite Squadron is comprised of a pair of lineships with heavy guns and missile
           <ComponentName>Stock/Reinforced DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
-          <Key>6LpDL27QuEW0PZCm35Nx5w</Key>
-          <ComponentName>Stock/Rapid DC Locker</ComponentName>
+          <Key>QIOFQpQSKESIdNzf_JEFyA</Key>
+          <ComponentName>Stock/Gun Plotting Center</ComponentName>
         </HullSocket>
         <HullSocket>
-          <Key>QIOFQpQSKESIdNzf_JEFyA</Key>
-          <ComponentName>Stock/Berthing</ComponentName>
+          <Key>6LpDL27QuEW0PZCm35Nx5w</Key>
+          <ComponentName>Stock/Auxiliary Steering</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>FVcPIcV_00eu62NQQK3oLg</Key>
@@ -446,7 +620,7 @@ Kyanite Squadron is comprised of a pair of lineships with heavy guns and missile
         </HullSocket>
         <HullSocket>
           <Key>JVCLf3RKKUOBEXaWWkVLMw</Key>
-          <ComponentName>Stock/Ammunition Elevators</ComponentName>
+          <ComponentName>Stock/Rapid-Cycle Cradle</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>JHJi2y5Xskytpw5-Qbu95A</Key>
@@ -454,7 +628,7 @@ Kyanite Squadron is comprised of a pair of lineships with heavy guns and missile
         </HullSocket>
         <HullSocket>
           <Key>yryHYXgMWEy969gRuaDO6w</Key>
-          <ComponentName>Stock/Rapid-Cycle Cradle</ComponentName>
+          <ComponentName>Stock/Ammunition Elevators</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>MQyTgOLGCkyeljdvbkkFDA</Key>
@@ -462,7 +636,7 @@ Kyanite Squadron is comprised of a pair of lineships with heavy guns and missile
         </HullSocket>
         <HullSocket>
           <Key>S-rQo19r20K0L0PRer3yMw</Key>
-          <ComponentName>Stock/Light Civilian Reactor</ComponentName>
+          <ComponentName>Stock/Rapid-Cycle Cradle</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>M3mc7A4WOU-2fq5XgRSECA</Key>
@@ -478,11 +652,15 @@ Kyanite Squadron is comprised of a pair of lineships with heavy guns and missile
             <string>8pltGexHAEyFL2ljOe0oMQ</string>
           </MemberKeys>
         </WepGroup>
-        <WepGroup Name="Launchers (Total Salvo 12)">
+        <WepGroup Name="T20 Dual Purpose Secondary Battery">
+          <MemberKeys />
+        </WepGroup>
+        <WepGroup Name="100mm Defensive Battery">
           <MemberKeys>
-            <string>xvNT1_DYcUuSpU6rrmL_4A</string>
-            <string>auQ7ijGeX0evdikZQeBxTg</string>
-            <string>t0T4CSAPnEq4rvHAVl84-Q</string>
+            <string>9EF9u0V1eUetleBnkQhHkA</string>
+            <string>bxvsvg5znk6TqiIKq8H0kg</string>
+            <string>87PSgg9GREmGU9MIRAXXhg</string>
+            <string>VDQhZPo-rkWkzwozat27fw</string>
           </MemberKeys>
         </WepGroup>
       </WeaponGroups>
@@ -495,12 +673,13 @@ Kyanite Squadron is comprised of a pair of lineships with heavy guns and missile
         </RelativePosition>
       </InitialFormation>
       <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
     </Ship>
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>c704accb-5008-499a-b248-895c23a48a9d</Key>
       <Name>Until The End</Name>
-      <Cost>336</Cost>
+      <Cost>346</Cost>
       <Callsign />
       <Number>1309</Number>
       <SymbolOption>0</SymbolOption>
@@ -516,33 +695,41 @@ Kyanite Squadron is comprised of a pair of lineships with heavy guns and missile
         </HullSocket>
         <HullSocket>
           <Key>0upOgm0H0UuZ-h2YvRjmBg</Key>
-          <ComponentName>Stock/VLS-1-46 Launcher</ComponentName>
+          <ComponentName>Stock/J75 Jammer</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>KnFHQkb9uUe98IweLYf9wg</Key>
+          <ComponentName>Stock/VLS-1-23 Launcher</ComponentName>
           <ComponentData xsi:type="CellLauncherData">
             <MissileLoad>
               <MagSaveData>
-                <MagazineKey>2PD_QkcGv0GbZMuHE9YKww</MagazineKey>
+                <MagazineKey>xM-Kykk16kezsh-SgkOQjw</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-101 Interceptor</MunitionKey>
-                <Quantity>18</Quantity>
+                <Quantity>10</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>k3Tc3d32QEWfDOK56Pq0Ig</MagazineKey>
+                <MagazineKey>_3DvRcvQ00-zXZ5b4HOorw</MagazineKey>
                 <MunitionKey>Stock/EA14 Chaff Decoy</MunitionKey>
-                <Quantity>5</Quantity>
+                <Quantity>2</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>HyczP4jWjkyHqFESFJL5_g</MagazineKey>
+                <MunitionKey>Stock/EA20 Flare Decoy</MunitionKey>
+                <Quantity>2</Quantity>
               </MagSaveData>
             </MissileLoad>
           </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>F6bmJdCO3EqzXK9SBJoXUw</Key>
-          <ComponentName>Stock/Berthing</ComponentName>
+          <ComponentName>Stock/Basic CIC</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>-PqoLKimSUOZtKMLo5QHXg</Key>
-          <ComponentName>Stock/Small DC Locker</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>DakKS2gy6UyM58u3YG-HfQ</Key>
-          <ComponentName>Stock/Auxiliary Steering</ComponentName>
+          <ComponentName>Stock/Reinforced Magazine</ComponentName>
+          <ComponentData xsi:type="BulkMagazineData">
+            <Load />
+          </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>peqaYrE39UupWCXPY_PgoA</Key>
@@ -550,7 +737,7 @@ Kyanite Squadron is comprised of a pair of lineships with heavy guns and missile
         </HullSocket>
         <HullSocket>
           <Key>6OieSH0A6kKFmquctn9_aQ</Key>
-          <ComponentName>Stock/Basic CIC</ComponentName>
+          <ComponentName>Stock/Auxiliary Steering</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>NSAbhn9brE-aAirJFIYG-Q</Key>
@@ -570,7 +757,12 @@ Kyanite Squadron is comprised of a pair of lineships with heavy guns and missile
         </HullSocket>
       </SocketMap>
       <WeaponGroups>
-        <WepGroup Name="Anti-Missile Dazzler">
+        <WepGroup Name="J75 Command Jammer">
+          <MemberKeys>
+            <string>0upOgm0H0UuZ-h2YvRjmBg</string>
+          </MemberKeys>
+        </WepGroup>
+        <WepGroup Name="L50 EO Jammer">
           <MemberKeys>
             <string>cIGspM4oYU2etRfjIcuCCA</string>
           </MemberKeys>
@@ -579,12 +771,13 @@ Kyanite Squadron is comprised of a pair of lineships with heavy guns and missile
       <InitialFormation>
         <GuideKey>0ad9e563-d7aa-4326-be4a-faa822cf5e49</GuideKey>
         <RelativePosition>
-          <x>56.9129829</x>
+          <x>36.974762</x>
           <y>0</y>
-          <z>-33.7199669</z>
+          <z>-33.76799</z>
         </RelativePosition>
       </InitialFormation>
       <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
     </Ship>
   </Ships>
   <MissileTypes>
@@ -595,19 +788,23 @@ Kyanite Squadron is comprised of a pair of lineships with heavy guns and missile
       <LongDescription>The &lt;noparse&gt;SGM-101 Interceptor&lt;/noparse&gt; is a size 1 direct guidance missile.  It is based on the SGM-1 body, which is a nimble general-purpose missile.  This missile will deliver a Proximity Fuze, High Explosive, Blast Fragmentation warhead.  It homes in on its target using an Active Radar seeker.
 
 Control Method: DIRECT
-Targeting Modes:
-	&lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+Targeting Modes: &lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+
 Primary Seeker: ACTIVE &lt;color=#3BC81E&gt;RADAR&lt;/color&gt;
 
-250 m/s for 2,995 m, top speed in 0.4 s
+Speed: 250 m/s
+Distance: 2,995 m
+Top Speed In: 0.4 s
+Turn Rate: 9.9 G
 Terminal Maneuvers: None
 
-Proximity Fuze, High Explosive, Blast Fragmentation
-Armor: 2cm   Component: 65hp
+Warhead: Proximity Fuze, High Explosive, Blast Fragmentation
+Armor: 0.21cm
+Component: 65.34hp
 Blast Radius: 47 m
 
-Body Integrity: 10 
-Wall Thickness: 0.5
+Body Integrity: 10
+Wall Thickness: 0.05
 Programming Time: 6 s
 Radar Signature Bonus: 100 %
 Boost-Phase Duration: 3 s
@@ -636,7 +833,7 @@ Failure Rate: 0 %</LongDescription>
             <ComponentKey>Stock/Fixed Active Radar Seeker</ComponentKey>
             <Mode>Targeting</Mode>
             <RejectUnvalidated>false</RejectUnvalidated>
-            <DetectPDTargets>false</DetectPDTargets>
+            <DetectPDTargets>true</DetectPDTargets>
           </InstalledComponent>
         </MissileSocket>
         <MissileSocket>
@@ -677,27 +874,122 @@ Failure Rate: 0 %</LongDescription>
       </Sockets>
     </MissileTemplate>
     <MissileTemplate>
-      <Designation>SGM-289</Designation>
-      <Nickname>Corvette Swatter</Nickname>
-      <Description>DIRECT - &lt;color=#D3D11F&gt;CMD&lt;/color&gt;/HOJ(&lt;color=#3BC81E&gt;RADAR&lt;/color&gt;) - HE SHAPED</Description>
-      <LongDescription>The &lt;noparse&gt;SGM-289 Corvette Swatter&lt;/noparse&gt; is a size 2 direct guidance missile.  It is based on the SGM-2 body, which is a flexible mainstay anti-ship missile.  This missile will deliver a Contact Fuze, High Explosive, Shaped warhead.  It homes in on its target using command guidance from its launching ship  If the primary seeker does not find a target or is jammed, it can fall back on a Radar Home-on-Jam seeker.
+      <Designation>SGM-161</Designation>
+      <Nickname>Voidsweeper</Nickname>
+      <Description>DIRECT - ACT(&lt;color=#3BC81E&gt;RADAR&lt;/color&gt;) - HE FRAG</Description>
+      <LongDescription>The &lt;noparse&gt;SGM-161 Voidsweeper&lt;/noparse&gt; is a size 1 direct guidance missile.  It is based on the SGM-1 body, which is a nimble general-purpose missile.  This missile will deliver a Proximity Fuze, High Explosive, Blast Fragmentation warhead.  It homes in on its target using an Active Radar seeker.
 
 Control Method: DIRECT
-Targeting Modes:
-	&lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
-Primary Seeker: COMMAND (&lt;color=#D3D11F&gt;Requires COMMS Enabled&lt;/color&gt;)
-Backup Seeker(s): HOME-ON-JAM (&lt;color=#3BC81E&gt;RADAR&lt;/color&gt; JAMMING Signals Only)
+Targeting Modes: &lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
 
-250 m/s for 10,260 m, top speed in 1.3 s
-Terminal Maneuvers: Weave
+Primary Seeker: ACTIVE &lt;color=#3BC81E&gt;RADAR&lt;/color&gt;
 
-Contact Fuze, High Explosive, Shaped
-Armor: 60cm   Component: 1,200hp
-Blast Angle: 70 deg
-Damage Per Fragment: 50.0
+Speed: 301 m/s
+Distance: 5,370 m
+Top Speed In: 0.7 s
+Turn Rate: 6.7 G
+Terminal Maneuvers: None
 
-Body Integrity: 30 
-Wall Thickness: 0.5
+Warhead: Proximity Fuze, High Explosive, Blast Fragmentation
+Armor: 0.18cm
+Component: 56.58hp
+Blast Radius: 40 m
+
+Body Integrity: 10
+Wall Thickness: 0.05
+Programming Time: 6 s
+Radar Signature Bonus: 100 %
+Boost-Phase Duration: 3 s
+Boost-Phase Strafe: 100 %
+Boost-Phase Turn Rate: 100 %
+Failure Rate: 0 %</LongDescription>
+      <Cost>2</Cost>
+      <BodyKey>Stock/SGM-1 Body</BodyKey>
+      <TemplateKey>ac72ea49-9f37-446e-a25b-6d97a9217ea2</TemplateKey>
+      <BaseColor>
+        <r>0</r>
+        <g>0.100000128</g>
+        <b>0.9999999</b>
+        <a>1</a>
+      </BaseColor>
+      <StripeColor>
+        <r>0.602034569</r>
+        <g>0.245114088</g>
+        <b>0</b>
+        <a>1</a>
+      </StripeColor>
+      <Sockets>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="ActiveSeekerSettings">
+            <ComponentKey>Stock/Fixed Active Radar Seeker</ComponentKey>
+            <Mode>Targeting</Mode>
+            <RejectUnvalidated>false</RejectUnvalidated>
+            <DetectPDTargets>true</DetectPDTargets>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="DirectGuidanceSettings">
+            <ComponentKey>Stock/Direct Guidance</ComponentKey>
+            <Role>Offensive</Role>
+            <HotLaunch>true</HotLaunch>
+            <SelfDestructOnLost>false</SelfDestructOnLost>
+            <Maneuvers>None</Maneuvers>
+            <DefensiveDoctrine>
+              <TargetSizeMask>12</TargetSizeMask>
+              <TargetType>Hybrid</TargetType>
+              <TargetSizeOrdering>Descending</TargetSizeOrdering>
+              <SalvoSize>1</SalvoSize>
+              <FarthestFirst>false</FarthestFirst>
+            </DefensiveDoctrine>
+            <ApproachAngleControl>false</ApproachAngleControl>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>3</Size>
+          <InstalledComponent>
+            <ComponentKey>Stock/Blast Fragmentation</ComponentKey>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>4</Size>
+          <InstalledComponent xsi:type="MissileEngineSettings">
+            <ComponentKey />
+            <BalanceValues>
+              <A>0.339689076</A>
+              <B>0.4242748</B>
+              <C>0.236036122</C>
+            </BalanceValues>
+          </InstalledComponent>
+        </MissileSocket>
+      </Sockets>
+    </MissileTemplate>
+    <MissileTemplate>
+      <Designation>SGM-262</Designation>
+      <Nickname>Bomber Deterrent</Nickname>
+      <Description>DIRECT - PSV(&lt;color=#D4211D&gt;WAKE&lt;/color&gt;)/&lt;color=#D3D11F&gt;CMD&lt;/color&gt; - HE FRAG</Description>
+      <LongDescription>The &lt;noparse&gt;SGM-262 Bomber Deterrent&lt;/noparse&gt; is a size 2 direct guidance missile.  It is based on the SGM-2 body, which is a flexible mainstay anti-ship missile.  This missile will deliver a Proximity Fuze, High Explosive, Blast Fragmentation warhead.  It homes in on its target using a Passive Wake seeker  If the primary seeker does not find a target or is jammed, it can fall back on command guidance from its launching ship.
+
+Control Method: DIRECT
+Targeting Modes: &lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+
+Primary Seeker: PASSIVE (&lt;color=#D4211D&gt;WAKE&lt;/color&gt;)
+Backup Seeker: COMMAND (&lt;color=#D3D11F&gt;Requires COMMS Enabled&lt;/color&gt;)
+
+Speed: 227 m/s
+Distance: 7,384 m
+Top Speed In: 1.1 s
+Turn Rate: 4.0 G
+Terminal Maneuvers: None
+
+Warhead: Proximity Fuze, High Explosive, Blast Fragmentation
+Armor: 0.44cm
+Component: 139.30hp
+Blast Radius: 99 m
+
+Body Integrity: 30
+Wall Thickness: 0.05
 Programming Time: 8 s
 Radar Signature Bonus: 100 %
 Boost-Phase Duration: 3 s
@@ -706,20 +998,29 @@ Boost-Phase Turn Rate: 100 %
 Failure Rate: 0 %</LongDescription>
       <Cost>7</Cost>
       <BodyKey>Stock/SGM-2 Body</BodyKey>
-      <TemplateKey>4ee207c5-8019-4f6a-8f26-bfbd35334167</TemplateKey>
+      <TemplateKey>97d26203-5a62-49b3-a982-9316c91e72da</TemplateKey>
       <BaseColor>
-        <r>0.178571567</r>
-        <g>0.9999999</g>
-        <b>0</b>
+        <r>1</r>
+        <g>1</g>
+        <b>1</b>
         <a>1</a>
       </BaseColor>
       <StripeColor>
-        <r>0.9999999</r>
-        <g>0</g>
-        <b>0.921428561</b>
+        <r>0.7058824</r>
+        <g>0.129411772</g>
+        <b>0.129411772</b>
         <a>1</a>
       </StripeColor>
       <Sockets>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="PassiveSeekerSettings">
+            <ComponentKey>Stock/Wake-Homing Seeker</ComponentKey>
+            <Mode>Targeting</Mode>
+            <RejectUnvalidated>false</RejectUnvalidated>
+            <DetectPDTargets>true</DetectPDTargets>
+          </InstalledComponent>
+        </MissileSocket>
         <MissileSocket>
           <Size>1</Size>
           <InstalledComponent xsi:type="CommandSeekerSettings">
@@ -730,49 +1031,182 @@ Failure Rate: 0 %</LongDescription>
         </MissileSocket>
         <MissileSocket>
           <Size>1</Size>
-          <InstalledComponent xsi:type="PassiveARHSeekerSettings">
-            <ComponentKey>Stock/Fixed Anti-Radiation Seeker</ComponentKey>
-            <Mode>Targeting</Mode>
-            <RejectUnvalidated>false</RejectUnvalidated>
-            <TargetType>JammingOnly</TargetType>
-          </InstalledComponent>
-        </MissileSocket>
-        <MissileSocket>
-          <Size>1</Size>
           <InstalledComponent xsi:type="DirectGuidanceSettings">
             <ComponentKey>Stock/Direct Guidance</ComponentKey>
-            <Role>Offensive</Role>
+            <Role>Defensive</Role>
             <HotLaunch>false</HotLaunch>
             <SelfDestructOnLost>false</SelfDestructOnLost>
-            <Maneuvers>Weave</Maneuvers>
+            <Maneuvers>None</Maneuvers>
             <DefensiveDoctrine>
-              <TargetSizeMask>12</TargetSizeMask>
-              <TargetType>All</TargetType>
+              <TargetSizeMask>8</TargetSizeMask>
+              <TargetType>SmallCraft</TargetType>
               <TargetSizeOrdering>Descending</TargetSizeOrdering>
               <SalvoSize>0</SalvoSize>
               <FarthestFirst>false</FarthestFirst>
             </DefensiveDoctrine>
-            <ApproachAngleControl>true</ApproachAngleControl>
+            <ApproachAngleControl>false</ApproachAngleControl>
           </InstalledComponent>
         </MissileSocket>
         <MissileSocket>
-          <Size>5</Size>
+          <Size>6</Size>
           <InstalledComponent>
-            <ComponentKey>Stock/HE Impact</ComponentKey>
+            <ComponentKey>Stock/Blast Fragmentation</ComponentKey>
           </InstalledComponent>
         </MissileSocket>
         <MissileSocket>
-          <Size>5</Size>
+          <Size>4</Size>
           <InstalledComponent xsi:type="MissileEngineSettings">
             <ComponentKey />
             <BalanceValues>
-              <A>0.413293242</A>
-              <B>0.270652443</B>
-              <C>0.3160543</C>
+              <A>0.2772381</A>
+              <B>0.266308</B>
+              <C>0.4564539</C>
             </BalanceValues>
           </InstalledComponent>
         </MissileSocket>
       </Sockets>
     </MissileTemplate>
   </MissileTypes>
+  <CraftTypes>
+    <CraftTemplate>
+      <DesignationSuffix>K</DesignationSuffix>
+      <Nickname>Barracuda</Nickname>
+      <LongDescription>Frame Model: Barracuda
+Frame Class: Strike Fighter
+Base Cost: 8
+Storage Size: 1
+Pad Size: 6 x 6
+PD Threat Size: 2
+Frame Integrity: 60
+Skin Thickness: 0.30
+
+Pre-Flight Time
+No ships carrying this design
+
+Idle Speed: 35 m/s
+Cruise Speed: 65 m/s
+Cruise (HBRN) Speed: 114 m/s
+Combat Speed: 114 m/s
+
+Fuel Capacity: 3,650
+Loiter Time: 41:33
+Cruise Range: 127 km
+
+Thruster Power: 150
+Frame Mass: 11.00
+Loadout Mass: -
+Total Mass: 11.00
+
+&lt;b&gt;Components:&lt;/b&gt;
+Nose: 35mm Gun
+
+&lt;b&gt;Loadouts:&lt;/b&gt;
+Main Escort / Anti-Light: 500x &lt;noparse&gt;35mm Flechette&lt;/noparse&gt;, 2x &lt;noparse&gt;SGM-161 Voidsweeper&lt;/noparse&gt;, 6x R-1 'Perch' Rocket
+Backup Bombs: 500x &lt;noparse&gt;35mm Flechette&lt;/noparse&gt;, 2x KBU-22 Bomb
+Backup Guns Only: 500x &lt;noparse&gt;35mm Flechette&lt;/noparse&gt;, 500x &lt;noparse&gt;35mm Flechette&lt;/noparse&gt;</LongDescription>
+      <Cost>10</Cost>
+      <FrameKey>Stock/OSP Interceptor</FrameKey>
+      <TemplateKey>b1d41c2e-0e6d-413d-8cc9-248103abf0c1</TemplateKey>
+      <InstalledComponents>
+        <SerializedCraftSocket>
+          <SocketKey>nose</SocketKey>
+          <ComponentKey>nose_gun50mm</ComponentKey>
+        </SerializedCraftSocket>
+      </InstalledComponents>
+      <Loadouts>
+        <CraftLoadout>
+          <LoadoutName>Main Escort / Anti-Light</LoadoutName>
+          <Elements>
+            <GeneralLoadoutElement xsi:type="SimpleAmmoSelection">
+              <SocketKey>nose</SocketKey>
+              <AmmoKey>Stock/35mm Flechette</AmmoKey>
+            </GeneralLoadoutElement>
+            <GeneralLoadoutElement xsi:type="VariableSocketLoadout">
+              <SocketKey>wingtopin</SocketKey>
+              <ComponentKey>wingtopin_fuelpods</ComponentKey>
+              <Loadout xsi:type="SimpleOccupiedElement" />
+            </GeneralLoadoutElement>
+            <GeneralLoadoutElement xsi:type="VariableSocketLoadout">
+              <SocketKey>wingtopout</SocketKey>
+              <ComponentKey>wingtopout_s1pylons</ComponentKey>
+              <Loadout xsi:type="MissileSelection">
+                <SocketKey>wingtopout</SocketKey>
+                <MissileKeys>
+                  <string>$MODMIS$/SGM-161 Voidsweeper</string>
+                  <string>$MODMIS$/SGM-161 Voidsweeper</string>
+                </MissileKeys>
+              </Loadout>
+            </GeneralLoadoutElement>
+            <GeneralLoadoutElement xsi:type="VariableSocketLoadout">
+              <SocketKey>wingbottomin</SocketKey>
+              <ComponentKey>wingbottom_rocketpods</ComponentKey>
+              <Loadout xsi:type="SimpleAmmoSelection">
+                <SocketKey>wingbottomin</SocketKey>
+                <AmmoKey>Stock/S0 Rocket</AmmoKey>
+              </Loadout>
+            </GeneralLoadoutElement>
+            <GeneralLoadoutElement xsi:type="VariableSocketLoadout">
+              <SocketKey>wingbottomout</SocketKey>
+              <ComponentKey>wingbottomout_radarjammer</ComponentKey>
+              <Loadout xsi:type="SimpleOccupiedElement" />
+            </GeneralLoadoutElement>
+          </Elements>
+        </CraftLoadout>
+        <CraftLoadout>
+          <LoadoutName>Backup Bombs</LoadoutName>
+          <Elements>
+            <GeneralLoadoutElement xsi:type="SimpleAmmoSelection">
+              <SocketKey>nose</SocketKey>
+              <AmmoKey>Stock/35mm Flechette</AmmoKey>
+            </GeneralLoadoutElement>
+            <GeneralLoadoutElement xsi:type="VariableSocketLoadout">
+              <SocketKey>wingtopin</SocketKey>
+              <ComponentKey>wingtopin_fuelpods</ComponentKey>
+              <Loadout xsi:type="SimpleOccupiedElement" />
+            </GeneralLoadoutElement>
+            <GeneralLoadoutElement xsi:type="VariableSocketLoadout">
+              <SocketKey>wingbottomin</SocketKey>
+              <ComponentKey>wingbottomin_s2pylons</ComponentKey>
+              <Loadout xsi:type="MissileSelection">
+                <SocketKey>wingbottomin</SocketKey>
+                <MissileKeys>
+                  <string>Stock/S2 Glide Bomb</string>
+                  <string>Stock/S2 Glide Bomb</string>
+                </MissileKeys>
+              </Loadout>
+            </GeneralLoadoutElement>
+          </Elements>
+        </CraftLoadout>
+        <CraftLoadout>
+          <LoadoutName>Backup Guns Only</LoadoutName>
+          <Elements>
+            <GeneralLoadoutElement xsi:type="SimpleAmmoSelection">
+              <SocketKey>nose</SocketKey>
+              <AmmoKey>Stock/35mm Flechette</AmmoKey>
+            </GeneralLoadoutElement>
+            <GeneralLoadoutElement xsi:type="VariableSocketLoadout">
+              <SocketKey>wingtopin</SocketKey>
+              <ComponentKey>wingtopin_fuelpods</ComponentKey>
+              <Loadout xsi:type="SimpleOccupiedElement" />
+            </GeneralLoadoutElement>
+            <GeneralLoadoutElement xsi:type="VariableSocketLoadout">
+              <SocketKey>wingbottomin</SocketKey>
+              <ComponentKey>wingbottomin_50mmguns</ComponentKey>
+              <Loadout xsi:type="SimpleAmmoSelection">
+                <SocketKey>wingbottomin</SocketKey>
+                <AmmoKey>Stock/35mm Flechette</AmmoKey>
+              </Loadout>
+            </GeneralLoadoutElement>
+            <GeneralLoadoutElement xsi:type="VariableSocketLoadout">
+              <SocketKey>wingbottomout</SocketKey>
+              <ComponentKey>wingbottomout_radarjammer</ComponentKey>
+              <Loadout xsi:type="SimpleOccupiedElement" />
+            </GeneralLoadoutElement>
+          </Elements>
+        </CraftLoadout>
+      </Loadouts>
+      <TemplateMissileTypes />
+      <ModDependencies />
+    </CraftTemplate>
+  </CraftTypes>
 </Fleet>

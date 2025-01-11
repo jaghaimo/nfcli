@@ -6,7 +6,7 @@
   <FactionKey>Stock/Alliance</FactionKey>
   <Description>Difficulty: &lt;color=green&gt;EASY&lt;/color&gt;
 
-Dual heavy cruisers with all big guns. Task Force Oak is ideal for those who struggle with multi-tasking and would like to focus more on positioning a single formation very well. Manage your range and sightlines to pound isolated enemy formations into dust with overwhelming broadside firepower while keeping in cover relative to missile threats. Smart commanders will make frequent use of the HDG order to face their broadsides towards the current target.
+Dual heavy cruisers with all big guns. Task Force Oak is ideal for those who struggle with multi-tasking and would like to focus more on positioning a single formation very well. Manage your range and sightlines to pound isolated enemy formations into dust with overwhelming broadside firepower, while avoiding being ambushed by closer-ranged fleets. Smart commanders will make frequent use of the HDG order to control their ships' facing. You can choose to face towards the enemy to shrug off incoming fire with your armored bow, or rotate to the side to bring your rear guns into action.
   </Description>
   <SortOverrideOrder>1</SortOverrideOrder>
   <Ships>
@@ -14,7 +14,7 @@ Dual heavy cruisers with all big guns. Task Force Oak is ideal for those who str
       <SaveID xsi:nil="true" />
       <Key>15fe45e3-d169-402d-a6fa-4cf9e595c962</Key>
       <Name>Value Judgement</Name>
-      <Cost>1478</Cost>
+      <Cost>1505</Cost>
       <Callsign />
       <Number>451</Number>
       <SymbolOption>0</SymbolOption>
@@ -53,6 +53,24 @@ Dual heavy cruisers with all big guns. Task Force Oak is ideal for those who str
           <ComponentName>Stock/RF101 'Bullseye' Radar</ComponentName>
         </HullSocket>
         <HullSocket>
+          <Key>KxV0hkkGBE2AOUCo5axQbg</Key>
+          <ComponentName>Stock/VLS-1-23 Launcher</ComponentName>
+          <ComponentData xsi:type="CellLauncherData">
+            <MissileLoad>
+              <MagSaveData>
+                <MagazineKey>-JS-BDSSdUCgeINmXCh8KQ</MagazineKey>
+                <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
+                <Quantity>8</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>DAr8SGWU50-y_DA2UJe20w</MagazineKey>
+                <MunitionKey>Stock/EA20 Flare Decoy</MunitionKey>
+                <Quantity>2</Quantity>
+              </MagSaveData>
+            </MissileLoad>
+          </ComponentData>
+        </HullSocket>
+        <HullSocket>
           <Key>tyGXrucCjUe0FVyP1YDpUw</Key>
           <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
         </HullSocket>
@@ -73,7 +91,7 @@ Dual heavy cruisers with all big guns. Task Force Oak is ideal for those who str
               <MagSaveData>
                 <MagazineKey>DxaF0E08-0SGpjiCMI6nOA</MagazineKey>
                 <MunitionKey>Stock/450mm AP Shell</MunitionKey>
-                <Quantity>150</Quantity>
+                <Quantity>175</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>hbRrwP69ZUuDrLGOtg-PIw</MagazineKey>
@@ -134,7 +152,7 @@ Dual heavy cruisers with all big guns. Task Force Oak is ideal for those who str
         </HullSocket>
         <HullSocket>
           <Key>A8e_Z_d8WU2qzo6HTQwCBA</Key>
-          <ComponentName>Stock/Rapid DC Locker</ComponentName>
+          <ComponentName>Stock/Large DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>2xmOS4ns_EaMYjBXrrhhig</Key>
@@ -143,14 +161,6 @@ Dual heavy cruisers with all big guns. Task Force Oak is ideal for those who str
         <HullSocket>
           <Key>y1xLixKUzUSKT7Nz7aUkLQ</Key>
           <ComponentName>Stock/Reinforced DC Locker</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>RmUeePb-8EGbFaRgVjCXsA</Key>
-          <ComponentName>Stock/Berthing</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>eYp1IPfupUGVITrkVhgZJw</Key>
-          <ComponentName>Stock/Small DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>lxkgmNwqjUua0sRee2pDJg</Key>
@@ -207,12 +217,13 @@ Dual heavy cruisers with all big guns. Task Force Oak is ideal for those who str
         </WepGroup>
       </WeaponGroups>
       <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
     </Ship>
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>e0afb606-1caf-4f15-9abf-2d54ae422b5a</Key>
       <Name>Moral Failing</Name>
-      <Cost>1522</Cost>
+      <Cost>1495</Cost>
       <Callsign />
       <Number>452</Number>
       <SymbolOption>0</SymbolOption>
@@ -256,14 +267,14 @@ Dual heavy cruisers with all big guns. Task Force Oak is ideal for those who str
           <ComponentData xsi:type="CellLauncherData">
             <MissileLoad>
               <MagSaveData>
-                <MagazineKey>W__pXx7JW0KaEMY8dHZU-g</MagazineKey>
-                <MunitionKey>Stock/EA99 Active Decoy</MunitionKey>
-                <Quantity>4</Quantity>
+                <MagazineKey>-JS-BDSSdUCgeINmXCh8KQ</MagazineKey>
+                <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
+                <Quantity>8</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>DZUx10a3ZkWZEMBbh3nyvw</MagazineKey>
-                <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>17</Quantity>
+                <MagazineKey>DAr8SGWU50-y_DA2UJe20w</MagazineKey>
+                <MunitionKey>Stock/EA20 Flare Decoy</MunitionKey>
+                <Quantity>2</Quantity>
               </MagSaveData>
             </MissileLoad>
           </ComponentData>
@@ -289,7 +300,7 @@ Dual heavy cruisers with all big guns. Task Force Oak is ideal for those who str
               <MagSaveData>
                 <MagazineKey>hBEoFoELQEarIIsUd1AB7w</MagazineKey>
                 <MunitionKey>Stock/450mm AP Shell</MunitionKey>
-                <Quantity>150</Quantity>
+                <Quantity>175</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>VFvzF7No8Eq78hE21Gbjgw</MagazineKey>
@@ -350,7 +361,7 @@ Dual heavy cruisers with all big guns. Task Force Oak is ideal for those who str
         </HullSocket>
         <HullSocket>
           <Key>A8e_Z_d8WU2qzo6HTQwCBA</Key>
-          <ComponentName>Stock/Rapid DC Locker</ComponentName>
+          <ComponentName>Stock/Large DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>2xmOS4ns_EaMYjBXrrhhig</Key>
@@ -359,14 +370,6 @@ Dual heavy cruisers with all big guns. Task Force Oak is ideal for those who str
         <HullSocket>
           <Key>y1xLixKUzUSKT7Nz7aUkLQ</Key>
           <ComponentName>Stock/Reinforced DC Locker</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>RmUeePb-8EGbFaRgVjCXsA</Key>
-          <ComponentName>Stock/Berthing</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>eYp1IPfupUGVITrkVhgZJw</Key>
-          <ComponentName>Stock/Small DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>lxkgmNwqjUua0sRee2pDJg</Key>
@@ -427,6 +430,7 @@ Dual heavy cruisers with all big guns. Task Force Oak is ideal for those who str
         </RelativePosition>
       </InitialFormation>
       <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
     </Ship>
   </Ships>
 </Fleet>
