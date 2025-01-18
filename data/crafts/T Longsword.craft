@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<CraftTemplate xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DesignationSuffix>T</DesignationSuffix>
+  <Nickname>Longsword</Nickname>
+  <LongDescription>Frame Model: Claymore
+Frame Class: Bomber
+Base Cost: 15
+Storage Size: 2
+Pad Size: 10 x 10
+PD Threat Size: 3
+Frame Integrity: 135
+Skin Thickness: 0.30
+
+Idle Speed: 30 m/s
+Cruise Speed: 65 m/s
+Cruise (HBRN) Speed: 98 m/s
+Combat Speed: 98 m/s
+
+Fuel Capacity: 2,000
+Loiter Time: 17:40
+Cruise Range: 43 km
+
+Thruster Power: 250
+Frame Mass: 25.00
+Loadout Mass: -
+Total Mass: 25.00
+
+&lt;b&gt;Components:&lt;/b&gt;
+Centerline: S3 Missile Bay
+
+&lt;b&gt;Loadouts:&lt;/b&gt;
+Torpedo Bomber: 2x &lt;noparse&gt;SGT-375 Truncheon&lt;/noparse&gt;
+KBU-22 Bomber: 2x KBU-22 Bomb</LongDescription>
+  <Cost>15</Cost>
+  <FrameKey>Stock/AN Bomber</FrameKey>
+  <TemplateKey>99a6cc3a-49a1-4399-a26f-9280400457b4</TemplateKey>
+  <InstalledComponents>
+    <SerializedCraftSocket>
+      <SocketKey>centerline</SocketKey>
+      <ComponentKey>centerline_s3bay</ComponentKey>
+    </SerializedCraftSocket>
+  </InstalledComponents>
+  <Loadouts>
+    <CraftLoadout>
+      <LoadoutName>Torpedo Bomber</LoadoutName>
+      <Elements>
+        <GeneralLoadoutElement xsi:type="MissileSelection">
+          <SocketKey>centerline</SocketKey>
+          <MissileKeys>
+            <string>$MODMIS$/SGT-375 Truncheon</string>
+            <string>$MODMIS$/SGT-375 Truncheon</string>
+          </MissileKeys>
+        </GeneralLoadoutElement>
+      </Elements>
+    </CraftLoadout>
+    <CraftLoadout>
+      <LoadoutName>KBU-22 Bomber</LoadoutName>
+      <Elements>
+        <GeneralLoadoutElement xsi:type="MissileSelection">
+          <SocketKey>centerline</SocketKey>
+          <MissileKeys>
+            <string>Stock/S2 Glide Bomb</string>
+            <string>Stock/S2 Glide Bomb</string>
+          </MissileKeys>
+        </GeneralLoadoutElement>
+      </Elements>
+    </CraftLoadout>
+  </Loadouts>
+  <TemplateMissileTypes>
+    <MissileTemplate>
+      <Designation>SGT-375</Designation>
+      <Nickname>Truncheon</Nickname>
+      <Description>DIRECT - ACT(&lt;color=#3BC81E&gt;RADAR&lt;/color&gt;)/[PSV(&lt;color=#D4211D&gt;WAKE&lt;/color&gt;)] - HE SHAPED</Description>
+      <LongDescription>The &lt;noparse&gt;SGT-375 Truncheon&lt;/noparse&gt; is a size 3 direct guidance missile.  It is based on the SGT-3 body, which is a heavy anti-ship torpedo.  This missile will deliver a Contact Fuze, High Explosive, Shaped warhead.  It homes in on its target using an Active Radar seeker, validating that it is the correct target using a Passive Wake seeker.
+
+Control Method: DIRECT
+Targeting Modes: &lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+
+Primary Seeker: ACTIVE &lt;color=#3BC81E&gt;RADAR&lt;/color&gt;
+Validation Seeker: PASSIVE (&lt;color=#D4211D&gt;WAKE&lt;/color&gt;)
+
+Speed: 204 m/s
+Distance: 4,000 m
+Top Speed In: 1.0 s
+Turn Rate: 3.3 G
+Terminal Maneuvers: Corkscrew
+(&lt;color=#D3D11F&gt;May decrease effective range&lt;/color&gt;)
+
+Warhead: Contact Fuze, High Explosive, Shaped
+Armor: 93cm
+Component: 2,880hp
+Blast Angle: 70 deg
+Damage Per Fragment: 50.0
+
+Body Integrity: 160
+Wall Thickness: 0.25
+Programming Time: 3 s
+Radar Signature Bonus: 100 %
+Boost-Phase Duration: 3 s
+Boost-Phase Strafe: 100 %
+Boost-Phase Turn Rate: 100 %
+Failure Rate: 0 %</LongDescription>
+      <Cost>10</Cost>
+      <BodyKey>Stock/SGT-3 Body</BodyKey>
+      <TemplateKey>9b2fb85c-3cfd-40de-b69a-f2deaabb3675</TemplateKey>
+      <BaseColor>
+        <r>0.2627451</r>
+        <g>0.2627451</g>
+        <b>0.2627451</b>
+        <a>1</a>
+      </BaseColor>
+      <StripeColor>
+        <r>0.8509804</r>
+        <g>0.3647059</g>
+        <b>0.180392161</b>
+        <a>1</a>
+      </StripeColor>
+      <Sockets>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="ActiveSeekerSettings">
+            <ComponentKey>Stock/Fixed Active Radar Seeker</ComponentKey>
+            <Mode>Targeting</Mode>
+            <RejectUnvalidated>false</RejectUnvalidated>
+            <DetectPDTargets>false</DetectPDTargets>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="PassiveSeekerSettings">
+            <ComponentKey>Stock/Wake-Homing Seeker</ComponentKey>
+            <Mode>Validation</Mode>
+            <RejectUnvalidated>false</RejectUnvalidated>
+            <DetectPDTargets>false</DetectPDTargets>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="DirectGuidanceSettings">
+            <ComponentKey>Stock/Direct Guidance</ComponentKey>
+            <Role>Offensive</Role>
+            <HotLaunch>true</HotLaunch>
+            <SelfDestructOnLost>false</SelfDestructOnLost>
+            <Maneuvers>Corkscrew</Maneuvers>
+            <DefensiveDoctrine>
+              <TargetSizeMask>12</TargetSizeMask>
+              <TargetType>All</TargetType>
+              <TargetSizeOrdering>Descending</TargetSizeOrdering>
+              <SalvoSize>0</SalvoSize>
+              <FarthestFirst>false</FarthestFirst>
+            </DefensiveDoctrine>
+            <ApproachAngleControl>false</ApproachAngleControl>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>4</Size>
+          <InstalledComponent>
+            <ComponentKey>Stock/HE Impact</ComponentKey>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>10</Size>
+          <InstalledComponent xsi:type="MissileEngineSettings">
+            <ComponentKey />
+            <BalanceValues>
+              <A>0.230511382</A>
+              <B>0.289663</B>
+              <C>0.479825616</C>
+            </BalanceValues>
+          </InstalledComponent>
+        </MissileSocket>
+      </Sockets>
+    </MissileTemplate>
+  </TemplateMissileTypes>
+  <ModDependencies />
+</CraftTemplate>

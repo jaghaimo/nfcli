@@ -3,6 +3,7 @@
 import logging
 import sqlite3
 from collections import Counter
+from datetime import datetime
 from pathlib import Path
 from sqlite3 import Connection, Cursor, Error
 from typing import Any
@@ -12,6 +13,15 @@ from discord.message import Attachment
 from nfcli.stats import Guilds, User
 
 SQL_PATH = Path(Path.home(), ".nfcli.sqlite")
+
+
+def fetch_all(cursor: Cursor, default: list[Any]) -> list[Any]:
+    if not cursor:
+        return default
+    row = cursor.fetchall()
+    if not row:
+        return default
+    return row
 
 
 def fetch_row(cursor: Cursor, default: list[Any]) -> list[Any]:
@@ -65,12 +75,22 @@ def init_database(connection: Connection):
     execute_query(connection, create_table_usage)
 
 
-def insert_usage_data(connection: Connection, guild: int, user: int, files: set[Attachment]):
+def insert_usage_data(connection: Connection, guild: int, user: int, files: set[Attachment]) -> None:
     extensions = [file.filename.split(".")[-1] for file in files]
     counter = Counter(extensions)
     insert_lobby_data = "INSERT INTO usage (guild, user, fleets, ships, missiles) VALUES (?, ?, ?, ?, ?)"
     cursor = connection.cursor()
     cursor.execute(insert_lobby_data, (guild, user, counter["fleet"], counter["ship"], counter["missile"]))
+    connection.commit()
+
+
+def delete_usage_data(connection: Connection, guilds: list[int]) -> None:
+    if not guilds:
+        return
+    insert_lobby_data = "DELETE FROM usage WHERE guild = ?"
+    cursor = connection.cursor()
+    for guild in guilds:
+        cursor.execute(insert_lobby_data, (guild,))
     connection.commit()
 
 
@@ -93,3 +113,12 @@ def fetch_usage_users(connection: Connection, days: int = 30) -> User:
     cursor = execute_query(connection, fetch_usage_users)
     row = fetch_row(cursor, [0, 0, 0, 0, 0])
     return User(*row, days)
+
+
+def fetch_inactive_guilds(connection: Connection, *args, cut_off_days: int) -> list[int, datetime]:
+    fetch_inactive_servers = (
+        "SELECT guild, MAX(timestamp) AS last_used FROM usage GROUP BY guild"
+        f" HAVING last_used < DATETIME('now', '-{cut_off_days} day') ORDER BY last_used"
+    )
+    cursor = execute_query(connection, fetch_inactive_servers)
+    return fetch_all(cursor, [])

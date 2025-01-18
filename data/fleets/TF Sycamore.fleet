@@ -6,7 +6,7 @@
   <FactionKey>Stock/Alliance</FactionKey>
   <Description>Difficulty: &lt;color=red&gt;HARD&lt;/color&gt;
 
-This fleet is comprised of five small but deadly ships. The Rod of Iron is a cruise missile silo, able to strike targets far away and behind cover. The Eye of Providence is suited to destroying enemy scouts, with a more plentiful supply of smaller missiles that require the use of an illuminator to paint the target. Meanwhile the corvettes are loaded with torpedoes, forming a fast and lethal ambush group. Exploring this fleet and its missiles in the editor before taking it into battle is highly recommended.
+The purpose of TF Sycamore is to gain and maintain sensor dominance. The Rod of Iron is a cruise missile silo armed with Shipwreck Is and IIs, which should be fired together against high-value targets with one II per salvo for maximum effect. The Eye of Providence is equipped with a long-range radar for maintaining track on the enemy and with its Vortex and Thundercloud missiles for striking light targets. Moving in advance of the frigates are two stealthy corvettes. Using their Bullseye FCRs on ELINT tracks enables precision strikes with their complement of deadly Whirlpool and Maelstrom missiles. The forward ships are covered by anti-craft missiles, Supercells for anti-spotter work and Eyewalls for use against fighters and bombers. TF Sycamore is best used to support teammates by destroying enemy spotters and damaging enemy combat ships as they engage friendly forces.
   </Description>
   <SortOverrideOrder>6</SortOverrideOrder>
   <Ships>
@@ -14,7 +14,7 @@ This fleet is comprised of five small but deadly ships. The Rod of Iron is a cru
       <SaveID xsi:nil="true" />
       <Key>93ddee0c-3096-4bfa-b8ec-a5c0dffa02ed</Key>
       <Name>Eye of Providence</Name>
-      <Cost>769</Cost>
+      <Cost>950</Cost>
       <Callsign />
       <Number>660</Number>
       <SymbolOption>1</SymbolOption>
@@ -22,35 +22,30 @@ This fleet is comprised of five small but deadly ships. The Rod of Iron is a cru
       <SocketMap>
         <HullSocket>
           <Key>PDKmGfvpykODc3XHDQ7WBw</Key>
-          <ComponentName>Stock/VLS-1-46 Launcher</ComponentName>
-          <ComponentData xsi:type="CellLauncherData">
+          <ComponentName>Stock/VLS-2 Launcher</ComponentName>
+          <ComponentData xsi:type="ResizableCellLauncherData">
             <MissileLoad>
               <MagSaveData>
-                <MagazineKey>79znoH0Lo0KF6s0aIH0U5g</MagazineKey>
-                <MunitionKey>$MODMIS$/SGM-160 Rampart</MunitionKey>
-                <Quantity>13</Quantity>
+                <MagazineKey>78Qnjh3XYEqZtuXhtpCMWQ</MagazineKey>
+                <MunitionKey>Stock/EA99 Active Decoy</MunitionKey>
+                <Quantity>4</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>g2nLB74zkUGMg7Iqgad3Qg</MagazineKey>
-                <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
+                <MagazineKey>fKdugwxK4UyD0aCVc5p29A</MagazineKey>
+                <MunitionKey>$MODMIS$/SDM-260 Eyewall</MunitionKey>
                 <Quantity>8</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>ViPKNp7ZhkW7oMONAgFTRw</MagazineKey>
-                <MunitionKey>Stock/EA20 Flare Decoy</MunitionKey>
-                <Quantity>2</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>61oPMNjTz0OM5msWP0cwqw</MagazineKey>
-                <MunitionKey>Stock/EA99 Active Decoy</MunitionKey>
-                <Quantity>2</Quantity>
+                <MagazineKey>lRFuL5bu1UuwqbhFo9k2pg</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-H-270 Supercell</MunitionKey>
+                <Quantity>4</Quantity>
               </MagSaveData>
             </MissileLoad>
           </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>WwMGqYiU7E6lp7ID47phqA</Key>
-          <ComponentName>Stock/E55 'Spotlight' Illuminator</ComponentName>
+          <ComponentName>Stock/ES22 'Pinard' Electronic Support Module</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>gkfIwYzn7kGhG6MW9uxBmw</Key>
@@ -60,18 +55,14 @@ This fleet is comprised of five small but deadly ships. The Rod of Iron is a cru
               <MagSaveData>
                 <MagazineKey>Vho5BaGVv0uxN6cCUfTAAg</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-H-280 Vortex</MunitionKey>
-                <Quantity>6</Quantity>
+                <Quantity>10</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>CrQ06lRapE-ePIdV5wmkdw</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-210 Thundercloud</MunitionKey>
-                <Quantity>18</Quantity>
+                <Quantity>10</Quantity>
               </MagSaveData>
             </MissileLoad>
-            <ConfiguredSize>
-              <x>1</x>
-              <y>3</y>
-            </ConfiguredSize>
           </ComponentData>
         </HullSocket>
         <HullSocket>
@@ -82,18 +73,14 @@ This fleet is comprised of five small but deadly ships. The Rod of Iron is a cru
               <MagSaveData>
                 <MagazineKey>NjCBPa4pxU-Lk1NTgGDSKw</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-H-280 Vortex</MunitionKey>
-                <Quantity>6</Quantity>
+                <Quantity>10</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>_nIvZhGvCUmx8-6uwSSgFg</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-210 Thundercloud</MunitionKey>
-                <Quantity>18</Quantity>
+                <Quantity>10</Quantity>
               </MagSaveData>
             </MissileLoad>
-            <ConfiguredSize>
-              <x>1</x>
-              <y>3</y>
-            </ConfiguredSize>
           </ComponentData>
         </HullSocket>
         <HullSocket>
@@ -102,7 +89,10 @@ This fleet is comprised of five small but deadly ships. The Rod of Iron is a cru
         </HullSocket>
         <HullSocket>
           <Key>6Tzo7268MEqgyFxnGvLKUg</Key>
-          <ComponentName>Stock/Small DC Locker</ComponentName>
+          <ComponentName>Stock/Reinforced Magazine</ComponentName>
+          <ComponentData xsi:type="BulkMagazineData">
+            <Load />
+          </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>O_Y-AJc7r0alOg36rvY6MQ</Key>
@@ -114,7 +104,7 @@ This fleet is comprised of five small but deadly ships. The Rod of Iron is a cru
         </HullSocket>
         <HullSocket>
           <Key>lorATFhkTkeZQYThYOHazg</Key>
-          <ComponentName>Stock/Berthing</ComponentName>
+          <ComponentName>Stock/Rapid DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>bRgUlaoQJ0S7M91zMpdAdA</Key>
@@ -130,7 +120,7 @@ This fleet is comprised of five small but deadly ships. The Rod of Iron is a cru
         </HullSocket>
         <HullSocket>
           <Key>p-m7ijS6ukuqzuBT5NE_lA</Key>
-          <ComponentName>Stock/Adaptive Radar Receiver</ComponentName>
+          <ComponentName>Stock/Missile Programming Bus</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>foApM84hT0GpEw4GaFv38w</Key>
@@ -139,12 +129,13 @@ This fleet is comprised of five small but deadly ships. The Rod of Iron is a cru
       </SocketMap>
       <WeaponGroups />
       <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
     </Ship>
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>8e84cd8d-f17d-4d84-b771-181c5fd0b576</Key>
       <Name>Rod of Iron</Name>
-      <Cost>1020</Cost>
+      <Cost>885</Cost>
       <Callsign />
       <Number>970</Number>
       <SymbolOption>0</SymbolOption>
@@ -158,18 +149,14 @@ This fleet is comprised of five small but deadly ships. The Rod of Iron is a cru
               <MagSaveData>
                 <MagazineKey>uY7ap1ZGDUCRsXoqSXcnrg</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-H-360 Shipwreck</MunitionKey>
-                <Quantity>2</Quantity>
+                <Quantity>3</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>AIB-CfAdvE-JnH7-zm6Ufg</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-H-360 Shipwreck Block II</MunitionKey>
-                <Quantity>2</Quantity>
+                <Quantity>1</Quantity>
               </MagSaveData>
             </MissileLoad>
-            <ConfiguredSize>
-              <x>1</x>
-              <y>2</y>
-            </ConfiguredSize>
           </ComponentData>
         </HullSocket>
         <HullSocket>
@@ -178,20 +165,16 @@ This fleet is comprised of five small but deadly ships. The Rod of Iron is a cru
           <ComponentData xsi:type="ResizableCellLauncherData">
             <MissileLoad>
               <MagSaveData>
-                <MagazineKey>mYs0e9mQek20oyzXm6SEbw</MagazineKey>
-                <MunitionKey>$MODMIS$/SGM-H-360 Shipwreck</MunitionKey>
-                <Quantity>2</Quantity>
+                <MagazineKey>ZUMtYL1mb0-sbIcfk6xyWw</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-H-360 Shipwreck Block II</MunitionKey>
+                <Quantity>3</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>jW2bj5EyEk6bViyB54drZQ</MagazineKey>
-                <MunitionKey>$MODMIS$/SGM-H-360 Shipwreck Block II</MunitionKey>
-                <Quantity>2</Quantity>
+                <MagazineKey>QK3feJfE7UifH1AHKsmJbg</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-H-360 Shipwreck</MunitionKey>
+                <Quantity>1</Quantity>
               </MagSaveData>
             </MissileLoad>
-            <ConfiguredSize>
-              <x>1</x>
-              <y>2</y>
-            </ConfiguredSize>
           </ComponentData>
         </HullSocket>
         <HullSocket>
@@ -202,18 +185,14 @@ This fleet is comprised of five small but deadly ships. The Rod of Iron is a cru
               <MagSaveData>
                 <MagazineKey>FFGkUSfD-EmTdSR-exhULQ</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-H-360 Shipwreck</MunitionKey>
-                <Quantity>3</Quantity>
+                <Quantity>5</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>I530jpzHVkWqyDrOthYuLQ</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-H-360 Shipwreck Block II</MunitionKey>
-                <Quantity>3</Quantity>
+                <Quantity>1</Quantity>
               </MagSaveData>
             </MissileLoad>
-            <ConfiguredSize>
-              <x>1</x>
-              <y>3</y>
-            </ConfiguredSize>
           </ComponentData>
         </HullSocket>
         <HullSocket>
@@ -224,23 +203,19 @@ This fleet is comprised of five small but deadly ships. The Rod of Iron is a cru
               <MagSaveData>
                 <MagazineKey>JmlUTubMFkOfsDhXdi84yQ</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-H-360 Shipwreck</MunitionKey>
-                <Quantity>3</Quantity>
+                <Quantity>5</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>rNlMamNxwUO8tGIzcMOYHQ</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-H-360 Shipwreck Block II</MunitionKey>
-                <Quantity>3</Quantity>
+                <Quantity>1</Quantity>
               </MagSaveData>
             </MissileLoad>
-            <ConfiguredSize>
-              <x>1</x>
-              <y>3</y>
-            </ConfiguredSize>
           </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>98N-YI_1WUOs--qPYlt-7g</Key>
-          <ComponentName>Stock/Reinforced CIC</ComponentName>
+          <ComponentName>Stock/Basic CIC</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>6Tzo7268MEqgyFxnGvLKUg</Key>
@@ -251,10 +226,6 @@ This fleet is comprised of five small but deadly ships. The Rod of Iron is a cru
         </HullSocket>
         <HullSocket>
           <Key>5APOD4UfSkGdkm9WWdAvLA</Key>
-          <ComponentName>Stock/Berthing</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>lorATFhkTkeZQYThYOHazg</Key>
           <ComponentName>Stock/Rapid DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
@@ -280,63 +251,84 @@ This fleet is comprised of five small but deadly ships. The Rod of Iron is a cru
       </SocketMap>
       <WeaponGroups />
       <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
     </Ship>
     <Ship>
       <SaveID xsi:nil="true" />
-      <Key>bd1cc2e8-735c-4794-bae2-88bbb6cfb8ce</Key>
-      <Name>Black Flanks</Name>
-      <Cost>436</Cost>
+      <Key>2bd3cf78-0605-4eac-b2bd-08fd98474c7f</Key>
+      <Name>Star Hunter</Name>
+      <Cost>588</Cost>
       <Callsign />
-      <Number>475</Number>
+      <Number>436</Number>
       <SymbolOption>0</SymbolOption>
       <HullType>Stock/Sprinter Corvette</HullType>
       <SocketMap>
         <HullSocket>
           <Key>wDsRnL5nKkyYvKgD6VcPHg</Key>
-          <ComponentName>Stock/CLS-3 Launcher</ComponentName>
+          <ComponentName>Stock/VLS-2 Launcher</ComponentName>
           <ComponentData xsi:type="ResizableCellLauncherData">
             <MissileLoad>
               <MagSaveData>
-                <MagazineKey>3MSpTb8qEUurZKClXxJJ6Q</MagazineKey>
-                <MunitionKey>$MODMIS$/SGT-340 Gravestone Block II</MunitionKey>
+                <MagazineKey>_jW_29vG7UmWgWcY-oWujw</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-H-290 Maelstrom</MunitionKey>
+                <Quantity>2</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>-bD1zdR58UmAjGQrRCCeKQ</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-H-295 Whirlpool</MunitionKey>
+                <Quantity>16</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>m_luV4mTcEOfbJdPtWeo_A</MagazineKey>
+                <MunitionKey>$MODMIS$/SDM-260 Eyewall</MunitionKey>
                 <Quantity>4</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>n43nFw-fykuWCKaDadJSmA</MagazineKey>
-                <MunitionKey>$MODMIS$/SGT-340 Gravestone Block III</MunitionKey>
+                <MagazineKey>zJtNjFpJEUyTXKWIABxtjg</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-H-270 Supercell</MunitionKey>
                 <Quantity>2</Quantity>
               </MagSaveData>
             </MissileLoad>
-            <ConfiguredSize>
-              <x>1</x>
-              <y>3</y>
-            </ConfiguredSize>
           </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>Z48ot_dQfkWb6AVYjaM_gA</Key>
-          <ComponentName>Stock/VLS-1-46 Launcher</ComponentName>
+          <ComponentName>Stock/VLS-1-23 Launcher</ComponentName>
           <ComponentData xsi:type="CellLauncherData">
             <MissileLoad>
               <MagSaveData>
-                <MagazineKey>ZV3l2PJO6Uiz_vj73uwfEg</MagazineKey>
-                <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>14</Quantity>
+                <MagazineKey>gaS7f0xE9EO9oZm_h9F3nA</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-120 Fortress</MunitionKey>
+                <Quantity>11</Quantity>
               </MagSaveData>
             </MissileLoad>
           </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>IUdNSVZm2Eu9n3F5HnSAng</Key>
-          <ComponentName>Stock/E90 'Blanket' Jammer</ComponentName>
+          <ComponentName>Stock/VLS-1-23 Launcher</ComponentName>
+          <ComponentData xsi:type="CellLauncherData">
+            <MissileLoad>
+              <MagSaveData>
+                <MagazineKey>V_IC0Spgy0u85Tbg3JxusA</MagazineKey>
+                <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
+                <Quantity>12</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>Ogcia9YZ9UKAFq0Vjyj0EQ</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-120 Fortress</MunitionKey>
+                <Quantity>11</Quantity>
+              </MagSaveData>
+            </MissileLoad>
+          </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>ZxY9ONYz80SiLNSObvjNzQ</Key>
-          <ComponentName>Stock/E90 'Blanket' Jammer</ComponentName>
+          <ComponentName>Stock/RF101 'Bullseye' Radar</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>XPaYCjBqdEqBxEIsVLP0oA</Key>
-          <ComponentName>Stock/Reinforced CIC</ComponentName>
+          <ComponentName>Stock/Basic CIC</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>xRYIkvssd0mPY3VIgrnQ5A</Key>
@@ -351,122 +343,7 @@ This fleet is comprised of five small but deadly ships. The Rod of Iron is a cru
         </HullSocket>
         <HullSocket>
           <Key>GefqwCQzg0qXA3EFRmDtPw</Key>
-          <ComponentName>Stock/Berthing</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>4WpJyiOKVEqCwR99l47MkA</Key>
-          <ComponentName>Stock/FR3300 Micro Reactor</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>4EHx4mQhNUi-WuuQtQF5fA</Key>
-          <ComponentName>Stock/FM230 'Whiplash' Drive</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>TSPPW9ECe06-MGzR1i0WvQ</Key>
-          <ComponentName>Stock/Actively Cooled Amplifiers</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>MBOvGazj6UWpt2OOy44s7w</Key>
-          <ComponentName>Stock/Missile Programming Bus</ComponentName>
-        </HullSocket>
-      </SocketMap>
-      <WeaponGroups>
-        <WepGroup Name="Blankets">
-          <MemberKeys>
-            <string>IUdNSVZm2Eu9n3F5HnSAng</string>
-            <string>ZxY9ONYz80SiLNSObvjNzQ</string>
-          </MemberKeys>
-        </WepGroup>
-      </WeaponGroups>
-      <TemplateMissileTypes />
-    </Ship>
-    <Ship>
-      <SaveID xsi:nil="true" />
-      <Key>e9464b37-fe25-4f22-b80f-6cfbaf7ac5ab</Key>
-      <Name>Charger</Name>
-      <Cost>388</Cost>
-      <Callsign />
-      <Number>773</Number>
-      <SymbolOption>0</SymbolOption>
-      <HullType>Stock/Sprinter Corvette</HullType>
-      <SocketMap>
-        <HullSocket>
-          <Key>wDsRnL5nKkyYvKgD6VcPHg</Key>
-          <ComponentName>Stock/CLS-3 Launcher</ComponentName>
-          <ComponentData xsi:type="ResizableCellLauncherData">
-            <MissileLoad>
-              <MagSaveData>
-                <MagazineKey>ulAQmEcvNEKMLi7rPMlAyA</MagazineKey>
-                <MunitionKey>$MODMIS$/SGT-340 Gravestone Block II</MunitionKey>
-                <Quantity>4</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>N6qTMubtcEW1AipW-wJYTQ</MagazineKey>
-                <MunitionKey>$MODMIS$/SGT-340 Gravestone Block III</MunitionKey>
-                <Quantity>2</Quantity>
-              </MagSaveData>
-            </MissileLoad>
-            <ConfiguredSize>
-              <x>1</x>
-              <y>3</y>
-            </ConfiguredSize>
-          </ComponentData>
-        </HullSocket>
-        <HullSocket>
-          <Key>Z48ot_dQfkWb6AVYjaM_gA</Key>
-          <ComponentName>Stock/Mk62 Cannon</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>IUdNSVZm2Eu9n3F5HnSAng</Key>
-          <ComponentName>Stock/VLS-1-23 Launcher</ComponentName>
-          <ComponentData xsi:type="CellLauncherData">
-            <MissileLoad>
-              <MagSaveData>
-                <MagazineKey>nlEy5cuoZUW4FqW9tJZcgQ</MagazineKey>
-                <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>12</Quantity>
-              </MagSaveData>
-            </MissileLoad>
-          </ComponentData>
-        </HullSocket>
-        <HullSocket>
-          <Key>ZxY9ONYz80SiLNSObvjNzQ</Key>
-          <ComponentName>Stock/RF101 'Bullseye' Radar</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>XPaYCjBqdEqBxEIsVLP0oA</Key>
-          <ComponentName>Stock/Reinforced CIC</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>xRYIkvssd0mPY3VIgrnQ5A</Key>
-          <ComponentName>Stock/Reinforced Magazine</ComponentName>
-          <ComponentData xsi:type="BulkMagazineData">
-            <Load>
-              <MagSaveData>
-                <MagazineKey>7aro6C84tE6WqrC9oDXrzQ</MagazineKey>
-                <MunitionKey>Stock/120mm AP Shell</MunitionKey>
-                <Quantity>200</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>h5Sok4XHl0GRYzlWPKfHEQ</MagazineKey>
-                <MunitionKey>Stock/120mm HE Shell</MunitionKey>
-                <Quantity>300</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>ihEbakOCiEiLfSqjWYsmEQ</MagazineKey>
-                <MunitionKey>Stock/120mm HE-RPF Shell</MunitionKey>
-                <Quantity>400</Quantity>
-              </MagSaveData>
-            </Load>
-          </ComponentData>
-        </HullSocket>
-        <HullSocket>
-          <Key>rXO8xwG1MkqzI_2pU-O_qQ</Key>
-          <ComponentName>Stock/Rapid DC Locker</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>GefqwCQzg0qXA3EFRmDtPw</Key>
-          <ComponentName>Stock/Berthing</ComponentName>
+          <ComponentName>Stock/Plant Control Center</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>4WpJyiOKVEqCwR99l47MkA</Key>
@@ -486,46 +363,45 @@ This fleet is comprised of five small but deadly ships. The Rod of Iron is a cru
         </HullSocket>
       </SocketMap>
       <WeaponGroups />
-      <InitialFormation>
-        <GuideKey>bd1cc2e8-735c-4794-bae2-88bbb6cfb8ce</GuideKey>
-        <RelativePosition>
-          <x>27.1614933</x>
-          <y>1.00383759</y>
-          <z>-13.181778</z>
-        </RelativePosition>
-      </InitialFormation>
       <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
     </Ship>
     <Ship>
       <SaveID xsi:nil="true" />
-      <Key>a0a020de-ee0a-4108-a837-f8c88967bf1e</Key>
-      <Name>Harrier</Name>
-      <Cost>387</Cost>
+      <Key>b7b34b25-f178-43da-9939-25f59dd7c1c4</Key>
+      <Name>Cloud of Unknowing</Name>
+      <Cost>577</Cost>
       <Callsign />
-      <Number>1277</Number>
+      <Number>1006</Number>
       <SymbolOption>0</SymbolOption>
       <HullType>Stock/Sprinter Corvette</HullType>
       <SocketMap>
         <HullSocket>
           <Key>wDsRnL5nKkyYvKgD6VcPHg</Key>
-          <ComponentName>Stock/CLS-3 Launcher</ComponentName>
+          <ComponentName>Stock/VLS-2 Launcher</ComponentName>
           <ComponentData xsi:type="ResizableCellLauncherData">
             <MissileLoad>
               <MagSaveData>
-                <MagazineKey>w06XzT9lNE6c9jj_D65vdQ</MagazineKey>
-                <MunitionKey>$MODMIS$/SGT-340 Gravestone Block II</MunitionKey>
+                <MagazineKey>_jW_29vG7UmWgWcY-oWujw</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-H-290 Maelstrom</MunitionKey>
+                <Quantity>2</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>cWi4FNY150CHRODQbLokMA</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-H-295 Whirlpool</MunitionKey>
+                <Quantity>16</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>GwkZTZ9cx0evLBfmyKVSTw</MagazineKey>
+                <MunitionKey>$MODMIS$/SDM-260 Eyewall</MunitionKey>
                 <Quantity>4</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>81bRCY40t0aYyZ7Wg9hoDQ</MagazineKey>
-                <MunitionKey>$MODMIS$/SGT-340 Gravestone Block III</MunitionKey>
+                <MagazineKey>QvqvP7pHpkmz8ARyhjV_Ng</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-H-270 Supercell</MunitionKey>
                 <Quantity>2</Quantity>
               </MagSaveData>
             </MissileLoad>
-            <ConfiguredSize>
-              <x>1</x>
-              <y>3</y>
-            </ConfiguredSize>
           </ComponentData>
         </HullSocket>
         <HullSocket>
@@ -538,11 +414,11 @@ This fleet is comprised of five small but deadly ships. The Rod of Iron is a cru
         </HullSocket>
         <HullSocket>
           <Key>ZxY9ONYz80SiLNSObvjNzQ</Key>
-          <ComponentName>Stock/E55 'Spotlight' Illuminator</ComponentName>
+          <ComponentName>Stock/E90 'Blanket' Jammer</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>XPaYCjBqdEqBxEIsVLP0oA</Key>
-          <ComponentName>Stock/Reinforced CIC</ComponentName>
+          <ComponentName>Stock/Basic CIC</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>xRYIkvssd0mPY3VIgrnQ5A</Key>
@@ -554,10 +430,6 @@ This fleet is comprised of five small but deadly ships. The Rod of Iron is a cru
         <HullSocket>
           <Key>rXO8xwG1MkqzI_2pU-O_qQ</Key>
           <ComponentName>Stock/Rapid DC Locker</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>GefqwCQzg0qXA3EFRmDtPw</Key>
-          <ComponentName>Stock/Berthing</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>4WpJyiOKVEqCwR99l47MkA</Key>
@@ -572,209 +444,20 @@ This fleet is comprised of five small but deadly ships. The Rod of Iron is a cru
           <ComponentName>Stock/Missile Programming Bus</ComponentName>
         </HullSocket>
       </SocketMap>
-      <WeaponGroups>
-        <WepGroup Name="Blankets">
-          <MemberKeys>
-            <string>IUdNSVZm2Eu9n3F5HnSAng</string>
-          </MemberKeys>
-        </WepGroup>
-        <WepGroup Name="Spotlight">
-          <MemberKeys>
-            <string>ZxY9ONYz80SiLNSObvjNzQ</string>
-          </MemberKeys>
-        </WepGroup>
-      </WeaponGroups>
+      <WeaponGroups />
       <InitialFormation>
-        <GuideKey>bd1cc2e8-735c-4794-bae2-88bbb6cfb8ce</GuideKey>
+        <GuideKey>2bd3cf78-0605-4eac-b2bd-08fd98474c7f</GuideKey>
         <RelativePosition>
-          <x>-24.3284931</x>
+          <x>31.4708557</x>
           <y>0</y>
-          <z>-17.60331</z>
+          <z>-0.239837646</z>
         </RelativePosition>
       </InitialFormation>
       <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
     </Ship>
   </Ships>
   <MissileTypes>
-    <MissileTemplate>
-      <Designation>SGT-340</Designation>
-      <Nickname>Gravestone Block II</Nickname>
-      <Description>DIRECT - &lt;color=#D3D11F&gt;CMD&lt;/color&gt; - HE SHAPED</Description>
-      <LongDescription>The &lt;noparse&gt;SGT-340 Gravestone Block II&lt;/noparse&gt; is a size 3 direct guidance missile.  It is based on the SGT-3 body, which is a heavy anti-ship torpedo.  This missile will deliver a Contact Fuze, High Explosive, Shaped warhead.  It homes in on its target using command guidance from its launching ship.
-
-Control Method: DIRECT
-Targeting Modes:
-	&lt;b&gt;&lt;color=#D4211D&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
-Primary Seeker: COMMAND (&lt;color=#D3D11F&gt;Requires COMMS Enabled&lt;/color&gt;)
-
-197 m/s for 4,038 m, top speed in 1.0 s
-Terminal Maneuvers: Corkscrew
-
-Contact Fuze, High Explosive, Shaped
-Armor: 104cm   Component: 3,600hp
-Blast Angle: 70 deg
-Damage Per Fragment: 50.0
-
-Body Integrity: 160 
-Wall Thickness: 2.5
-Programming Time: 3 s
-Radar Signature Bonus: 100 %
-Boost-Phase Duration: 3 s
-Boost-Phase Strafe: 100 %
-Boost-Phase Turn Rate: 100 %
-Failure Rate: 0 %</LongDescription>
-      <Cost>13</Cost>
-      <BodyKey>Stock/SGT-3 Body</BodyKey>
-      <TemplateKey>295340de-e2d8-475c-b10c-d8d8a5baa1a0</TemplateKey>
-      <BaseColor>
-        <r>0.8269358</r>
-        <g>0.0153443245</g>
-        <b>0.0153443245</b>
-        <a>1</a>
-      </BaseColor>
-      <StripeColor>
-        <r>0.9999999</r>
-        <g>0.9802647</g>
-        <b>0.005894362</b>
-        <a>1</a>
-      </StripeColor>
-      <Sockets>
-        <MissileSocket>
-          <Size>1</Size>
-          <InstalledComponent xsi:type="CommandSeekerSettings">
-            <ComponentKey>Stock/Command Receiver</ComponentKey>
-            <Mode>Targeting</Mode>
-            <RejectUnvalidated>false</RejectUnvalidated>
-          </InstalledComponent>
-        </MissileSocket>
-        <MissileSocket>
-          <Size>1</Size>
-        </MissileSocket>
-        <MissileSocket>
-          <Size>1</Size>
-          <InstalledComponent xsi:type="DirectGuidanceSettings">
-            <ComponentKey>Stock/Direct Guidance</ComponentKey>
-            <Role>Offensive</Role>
-            <HotLaunch>true</HotLaunch>
-            <SelfDestructOnLost>false</SelfDestructOnLost>
-            <Maneuvers>Corkscrew</Maneuvers>
-            <DefensiveDoctrine>
-              <TargetSizeMask>12</TargetSizeMask>
-              <TargetType>All</TargetType>
-              <TargetSizeOrdering>Descending</TargetSizeOrdering>
-              <SalvoSize>0</SalvoSize>
-              <FarthestFirst>false</FarthestFirst>
-            </DefensiveDoctrine>
-            <ApproachAngleControl>true</ApproachAngleControl>
-          </InstalledComponent>
-        </MissileSocket>
-        <MissileSocket>
-          <Size>5</Size>
-          <InstalledComponent>
-            <ComponentKey>Stock/HE Impact</ComponentKey>
-          </InstalledComponent>
-        </MissileSocket>
-        <MissileSocket>
-          <Size>9</Size>
-          <InstalledComponent xsi:type="MissileEngineSettings">
-            <ComponentKey />
-            <BalanceValues>
-              <A>0.175914</A>
-              <B>0.381100476</B>
-              <C>0.442985535</C>
-            </BalanceValues>
-          </InstalledComponent>
-        </MissileSocket>
-      </Sockets>
-    </MissileTemplate>
-    <MissileTemplate>
-      <Designation>SGM-160</Designation>
-      <Nickname>Rampart</Nickname>
-      <Description>DIRECT - ACT(&lt;color=#3BC81E&gt;RADAR&lt;/color&gt;) - HE FRAG</Description>
-      <LongDescription>The &lt;noparse&gt;SGM-160 Rampart&lt;/noparse&gt; is a size 1 direct guidance missile.  It is based on the SGM-1 body, which is a nimble general-purpose missile.  This missile will deliver a Proximity Fuze, High Explosive, Blast Fragmentation warhead.  It homes in on its target using an Active Radar seeker.
-
-Control Method: DIRECT
-Targeting Modes:
-	&lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
-Primary Seeker: ACTIVE &lt;color=#3BC81E&gt;RADAR&lt;/color&gt;
-
-298 m/s for 6,041 m, top speed in 0.6 s
-Terminal Maneuvers: None
-
-Proximity Fuze, High Explosive, Blast Fragmentation
-Armor: 2cm   Component: 33hp
-Blast Radius: 30 m
-
-Body Integrity: 10 
-Wall Thickness: 0.5
-Programming Time: 6 s
-Radar Signature Bonus: 100 %
-Boost-Phase Duration: 3 s
-Boost-Phase Strafe: 100 %
-Boost-Phase Turn Rate: 100 %
-Failure Rate: 0 %</LongDescription>
-      <Cost>3</Cost>
-      <BodyKey>Stock/SGM-1 Body</BodyKey>
-      <TemplateKey>64fa1568-0f1d-43b1-a46c-a15c1ce1cabc</TemplateKey>
-      <BaseColor>
-        <r>1</r>
-        <g>0.4862745</g>
-        <b>0</b>
-        <a>1</a>
-      </BaseColor>
-      <StripeColor>
-        <r>0.254901975</r>
-        <g>0.254901975</g>
-        <b>0.254901975</b>
-        <a>1</a>
-      </StripeColor>
-      <Sockets>
-        <MissileSocket>
-          <Size>1</Size>
-          <InstalledComponent xsi:type="ActiveSeekerSettings">
-            <ComponentKey>Stock/Steerable Active Radar Seeker</ComponentKey>
-            <Mode>Targeting</Mode>
-            <RejectUnvalidated>false</RejectUnvalidated>
-            <DetectPDTargets>false</DetectPDTargets>
-          </InstalledComponent>
-        </MissileSocket>
-        <MissileSocket>
-          <Size>1</Size>
-          <InstalledComponent xsi:type="DirectGuidanceSettings">
-            <ComponentKey>Stock/Direct Guidance</ComponentKey>
-            <Role>Defensive</Role>
-            <HotLaunch>true</HotLaunch>
-            <SelfDestructOnLost>false</SelfDestructOnLost>
-            <Maneuvers>None</Maneuvers>
-            <DefensiveDoctrine>
-              <TargetSizeMask>12</TargetSizeMask>
-              <TargetType>All</TargetType>
-              <TargetSizeOrdering>Descending</TargetSizeOrdering>
-              <SalvoSize>0</SalvoSize>
-              <FarthestFirst>false</FarthestFirst>
-            </DefensiveDoctrine>
-            <ApproachAngleControl>true</ApproachAngleControl>
-          </InstalledComponent>
-        </MissileSocket>
-        <MissileSocket>
-          <Size>1</Size>
-          <InstalledComponent>
-            <ComponentKey>Stock/Blast Fragmentation EL</ComponentKey>
-          </InstalledComponent>
-        </MissileSocket>
-        <MissileSocket>
-          <Size>6</Size>
-          <InstalledComponent xsi:type="MissileEngineSettings">
-            <ComponentKey />
-            <BalanceValues>
-              <A>0.318577617</A>
-              <B>0.238044918</B>
-              <C>0.443377465</C>
-            </BalanceValues>
-          </InstalledComponent>
-        </MissileSocket>
-      </Sockets>
-    </MissileTemplate>
     <MissileTemplate>
       <Designation>SGM-H-360</Designation>
       <Nickname>Shipwreck</Nickname>
@@ -782,30 +465,43 @@ Failure Rate: 0 %</LongDescription>
       <LongDescription>The &lt;noparse&gt;SGM-H-360 Shipwreck&lt;/noparse&gt; is a size 3 waypoint-capable cruise missile.  It is based on the SGM-H-3 body, which is a high speed hybrid missile designed to strike heavy targets.  This missile will deliver a Contact Fuze, High Explosive, Shaped warhead.  It homes in on its target using an Active Radar seeker, validating that it is the correct target using a Passive Electro-Optical seeker.
 
 Control Method: CRUISE (Waypoint Capable)
-Targeting Modes:
-	&lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK[+TRP]&lt;/color&gt;&lt;/b&gt;
+Targeting Modes: &lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK[+TRP]&lt;/color&gt;&lt;/b&gt;
+
 Primary Seeker: ACTIVE &lt;color=#3BC81E&gt;RADAR&lt;/color&gt;
-Validation Seeker(s): PASSIVE (&lt;color=#7CC6BC&gt;EO&lt;/color&gt;)
+Validation Seeker: PASSIVE (&lt;color=#7CC6BC&gt;EO&lt;/color&gt;)
 
-Cruise: 200 m/s for 15,667 m, top speed in 3.3 s
-Sprint: 729 m/s for 6,102 m, top speed in 0.9 s
-   Stage Trigger at 5,000m from Target (&lt;color=#D3D11F&gt;Limited By Seeker Range&lt;/color&gt;)
+&lt;b&gt;Cruise&lt;/b&gt;
+Speed: 200 m/s
+Distance: 15,667 m
+Top Speed In: 3.3 s
+Turn Rate: 0.7 G
+
+&lt;b&gt;Sprint&lt;/b&gt;
+Speed: 729 m/s
+Distance: 6,102 m
+Top Speed In: 0.9 s
+Turn Rate: 22.9 G
+
+: Stage Trigger at 5,000m from Target (&lt;color=#D3D11F&gt;Limited By Seeker Range&lt;/color&gt;)
+
 Terminal Maneuvers: Weave
+(&lt;color=#D3D11F&gt;May decrease effective range&lt;/color&gt;)
 
-Contact Fuze, High Explosive, Shaped
-Armor: 80cm   Component: 2,160hp
+Warhead: Contact Fuze, High Explosive, Shaped
+Armor: 80cm
+Component: 2,160hp
 Blast Angle: 70 deg
 Damage Per Fragment: 50.0
 
-Body Integrity: 80  (&lt;color=#3BC81E&gt;+20 &lt;/color&gt;)
-Wall Thickness: 0.5
+Body Integrity: 60
+Wall Thickness: 0.05
 Programming Time: 16 s
 Radar Signature Bonus: 100 %
 Boost-Phase Duration: 3 s
 Boost-Phase Strafe: 100 %
 Boost-Phase Turn Rate: 100 %
 Failure Rate: 0 %</LongDescription>
-      <Cost>30</Cost>
+      <Cost>25</Cost>
       <BodyKey>Stock/SGM-H-3 Body</BodyKey>
       <TemplateKey>d64a2477-f089-49f3-b7bc-719d21ee3b97</TemplateKey>
       <BaseColor>
@@ -815,9 +511,9 @@ Failure Rate: 0 %</LongDescription>
         <a>1</a>
       </BaseColor>
       <StripeColor>
-        <r>0.117647059</r>
+        <r>0.129411772</r>
         <g>0.6313726</g>
-        <b>0.192156866</b>
+        <b>0.7058824</b>
         <a>1</a>
       </StripeColor>
       <Sockets>
@@ -841,9 +537,6 @@ Failure Rate: 0 %</LongDescription>
         </MissileSocket>
         <MissileSocket>
           <Size>1</Size>
-          <InstalledComponent>
-            <ComponentKey>Stock/Hardened Skin</ComponentKey>
-          </InstalledComponent>
         </MissileSocket>
         <MissileSocket>
           <Size>1</Size>
@@ -895,34 +588,47 @@ Failure Rate: 0 %</LongDescription>
     <MissileTemplate>
       <Designation>SGM-H-280</Designation>
       <Nickname>Vortex</Nickname>
-      <Description>DIRECT - SAH(&lt;color=#3BC81E&gt;RADAR&lt;/color&gt;)/[ARAD(&lt;color=#3BC81E&gt;RADAR&lt;/color&gt;)] - HE SHAPED</Description>
-      <LongDescription>The &lt;noparse&gt;SGM-H-280 Vortex&lt;/noparse&gt; is a size 2 direct guidance missile.  It is based on the SGM-H-2 body, which is a multi-purpose hybrid missile designed to penetrate point defense grids.  This missile will deliver a Contact Fuze, High Explosive, Shaped warhead.  It homes in on its target using a Semi-Active Radar seeker, validating that it is the correct target using a Radar Anti-Radiation seeker.
+      <Description>DIRECT - ACT(&lt;color=#3BC81E&gt;RADAR&lt;/color&gt;)/[ARAD(&lt;color=#3BC81E&gt;RADAR&lt;/color&gt;)] - HE SHAPED</Description>
+      <LongDescription>The &lt;noparse&gt;SGM-H-280 Vortex&lt;/noparse&gt; is a size 2 direct guidance missile.  It is based on the SGM-H-2 body, which is a multi-purpose hybrid missile designed to penetrate point defense grids.  This missile will deliver a Contact Fuze, High Explosive, Shaped warhead.  It homes in on its target using an Active Radar seeker, validating that it is the correct target using a Radar Anti-Radiation seeker.
 
 Control Method: DIRECT
-Targeting Modes:
-	&lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
-Primary Seeker: SEMI-ACTIVE &lt;color=#3BC81E&gt;RADAR&lt;/color&gt;
-Validation Seeker(s): ANTI-RADIATION (All &lt;color=#3BC81E&gt;RADAR&lt;/color&gt; Signals)
+Targeting Modes: &lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
 
-Cruise: 285 m/s for 16,166 m, top speed in 3.2 s
-Sprint: 603 m/s for 4,500 m, top speed in 0.6 s
-   Stage Trigger on Target Detection (&lt;color=#D3D11F&gt;Direction-Only Seeker&lt;/color&gt;)
+Primary Seeker: ACTIVE &lt;color=#3BC81E&gt;RADAR&lt;/color&gt;
+Validation Seeker: ANTI-RADIATION (All &lt;color=#3BC81E&gt;RADAR&lt;/color&gt; Signals)
+
+&lt;b&gt;Cruise&lt;/b&gt;
+Speed: 301 m/s
+Distance: 17,069 m
+Top Speed In: 3.3 s
+Turn Rate: 1.2 G
+
+&lt;b&gt;Sprint&lt;/b&gt;
+Speed: 622 m/s
+Distance: 4,234 m
+Top Speed In: 0.6 s
+Turn Rate: 18.6 G
+
+: Stage Trigger at 3,500m from Target
+
 Terminal Maneuvers: Weave
+(&lt;color=#D3D11F&gt;May decrease effective range&lt;/color&gt;)
 
-Contact Fuze, High Explosive, Shaped
-Armor: 54cm   Component: 960hp
+Warhead: Contact Fuze, High Explosive, Shaped
+Armor: 54cm
+Component: 960hp
 Blast Angle: 70 deg
 Damage Per Fragment: 50.0
 
-Body Integrity: 25 
-Wall Thickness: 0.5
+Body Integrity: 25
+Wall Thickness: 0.05
 Programming Time: 10 s
 Radar Signature Bonus: 100 %
 Boost-Phase Duration: 3 s
 Boost-Phase Strafe: 100 %
 Boost-Phase Turn Rate: 100 %
 Failure Rate: 0 %</LongDescription>
-      <Cost>12</Cost>
+      <Cost>14</Cost>
       <BodyKey>Stock/SGM-H-2 Body</BodyKey>
       <TemplateKey>3ca37f6e-588b-4d9b-94e3-7cfa4f61d274</TemplateKey>
       <BaseColor>
@@ -941,7 +647,7 @@ Failure Rate: 0 %</LongDescription>
         <MissileSocket>
           <Size>1</Size>
           <InstalledComponent xsi:type="ActiveSeekerSettings">
-            <ComponentKey>Stock/Fixed Semi-Active Radar Seeker</ComponentKey>
+            <ComponentKey>Stock/Steerable Extended Active Radar Seeker</ComponentKey>
             <Mode>Targeting</Mode>
             <RejectUnvalidated>false</RejectUnvalidated>
             <DetectPDTargets>false</DetectPDTargets>
@@ -985,9 +691,9 @@ Failure Rate: 0 %</LongDescription>
           <InstalledComponent xsi:type="MissileEngineSettings">
             <ComponentKey />
             <BalanceValues>
-              <A>0.205962837</A>
-              <B>0.794037163</B>
-              <C>0</C>
+              <A>0.244813636</A>
+              <B>0.682214856</B>
+              <C>0.07297151</C>
             </BalanceValues>
           </InstalledComponent>
         </MissileSocket>
@@ -1007,32 +713,37 @@ Failure Rate: 0 %</LongDescription>
     <MissileTemplate>
       <Designation>SGM-210</Designation>
       <Nickname>Thundercloud</Nickname>
-      <Description>DIRECT - SAH(&lt;color=#3BC81E&gt;RADAR&lt;/color&gt;)/HOJ(&lt;color=#3BC81E&gt;RADAR&lt;/color&gt;) - HE SHAPED</Description>
-      <LongDescription>The &lt;noparse&gt;SGM-210 Thundercloud&lt;/noparse&gt; is a size 2 direct guidance missile.  It is based on the SGM-2 body, which is a flexible mainstay anti-ship missile.  This missile will deliver a Contact Fuze, High Explosive, Shaped warhead.  It homes in on its target using a Semi-Active Radar seeker  If the primary seeker does not find a target or is jammed, it can fall back on a Radar Home-on-Jam seeker.
+      <Description>DIRECT - ACT(&lt;color=#3BC81E&gt;RADAR&lt;/color&gt;)/[ARAD(&lt;color=#3BC81E&gt;RADAR&lt;/color&gt;)] - HE SHAPED</Description>
+      <LongDescription>The &lt;noparse&gt;SGM-210 Thundercloud&lt;/noparse&gt; is a size 2 direct guidance missile.  It is based on the SGM-2 body, which is a flexible mainstay anti-ship missile.  This missile will deliver a Contact Fuze, High Explosive, Shaped warhead.  It homes in on its target using an Active Radar seeker, validating that it is the correct target using a Radar Anti-Radiation seeker.
 
 Control Method: DIRECT
-Targeting Modes:
-	&lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
-Primary Seeker: SEMI-ACTIVE &lt;color=#3BC81E&gt;RADAR&lt;/color&gt;
-Backup Seeker(s): HOME-ON-JAM (&lt;color=#3BC81E&gt;RADAR&lt;/color&gt; JAMMING Signals Only)
+Targeting Modes: &lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
 
-243 m/s for 12,004 m, top speed in 1.2 s
+Primary Seeker: ACTIVE &lt;color=#3BC81E&gt;RADAR&lt;/color&gt;
+Validation Seeker: ANTI-RADIATION (All &lt;color=#3BC81E&gt;RADAR&lt;/color&gt; Signals)
+
+Speed: 243 m/s
+Distance: 12,004 m
+Top Speed In: 1.2 s
+Turn Rate: 3.6 G
 Terminal Maneuvers: Weave
+(&lt;color=#D3D11F&gt;May decrease effective range&lt;/color&gt;)
 
-Contact Fuze, High Explosive, Shaped
-Armor: 54cm   Component: 960hp
+Warhead: Contact Fuze, High Explosive, Shaped
+Armor: 54cm
+Component: 960hp
 Blast Angle: 70 deg
 Damage Per Fragment: 50.0
 
-Body Integrity: 30 
-Wall Thickness: 0.5
+Body Integrity: 30
+Wall Thickness: 0.05
 Programming Time: 8 s
 Radar Signature Bonus: 100 %
 Boost-Phase Duration: 3 s
 Boost-Phase Strafe: 100 %
 Boost-Phase Turn Rate: 100 %
 Failure Rate: 0 %</LongDescription>
-      <Cost>5</Cost>
+      <Cost>8</Cost>
       <BodyKey>Stock/SGM-2 Body</BodyKey>
       <TemplateKey>e4ac4d1d-c078-4d5b-ab62-fad960418f0b</TemplateKey>
       <BaseColor>
@@ -1051,7 +762,7 @@ Failure Rate: 0 %</LongDescription>
         <MissileSocket>
           <Size>1</Size>
           <InstalledComponent xsi:type="ActiveSeekerSettings">
-            <ComponentKey>Stock/Fixed Semi-Active Radar Seeker</ComponentKey>
+            <ComponentKey>Stock/Steerable Extended Active Radar Seeker</ComponentKey>
             <Mode>Targeting</Mode>
             <RejectUnvalidated>false</RejectUnvalidated>
             <DetectPDTargets>false</DetectPDTargets>
@@ -1061,9 +772,9 @@ Failure Rate: 0 %</LongDescription>
           <Size>1</Size>
           <InstalledComponent xsi:type="PassiveARHSeekerSettings">
             <ComponentKey>Stock/Fixed Anti-Radiation Seeker</ComponentKey>
-            <Mode>Targeting</Mode>
+            <Mode>Validation</Mode>
             <RejectUnvalidated>false</RejectUnvalidated>
-            <TargetType>JammingOnly</TargetType>
+            <TargetType>All</TargetType>
           </InstalledComponent>
         </MissileSocket>
         <MissileSocket>
@@ -1110,30 +821,43 @@ Failure Rate: 0 %</LongDescription>
       <LongDescription>The &lt;noparse&gt;SGM-H-360 Shipwreck Block II&lt;/noparse&gt; is a size 3 waypoint-capable cruise missile.  It is based on the SGM-H-3 body, which is a high speed hybrid missile designed to strike heavy targets.  This missile will deliver a Contact Fuze, High Explosive, Shaped warhead.  It homes in on its target using an Active Radar seeker, validating that it is the correct target using a Passive Electro-Optical seeker.
 
 Control Method: CRUISE (Waypoint Capable)
-Targeting Modes:
-	&lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK[+TRP]&lt;/color&gt;&lt;/b&gt;
+Targeting Modes: &lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK[+TRP]&lt;/color&gt;&lt;/b&gt;
+
 Primary Seeker: ACTIVE &lt;color=#3BC81E&gt;RADAR&lt;/color&gt;
-Validation Seeker(s): PASSIVE (&lt;color=#7CC6BC&gt;EO&lt;/color&gt;)
+Validation Seeker: PASSIVE (&lt;color=#7CC6BC&gt;EO&lt;/color&gt;)
 
-Cruise: 200 m/s for 15,667 m, top speed in 3.3 s
-Sprint: 729 m/s for 6,102 m, top speed in 0.9 s
-   Stage Trigger at 5,000m from Target (&lt;color=#D3D11F&gt;Limited By Seeker Range&lt;/color&gt;)
+&lt;b&gt;Cruise&lt;/b&gt;
+Speed: 200 m/s
+Distance: 15,667 m
+Top Speed In: 3.3 s
+Turn Rate: 0.7 G
+
+&lt;b&gt;Sprint&lt;/b&gt;
+Speed: 729 m/s
+Distance: 6,102 m
+Top Speed In: 0.9 s
+Turn Rate: 22.9 G
+
+: Stage Trigger at 5,000m from Target (&lt;color=#D3D11F&gt;Limited By Seeker Range&lt;/color&gt;)
+
 Terminal Maneuvers: Weave
+(&lt;color=#D3D11F&gt;May decrease effective range&lt;/color&gt;)
 
-Contact Fuze, High Explosive, Shaped
-Armor: 80cm   Component: 2,160hp
+Warhead: Contact Fuze, High Explosive, Shaped
+Armor: 80cm
+Component: 2,160hp
 Blast Angle: 70 deg
 Damage Per Fragment: 50.0
 
-Body Integrity: 60 
-Wall Thickness: 0.5
+Body Integrity: 60
+Wall Thickness: 0.05
 Programming Time: 16 s
 Radar Signature Bonus: 100 %
 Boost-Phase Duration: 3 s
 Boost-Phase Strafe: 100 %
 Boost-Phase Turn Rate: 100 %
 Failure Rate: 0 %</LongDescription>
-      <Cost>35</Cost>
+      <Cost>30</Cost>
       <BodyKey>Stock/SGM-H-3 Body</BodyKey>
       <TemplateKey>4852f21a-7ef9-41fd-8891-4a8548d9a033</TemplateKey>
       <BaseColor>
@@ -1143,9 +867,9 @@ Failure Rate: 0 %</LongDescription>
         <a>1</a>
       </BaseColor>
       <StripeColor>
-        <r>0.117647059</r>
+        <r>0.129411772</r>
         <g>0.6313726</g>
-        <b>0.192156866</b>
+        <b>0.7058824</b>
         <a>1</a>
       </StripeColor>
       <Sockets>
@@ -1154,7 +878,7 @@ Failure Rate: 0 %</LongDescription>
           <InstalledComponent xsi:type="ActiveSeekerSettings">
             <ComponentKey>Stock/Steerable Extended Active Radar Seeker</ComponentKey>
             <Mode>Targeting</Mode>
-            <RejectUnvalidated>false</RejectUnvalidated>
+            <RejectUnvalidated>true</RejectUnvalidated>
             <DetectPDTargets>false</DetectPDTargets>
           </InstalledComponent>
         </MissileSocket>
@@ -1170,7 +894,7 @@ Failure Rate: 0 %</LongDescription>
         <MissileSocket>
           <Size>1</Size>
           <InstalledComponent>
-            <ComponentKey>Stock/Boosted Self-Screening Jammer</ComponentKey>
+            <ComponentKey>Stock/Self-Screening Jammer</ComponentKey>
           </InstalledComponent>
         </MissileSocket>
         <MissileSocket>
@@ -1221,60 +945,79 @@ Failure Rate: 0 %</LongDescription>
       </Sockets>
     </MissileTemplate>
     <MissileTemplate>
-      <Designation>SGT-340</Designation>
-      <Nickname>Gravestone Block III</Nickname>
-      <Description>DIRECT - &lt;color=#D3D11F&gt;CMD&lt;/color&gt; - HE SHAPED</Description>
-      <LongDescription>The &lt;noparse&gt;SGT-340 Gravestone Block III&lt;/noparse&gt; is a size 3 direct guidance missile.  It is based on the SGT-3 body, which is a heavy anti-ship torpedo.  This missile will deliver a Contact Fuze, High Explosive, Shaped warhead.  It homes in on its target using command guidance from its launching ship.
+      <Designation>SGM-H-290</Designation>
+      <Nickname>Maelstrom</Nickname>
+      <Description>DIRECT - ACT(&lt;color=#3BC81E&gt;RADAR&lt;/color&gt;)/[&lt;color=#D3D11F&gt;CMD&lt;/color&gt;] - HE SHAPED</Description>
+      <LongDescription>The &lt;noparse&gt;SGM-H-290 Maelstrom&lt;/noparse&gt; is a size 2 direct guidance missile.  It is based on the SGM-H-2 body, which is a multi-purpose hybrid missile designed to penetrate point defense grids.  This missile will deliver a Contact Fuze, High Explosive, Shaped warhead.  It homes in on its target using an Active Radar seeker, validating that it is the correct target using command guidance from its launching ship.
 
 Control Method: DIRECT
-Targeting Modes:
-	&lt;b&gt;&lt;color=#D4211D&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
-Primary Seeker: COMMAND (&lt;color=#D3D11F&gt;Requires COMMS Enabled&lt;/color&gt;)
+Targeting Modes: &lt;b&gt;&lt;color=#D3D11F&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
 
-197 m/s for 4,038 m, top speed in 1.0 s
-Terminal Maneuvers: Corkscrew
+Primary Seeker: ACTIVE &lt;color=#3BC81E&gt;RADAR&lt;/color&gt;
+Validation Seeker: COMMAND (&lt;color=#D3D11F&gt;Requires COMMS Enabled&lt;/color&gt;)
 
-Contact Fuze, High Explosive, Shaped
-Armor: 104cm   Component: 3,600hp
+&lt;b&gt;Cruise&lt;/b&gt;
+Speed: 297 m/s
+Distance: 16,984 m
+Top Speed In: 3.2 s
+Turn Rate: 1.2 G
+
+&lt;b&gt;Sprint&lt;/b&gt;
+Speed: 622 m/s
+Distance: 4,236 m
+Top Speed In: 0.6 s
+Turn Rate: 18.5 G
+
+: Stage Trigger at 3,500m from Target
+
+Terminal Maneuvers: Weave
+(&lt;color=#D3D11F&gt;May decrease effective range&lt;/color&gt;)
+
+Warhead: Contact Fuze, High Explosive, Shaped
+Armor: 54cm
+Component: 960hp
 Blast Angle: 70 deg
 Damage Per Fragment: 50.0
 
-Body Integrity: 160 
-Wall Thickness: 2.5
-Programming Time: 3 s
+Body Integrity: 25
+Wall Thickness: 0.05
+Programming Time: 10 s
 Radar Signature Bonus: 100 %
 Boost-Phase Duration: 3 s
 Boost-Phase Strafe: 100 %
 Boost-Phase Turn Rate: 100 %
 Failure Rate: 0 %</LongDescription>
-      <Cost>25</Cost>
-      <BodyKey>Stock/SGT-3 Body</BodyKey>
-      <TemplateKey>c0c8102b-1333-49ae-97cd-3e8d6ee4e259</TemplateKey>
+      <Cost>15</Cost>
+      <BodyKey>Stock/SGM-H-2 Body</BodyKey>
+      <TemplateKey>7580cace-fe4f-46a4-a140-4e12b3fcc03a</TemplateKey>
       <BaseColor>
-        <r>0.8269358</r>
-        <g>0.0153443245</g>
-        <b>0.0153443245</b>
+        <r>1</r>
+        <g>1</g>
+        <b>1</b>
         <a>1</a>
       </BaseColor>
       <StripeColor>
-        <r>0.9999999</r>
-        <g>0.9802647</g>
-        <b>0.005894362</b>
+        <r>0.129411772</r>
+        <g>0.6313726</g>
+        <b>0.7058824</b>
         <a>1</a>
       </StripeColor>
       <Sockets>
         <MissileSocket>
           <Size>1</Size>
-          <InstalledComponent xsi:type="CommandSeekerSettings">
-            <ComponentKey>Stock/Command Receiver</ComponentKey>
+          <InstalledComponent xsi:type="ActiveSeekerSettings">
+            <ComponentKey>Stock/Steerable Extended Active Radar Seeker</ComponentKey>
             <Mode>Targeting</Mode>
             <RejectUnvalidated>false</RejectUnvalidated>
+            <DetectPDTargets>false</DetectPDTargets>
           </InstalledComponent>
         </MissileSocket>
         <MissileSocket>
           <Size>1</Size>
-          <InstalledComponent>
-            <ComponentKey>Stock/Decoy Launcher</ComponentKey>
+          <InstalledComponent xsi:type="CommandSeekerSettings">
+            <ComponentKey>Stock/Command Receiver</ComponentKey>
+            <Mode>Validation</Mode>
+            <RejectUnvalidated>false</RejectUnvalidated>
           </InstalledComponent>
         </MissileSocket>
         <MissileSocket>
@@ -1282,9 +1025,9 @@ Failure Rate: 0 %</LongDescription>
           <InstalledComponent xsi:type="DirectGuidanceSettings">
             <ComponentKey>Stock/Direct Guidance</ComponentKey>
             <Role>Offensive</Role>
-            <HotLaunch>true</HotLaunch>
+            <HotLaunch>false</HotLaunch>
             <SelfDestructOnLost>false</SelfDestructOnLost>
-            <Maneuvers>Corkscrew</Maneuvers>
+            <Maneuvers>Weave</Maneuvers>
             <DefensiveDoctrine>
               <TargetSizeMask>12</TargetSizeMask>
               <TargetType>All</TargetType>
@@ -1302,13 +1045,480 @@ Failure Rate: 0 %</LongDescription>
           </InstalledComponent>
         </MissileSocket>
         <MissileSocket>
-          <Size>9</Size>
+          <Size>3</Size>
           <InstalledComponent xsi:type="MissileEngineSettings">
             <ComponentKey />
             <BalanceValues>
-              <A>0.175914</A>
-              <B>0.381100476</B>
-              <C>0.442985535</C>
+              <A>0.244575292</A>
+              <B>0.6829067</B>
+              <C>0.07251802</C>
+            </BalanceValues>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="MissileEngineSettings">
+            <ComponentKey />
+            <BalanceValues>
+              <A>0.646251261</A>
+              <B>0.209095433</B>
+              <C>0.1446533</C>
+            </BalanceValues>
+          </InstalledComponent>
+        </MissileSocket>
+      </Sockets>
+    </MissileTemplate>
+    <MissileTemplate>
+      <Designation>SGM-H-295</Designation>
+      <Nickname>Whirlpool</Nickname>
+      <Description>DIRECT - &lt;color=#D3D11F&gt;CMD&lt;/color&gt; - HE SHAPED</Description>
+      <LongDescription>The &lt;noparse&gt;SGM-H-295 Whirlpool&lt;/noparse&gt; is a size 2 direct guidance missile.  It is based on the SGM-H-2 body, which is a multi-purpose hybrid missile designed to penetrate point defense grids.  This missile will deliver a Contact Fuze, High Explosive, Shaped warhead.  It homes in on its target using command guidance from its launching ship.
+
+Control Method: DIRECT
+Targeting Modes: &lt;b&gt;&lt;color=#D4211D&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+
+Primary Seeker: COMMAND (&lt;color=#D3D11F&gt;Requires COMMS Enabled&lt;/color&gt;)
+
+&lt;b&gt;Cruise&lt;/b&gt;
+Speed: 297 m/s
+Distance: 16,984 m
+Top Speed In: 3.2 s
+Turn Rate: 1.2 G
+
+&lt;b&gt;Sprint&lt;/b&gt;
+Speed: 622 m/s
+Distance: 4,243 m
+Top Speed In: 0.6 s
+Turn Rate: 18.5 G
+
+: Stage Trigger at 3,500m from Target
+
+Terminal Maneuvers: Weave
+(&lt;color=#D3D11F&gt;May decrease effective range&lt;/color&gt;)
+
+Warhead: Contact Fuze, High Explosive, Shaped
+Armor: 54cm
+Component: 960hp
+Blast Angle: 70 deg
+Damage Per Fragment: 50.0
+
+Body Integrity: 25
+Wall Thickness: 0.05
+Programming Time: 10 s
+Radar Signature Bonus: 100 %
+Boost-Phase Duration: 3 s
+Boost-Phase Strafe: 100 %
+Boost-Phase Turn Rate: 100 %
+Failure Rate: 0 %</LongDescription>
+      <Cost>13</Cost>
+      <BodyKey>Stock/SGM-H-2 Body</BodyKey>
+      <TemplateKey>7126fbc4-7d7b-4c4e-b285-88507d74a93b</TemplateKey>
+      <BaseColor>
+        <r>1</r>
+        <g>1</g>
+        <b>1</b>
+        <a>1</a>
+      </BaseColor>
+      <StripeColor>
+        <r>0.8422081</r>
+        <g>0.855423748</g>
+        <b>0</b>
+        <a>1</a>
+      </StripeColor>
+      <Sockets>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="CommandSeekerSettings">
+            <ComponentKey>Stock/Command Receiver</ComponentKey>
+            <Mode>Targeting</Mode>
+            <RejectUnvalidated>false</RejectUnvalidated>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>1</Size>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="DirectGuidanceSettings">
+            <ComponentKey>Stock/Direct Guidance</ComponentKey>
+            <Role>Offensive</Role>
+            <HotLaunch>false</HotLaunch>
+            <SelfDestructOnLost>false</SelfDestructOnLost>
+            <Maneuvers>Weave</Maneuvers>
+            <DefensiveDoctrine>
+              <TargetSizeMask>12</TargetSizeMask>
+              <TargetType>All</TargetType>
+              <TargetSizeOrdering>Descending</TargetSizeOrdering>
+              <SalvoSize>0</SalvoSize>
+              <FarthestFirst>false</FarthestFirst>
+            </DefensiveDoctrine>
+            <ApproachAngleControl>true</ApproachAngleControl>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>5</Size>
+          <InstalledComponent>
+            <ComponentKey>Stock/HE Impact</ComponentKey>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>3</Size>
+          <InstalledComponent xsi:type="MissileEngineSettings">
+            <ComponentKey />
+            <BalanceValues>
+              <A>0.244138822</A>
+              <B>0.68530947</B>
+              <C>0.07055171</C>
+            </BalanceValues>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="MissileEngineSettings">
+            <ComponentKey />
+            <BalanceValues>
+              <A>0.646251261</A>
+              <B>0.209095433</B>
+              <C>0.1446533</C>
+            </BalanceValues>
+          </InstalledComponent>
+        </MissileSocket>
+      </Sockets>
+    </MissileTemplate>
+    <MissileTemplate>
+      <Designation>SGM-H-270</Designation>
+      <Nickname>Supercell</Nickname>
+      <Description>DIRECT - ACT(&lt;color=#3BC81E&gt;RADAR&lt;/color&gt;)/[ARAD(&lt;color=#3BC81E&gt;RADAR&lt;/color&gt;)] - HE FRAG</Description>
+      <LongDescription>The &lt;noparse&gt;SGM-H-270 Supercell&lt;/noparse&gt; is a size 2 direct guidance missile.  It is based on the SGM-H-2 body, which is a multi-purpose hybrid missile designed to penetrate point defense grids.  This missile will deliver a Proximity Fuze, High Explosive, Blast Fragmentation warhead.  It homes in on its target using an Active Radar seeker, validating that it is the correct target using a Radar Anti-Radiation seeker.
+
+Control Method: DIRECT
+Targeting Modes: &lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+
+Primary Seeker: ACTIVE &lt;color=#3BC81E&gt;RADAR&lt;/color&gt;
+Validation Seeker: ANTI-RADIATION (All &lt;color=#3BC81E&gt;RADAR&lt;/color&gt; Signals)
+
+&lt;b&gt;Cruise&lt;/b&gt;
+Speed: 270 m/s
+Distance: 10,485 m
+Top Speed In: 2.2 s
+Turn Rate: 2.2 G
+
+&lt;b&gt;Sprint&lt;/b&gt;
+Speed: 523 m/s
+Distance: 1,286 m
+Top Speed In: 0.5 s
+Turn Rate: 17.2 G
+
+: Stage Trigger at 1,100m from Target
+
+Terminal Maneuvers: Weave
+(&lt;color=#D3D11F&gt;May decrease effective range&lt;/color&gt;)
+
+Warhead: Proximity Fuze, High Explosive, Blast Fragmentation
+Armor: 0.42cm
+Component: 134.57hp
+Blast Radius: 96 m
+
+Body Integrity: 25
+Wall Thickness: 0.05
+Programming Time: 10 s
+Radar Signature Bonus: 100 %
+Boost-Phase Duration: 3 s
+Boost-Phase Strafe: 100 %
+Boost-Phase Turn Rate: 100 %
+Failure Rate: 0 %</LongDescription>
+      <Cost>12</Cost>
+      <BodyKey>Stock/SGM-H-2 Body</BodyKey>
+      <TemplateKey>19e0ff78-e85b-4b7f-a268-b09866bf82ad</TemplateKey>
+      <BaseColor>
+        <r>0.9999998</r>
+        <g>0.9999999</g>
+        <b>0.9999999</b>
+        <a>1</a>
+      </BaseColor>
+      <StripeColor>
+        <r>0.06705866</r>
+        <g>0.14441064</g>
+        <b>0.7040754</b>
+        <a>1</a>
+      </StripeColor>
+      <Sockets>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="ActiveSeekerSettings">
+            <ComponentKey>Stock/Steerable Active Radar Seeker</ComponentKey>
+            <Mode>Targeting</Mode>
+            <RejectUnvalidated>false</RejectUnvalidated>
+            <DetectPDTargets>true</DetectPDTargets>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="PassiveARHSeekerSettings">
+            <ComponentKey>Stock/Fixed Anti-Radiation Seeker</ComponentKey>
+            <Mode>Validation</Mode>
+            <RejectUnvalidated>false</RejectUnvalidated>
+            <TargetType>All</TargetType>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="DirectGuidanceSettings">
+            <ComponentKey>Stock/Direct Guidance</ComponentKey>
+            <Role>Defensive</Role>
+            <HotLaunch>false</HotLaunch>
+            <SelfDestructOnLost>false</SelfDestructOnLost>
+            <Maneuvers>Weave</Maneuvers>
+            <DefensiveDoctrine>
+              <TargetSizeMask>2</TargetSizeMask>
+              <TargetType>SmallCraft</TargetType>
+              <TargetSizeOrdering>Descending</TargetSizeOrdering>
+              <SalvoSize>0</SalvoSize>
+              <FarthestFirst>false</FarthestFirst>
+            </DefensiveDoctrine>
+            <ApproachAngleControl>true</ApproachAngleControl>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>7</Size>
+          <InstalledComponent>
+            <ComponentKey>Stock/Blast Fragmentation</ComponentKey>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="MissileEngineSettings">
+            <ComponentKey />
+            <BalanceValues>
+              <A>0.0463001877</A>
+              <B>0.8468074</B>
+              <C>0.106892392</C>
+            </BalanceValues>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="MissileEngineSettings">
+            <ComponentKey />
+            <BalanceValues>
+              <A>0.463493049</A>
+              <B>1.91250835E-11</B>
+              <C>0.536506951</C>
+            </BalanceValues>
+          </InstalledComponent>
+        </MissileSocket>
+      </Sockets>
+    </MissileTemplate>
+    <MissileTemplate>
+      <Designation>SDM-260</Designation>
+      <Nickname>Eyewall</Nickname>
+      <Description>DIRECT - ACT(&lt;color=#3BC81E&gt;RADAR&lt;/color&gt;)/PSV(&lt;color=#D4211D&gt;WAKE&lt;/color&gt;) - HE FRAG</Description>
+      <LongDescription>The &lt;noparse&gt;SDM-260 Eyewall&lt;/noparse&gt; is a size 2 direct guidance missile.  It is based on the SDM-2 body, which is a flexible defensive missile with a booster.  This missile will deliver a Proximity Fuze, High Explosive, Blast Fragmentation warhead.  It homes in on its target using an Active Radar seeker  If the primary seeker does not find a target or is jammed, it can fall back on a Passive Wake seeker.
+
+Control Method: DIRECT
+Targeting Modes: &lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+
+Primary Seeker: ACTIVE &lt;color=#3BC81E&gt;RADAR&lt;/color&gt;
+Backup Seeker: PASSIVE (&lt;color=#D4211D&gt;WAKE&lt;/color&gt;)
+
+&lt;b&gt;Boost&lt;/b&gt;
+Speed: 850 m/s
+Distance: 7,898 m
+Top Speed In: 1.4 s
+Turn Rate: 5.0 G
+
+&lt;b&gt;Main&lt;/b&gt;
+Speed: 180 m/s
+Distance: 1,379 m
+Top Speed In: 0.7 s
+Turn Rate: 6.6 G
+
+: Stage Trigger at 450m from Target or On Burnout
+
+Terminal Maneuvers: None
+
+Warhead: Proximity Fuze, High Explosive, Blast Fragmentation
+Armor: 0.35cm
+Component: 110.12hp
+Blast Radius: 79 m
+
+Body Integrity: 25
+Wall Thickness: 0.05
+Programming Time: 10 s
+Radar Signature Bonus: 100 %
+Boost-Phase Duration: 3 s
+Boost-Phase Strafe: 100 %
+Boost-Phase Turn Rate: 100 %
+Failure Rate: 0 %</LongDescription>
+      <Cost>5</Cost>
+      <BodyKey>Stock/SDM-2 Body</BodyKey>
+      <TemplateKey>c3ed273c-c4ba-40c7-b43e-82400382b603</TemplateKey>
+      <BaseColor>
+        <r>1</r>
+        <g>1</g>
+        <b>1</b>
+        <a>1</a>
+      </BaseColor>
+      <StripeColor>
+        <r>0.274509817</r>
+        <g>0.129411772</g>
+        <b>0.7058824</b>
+        <a>1</a>
+      </StripeColor>
+      <Sockets>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="ActiveSeekerSettings">
+            <ComponentKey>Stock/Steerable Active Radar Seeker</ComponentKey>
+            <Mode>Targeting</Mode>
+            <RejectUnvalidated>false</RejectUnvalidated>
+            <DetectPDTargets>true</DetectPDTargets>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="PassiveSeekerSettings">
+            <ComponentKey>Stock/Wake-Homing Seeker</ComponentKey>
+            <Mode>Targeting</Mode>
+            <RejectUnvalidated>false</RejectUnvalidated>
+            <DetectPDTargets>true</DetectPDTargets>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="DirectGuidanceSettings">
+            <ComponentKey>Stock/Direct Guidance</ComponentKey>
+            <Role>Defensive</Role>
+            <HotLaunch>false</HotLaunch>
+            <SelfDestructOnLost>false</SelfDestructOnLost>
+            <Maneuvers>None</Maneuvers>
+            <DefensiveDoctrine>
+              <TargetSizeMask>12</TargetSizeMask>
+              <TargetType>SmallCraft</TargetType>
+              <TargetSizeOrdering>Descending</TargetSizeOrdering>
+              <SalvoSize>0</SalvoSize>
+              <FarthestFirst>false</FarthestFirst>
+            </DefensiveDoctrine>
+            <ApproachAngleControl>true</ApproachAngleControl>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>5</Size>
+          <InstalledComponent>
+            <ComponentKey>Stock/Blast Fragmentation</ComponentKey>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>2</Size>
+          <InstalledComponent xsi:type="MissileEngineSettings">
+            <ComponentKey />
+            <BalanceValues>
+              <A>0.4047674</A>
+              <B>5.87553872E-09</B>
+              <C>0.5952326</C>
+            </BalanceValues>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="MissileEngineSettings">
+            <ComponentKey />
+            <BalanceValues>
+              <A>1</A>
+              <B>0</B>
+              <C>0</C>
+            </BalanceValues>
+          </InstalledComponent>
+        </MissileSocket>
+      </Sockets>
+    </MissileTemplate>
+    <MissileTemplate>
+      <Designation>SGM-120</Designation>
+      <Nickname>Fortress</Nickname>
+      <Description>DIRECT - ACT(&lt;color=#3BC81E&gt;RADAR&lt;/color&gt;) - HE FRAG</Description>
+      <LongDescription>The &lt;noparse&gt;SGM-120 Fortress&lt;/noparse&gt; is a size 1 direct guidance missile.  It is based on the SGM-1 body, which is a nimble general-purpose missile.  This missile will deliver a Proximity Fuze, High Explosive, Blast Fragmentation warhead.  It homes in on its target using an Active Radar seeker.
+
+Control Method: DIRECT
+Targeting Modes: &lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+
+Primary Seeker: ACTIVE &lt;color=#3BC81E&gt;RADAR&lt;/color&gt;
+
+Speed: 250 m/s
+Distance: 3,490 m
+Top Speed In: 0.4 s
+Turn Rate: 8.9 G
+Terminal Maneuvers: None
+
+Warhead: Proximity Fuze, High Explosive, Blast Fragmentation
+Armor: 0.21cm
+Component: 65.34hp
+Blast Radius: 47 m
+
+Body Integrity: 10
+Wall Thickness: 0.05
+Programming Time: 6 s
+Radar Signature Bonus: 100 %
+Boost-Phase Duration: 3 s
+Boost-Phase Strafe: 100 %
+Boost-Phase Turn Rate: 100 %
+Failure Rate: 0 %</LongDescription>
+      <Cost>2</Cost>
+      <BodyKey>Stock/SGM-1 Body</BodyKey>
+      <TemplateKey>7ee5121a-31ba-472f-b353-a30fbc119d49</TemplateKey>
+      <BaseColor>
+        <r>1</r>
+        <g>0.4862745</g>
+        <b>0</b>
+        <a>1</a>
+      </BaseColor>
+      <StripeColor>
+        <r>0.254901975</r>
+        <g>0.254901975</g>
+        <b>0.254901975</b>
+        <a>1</a>
+      </StripeColor>
+      <Sockets>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="ActiveSeekerSettings">
+            <ComponentKey>Stock/Steerable Active Radar Seeker</ComponentKey>
+            <Mode>Targeting</Mode>
+            <RejectUnvalidated>false</RejectUnvalidated>
+            <DetectPDTargets>false</DetectPDTargets>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="DirectGuidanceSettings">
+            <ComponentKey>Stock/Direct Guidance</ComponentKey>
+            <Role>Defensive</Role>
+            <HotLaunch>false</HotLaunch>
+            <SelfDestructOnLost>false</SelfDestructOnLost>
+            <Maneuvers>None</Maneuvers>
+            <DefensiveDoctrine>
+              <TargetSizeMask>14</TargetSizeMask>
+              <TargetType>All</TargetType>
+              <TargetSizeOrdering>Descending</TargetSizeOrdering>
+              <SalvoSize>1</SalvoSize>
+              <FarthestFirst>false</FarthestFirst>
+            </DefensiveDoctrine>
+            <ApproachAngleControl>true</ApproachAngleControl>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>4</Size>
+          <InstalledComponent>
+            <ComponentKey>Stock/Blast Fragmentation</ComponentKey>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>3</Size>
+          <InstalledComponent xsi:type="MissileEngineSettings">
+            <ComponentKey />
+            <BalanceValues>
+              <A>0</A>
+              <B>0.454405725</B>
+              <C>0.5455943</C>
             </BalanceValues>
           </InstalledComponent>
         </MissileSocket>

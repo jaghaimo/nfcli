@@ -57,16 +57,18 @@ class User(CountAware, TimeAware):
 
 
 class Guilds(CountAware, TimeAware):
-    def __init__(self, guilds: int, fleets: int, ships: int, missiles: int, last_days: int, user: User) -> None:
+    def __init__(
+        self, no_of_guilds: int, fleets: int, ships: int, missiles: int, last_days: int, busiest_user: User
+    ) -> None:
         super().__init__(fleets=fleets, ships=ships, missiles=missiles, last_days=last_days)
-        self.guilds = guilds
-        self.user = user
+        self.no_of_guilds = no_of_guilds
+        self.busiest_user = busiest_user
 
     def __str__(self) -> str:
         if self.is_empty:
             return f"In the last {self.since} I have had nothing to do. Blissful life."
 
-        servers = "servers" if self.guilds > 1 else "server"
-        return (f"In the last {self.since} I have converted {self.counts} across {self.guilds} {servers}.\n") + str(
-            self.user
-        )
+        servers = "servers" if self.no_of_guilds > 1 else "server"
+        return (
+            f"In the last {self.since} I have converted {self.counts} across {self.no_of_guilds} {servers}.\n"
+        ) + str(self.busiest_user)

@@ -1,0 +1,324 @@
+<?xml version="1.0"?>
+<CraftTemplate xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DesignationSuffix>V</DesignationSuffix>
+  <Nickname>Katana</Nickname>
+  <LongDescription>Frame Model: Tanto
+Frame Class: Interceptor
+Base Cost: 8
+Storage Size: 1
+Pad Size: 6 x 6
+PD Threat Size: 2
+Frame Integrity: 50
+Skin Thickness: 0.30
+
+Idle Speed: 35 m/s
+Cruise Speed: 75 m/s
+Cruise (HBRN) Speed: 113 m/s
+Combat Speed: 113 m/s
+
+Fuel Capacity: 1,200
+Loiter Time: 13:20
+Cruise Range: 40 km
+
+Thruster Power: 113
+Frame Mass: 10.00
+Loadout Mass: -
+Total Mass: 10.00
+
+&lt;b&gt;Components:&lt;/b&gt;
+Nose: 20mm Gun
+Centerline: S2 Missile Bay
+
+&lt;b&gt;Loadouts:&lt;/b&gt;
+Void Superiority: 1,000x &lt;noparse&gt;20mm Slug&lt;/noparse&gt;, 1x &lt;noparse&gt;SDM-225 Tornado&lt;/noparse&gt;, 2x &lt;noparse&gt;SGM-190 Bolt&lt;/noparse&gt;
+Fighter-Bomber: 1,000x &lt;noparse&gt;20mm Slug&lt;/noparse&gt;, 1x KBU-22 Bomb</LongDescription>
+  <Cost>8</Cost>
+  <FrameKey>Stock/AN Interceptor</FrameKey>
+  <TemplateKey>f8c56b2e-72e6-49b9-808b-8e5602930d70</TemplateKey>
+  <InstalledComponents>
+    <SerializedCraftSocket>
+      <SocketKey>nose</SocketKey>
+      <ComponentKey>nose_gun20mm</ComponentKey>
+    </SerializedCraftSocket>
+    <SerializedCraftSocket>
+      <SocketKey>centerline</SocketKey>
+      <ComponentKey>centerline_s2bay</ComponentKey>
+    </SerializedCraftSocket>
+  </InstalledComponents>
+  <Loadouts>
+    <CraftLoadout>
+      <LoadoutName>Void Superiority</LoadoutName>
+      <Elements>
+        <GeneralLoadoutElement xsi:type="SimpleAmmoSelection">
+          <SocketKey>nose</SocketKey>
+          <AmmoKey>Stock/20mm Slug</AmmoKey>
+        </GeneralLoadoutElement>
+        <GeneralLoadoutElement xsi:type="MissileSelection">
+          <SocketKey>centerline</SocketKey>
+          <MissileKeys>
+            <string>$MODMIS$/SDM-225 Tornado</string>
+          </MissileKeys>
+        </GeneralLoadoutElement>
+        <GeneralLoadoutElement xsi:type="VariableSocketLoadout">
+          <SocketKey>winginboard</SocketKey>
+          <ComponentKey>winginboard_fuelpods</ComponentKey>
+          <Loadout xsi:type="SimpleOccupiedElement" />
+        </GeneralLoadoutElement>
+        <GeneralLoadoutElement xsi:type="VariableSocketLoadout">
+          <SocketKey>wingoutboard</SocketKey>
+          <ComponentKey>wingoutboard_s1pylons</ComponentKey>
+          <Loadout xsi:type="MissileSelection">
+            <SocketKey>wingoutboard</SocketKey>
+            <MissileKeys>
+              <string>$MODMIS$/SGM-190 Bolt</string>
+              <string>$MODMIS$/SGM-190 Bolt</string>
+            </MissileKeys>
+          </Loadout>
+        </GeneralLoadoutElement>
+      </Elements>
+    </CraftLoadout>
+    <CraftLoadout>
+      <LoadoutName>Fighter-Bomber</LoadoutName>
+      <Elements>
+        <GeneralLoadoutElement xsi:type="SimpleAmmoSelection">
+          <SocketKey>nose</SocketKey>
+          <AmmoKey>Stock/20mm Slug</AmmoKey>
+        </GeneralLoadoutElement>
+        <GeneralLoadoutElement xsi:type="MissileSelection">
+          <SocketKey>centerline</SocketKey>
+          <MissileKeys>
+            <string>Stock/S2 Glide Bomb</string>
+          </MissileKeys>
+        </GeneralLoadoutElement>
+        <GeneralLoadoutElement xsi:type="VariableSocketLoadout">
+          <SocketKey>winginboard</SocketKey>
+          <ComponentKey>winginboard_fuelpods</ComponentKey>
+          <Loadout xsi:type="SimpleOccupiedElement" />
+        </GeneralLoadoutElement>
+        <GeneralLoadoutElement xsi:type="VariableSocketLoadout">
+          <SocketKey>wingoutboard</SocketKey>
+          <ComponentKey>wingoutboard_radarjammer</ComponentKey>
+          <Loadout xsi:type="SimpleOccupiedElement" />
+        </GeneralLoadoutElement>
+      </Elements>
+    </CraftLoadout>
+  </Loadouts>
+  <TemplateMissileTypes>
+    <MissileTemplate>
+      <Designation>SDM-225</Designation>
+      <Nickname>Tornado</Nickname>
+      <Description>DIRECT - ACT(&lt;color=#3BC81E&gt;RADAR&lt;/color&gt;)/PSV(&lt;color=#D4211D&gt;WAKE&lt;/color&gt;) - HE FRAG</Description>
+      <LongDescription>The &lt;noparse&gt;SDM-225 Tornado&lt;/noparse&gt; is a size 2 direct guidance missile.  It is based on the SDM-2 body, which is a flexible defensive missile with a booster.  This missile will deliver a Proximity Fuze, High Explosive, Blast Fragmentation warhead.  It homes in on its target using an Active Radar seeker  If the primary seeker does not find a target or is jammed, it can fall back on a Passive Wake seeker.
+
+Control Method: DIRECT
+Targeting Modes: &lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+
+Primary Seeker: ACTIVE &lt;color=#3BC81E&gt;RADAR&lt;/color&gt;
+Backup Seeker: PASSIVE (&lt;color=#D4211D&gt;WAKE&lt;/color&gt;)
+
+&lt;b&gt;Boost&lt;/b&gt;
+Speed: 850 m/s
+Distance: 7,898 m
+Top Speed In: 1.4 s
+Turn Rate: 5.0 G
+
+&lt;b&gt;Main&lt;/b&gt;
+Speed: 150 m/s
+Distance: 1,765 m
+Top Speed In: 0.5 s
+Turn Rate: 8.2 G
+
+: Stage Trigger at 820m from Target or On Burnout
+
+Terminal Maneuvers: None
+
+Warhead: Proximity Fuze, High Explosive, Blast Fragmentation
+Armor: 0.31cm
+Component: 98.50hp
+Blast Radius: 70 m
+
+Body Integrity: 25
+Wall Thickness: 0.05
+Programming Time: 10 s
+Radar Signature Bonus: 100 %
+Boost-Phase Duration: 3 s
+Boost-Phase Strafe: 100 %
+Boost-Phase Turn Rate: 100 %
+Failure Rate: 0 %</LongDescription>
+      <Cost>4</Cost>
+      <BodyKey>Stock/SDM-2 Body</BodyKey>
+      <TemplateKey>aeb76963-29cb-4f17-9c9e-29a8c7a78983</TemplateKey>
+      <BaseColor>
+        <r>1</r>
+        <g>1</g>
+        <b>1</b>
+        <a>1</a>
+      </BaseColor>
+      <StripeColor>
+        <r>0.274509817</r>
+        <g>0.129411772</g>
+        <b>0.7058824</b>
+        <a>1</a>
+      </StripeColor>
+      <Sockets>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="ActiveSeekerSettings">
+            <ComponentKey>Stock/Fixed Active Radar Seeker</ComponentKey>
+            <Mode>Targeting</Mode>
+            <RejectUnvalidated>false</RejectUnvalidated>
+            <DetectPDTargets>false</DetectPDTargets>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="PassiveSeekerSettings">
+            <ComponentKey>Stock/Wake-Homing Seeker</ComponentKey>
+            <Mode>Targeting</Mode>
+            <RejectUnvalidated>false</RejectUnvalidated>
+            <DetectPDTargets>false</DetectPDTargets>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="DirectGuidanceSettings">
+            <ComponentKey>Stock/Direct Guidance</ComponentKey>
+            <Role>Defensive</Role>
+            <HotLaunch>false</HotLaunch>
+            <SelfDestructOnLost>false</SelfDestructOnLost>
+            <Maneuvers>None</Maneuvers>
+            <DefensiveDoctrine>
+              <TargetSizeMask>12</TargetSizeMask>
+              <TargetType>SmallCraft</TargetType>
+              <TargetSizeOrdering>Descending</TargetSizeOrdering>
+              <SalvoSize>0</SalvoSize>
+              <FarthestFirst>false</FarthestFirst>
+            </DefensiveDoctrine>
+            <ApproachAngleControl>true</ApproachAngleControl>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>4</Size>
+          <InstalledComponent>
+            <ComponentKey>Stock/Blast Fragmentation</ComponentKey>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>3</Size>
+          <InstalledComponent xsi:type="MissileEngineSettings">
+            <ComponentKey />
+            <BalanceValues>
+              <A>0</A>
+              <B>-0</B>
+              <C>1</C>
+            </BalanceValues>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="MissileEngineSettings">
+            <ComponentKey />
+            <BalanceValues>
+              <A>1</A>
+              <B>0</B>
+              <C>0</C>
+            </BalanceValues>
+          </InstalledComponent>
+        </MissileSocket>
+      </Sockets>
+    </MissileTemplate>
+    <MissileTemplate>
+      <Designation>SGM-190</Designation>
+      <Nickname>Bolt</Nickname>
+      <Description>DIRECT - ACT(&lt;color=#3BC81E&gt;RADAR&lt;/color&gt;) - HE FRAG</Description>
+      <LongDescription>The &lt;noparse&gt;SGM-190 Bolt&lt;/noparse&gt; is a size 1 direct guidance missile.  It is based on the SGM-1 body, which is a nimble general-purpose missile.  This missile will deliver a Proximity Fuze, High Explosive, Blast Fragmentation warhead.  It homes in on its target using an Active Radar seeker.
+
+Control Method: DIRECT
+Targeting Modes: &lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+
+Primary Seeker: ACTIVE &lt;color=#3BC81E&gt;RADAR&lt;/color&gt;
+
+Speed: 294 m/s
+Distance: 2,153 m
+Top Speed In: 0.5 s
+Turn Rate: 10.7 G
+Terminal Maneuvers: None
+
+Warhead: Proximity Fuze, High Explosive, Blast Fragmentation
+Armor: 0.21cm
+Component: 65.34hp
+Blast Radius: 47 m
+
+Body Integrity: 10
+Wall Thickness: 0.05
+Programming Time: 6 s
+Radar Signature Bonus: 100 %
+Boost-Phase Duration: 3 s
+Boost-Phase Strafe: 100 %
+Boost-Phase Turn Rate: 100 %
+Failure Rate: 0 %</LongDescription>
+      <Cost>2</Cost>
+      <BodyKey>Stock/SGM-1 Body</BodyKey>
+      <TemplateKey>9bc4ebc3-a23c-471d-b56e-462a03eda6b1</TemplateKey>
+      <BaseColor>
+        <r>1</r>
+        <g>0.4862745</g>
+        <b>0</b>
+        <a>1</a>
+      </BaseColor>
+      <StripeColor>
+        <r>0.254901975</r>
+        <g>0.254901975</g>
+        <b>0.254901975</b>
+        <a>1</a>
+      </StripeColor>
+      <Sockets>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="ActiveSeekerSettings">
+            <ComponentKey>Stock/Fixed Active Radar Seeker</ComponentKey>
+            <Mode>Targeting</Mode>
+            <RejectUnvalidated>false</RejectUnvalidated>
+            <DetectPDTargets>false</DetectPDTargets>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="DirectGuidanceSettings">
+            <ComponentKey>Stock/Direct Guidance</ComponentKey>
+            <Role>Offensive</Role>
+            <HotLaunch>true</HotLaunch>
+            <SelfDestructOnLost>false</SelfDestructOnLost>
+            <Maneuvers>None</Maneuvers>
+            <DefensiveDoctrine>
+              <TargetSizeMask>12</TargetSizeMask>
+              <TargetType>All</TargetType>
+              <TargetSizeOrdering>Descending</TargetSizeOrdering>
+              <SalvoSize>0</SalvoSize>
+              <FarthestFirst>false</FarthestFirst>
+            </DefensiveDoctrine>
+            <ApproachAngleControl>true</ApproachAngleControl>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>4</Size>
+          <InstalledComponent>
+            <ComponentKey>Stock/Blast Fragmentation</ComponentKey>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>3</Size>
+          <InstalledComponent xsi:type="MissileEngineSettings">
+            <ComponentKey />
+            <BalanceValues>
+              <A>0.29248777</A>
+              <B>0.0873734653</B>
+              <C>0.620138764</C>
+            </BalanceValues>
+          </InstalledComponent>
+        </MissileSocket>
+      </Sockets>
+    </MissileTemplate>
+  </TemplateMissileTypes>
+  <ModDependencies />
+</CraftTemplate>

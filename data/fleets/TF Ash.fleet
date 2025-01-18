@@ -4,71 +4,25 @@
   <Version>3</Version>
   <TotalPoints>3000</TotalPoints>
   <FactionKey>Stock/Alliance</FactionKey>
-  <Description>Difficulty: &lt;color=yellow&gt;MODERATE&lt;/color&gt;
+  <Description>Difficulty: &lt;color=red&gt;HARD&lt;/color&gt;
 
-A close range beam brawling fleet. Task Force Ash's primary formation consists of three beam destroyers and an ECM corvette. You'll need to get in close to make use of the destroyers' particle beams, but they can also deliver a punch from a distance with their missile complement. Use of jamming and/or careful ambush planning is absolutely crucial to get the destroyers to firing range. The detached scouting corvette can be used to keep an eye on potential prey while the main formation lies in wait.
+A fragile formation focusing on the application of maximum violence from underneath the cover of heavy electronic warfare. Success with TF Ash is heavily reliant on ambush tactics, pre-aiming with the HDG command, and utilizing your radar and comms jamming to bring your destroyers' beams on target before the opponent can effectively retaliate. Use of the BSHRT toggle is essential to maximize both violence and survivability. A complement of anti-craft missiles allow for the destruction of enemy sensor assets which could spot your force, and a deep stockpile of anti-ship missiles gives the force limited ability to strike against targets at medium-range. The missiles can also be used to finish off beamed targets, allowing your destroyers to move on to the next target faster.
   </Description>
-  <SortOverrideOrder>4</SortOverrideOrder>
+  <SortOverrideOrder>5</SortOverrideOrder>
   <Ships>
-    <Ship>
-      <SaveID xsi:nil="true" />
-      <Key>a47472a0-0ce7-4993-a0bb-2ade08b4b9e7</Key>
-      <Name>Eyes</Name>
-      <Cost>230</Cost>
-      <Callsign>SCOUT</Callsign>
-      <Number>1015</Number>
-      <SymbolOption>0</SymbolOption>
-      <HullType>Stock/Sprinter Corvette</HullType>
-      <SocketMap>
-        <HullSocket>
-          <Key>XPaYCjBqdEqBxEIsVLP0oA</Key>
-          <ComponentName>Stock/Berthing</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>xRYIkvssd0mPY3VIgrnQ5A</Key>
-          <ComponentName>Stock/Reinforced CIC</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>rXO8xwG1MkqzI_2pU-O_qQ</Key>
-          <ComponentName>Stock/Plant Control Center</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>GefqwCQzg0qXA3EFRmDtPw</Key>
-          <ComponentName>Stock/Small DC Locker</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>4WpJyiOKVEqCwR99l47MkA</Key>
-          <ComponentName>Stock/FR3300 Micro Reactor</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>4EHx4mQhNUi-WuuQtQF5fA</Key>
-          <ComponentName>Stock/FM230 'Whiplash' Drive</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>TSPPW9ECe06-MGzR1i0WvQ</Key>
-          <ComponentName>Stock/RM50 'Parallax' Radar</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>MBOvGazj6UWpt2OOy44s7w</Key>
-          <ComponentName>Stock/Small Reactor Booster</ComponentName>
-        </HullSocket>
-      </SocketMap>
-      <WeaponGroups />
-      <TemplateMissileTypes />
-    </Ship>
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>f9cd78f4-7015-4364-a3de-e36fc28eb38a</Key>
       <Name>Static Noise</Name>
-      <Cost>410</Cost>
-      <Callsign>EWAR</Callsign>
-      <Number>1011</Number>
+      <Cost>425</Cost>
+      <Callsign />
+      <Number>1010</Number>
       <SymbolOption>0</SymbolOption>
       <HullType>Stock/Sprinter Corvette</HullType>
       <SocketMap>
         <HullSocket>
           <Key>wDsRnL5nKkyYvKgD6VcPHg</Key>
-          <ComponentName>Stock/RF101 'Bullseye' Radar</ComponentName>
+          <ComponentName>Stock/E71 'Hangup' Jammer</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>Z48ot_dQfkWb6AVYjaM_gA</Key>
@@ -84,7 +38,7 @@ A close range beam brawling fleet. Task Force Ash's primary formation consists o
         </HullSocket>
         <HullSocket>
           <Key>XPaYCjBqdEqBxEIsVLP0oA</Key>
-          <ComponentName>Stock/Berthing</ComponentName>
+          <ComponentName>Stock/Rapid DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>xRYIkvssd0mPY3VIgrnQ5A</Key>
@@ -116,29 +70,35 @@ A close range beam brawling fleet. Task Force Ash's primary formation consists o
         </HullSocket>
       </SocketMap>
       <WeaponGroups>
-        <WepGroup Name="ECM">
+        <WepGroup Name="COMMS JAM">
           <MemberKeys>
+            <string>wDsRnL5nKkyYvKgD6VcPHg</string>
             <string>Z48ot_dQfkWb6AVYjaM_gA</string>
+          </MemberKeys>
+        </WepGroup>
+        <WepGroup Name="RADAR JAM">
+          <MemberKeys>
             <string>IUdNSVZm2Eu9n3F5HnSAng</string>
             <string>ZxY9ONYz80SiLNSObvjNzQ</string>
           </MemberKeys>
         </WepGroup>
       </WeaponGroups>
       <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
     </Ship>
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>0fb347e8-cdbc-4ebe-8603-a1f606e1e491</Key>
       <Name>Apply Damage</Name>
-      <Cost>787</Cost>
+      <Cost>880</Cost>
       <Callsign />
-      <Number>1012</Number>
-      <SymbolOption>1</SymbolOption>
+      <Number>1011</Number>
+      <SymbolOption>0</SymbolOption>
       <HullType>Stock/Keystone Destroyer</HullType>
       <SocketMap>
         <HullSocket>
           <Key>NpYYAkA5Z0uAElOjDg3Rag</Key>
-          <ComponentName>Stock/Mk64 Cannon</ComponentName>
+          <ComponentName>Stock/E70 'Interruption' Jammer</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>fSYv4j5-eEObwJEVhoBSvg</Key>
@@ -146,351 +106,21 @@ A close range beam brawling fleet. Task Force Ash's primary formation consists o
           <ComponentData xsi:type="ResizableCellLauncherData">
             <MissileLoad>
               <MagSaveData>
-                <MagazineKey>Yaqjf7WZTk-JTJ9ueHkf3A</MagazineKey>
-                <MunitionKey>$MODMIS$/SGM-207 Rain</MunitionKey>
-                <Quantity>19</Quantity>
-              </MagSaveData>
-            </MissileLoad>
-            <ConfiguredSize>
-              <x>1</x>
-              <y>3</y>
-            </ConfiguredSize>
-          </ComponentData>
-        </HullSocket>
-        <HullSocket>
-          <Key>x21sadthgE2FtDWSJKINGQ</Key>
-          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>IxKwpY5d9EicYRRTMn8xVw</Key>
-          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>JpOU9MgWXEmfLcQoAK4otA</Key>
-          <ComponentName>Stock/VLS-1-23 Launcher</ComponentName>
-          <ComponentData xsi:type="CellLauncherData">
-            <MissileLoad>
-              <MagSaveData>
-                <MagazineKey>y1y33bb31E-ua9RV0CGafw</MagazineKey>
-                <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>8</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>4znP_s3JUkCk5z_8QcFMKQ</MagazineKey>
-                <MunitionKey>Stock/EA20 Flare Decoy</MunitionKey>
+                <MagazineKey>SGRXoo8WPEiTHJzp5JnqOw</MagazineKey>
+                <MunitionKey>Stock/EA99 Active Decoy</MunitionKey>
                 <Quantity>2</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>U__yY1f26E6F4ReTizMpLw</MagazineKey>
-                <MunitionKey>Stock/EA99 Active Decoy</MunitionKey>
-                <Quantity>1</Quantity>
+                <MagazineKey>s5q8PNK_BU2ixBQQsrNsag</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-230 Finisher ASM</MunitionKey>
+                <Quantity>18</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>hSbPVnDJ70SuS3g8VRnCkw</MagazineKey>
+                <MunitionKey>$MODMIS$/SDM-220 Protector ACM</MunitionKey>
+                <Quantity>4</Quantity>
               </MagSaveData>
             </MissileLoad>
-          </ComponentData>
-        </HullSocket>
-        <HullSocket>
-          <Key>LCosRblddUCjPogeJ5eSeA</Key>
-          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>hGeid9yk80GqIN5IUlp8aw</Key>
-          <ComponentName>Stock/Mk600 Beam Cannon</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>PlyaCcjDo0qu155JIZgm6A</Key>
-          <ComponentName>Stock/Berthing</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>ytRGy84X_kW1odHYCBICDQ</Key>
-          <ComponentName>Stock/Reinforced Magazine</ComponentName>
-          <ComponentData xsi:type="BulkMagazineData">
-            <Load>
-              <MagSaveData>
-                <MagazineKey>akVUlDi7QkeFCXLlKr_FGg</MagazineKey>
-                <MunitionKey>Stock/20mm Slug</MunitionKey>
-                <Quantity>10000</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>2a9Awxp8GE-mp4JdCCA_iw</MagazineKey>
-                <MunitionKey>Stock/250mm HE-RPF Shell</MunitionKey>
-                <Quantity>50</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>dzn8_YtrxEKAayWVSvtU7A</MagazineKey>
-                <MunitionKey>Stock/250mm HE Shell</MunitionKey>
-                <Quantity>50</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>xRdQ8XkDTUWj1qErcxlFvQ</MagazineKey>
-                <MunitionKey>Stock/250mm AP Shell</MunitionKey>
-                <Quantity>50</Quantity>
-              </MagSaveData>
-            </Load>
-          </ComponentData>
-        </HullSocket>
-        <HullSocket>
-          <Key>yM3Am4PqyUOIByTKzM6sPA</Key>
-          <ComponentName>Stock/Reinforced CIC</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>H1ekC2-9c02VyNXY4IeLYA</Key>
-          <ComponentName>Stock/Plant Control Center</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>ln5c_ZvdCUSMVWZL_-m3yw</Key>
-          <ComponentName>Stock/Small DC Locker</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>H-oABJbYw0qgKd4QzU0WaA</Key>
-          <ComponentName>Stock/Reinforced DC Locker</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>tCBEdcIUhk6AL-X6sCujsQ</Key>
-          <ComponentName>Stock/Rapid DC Locker</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>AWYvQUZ26k20yHOrVQKg6Q</Key>
-          <ComponentName>Stock/FR4800 Reactor</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>tmHTz6HkrE-RUtN94W6lyQ</Key>
-          <ComponentName>Stock/FM230 'Whiplash' Drive</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>m5J1jQdOfUKM9r7NZjMpKA</Key>
-          <ComponentName>Stock/FR3300 Micro Reactor</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>h29TSNGRo0m_DmeRr2BqDw</Key>
-          <ComponentName>Stock/Focused Particle Accelerator</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>E9sMCEquVk-NNj5heGmIlQ</Key>
-          <ComponentName>Stock/RM50 'Parallax' Radar</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>gx2UKetKWUm5BfZhiD5phQ</Key>
-          <ComponentName>Stock/Adaptive Radar Receiver</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>ZJTmbGdjAk-XEKihIYHEuw</Key>
-          <ComponentName>Stock/Focused Particle Accelerator</ComponentName>
-        </HullSocket>
-      </SocketMap>
-      <WeaponGroups>
-        <WepGroup Name="GUNS">
-          <MemberKeys>
-            <string>NpYYAkA5Z0uAElOjDg3Rag</string>
-          </MemberKeys>
-        </WepGroup>
-      </WeaponGroups>
-      <InitialFormation>
-        <GuideKey>f9cd78f4-7015-4364-a3de-e36fc28eb38a</GuideKey>
-        <RelativePosition>
-          <x>0</x>
-          <y>20</y>
-          <z>30</z>
-        </RelativePosition>
-      </InitialFormation>
-      <TemplateMissileTypes />
-    </Ship>
-    <Ship>
-      <SaveID xsi:nil="true" />
-      <Key>64784cb3-276c-481f-9a1d-1579f7e7a9c8</Key>
-      <Name>Energy Transfer</Name>
-      <Cost>787</Cost>
-      <Callsign />
-      <Number>1013</Number>
-      <SymbolOption>1</SymbolOption>
-      <HullType>Stock/Keystone Destroyer</HullType>
-      <SocketMap>
-        <HullSocket>
-          <Key>NpYYAkA5Z0uAElOjDg3Rag</Key>
-          <ComponentName>Stock/Mk64 Cannon</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>fSYv4j5-eEObwJEVhoBSvg</Key>
-          <ComponentName>Stock/VLS-2 Launcher</ComponentName>
-          <ComponentData xsi:type="ResizableCellLauncherData">
-            <MissileLoad>
-              <MagSaveData>
-                <MagazineKey>86yeP076tU6X9MYN0Aeydg</MagazineKey>
-                <MunitionKey>$MODMIS$/SGM-207 Rain</MunitionKey>
-                <Quantity>19</Quantity>
-              </MagSaveData>
-            </MissileLoad>
-            <ConfiguredSize>
-              <x>1</x>
-              <y>3</y>
-            </ConfiguredSize>
-          </ComponentData>
-        </HullSocket>
-        <HullSocket>
-          <Key>x21sadthgE2FtDWSJKINGQ</Key>
-          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>IxKwpY5d9EicYRRTMn8xVw</Key>
-          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>JpOU9MgWXEmfLcQoAK4otA</Key>
-          <ComponentName>Stock/VLS-1-23 Launcher</ComponentName>
-          <ComponentData xsi:type="CellLauncherData">
-            <MissileLoad>
-              <MagSaveData>
-                <MagazineKey>y1y33bb31E-ua9RV0CGafw</MagazineKey>
-                <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>8</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>4znP_s3JUkCk5z_8QcFMKQ</MagazineKey>
-                <MunitionKey>Stock/EA20 Flare Decoy</MunitionKey>
-                <Quantity>2</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>U__yY1f26E6F4ReTizMpLw</MagazineKey>
-                <MunitionKey>Stock/EA99 Active Decoy</MunitionKey>
-                <Quantity>1</Quantity>
-              </MagSaveData>
-            </MissileLoad>
-          </ComponentData>
-        </HullSocket>
-        <HullSocket>
-          <Key>LCosRblddUCjPogeJ5eSeA</Key>
-          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>hGeid9yk80GqIN5IUlp8aw</Key>
-          <ComponentName>Stock/Mk600 Beam Cannon</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>PlyaCcjDo0qu155JIZgm6A</Key>
-          <ComponentName>Stock/Berthing</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>ytRGy84X_kW1odHYCBICDQ</Key>
-          <ComponentName>Stock/Reinforced Magazine</ComponentName>
-          <ComponentData xsi:type="BulkMagazineData">
-            <Load>
-              <MagSaveData>
-                <MagazineKey>bcgjKIloZ0ifApNa8Ac48Q</MagazineKey>
-                <MunitionKey>Stock/20mm Slug</MunitionKey>
-                <Quantity>10000</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>UHbR9HjGhk69I621dmlFew</MagazineKey>
-                <MunitionKey>Stock/250mm HE Shell</MunitionKey>
-                <Quantity>50</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>BC-OdC6tXEq6GwLeOpIboQ</MagazineKey>
-                <MunitionKey>Stock/250mm HE-RPF Shell</MunitionKey>
-                <Quantity>50</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>arEGWXxtzUC3N_292w93UQ</MagazineKey>
-                <MunitionKey>Stock/250mm AP Shell</MunitionKey>
-                <Quantity>50</Quantity>
-              </MagSaveData>
-            </Load>
-          </ComponentData>
-        </HullSocket>
-        <HullSocket>
-          <Key>yM3Am4PqyUOIByTKzM6sPA</Key>
-          <ComponentName>Stock/Reinforced CIC</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>H1ekC2-9c02VyNXY4IeLYA</Key>
-          <ComponentName>Stock/Plant Control Center</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>ln5c_ZvdCUSMVWZL_-m3yw</Key>
-          <ComponentName>Stock/Small DC Locker</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>H-oABJbYw0qgKd4QzU0WaA</Key>
-          <ComponentName>Stock/Reinforced DC Locker</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>tCBEdcIUhk6AL-X6sCujsQ</Key>
-          <ComponentName>Stock/Rapid DC Locker</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>AWYvQUZ26k20yHOrVQKg6Q</Key>
-          <ComponentName>Stock/FR4800 Reactor</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>tmHTz6HkrE-RUtN94W6lyQ</Key>
-          <ComponentName>Stock/FM230 'Whiplash' Drive</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>m5J1jQdOfUKM9r7NZjMpKA</Key>
-          <ComponentName>Stock/FR3300 Micro Reactor</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>h29TSNGRo0m_DmeRr2BqDw</Key>
-          <ComponentName>Stock/Focused Particle Accelerator</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>E9sMCEquVk-NNj5heGmIlQ</Key>
-          <ComponentName>Stock/RM50 'Parallax' Radar</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>gx2UKetKWUm5BfZhiD5phQ</Key>
-          <ComponentName>Stock/Adaptive Radar Receiver</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>ZJTmbGdjAk-XEKihIYHEuw</Key>
-          <ComponentName>Stock/Focused Particle Accelerator</ComponentName>
-        </HullSocket>
-      </SocketMap>
-      <WeaponGroups>
-        <WepGroup Name="GUNS">
-          <MemberKeys>
-            <string>NpYYAkA5Z0uAElOjDg3Rag</string>
-          </MemberKeys>
-        </WepGroup>
-      </WeaponGroups>
-      <InitialFormation>
-        <GuideKey>f9cd78f4-7015-4364-a3de-e36fc28eb38a</GuideKey>
-        <RelativePosition>
-          <x>-17.5</x>
-          <y>-10</y>
-          <z>30</z>
-        </RelativePosition>
-      </InitialFormation>
-      <TemplateMissileTypes />
-    </Ship>
-    <Ship>
-      <SaveID xsi:nil="true" />
-      <Key>44d24d3a-0e95-448b-abeb-620481d33a8e</Key>
-      <Name>Consider This</Name>
-      <Cost>786</Cost>
-      <Callsign />
-      <Number>1014</Number>
-      <SymbolOption>1</SymbolOption>
-      <HullType>Stock/Keystone Destroyer</HullType>
-      <SocketMap>
-        <HullSocket>
-          <Key>NpYYAkA5Z0uAElOjDg3Rag</Key>
-          <ComponentName>Stock/Mk64 Cannon</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>fSYv4j5-eEObwJEVhoBSvg</Key>
-          <ComponentName>Stock/VLS-2 Launcher</ComponentName>
-          <ComponentData xsi:type="ResizableCellLauncherData">
-            <MissileLoad>
-              <MagSaveData>
-                <MagazineKey>c7UNFY6nI0qJ52lb7iQXvA</MagazineKey>
-                <MunitionKey>$MODMIS$/SGM-207 Rain</MunitionKey>
-                <Quantity>19</Quantity>
-              </MagSaveData>
-            </MissileLoad>
-            <ConfiguredSize>
-              <x>1</x>
-              <y>3</y>
-            </ConfiguredSize>
           </ComponentData>
         </HullSocket>
         <HullSocket>
@@ -514,19 +144,14 @@ A close range beam brawling fleet. Task Force Ash's primary formation consists o
               <MagSaveData>
                 <MagazineKey>4znP_s3JUkCk5z_8QcFMKQ</MagazineKey>
                 <MunitionKey>Stock/EA20 Flare Decoy</MunitionKey>
-                <Quantity>2</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>U__yY1f26E6F4ReTizMpLw</MagazineKey>
-                <MunitionKey>Stock/EA99 Active Decoy</MunitionKey>
-                <Quantity>1</Quantity>
+                <Quantity>3</Quantity>
               </MagSaveData>
             </MissileLoad>
           </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>LCosRblddUCjPogeJ5eSeA</Key>
-          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
+          <ComponentName>Stock/RF101 'Bullseye' Radar</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>hGeid9yk80GqIN5IUlp8aw</Key>
@@ -534,7 +159,7 @@ A close range beam brawling fleet. Task Force Ash's primary formation consists o
         </HullSocket>
         <HullSocket>
           <Key>PlyaCcjDo0qu155JIZgm6A</Key>
-          <ComponentName>Stock/Berthing</ComponentName>
+          <ComponentName>Stock/Small DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>ytRGy84X_kW1odHYCBICDQ</Key>
@@ -542,24 +167,9 @@ A close range beam brawling fleet. Task Force Ash's primary formation consists o
           <ComponentData xsi:type="BulkMagazineData">
             <Load>
               <MagSaveData>
-                <MagazineKey>RCVbvlP8r0ySd-Mt1Em1AQ</MagazineKey>
+                <MagazineKey>akVUlDi7QkeFCXLlKr_FGg</MagazineKey>
                 <MunitionKey>Stock/20mm Slug</MunitionKey>
-                <Quantity>10000</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>caMnNSc26EiSmKQahYNAcQ</MagazineKey>
-                <MunitionKey>Stock/250mm HE Shell</MunitionKey>
-                <Quantity>50</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>fAnAX9DkP02J2E5ji8xS1w</MagazineKey>
-                <MunitionKey>Stock/250mm HE-RPF Shell</MunitionKey>
-                <Quantity>50</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>uO2HJJ1KV06iGLVWKRInBA</MagazineKey>
-                <MunitionKey>Stock/250mm AP Shell</MunitionKey>
-                <Quantity>50</Quantity>
+                <Quantity>12000</Quantity>
               </MagSaveData>
             </Load>
           </ComponentData>
@@ -574,11 +184,169 @@ A close range beam brawling fleet. Task Force Ash's primary formation consists o
         </HullSocket>
         <HullSocket>
           <Key>ln5c_ZvdCUSMVWZL_-m3yw</Key>
-          <ComponentName>Stock/Small DC Locker</ComponentName>
+          <ComponentName>Stock/Plant Control Center</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>H-oABJbYw0qgKd4QzU0WaA</Key>
           <ComponentName>Stock/Reinforced DC Locker</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>tCBEdcIUhk6AL-X6sCujsQ</Key>
+          <ComponentName>Stock/Rapid DC Locker</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>AWYvQUZ26k20yHOrVQKg6Q</Key>
+          <ComponentName>Stock/FR4800 Reactor</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>tmHTz6HkrE-RUtN94W6lyQ</Key>
+          <ComponentName>Stock/FM230 'Whiplash' Drive</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>m5J1jQdOfUKM9r7NZjMpKA</Key>
+          <ComponentName>Stock/FR3300 Micro Reactor</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>h29TSNGRo0m_DmeRr2BqDw</Key>
+          <ComponentName>Stock/Focused Particle Accelerator</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>E9sMCEquVk-NNj5heGmIlQ</Key>
+          <ComponentName>Stock/RM50 'Parallax' Radar</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>gx2UKetKWUm5BfZhiD5phQ</Key>
+          <ComponentName>Stock/ES32 'Scryer' Missile ID System</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>ZJTmbGdjAk-XEKihIYHEuw</Key>
+          <ComponentName>Stock/Focused Particle Accelerator</ComponentName>
+        </HullSocket>
+      </SocketMap>
+      <WeaponGroups>
+        <WepGroup Name="OMNI">
+          <MemberKeys />
+        </WepGroup>
+        <WepGroup Name="OMNI JAM">
+          <MemberKeys>
+            <string>NpYYAkA5Z0uAElOjDg3Rag</string>
+          </MemberKeys>
+        </WepGroup>
+      </WeaponGroups>
+      <InitialFormation>
+        <GuideKey>f9cd78f4-7015-4364-a3de-e36fc28eb38a</GuideKey>
+        <RelativePosition>
+          <x>0</x>
+          <y>20</y>
+          <z>30</z>
+        </RelativePosition>
+      </InitialFormation>
+      <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
+    </Ship>
+    <Ship>
+      <SaveID xsi:nil="true" />
+      <Key>64784cb3-276c-481f-9a1d-1579f7e7a9c8</Key>
+      <Name>Energy Transfer</Name>
+      <Cost>856</Cost>
+      <Callsign />
+      <Number>1012</Number>
+      <SymbolOption>1</SymbolOption>
+      <HullType>Stock/Keystone Destroyer</HullType>
+      <SocketMap>
+        <HullSocket>
+          <Key>NpYYAkA5Z0uAElOjDg3Rag</Key>
+          <ComponentName>Stock/VLS-2 Launcher</ComponentName>
+          <ComponentData xsi:type="ResizableCellLauncherData">
+            <MissileLoad>
+              <MagSaveData>
+                <MagazineKey>s91-FdxDB0KFucG_viY_pQ</MagazineKey>
+                <MunitionKey>Stock/EA99 Active Decoy</MunitionKey>
+                <Quantity>2</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>7_LNWiXJB0eYU9kHpNiRXw</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-230 Finisher ASM</MunitionKey>
+                <Quantity>18</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>xhfd4la6qU2Hj0Euax_rBA</MagazineKey>
+                <MunitionKey>$MODMIS$/SDM-220 Protector ACM</MunitionKey>
+                <Quantity>4</Quantity>
+              </MagSaveData>
+            </MissileLoad>
+          </ComponentData>
+        </HullSocket>
+        <HullSocket>
+          <Key>fSYv4j5-eEObwJEVhoBSvg</Key>
+          <ComponentName>Stock/E90 'Blanket' Jammer</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>x21sadthgE2FtDWSJKINGQ</Key>
+          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>IxKwpY5d9EicYRRTMn8xVw</Key>
+          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>JpOU9MgWXEmfLcQoAK4otA</Key>
+          <ComponentName>Stock/VLS-1-23 Launcher</ComponentName>
+          <ComponentData xsi:type="CellLauncherData">
+            <MissileLoad>
+              <MagSaveData>
+                <MagazineKey>y1y33bb31E-ua9RV0CGafw</MagazineKey>
+                <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
+                <Quantity>6</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>4znP_s3JUkCk5z_8QcFMKQ</MagazineKey>
+                <MunitionKey>Stock/EA20 Flare Decoy</MunitionKey>
+                <Quantity>3</Quantity>
+              </MagSaveData>
+            </MissileLoad>
+          </ComponentData>
+        </HullSocket>
+        <HullSocket>
+          <Key>LCosRblddUCjPogeJ5eSeA</Key>
+          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>hGeid9yk80GqIN5IUlp8aw</Key>
+          <ComponentName>Stock/Mk600 Beam Cannon</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>PlyaCcjDo0qu155JIZgm6A</Key>
+          <ComponentName>Stock/Rapid DC Locker</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>ytRGy84X_kW1odHYCBICDQ</Key>
+          <ComponentName>Stock/Reinforced Magazine</ComponentName>
+          <ComponentData xsi:type="BulkMagazineData">
+            <Load>
+              <MagSaveData>
+                <MagazineKey>bcgjKIloZ0ifApNa8Ac48Q</MagazineKey>
+                <MunitionKey>Stock/20mm Slug</MunitionKey>
+                <Quantity>16000</Quantity>
+              </MagSaveData>
+            </Load>
+          </ComponentData>
+        </HullSocket>
+        <HullSocket>
+          <Key>yM3Am4PqyUOIByTKzM6sPA</Key>
+          <ComponentName>Stock/Reinforced CIC</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>H1ekC2-9c02VyNXY4IeLYA</Key>
+          <ComponentName>Stock/Plant Control Center</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>ln5c_ZvdCUSMVWZL_-m3yw</Key>
+          <ComponentName>Stock/Reinforced DC Locker</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>H-oABJbYw0qgKd4QzU0WaA</Key>
+          <ComponentName>Stock/Rapid DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>tCBEdcIUhk6AL-X6sCujsQ</Key>
@@ -614,9 +382,170 @@ A close range beam brawling fleet. Task Force Ash's primary formation consists o
         </HullSocket>
       </SocketMap>
       <WeaponGroups>
-        <WepGroup Name="GUNS">
+        <WepGroup Name="BLANKET">
+          <MemberKeys />
+        </WepGroup>
+        <WepGroup Name="RADAR JAM">
           <MemberKeys>
-            <string>NpYYAkA5Z0uAElOjDg3Rag</string>
+            <string>fSYv4j5-eEObwJEVhoBSvg</string>
+          </MemberKeys>
+        </WepGroup>
+      </WeaponGroups>
+      <InitialFormation>
+        <GuideKey>f9cd78f4-7015-4364-a3de-e36fc28eb38a</GuideKey>
+        <RelativePosition>
+          <x>-17.5</x>
+          <y>-10</y>
+          <z>30</z>
+        </RelativePosition>
+      </InitialFormation>
+      <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
+    </Ship>
+    <Ship>
+      <SaveID xsi:nil="true" />
+      <Key>44d24d3a-0e95-448b-abeb-620481d33a8e</Key>
+      <Name>Consider This</Name>
+      <Cost>839</Cost>
+      <Callsign />
+      <Number>1013</Number>
+      <SymbolOption>2</SymbolOption>
+      <HullType>Stock/Keystone Destroyer</HullType>
+      <SocketMap>
+        <HullSocket>
+          <Key>NpYYAkA5Z0uAElOjDg3Rag</Key>
+          <ComponentName>Stock/RF101 'Bullseye' Radar</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>fSYv4j5-eEObwJEVhoBSvg</Key>
+          <ComponentName>Stock/VLS-2 Launcher</ComponentName>
+          <ComponentData xsi:type="ResizableCellLauncherData">
+            <MissileLoad>
+              <MagSaveData>
+                <MagazineKey>M43LT4Oip0WWEtKcXJpXBg</MagazineKey>
+                <MunitionKey>Stock/EA99 Active Decoy</MunitionKey>
+                <Quantity>2</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>z3rVelnByku1m0yvjfA1-A</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-230 Finisher ASM</MunitionKey>
+                <Quantity>18</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>Um7ckMrVnUidtA-NkgyJ-g</MagazineKey>
+                <MunitionKey>$MODMIS$/SDM-220 Protector ACM</MunitionKey>
+                <Quantity>4</Quantity>
+              </MagSaveData>
+            </MissileLoad>
+          </ComponentData>
+        </HullSocket>
+        <HullSocket>
+          <Key>x21sadthgE2FtDWSJKINGQ</Key>
+          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>IxKwpY5d9EicYRRTMn8xVw</Key>
+          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>JpOU9MgWXEmfLcQoAK4otA</Key>
+          <ComponentName>Stock/VLS-1-23 Launcher</ComponentName>
+          <ComponentData xsi:type="CellLauncherData">
+            <MissileLoad>
+              <MagSaveData>
+                <MagazineKey>y1y33bb31E-ua9RV0CGafw</MagazineKey>
+                <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
+                <Quantity>6</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>4znP_s3JUkCk5z_8QcFMKQ</MagazineKey>
+                <MunitionKey>Stock/EA20 Flare Decoy</MunitionKey>
+                <Quantity>3</Quantity>
+              </MagSaveData>
+            </MissileLoad>
+          </ComponentData>
+        </HullSocket>
+        <HullSocket>
+          <Key>LCosRblddUCjPogeJ5eSeA</Key>
+          <ComponentName>Stock/E90 'Blanket' Jammer</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>hGeid9yk80GqIN5IUlp8aw</Key>
+          <ComponentName>Stock/Mk600 Beam Cannon</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>PlyaCcjDo0qu155JIZgm6A</Key>
+          <ComponentName>Stock/Small DC Locker</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>ytRGy84X_kW1odHYCBICDQ</Key>
+          <ComponentName>Stock/Reinforced Magazine</ComponentName>
+          <ComponentData xsi:type="BulkMagazineData">
+            <Load>
+              <MagSaveData>
+                <MagazineKey>RCVbvlP8r0ySd-Mt1Em1AQ</MagazineKey>
+                <MunitionKey>Stock/20mm Slug</MunitionKey>
+                <Quantity>12000</Quantity>
+              </MagSaveData>
+            </Load>
+          </ComponentData>
+        </HullSocket>
+        <HullSocket>
+          <Key>yM3Am4PqyUOIByTKzM6sPA</Key>
+          <ComponentName>Stock/Reinforced CIC</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>H1ekC2-9c02VyNXY4IeLYA</Key>
+          <ComponentName>Stock/Plant Control Center</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>ln5c_ZvdCUSMVWZL_-m3yw</Key>
+          <ComponentName>Stock/Reinforced DC Locker</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>H-oABJbYw0qgKd4QzU0WaA</Key>
+          <ComponentName>Stock/Rapid DC Locker</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>tCBEdcIUhk6AL-X6sCujsQ</Key>
+          <ComponentName>Stock/Rapid DC Locker</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>AWYvQUZ26k20yHOrVQKg6Q</Key>
+          <ComponentName>Stock/FR4800 Reactor</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>tmHTz6HkrE-RUtN94W6lyQ</Key>
+          <ComponentName>Stock/FM230 'Whiplash' Drive</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>m5J1jQdOfUKM9r7NZjMpKA</Key>
+          <ComponentName>Stock/FR3300 Micro Reactor</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>h29TSNGRo0m_DmeRr2BqDw</Key>
+          <ComponentName>Stock/Focused Particle Accelerator</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>E9sMCEquVk-NNj5heGmIlQ</Key>
+          <ComponentName>Stock/RS41 'Spyglass' Radar</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>gx2UKetKWUm5BfZhiD5phQ</Key>
+          <ComponentName>Stock/Small Reactor Booster</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>ZJTmbGdjAk-XEKihIYHEuw</Key>
+          <ComponentName>Stock/Focused Particle Accelerator</ComponentName>
+        </HullSocket>
+      </SocketMap>
+      <WeaponGroups>
+        <WepGroup Name="BLANKET">
+          <MemberKeys />
+        </WepGroup>
+        <WepGroup Name="RADAR JAM">
+          <MemberKeys>
+            <string>LCosRblddUCjPogeJ5eSeA</string>
           </MemberKeys>
         </WepGroup>
       </WeaponGroups>
@@ -629,39 +558,46 @@ A close range beam brawling fleet. Task Force Ash's primary formation consists o
         </RelativePosition>
       </InitialFormation>
       <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
     </Ship>
   </Ships>
   <MissileTypes>
     <MissileTemplate>
-      <Designation>SGM-207</Designation>
-      <Nickname>Rain</Nickname>
-      <Description>DIRECT - ACT(&lt;color=#3BC81E&gt;RADAR&lt;/color&gt;) - HE SHAPED</Description>
-      <LongDescription>The &lt;noparse&gt;SGM-207 Rain&lt;/noparse&gt; is a size 2 direct guidance missile.  It is based on the SGM-2 body, which is a flexible mainstay anti-ship missile.  This missile will deliver a Contact Fuze, High Explosive, Shaped warhead.  It homes in on its target using an Active Radar seeker.
+      <Designation>SGM-230</Designation>
+      <Nickname>Finisher ASM</Nickname>
+      <Description>DIRECT - ACT(&lt;color=#3BC81E&gt;RADAR&lt;/color&gt;)/[PSV(&lt;color=#D4211D&gt;WAKE&lt;/color&gt;)] - HE SHAPED</Description>
+      <LongDescription>The &lt;noparse&gt;SGM-230 Finisher ASM&lt;/noparse&gt; is a size 2 direct guidance missile.  It is based on the SGM-2 body, which is a flexible mainstay anti-ship missile.  This missile will deliver a Contact Fuze, High Explosive, Shaped warhead.  It homes in on its target using an Active Radar seeker, validating that it is the correct target using a Passive Wake seeker.
 
 Control Method: DIRECT
-Targeting Modes:
-	&lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+Targeting Modes: &lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+
 Primary Seeker: ACTIVE &lt;color=#3BC81E&gt;RADAR&lt;/color&gt;
+Validation Seeker: PASSIVE (&lt;color=#D4211D&gt;WAKE&lt;/color&gt;)
 
-323 m/s for 12,085 m, top speed in 2.3 s
-Terminal Maneuvers: None
+Speed: 247 m/s
+Distance: 12,000 m
+Top Speed In: 1.3 s
+Turn Rate: 3.5 G
+Terminal Maneuvers: Weave
+(&lt;color=#D3D11F&gt;May decrease effective range&lt;/color&gt;)
 
-Contact Fuze, High Explosive, Shaped
-Armor: 54cm   Component: 960hp
+Warhead: Contact Fuze, High Explosive, Shaped
+Armor: 54cm
+Component: 960hp
 Blast Angle: 70 deg
 Damage Per Fragment: 50.0
 
-Body Integrity: 30 
-Wall Thickness: 0.5
+Body Integrity: 30
+Wall Thickness: 0.05
 Programming Time: 8 s
 Radar Signature Bonus: 100 %
 Boost-Phase Duration: 3 s
 Boost-Phase Strafe: 100 %
 Boost-Phase Turn Rate: 100 %
 Failure Rate: 0 %</LongDescription>
-      <Cost>4</Cost>
+      <Cost>5</Cost>
       <BodyKey>Stock/SGM-2 Body</BodyKey>
-      <TemplateKey>2882048f-862c-45f1-839d-128132ed441c</TemplateKey>
+      <TemplateKey>b13add50-958a-48e8-a5ff-c10af660348a</TemplateKey>
       <BaseColor>
         <r>1</r>
         <g>1</g>
@@ -686,6 +622,12 @@ Failure Rate: 0 %</LongDescription>
         </MissileSocket>
         <MissileSocket>
           <Size>1</Size>
+          <InstalledComponent xsi:type="PassiveSeekerSettings">
+            <ComponentKey>Stock/Wake-Homing Seeker</ComponentKey>
+            <Mode>Validation</Mode>
+            <RejectUnvalidated>false</RejectUnvalidated>
+            <DetectPDTargets>false</DetectPDTargets>
+          </InstalledComponent>
         </MissileSocket>
         <MissileSocket>
           <Size>1</Size>
@@ -694,7 +636,7 @@ Failure Rate: 0 %</LongDescription>
             <Role>Offensive</Role>
             <HotLaunch>false</HotLaunch>
             <SelfDestructOnLost>false</SelfDestructOnLost>
-            <Maneuvers>None</Maneuvers>
+            <Maneuvers>Weave</Maneuvers>
             <DefensiveDoctrine>
               <TargetSizeMask>12</TargetSizeMask>
               <TargetType>All</TargetType>
@@ -716,9 +658,131 @@ Failure Rate: 0 %</LongDescription>
           <InstalledComponent xsi:type="MissileEngineSettings">
             <ComponentKey />
             <BalanceValues>
-              <A>0.8420544</A>
-              <B>0.151483819</B>
-              <C>0.00646175444</C>
+              <A>0.394749671</A>
+              <B>0.262456864</B>
+              <C>0.342793465</C>
+            </BalanceValues>
+          </InstalledComponent>
+        </MissileSocket>
+      </Sockets>
+    </MissileTemplate>
+    <MissileTemplate>
+      <Designation>SDM-220</Designation>
+      <Nickname>Protector ACM</Nickname>
+      <Description>DIRECT - &lt;color=#D3D11F&gt;CMD&lt;/color&gt;/PSV(&lt;color=#D4211D&gt;WAKE&lt;/color&gt;) - HE FRAG</Description>
+      <LongDescription>The &lt;noparse&gt;SDM-220 Protector ACM&lt;/noparse&gt; is a size 2 direct guidance missile.  It is based on the SDM-2 body, which is a flexible defensive missile with a booster.  This missile will deliver a Proximity Fuze, High Explosive, Blast Fragmentation warhead.  It homes in on its target using command guidance from its launching ship  If the primary seeker does not find a target or is jammed, it can fall back on a Passive Wake seeker.
+
+Control Method: DIRECT
+Targeting Modes: &lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+
+Primary Seeker: COMMAND (&lt;color=#D3D11F&gt;Requires COMMS Enabled&lt;/color&gt;)
+Backup Seeker: PASSIVE (&lt;color=#D4211D&gt;WAKE&lt;/color&gt;)
+
+&lt;b&gt;Boost&lt;/b&gt;
+Speed: 850 m/s
+Distance: 7,898 m
+Top Speed In: 1.4 s
+Turn Rate: 5.0 G
+
+&lt;b&gt;Main&lt;/b&gt;
+Speed: 175 m/s
+Distance: 1,346 m
+Top Speed In: 0.7 s
+Turn Rate: 6.9 G
+
+: Stage Trigger at 440m from Target or On Burnout
+
+Terminal Maneuvers: None
+
+Warhead: Proximity Fuze, High Explosive, Blast Fragmentation
+Armor: 0.35cm
+Component: 110.12hp
+Blast Radius: 79 m
+
+Body Integrity: 25
+Wall Thickness: 0.05
+Programming Time: 10 s
+Radar Signature Bonus: 100 %
+Boost-Phase Duration: 3 s
+Boost-Phase Strafe: 100 %
+Boost-Phase Turn Rate: 100 %
+Failure Rate: 0 %</LongDescription>
+      <Cost>7</Cost>
+      <BodyKey>Stock/SDM-2 Body</BodyKey>
+      <TemplateKey>b2c748a3-2711-48ff-9705-84e191b61172</TemplateKey>
+      <BaseColor>
+        <r>-7.07805157E-08</r>
+        <g>-7.07805157E-08</g>
+        <b>-7.07805157E-08</b>
+        <a>1</a>
+      </BaseColor>
+      <StripeColor>
+        <r>0.36555922</r>
+        <g>0</g>
+        <b>0.188513964</b>
+        <a>1</a>
+      </StripeColor>
+      <Sockets>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="CommandSeekerSettings">
+            <ComponentKey>Stock/Command Receiver</ComponentKey>
+            <Mode>Targeting</Mode>
+            <RejectUnvalidated>false</RejectUnvalidated>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="PassiveSeekerSettings">
+            <ComponentKey>Stock/Wake-Homing Seeker</ComponentKey>
+            <Mode>Targeting</Mode>
+            <RejectUnvalidated>false</RejectUnvalidated>
+            <DetectPDTargets>false</DetectPDTargets>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="DirectGuidanceSettings">
+            <ComponentKey>Stock/Direct Guidance</ComponentKey>
+            <Role>Defensive</Role>
+            <HotLaunch>false</HotLaunch>
+            <SelfDestructOnLost>false</SelfDestructOnLost>
+            <Maneuvers>None</Maneuvers>
+            <DefensiveDoctrine>
+              <TargetSizeMask>12</TargetSizeMask>
+              <TargetType>SmallCraft</TargetType>
+              <TargetSizeOrdering>Descending</TargetSizeOrdering>
+              <SalvoSize>0</SalvoSize>
+              <FarthestFirst>false</FarthestFirst>
+            </DefensiveDoctrine>
+            <ApproachAngleControl>true</ApproachAngleControl>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>5</Size>
+          <InstalledComponent>
+            <ComponentKey>Stock/Blast Fragmentation</ComponentKey>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>2</Size>
+          <InstalledComponent xsi:type="MissileEngineSettings">
+            <ComponentKey />
+            <BalanceValues>
+              <A>0.339398056</A>
+              <B>0</B>
+              <C>0.660602</C>
+            </BalanceValues>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="MissileEngineSettings">
+            <ComponentKey />
+            <BalanceValues>
+              <A>1</A>
+              <B>0</B>
+              <C>0</C>
             </BalanceValues>
           </InstalledComponent>
         </MissileSocket>

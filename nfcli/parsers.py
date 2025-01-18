@@ -1,43 +1,31 @@
 import logging
+from collections import Counter
 
 import xmltodict
 
 from nfcli import strip_tags
 from nfcli.data import Components, Hulls, Munitions, Tags
-from nfcli.models import Content, Fleet, Missile, Ship, Socket
+from nfcli.models import Content, Craft, Fleet, Missile, Ship, Socket
 from nfcli.printers import Printable
 
 
 def get_content(content_data: dict) -> list[Content]:
-    all_magazine_loads = []
-    all_hangar_loads = []
-
+    all_munitions = []
     for key in ["MissileLoad", "Load"]:
         if content_data.get(key):
-            all_magazine_loads += content_data[key]["MagSaveData"]
+            all_munitions += [
+                Content(Munitions.get_name_or_key(load["MunitionKey"]), load["Quantity"])
+                for load in content_data[key]["MagSaveData"]
+            ]
 
-    all_munitions = [
-        Content(Munitions.get_name_or_key(load["MunitionKey"]), load["Quantity"])
-        for load in all_magazine_loads
-    ]
+    all_crafts = []
+    if content_data.get("StoredCraft"):
+        all_hangar_loads = Counter(
+            craft["CraftTemplateKey"] for craft in content_data["StoredCraft"]["SavedStoredCraft"]
+        )
+        all_crafts = [Content(craft, quantity) for craft, quantity in all_hangar_loads.items()]
 
-    for key in ["StoredCraft"]:
-        if content_data.get(key):
-            all_hangar_loads += content_data[key]["SavedStoredCraft"]
-
-    craft_dict = {}
-    for load in all_hangar_loads:
-        if load["CraftTemplateKey"] in craft_dict:
-            craft_dict[load["CraftTemplateKey"]] = craft_dict.get(load["CraftTemplateKey"]) + 1
-        else:
-            craft_dict[load["CraftTemplateKey"]] = 1
-
-    all_craft = [
-        Content(craft, craft_dict[craft])
-        for craft in craft_dict
-    ]
-
-    return all_munitions + all_craft
+    return all_munitions + all_crafts
 
 
 def get_socket(socket_data: dict) -> Socket:
@@ -78,12 +66,28 @@ def get_missile(missile_data: dict) -> Missile:
     )
 
 
+def get_craft(craft_data: dict) -> Craft:
+    return Craft(
+        craft_data["DesignationSuffix"],
+        craft_data["Nickname"],
+        strip_tags(craft_data["LongDescription"]),
+        int(craft_data["Cost"]),
+        craft_data["FrameKey"],
+    )
+
+
 def parse_mods(xml_data: str) -> list[str]:
     xmld = xmltodict.parse(xml_data, force_list=("unsignedLong"))
     _, entity = xmld.popitem()
     mod_deps_node = entity.get("ModDependencies") or {}
     mod_deps = mod_deps_node.get("unsignedLong") or []
     return list(mod_deps)
+
+
+def parse_craft(xml_data: str) -> Craft:
+    xmld = xmltodict.parse(xml_data)
+    craft_template: dict = xmld.get("CraftTemplate")  # type: ignore
+    return get_craft(craft_template)
 
 
 def parse_missile(xml_data: str) -> Missile:
@@ -93,23 +97,15 @@ def parse_missile(xml_data: str) -> Missile:
 
 
 def parse_ship(xml_data: str) -> Ship:
-    xmld = xmltodict.parse(xml_data, force_list=(
-        "MagSaveData",
-        "HullSocket",
-        "SavedStoredCraft"
-    ))
+    xmld = xmltodict.parse(xml_data, force_list=("MagSaveData", "HullSocket", "SavedStoredCraft"))
     ship_data: dict = xmld.get("Ship")  # type: ignore
     return get_ship(ship_data)
 
 
 def parse_fleet(xml_data: str) -> Fleet:
-    xmld = xmltodict.parse(xml_data, force_list=(
-        "MagSaveData",
-        "Ship",
-        "HullSocket",
-        "MissileTemplate",
-        "SavedStoredCraft"
-    ))
+    xmld = xmltodict.parse(
+        xml_data, force_list=("MagSaveData", "Ship", "HullSocket", "MissileTemplate", "SavedStoredCraft")
+    )
     fleet_data: dict = xmld.get("Fleet")  # type: ignore
     fleet = Fleet(fleet_data["Name"], fleet_data["TotalPoints"], fleet_data["FactionKey"])
     logging.debug("Parsing ships.")
@@ -138,5 +134,7 @@ def parse_any(filename: str, xml_data: str) -> Printable:
         return parse_ship(xml_data)
     elif filename.endswith("missile"):
         return parse_missile(xml_data)
+    elif filename.endswith("craft"):
+        return parse_craft(xml_data)
 
     raise ValueError("Unrecognizable file format")

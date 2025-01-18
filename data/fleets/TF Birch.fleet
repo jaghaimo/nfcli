@@ -6,7 +6,7 @@
   <FactionKey>Stock/Alliance</FactionKey>
   <Description>Difficulty: &lt;color=green&gt;EASY&lt;/color&gt;
 
-Task Force Birch is comprised of three light cruisers with medium cannons and electronic warfare. This fleet excels at hunting down scouts and escorts, but its weapons can struggle against armoured opponents. Use superior mobility and jammers to pick fights you can win and escape from fights that you can't, but beware of ambushes. Light cruisers can be easily dismantled if caught up close where they can't dodge incoming fire. Setting the MNVR toggle to EVADE when under fire will be of great utility when commanding this taskforce.
+Task Force Birch is comprised of three light cruisers with medium cannons and electronic warfare. This fleet excels at hunting down lightly armoured lineships and clippers, but its weapons can struggle against armoured monitors. Use superior mobility and jammers to pick fights you can win and escape from fights that you can't, but beware of being flanked. Light cruisers can be easily dismantled if attacked from the sides where their armour is less angled and they are easier to hit. Using the HDG order to point your ships' angled bows toward the enemy will significantly enhance this taskforce's survivability.
   </Description>
   <SortOverrideOrder>2</SortOverrideOrder>
   <Ships>
@@ -14,7 +14,7 @@ Task Force Birch is comprised of three light cruisers with medium cannons and el
       <SaveID xsi:nil="true" />
       <Key>75c4adc0-7093-4fd7-af94-dcee5adc2687</Key>
       <Name>Mark The Time</Name>
-      <Cost>996</Cost>
+      <Cost>1007</Cost>
       <Callsign />
       <Number>140</Number>
       <SymbolOption>0</SymbolOption>
@@ -42,9 +42,14 @@ Task Force Birch is comprised of three light cruisers with medium cannons and el
           <ComponentData xsi:type="CellLauncherData">
             <MissileLoad>
               <MagSaveData>
-                <MagazineKey>xui-ZCNOCEqqmPIKSO4X9g</MagazineKey>
+                <MagazineKey>E6pn3Thl70SKxIvB4yI3cg</MagazineKey>
                 <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>19</Quantity>
+                <Quantity>8</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>D_h0qL8sOEWCc0IsoSBiow</MagazineKey>
+                <MunitionKey>Stock/EA20 Flare Decoy</MunitionKey>
+                <Quantity>4</Quantity>
               </MagSaveData>
             </MissileLoad>
           </ComponentData>
@@ -70,64 +75,64 @@ Task Force Birch is comprised of three light cruisers with medium cannons and el
           <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
         </HullSocket>
         <HullSocket>
-          <Key>a8H-rPyVSk6uBOrP7lQYUA</Key>
-          <ComponentName>Stock/Reinforced DC Locker</ComponentName>
-        </HullSocket>
-        <HullSocket>
           <Key>NBbnpHfpDUSS6bNgDlSjzw</Key>
-          <ComponentName>Stock/Reinforced DC Locker</ComponentName>
+          <ComponentName>Stock/Damage Control Central</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>f_SO68qAGU-sw69T9GEWow</Key>
-          <ComponentName>Stock/Berthing</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>9R0tfjsN-kiETUBLeCCmGw</Key>
-          <ComponentName>Stock/Reinforced CIC</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>-bAF6R6aiU2Afn8T_oKY4g</Key>
-          <ComponentName>Stock/Rapid DC Locker</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>o1o5WOogUE255YVi43KlcQ</Key>
-          <ComponentName>Stock/Rapid DC Locker</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>DAcDeA0yskSjje92CY-F7w</Key>
-          <ComponentName>Stock/Small DC Locker</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>jKvCg9nYmkKfAn4-ht_Y6A</Key>
           <ComponentName>Stock/Reinforced Magazine</ComponentName>
           <ComponentData xsi:type="BulkMagazineData">
             <Load>
               <MagSaveData>
                 <MagazineKey>CYStXEBOc0evZ5NmEGGQXg</MagazineKey>
                 <MunitionKey>Stock/250mm AP Shell</MunitionKey>
-                <Quantity>600</Quantity>
+                <Quantity>500</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>-f09k0cANU-1q-iBazQ8uQ</MagazineKey>
                 <MunitionKey>Stock/250mm HE Shell</MunitionKey>
-                <Quantity>600</Quantity>
+                <Quantity>500</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>ZBtRcOGI2EaeLk99EzprnQ</MagazineKey>
                 <MunitionKey>Stock/250mm HE-RPF Shell</MunitionKey>
-                <Quantity>600</Quantity>
+                <Quantity>500</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>XdGaSjzkfE2BIc3mGTjcHA</MagazineKey>
                 <MunitionKey>Stock/20mm Slug</MunitionKey>
-                <Quantity>12000</Quantity>
+                <Quantity>10000</Quantity>
               </MagSaveData>
             </Load>
           </ComponentData>
         </HullSocket>
         <HullSocket>
+          <Key>9R0tfjsN-kiETUBLeCCmGw</Key>
+          <ComponentName>Stock/Rapid DC Locker</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>-bAF6R6aiU2Afn8T_oKY4g</Key>
+          <ComponentName>Stock/Small DC Locker</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>-7H3WGDwyESDI3lkHzBdGQ</Key>
+          <ComponentName>Stock/Reinforced DC Locker</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>o1o5WOogUE255YVi43KlcQ</Key>
+          <ComponentName>Stock/Auxiliary Steering</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>DAcDeA0yskSjje92CY-F7w</Key>
+          <ComponentName>Stock/Basic CIC</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>jKvCg9nYmkKfAn4-ht_Y6A</Key>
+          <ComponentName>Stock/Large DC Locker</ComponentName>
+        </HullSocket>
+        <HullSocket>
           <Key>8VKMmbA23Em1f-MBZKO2vA</Key>
-          <ComponentName>Stock/FM230 'Whiplash' Drive</ComponentName>
+          <ComponentName>Stock/FM280 'Raider' Drive</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>udQjNCWlA0awkv6LhH55uQ</Key>
@@ -135,7 +140,7 @@ Task Force Birch is comprised of three light cruisers with medium cannons and el
         </HullSocket>
         <HullSocket>
           <Key>3eXWUksWXk-5q9MW52rghw</Key>
-          <ComponentName>Stock/FM580 'Raider' Drive</ComponentName>
+          <ComponentName>Stock/FM530 'Whiplash' Drive</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>_jqFwgf3EkKUUqHzVWidzw</Key>
@@ -143,11 +148,11 @@ Task Force Birch is comprised of three light cruisers with medium cannons and el
         </HullSocket>
         <HullSocket>
           <Key>qulLVFUtzk2Qm8rZtfpFDw</Key>
-          <ComponentName>Stock/Ammunition Elevators</ComponentName>
+          <ComponentName>Stock/ES32 'Scryer' Missile ID System</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>N_gGUWCQx0mUOX9RaFoI6A</Key>
-          <ComponentName>Stock/FR3300 Micro Reactor</ComponentName>
+          <ComponentName>Stock/Ammunition Elevators</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>E1ZSbpYpZkufCyifYiiK8Q</Key>
@@ -155,7 +160,7 @@ Task Force Birch is comprised of three light cruisers with medium cannons and el
         </HullSocket>
         <HullSocket>
           <Key>-hETYcmKH0eeXzkFpnhgeg</Key>
-          <ComponentName>Stock/RS41 'Spyglass' Radar</ComponentName>
+          <ComponentName>Stock/RM50 'Parallax' Radar</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>hU2L93VfQU-jutnRC0dKgw</Key>
@@ -173,12 +178,13 @@ Task Force Birch is comprised of three light cruisers with medium cannons and el
         </WepGroup>
       </WeaponGroups>
       <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
     </Ship>
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>26b0dde7-4845-49a5-b282-9f25a14ffa20</Key>
       <Name>Exit Criteria Met</Name>
-      <Cost>1002</Cost>
+      <Cost>994</Cost>
       <Callsign />
       <Number>141</Number>
       <SymbolOption>0</SymbolOption>
@@ -201,84 +207,97 @@ Task Force Birch is comprised of three light cruisers with medium cannons and el
           <ComponentName>Stock/Mk64 Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
+          <Key>BRMwuusKC02YrbFXRrrNzA</Key>
+          <ComponentName>Stock/VLS-2 Launcher</ComponentName>
+          <ComponentData xsi:type="ResizableCellLauncherData">
+            <MissileLoad>
+              <MagSaveData>
+                <MagazineKey>-sAZaR7Kj0mGRATm_1TgHg</MagazineKey>
+                <MunitionKey>Stock/EA99 Active Decoy</MunitionKey>
+                <Quantity>5</Quantity>
+              </MagSaveData>
+            </MissileLoad>
+          </ComponentData>
+        </HullSocket>
+        <HullSocket>
           <Key>vO1oPhlSuUih_cdAZk3Hqg</Key>
           <ComponentName>Stock/Mk64 Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>RLHQUFf200uLZjKX5axkMw</Key>
-          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
+          <ComponentName>Stock/Mk25 'Rebound' PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>uyPDg0tD3U6YKz18bVdkPg</Key>
-          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
+          <ComponentName>Stock/Mk25 'Rebound' PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>Xicf0TT7pEaFy_x1uk7ueQ</Key>
-          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
+          <ComponentName>Stock/Mk25 'Rebound' PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>XTg1H1Popku5gxW8sei5XQ</Key>
-          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>a8H-rPyVSk6uBOrP7lQYUA</Key>
-          <ComponentName>Stock/Reinforced DC Locker</ComponentName>
+          <ComponentName>Stock/Mk25 'Rebound' PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>NBbnpHfpDUSS6bNgDlSjzw</Key>
-          <ComponentName>Stock/Reinforced DC Locker</ComponentName>
+          <ComponentName>Stock/Damage Control Central</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>f_SO68qAGU-sw69T9GEWow</Key>
-          <ComponentName>Stock/Berthing</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>9R0tfjsN-kiETUBLeCCmGw</Key>
-          <ComponentName>Stock/Reinforced CIC</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>-bAF6R6aiU2Afn8T_oKY4g</Key>
-          <ComponentName>Stock/Rapid DC Locker</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>o1o5WOogUE255YVi43KlcQ</Key>
-          <ComponentName>Stock/Rapid DC Locker</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>DAcDeA0yskSjje92CY-F7w</Key>
-          <ComponentName>Stock/Small DC Locker</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>jKvCg9nYmkKfAn4-ht_Y6A</Key>
           <ComponentName>Stock/Reinforced Magazine</ComponentName>
           <ComponentData xsi:type="BulkMagazineData">
             <Load>
               <MagSaveData>
                 <MagazineKey>CYStXEBOc0evZ5NmEGGQXg</MagazineKey>
                 <MunitionKey>Stock/250mm AP Shell</MunitionKey>
-                <Quantity>600</Quantity>
+                <Quantity>500</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>-f09k0cANU-1q-iBazQ8uQ</MagazineKey>
                 <MunitionKey>Stock/250mm HE Shell</MunitionKey>
-                <Quantity>600</Quantity>
+                <Quantity>500</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>ZBtRcOGI2EaeLk99EzprnQ</MagazineKey>
                 <MunitionKey>Stock/250mm HE-RPF Shell</MunitionKey>
-                <Quantity>600</Quantity>
+                <Quantity>500</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>XdGaSjzkfE2BIc3mGTjcHA</MagazineKey>
-                <MunitionKey>Stock/20mm Slug</MunitionKey>
-                <Quantity>12000</Quantity>
+                <MagazineKey>0G5I4K30mEe6QI0f2QuRnQ</MagazineKey>
+                <MunitionKey>Stock/Flak Round</MunitionKey>
+                <Quantity>1050</Quantity>
               </MagSaveData>
             </Load>
           </ComponentData>
         </HullSocket>
         <HullSocket>
+          <Key>9R0tfjsN-kiETUBLeCCmGw</Key>
+          <ComponentName>Stock/Rapid DC Locker</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>-bAF6R6aiU2Afn8T_oKY4g</Key>
+          <ComponentName>Stock/Small DC Locker</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>-7H3WGDwyESDI3lkHzBdGQ</Key>
+          <ComponentName>Stock/Reinforced DC Locker</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>o1o5WOogUE255YVi43KlcQ</Key>
+          <ComponentName>Stock/Auxiliary Steering</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>DAcDeA0yskSjje92CY-F7w</Key>
+          <ComponentName>Stock/Basic CIC</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>jKvCg9nYmkKfAn4-ht_Y6A</Key>
+          <ComponentName>Stock/Large DC Locker</ComponentName>
+        </HullSocket>
+        <HullSocket>
           <Key>8VKMmbA23Em1f-MBZKO2vA</Key>
-          <ComponentName>Stock/FM230 'Whiplash' Drive</ComponentName>
+          <ComponentName>Stock/FM280 'Raider' Drive</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>udQjNCWlA0awkv6LhH55uQ</Key>
@@ -286,11 +305,11 @@ Task Force Birch is comprised of three light cruisers with medium cannons and el
         </HullSocket>
         <HullSocket>
           <Key>3eXWUksWXk-5q9MW52rghw</Key>
-          <ComponentName>Stock/FM580 'Raider' Drive</ComponentName>
+          <ComponentName>Stock/FM530 'Whiplash' Drive</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>_jqFwgf3EkKUUqHzVWidzw</Key>
-          <ComponentName>Stock/FR3300 Micro Reactor</ComponentName>
+          <ComponentName>Stock/Rapid-Cycle Cradle</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>qulLVFUtzk2Qm8rZtfpFDw</Key>
@@ -306,7 +325,7 @@ Task Force Birch is comprised of three light cruisers with medium cannons and el
         </HullSocket>
         <HullSocket>
           <Key>-hETYcmKH0eeXzkFpnhgeg</Key>
-          <ComponentName>Stock/RM50 'Parallax' Radar</ComponentName>
+          <ComponentName>Stock/RS35 'Frontline' Radar</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>hU2L93VfQU-jutnRC0dKgw</Key>
@@ -323,6 +342,9 @@ Task Force Birch is comprised of three light cruisers with medium cannons and el
           </MemberKeys>
         </WepGroup>
         <WepGroup Name="Jammers">
+          <MemberKeys />
+        </WepGroup>
+        <WepGroup Name="Anti-Radar Jammer">
           <MemberKeys>
             <string>T9Ebo41iA0eBXNYx8uyisw</string>
           </MemberKeys>
@@ -331,18 +353,19 @@ Task Force Birch is comprised of three light cruisers with medium cannons and el
       <InitialFormation>
         <GuideKey>75c4adc0-7093-4fd7-af94-dcee5adc2687</GuideKey>
         <RelativePosition>
-          <x>-29.9614315</x>
-          <y>18.0081062</y>
-          <z>-0.128601074</z>
+          <x>34.84723</x>
+          <y>19.6687927</y>
+          <z>0.287811279</z>
         </RelativePosition>
       </InitialFormation>
       <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
     </Ship>
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>adc596be-d421-4ffa-b9be-9f7954ff5d75</Key>
       <Name>The Proven Factor</Name>
-      <Cost>1002</Cost>
+      <Cost>999</Cost>
       <Callsign />
       <Number>142</Number>
       <SymbolOption>0</SymbolOption>
@@ -365,84 +388,88 @@ Task Force Birch is comprised of three light cruisers with medium cannons and el
           <ComponentName>Stock/Mk64 Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
+          <Key>BRMwuusKC02YrbFXRrrNzA</Key>
+          <ComponentName>Stock/E70 'Interruption' Jammer</ComponentName>
+        </HullSocket>
+        <HullSocket>
           <Key>vO1oPhlSuUih_cdAZk3Hqg</Key>
           <ComponentName>Stock/Mk64 Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>RLHQUFf200uLZjKX5axkMw</Key>
-          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
+          <ComponentName>Stock/Mk25 'Rebound' PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>uyPDg0tD3U6YKz18bVdkPg</Key>
-          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
+          <ComponentName>Stock/Mk25 'Rebound' PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>Xicf0TT7pEaFy_x1uk7ueQ</Key>
-          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
+          <ComponentName>Stock/Mk25 'Rebound' PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>XTg1H1Popku5gxW8sei5XQ</Key>
-          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>a8H-rPyVSk6uBOrP7lQYUA</Key>
-          <ComponentName>Stock/Reinforced DC Locker</ComponentName>
+          <ComponentName>Stock/Mk25 'Rebound' PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>NBbnpHfpDUSS6bNgDlSjzw</Key>
-          <ComponentName>Stock/Reinforced DC Locker</ComponentName>
+          <ComponentName>Stock/Damage Control Central</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>f_SO68qAGU-sw69T9GEWow</Key>
-          <ComponentName>Stock/Berthing</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>9R0tfjsN-kiETUBLeCCmGw</Key>
-          <ComponentName>Stock/Reinforced CIC</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>-bAF6R6aiU2Afn8T_oKY4g</Key>
-          <ComponentName>Stock/Rapid DC Locker</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>o1o5WOogUE255YVi43KlcQ</Key>
-          <ComponentName>Stock/Rapid DC Locker</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>DAcDeA0yskSjje92CY-F7w</Key>
-          <ComponentName>Stock/Small DC Locker</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>jKvCg9nYmkKfAn4-ht_Y6A</Key>
           <ComponentName>Stock/Reinforced Magazine</ComponentName>
           <ComponentData xsi:type="BulkMagazineData">
             <Load>
               <MagSaveData>
                 <MagazineKey>CYStXEBOc0evZ5NmEGGQXg</MagazineKey>
                 <MunitionKey>Stock/250mm AP Shell</MunitionKey>
-                <Quantity>600</Quantity>
+                <Quantity>500</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>-f09k0cANU-1q-iBazQ8uQ</MagazineKey>
                 <MunitionKey>Stock/250mm HE Shell</MunitionKey>
-                <Quantity>600</Quantity>
+                <Quantity>500</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>ZBtRcOGI2EaeLk99EzprnQ</MagazineKey>
                 <MunitionKey>Stock/250mm HE-RPF Shell</MunitionKey>
-                <Quantity>600</Quantity>
+                <Quantity>500</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>XdGaSjzkfE2BIc3mGTjcHA</MagazineKey>
-                <MunitionKey>Stock/20mm Slug</MunitionKey>
-                <Quantity>12000</Quantity>
+                <MagazineKey>0G5I4K30mEe6QI0f2QuRnQ</MagazineKey>
+                <MunitionKey>Stock/Flak Round</MunitionKey>
+                <Quantity>1050</Quantity>
               </MagSaveData>
             </Load>
           </ComponentData>
         </HullSocket>
         <HullSocket>
+          <Key>9R0tfjsN-kiETUBLeCCmGw</Key>
+          <ComponentName>Stock/Rapid DC Locker</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>-bAF6R6aiU2Afn8T_oKY4g</Key>
+          <ComponentName>Stock/Small DC Locker</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>-7H3WGDwyESDI3lkHzBdGQ</Key>
+          <ComponentName>Stock/Reinforced DC Locker</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>o1o5WOogUE255YVi43KlcQ</Key>
+          <ComponentName>Stock/Auxiliary Steering</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>DAcDeA0yskSjje92CY-F7w</Key>
+          <ComponentName>Stock/Basic CIC</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>jKvCg9nYmkKfAn4-ht_Y6A</Key>
+          <ComponentName>Stock/Large DC Locker</ComponentName>
+        </HullSocket>
+        <HullSocket>
           <Key>8VKMmbA23Em1f-MBZKO2vA</Key>
-          <ComponentName>Stock/FM230 'Whiplash' Drive</ComponentName>
+          <ComponentName>Stock/FM280 'Raider' Drive</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>udQjNCWlA0awkv6LhH55uQ</Key>
@@ -450,11 +477,11 @@ Task Force Birch is comprised of three light cruisers with medium cannons and el
         </HullSocket>
         <HullSocket>
           <Key>3eXWUksWXk-5q9MW52rghw</Key>
-          <ComponentName>Stock/FM580 'Raider' Drive</ComponentName>
+          <ComponentName>Stock/FM530 'Whiplash' Drive</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>_jqFwgf3EkKUUqHzVWidzw</Key>
-          <ComponentName>Stock/FR3300 Micro Reactor</ComponentName>
+          <ComponentName>Stock/Rapid-Cycle Cradle</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>qulLVFUtzk2Qm8rZtfpFDw</Key>
@@ -470,7 +497,7 @@ Task Force Birch is comprised of three light cruisers with medium cannons and el
         </HullSocket>
         <HullSocket>
           <Key>-hETYcmKH0eeXzkFpnhgeg</Key>
-          <ComponentName>Stock/RM50 'Parallax' Radar</ComponentName>
+          <ComponentName>Stock/RS35 'Frontline' Radar</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>hU2L93VfQU-jutnRC0dKgw</Key>
@@ -487,6 +514,17 @@ Task Force Birch is comprised of three light cruisers with medium cannons and el
           </MemberKeys>
         </WepGroup>
         <WepGroup Name="Jammers">
+          <MemberKeys />
+        </WepGroup>
+        <WepGroup Name="Comms Jam - Interruption">
+          <MemberKeys />
+        </WepGroup>
+        <WepGroup Name="Anti-Missile Jammer">
+          <MemberKeys>
+            <string>BRMwuusKC02YrbFXRrrNzA</string>
+          </MemberKeys>
+        </WepGroup>
+        <WepGroup Name="Anti-Radar Jammer">
           <MemberKeys>
             <string>T9Ebo41iA0eBXNYx8uyisw</string>
           </MemberKeys>
@@ -495,12 +533,13 @@ Task Force Birch is comprised of three light cruisers with medium cannons and el
       <InitialFormation>
         <GuideKey>75c4adc0-7093-4fd7-af94-dcee5adc2687</GuideKey>
         <RelativePosition>
-          <x>30.02491</x>
-          <y>17.9733658</y>
-          <z>-0.04122162</z>
+          <x>-34.61776</x>
+          <y>19.9013481</y>
+          <z>2.97563171</z>
         </RelativePosition>
       </InitialFormation>
       <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
     </Ship>
   </Ships>
 </Fleet>

@@ -6,112 +6,95 @@
   <FactionKey>Stock/Protectorate</FactionKey>
   <Description>Difficulty: &lt;color=red&gt;HARD&lt;/color&gt;
 
-Tantalum Squadron is designed for nothing less than complete battlespace dominance of scouting and objectives. The Brainiac sits in the backline, acquiring tracks from afar and gathering intel. Four multi-mission tugboats operate independently, moving along all edges of the map to provide situational awareness and to destroy enemy scouts doing the same. They can also be used to defend and capture objectives if needed, but the faster and more expendable shuttles are more suitable for that task. This squadron rewards a commander with strong multi-tasking skills who can keep an eye on the bigger picture.
+Tantalum Squadron is designed for nothing less than complete battlespace dominance of scouting and objectives. Three multi-mission tugboats operate independently, patrolling along all edges of the map to provide situational awareness and destroy enemy scouts. They can also be used to defend and capture objectives if needed, but the faster and more expendable shuttles are more suitable for that task. The Time Dilation backs these lighter assets up - a cruise missile silo ideal for crushing targets of opportunity with large salvos, ideally plotted to approach the enemy from behind to take advantage of WAKE validation. While defenseless, the Time Dilation can reposition quickly to dodge enemy counterstrikes. This squadron rewards a commander with strong multi-tasking skills who can keep an eye on the bigger picture.
   </Description>
-  <SortOverrideOrder>7</SortOverrideOrder>
+  <SortOverrideOrder>8</SortOverrideOrder>
   <Ships>
     <Ship>
       <SaveID xsi:nil="true" />
-      <Key>3768ef5d-41b2-45f1-a0f6-de06372dad15</Key>
-      <Name>Brainiac</Name>
-      <Cost>616</Cost>
+      <Key>46e7ef3c-eaaf-4766-900e-d787d5132cce</Key>
+      <Name>Time Dilation</Name>
+      <Cost>983</Cost>
       <Callsign />
-      <Number>1398</Number>
+      <Number>405</Number>
       <SymbolOption>0</SymbolOption>
       <HullType>Stock/Bulk Feeder</HullType>
       <SocketMap>
         <HullSocket>
           <Key>4V6twrIUcEKE11tom-tDXQ</Key>
-          <ComponentName>Stock/R400 Radar</ComponentName>
+          <ComponentName>Stock/MLS-2 Launcher</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>yN7f-9tEXEKlBNskqP6EbA</Key>
+          <ComponentName>Stock/MLS-2 Launcher</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>Z2uDs34J-ESu64-i9YGnxQ</Key>
-          <ComponentName>Stock/R550 Early Warning Radar</ComponentName>
+          <ComponentName>Stock/MLS-2 Launcher</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>gb6_3kWBY0KlEWeex3ruDg</Key>
+          <ComponentName>Stock/MLS-2 Launcher</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>_y-Bd-EWjUeMIrmzG3UxvQ</Key>
-          <ComponentName>Stock/VLS-1-46 Launcher</ComponentName>
-          <ComponentData xsi:type="CellLauncherData">
-            <MissileLoad>
-              <MagSaveData>
-                <MagazineKey>q9HeZqUmZ0-ejCP_0pVUkw</MagazineKey>
-                <MunitionKey>$MODMIS$/SGM-101 Buckler</MunitionKey>
-                <Quantity>12</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>6TO3yNw8XUiGt1C0rmNGVg</MagazineKey>
-                <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>7</Quantity>
-              </MagSaveData>
-            </MissileLoad>
-          </ComponentData>
+          <ComponentName>Stock/MLS-2 Launcher</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>gDQghm5iik2syYcoJqUPFg</Key>
-          <ComponentName>Stock/Reinforced CIC</ComponentName>
+          <ComponentName>Stock/Basic CIC</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>vtme83CXg0qDA4_YK6NqwA</Key>
-          <ComponentName>Stock/Berthing</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>TTM8O-MUDky06__LwvSo8w</Key>
-          <ComponentName>Stock/Small DC Locker</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>rGVFgJ8GyUePoRkz33c1sw</Key>
-          <ComponentName>Stock/Reinforced Magazine</ComponentName>
+          <ComponentName>Stock/Bulk Magazine</ComponentName>
           <ComponentData xsi:type="BulkMagazineData">
-            <Load />
+            <Load>
+              <MagSaveData>
+                <MagazineKey>JDvqH1Nqf0--gcR7cT1Eiw</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-22 Sunfish</MunitionKey>
+                <Quantity>108</Quantity>
+              </MagSaveData>
+            </Load>
           </ComponentData>
         </HullSocket>
         <HullSocket>
-          <Key>_hUvj899GkWP0bnjDN1ODw</Key>
-          <ComponentName>Stock/Jury-Rigged Reactor</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>N4KIOsNqeUGVAUrx5OW3DQ</Key>
-          <ComponentName>Stock/Intelligence Center</ComponentName>
+          <Key>TTM8O-MUDky06__LwvSo8w</Key>
+          <ComponentName>Stock/Rapid DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>9K_1ZNCgFESrvaoQMOH3yw</Key>
-          <ComponentName>Stock/Boosted Reactor</ComponentName>
+          <ComponentName>Stock/Sundrive Racing Pro</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>HNv6B-78FEuhV8YT9A6uZw</Key>
-          <ComponentName>Stock/CHI-777 Yard Drive</ComponentName>
+          <ComponentName>Stock/Civilian Reactor</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>HvdEBsnpUUypPN4uW67paQ</Key>
-          <ComponentName>Stock/Light Civilian Reactor</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>iDdlfFwKkUO9HbumzymceA</Key>
-          <ComponentName>Stock/Adaptive Radar Receiver</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>DaqWEX-8gEeIzYrhp8NIMw</Key>
-          <ComponentName>Stock/Track Correlator</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>EvZ6JN5xV0aUlKEeeKxFTQ</Key>
-          <ComponentName>Stock/Track Correlator</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>CU_oraqJxEaB3dTzZW2MkA</Key>
-          <ComponentName>Stock/Track Correlator</ComponentName>
+          <ComponentName>Stock/Ithaca Bridgemaster</ComponentName>
         </HullSocket>
       </SocketMap>
-      <WeaponGroups />
+      <WeaponGroups>
+        <WepGroup Name="MLS-2">
+          <MemberKeys>
+            <string>4V6twrIUcEKE11tom-tDXQ</string>
+            <string>yN7f-9tEXEKlBNskqP6EbA</string>
+            <string>Z2uDs34J-ESu64-i9YGnxQ</string>
+            <string>gb6_3kWBY0KlEWeex3ruDg</string>
+            <string>_y-Bd-EWjUeMIrmzG3UxvQ</string>
+          </MemberKeys>
+        </WepGroup>
+      </WeaponGroups>
       <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
     </Ship>
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>289631cc-f8aa-4889-89d8-566b15dd6032</Key>
-      <Name>Hale and Hearty</Name>
-      <Cost>414</Cost>
+      <Name>Ranger</Name>
+      <Cost>440</Cost>
       <Callsign />
-      <Number>527</Number>
+      <Number>1527</Number>
       <SymbolOption>0</SymbolOption>
       <HullType>Stock/Tugboat</HullType>
       <SocketMap>
@@ -135,12 +118,12 @@ Tantalum Squadron is designed for nothing less than complete battlespace dominan
               <MagSaveData>
                 <MagazineKey>p6iSQu16vk-w2ecLhQoA6g</MagazineKey>
                 <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>6</Quantity>
+                <Quantity>8</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>4dE-m-KnOUuVaCEAGPAjvg</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-101 Buckler</MunitionKey>
-                <Quantity>8</Quantity>
+                <Quantity>15</Quantity>
               </MagSaveData>
             </MissileLoad>
           </ComponentData>
@@ -191,7 +174,7 @@ Tantalum Squadron is designed for nothing less than complete battlespace dominan
         </HullSocket>
         <HullSocket>
           <Key>6OieSH0A6kKFmquctn9_aQ</Key>
-          <ComponentName>Stock/Berthing</ComponentName>
+          <ComponentName>Stock/Rapid DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>NSAbhn9brE-aAirJFIYG-Q</Key>
@@ -212,12 +195,13 @@ Tantalum Squadron is designed for nothing less than complete battlespace dominan
       </SocketMap>
       <WeaponGroups />
       <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
     </Ship>
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>e0a6cf3b-ff17-40e8-be28-936cde36714c</Key>
-      <Name>All At Once</Name>
-      <Cost>414</Cost>
+      <Name>Bailiff</Name>
+      <Cost>440</Cost>
       <Callsign />
       <Number>1309</Number>
       <SymbolOption>0</SymbolOption>
@@ -243,12 +227,12 @@ Tantalum Squadron is designed for nothing less than complete battlespace dominan
               <MagSaveData>
                 <MagazineKey>p6iSQu16vk-w2ecLhQoA6g</MagazineKey>
                 <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>6</Quantity>
+                <Quantity>8</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>4dE-m-KnOUuVaCEAGPAjvg</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-101 Buckler</MunitionKey>
-                <Quantity>8</Quantity>
+                <Quantity>15</Quantity>
               </MagSaveData>
             </MissileLoad>
           </ComponentData>
@@ -299,7 +283,7 @@ Tantalum Squadron is designed for nothing less than complete battlespace dominan
         </HullSocket>
         <HullSocket>
           <Key>6OieSH0A6kKFmquctn9_aQ</Key>
-          <ComponentName>Stock/Berthing</ComponentName>
+          <ComponentName>Stock/Rapid DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>NSAbhn9brE-aAirJFIYG-Q</Key>
@@ -320,12 +304,13 @@ Tantalum Squadron is designed for nothing less than complete battlespace dominan
       </SocketMap>
       <WeaponGroups />
       <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
     </Ship>
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>d7487616-3cf0-4ddd-9d04-8ff4faf76b05</Key>
-      <Name>All Together Now</Name>
-      <Cost>414</Cost>
+      <Name>Custodian</Name>
+      <Cost>440</Cost>
       <Callsign />
       <Number>1113</Number>
       <SymbolOption>0</SymbolOption>
@@ -351,12 +336,12 @@ Tantalum Squadron is designed for nothing less than complete battlespace dominan
               <MagSaveData>
                 <MagazineKey>p6iSQu16vk-w2ecLhQoA6g</MagazineKey>
                 <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>6</Quantity>
+                <Quantity>8</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>4dE-m-KnOUuVaCEAGPAjvg</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-101 Buckler</MunitionKey>
-                <Quantity>8</Quantity>
+                <Quantity>15</Quantity>
               </MagSaveData>
             </MissileLoad>
           </ComponentData>
@@ -407,7 +392,7 @@ Tantalum Squadron is designed for nothing less than complete battlespace dominan
         </HullSocket>
         <HullSocket>
           <Key>6OieSH0A6kKFmquctn9_aQ</Key>
-          <ComponentName>Stock/Berthing</ComponentName>
+          <ComponentName>Stock/Rapid DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>NSAbhn9brE-aAirJFIYG-Q</Key>
@@ -428,120 +413,13 @@ Tantalum Squadron is designed for nothing less than complete battlespace dominan
       </SocketMap>
       <WeaponGroups />
       <TemplateMissileTypes />
-    </Ship>
-    <Ship>
-      <SaveID xsi:nil="true" />
-      <Key>f8ce1c2b-af47-439e-b4c3-f40d4c561a4d</Key>
-      <Name>Joint Action</Name>
-      <Cost>414</Cost>
-      <Callsign />
-      <Number>874</Number>
-      <SymbolOption>0</SymbolOption>
-      <HullType>Stock/Tugboat</HullType>
-      <SocketMap>
-        <HullSocket>
-          <Key>03vxralGq0CFx1XKxjOcBA</Key>
-          <ComponentName>Stock/C30 Cannon</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>cIGspM4oYU2etRfjIcuCCA</Key>
-          <ComponentName>Stock/MLS-2 Launcher</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>0upOgm0H0UuZ-h2YvRjmBg</Key>
-          <ComponentName>Stock/J15 Jammer</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>KnFHQkb9uUe98IweLYf9wg</Key>
-          <ComponentName>Stock/VLS-1-23 Launcher</ComponentName>
-          <ComponentData xsi:type="CellLauncherData">
-            <MissileLoad>
-              <MagSaveData>
-                <MagazineKey>p6iSQu16vk-w2ecLhQoA6g</MagazineKey>
-                <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>6</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>4dE-m-KnOUuVaCEAGPAjvg</MagazineKey>
-                <MunitionKey>$MODMIS$/SGM-101 Buckler</MunitionKey>
-                <Quantity>8</Quantity>
-              </MagSaveData>
-            </MissileLoad>
-          </ComponentData>
-        </HullSocket>
-        <HullSocket>
-          <Key>5kd20hGcxUuTlY-6JYaudA</Key>
-          <ComponentName>Stock/RF44 'Pinpoint' Radar</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>F6bmJdCO3EqzXK9SBJoXUw</Key>
-          <ComponentName>Stock/Reinforced CIC</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>-PqoLKimSUOZtKMLo5QHXg</Key>
-          <ComponentName>Stock/Reinforced Magazine</ComponentName>
-          <ComponentData xsi:type="BulkMagazineData">
-            <Load>
-              <MagSaveData>
-                <MagazineKey>6TkJHWN6REGR3vwpK9JdcQ</MagazineKey>
-                <MunitionKey>Stock/100mm Grapeshot</MunitionKey>
-                <Quantity>250</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>xMJcZEVACkq7UxDm1SHWrQ</MagazineKey>
-                <MunitionKey>Stock/100mm AP Shell</MunitionKey>
-                <Quantity>250</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>78V-I4SG3E-_oECeu-dFFg</MagazineKey>
-                <MunitionKey>Stock/100mm HE Shell</MunitionKey>
-                <Quantity>250</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>7VEtdM7qukeWAidAvrzN2w</MagazineKey>
-                <MunitionKey>$MODMIS$/SGM-247 Slider</MunitionKey>
-                <Quantity>8</Quantity>
-              </MagSaveData>
-            </Load>
-          </ComponentData>
-        </HullSocket>
-        <HullSocket>
-          <Key>DakKS2gy6UyM58u3YG-HfQ</Key>
-          <ComponentName>Stock/Auxiliary Steering</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>peqaYrE39UupWCXPY_PgoA</Key>
-          <ComponentName>Stock/Small DC Locker</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>6OieSH0A6kKFmquctn9_aQ</Key>
-          <ComponentName>Stock/Berthing</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>NSAbhn9brE-aAirJFIYG-Q</Key>
-          <ComponentName>Stock/BW800-R Drive</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>_qlP8rsUpUiJpkRc1tcjPQ</Key>
-          <ComponentName>Stock/Civilian Reactor</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>RMDTRlITGUm1ZgbIgWq1Xw</Key>
-          <ComponentName>Stock/Bulwark Huntress</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>v7vnexI1xUemaSmSkn0QNA</Key>
-          <ComponentName>Stock/Adaptive Radar Receiver</ComponentName>
-        </HullSocket>
-      </SocketMap>
-      <WeaponGroups />
-      <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
     </Ship>
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>4fb1052f-abc7-43ea-b6aa-cea3234b6579</Key>
       <Name>Scoundrel</Name>
-      <Cost>182</Cost>
+      <Cost>175</Cost>
       <Callsign />
       <Number>151</Number>
       <SymbolOption>0</SymbolOption>
@@ -559,12 +437,12 @@ Tantalum Squadron is designed for nothing less than complete battlespace dominan
               <MagSaveData>
                 <MagazineKey>PENkkoT6eEecPu-oY0Xtbw</MagazineKey>
                 <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>4</Quantity>
+                <Quantity>6</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>Cq1DsH6wBUK53RNE_BBR7Q</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-101 Buckler</MunitionKey>
-                <Quantity>4</Quantity>
+                <Quantity>12</Quantity>
               </MagSaveData>
             </MissileLoad>
           </ComponentData>
@@ -575,7 +453,7 @@ Tantalum Squadron is designed for nothing less than complete battlespace dominan
         </HullSocket>
         <HullSocket>
           <Key>hh8PA01jxEytn9KuihcJ3Q</Key>
-          <ComponentName>Stock/Reinforced CIC</ComponentName>
+          <ComponentName>Stock/Basic CIC</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>wDWAeeoAK0mAx3hbF1tMlA</Key>
@@ -615,7 +493,7 @@ Tantalum Squadron is designed for nothing less than complete battlespace dominan
         </HullSocket>
         <HullSocket>
           <Key>-harMwD0o0OExuMqT63fTQ</Key>
-          <ComponentName>Stock/BW800-R Drive</ComponentName>
+          <ComponentName>Stock/BW800 Drive</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>zUeDN4FpYEyyWHIhTIgZFg</Key>
@@ -624,102 +502,15 @@ Tantalum Squadron is designed for nothing less than complete battlespace dominan
       </SocketMap>
       <WeaponGroups />
       <TemplateMissileTypes />
-    </Ship>
-    <Ship>
-      <SaveID xsi:nil="true" />
-      <Key>7a60c1e4-8f13-42f6-b9db-15a062658935</Key>
-      <Name>Charlatan</Name>
-      <Cost>182</Cost>
-      <Callsign />
-      <Number>14</Number>
-      <SymbolOption>0</SymbolOption>
-      <HullType>Stock/Shuttle</HullType>
-      <SocketMap>
-        <HullSocket>
-          <Key>3mlCA6C6m0GI3wONZK_aqg</Key>
-          <ComponentName>Stock/T20 Cannon</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>fbAgHM9u302peFMSC0TidQ</Key>
-          <ComponentName>Stock/VLS-1-46 Launcher</ComponentName>
-          <ComponentData xsi:type="CellLauncherData">
-            <MissileLoad>
-              <MagSaveData>
-                <MagazineKey>PENkkoT6eEecPu-oY0Xtbw</MagazineKey>
-                <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>4</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>Cq1DsH6wBUK53RNE_BBR7Q</MagazineKey>
-                <MunitionKey>$MODMIS$/SGM-101 Buckler</MunitionKey>
-                <Quantity>4</Quantity>
-              </MagSaveData>
-            </MissileLoad>
-          </ComponentData>
-        </HullSocket>
-        <HullSocket>
-          <Key>rbZhGCN7UUWcgLsNZkZXIA</Key>
-          <ComponentName>Stock/P11 PDT</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>hh8PA01jxEytn9KuihcJ3Q</Key>
-          <ComponentName>Stock/Reinforced CIC</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>wDWAeeoAK0mAx3hbF1tMlA</Key>
-          <ComponentName>Stock/Rapid DC Locker</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>CcSXjIupV0Kw-jxaV6HpEA</Key>
-          <ComponentName>Stock/Reinforced Magazine</ComponentName>
-          <ComponentData xsi:type="BulkMagazineData">
-            <Load>
-              <MagSaveData>
-                <MagazineKey>lWiyRJAV3ku08sVt6lH5YQ</MagazineKey>
-                <MunitionKey>Stock/100mm Grapeshot</MunitionKey>
-                <Quantity>250</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>JpLkDFb4vU6P5m0jIkQV2A</MagazineKey>
-                <MunitionKey>Stock/100mm AP Shell</MunitionKey>
-                <Quantity>250</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>zFpPjfDg9ES69ER88Rns0w</MagazineKey>
-                <MunitionKey>Stock/100mm HE Shell</MunitionKey>
-                <Quantity>250</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>kt5gyUrDOEigrme_LcNHfA</MagazineKey>
-                <MunitionKey>Stock/20mm Slug</MunitionKey>
-                <Quantity>4000</Quantity>
-              </MagSaveData>
-            </Load>
-          </ComponentData>
-        </HullSocket>
-        <HullSocket>
-          <Key>bInyh5AAt0y_m-3UaI8Ysw</Key>
-          <ComponentName>Stock/Light Civilian Reactor</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>-harMwD0o0OExuMqT63fTQ</Key>
-          <ComponentName>Stock/BW800-R Drive</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>zUeDN4FpYEyyWHIhTIgZFg</Key>
-          <ComponentName>Stock/Ithaca Bridgemaster</ComponentName>
-        </HullSocket>
-      </SocketMap>
-      <WeaponGroups />
-      <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
     </Ship>
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>c8b4bf6d-bbfa-42bb-9ef5-2e01aac933e7</Key>
       <Name>Swindler</Name>
-      <Cost>182</Cost>
+      <Cost>174</Cost>
       <Callsign />
-      <Number>61</Number>
+      <Number>261</Number>
       <SymbolOption>0</SymbolOption>
       <HullType>Stock/Shuttle</HullType>
       <SocketMap>
@@ -735,12 +526,12 @@ Tantalum Squadron is designed for nothing less than complete battlespace dominan
               <MagSaveData>
                 <MagazineKey>PENkkoT6eEecPu-oY0Xtbw</MagazineKey>
                 <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>4</Quantity>
+                <Quantity>7</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>Cq1DsH6wBUK53RNE_BBR7Q</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-101 Buckler</MunitionKey>
-                <Quantity>4</Quantity>
+                <Quantity>11</Quantity>
               </MagSaveData>
             </MissileLoad>
           </ComponentData>
@@ -751,7 +542,7 @@ Tantalum Squadron is designed for nothing less than complete battlespace dominan
         </HullSocket>
         <HullSocket>
           <Key>hh8PA01jxEytn9KuihcJ3Q</Key>
-          <ComponentName>Stock/Reinforced CIC</ComponentName>
+          <ComponentName>Stock/Basic CIC</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>wDWAeeoAK0mAx3hbF1tMlA</Key>
@@ -791,7 +582,7 @@ Tantalum Squadron is designed for nothing less than complete battlespace dominan
         </HullSocket>
         <HullSocket>
           <Key>-harMwD0o0OExuMqT63fTQ</Key>
-          <ComponentName>Stock/BW800-R Drive</ComponentName>
+          <ComponentName>Stock/BW800 Drive</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>zUeDN4FpYEyyWHIhTIgZFg</Key>
@@ -800,12 +591,102 @@ Tantalum Squadron is designed for nothing less than complete battlespace dominan
       </SocketMap>
       <WeaponGroups />
       <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
+    </Ship>
+    <Ship>
+      <SaveID xsi:nil="true" />
+      <Key>7a60c1e4-8f13-42f6-b9db-15a062658935</Key>
+      <Name>Charlatan</Name>
+      <Cost>175</Cost>
+      <Callsign />
+      <Number>414</Number>
+      <SymbolOption>0</SymbolOption>
+      <HullType>Stock/Shuttle</HullType>
+      <SocketMap>
+        <HullSocket>
+          <Key>3mlCA6C6m0GI3wONZK_aqg</Key>
+          <ComponentName>Stock/T20 Cannon</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>fbAgHM9u302peFMSC0TidQ</Key>
+          <ComponentName>Stock/VLS-1-46 Launcher</ComponentName>
+          <ComponentData xsi:type="CellLauncherData">
+            <MissileLoad>
+              <MagSaveData>
+                <MagazineKey>PENkkoT6eEecPu-oY0Xtbw</MagazineKey>
+                <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
+                <Quantity>6</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>Cq1DsH6wBUK53RNE_BBR7Q</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-101 Buckler</MunitionKey>
+                <Quantity>12</Quantity>
+              </MagSaveData>
+            </MissileLoad>
+          </ComponentData>
+        </HullSocket>
+        <HullSocket>
+          <Key>rbZhGCN7UUWcgLsNZkZXIA</Key>
+          <ComponentName>Stock/P11 PDT</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>hh8PA01jxEytn9KuihcJ3Q</Key>
+          <ComponentName>Stock/Basic CIC</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>wDWAeeoAK0mAx3hbF1tMlA</Key>
+          <ComponentName>Stock/Rapid DC Locker</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>CcSXjIupV0Kw-jxaV6HpEA</Key>
+          <ComponentName>Stock/Reinforced Magazine</ComponentName>
+          <ComponentData xsi:type="BulkMagazineData">
+            <Load>
+              <MagSaveData>
+                <MagazineKey>lWiyRJAV3ku08sVt6lH5YQ</MagazineKey>
+                <MunitionKey>Stock/100mm Grapeshot</MunitionKey>
+                <Quantity>250</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>JpLkDFb4vU6P5m0jIkQV2A</MagazineKey>
+                <MunitionKey>Stock/100mm AP Shell</MunitionKey>
+                <Quantity>250</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>zFpPjfDg9ES69ER88Rns0w</MagazineKey>
+                <MunitionKey>Stock/100mm HE Shell</MunitionKey>
+                <Quantity>250</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>kt5gyUrDOEigrme_LcNHfA</MagazineKey>
+                <MunitionKey>Stock/20mm Slug</MunitionKey>
+                <Quantity>4000</Quantity>
+              </MagSaveData>
+            </Load>
+          </ComponentData>
+        </HullSocket>
+        <HullSocket>
+          <Key>bInyh5AAt0y_m-3UaI8Ysw</Key>
+          <ComponentName>Stock/Light Civilian Reactor</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>-harMwD0o0OExuMqT63fTQ</Key>
+          <ComponentName>Stock/BW800 Drive</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>zUeDN4FpYEyyWHIhTIgZFg</Key>
+          <ComponentName>Stock/Ithaca Bridgemaster</ComponentName>
+        </HullSocket>
+      </SocketMap>
+      <WeaponGroups />
+      <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
     </Ship>
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>8410be18-34fe-49cf-ad3c-d73a8e09f7b7</Key>
       <Name>Hustler</Name>
-      <Cost>182</Cost>
+      <Cost>173</Cost>
       <Callsign />
       <Number>389</Number>
       <SymbolOption>0</SymbolOption>
@@ -823,12 +704,12 @@ Tantalum Squadron is designed for nothing less than complete battlespace dominan
               <MagSaveData>
                 <MagazineKey>PENkkoT6eEecPu-oY0Xtbw</MagazineKey>
                 <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>4</Quantity>
+                <Quantity>6</Quantity>
               </MagSaveData>
               <MagSaveData>
                 <MagazineKey>Cq1DsH6wBUK53RNE_BBR7Q</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-101 Buckler</MunitionKey>
-                <Quantity>4</Quantity>
+                <Quantity>11</Quantity>
               </MagSaveData>
             </MissileLoad>
           </ComponentData>
@@ -839,7 +720,7 @@ Tantalum Squadron is designed for nothing less than complete battlespace dominan
         </HullSocket>
         <HullSocket>
           <Key>hh8PA01jxEytn9KuihcJ3Q</Key>
-          <ComponentName>Stock/Reinforced CIC</ComponentName>
+          <ComponentName>Stock/Basic CIC</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>wDWAeeoAK0mAx3hbF1tMlA</Key>
@@ -879,7 +760,7 @@ Tantalum Squadron is designed for nothing less than complete battlespace dominan
         </HullSocket>
         <HullSocket>
           <Key>-harMwD0o0OExuMqT63fTQ</Key>
-          <ComponentName>Stock/BW800-R Drive</ComponentName>
+          <ComponentName>Stock/BW800 Drive</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>zUeDN4FpYEyyWHIhTIgZFg</Key>
@@ -888,6 +769,7 @@ Tantalum Squadron is designed for nothing less than complete battlespace dominan
       </SocketMap>
       <WeaponGroups />
       <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
     </Ship>
   </Ships>
   <MissileTypes>
@@ -898,19 +780,23 @@ Tantalum Squadron is designed for nothing less than complete battlespace dominan
       <LongDescription>The &lt;noparse&gt;SGM-101 Buckler&lt;/noparse&gt; is a size 1 direct guidance missile.  It is based on the SGM-1 body, which is a nimble general-purpose missile.  This missile will deliver a Proximity Fuze, High Explosive, Blast Fragmentation warhead.  It homes in on its target using an Active Radar seeker.
 
 Control Method: DIRECT
-Targeting Modes:
-	&lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+Targeting Modes: &lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+
 Primary Seeker: ACTIVE &lt;color=#3BC81E&gt;RADAR&lt;/color&gt;
 
-300 m/s for 3,507 m, top speed in 0.6 s
+Speed: 301 m/s
+Distance: 3,502 m
+Top Speed In: 0.6 s
+Turn Rate: 7.7 G
 Terminal Maneuvers: None
 
-Proximity Fuze, High Explosive, Blast Fragmentation
-Armor: 2cm   Component: 65hp
+Warhead: Proximity Fuze, High Explosive, Blast Fragmentation
+Armor: 0.21cm
+Component: 65.34hp
 Blast Radius: 47 m
 
-Body Integrity: 10 
-Wall Thickness: 0.5
+Body Integrity: 10
+Wall Thickness: 0.05
 Programming Time: 6 s
 Radar Signature Bonus: 100 %
 Boost-Phase Duration: 3 s
@@ -971,9 +857,9 @@ Failure Rate: 0 %</LongDescription>
           <InstalledComponent xsi:type="MissileEngineSettings">
             <ComponentKey />
             <BalanceValues>
-              <A>0.333333343</A>
-              <B>0.333333343</B>
-              <C>0.333333343</C>
+              <A>0.3369923</A>
+              <B>0.331244528</B>
+              <C>0.331763178</C>
             </BalanceValues>
           </InstalledComponent>
         </MissileSocket>
@@ -986,21 +872,26 @@ Failure Rate: 0 %</LongDescription>
       <LongDescription>The &lt;noparse&gt;SGM-247 Slider&lt;/noparse&gt; is a size 2 direct guidance missile.  It is based on the SGM-2 body, which is a flexible mainstay anti-ship missile.  This missile will deliver a Contact Fuze, High Explosive, Shaped warhead.  It homes in on its target using an Active Radar seeker, validating that it is the correct target using command guidance from its launching ship.
 
 Control Method: DIRECT
-Targeting Modes:
-	&lt;b&gt;&lt;color=#D3D11F&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+Targeting Modes: &lt;b&gt;&lt;color=#D3D11F&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+
 Primary Seeker: ACTIVE &lt;color=#3BC81E&gt;RADAR&lt;/color&gt;
-Validation Seeker(s): COMMAND (&lt;color=#D3D11F&gt;Requires COMMS Enabled&lt;/color&gt;)
+Validation Seeker: COMMAND (&lt;color=#D3D11F&gt;Requires COMMS Enabled&lt;/color&gt;)
 
-277 m/s for 10,468 m, top speed in 1.5 s
+Speed: 277 m/s
+Distance: 10,468 m
+Top Speed In: 1.5 s
+Turn Rate: 3.3 G
 Terminal Maneuvers: Weave
+(&lt;color=#D3D11F&gt;May decrease effective range&lt;/color&gt;)
 
-Contact Fuze, High Explosive, Shaped
-Armor: 54cm   Component: 960hp
+Warhead: Contact Fuze, High Explosive, Shaped
+Armor: 54cm
+Component: 960hp
 Blast Angle: 70 deg
 Damage Per Fragment: 50.0
 
-Body Integrity: 30 
-Wall Thickness: 0.5
+Body Integrity: 30
+Wall Thickness: 0.05
 Programming Time: 8 s
 Radar Signature Bonus: 100 %
 Boost-Phase Duration: 3 s
@@ -1072,6 +963,108 @@ Failure Rate: 0 %</LongDescription>
               <A>0.5705902</A>
               <B>0.1514882</B>
               <C>0.277921617</C>
+            </BalanceValues>
+          </InstalledComponent>
+        </MissileSocket>
+      </Sockets>
+    </MissileTemplate>
+    <MissileTemplate>
+      <Designation>SGM-22</Designation>
+      <Nickname>Sunfish</Nickname>
+      <Description>CRUISE - ACT(&lt;color=#3BC81E&gt;RADAR&lt;/color&gt;)/[PSV(&lt;color=#D4211D&gt;WAKE&lt;/color&gt;)] - HE SHAPED</Description>
+      <LongDescription>The &lt;noparse&gt;SGM-22 Sunfish&lt;/noparse&gt; is a size 2 waypoint-capable cruise missile.  It is based on the SGM-2 body, which is a flexible mainstay anti-ship missile.  This missile will deliver a Contact Fuze, High Explosive, Shaped warhead.  It homes in on its target using an Active Radar seeker, validating that it is the correct target using a Passive Wake seeker.
+
+Control Method: CRUISE (Waypoint Capable)
+Targeting Modes: &lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK[+TRP]&lt;/color&gt;&lt;/b&gt;
+
+Primary Seeker: ACTIVE &lt;color=#3BC81E&gt;RADAR&lt;/color&gt;
+Validation Seeker: PASSIVE (&lt;color=#D4211D&gt;WAKE&lt;/color&gt;)
+
+Speed: 274 m/s
+Distance: 15,000 m
+Top Speed In: 2.0 s
+Turn Rate: 2.0 G
+Terminal Maneuvers: None
+
+Warhead: Contact Fuze, High Explosive, Shaped
+Armor: 60cm
+Component: 1,200hp
+Blast Angle: 70 deg
+Damage Per Fragment: 50.0
+
+Body Integrity: 30
+Wall Thickness: 0.05
+Programming Time: 8 s
+Radar Signature Bonus: 100 %
+Boost-Phase Duration: 3 s
+Boost-Phase Strafe: 100 %
+Boost-Phase Turn Rate: 100 %
+Failure Rate: 0 %</LongDescription>
+      <Cost>6</Cost>
+      <BodyKey>Stock/SGM-2 Body</BodyKey>
+      <TemplateKey>bb7b1ee8-c82a-4210-afa6-e7c497501e0a</TemplateKey>
+      <BaseColor>
+        <r>1</r>
+        <g>1</g>
+        <b>1</b>
+        <a>1</a>
+      </BaseColor>
+      <StripeColor>
+        <r>0.7058824</r>
+        <g>0.129411772</g>
+        <b>0.129411772</b>
+        <a>1</a>
+      </StripeColor>
+      <Sockets>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="ActiveSeekerSettings">
+            <ComponentKey>Stock/Fixed Active Radar Seeker</ComponentKey>
+            <Mode>Targeting</Mode>
+            <RejectUnvalidated>false</RejectUnvalidated>
+            <DetectPDTargets>false</DetectPDTargets>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="PassiveSeekerSettings">
+            <ComponentKey>Stock/Wake-Homing Seeker</ComponentKey>
+            <Mode>Validation</Mode>
+            <RejectUnvalidated>false</RejectUnvalidated>
+            <DetectPDTargets>false</DetectPDTargets>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="CruiseGuidanceSettings">
+            <ComponentKey>Stock/Cruise Guidance</ComponentKey>
+            <Role>Offensive</Role>
+            <HotLaunch>false</HotLaunch>
+            <SelfDestructOnLost>false</SelfDestructOnLost>
+            <Maneuvers>None</Maneuvers>
+            <DefensiveDoctrine>
+              <TargetSizeMask>12</TargetSizeMask>
+              <TargetType>All</TargetType>
+              <TargetSizeOrdering>Descending</TargetSizeOrdering>
+              <SalvoSize>0</SalvoSize>
+              <FarthestFirst>false</FarthestFirst>
+            </DefensiveDoctrine>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>5</Size>
+          <InstalledComponent>
+            <ComponentKey>Stock/HE Impact</ComponentKey>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>5</Size>
+          <InstalledComponent xsi:type="MissileEngineSettings">
+            <ComponentKey />
+            <BalanceValues>
+              <A>0.553871334</A>
+              <B>0.446128666</B>
+              <C>0</C>
             </BalanceValues>
           </InstalledComponent>
         </MissileSocket>

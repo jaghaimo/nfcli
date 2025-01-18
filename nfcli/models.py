@@ -10,7 +10,7 @@ import arrow
 from rich.console import Console
 from rich.text import Text
 
-from nfcli.printers import FleetPrinter, MissilePrinter, Printable, ShipPrinter, print_any, write_any
+from nfcli.printers import CraftPrinter, FleetPrinter, MissilePrinter, Printable, ShipPrinter, print_any, write_any
 
 
 class Lobby:
@@ -104,13 +104,13 @@ class Lobbies:
 
 
 class Named:
-    """Adds a cleaned, unnamespaced name."""
+    """Adds a cleaned, un-namespaced name."""
 
     def __init__(self, name: str) -> None:
         self._name = str(name)
 
     @property
-    def name(self):
+    def name(self) -> str:
         return self.get_name(self._name)
 
     @classmethod
@@ -121,7 +121,7 @@ class Named:
 
 
 class Content(Named):
-    """Models content of a socket (ammo in magazine / launcher)."""
+    """Models content of a socket (ammo in magazine / launcher or a craft type)."""
 
     def __init__(self, name: str, quantity: int) -> None:
         super().__init__(name)
@@ -171,11 +171,13 @@ class Missile(Named, Printable):
         self.full_name = f"{designation} {nickname}"
         self.description = description
         self.cost = cost
+
         full_stats = [stats.replace("\n\t", " ") for stats in long_description.split("\n\n")]
+        avionics_end = 3 if len(full_stats) > 5 else 2
 
         self.long_description = full_stats[0]
-        self.avionics = "\n".join(full_stats[1:2])
-        self.flight_characteristics = "\n".join(full_stats[3:-2])
+        self.avionics = "\n".join(full_stats[1:avionics_end])
+        self.flight_characteristics = "\n".join(full_stats[avionics_end:-2])
         self.damage = full_stats[-2]
         self.additional_stats = full_stats[-1]
 
@@ -192,13 +194,46 @@ class Missile(Named, Printable):
         return Text.from_markup(self.title).plain + "."
 
     @property
-    def is_valid(self):
+    def is_valid(self) -> bool:
         return True
 
-    def print(self, console: Console, with_title: bool, mods: list[str]):
+    def print(self, console: Console, with_title: bool, mods: list[str]) -> None:
         print_any(MissilePrinter(console), self, mods, with_title)
 
-    def write(self, filename: str):
+    def write(self, filename: str) -> None:
+        title = Text.from_markup(self.title).plain
+        write_any(self, 3, title, filename)
+
+
+class Craft(Named, Printable):
+    """Models content of a craft template."""
+
+    def __init__(self, designation: str, nickname: str, long_description: str, cost: int, frame_key: str) -> None:
+        super().__init__(frame_key)
+        self.designation = designation
+        self.nickname = nickname
+        self.full_name = f"{designation} {nickname}"
+        self.cost = cost
+
+        full_stats = [stats.replace("\n\t", " ") for stats in long_description.split("\n\n")]
+        avionics_start = 1 if len(full_stats) < 7 else 2
+
+        self.general = full_stats[0]
+        self.avionics = "\n".join(full_stats[avionics_start:4])
+        self.additional_info = "\n".join(full_stats[avionics_start + 3 :])
+
+    @property
+    def title(self) -> str:
+        return f"{self.full_name} is a craft that costs {self.cost} points"
+
+    @property
+    def text(self) -> str:
+        return Text.from_markup(self.title).plain + "."
+
+    def print(self, console: Console, with_title: bool, mods: list[str]) -> None:
+        print_any(CraftPrinter(console), self, mods, with_title)
+
+    def write(self, filename: str) -> None:
         title = Text.from_markup(self.title).plain
         write_any(self, 3, title, filename)
 
@@ -278,7 +313,7 @@ class Ship(Named, Printable):
             return self.sockets[key]
         return Socket(key, "[grey]<EMPTY>", [], None)
 
-    def print(self, console: Console, with_title: bool, mods: list[str]):
+    def print(self, console: Console, with_title: bool, mods: list[str]) -> None:
         print_any(ShipPrinter(console), self, mods, with_title)
 
     def write(self, filename: str):
@@ -287,7 +322,7 @@ class Ship(Named, Printable):
 
 
 class Fleet(Named, Printable):
-    def __init__(self, name: str, points: int, faction: str):
+    def __init__(self, name: str, points: int, faction: str) -> None:
         super().__init__(name)
         self.points = points
         self.faction = faction
@@ -335,7 +370,7 @@ class Fleet(Named, Printable):
 
     @property
     def ship_list(self) -> str:
-        longest_name = max([len(ship.name) for ship in self.ships])
+        longest_name = max(len(ship.name) for ship in self.ships)
         ship_list = [f"{ship.name.rjust(longest_name)} : {ship.hull} [{ship.tags}]" for ship in self.ships]
         return f"{self.title}:\n```yaml\n" + "\n".join(ship_list) + "\n```"
 
@@ -343,7 +378,7 @@ class Fleet(Named, Printable):
     def missile_list(self) -> str:
         if not self._missiles:
             return ""
-        longest_name = max([len(missile.full_name) for missile in self.missiles])
+        longest_name = max(len(missile.full_name) for missile in self.missiles)
         missile_list = [
             f"{missile.full_name.rjust(longest_name)} : {missile.description} [{missile.cost}pts]"
             for missile in self.missiles
@@ -361,8 +396,8 @@ class Fleet(Named, Printable):
     def add_missile(self, missile: Missile) -> None:
         self._missiles.append(missile)
 
-    def print(self, console: Console, with_title: bool, mods: list[str] = []):
+    def print(self, console: Console, with_title: bool, mods: list[str] = []) -> None:
         print_any(FleetPrinter(console), self, mods, with_title)
 
-    def write(self, filename: str):
+    def write(self, filename: str) -> None:
         write_any(self, self.n_ships, self.title, filename)

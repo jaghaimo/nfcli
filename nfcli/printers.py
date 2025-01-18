@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import math
 import os
-from abc import ABC, abstractmethod, abstractproperty
+from abc import ABC, abstractmethod
 from typing import TYPE_CHECKING
 
 import cairosvg
@@ -17,37 +17,40 @@ from rich.tree import Tree
 from nfcli import COLUMN_WIDTH, STACK_COLUMNS, nfc_theme
 
 if TYPE_CHECKING:
-    from nfcli.models import Component, Fleet, Missile, Ship
+    from nfcli.models import Component, Craft, Fleet, Missile, Ship
 
 
 class Printable:
-    @abstractproperty
+    @property
+    @abstractmethod
     def title(self) -> str:
         raise NotImplementedError
 
-    @abstractproperty
+    @property
+    @abstractmethod
     def text(self) -> str:
         raise NotImplementedError
 
-    @abstractproperty
-    def is_valid(self):
+    @property
+    @abstractmethod
+    def is_valid(self) -> bool:
         raise NotImplementedError
 
     @abstractmethod
-    def print(self, console: Console, with_title: bool, mods: list[str]):
+    def print(self, console: Console, with_title: bool, mods: list[str]) -> None:
         raise NotImplementedError
 
     @abstractmethod
-    def write(self, filename: str):
+    def write(self, filename: str) -> None:
         raise NotImplementedError
 
 
 class Printer(ABC):
-    def __init__(self, console: Console):
+    def __init__(self, console: Console) -> None:
         self.console = console
 
     @abstractmethod
-    def print(self, with_title: bool, printable: Printable):
+    def print(self, with_title: bool, printable: Printable) -> None:
         raise NotImplementedError
 
     @classmethod
@@ -59,18 +62,18 @@ class Printer(ABC):
             mods_text += f"\n- {begin_quote}https://steamcommunity.com/sharedfiles/filedetails/?id={mod}{end_quote}"
         return mods_text
 
-    def print_mods(self, mods: list[str]):
+    def print_mods(self, mods: list[str]) -> None:
         if not mods:
             return
         self.console.print(self.get_mods(mods))
 
 
 class MissilePrinter(Printer):
-    def get_section(self, title: str, text: str):
+    def get_section(self, title: str, text: str) -> Padding:
         padded_str = Text.from_markup(pad_str(text))
         return Padding(Group(Rule(Text(title, style="orange"), style="orange"), padded_str), (0, 1))
 
-    def print(self, with_title: bool, missile: Missile):
+    def print(self, with_title: bool, missile: Missile) -> None:
         column_width = min(2 * COLUMN_WIDTH, self.console.width)
         self.console.width = min(column_width, self.console.width)
         if with_title:
@@ -82,13 +85,28 @@ class MissilePrinter(Printer):
         self.console.print(self.get_section("Additional Stats", missile.additional_stats))
 
 
+class CraftPrinter(Printer):
+    def get_section(self, title: str, text: str) -> Padding:
+        padded_str = Text.from_markup(pad_str(text))
+        return Padding(Group(Rule(Text(title, style="orange"), style="orange"), padded_str), (0, 1))
+
+    def print(self, with_title: bool, craft: Craft):
+        column_width = min(2 * COLUMN_WIDTH, self.console.width)
+        self.console.width = min(column_width, self.console.width)
+        if with_title:
+            self.console.print(Panel(Text(craft.title.center(self.console.width), style="white"), style="orange"))
+        self.console.print(self.get_section("General", craft.general))
+        self.console.print(self.get_section("Flight Performance", craft.avionics))
+        self.console.print(self.get_section("Additional Information", craft.additional_info))
+
+
 class ShipPrinter(Printer):
-    def add_components(self, tree: Tree, component: Component):
+    def add_components(self, tree: Tree, component: Component) -> None:
         for content in component.contents:
             tree.add(Text(f"{content.name} x{content.quantity}", overflow="ignore"), style="i d")
 
     def get_sockets(self, title: str, components: list[Component], color: str = "white") -> Group:
-        elements: list[RenderableType] = [Rule(Text(f"{title}", style="orange"), style="orange")]
+        elements = [Rule(Text(f"{title}", style="orange"), style="orange")]
         for component in components:
             slot_number = str(component.slot_number)
             just_size = 7 if int(slot_number) < 10 else 6
@@ -135,7 +153,7 @@ class FleetPrinter(ShipPrinter):
 
         return Padding(group, (0, 1))
 
-    def print(self, with_title: bool, fleet: Fleet):
+    def print(self, with_title: bool, fleet: Fleet) -> None:
         column_width = min(COLUMN_WIDTH, self.console.width)
         number_of_rows = math.floor(math.pow(fleet.n_ships, 4 / 9))
         number_of_columns = math.ceil(fleet.n_ships / number_of_rows) if fleet.n_ships > 2 else 3
@@ -167,7 +185,7 @@ def desired_console_width(num_of_columns: int) -> int:
 def pad_str(string: str) -> str:
     padded_str = ""
     for line in string.splitlines():
-        tokens = line.split(":", maxsplit=2)
+        tokens = line.split(":", maxsplit=1)
         if len(tokens) != 2:
             padded_str += f"{line.strip()}\n"
             continue
@@ -185,7 +203,7 @@ def print_any(printer: Printer, printable: Printable, mods: list[str], with_titl
     printer.print_mods(mods)
 
 
-def write_any(printable: Printable, num_of_columns: int, title: str, png_file: str):
+def write_any(printable: Printable, num_of_columns: int, title: str, png_file: str) -> None:
     width = desired_console_width(num_of_columns)
     with open(os.devnull, "w") as file:
         console = Console(width=width, record=True, theme=nfc_theme, force_terminal=True, file=file)

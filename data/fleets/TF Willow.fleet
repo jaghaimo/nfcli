@@ -6,15 +6,15 @@
   <FactionKey>Stock/Alliance</FactionKey>
   <Description>Difficulty: &lt;color=red&gt;HARD&lt;/color&gt;
 
-Consisting of a skirmishing light cruiser, a sensor frigate, and four torpedo corvettes, Task Force Willow is designed to systematically destroy the light ships of your opponent. The Word Cadence can be positioned in the open to provide scouting, concealing itself with electronic warfare and using missiles when it can't. The four corvettes can be distributed across space to capture objectives and strike targets of opportunity, while the Beyond Conventional defends your backline with its 250mm guns, even packing a short-ranged punch against heavy assets with its small but fearsome missile complement. Beware, none of your ships can stand up in a slugging match, so don't fight fair.
+Consisting of a skirmishing light cruiser, a sensor frigate, three torpedo corvettes, and two gun corvettes, TF Willow is designed to take and hold objectives. The Word Cadence can be positioned in the open to provide scouting, harass enemy craft and missiles with its Sarissa PDT, and launch cruise missiles at enemy spotters. The five corvettes can be distributed across space to capture objectives and strike targets of opportunity with close-range torpedoes and 120mm guns, while the Beyond Conventional defends your own objectives with its 250mm guns and anti-craft missiles. Beware, none of your ships can stand in a slugging match with the enemy's main battleline, so coordinate with your team and don't fight fair.
   </Description>
-  <SortOverrideOrder>7</SortOverrideOrder>
+  <SortOverrideOrder>8</SortOverrideOrder>
   <Ships>
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>442e15d5-8305-4a8c-b78e-c95281fa19ab</Key>
       <Name>Beyond Conventional</Name>
-      <Cost>1204</Cost>
+      <Cost>1065</Cost>
       <Callsign />
       <Number>112</Number>
       <SymbolOption>0</SymbolOption>
@@ -38,24 +38,20 @@ Consisting of a skirmishing light cruiser, a sensor frigate, and four torpedo co
         </HullSocket>
         <HullSocket>
           <Key>BRMwuusKC02YrbFXRrrNzA</Key>
-          <ComponentName>Stock/VLS-3 Launcher</ComponentName>
+          <ComponentName>Stock/VLS-2 Launcher</ComponentName>
           <ComponentData xsi:type="ResizableCellLauncherData">
             <MissileLoad>
               <MagSaveData>
-                <MagazineKey>4vzLwQXC_kiHQ7viuVjQeQ</MagazineKey>
-                <MunitionKey>$MODMIS$/SGT-333 Forgetfulness</MunitionKey>
+                <MagazineKey>eJX-LEVqUUW0pwgbWhMC0g</MagazineKey>
+                <MunitionKey>Stock/EA99 Active Decoy</MunitionKey>
                 <Quantity>3</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>qqtetyLGQEKKLu8IaWYOrQ</MagazineKey>
-                <MunitionKey>$MODMIS$/SGM-H-355 Blossoms</MunitionKey>
-                <Quantity>3</Quantity>
+                <MagazineKey>aVPaMaNfhk6gUD8wjmrGeA</MagazineKey>
+                <MunitionKey>$MODMIS$/SDM-255 Blossoms</MunitionKey>
+                <Quantity>8</Quantity>
               </MagSaveData>
             </MissileLoad>
-            <ConfiguredSize>
-              <x>1</x>
-              <y>3</y>
-            </ConfiguredSize>
           </ComponentData>
         </HullSocket>
         <HullSocket>
@@ -82,7 +78,7 @@ Consisting of a skirmishing light cruiser, a sensor frigate, and four torpedo co
               <MagSaveData>
                 <MagazineKey>6rqWE65jkEyHY9AvsrU6SQ</MagazineKey>
                 <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>10</Quantity>
+                <Quantity>16</Quantity>
               </MagSaveData>
             </MissileLoad>
           </ComponentData>
@@ -114,18 +110,18 @@ Consisting of a skirmishing light cruiser, a sensor frigate, and four torpedo co
               <MagSaveData>
                 <MagazineKey>gKlSTNfdb0GWZG9lF7YcHg</MagazineKey>
                 <MunitionKey>Stock/20mm Slug</MunitionKey>
-                <Quantity>16000</Quantity>
+                <Quantity>12000</Quantity>
               </MagSaveData>
             </Load>
           </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>f_SO68qAGU-sw69T9GEWow</Key>
-          <ComponentName>Stock/Rapid DC Locker</ComponentName>
+          <ComponentName>Stock/Small DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>9R0tfjsN-kiETUBLeCCmGw</Key>
-          <ComponentName>Stock/Berthing</ComponentName>
+          <ComponentName>Stock/Rapid DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>-bAF6R6aiU2Afn8T_oKY4g</Key>
@@ -145,7 +141,7 @@ Consisting of a skirmishing light cruiser, a sensor frigate, and four torpedo co
         </HullSocket>
         <HullSocket>
           <Key>jKvCg9nYmkKfAn4-ht_Y6A</Key>
-          <ComponentName>Stock/Large DC Locker</ComponentName>
+          <ComponentName>Stock/Small DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>8VKMmbA23Em1f-MBZKO2vA</Key>
@@ -196,12 +192,13 @@ Consisting of a skirmishing light cruiser, a sensor frigate, and four torpedo co
         </WepGroup>
       </WeaponGroups>
       <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
     </Ship>
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>516a9d3d-cae1-4fe0-932f-2287794184b6</Key>
       <Name>Word Cadence</Name>
-      <Cost>504</Cost>
+      <Cost>538</Cost>
       <Callsign />
       <Number>1490</Number>
       <SymbolOption>0</SymbolOption>
@@ -209,7 +206,7 @@ Consisting of a skirmishing light cruiser, a sensor frigate, and four torpedo co
       <SocketMap>
         <HullSocket>
           <Key>PDKmGfvpykODc3XHDQ7WBw</Key>
-          <ComponentName>Stock/E90 'Blanket' Jammer</ComponentName>
+          <ComponentName>Stock/Mk95 'Sarissa' PDT</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>WwMGqYiU7E6lp7ID47phqA</Key>
@@ -219,7 +216,7 @@ Consisting of a skirmishing light cruiser, a sensor frigate, and four torpedo co
               <MagSaveData>
                 <MagazineKey>HDDIWAaVn0mz2rB3VUOyuw</MagazineKey>
                 <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>7</Quantity>
+                <Quantity>10</Quantity>
               </MagSaveData>
             </MissileLoad>
           </ComponentData>
@@ -239,17 +236,19 @@ Consisting of a skirmishing light cruiser, a sensor frigate, and four torpedo co
                 <Quantity>6</Quantity>
               </MagSaveData>
             </MissileLoad>
-            <ConfiguredSize>
-              <x>1</x>
-              <y>3</y>
-            </ConfiguredSize>
           </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>98N-YI_1WUOs--qPYlt-7g</Key>
           <ComponentName>Stock/Reinforced Magazine</ComponentName>
           <ComponentData xsi:type="BulkMagazineData">
-            <Load />
+            <Load>
+              <MagSaveData>
+                <MagazineKey>LsVIMCFK8kCj9GdkcunYtQ</MagazineKey>
+                <MunitionKey>Stock/15mm Sandshot</MunitionKey>
+                <Quantity>200</Quantity>
+              </MagSaveData>
+            </Load>
           </ComponentData>
         </HullSocket>
         <HullSocket>
@@ -259,10 +258,6 @@ Consisting of a skirmishing light cruiser, a sensor frigate, and four torpedo co
         <HullSocket>
           <Key>O_Y-AJc7r0alOg36rvY6MQ</Key>
           <ComponentName>Stock/Rapid DC Locker</ComponentName>
-        </HullSocket>
-        <HullSocket>
-          <Key>lorATFhkTkeZQYThYOHazg</Key>
-          <ComponentName>Stock/Berthing</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>bRgUlaoQJ0S7M91zMpdAdA</Key>
@@ -287,13 +282,14 @@ Consisting of a skirmishing light cruiser, a sensor frigate, and four torpedo co
       </SocketMap>
       <WeaponGroups />
       <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
     </Ship>
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>37bdced6-24e6-4775-b163-82bc18e05ab7</Key>
       <Name>Cloaked Intentions</Name>
-      <Cost>323</Cost>
-      <Callsign />
+      <Cost>325</Cost>
+      <Callsign>Torp-1</Callsign>
       <Number>343</Number>
       <SymbolOption>0</SymbolOption>
       <HullType>Stock/Sprinter Corvette</HullType>
@@ -309,10 +305,6 @@ Consisting of a skirmishing light cruiser, a sensor frigate, and four torpedo co
                 <Quantity>6</Quantity>
               </MagSaveData>
             </MissileLoad>
-            <ConfiguredSize>
-              <x>1</x>
-              <y>3</y>
-            </ConfiguredSize>
           </ComponentData>
         </HullSocket>
         <HullSocket>
@@ -323,12 +315,12 @@ Consisting of a skirmishing light cruiser, a sensor frigate, and four torpedo co
               <MagSaveData>
                 <MagazineKey>QV7x3MYmM0i4p9a8K6nCkw</MagazineKey>
                 <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>6</Quantity>
+                <Quantity>7</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>mAaOWNWnCkm9cNZswoZBbA</MagazineKey>
+                <MagazineKey>bLfU4GRJ30-SaiQ5j2-bnQ</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-111 Night Dances</MunitionKey>
-                <Quantity>7</Quantity>
+                <Quantity>14</Quantity>
               </MagSaveData>
             </MissileLoad>
           </ComponentData>
@@ -343,15 +335,15 @@ Consisting of a skirmishing light cruiser, a sensor frigate, and four torpedo co
         </HullSocket>
         <HullSocket>
           <Key>XPaYCjBqdEqBxEIsVLP0oA</Key>
-          <ComponentName>Stock/Berthing</ComponentName>
+          <ComponentName>Stock/Rapid DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>xRYIkvssd0mPY3VIgrnQ5A</Key>
-          <ComponentName>Stock/Reinforced CIC</ComponentName>
+          <ComponentName>Stock/Basic CIC</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>rXO8xwG1MkqzI_2pU-O_qQ</Key>
-          <ComponentName>Stock/Rapid DC Locker</ComponentName>
+          <ComponentName>Stock/Auxiliary Steering</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>GefqwCQzg0qXA3EFRmDtPw</Key>
@@ -361,7 +353,7 @@ Consisting of a skirmishing light cruiser, a sensor frigate, and four torpedo co
               <MagSaveData>
                 <MagazineKey>rMDDCWIaZkeA8iUH1p3gGw</MagazineKey>
                 <MunitionKey>Stock/20mm Slug</MunitionKey>
-                <Quantity>6000</Quantity>
+                <Quantity>4000</Quantity>
               </MagSaveData>
             </Load>
           </ComponentData>
@@ -381,13 +373,14 @@ Consisting of a skirmishing light cruiser, a sensor frigate, and four torpedo co
       </SocketMap>
       <WeaponGroups />
       <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
     </Ship>
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>7bd2b54b-ec33-4aef-b300-8b0be966d499</Key>
-      <Name>Be Objective</Name>
-      <Cost>323</Cost>
-      <Callsign />
+      <Name>Golden Iris</Name>
+      <Cost>325</Cost>
+      <Callsign>Torp-2</Callsign>
       <Number>765</Number>
       <SymbolOption>0</SymbolOption>
       <HullType>Stock/Sprinter Corvette</HullType>
@@ -403,10 +396,6 @@ Consisting of a skirmishing light cruiser, a sensor frigate, and four torpedo co
                 <Quantity>6</Quantity>
               </MagSaveData>
             </MissileLoad>
-            <ConfiguredSize>
-              <x>1</x>
-              <y>3</y>
-            </ConfiguredSize>
           </ComponentData>
         </HullSocket>
         <HullSocket>
@@ -417,12 +406,12 @@ Consisting of a skirmishing light cruiser, a sensor frigate, and four torpedo co
               <MagSaveData>
                 <MagazineKey>QV7x3MYmM0i4p9a8K6nCkw</MagazineKey>
                 <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>6</Quantity>
+                <Quantity>7</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>mAaOWNWnCkm9cNZswoZBbA</MagazineKey>
+                <MagazineKey>kUHIMlG19US7WyCf0szPxA</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-111 Night Dances</MunitionKey>
-                <Quantity>7</Quantity>
+                <Quantity>14</Quantity>
               </MagSaveData>
             </MissileLoad>
           </ComponentData>
@@ -437,15 +426,15 @@ Consisting of a skirmishing light cruiser, a sensor frigate, and four torpedo co
         </HullSocket>
         <HullSocket>
           <Key>XPaYCjBqdEqBxEIsVLP0oA</Key>
-          <ComponentName>Stock/Berthing</ComponentName>
+          <ComponentName>Stock/Rapid DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>xRYIkvssd0mPY3VIgrnQ5A</Key>
-          <ComponentName>Stock/Reinforced CIC</ComponentName>
+          <ComponentName>Stock/Basic CIC</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>rXO8xwG1MkqzI_2pU-O_qQ</Key>
-          <ComponentName>Stock/Rapid DC Locker</ComponentName>
+          <ComponentName>Stock/Auxiliary Steering</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>GefqwCQzg0qXA3EFRmDtPw</Key>
@@ -455,7 +444,7 @@ Consisting of a skirmishing light cruiser, a sensor frigate, and four torpedo co
               <MagSaveData>
                 <MagazineKey>rMDDCWIaZkeA8iUH1p3gGw</MagazineKey>
                 <MunitionKey>Stock/20mm Slug</MunitionKey>
-                <Quantity>6000</Quantity>
+                <Quantity>4000</Quantity>
               </MagSaveData>
             </Load>
           </ComponentData>
@@ -475,13 +464,14 @@ Consisting of a skirmishing light cruiser, a sensor frigate, and four torpedo co
       </SocketMap>
       <WeaponGroups />
       <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
     </Ship>
     <Ship>
       <SaveID xsi:nil="true" />
       <Key>9427fc74-f3ce-44c5-a714-678dbe2106af</Key>
-      <Name>Daggers Drawn</Name>
-      <Cost>323</Cost>
-      <Callsign />
+      <Name>Perverse Axiom</Name>
+      <Cost>325</Cost>
+      <Callsign>Torp-3</Callsign>
       <Number>102</Number>
       <SymbolOption>0</SymbolOption>
       <HullType>Stock/Sprinter Corvette</HullType>
@@ -497,10 +487,6 @@ Consisting of a skirmishing light cruiser, a sensor frigate, and four torpedo co
                 <Quantity>6</Quantity>
               </MagSaveData>
             </MissileLoad>
-            <ConfiguredSize>
-              <x>1</x>
-              <y>3</y>
-            </ConfiguredSize>
           </ComponentData>
         </HullSocket>
         <HullSocket>
@@ -511,12 +497,12 @@ Consisting of a skirmishing light cruiser, a sensor frigate, and four torpedo co
               <MagSaveData>
                 <MagazineKey>QV7x3MYmM0i4p9a8K6nCkw</MagazineKey>
                 <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>6</Quantity>
+                <Quantity>7</Quantity>
               </MagSaveData>
               <MagSaveData>
-                <MagazineKey>mAaOWNWnCkm9cNZswoZBbA</MagazineKey>
+                <MagazineKey>uu3XQCIJykSGbgqEjetIXQ</MagazineKey>
                 <MunitionKey>$MODMIS$/SGM-111 Night Dances</MunitionKey>
-                <Quantity>7</Quantity>
+                <Quantity>14</Quantity>
               </MagSaveData>
             </MissileLoad>
           </ComponentData>
@@ -531,15 +517,15 @@ Consisting of a skirmishing light cruiser, a sensor frigate, and four torpedo co
         </HullSocket>
         <HullSocket>
           <Key>XPaYCjBqdEqBxEIsVLP0oA</Key>
-          <ComponentName>Stock/Berthing</ComponentName>
+          <ComponentName>Stock/Rapid DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>xRYIkvssd0mPY3VIgrnQ5A</Key>
-          <ComponentName>Stock/Reinforced CIC</ComponentName>
+          <ComponentName>Stock/Basic CIC</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>rXO8xwG1MkqzI_2pU-O_qQ</Key>
-          <ComponentName>Stock/Rapid DC Locker</ComponentName>
+          <ComponentName>Stock/Auxiliary Steering</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>GefqwCQzg0qXA3EFRmDtPw</Key>
@@ -549,7 +535,7 @@ Consisting of a skirmishing light cruiser, a sensor frigate, and four torpedo co
               <MagSaveData>
                 <MagazineKey>rMDDCWIaZkeA8iUH1p3gGw</MagazineKey>
                 <MunitionKey>Stock/20mm Slug</MunitionKey>
-                <Quantity>6000</Quantity>
+                <Quantity>4000</Quantity>
               </MagSaveData>
             </Load>
           </ComponentData>
@@ -569,55 +555,43 @@ Consisting of a skirmishing light cruiser, a sensor frigate, and four torpedo co
       </SocketMap>
       <WeaponGroups />
       <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
     </Ship>
     <Ship>
       <SaveID xsi:nil="true" />
-      <Key>3831294e-5ce0-428c-833e-e7c0ad663e5d</Key>
-      <Name>Golden Iris</Name>
-      <Cost>323</Cost>
-      <Callsign />
-      <Number>1374</Number>
+      <Key>6f5ced54-e438-4616-9296-a9bf55201cb0</Key>
+      <Name>Daggers Drawn</Name>
+      <Cost>211</Cost>
+      <Callsign>Gun-1</Callsign>
+      <Number>1135</Number>
       <SymbolOption>0</SymbolOption>
       <HullType>Stock/Sprinter Corvette</HullType>
       <SocketMap>
         <HullSocket>
           <Key>wDsRnL5nKkyYvKgD6VcPHg</Key>
-          <ComponentName>Stock/CLS-3 Launcher</ComponentName>
-          <ComponentData xsi:type="ResizableCellLauncherData">
-            <MissileLoad>
-              <MagSaveData>
-                <MagazineKey>W6epnmUUDkeOlNraBIbZYA</MagazineKey>
-                <MunitionKey>$MODMIS$/SGT-333 Forgetfulness</MunitionKey>
-                <Quantity>6</Quantity>
-              </MagSaveData>
-            </MissileLoad>
-            <ConfiguredSize>
-              <x>1</x>
-              <y>3</y>
-            </ConfiguredSize>
-          </ComponentData>
+          <ComponentName>Stock/Mk61 Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>Z48ot_dQfkWb6AVYjaM_gA</Key>
-          <ComponentName>Stock/VLS-1-46 Launcher</ComponentName>
-          <ComponentData xsi:type="CellLauncherData">
-            <MissileLoad>
-              <MagSaveData>
-                <MagazineKey>QV7x3MYmM0i4p9a8K6nCkw</MagazineKey>
-                <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
-                <Quantity>6</Quantity>
-              </MagSaveData>
-              <MagSaveData>
-                <MagazineKey>mAaOWNWnCkm9cNZswoZBbA</MagazineKey>
-                <MunitionKey>$MODMIS$/SGM-111 Night Dances</MunitionKey>
-                <Quantity>7</Quantity>
-              </MagSaveData>
-            </MissileLoad>
-          </ComponentData>
+          <ComponentName>Stock/Mk61 Cannon</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>IUdNSVZm2Eu9n3F5HnSAng</Key>
-          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
+          <ComponentName>Stock/VLS-1-23 Launcher</ComponentName>
+          <ComponentData xsi:type="CellLauncherData">
+            <MissileLoad>
+              <MagSaveData>
+                <MagazineKey>7EwbixFYo0KH6Da6405_Wg</MagazineKey>
+                <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
+                <Quantity>4</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>lKAvnRfHnkCyJT7K0Azruw</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-111 Night Dances</MunitionKey>
+                <Quantity>8</Quantity>
+              </MagSaveData>
+            </MissileLoad>
+          </ComponentData>
         </HullSocket>
         <HullSocket>
           <Key>ZxY9ONYz80SiLNSObvjNzQ</Key>
@@ -625,15 +599,15 @@ Consisting of a skirmishing light cruiser, a sensor frigate, and four torpedo co
         </HullSocket>
         <HullSocket>
           <Key>XPaYCjBqdEqBxEIsVLP0oA</Key>
-          <ComponentName>Stock/Berthing</ComponentName>
+          <ComponentName>Stock/Rapid DC Locker</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>xRYIkvssd0mPY3VIgrnQ5A</Key>
-          <ComponentName>Stock/Reinforced CIC</ComponentName>
+          <ComponentName>Stock/Basic CIC</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>rXO8xwG1MkqzI_2pU-O_qQ</Key>
-          <ComponentName>Stock/Rapid DC Locker</ComponentName>
+          <ComponentName>Stock/Auxiliary Steering</ComponentName>
         </HullSocket>
         <HullSocket>
           <Key>GefqwCQzg0qXA3EFRmDtPw</Key>
@@ -641,9 +615,24 @@ Consisting of a skirmishing light cruiser, a sensor frigate, and four torpedo co
           <ComponentData xsi:type="BulkMagazineData">
             <Load>
               <MagSaveData>
-                <MagazineKey>rMDDCWIaZkeA8iUH1p3gGw</MagazineKey>
+                <MagazineKey>kK3AFgVIiki4aTOehLkmIw</MagazineKey>
+                <MunitionKey>Stock/120mm HE-RPF Shell</MunitionKey>
+                <Quantity>200</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>_w-cU5pRcUmpVSshKA1sKg</MagazineKey>
+                <MunitionKey>Stock/120mm AP Shell</MunitionKey>
+                <Quantity>100</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>Y4CtvtIBIUilpMEwq7Hqyw</MagazineKey>
+                <MunitionKey>Stock/120mm HE Shell</MunitionKey>
+                <Quantity>200</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>NipUsb8nGUu9ACwwTU3N2Q</MagazineKey>
                 <MunitionKey>Stock/20mm Slug</MunitionKey>
-                <Quantity>6000</Quantity>
+                <Quantity>2000</Quantity>
               </MagSaveData>
             </Load>
           </ComponentData>
@@ -661,43 +650,167 @@ Consisting of a skirmishing light cruiser, a sensor frigate, and four torpedo co
           <ComponentName>Stock/RS35 'Frontline' Radar</ComponentName>
         </HullSocket>
       </SocketMap>
-      <WeaponGroups />
+      <WeaponGroups>
+        <WepGroup Name="120mm">
+          <MemberKeys>
+            <string>wDsRnL5nKkyYvKgD6VcPHg</string>
+            <string>Z48ot_dQfkWb6AVYjaM_gA</string>
+          </MemberKeys>
+        </WepGroup>
+      </WeaponGroups>
       <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
+    </Ship>
+    <Ship>
+      <SaveID xsi:nil="true" />
+      <Key>b8ce8089-dbd3-483f-aaec-91ad700ae66a</Key>
+      <Name>Be Objective</Name>
+      <Cost>211</Cost>
+      <Callsign>Gun-2</Callsign>
+      <Number>607</Number>
+      <SymbolOption>0</SymbolOption>
+      <HullType>Stock/Sprinter Corvette</HullType>
+      <SocketMap>
+        <HullSocket>
+          <Key>wDsRnL5nKkyYvKgD6VcPHg</Key>
+          <ComponentName>Stock/Mk61 Cannon</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>Z48ot_dQfkWb6AVYjaM_gA</Key>
+          <ComponentName>Stock/Mk61 Cannon</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>IUdNSVZm2Eu9n3F5HnSAng</Key>
+          <ComponentName>Stock/VLS-1-23 Launcher</ComponentName>
+          <ComponentData xsi:type="CellLauncherData">
+            <MissileLoad>
+              <MagSaveData>
+                <MagazineKey>7EwbixFYo0KH6Da6405_Wg</MagazineKey>
+                <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
+                <Quantity>4</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>KfS9kbg6mUeKnrxlt1oSfQ</MagazineKey>
+                <MunitionKey>$MODMIS$/SGM-111 Night Dances</MunitionKey>
+                <Quantity>8</Quantity>
+              </MagSaveData>
+            </MissileLoad>
+          </ComponentData>
+        </HullSocket>
+        <HullSocket>
+          <Key>ZxY9ONYz80SiLNSObvjNzQ</Key>
+          <ComponentName>Stock/Mk20 'Defender' PDT</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>XPaYCjBqdEqBxEIsVLP0oA</Key>
+          <ComponentName>Stock/Rapid DC Locker</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>xRYIkvssd0mPY3VIgrnQ5A</Key>
+          <ComponentName>Stock/Basic CIC</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>rXO8xwG1MkqzI_2pU-O_qQ</Key>
+          <ComponentName>Stock/Auxiliary Steering</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>GefqwCQzg0qXA3EFRmDtPw</Key>
+          <ComponentName>Stock/Reinforced Magazine</ComponentName>
+          <ComponentData xsi:type="BulkMagazineData">
+            <Load>
+              <MagSaveData>
+                <MagazineKey>kK3AFgVIiki4aTOehLkmIw</MagazineKey>
+                <MunitionKey>Stock/120mm HE-RPF Shell</MunitionKey>
+                <Quantity>200</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>_w-cU5pRcUmpVSshKA1sKg</MagazineKey>
+                <MunitionKey>Stock/120mm AP Shell</MunitionKey>
+                <Quantity>100</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>Y4CtvtIBIUilpMEwq7Hqyw</MagazineKey>
+                <MunitionKey>Stock/120mm HE Shell</MunitionKey>
+                <Quantity>200</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>NipUsb8nGUu9ACwwTU3N2Q</MagazineKey>
+                <MunitionKey>Stock/20mm Slug</MunitionKey>
+                <Quantity>2000</Quantity>
+              </MagSaveData>
+            </Load>
+          </ComponentData>
+        </HullSocket>
+        <HullSocket>
+          <Key>4WpJyiOKVEqCwR99l47MkA</Key>
+          <ComponentName>Stock/FR3300 Micro Reactor</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>4EHx4mQhNUi-WuuQtQF5fA</Key>
+          <ComponentName>Stock/FM200 Drive</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>TSPPW9ECe06-MGzR1i0WvQ</Key>
+          <ComponentName>Stock/RS35 'Frontline' Radar</ComponentName>
+        </HullSocket>
+      </SocketMap>
+      <WeaponGroups>
+        <WepGroup Name="120mm">
+          <MemberKeys>
+            <string>wDsRnL5nKkyYvKgD6VcPHg</string>
+            <string>Z48ot_dQfkWb6AVYjaM_gA</string>
+          </MemberKeys>
+        </WepGroup>
+      </WeaponGroups>
+      <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
     </Ship>
   </Ships>
   <MissileTypes>
     <MissileTemplate>
-      <AssociatedTemplateName>SGM-H-300 Atlatl Block II</AssociatedTemplateName>
       <Designation>SGM-H-377</Designation>
       <Nickname>Black Amnesias</Nickname>
-      <Description>DIRECT - PSV(&lt;color=#7CC6BC&gt;EO&lt;/color&gt;)/PSV(&lt;color=#D4211D&gt;WAKE&lt;/color&gt;) - HE SHAPED</Description>
-      <LongDescription>The &lt;noparse&gt;SGM-H-377 Black Amnesias&lt;/noparse&gt; is a size 3 direct guidance missile.  It is based on the SGM-H-3 body, which is a high speed hybrid missile designed to strike heavy targets.  This missile will deliver a Contact Fuze, High Explosive, Shaped warhead.  It homes in on its target using a Passive Electro-Optical seeker  If the primary seeker does not find a target or is jammed, it can fall back on a Passive Wake seeker.
+      <Description>CRUISE - PSV(&lt;color=#7CC6BC&gt;EO&lt;/color&gt;)/PSV(&lt;color=#D4211D&gt;WAKE&lt;/color&gt;) - HE SHAPED</Description>
+      <LongDescription>The &lt;noparse&gt;SGM-H-377 Black Amnesias&lt;/noparse&gt; is a size 3 waypoint-capable cruise missile.  It is based on the SGM-H-3 body, which is a high speed hybrid missile designed to strike heavy targets.  This missile will deliver a Contact Fuze, High Explosive, Shaped warhead.  It homes in on its target using a Passive Electro-Optical seeker  If the primary seeker does not find a target or is jammed, it can fall back on a Passive Wake seeker.
 
-Control Method: DIRECT
-Targeting Modes:
-	&lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+Control Method: CRUISE (Waypoint Capable)
+Targeting Modes: &lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK[+TRP]&lt;/color&gt;&lt;/b&gt;
+
 Primary Seeker: PASSIVE (&lt;color=#7CC6BC&gt;EO&lt;/color&gt;)
-Backup Seeker(s): PASSIVE (&lt;color=#D4211D&gt;WAKE&lt;/color&gt;)
+Backup Seeker: PASSIVE (&lt;color=#D4211D&gt;WAKE&lt;/color&gt;)
 
-Cruise: 133 m/s for 18,095 m, top speed in 1.9 s
-Sprint: 550 m/s for 3,700 m, top speed in 0.5 s
-   Stage Trigger at 3,000m from Target (&lt;color=#D3D11F&gt;Limited By Seeker Range&lt;/color&gt;)
+&lt;b&gt;Cruise&lt;/b&gt;
+Speed: 133 m/s
+Distance: 18,095 m
+Top Speed In: 1.9 s
+Turn Rate: 1.2 G
+
+&lt;b&gt;Sprint&lt;/b&gt;
+Speed: 550 m/s
+Distance: 3,700 m
+Top Speed In: 0.5 s
+Turn Rate: 33.6 G
+
+: Stage Trigger at 3,000m from Target (&lt;color=#D3D11F&gt;Limited By Seeker Range&lt;/color&gt;)
+
 Terminal Maneuvers: Corkscrew
+(&lt;color=#D3D11F&gt;May decrease effective range&lt;/color&gt;)
 
-Contact Fuze, High Explosive, Shaped
-Armor: 80cm   Component: 2,160hp
+Warhead: Contact Fuze, High Explosive, Shaped
+Armor: 80cm
+Component: 2,160hp
 Blast Angle: 70 deg
 Damage Per Fragment: 50.0
 
 Body Integrity: 80  (&lt;color=#3BC81E&gt;+20 &lt;/color&gt;)
-Wall Thickness: 0.5
+Wall Thickness: 0.05
 Programming Time: 16 s
 Radar Signature Bonus: 100 %
 Boost-Phase Duration: 3 s
 Boost-Phase Strafe: 100 %
 Boost-Phase Turn Rate: 100 %
 Failure Rate: 0 %</LongDescription>
-      <Cost>27</Cost>
+      <Cost>29</Cost>
       <BodyKey>Stock/SGM-H-3 Body</BodyKey>
       <TemplateKey>2efae5e1-10fd-4765-b7a8-02d824e36a2d</TemplateKey>
       <BaseColor>
@@ -739,8 +852,8 @@ Failure Rate: 0 %</LongDescription>
         </MissileSocket>
         <MissileSocket>
           <Size>1</Size>
-          <InstalledComponent xsi:type="DirectGuidanceSettings">
-            <ComponentKey>Stock/Direct Guidance</ComponentKey>
+          <InstalledComponent xsi:type="CruiseGuidanceSettings">
+            <ComponentKey>Stock/Cruise Guidance</ComponentKey>
             <Role>Offensive</Role>
             <HotLaunch>false</HotLaunch>
             <SelfDestructOnLost>false</SelfDestructOnLost>
@@ -752,7 +865,6 @@ Failure Rate: 0 %</LongDescription>
               <SalvoSize>0</SalvoSize>
               <FarthestFirst>false</FarthestFirst>
             </DefensiveDoctrine>
-            <ApproachAngleControl>true</ApproachAngleControl>
           </InstalledComponent>
         </MissileSocket>
         <MissileSocket>
@@ -792,21 +904,26 @@ Failure Rate: 0 %</LongDescription>
       <LongDescription>The &lt;noparse&gt;SGT-333 Forgetfulness&lt;/noparse&gt; is a size 3 direct guidance missile.  It is based on the SGT-3 body, which is a heavy anti-ship torpedo.  This missile will deliver a Contact Fuze, High Explosive, Shaped warhead.  It homes in on its target using an Active Radar seeker, validating that it is the correct target using command guidance from its launching ship.
 
 Control Method: DIRECT
-Targeting Modes:
-	&lt;b&gt;&lt;color=#D3D11F&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+Targeting Modes: &lt;b&gt;&lt;color=#D3D11F&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+
 Primary Seeker: ACTIVE &lt;color=#3BC81E&gt;RADAR&lt;/color&gt;
-Validation Seeker(s): COMMAND (&lt;color=#D3D11F&gt;Requires COMMS Enabled&lt;/color&gt;)
+Validation Seeker: COMMAND (&lt;color=#D3D11F&gt;Requires COMMS Enabled&lt;/color&gt;)
 
-175 m/s for 4,326 m, top speed in 0.8 s
+Speed: 175 m/s
+Distance: 4,326 m
+Top Speed In: 0.8 s
+Turn Rate: 3.5 G
 Terminal Maneuvers: Corkscrew
+(&lt;color=#D3D11F&gt;May decrease effective range&lt;/color&gt;)
 
-Contact Fuze, High Explosive, Shaped
-Armor: 93cm   Component: 2,880hp
+Warhead: Contact Fuze, High Explosive, Shaped
+Armor: 93cm
+Component: 2,880hp
 Blast Angle: 70 deg
 Damage Per Fragment: 50.0
 
-Body Integrity: 160 
-Wall Thickness: 2.5
+Body Integrity: 160
+Wall Thickness: 0.25
 Programming Time: 3 s
 Radar Signature Bonus: 100 %
 Boost-Phase Duration: 3 s
@@ -884,35 +1001,161 @@ Failure Rate: 0 %</LongDescription>
       </Sockets>
     </MissileTemplate>
     <MissileTemplate>
-      <AssociatedTemplateName>SGM-100 Riposte III</AssociatedTemplateName>
+      <Designation>SDM-255</Designation>
+      <Nickname>Blossoms</Nickname>
+      <Description>DIRECT - ACT(&lt;color=#3BC81E&gt;RADAR&lt;/color&gt;)/PSV(&lt;color=#D4211D&gt;WAKE&lt;/color&gt;) - HE FRAG</Description>
+      <LongDescription>The &lt;noparse&gt;SDM-255 Blossoms&lt;/noparse&gt; is a size 2 direct guidance missile.  It is based on the SDM-2 body, which is a flexible defensive missile with a booster.  This missile will deliver a Proximity Fuze, High Explosive, Blast Fragmentation warhead.  It homes in on its target using an Active Radar seeker  If the primary seeker does not find a target or is jammed, it can fall back on a Passive Wake seeker.
+
+Control Method: DIRECT
+Targeting Modes: &lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+
+Primary Seeker: ACTIVE &lt;color=#3BC81E&gt;RADAR&lt;/color&gt;
+Backup Seeker: PASSIVE (&lt;color=#D4211D&gt;WAKE&lt;/color&gt;)
+
+&lt;b&gt;Boost&lt;/b&gt;
+Speed: 850 m/s
+Distance: 7,898 m
+Top Speed In: 1.4 s
+Turn Rate: 5.0 G
+
+&lt;b&gt;Main&lt;/b&gt;
+Speed: 180 m/s
+Distance: 1,375 m
+Top Speed In: 0.7 s
+Turn Rate: 6.6 G
+
+: Stage Trigger at 450m from Target or On Burnout
+
+Terminal Maneuvers: None
+
+Warhead: Proximity Fuze, High Explosive, Blast Fragmentation
+Armor: 0.35cm
+Component: 110.12hp
+Blast Radius: 79 m
+
+Body Integrity: 25
+Wall Thickness: 0.05
+Programming Time: 10 s
+Radar Signature Bonus: 100 %
+Boost-Phase Duration: 3 s
+Boost-Phase Strafe: 100 %
+Boost-Phase Turn Rate: 100 %
+Failure Rate: 0 %</LongDescription>
+      <Cost>5</Cost>
+      <BodyKey>Stock/SDM-2 Body</BodyKey>
+      <TemplateKey>0267467a-0e7a-45b9-90cc-fe0ec93272cc</TemplateKey>
+      <BaseColor>
+        <r>-7.07805157E-08</r>
+        <g>-7.07805157E-08</g>
+        <b>-7.07805157E-08</b>
+        <a>1</a>
+      </BaseColor>
+      <StripeColor>
+        <r>0.36555922</r>
+        <g>0</g>
+        <b>0.188513964</b>
+        <a>1</a>
+      </StripeColor>
+      <Sockets>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="ActiveSeekerSettings">
+            <ComponentKey>Stock/Steerable Active Radar Seeker</ComponentKey>
+            <Mode>Targeting</Mode>
+            <RejectUnvalidated>false</RejectUnvalidated>
+            <DetectPDTargets>false</DetectPDTargets>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="PassiveSeekerSettings">
+            <ComponentKey>Stock/Wake-Homing Seeker</ComponentKey>
+            <Mode>Targeting</Mode>
+            <RejectUnvalidated>false</RejectUnvalidated>
+            <DetectPDTargets>false</DetectPDTargets>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="DirectGuidanceSettings">
+            <ComponentKey>Stock/Direct Guidance</ComponentKey>
+            <Role>Defensive</Role>
+            <HotLaunch>false</HotLaunch>
+            <SelfDestructOnLost>false</SelfDestructOnLost>
+            <Maneuvers>None</Maneuvers>
+            <DefensiveDoctrine>
+              <TargetSizeMask>12</TargetSizeMask>
+              <TargetType>SmallCraft</TargetType>
+              <TargetSizeOrdering>Descending</TargetSizeOrdering>
+              <SalvoSize>0</SalvoSize>
+              <FarthestFirst>false</FarthestFirst>
+            </DefensiveDoctrine>
+            <ApproachAngleControl>true</ApproachAngleControl>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>5</Size>
+          <InstalledComponent>
+            <ComponentKey>Stock/Blast Fragmentation</ComponentKey>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>2</Size>
+          <InstalledComponent xsi:type="MissileEngineSettings">
+            <ComponentKey />
+            <BalanceValues>
+              <A>0.393546969</A>
+              <B>0.00109580555</B>
+              <C>0.6053572</C>
+            </BalanceValues>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="MissileEngineSettings">
+            <ComponentKey />
+            <BalanceValues>
+              <A>1</A>
+              <B>0</B>
+              <C>0</C>
+            </BalanceValues>
+          </InstalledComponent>
+        </MissileSocket>
+      </Sockets>
+    </MissileTemplate>
+    <MissileTemplate>
       <Designation>SGM-111</Designation>
       <Nickname>Night Dances</Nickname>
       <Description>DIRECT - ACT(&lt;color=#3BC81E&gt;RADAR&lt;/color&gt;) - HE FRAG</Description>
       <LongDescription>The &lt;noparse&gt;SGM-111 Night Dances&lt;/noparse&gt; is a size 1 direct guidance missile.  It is based on the SGM-1 body, which is a nimble general-purpose missile.  This missile will deliver a Proximity Fuze, High Explosive, Blast Fragmentation warhead.  It homes in on its target using an Active Radar seeker.
 
 Control Method: DIRECT
-Targeting Modes:
-	&lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+Targeting Modes: &lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+
 Primary Seeker: ACTIVE &lt;color=#3BC81E&gt;RADAR&lt;/color&gt;
 
-250 m/s for 2,958 m, top speed in 0.3 s
+Speed: 250 m/s
+Distance: 3,000 m
+Top Speed In: 0.4 s
+Turn Rate: 9.9 G
 Terminal Maneuvers: None
 
-Proximity Fuze, High Explosive, Blast Fragmentation
-Armor: 2cm   Component: 33hp
-Blast Radius: 30 m
+Warhead: Proximity Fuze, High Explosive, Blast Fragmentation
+Armor: 0.21cm
+Component: 65.34hp
+Blast Radius: 47 m
 
-Body Integrity: 10 
-Wall Thickness: 0.5
+Body Integrity: 10
+Wall Thickness: 0.05
 Programming Time: 6 s
 Radar Signature Bonus: 100 %
 Boost-Phase Duration: 3 s
 Boost-Phase Strafe: 100 %
 Boost-Phase Turn Rate: 100 %
 Failure Rate: 0 %</LongDescription>
-      <Cost>3</Cost>
+      <Cost>2</Cost>
       <BodyKey>Stock/SGM-1 Body</BodyKey>
-      <TemplateKey>9b9966d4-ee3f-4953-8e0f-328c27daa85a</TemplateKey>
+      <TemplateKey>bea9a4d4-4b2e-4f91-919e-df2423c79869</TemplateKey>
       <BaseColor>
         <r>1</r>
         <g>0.4862745</g>
@@ -940,153 +1183,33 @@ Failure Rate: 0 %</LongDescription>
           <InstalledComponent xsi:type="DirectGuidanceSettings">
             <ComponentKey>Stock/Direct Guidance</ComponentKey>
             <Role>Defensive</Role>
-            <HotLaunch>false</HotLaunch>
+            <HotLaunch>true</HotLaunch>
             <SelfDestructOnLost>false</SelfDestructOnLost>
             <Maneuvers>None</Maneuvers>
             <DefensiveDoctrine>
-              <TargetSizeMask>6</TargetSizeMask>
+              <TargetSizeMask>14</TargetSizeMask>
               <TargetType>All</TargetType>
               <TargetSizeOrdering>Descending</TargetSizeOrdering>
-              <SalvoSize>0</SalvoSize>
+              <SalvoSize>1</SalvoSize>
               <FarthestFirst>false</FarthestFirst>
             </DefensiveDoctrine>
             <ApproachAngleControl>true</ApproachAngleControl>
-          </InstalledComponent>
-        </MissileSocket>
-        <MissileSocket>
-          <Size>1</Size>
-          <InstalledComponent>
-            <ComponentKey>Stock/Blast Fragmentation EL</ComponentKey>
-          </InstalledComponent>
-        </MissileSocket>
-        <MissileSocket>
-          <Size>6</Size>
-          <InstalledComponent xsi:type="MissileEngineSettings">
-            <ComponentKey />
-            <BalanceValues>
-              <A>0</A>
-              <B>-0</B>
-              <C>1</C>
-            </BalanceValues>
-          </InstalledComponent>
-        </MissileSocket>
-      </Sockets>
-    </MissileTemplate>
-    <MissileTemplate>
-      <AssociatedTemplateName>SGM-H-355_CALIBRO</AssociatedTemplateName>
-      <Designation>SGM-H-355</Designation>
-      <Nickname>Blossoms</Nickname>
-      <Description>DIRECT - &lt;color=#D3D11F&gt;CMD&lt;/color&gt;/ARAD(&lt;color=#3BC81E&gt;RADAR&lt;/color&gt;) - HEKP</Description>
-      <LongDescription>The &lt;noparse&gt;SGM-H-355 Blossoms&lt;/noparse&gt; is a size 3 direct guidance missile.  It is based on the SGM-H-3 body, which is a high speed hybrid missile designed to strike heavy targets.  This missile will deliver a Delayed Contact Fuze, High Explosive, Kinetic Penetrator warhead.  It homes in on its target using command guidance from its launching ship  If the primary seeker does not find a target or is jammed, it can fall back on a Radar Anti-Radiation seeker.
-
-Control Method: DIRECT
-Targeting Modes:
-	&lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
-Primary Seeker: COMMAND (&lt;color=#D3D11F&gt;Requires COMMS Enabled&lt;/color&gt;)
-Backup Seeker(s): ANTI-RADIATION (All &lt;color=#3BC81E&gt;RADAR&lt;/color&gt; Signals)
-
-Cruise: 200 m/s for 15,667 m, top speed in 3.3 s
-Sprint: 750 m/s for 5,340 m, top speed in 1.0 s
-   Stage Trigger at 4,000m from Target (&lt;color=#D3D11F&gt;Limited By Seeker Range&lt;/color&gt;)
-Terminal Maneuvers: None
-
-Delayed Contact Fuze, High Explosive, Kinetic Penetrator
-Penetrator:
-   Armor: 515 cm
-   Component: 232 hp
-Explosive:
-   Component: 4,320 hp
-
-Body Integrity: 60 
-Wall Thickness: 0.5
-Programming Time: 16 s
-Radar Signature Bonus: 100 %
-Boost-Phase Duration: 3 s
-Boost-Phase Strafe: 100 %
-Boost-Phase Turn Rate: 100 %
-Failure Rate: 0 %</LongDescription>
-      <Cost>51</Cost>
-      <BodyKey>Stock/SGM-H-3 Body</BodyKey>
-      <TemplateKey>330b6643-51f1-4da0-8971-0e87decbe6e5</TemplateKey>
-      <BaseColor>
-        <r>0.7525448</r>
-        <g>0.7525448</g>
-        <b>0.7525448</b>
-        <a>1</a>
-      </BaseColor>
-      <StripeColor>
-        <r>0</r>
-        <g>0.2592414</g>
-        <b>0.2678509</b>
-        <a>1</a>
-      </StripeColor>
-      <Sockets>
-        <MissileSocket>
-          <Size>1</Size>
-          <InstalledComponent xsi:type="CommandSeekerSettings">
-            <ComponentKey>Stock/Command Receiver</ComponentKey>
-            <Mode>Targeting</Mode>
-            <RejectUnvalidated>false</RejectUnvalidated>
-          </InstalledComponent>
-        </MissileSocket>
-        <MissileSocket>
-          <Size>1</Size>
-          <InstalledComponent xsi:type="PassiveARHSeekerSettings">
-            <ComponentKey>Stock/Fixed Anti-Radiation Seeker</ComponentKey>
-            <Mode>Targeting</Mode>
-            <RejectUnvalidated>false</RejectUnvalidated>
-            <TargetType>All</TargetType>
-          </InstalledComponent>
-        </MissileSocket>
-        <MissileSocket>
-          <Size>1</Size>
-          <InstalledComponent>
-            <ComponentKey>Stock/Decoy Launcher</ComponentKey>
-          </InstalledComponent>
-        </MissileSocket>
-        <MissileSocket>
-          <Size>1</Size>
-          <InstalledComponent xsi:type="DirectGuidanceSettings">
-            <ComponentKey>Stock/Direct Guidance</ComponentKey>
-            <Role>Offensive</Role>
-            <HotLaunch>false</HotLaunch>
-            <SelfDestructOnLost>false</SelfDestructOnLost>
-            <Maneuvers>None</Maneuvers>
-            <DefensiveDoctrine>
-              <TargetSizeMask>12</TargetSizeMask>
-              <TargetType>All</TargetType>
-              <TargetSizeOrdering>Descending</TargetSizeOrdering>
-              <SalvoSize>0</SalvoSize>
-              <FarthestFirst>false</FarthestFirst>
-            </DefensiveDoctrine>
-            <ApproachAngleControl>true</ApproachAngleControl>
-          </InstalledComponent>
-        </MissileSocket>
-        <MissileSocket>
-          <Size>6</Size>
-          <InstalledComponent>
-            <ComponentKey>Stock/HE Kinetic Penetrator</ComponentKey>
           </InstalledComponent>
         </MissileSocket>
         <MissileSocket>
           <Size>4</Size>
-          <InstalledComponent xsi:type="MissileEngineSettings">
-            <ComponentKey />
-            <BalanceValues>
-              <A>0.444978476</A>
-              <B>0.5550215</B>
-              <C>0</C>
-            </BalanceValues>
+          <InstalledComponent>
+            <ComponentKey>Stock/Blast Fragmentation</ComponentKey>
           </InstalledComponent>
         </MissileSocket>
         <MissileSocket>
-          <Size>1</Size>
+          <Size>3</Size>
           <InstalledComponent xsi:type="MissileEngineSettings">
             <ComponentKey />
             <BalanceValues>
-              <A>1</A>
-              <B>0</B>
-              <C>0</C>
+              <A>0</A>
+              <B>0.344582856</B>
+              <C>0.655417144</C>
             </BalanceValues>
           </InstalledComponent>
         </MissileSocket>

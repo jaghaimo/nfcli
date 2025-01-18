@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<CraftTemplate xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DesignationSuffix>8</DesignationSuffix>
+  <Nickname>Hourglass</Nickname>
+  <LongDescription>Frame Model: Sundial
+Frame Class: SEWAC
+Base Cost: 75
+Storage Size: 2
+Pad Size: 10 x 10
+PD Threat Size: 1
+Frame Integrity: 135
+Skin Thickness: 0.30
+
+Idle Speed: 25 m/s
+Cruise Speed: 60 m/s
+Cruise (HBRN) Speed: 90 m/s
+Combat Speed: 90 m/s
+
+Fuel Capacity: 2,000
+Loiter Time: 42:40
+Cruise Range: 60 km
+
+Thruster Power: 113
+Frame Mass: 25.00
+Loadout Mass: -
+Total Mass: 25.00
+
+&lt;b&gt;Components:&lt;/b&gt;
+Mission Package: None</LongDescription>
+  <Cost>75</Cost>
+  <FrameKey>Stock/AN SEWAC</FrameKey>
+  <TemplateKey>82a1c53e-0d43-45f4-b9cf-95bbd1365c17</TemplateKey>
+  <InstalledComponents />
+  <Loadouts />
+  <ModDependencies />
+</CraftTemplate>

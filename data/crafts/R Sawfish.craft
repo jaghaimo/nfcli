@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<CraftTemplate xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DesignationSuffix>R</DesignationSuffix>
+  <Nickname>Sawfish</Nickname>
+  <LongDescription>Frame Model: Halberd
+Frame Class: Skiff
+Base Cost: 15
+Storage Size: 1
+Pad Size: 6 x 6
+PD Threat Size: 1
+Frame Integrity: 130
+Skin Thickness: 0.30
+
+Idle Speed: 20 m/s
+Cruise Speed: 45 m/s
+Cruise (HBRN) Speed: 68 m/s
+Combat Speed: 68 m/s
+
+Fuel Capacity: 1,200
+Loiter Time: 33:20
+Cruise Range: 36 km
+
+Thruster Power: 188
+Frame Mass: 30.00
+Loadout Mass: -
+Total Mass: 30.00
+
+&lt;b&gt;Components:&lt;/b&gt;
+Nose: 35mm Gun
+Mission Package: Internal Radar (Advanced)
+
+&lt;b&gt;Loadouts:&lt;/b&gt;
+Radar Picket: 1,000x &lt;noparse&gt;35mm Flechette&lt;/noparse&gt;</LongDescription>
+  <Cost>50</Cost>
+  <FrameKey>Stock/OSP Skiff</FrameKey>
+  <TemplateKey>98a85266-81b8-442a-929d-19c459540a8b</TemplateKey>
+  <InstalledComponents>
+    <SerializedCraftSocket>
+      <SocketKey>nose</SocketKey>
+      <ComponentKey>nose_gun50mm</ComponentKey>
+    </SerializedCraftSocket>
+    <SerializedCraftSocket>
+      <SocketKey>mission</SocketKey>
+      <ComponentKey>mission_advancedradar</ComponentKey>
+    </SerializedCraftSocket>
+  </InstalledComponents>
+  <Loadouts>
+    <CraftLoadout>
+      <LoadoutName>Radar Picket</LoadoutName>
+      <Elements>
+        <GeneralLoadoutElement xsi:type="SimpleAmmoSelection">
+          <SocketKey>nose</SocketKey>
+          <AmmoKey>Stock/35mm Flechette</AmmoKey>
+        </GeneralLoadoutElement>
+        <GeneralLoadoutElement xsi:type="SimpleOccupiedElement" />
+      </Elements>
+    </CraftLoadout>
+  </Loadouts>
+  <ModDependencies />
+</CraftTemplate>

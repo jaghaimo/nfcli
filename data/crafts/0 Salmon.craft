@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+<CraftTemplate xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DesignationSuffix>0</DesignationSuffix>
+  <Nickname>Salmon</Nickname>
+  <LongDescription>Frame Model: Barracuda
+Frame Class: Strike Fighter
+Base Cost: 8
+Storage Size: 1
+Pad Size: 6 x 6
+PD Threat Size: 2
+Frame Integrity: 60
+Skin Thickness: 0.30
+
+Idle Speed: 35 m/s
+Cruise Speed: 65 m/s
+Cruise (HBRN) Speed: 114 m/s
+Combat Speed: 114 m/s
+
+Fuel Capacity: 900
+Loiter Time: 10:00
+Cruise Range: 31 km
+
+Thruster Power: 150
+Frame Mass: 11.00
+Loadout Mass: -
+Total Mass: 11.00
+
+&lt;b&gt;Components:&lt;/b&gt;
+Nose: 35mm Gun
+
+&lt;b&gt;Loadouts:&lt;/b&gt;
+Multi-Role Patrol: 500x &lt;noparse&gt;35mm Flechette&lt;/noparse&gt;, 2x &lt;noparse&gt;SGM-151 Sechelt II&lt;/noparse&gt;, 6x R-1 'Perch' Rocket
+Anti-Missile Escort: 500x &lt;noparse&gt;35mm Flechette&lt;/noparse&gt;, 500x &lt;noparse&gt;35mm Flechette&lt;/noparse&gt;
+Anti-Ship Finisher: 500x &lt;noparse&gt;35mm Flechette&lt;/noparse&gt;, 2x KBU-22 Bomb</LongDescription>
+  <Cost>10</Cost>
+  <FrameKey>Stock/OSP Interceptor</FrameKey>
+  <TemplateKey>bbb18ae4-f4ef-4868-a906-64aa20ed64bd</TemplateKey>
+  <InstalledComponents>
+    <SerializedCraftSocket>
+      <SocketKey>nose</SocketKey>
+      <ComponentKey>nose_gun50mm</ComponentKey>
+    </SerializedCraftSocket>
+  </InstalledComponents>
+  <Loadouts>
+    <CraftLoadout>
+      <LoadoutName>Multi-Role Patrol</LoadoutName>
+      <Elements>
+        <GeneralLoadoutElement xsi:type="SimpleAmmoSelection">
+          <SocketKey>nose</SocketKey>
+          <AmmoKey>Stock/35mm Flechette</AmmoKey>
+        </GeneralLoadoutElement>
+        <GeneralLoadoutElement xsi:type="VariableSocketLoadout">
+          <SocketKey>wingtopin</SocketKey>
+          <ComponentKey>wingtopin_fuelpods</ComponentKey>
+          <Loadout xsi:type="SimpleOccupiedElement" />
+        </GeneralLoadoutElement>
+        <GeneralLoadoutElement xsi:type="VariableSocketLoadout">
+          <SocketKey>wingtopout</SocketKey>
+          <ComponentKey>wingtopout_s1pylons</ComponentKey>
+          <Loadout xsi:type="MissileSelection">
+            <SocketKey>wingtopout</SocketKey>
+            <MissileKeys>
+              <string>$MODMIS$/SGM-151 Sechelt II</string>
+              <string>$MODMIS$/SGM-151 Sechelt II</string>
+            </MissileKeys>
+          </Loadout>
+        </GeneralLoadoutElement>
+        <GeneralLoadoutElement xsi:type="VariableSocketLoadout">
+          <SocketKey>wingbottomin</SocketKey>
+          <ComponentKey>wingbottom_rocketpods</ComponentKey>
+          <Loadout xsi:type="SimpleAmmoSelection">
+            <SocketKey>wingbottomin</SocketKey>
+            <AmmoKey>Stock/S0 Rocket</AmmoKey>
+          </Loadout>
+        </GeneralLoadoutElement>
+        <GeneralLoadoutElement xsi:type="VariableSocketLoadout">
+          <SocketKey>wingbottomout</SocketKey>
+          <ComponentKey>wingbottomout_radarjammer</ComponentKey>
+          <Loadout xsi:type="SimpleOccupiedElement" />
+        </GeneralLoadoutElement>
+      </Elements>
+    </CraftLoadout>
+    <CraftLoadout>
+      <LoadoutName>Anti-Missile Escort</LoadoutName>
+      <Elements>
+        <GeneralLoadoutElement xsi:type="SimpleAmmoSelection">
+          <SocketKey>nose</SocketKey>
+          <AmmoKey>Stock/35mm Flechette</AmmoKey>
+        </GeneralLoadoutElement>
+        <GeneralLoadoutElement xsi:type="VariableSocketLoadout">
+          <SocketKey>wingtopin</SocketKey>
+          <ComponentKey>wingtopin_fuelpods</ComponentKey>
+          <Loadout xsi:type="SimpleOccupiedElement" />
+        </GeneralLoadoutElement>
+        <GeneralLoadoutElement xsi:type="VariableSocketLoadout">
+          <SocketKey>wingbottomin</SocketKey>
+          <ComponentKey>wingbottomin_50mmguns</ComponentKey>
+          <Loadout xsi:type="SimpleAmmoSelection">
+            <SocketKey>wingbottomin</SocketKey>
+            <AmmoKey>Stock/35mm Flechette</AmmoKey>
+          </Loadout>
+        </GeneralLoadoutElement>
+        <GeneralLoadoutElement xsi:type="VariableSocketLoadout">
+          <SocketKey>wingbottomout</SocketKey>
+          <ComponentKey>wingbottomout_radarjammer</ComponentKey>
+          <Loadout xsi:type="SimpleOccupiedElement" />
+        </GeneralLoadoutElement>
+      </Elements>
+    </CraftLoadout>
+    <CraftLoadout>
+      <LoadoutName>Anti-Ship Finisher</LoadoutName>
+      <Elements>
+        <GeneralLoadoutElement xsi:type="SimpleAmmoSelection">
+          <SocketKey>nose</SocketKey>
+          <AmmoKey>Stock/35mm Flechette</AmmoKey>
+        </GeneralLoadoutElement>
+        <GeneralLoadoutElement xsi:type="VariableSocketLoadout">
+          <SocketKey>wingtopin</SocketKey>
+          <ComponentKey>wingtopin_fuelpods</ComponentKey>
+          <Loadout xsi:type="SimpleOccupiedElement" />
+        </GeneralLoadoutElement>
+        <GeneralLoadoutElement xsi:type="VariableSocketLoadout">
+          <SocketKey>wingtopout</SocketKey>
+          <ComponentKey>wingtopout_s1pylons</ComponentKey>
+          <Loadout xsi:type="MissileSelection">
+            <SocketKey>wingtopout</SocketKey>
+            <MissileKeys />
+          </Loadout>
+        </GeneralLoadoutElement>
+        <GeneralLoadoutElement xsi:type="VariableSocketLoadout">
+          <SocketKey>wingbottomin</SocketKey>
+          <ComponentKey>wingbottomin_s2pylons</ComponentKey>
+          <Loadout xsi:type="MissileSelection">
+            <SocketKey>wingbottomin</SocketKey>
+            <MissileKeys>
+              <string>Stock/S2 Glide Bomb</string>
+              <string>Stock/S2 Glide Bomb</string>
+            </MissileKeys>
+          </Loadout>
+        </GeneralLoadoutElement>
+      </Elements>
+    </CraftLoadout>
+  </Loadouts>
+  <TemplateMissileTypes>
+    <MissileTemplate>
+      <Designation>SGM-151</Designation>
+      <Nickname>Sechelt II</Nickname>
+      <Description>DIRECT - ACT(&lt;color=#3BC81E&gt;RADAR&lt;/color&gt;) - HE FRAG</Description>
+      <LongDescription>The &lt;noparse&gt;SGM-151 Sechelt II&lt;/noparse&gt; is a size 1 direct guidance missile.  It is based on the SGM-1 body, which is a nimble general-purpose missile.  This missile will deliver a Proximity Fuze, High Explosive, Blast Fragmentation warhead.  It homes in on its target using an Active Radar seeker.
+
+Control Method: DIRECT
+Targeting Modes: &lt;b&gt;&lt;color=#3BC81E&gt;POSITION&lt;/color&gt;	&lt;color=#3BC81E&gt;TRACK&lt;/color&gt;&lt;/b&gt;
+
+Primary Seeker: ACTIVE &lt;color=#3BC81E&gt;RADAR&lt;/color&gt;
+
+Speed: 250 m/s
+Distance: 4,000 m
+Top Speed In: 0.4 s
+Turn Rate: 9.9 G
+Terminal Maneuvers: None
+
+Warhead: Proximity Fuze, High Explosive, Blast Fragmentation
+Armor: 0.18cm
+Component: 56.58hp
+Blast Radius: 40 m
+
+Body Integrity: 10
+Wall Thickness: 0.05
+Programming Time: 6 s
+Radar Signature Bonus: 100 %
+Boost-Phase Duration: 3 s
+Boost-Phase Strafe: 100 %
+Boost-Phase Turn Rate: 100 %
+Failure Rate: 0 %</LongDescription>
+      <Cost>2</Cost>
+      <BodyKey>Stock/SGM-1 Body</BodyKey>
+      <TemplateKey>05b738f5-b290-4800-89e7-00b3f73765b8</TemplateKey>
+      <BaseColor>
+        <r>1</r>
+        <g>0.4862745</g>
+        <b>0</b>
+        <a>1</a>
+      </BaseColor>
+      <StripeColor>
+        <r>0.254901975</r>
+        <g>0.254901975</g>
+        <b>0.254901975</b>
+        <a>1</a>
+      </StripeColor>
+      <Sockets>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="ActiveSeekerSettings">
+            <ComponentKey>Stock/Steerable Active Radar Seeker</ComponentKey>
+            <Mode>Targeting</Mode>
+            <RejectUnvalidated>false</RejectUnvalidated>
+            <DetectPDTargets>true</DetectPDTargets>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>1</Size>
+          <InstalledComponent xsi:type="DirectGuidanceSettings">
+            <ComponentKey>Stock/Direct Guidance</ComponentKey>
+            <Role>Defensive</Role>
+            <HotLaunch>true</HotLaunch>
+            <SelfDestructOnLost>false</SelfDestructOnLost>
+            <Maneuvers>None</Maneuvers>
+            <DefensiveDoctrine>
+              <TargetSizeMask>14</TargetSizeMask>
+              <TargetType>SmallCraft</TargetType>
+              <TargetSizeOrdering>Descending</TargetSizeOrdering>
+              <SalvoSize>1</SalvoSize>
+              <FarthestFirst>false</FarthestFirst>
+            </DefensiveDoctrine>
+            <ApproachAngleControl>true</ApproachAngleControl>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>3</Size>
+          <InstalledComponent>
+            <ComponentKey>Stock/Blast Fragmentation</ComponentKey>
+          </InstalledComponent>
+        </MissileSocket>
+        <MissileSocket>
+          <Size>4</Size>
+          <InstalledComponent xsi:type="MissileEngineSettings">
+            <ComponentKey />
+            <BalanceValues>
+              <A>0</A>
+              <B>0.34189558</B>
+              <C>0.6581044</C>
+            </BalanceValues>
+          </InstalledComponent>
+        </MissileSocket>
+      </Sockets>
+    </MissileTemplate>
+  </TemplateMissileTypes>
+  <ModDependencies />
+</CraftTemplate>
