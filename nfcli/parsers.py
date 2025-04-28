@@ -114,7 +114,10 @@ def parse_fleet(xml_data: str) -> Fleet:
         ship = get_ship(ship_data)
         fleet.add_ship(ship)
 
-    missile_templates = fleet_data.get("MissileTypes", {}).get("MissileTemplate", [])
+    missile_types = fleet_data.get("MissileTypes", {})
+    if not missile_types:
+        return fleet
+    missile_templates = missile_types.get("MissileTemplate", [])
     if not missile_templates:
         return fleet
 
