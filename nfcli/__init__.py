@@ -22,6 +22,8 @@ with open(__localization_file, 'r', encoding='utf-8-sig') as f:
     except json.JSONDecodeError as e:
         print("Error: Failed to parse localization file...", flush=True)
 
+__loc_pattern_bytes = re.compile(rb'\$([a-zA-Z0-9_]+)')
+__loc_pattern_str = re.compile(r'\$([a-zA-Z0-9_]+)')
 
 def determine_output_png(input_fleet: str) -> str:
     return Path(input_fleet).stem + ".png"
@@ -59,9 +61,12 @@ def load_path(path: str) -> str:
         return f.read()
 
 
-def localize(content: bytes) -> bytes:
-    print(type(content))
-    pattern = re.compile(rb'\$([a-zA-Z0-9_]+)')
+def localize(content):
+    if type(content) is str:
+        pattern = __loc_pattern_str
+    else: 
+        pattern = __loc_pattern_bytes
+
     def replacer(match):
         key = match.group(1)
         return __loc_data.get(key, match.group(0))
