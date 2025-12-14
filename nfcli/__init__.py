@@ -4,6 +4,7 @@ import os
 import re
 from logging.handlers import TimedRotatingFileHandler
 from pathlib import Path
+
 from rich.theme import Theme
 
 STACK_COLUMNS = 3
