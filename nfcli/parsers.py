@@ -3,7 +3,7 @@ from collections import Counter
 
 import xmltodict
 
-from nfcli import strip_tags
+from nfcli import localize, strip_tags
 from nfcli.data import Components, Hulls, Munitions, Tags
 from nfcli.models import Content, Craft, Fleet, Missile, Ship, Socket
 from nfcli.printers import Printable
@@ -131,6 +131,7 @@ def parse_fleet(xml_data: str) -> Fleet:
 
 
 def parse_any(filename: str, xml_data: str) -> Printable:
+    xml_data = localize(xml_data)
     if filename.endswith("fleet"):
         return parse_fleet(xml_data)
     elif filename.endswith("ship"):

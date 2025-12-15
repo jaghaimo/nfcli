@@ -1,3 +1,4 @@
+import json
 import logging
 import os
 import re
@@ -10,6 +11,16 @@ STACK_COLUMNS = 3
 COLUMN_WIDTH = 50
 
 nfc_theme = Theme({"orange": "#e14b00", "grey": "#474946"})
+__localization_file = "data/en_ui.json"
+with open(__localization_file, encoding="utf-8-sig") as f:
+    try:
+        __loc_json = json.load(f)
+        __loc_data = {k.encode("utf-8"): v.encode("utf-8") for k, v in __loc_json.items()}
+    except json.JSONDecodeError:
+        print("Error: Failed to parse localization file...", flush=True)
+
+__loc_pattern_bytes = re.compile(rb"\$([a-zA-Z0-9_]+)")
+__loc_pattern_str = re.compile(r"\$([a-zA-Z0-9_]+)")
 
 
 def determine_output_png(input_fleet: str) -> str:
@@ -46,6 +57,16 @@ def init_logger(filename: str | None, level: int):
 def load_path(path: str) -> str:
     with open(path) as f:
         return f.read()
+
+
+def localize(content):
+    pattern = __loc_pattern_str if type(content) is str else __loc_pattern_bytes
+
+    def replacer(match):
+        key = match.group(1)
+        return __loc_data.get(key, match.group(0))
+
+    return pattern.sub(replacer, content)
 
 
 def strip_tags(string: str) -> str:
