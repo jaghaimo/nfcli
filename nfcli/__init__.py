@@ -23,7 +23,6 @@ with open(__localization_file, encoding="utf-8-sig") as f:
         logging.error("Failed to parse localization file...")
 
 
-
 def determine_output_png(input_fleet: str) -> str:
     return Path(input_fleet).stem + ".png"
 
@@ -61,16 +60,19 @@ def load_path(path: str) -> str:
         return f.read()
 
 
-def localize(content: str):
+def clean_text(string: str) -> str:
+    """Strips tags and localizes strings."""
+    if not isinstance(string, str):
+        logging.error(f"Got {type(string)}, expected string: {string!s}")
+        return string
+
+    content = re.sub("<[^<]+?>", "", string).strip()
+
     def replacer(_match: re.Match[str]) -> str:
         key = _match.group(1)
         return __loc_data.get(key, _match.group(0))
 
     return __loc_pattern.sub(replacer, content)
-
-
-def strip_tags(string: str) -> str:
-    return re.sub("<[^<]+?>", "", string).strip()
 
 
 init_debugger()

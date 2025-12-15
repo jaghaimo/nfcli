@@ -14,7 +14,7 @@ from zipfile import ZipFile
 from fuzzywuzzy import process
 from fuzzywuzzy.fuzz import partial_token_set_ratio, token_set_ratio
 
-from nfcli import init_logger, load_path, strip_tags
+from nfcli import clean_text, init_logger, load_path
 from nfcli.data import Tags
 
 WIKI_DATA_URL = "https://gitlab.com/nebfltcom/data/-/archive/main/data-main.zip?path=wiki"
@@ -46,7 +46,7 @@ def str_to_dict(string: str | None = None) -> dict[str, str]:
         if len(tokens) != 2:
             continue
         key, value = tokens[0], tokens[1]
-        new_dict[sanitize(key)] = strip_tags(value)
+        new_dict[sanitize(key)] = clean_text(value)
     return new_dict
 
 
@@ -305,7 +305,7 @@ class Munition(Entity):
         description: list[str] = []
         details: list[str] = []
         for raw_line in description_and_details.splitlines():
-            line = strip_tags(raw_line)
+            line = clean_text(raw_line)
             if len(line) > 30:
                 description.append(line)
             else:
