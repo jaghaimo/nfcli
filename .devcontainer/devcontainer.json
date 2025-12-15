@@ -1,0 +1,60 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/docker-existing-dockerfile
+{
+	"name": "NFCli Development",
+	"build": {
+		// Sets the run context to one level up instead of the .devcontainer folder.
+		"context": "..",
+		"dockerfile": "Dockerfile",
+		"args": {
+			"REMOTE_USER": "${localEnv:USER:user}",
+			"REMOTE_UID": "${localEnv:REMOTE_UID:1000}",
+			"REMOTE_GID": "${localEnv:REMOTE_GID:1000}"
+		},
+		"options": ["-t", "nfcli:dev"]
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"charliermarsh.ruff",
+				"ms-azuretools.vscode-containers",
+				"ms-python.python",
+				"DotJoshJohnson.xml",
+				"streetsidesoftware.code-spell-checker",
+				"tamasfe.even-better-toml"
+			]
+		}
+	},
+	"postCreateCommand": "./.devcontainer/post-create.sh",
+	// All mounts should be commented on Windows host
+	"mounts": [
+		// Bind .cache outside of the container so it's persistent.
+		"type=bind,source=/home/${localEnv:USER}/.cache,target=/home/${localEnv:USER}/.cache",
+		// Bind your .ssh folder so keys are available. Some form of ssh agent forwarding might be used instead.
+		"type=bind,source=/home/${localEnv:USER}/.ssh,target=/home/${localEnv:USER}/.ssh,readonly"
+		// For Linux hosts, bind X11 socket and XAuthority (for GUI apps to work). Windows host should be fine.
+		// "type=bind,source=/tmp/.X11-unix,target=/tmp/.X11-unix,consistency=cached",
+		// "type=bind,source=${localEnv:XAUTHORITY},target=${localEnv:XAUTHORITY},consistency=cached"
+	],
+	// Make X apps work (GUI).
+	// XAUTHORITY is not needed for Wayland to work; might still need some form of `xhost` command.
+	// If it doesn't work:
+	//  On Linux host: run `xhost +`.
+	//  On Windows host: start VcXsrv with no auth required.
+    // "containerEnv": {
+    //     "DISPLAY": "${localEnv:DISPLAY}",
+	// 	"XAUTHORITY": "${localEnv:XAUTHORITY}"
+    // }
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Configure tool-specific properties.
+	// "customizations": {},
+
+	// Uncomment to connect as an existing user other than the container default. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "devcontainer"
+}

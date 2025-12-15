@@ -1,3 +1,34 @@
+[project]
+name = "nfcli"
+version = "1.19.0"
+description = "A CLI tool to pretty print fleet and ship files to console."
+requires-python = ">=3.10,<4.0"
+authors = [{"name" = "Jaghaimo", "email" = "1764586+jaghaimo@users.noreply.github.com"}]
+dependencies = [
+    "CairoSVG",
+    "arrow",
+    "fuzzywuzzy",
+    "inflect",
+    "py-cord",
+    "python-dotenv",
+    "rich",
+    "steam",
+    "xmltodict",
+]
+
+[dependency-groups]
+dev = [
+    "debugpy",
+    "ruff",
+]
+
+[tool.poetry.scripts]
+nfcli = "nfcli.__main__:main"
+bot = "nfcli.bot:start"
+steam = "nfcli.steam:cache_workshop_files"
+tags = "nfcli.wiki:update_tags"
+wiki = "nfcli.wiki:update_wiki"
+
 [tool.ruff]
 line-length = 120
 lint.select = [
@@ -14,35 +45,6 @@ lint.select = [
     "PERF",
     "RUF",
 ]
-
-[tool.poetry]
-name = "nfcli"
-version = "1.18.3"
-description = "A CLI tool to pretty print fleet and ship files to console."
-authors = ["Jaghaimo <1764586+jaghaimo@users.noreply.github.com>"]
-
-[tool.poetry.dependencies]
-python = "^3.10"
-CairoSVG = "^2"
-arrow = "^1"
-fuzzywuzzy = "^0"
-inflect = "^6"
-py-cord = "^2"
-python-dotenv = "^0"
-rich = "^12"
-steam = "^1"
-xmltodict = "^0"
-
-[tool.poetry.dev-dependencies]
-debugpy = "^1"
-ruff = "^0"
-
-[tool.poetry.scripts]
-nfcli = "nfcli.__main__:main"
-bot = "nfcli.bot:start"
-steam = "nfcli.steam:cache_workshop_files"
-tags = "nfcli.wiki:update_tags"
-wiki = "nfcli.wiki:update_wiki"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
