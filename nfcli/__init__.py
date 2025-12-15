@@ -11,15 +11,17 @@ STACK_COLUMNS = 3
 COLUMN_WIDTH = 50
 
 nfc_theme = Theme({"orange": "#e14b00", "grey": "#474946"})
+
+# Early localization support
 __localization_file = "data/en_ui.json"
+__loc_pattern = re.compile(r"\$([a-zA-Z0-9_]+)")
+__loc_data = {}
 with open(__localization_file, encoding="utf-8-sig") as f:
     try:
-        __loc_json = json.load(f)
-        __loc_data = {k.encode("utf-8"): v.encode("utf-8") for k, v in __loc_json.items()}
+        __loc_data = json.load(f)
     except json.JSONDecodeError:
         logging.error("Failed to parse localization file...")
 
-__loc_pattern = re.compile(r"\$([a-zA-Z0-9_]+)")
 
 
 def determine_output_png(input_fleet: str) -> str:
@@ -60,9 +62,9 @@ def load_path(path: str) -> str:
 
 
 def localize(content: str):
-    def replacer(match: re.Match[str]):
-        key = match.group(1)
-        return __loc_data.get(key, match.group(0))
+    def replacer(_match: re.Match[str]) -> str:
+        key = _match.group(1)
+        return __loc_data.get(key, _match.group(0))
 
     return __loc_pattern.sub(replacer, content)
 
