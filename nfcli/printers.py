@@ -106,7 +106,7 @@ class ShipPrinter(Printer):
             tree.add(Text(f"{content.name} x{content.quantity}", overflow="ignore"), style="i d")
 
     def get_sockets(self, title: str, components: list[Component], color: str = "white") -> Group:
-        elements = [Rule(Text(f"{title}", style="orange"), style="orange")]
+        elements: list[RenderableType] = [Rule(Text(f"{title}", style="orange"), style="orange")]
         for component in components:
             slot_number = str(component.slot_number)
             just_size = 7 if int(slot_number) < 10 else 6

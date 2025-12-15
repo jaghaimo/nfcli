@@ -2,7 +2,7 @@
 name = "nfcli"
 version = "1.19.0"
 description = "A CLI tool to pretty print fleet and ship files to console."
-requires-python = ">=3.10,<4.0"
+requires-python = "==3.10.*"
 authors = [{"name" = "Jaghaimo", "email" = "1764586+jaghaimo@users.noreply.github.com"}]
 dependencies = [
     "CairoSVG",

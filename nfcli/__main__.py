@@ -22,7 +22,7 @@ def get_parser() -> argparse.ArgumentParser:
     return parser
 
 
-def parse_args() -> dict:
+def parse_args() -> argparse.Namespace:
     parser = get_parser()
     args = parser.parse_args()
     display_level = logging.DEBUG if args.debug else logging.WARNING

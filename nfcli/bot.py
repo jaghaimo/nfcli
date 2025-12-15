@@ -30,7 +30,7 @@ load_dotenv()
 
 DISCORD_GRACE_TIME = 365
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
-DISCORD_CHANNEL = int(os.getenv("DISCORD_CHANNEL"))
+DISCORD_CHANNEL = int(os.getenv("DISCORD_CHANNEL", 0))
 DISCORD_GUILDS = [int(guild) for guild in os.getenv("DISCORD_GUILD", "").split(",")]
 MAX_UPLOAD = 0.5 * 1024 * 1024
 
@@ -52,12 +52,13 @@ def is_supported(filename: str) -> bool:
     return any(filename.endswith(extension) for extension in extensions)
 
 
-def get_inactive_guilds() -> None:
+def get_inactive_guilds() -> list[int]:
     inactive_guilds = fetch_inactive_guilds(connection, cut_off_days=DISCORD_GRACE_TIME)
     logging.info(f"Protected guilds: {DISCORD_GUILDS}")
     logging.info(f"Inactive guilds: {len(inactive_guilds)}")
     for guild, last_used in inactive_guilds:
         logging.info(f"Inactive guild {guild} (last used on {last_used})")
+
     return [guild for guild, _ in inactive_guilds if guild not in DISCORD_GUILDS]
 
 
@@ -97,7 +98,7 @@ async def process_uploads(message: Message):
         insert_usage_data(connection, message.guild.id, message.author.id, files)
     for file in valid_files:
         xml_data = await file.read()
-        await process_file(message, xml_data, file.filename, with_fleet_file=False)
+        await process_file(message, xml_data.decode(), file.filename, with_fleet_file=False)
 
 
 async def process_workshop(message: Message, workshop_id: int):
@@ -110,7 +111,7 @@ async def process_workshop(message: Message, workshop_id: int):
             await process_file(message, xml_data, input_file, with_fleet_file=True)
     except RuntimeError as exception:
         logging.error(exception)
-        await message.reply(exception)
+        await message.reply(f"Sorry, I couldn't get details of a workshop item {workshop_id}.")
 
 
 async def process_workshops(message: Message):

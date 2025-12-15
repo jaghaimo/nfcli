@@ -102,7 +102,7 @@ def fetch_usage_servers(connection: Connection, days: int = 30) -> Guilds:
     )
     cursor = execute_query(connection, fetch_usage_servers)
     row = fetch_row(cursor, [0, 0, 0, 0])
-    return Guilds(*row, days, user)
+    return Guilds(*row, days, user) # type: ignore
 
 
 def fetch_usage_users(connection: Connection, days: int = 30) -> User:
@@ -112,13 +112,13 @@ def fetch_usage_users(connection: Connection, days: int = 30) -> User:
     )
     cursor = execute_query(connection, fetch_usage_users)
     row = fetch_row(cursor, [0, 0, 0, 0, 0])
-    return User(*row, days)
+    return User(*row, days) # type: ignore
 
 
-def fetch_inactive_guilds(connection: Connection, *args, cut_off_days: int) -> list[int, datetime]:
+def fetch_inactive_guilds(connection: Connection, *args, cut_off_days: int) -> list[tuple[int, datetime]]:
     fetch_inactive_servers = (
         "SELECT guild, MAX(timestamp) AS last_used FROM usage GROUP BY guild"
         f" HAVING last_used < DATETIME('now', '-{cut_off_days} day') ORDER BY last_used"
     )
     cursor = execute_query(connection, fetch_inactive_servers)
-    return fetch_all(cursor, [])
+    return fetch_all(cursor, []) # type: ignore

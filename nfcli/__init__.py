@@ -17,10 +17,9 @@ with open(__localization_file, encoding="utf-8-sig") as f:
         __loc_json = json.load(f)
         __loc_data = {k.encode("utf-8"): v.encode("utf-8") for k, v in __loc_json.items()}
     except json.JSONDecodeError:
-        print("Error: Failed to parse localization file...", flush=True)
+        logging.error("Failed to parse localization file...")
 
-__loc_pattern_bytes = re.compile(rb"\$([a-zA-Z0-9_]+)")
-__loc_pattern_str = re.compile(r"\$([a-zA-Z0-9_]+)")
+__loc_pattern = re.compile(r"\$([a-zA-Z0-9_]+)")
 
 
 def determine_output_png(input_fleet: str) -> str:
@@ -31,7 +30,8 @@ def init_debugger():
     if os.getenv("DEBUG") == "True":
         import multiprocessing
 
-        if multiprocessing.current_process().pid > 1:
+        current_process_pid = multiprocessing.current_process().pid
+        if current_process_pid is not None and current_process_pid > 1:
             import debugpy
 
             debugpy.listen(("localhost", 9000))
@@ -59,14 +59,12 @@ def load_path(path: str) -> str:
         return f.read()
 
 
-def localize(content):
-    pattern = __loc_pattern_str if type(content) is str else __loc_pattern_bytes
-
-    def replacer(match):
+def localize(content: str):
+    def replacer(match: re.Match[str]):
         key = match.group(1)
         return __loc_data.get(key, match.group(0))
 
-    return pattern.sub(replacer, content)
+    return __loc_pattern.sub(replacer, content)
 
 
 def strip_tags(string: str) -> str:
