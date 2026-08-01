@@ -1,10 +1,10 @@
 import logging
 import os
 import subprocess
-from distutils.dir_util import remove_tree
 from glob import glob
 from os import path
 from posixpath import dirname
+from shutil import rmtree
 from urllib.parse import parse_qs, urlparse
 
 from dotenv import load_dotenv
@@ -81,7 +81,7 @@ def invalidate_cache(workshop_items: dict[int, dict]) -> None:
         mtime = os.path.getmtime(workshop_path)
         if mtime < workshop_item["time_updated"]:
             logging.info(f"Invalidating workshop item {workshop_id}.")
-            remove_tree(workshop_path)
+            rmtree(workshop_path)
 
 
 def is_valid(tags: list[dict]) -> bool:

@@ -1,12 +1,13 @@
 [project]
 name = "nfcli"
-version = "1.19.2"
+version = "1.20.0"
 description = "A CLI tool to pretty print fleet and ship files to console."
-requires-python = "==3.10.*"
+requires-python = ">=3.13,<3.14"
 authors = [{"name" = "Jaghaimo", "email" = "1764586+jaghaimo@users.noreply.github.com"}]
 dependencies = [
     "CairoSVG",
     "arrow",
+    "audioop-lts",
     "fuzzywuzzy",
     "inflect",
     "py-cord",
@@ -16,18 +17,16 @@ dependencies = [
     "xmltodict",
 ]
 
-[dependency-groups]
-dev = [
-    "debugpy",
-    "ruff",
-]
-
 [tool.poetry.scripts]
 nfcli = "nfcli.__main__:main"
 bot = "nfcli.bot:start"
 steam = "nfcli.steam:cache_workshop_files"
 tags = "nfcli.wiki:update_tags"
 wiki = "nfcli.wiki:update_wiki"
+
+[tool.poetry.group.dev.dependencies]
+debugpy = "*"
+ruff = "*"
 
 [tool.ruff]
 line-length = 120

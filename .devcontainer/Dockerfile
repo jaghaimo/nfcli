@@ -1,7 +1,7 @@
 ## Docker image for development and debugging
 
 # For more information, please refer to https://aka.ms/vscode-docker-python
-FROM python:3.10-slim
+FROM python:3.13-slim
 
 # Keeps Python from generating .pyc files in the container
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -18,6 +18,7 @@ RUN apt update && \
     gdb \
     git \
     python3-dbg \
+    python3-poetry \
     python3-tk \
     sudo
 
