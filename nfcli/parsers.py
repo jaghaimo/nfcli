@@ -9,7 +9,9 @@ from nfcli.models import Content, Craft, Fleet, Missile, Ship, Socket
 from nfcli.printers import Printable
 
 
-def get_content(content_data: dict, missile_lookup: dict | None = None) -> list[Content]:
+def get_content(
+    content_data: dict, missile_lookup: dict | None = None, craft_lookup: dict | None = None
+) -> list[Content]:
     all_munitions = []
     for key in ["MissileLoad", "Load"]:
         if content_data.get(key):
@@ -23,7 +25,10 @@ def get_content(content_data: dict, missile_lookup: dict | None = None) -> list[
         all_hangar_loads = Counter(
             craft["CraftTemplateKey"] for craft in content_data["StoredCraft"]["SavedStoredCraft"]
         )
-        all_crafts = [Content(craft, quantity) for craft, quantity in all_hangar_loads.items()]
+        all_crafts = [
+            Content(_resolve_craft(craft_key, craft_lookup), quantity)
+            for craft_key, quantity in all_hangar_loads.items()
+        ]
 
     return all_munitions + all_crafts
 
@@ -32,6 +37,12 @@ def _resolve_munition(munition_key: str, missile_lookup: dict | None) -> str:
     if missile_lookup and munition_key in missile_lookup:
         return missile_lookup[munition_key]
     return Munitions.get_name_or_key(munition_key)
+
+
+def _resolve_craft(craft_key: str, craft_lookup: dict | None) -> str:
+    if craft_lookup and craft_key in craft_lookup:
+        return craft_lookup[craft_key]
+    return craft_key
 
 
 def _build_missile_lookup(missile_types: dict) -> dict[str, str]:
@@ -49,15 +60,34 @@ def _build_missile_lookup(missile_types: dict) -> dict[str, str]:
     return lookup
 
 
-def get_socket(socket_data: dict, missile_lookup: dict | None = None) -> Socket:
+def _build_craft_lookup(craft_types: dict) -> dict[str, str]:
+    lookup: dict[str, str] = {}
+    if not craft_types:
+        return lookup
+    craft_templates = craft_types.get("CraftTemplate", [])
+    for craft_template in craft_templates:
+        key = craft_template.get("SaveKey", "")
+        designation = craft_template.get("DesignationSuffix", "")
+        nickname = craft_template.get("Nickname", "")
+        full_name = f"{designation} {nickname}".strip()
+        if key and full_name:
+            lookup[key] = full_name
+    return lookup
+
+
+def get_socket(
+    socket_data: dict, missile_lookup: dict | None = None, craft_lookup: dict | None = None
+) -> Socket:
     name = socket_data["ComponentName"]
     content = []
     if "ComponentData" in socket_data:
-        content = get_content(socket_data["ComponentData"], missile_lookup)
+        content = get_content(socket_data["ComponentData"], missile_lookup, craft_lookup)
     return Socket(socket_data["Key"], Components.get_name_or_key(name), content, Tags.get(name))
 
 
-def get_ship(ship_data: dict, missile_lookup: dict | None = None) -> Ship:
+def get_ship(
+    ship_data: dict, missile_lookup: dict | None = None, craft_lookup: dict | None = None
+) -> Ship:
     hull = ship_data["HullType"]
     ship = Ship(
         ship_data["Name"],
@@ -70,7 +100,7 @@ def get_ship(ship_data: dict, missile_lookup: dict | None = None) -> Ship:
     socket_map = ship_data["SocketMap"]
     hull_socket = socket_map["HullSocket"] if socket_map else []
     for socket_data in hull_socket:
-        socket = get_socket(socket_data, missile_lookup)
+        socket = get_socket(socket_data, missile_lookup, craft_lookup)
         ship.add_socket(socket)
 
     return ship
@@ -119,16 +149,19 @@ def parse_missile(xml_data: str) -> Missile:
 
 def parse_ship(xml_data: str) -> Ship:
     xmld = xmltodict.parse(
-        xml_data, force_list=("MagSaveData", "HullSocket", "MissileTemplate", "SavedStoredCraft")
+        xml_data,
+        force_list=("MagSaveData", "HullSocket", "MissileTemplate", "CraftTemplate", "SavedStoredCraft"),
     )
     ship_data: dict = xmld.get("Ship")  # type: ignore
     missile_lookup = _build_missile_lookup(ship_data.get("TemplateMissileTypes", {}))
-    return get_ship(ship_data, missile_lookup)
+    craft_lookup = _build_craft_lookup(ship_data.get("TemplateSpacecraftTypes", {}))
+    return get_ship(ship_data, missile_lookup, craft_lookup)
 
 
 def parse_fleet(xml_data: str) -> Fleet:
     xmld = xmltodict.parse(
-        xml_data, force_list=("MagSaveData", "Ship", "HullSocket", "MissileTemplate", "SavedStoredCraft")
+        xml_data,
+        force_list=("MagSaveData", "Ship", "HullSocket", "MissileTemplate", "CraftTemplate", "SavedStoredCraft"),
     )
     fleet_data: dict = xmld.get("Fleet")  # type: ignore
     fleet = Fleet(fleet_data["Name"], fleet_data["TotalPoints"], fleet_data["FactionKey"])
@@ -141,10 +174,12 @@ def parse_fleet(xml_data: str) -> Fleet:
             missile = get_missile(missile_template)
             fleet.add_missile(missile)
 
+    craft_lookup = _build_craft_lookup(fleet_data.get("CraftTypes", {}))
+
     logging.debug("Parsing ships.")
     for idx, ship_data in enumerate(fleet_data["Ships"]["Ship"]):
         logging.debug(f"Parsing ship #{idx!s}")
-        ship = get_ship(ship_data, missile_lookup)
+        ship = get_ship(ship_data, missile_lookup, craft_lookup)
         fleet.add_ship(ship)
 
     return fleet
