@@ -1,15 +1,16 @@
 {
-  "key": "Stock/Container Hauler Refit",
-  "name": "'Moorline' class Line Ship",
+  "key": "Stock/Container Hauler",
+  "name": "Moorline-class Line Ship",
   "mounts": {
-    "uLHDwjLFekuYaY3h0JwZoQ": "20x5x30",
     "44SMwZSbRkOQyQmJ458Y1Q": "20x5x30",
+    "uLHDwjLFekuYaY3h0JwZoQ": "20x5x30",
     "VkODw--0zk-K4FkajpPjwQ": "20x5x20",
     "F-nHNZm4Z0WZMJakJAwlPw": "20x5x20",
-    "6HbbAtLFGUOi-kq06ErQdA": "6x4x6",
-    "3WEnDKibY0-WJvtq9-tmuA": "6x4x6",
-    "y70HHuLWd0uphO2H-hvZGQ": "3x4x5",
+    "y70HHuLWd0uphO2H-hvZGQ": "3x4x3",
     "NjfVPFfJqUmkw-AR_2KBjg": "3x4x3",
+    "TcS59cU8X0aEm3ds7Nqixg": "3x4x3",
+    "3WEnDKibY0-WJvtq9-tmuA": "3x4x3",
+    "6HbbAtLFGUOi-kq06ErQdA": "3x4x3",
     "bF4isjieO0m0PsOlE-zgkQ": "3x4x3",
     "KuKTAiCM50uIV7XV1S8wrw": "3x4x3"
   },
