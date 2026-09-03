@@ -1,6 +1,6 @@
 {
-  "key": "KUIPER/Helendir Class Support Cruiser",
-  "name": "'Helendir' class Light Cruiser",
+  "key": "KUIPER/Helendir Class Line Carrier",
+  "name": "Helendir-class Line Carrier",
   "mounts": {
     "c3_1": "3x4x5",
     "c3_2": "3x4x5",
@@ -10,14 +10,14 @@
     "c1_2": "2x2x2",
     "c1_3": "2x2x2",
     "c1_4": "2x2x2",
-    "c1_5": "2x2x2",
-    "c1_6": "2x2x2",
-    "c1_7": "2x2x2"
+    "c1_5": "3x2x3",
+    "c1_6": "3x2x3",
+    "c0_1_LC": "1x4x1",
+    "c0_2_LC": "1x4x1"
   },
   "compartments": {
     "lc_1": "6x1x8",
-    "lc_2": "6x1x6",
-    "lc_3": "6x1x6",
+    "lc_2": "6x2x12",
     "lc_4": "6x1x6",
     "lc_5": "6x1x6",
     "mc_1": "4x1x6",
@@ -25,17 +25,20 @@
     "mc_3": "4x1x6",
     "mc_4": "4x1x6",
     "mc_5": "4x1x6",
-    "sc_1": "3x1x3"
+    "sc_1": "3x1x3",
+    "stkdn_h": "18x2x8"
   },
   "modules": {
-    "lm_1": "6x6x6",
-    "lm_2": "6x6x6",
-    "lm_3": "5x5x5",
+    "lm_1_h": "6x6x6",
+    "lm_2_h": "6x6x6",
+    "lm_3_h": "10x8x10",
     "mm_1": "3x3x3",
     "mm_2": "3x3x3",
     "mm_3": "3x3x3",
     "mm_4": "3x3x3",
     "sm_1": "2x2x2",
-    "sm_2": "2x2x2"
+    "sm_2": "2x2x2",
+    "RM_1": "1x1x1",
+    "RM_2": "1x1x1"
   }
 }
