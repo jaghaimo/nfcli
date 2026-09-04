@@ -1,0 +1,14 @@
+{
+  "key": "Stock/Civ Bulk Hauler",
+  "name": "Bulk Hauler-class Freighter",
+  "mounts": {
+    
+  },
+  "compartments": {
+    "fYoX2amTl0KrZurPKjU9gg": "8x3x8"
+  },
+  "modules": {
+    "vOzzHo4KfE60wZ3Q1s38GA": "12x12x12",
+    "6evWdeLGT0uALe075-nhgw": "6x6x6"
+  }
+}

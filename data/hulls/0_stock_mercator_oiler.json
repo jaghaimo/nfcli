@@ -1,0 +1,25 @@
+{
+  "key": "Stock/Mercator Oiler",
+  "name": "Mercator-class Replenishment Oiler",
+  "mounts": {
+    "6m25IAPqFU6YR1FKZ3sVfw": "2x2x2",
+    "zj2e08c_nkCNCiAFScwFAA": "2x2x2",
+    "qC_PIPR8IEKVPzirQqyz-Q": "3x4x3"
+  },
+  "compartments": {
+    "0hzyLaTpjU6liioex_QMUA": "6x1x8",
+    "sH4zHcqcYk68AwyKCvXOvQ": "6x1x8",
+    "v0X7TpDJNU2wKarfkodH8g": "6x1x8",
+    "v-76NesdfkCzWmt3UOUhSw": "6x1x8",
+    "Um7UpGyvoUGf7YIZExq9_g": "8x3x15",
+    "iSRU6EO6z0yi4oI-FrWiAg": "8x3x15",
+    "T4liD7QFhkOXGQRiMnDVjA": "8x3x15",
+    "ALJoxl1-aUaEl9nWWIsy5g": "8x3x15"
+  },
+  "modules": {
+    "af2t3NDH8UamxOeiXa5wKw": "8x8x8",
+    "95roHqyNO0ySgmfQ24bAkQ": "12x8x10",
+    "RNo6mRxarUyE1DolKjxMoA": "3x3x3",
+    "VFFXfVSABEKM7tahCncIkQ": "3x3x3"
+  }
+}
