@@ -174,7 +174,13 @@ def parse_fleet(xml_data: str) -> Fleet:
             missile = get_missile(missile_template)
             fleet.add_missile(missile)
 
-    craft_lookup = _build_craft_lookup(fleet_data.get("CraftTypes", {}))
+    craft_types = fleet_data.get("CraftTypes", {})
+    craft_lookup = _build_craft_lookup(craft_types)
+    if craft_types:
+        craft_templates = craft_types.get("CraftTemplate", [])
+        for craft_template in craft_templates:
+            craft = get_craft(craft_template)
+            fleet.add_craft(craft)
 
     logging.debug("Parsing ships.")
     for idx, ship_data in enumerate(fleet_data["Ships"]["Ship"]):

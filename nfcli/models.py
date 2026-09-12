@@ -328,6 +328,7 @@ class Fleet(Named, Printable):
         self.faction = faction
         self._ships: list[Ship] = []
         self._missiles: list[Missile] = []
+        self._crafts: list[Craft] = []
 
     @property
     def ships(self) -> list[Ship]:
@@ -360,7 +361,7 @@ class Fleet(Named, Printable):
 
     @property
     def text(self) -> str:
-        combined = self.ship_list + self.missile_list
+        combined = self.ship_list + self.missile_list + self.craft_list
         if len(combined) > 2000:
             return (
                 f"{self.title}\n\n*Skipping fleet analysis due to Discord message size limitation."
@@ -390,11 +391,34 @@ class Fleet(Named, Printable):
         )
         return f"{title}:\n```yaml\n" + "\n".join(missile_list) + "\n```"
 
+    @property
+    def crafts(self) -> list[Craft]:
+        return sorted(self._crafts, key=lambda craft: craft.full_name)
+
+    @property
+    def craft_list(self) -> str:
+        if not self._crafts:
+            return ""
+        longest_name = max(len(craft.full_name) for craft in self.crafts)
+        craft_list = [
+            f"{craft.full_name.rjust(longest_name)} : {craft.general} [{craft.cost}pts]"
+            for craft in self.crafts
+        ]
+        title = (
+            "This fleet uses only one craft type"
+            if len(craft_list) == 1
+            else f"This fleet uses {len(craft_list)} different craft types"
+        )
+        return f"{title}:\n```yaml\n" + "\n".join(craft_list) + "\n```"
+
     def add_ship(self, ship: Ship) -> None:
         self._ships.append(ship)
 
     def add_missile(self, missile: Missile) -> None:
         self._missiles.append(missile)
+
+    def add_craft(self, craft: Craft) -> None:
+        self._crafts.append(craft)
 
     def print(self, console: Console, with_title: bool, mods: list[str] = []) -> None:
         print_any(FleetPrinter(console), self, mods, with_title)
