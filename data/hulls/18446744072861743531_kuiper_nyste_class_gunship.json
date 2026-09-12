@@ -1,0 +1,19 @@
+{
+  "key": "KUIPER/Nyste Class Gunship",
+  "name": "Nyste-class Gunship",
+  "mounts": {
+    "Nyste_c0_1": "1x6x1",
+    "c0_3": "1x1x7",
+    "c0_6": "1x1x7"
+  },
+  "compartments": {
+    "lc_1": "4x1x5",
+    "sc_1": "3x1x3",
+    "sc_2": "3x1x3",
+    "sc_3": "3x1x3"
+  },
+  "modules": {
+    "Nyste_sm_1": "5x3x4",
+    "sm_2": "3x3x3"
+  }
+}

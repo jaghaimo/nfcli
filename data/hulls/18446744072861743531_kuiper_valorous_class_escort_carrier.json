@@ -1,0 +1,41 @@
+{
+  "key": "KUIPER/Valorous Class Escort Carrier",
+  "name": "Valorous-class Escort Carrier",
+  "mounts": {
+    "c4_1_cv": "6x4x6",
+    "c2_1": "3x3x3",
+    "c2_2": "3x3x3",
+    "c1_1": "2x2x2",
+    "c1_2": "2x2x2",
+    "c1_3": "2x2x2",
+    "c1_4": "2x2x2",
+    "c1_5": "2x2x2",
+    "c0_0": "4x12x4"
+  },
+  "compartments": {
+    "mc_6": "6x1x4",
+    "mc_5": "6x1x4",
+    "mc_4": "6x1x4",
+    "mc_3": "6x1x4",
+    "mc_2": "6x1x4",
+    "mc_1": "6x1x4",
+    "mc_0": "6x1x4",
+    "hc_1": "12x3x12",
+    "hc_2": "12x3x18",
+    "hc_3": "12x3x12",
+    "hc_4": "6x2x24",
+    "lm_1": "6x1x8"
+  },
+  "modules": {
+    "mm_1": "6x6x6",
+    "mm_2": "6x6x6",
+    "sm_1": "3x3x3",
+    "sm_2": "3x3x3",
+    "sm_5": "3x3x3",
+    "sm_6": "3x3x3",
+    "m_1": "2x2x2",
+    "m_2": "2x2x2",
+    "RM_1": "1x1x1",
+    "RM_2": "1x1x1"
+  }
+}
