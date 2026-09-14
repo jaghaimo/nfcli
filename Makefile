@@ -16,23 +16,23 @@ clean:
 	rm -f *.log.*
 
 check:
-	poetry run ruff check nfcli/
+	uv run ruff check nfcli/
 
 format:
-	poetry run ruff format nfcli/
-	poetry run ruff check --fix nfcli/
+	uv run ruff format nfcli/
+	uv run ruff check --fix nfcli/
 
 cache: steam wiki
 
 steam:
-	poetry run steam
+	uv run steam
 
 update:
-	poetry update
+	uv update
 	pre-commit autoupdate
 
 wiki:
-	poetry run wiki
+	uv run wiki
 
 crafts: $(CRAFTS)
 fleets: $(FLEETS)
@@ -40,4 +40,4 @@ missiles: $(MISSILES)
 ships: $(SHIPS)
 
 $(SOURCES):
-	poetry run nfcli -i "$@" -w
+	uv run nfcli -i "$@" -w
