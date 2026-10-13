@@ -1,9 +1,13 @@
 [project]
 name = "nfcli"
-version = "1.20.0"
+version = "1.20.1"
 description = "A CLI tool to pretty print fleet and ship files to console."
+authors = [{ name = "Jaghaimo", email = "1764586+jaghaimo@users.noreply.github.com" }]
 requires-python = ">=3.13,<3.14"
-authors = [{"name" = "Jaghaimo", "email" = "1764586+jaghaimo@users.noreply.github.com"}]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+]
 dependencies = [
     "CairoSVG",
     "arrow",
@@ -17,16 +21,21 @@ dependencies = [
     "xmltodict",
 ]
 
-[tool.poetry.scripts]
+[project.scripts]
 nfcli = "nfcli.__main__:main"
 bot = "nfcli.bot:start"
 steam = "nfcli.steam:cache_workshop_files"
 tags = "nfcli.wiki:update_tags"
 wiki = "nfcli.wiki:update_wiki"
 
-[tool.poetry.group.dev.dependencies]
-debugpy = "*"
-ruff = "*"
+[dependency-groups]
+dev = [
+    "debugpy",
+    "ruff",
+]
+
+[tool.uv]
+default-groups = "all"
 
 [tool.ruff]
 line-length = 120
@@ -46,5 +55,5 @@ lint.select = [
 ]
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
