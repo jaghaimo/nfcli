@@ -75,9 +75,7 @@ def _build_craft_lookup(craft_types: dict) -> dict[str, str]:
     return lookup
 
 
-def get_socket(
-    socket_data: dict, missile_lookup: dict | None = None, craft_lookup: dict | None = None
-) -> Socket:
+def get_socket(socket_data: dict, missile_lookup: dict | None = None, craft_lookup: dict | None = None) -> Socket:
     name = socket_data["ComponentName"]
     content = []
     if "ComponentData" in socket_data:
@@ -85,9 +83,7 @@ def get_socket(
     return Socket(socket_data["Key"], Components.get_name_or_key(name), content, Tags.get(name))
 
 
-def get_ship(
-    ship_data: dict, missile_lookup: dict | None = None, craft_lookup: dict | None = None
-) -> Ship:
+def get_ship(ship_data: dict, missile_lookup: dict | None = None, craft_lookup: dict | None = None) -> Ship:
     hull = ship_data["HullType"]
     ship = Ship(
         ship_data["Name"],
