@@ -361,18 +361,20 @@ class Fleet(Named, Printable):
 
     @property
     def text(self) -> str:
-        combined = self.ship_list + self.missile_list + self.craft_list
+        sections = [self.ship_list, self.missile_list, self.craft_list]
+        combined = "\n\n".join(section for section in sections if section)
         if len(combined) > 2000:
             return (
                 f"{self.title}\n\n*Skipping fleet analysis due to Discord message size limitation."
                 " Yes, it would need more than 2000 characters.*\n"
             )
+        logging.debug(combined)
         return combined
 
     @property
     def ship_list(self) -> str:
         longest_name = max(len(ship.name) for ship in self.ships)
-        ship_list = [f"{ship.name.rjust(longest_name)} : {ship.hull} [{ship.tags}]" for ship in self.ships]
+        ship_list = [f"{ship.name.ljust(longest_name)} : {ship.hull} [{ship.tags}]" for ship in self.ships]
         return f"{self.title}:\n```yaml\n" + "\n".join(ship_list) + "\n```"
 
     @property
@@ -381,15 +383,19 @@ class Fleet(Named, Printable):
             return ""
         longest_name = max(len(missile.full_name) for missile in self.missiles)
         missile_list = [
-            f"{missile.full_name.rjust(longest_name)} : {missile.description} [{missile.cost}pts]"
+            f"{missile.full_name.ljust(longest_name)} : {missile.description} [{missile.cost}pts]"
             for missile in self.missiles
         ]
-        title = (
-            "This fleet uses only one missile type"
-            if len(missile_list) == 1
-            else f"This fleet uses {len(missile_list)} different missile types"
-        )
+        title = self.missile_title
+        logging.debug(f"{title}:\n```yaml\n" + "\n".join(missile_list) + "\n```")
         return f"{title}:\n```yaml\n" + "\n".join(missile_list) + "\n```"
+
+    @property
+    def missile_title(self) -> str:
+        count = len(self._missiles)
+        if count == 1:
+            return "This fleet uses only one missile type"
+        return f"This fleet uses {count} different missile types"
 
     @property
     def crafts(self) -> list[Craft]:
@@ -401,7 +407,7 @@ class Fleet(Named, Printable):
             return ""
         longest_name = max(len(craft.full_name) for craft in self.crafts)
         craft_list = [
-            f"{craft.full_name.rjust(longest_name)} : {craft.general} [{craft.cost}pts]"
+            f"{craft.full_name.ljust(longest_name)} : {craft.general} [{craft.cost}pts]"
             for craft in self.crafts
         ]
         title = (
@@ -409,6 +415,7 @@ class Fleet(Named, Printable):
             if len(craft_list) == 1
             else f"This fleet uses {len(craft_list)} different craft types"
         )
+        logging.debug(f"{title}:\n```yaml\n" + "\n".join(craft_list) + "\n```")
         return f"{title}:\n```yaml\n" + "\n".join(craft_list) + "\n```"
 
     def add_ship(self, ship: Ship) -> None:
