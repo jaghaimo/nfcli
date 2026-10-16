@@ -230,10 +230,28 @@ class Craft(Named, Printable):
         self.avionics = "\n".join(full_stats[avionics_start:4])
 
         components_start = next(
-            (index for index, stats in enumerate(full_stats) if "Components:" in stats),
-            len(full_stats),
+            (index for index, stats in enumerate(full_stats) if stats.startswith("Components:")),
+            None,
         )
-        self.loadouts = "\n".join(full_stats[components_start:])
+        if components_start is None:
+            loadouts_start = next(
+                (index for index, stats in enumerate(full_stats) if stats.startswith("Loadouts:")),
+                len(full_stats),
+            )
+            self.loadouts = "\n\n".join(full_stats[loadouts_start:])
+        else:
+            component_lines = [
+                line.partition(":")[2].strip()
+                for line in full_stats[components_start].splitlines()[1:]
+                if line.strip()
+            ]
+            component_summary = "Components: " + ", ".join(component_lines)
+            if component_lines:
+                component_summary += "."
+            following_sections = "\n\n".join(full_stats[components_start + 1 :])
+            self.loadouts = component_summary
+            if following_sections:
+                self.loadouts += "\n" + following_sections
 
         self.additional_info = "\n".join(full_stats[avionics_start + 3 :])
 
