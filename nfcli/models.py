@@ -163,7 +163,7 @@ class Missile(Named, Printable):
     """Models content of a missile template."""
 
     def __init__(
-        self, designation: str, nickname: str, description: str, long_description: str, cost: int, body_key: str
+        self,designation: str,nickname: str,description: str,long_description: str,cost: int,body_key: str,reject_unvalidated: bool = False,
     ) -> None:
         super().__init__(body_key)
         self.designation = designation
@@ -171,6 +171,7 @@ class Missile(Named, Printable):
         self.full_name = f"{designation} {nickname}"
         self.description = description
         self.cost = cost
+        self.reject_unvalidated = reject_unvalidated
 
         full_stats = [stats.replace("\n\t", " ") for stats in long_description.split("\n\n")]
         avionics_end = 3 if len(full_stats) > 5 else 2
@@ -457,10 +458,14 @@ class Fleet(Named, Printable):
                 for missile in self.missiles
             ]
         else:
-            missile_list = [
-                f"{missile.full_name.ljust(longest_name)} : {missile.description} [{missile.cost}pts]"
-                for missile in self.missiles
-            ]
+            missile_list = []
+            for missile in self.missiles:
+                description = missile.description
+                if reduction_level <= 4 and missile.reject_unvalidated:
+                    description = re.sub(r"(ACT\([^)]*\))", r"\1 REJECT", description, count=1)
+                missile_list.append(
+                    f"{missile.full_name.ljust(longest_name)} : {description} [{missile.cost}pts]"
+                )
         title = self.missile_title
         if reduction_level == 0:
             logging.debug(f"{title}:\n```yaml\n" + "\n".join(missile_list) + "\n```")
