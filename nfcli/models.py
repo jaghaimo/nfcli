@@ -394,11 +394,11 @@ class Fleet(Named, Printable):
     def text(self) -> str:
         sections = [self.ship_list, self.missile_list, self.craft_list]
         combined = "\n\n".join(section for section in sections if section)
-        #if len(combined) > 2000:
-            #return (
-                #f"{self.title}\n\n*Skipping fleet analysis due to Discord message size limitation."
-                #" Yes, it would need more than 2000 characters.*\n"
-            #)
+        if len(combined) > 2000:
+            return (
+                f"{self.title}\n\n*Skipping fleet analysis due to Discord message size limitation."
+                " Yes, it would need more than 2000 characters.*\n"
+            )
         return combined
 
     @property
