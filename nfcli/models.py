@@ -402,7 +402,7 @@ class Fleet(Named, Printable):
         for reduction_level in range(1, 10):
             summary = self._summary(reduction_level)
             removed_percent = max(0, round(100 * (len(full_text) - len(summary)) / len(full_text)))
-            summary += f"\n\n-# ({reduction_level}) data removed ({removed_percent}%)"
+            summary += f"\n-# setpoint ({reduction_level}/9), data removed ({removed_percent}%, {len(summary)}/{len(full_text)} chars, max {max_length})"
             if len(summary) <= max_length:
                 return summary
 
