@@ -246,8 +246,6 @@ class Craft(Named, Printable):
                 if line.strip()
             ]
             component_summary = "Components: " + ", ".join(component_lines)
-            if component_lines:
-                component_summary += "."
             following_sections = "\n\n".join(full_stats[components_start + 1 :])
             self.loadouts = component_summary
             if following_sections:
@@ -437,12 +435,28 @@ class Fleet(Named, Printable):
     def craft_list(self) -> str:
         if not self._crafts:
             return ""
-        longest_name = max(len(f"{craft.full_name}") for craft in self.crafts)
-        logging.debug(longest_name)
-        craft_list = [
-            f"{craft.full_name.ljust(longest_name)}: {craft.frame_class} [{craft.cost}pts]\n{craft.loadouts}\n"
+        craft_labels = [
+            label
             for craft in self.crafts
+            for label in [craft.full_name]
+            + [line.partition(":")[0] for line in craft.loadouts.splitlines() if ":" in line]
         ]
+        longest_label = max(map(len, craft_labels))
+        craft_list = []
+        for craft in self.crafts:
+            loadout_lines = []
+            for line in craft.loadouts.splitlines():
+                if ":" not in line:
+                    loadout_lines.append(line)
+                    continue
+                label, _, value = line.partition(":")
+                separator = " " if value.strip() else ""
+                loadout_lines.append(f"{label.ljust(longest_label)} :{separator}{value.strip()}")
+            loadouts = "\n".join(loadout_lines)
+            craft_list.append(
+                f"{craft.full_name.ljust(longest_label)} : {craft.frame_class} [{craft.cost}pts]\n"
+                f"{loadouts}\n"
+            )
         title = (
             "This fleet uses only one craft type"
             if len(craft_list) == 1
