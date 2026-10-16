@@ -392,32 +392,78 @@ class Fleet(Named, Printable):
 
     @property
     def text(self) -> str:
-        sections = [self.ship_list, self.missile_list, self.craft_list]
-        combined = "\n\n".join(section for section in sections if section)
-        if len(combined) > 2000:
-            return (
-                f"{self.title}\n\n*Skipping fleet analysis due to Discord message size limitation."
-                " Yes, it would need more than 2000 characters.*\n"
-            )
-        return combined
+        return self.text_for_limit()
+
+    def text_for_limit(self, max_length: int = 2000) -> str:
+        full_text = self._summary(0)
+        if len(full_text) <= max_length:
+            return full_text
+
+        for reduction_level in range(1, 10):
+            summary = self._summary(reduction_level)
+            removed_percent = max(0, round(100 * (len(full_text) - len(summary)) / len(full_text)))
+            summary += f"\n\n-# ({reduction_level}) data removed ({removed_percent}%)"
+            if len(summary) <= max_length:
+                return summary
+
+        return (
+            f"{self.title}\n\n*Skipping fleet analysis due to Discord message size limitation."
+            " Yes, it would need more than 2000 characters.*\n"
+        )
+
+    def _summary(self, reduction_level: int) -> str:
+        sections = [
+            self._ship_list(reduction_level),
+            self._missile_list(reduction_level),
+            self._craft_list(reduction_level),
+        ]
+        return "\n\n".join(section for section in sections if section)
 
     @property
     def ship_list(self) -> str:
+        return self._ship_list()
+
+    def _ship_list(self, reduction_level: int = 0) -> str:
+        if reduction_level >= 9:
+            return f"{self.title}.\n\n*Yes, the ship list was that long.*"
+        if reduction_level >= 8:
+            return ""
+
         longest_name = max(len(ship.name) for ship in self.ships)
-        ship_list = [f"{ship.name.ljust(longest_name)} : {ship.hull} [{ship.tags}]" for ship in self.ships]
+        if reduction_level >= 7:
+            ship_list = [ship.hull.split("-class ", 1)[-1] for ship in self.ships]
+        elif reduction_level >= 6:
+            ship_list = [ship.hull for ship in self.ships]
+        elif reduction_level >= 5:
+            ship_list = [f"{ship.name.ljust(longest_name)} : {ship.hull}" for ship in self.ships]
+        else:
+            ship_list = [f"{ship.name.ljust(longest_name)} : {ship.hull} [{ship.tags}]" for ship in self.ships]
         return f"{self.title}:\n```yaml\n" + "\n".join(ship_list) + "\n```"
 
     @property
     def missile_list(self) -> str:
+        return self._missile_list()
+
+    def _missile_list(self, reduction_level: int = 0) -> str:
         if not self._missiles:
             return ""
+        if reduction_level >= 8:
+            return f"{self.missile_title}.\n\n*Yes, the missile list was that long.*"
+
         longest_name = max(len(missile.full_name) for missile in self.missiles)
-        missile_list = [
-            f"{missile.full_name.ljust(longest_name)} : {missile.description} [{missile.cost}pts]"
-            for missile in self.missiles
-        ]
+        if reduction_level >= 7:
+            missile_list = [
+                f"{missile.full_name.ljust(longest_name)} : [{missile.cost}pts]"
+                for missile in self.missiles
+            ]
+        else:
+            missile_list = [
+                f"{missile.full_name.ljust(longest_name)} : {missile.description} [{missile.cost}pts]"
+                for missile in self.missiles
+            ]
         title = self.missile_title
-        logging.debug(f"{title}:\n```yaml\n" + "\n".join(missile_list) + "\n```")
+        if reduction_level == 0:
+            logging.debug(f"{title}:\n```yaml\n" + "\n".join(missile_list) + "\n```")
         return f"{title}:\n```yaml\n" + "\n".join(missile_list) + "\n```"
 
     @property
@@ -433,8 +479,50 @@ class Fleet(Named, Printable):
 
     @property
     def craft_list(self) -> str:
+        return self._craft_list()
+
+    def _craft_list(self, reduction_level: int = 0) -> str:
         if not self._crafts:
             return ""
+        title = (
+            "This fleet uses only one craft type"
+            if len(self._crafts) == 1
+            else f"This fleet uses {len(self._crafts)} different craft types"
+        )
+        if reduction_level >= 4:
+            return f"{title}.\n\n*Yes, the craft list was that long.*"
+
+        if reduction_level >= 3:
+            craft_list = [
+                f"{craft.full_name} : {craft.frame_class} [{craft.cost}pts]"
+                for craft in self.crafts
+            ]
+            return f"{title}:\n```yaml\n" + "\n".join(craft_list) + "\n```"
+
+        loadouts_by_craft = []
+        for craft in self.crafts:
+            loadouts = craft.loadouts
+            if reduction_level == 1:
+                for missile in sorted(self.missiles, key=lambda item: len(item.full_name), reverse=True):
+                    loadouts = loadouts.replace(missile.full_name, missile.designation)
+            loadouts_by_craft.append(loadouts)
+
+        if reduction_level == 2:
+            craft_list = []
+            for craft, loadouts in zip(self.crafts, loadouts_by_craft):
+                loadout_count = 0
+                in_loadouts = False
+                for line in loadouts.splitlines():
+                    if line.strip().startswith("Loadouts:"):
+                        in_loadouts = True
+                    elif in_loadouts and ":" in line:
+                        loadout_count += 1
+                craft_line = f"{craft.full_name} : {craft.frame_class} [{craft.cost}pts]"
+                if loadout_count:
+                    craft_line += f"\nLoadouts : {loadout_count}"
+                craft_list.append(craft_line)
+            return f"{title}:\n```yaml\n" + "\n".join(craft_list) + "\n```"
+
         craft_labels = [
             label
             for craft in self.crafts
@@ -443,9 +531,9 @@ class Fleet(Named, Printable):
         ]
         longest_label = max(map(len, craft_labels))
         craft_list = []
-        for craft in self.crafts:
+        for craft, loadouts in zip(self.crafts, loadouts_by_craft):
             loadout_lines = []
-            for line in craft.loadouts.splitlines():
+            for line in loadouts.splitlines():
                 if ":" not in line:
                     loadout_lines.append(line)
                     continue
@@ -457,12 +545,8 @@ class Fleet(Named, Printable):
                 f"{craft.full_name.ljust(longest_label)} : {craft.frame_class} [{craft.cost}pts]\n"
                 f"{loadouts}\n"
             )
-        title = (
-            "This fleet uses only one craft type"
-            if len(craft_list) == 1
-            else f"This fleet uses {len(craft_list)} different craft types"
-        )
-        logging.debug(f"{title}:\n```yaml\n" + "\n".join(craft_list) + "\n```")
+        if reduction_level == 0:
+            logging.debug(f"{title}:\n```yaml\n" + "\n".join(craft_list) + "\n```")
         return f"{title}:\n```yaml\n" + "\n".join(craft_list) + "\n```"
 
     def add_ship(self, ship: Ship) -> None:
