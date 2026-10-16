@@ -214,12 +214,27 @@ class Craft(Named, Printable):
         self.nickname = nickname
         self.full_name = f"{designation} {nickname}"
         self.cost = cost
+        self.frame_class = next(
+            (
+                line.partition(":")[2].strip()
+                for line in long_description.splitlines()
+                if line.partition(":")[0].strip() == "Frame Model"
+            ),
+            None,
+        )
 
         full_stats = [stats.replace("\n\t", " ") for stats in long_description.split("\n\n")]
         avionics_start = 1 if len(full_stats) < 7 else 2
 
         self.general = full_stats[0]
         self.avionics = "\n".join(full_stats[avionics_start:4])
+
+        components_start = next(
+            (index for index, stats in enumerate(full_stats) if "Components:" in stats),
+            len(full_stats),
+        )
+        self.loadouts = "\n".join(full_stats[components_start:])
+
         self.additional_info = "\n".join(full_stats[avionics_start + 3 :])
 
     @property
@@ -363,12 +378,11 @@ class Fleet(Named, Printable):
     def text(self) -> str:
         sections = [self.ship_list, self.missile_list, self.craft_list]
         combined = "\n\n".join(section for section in sections if section)
-        if len(combined) > 2000:
-            return (
-                f"{self.title}\n\n*Skipping fleet analysis due to Discord message size limitation."
-                " Yes, it would need more than 2000 characters.*\n"
-            )
-        logging.debug(combined)
+        #if len(combined) > 2000:
+            #return (
+                #f"{self.title}\n\n*Skipping fleet analysis due to Discord message size limitation."
+                #" Yes, it would need more than 2000 characters.*\n"
+            #)
         return combined
 
     @property
@@ -405,9 +419,10 @@ class Fleet(Named, Printable):
     def craft_list(self) -> str:
         if not self._crafts:
             return ""
-        longest_name = max(len(craft.full_name) for craft in self.crafts)
+        longest_name = max(len(f"{craft.full_name}") for craft in self.crafts)
+        logging.debug(longest_name)
         craft_list = [
-            f"{craft.full_name.ljust(longest_name)} : {craft.general} [{craft.cost}pts]"
+            f"{craft.full_name.ljust(longest_name)}: {craft.frame_class} [{craft.cost}pts]\n{craft.loadouts}\n"
             for craft in self.crafts
         ]
         title = (

@@ -14,7 +14,7 @@ nfc_theme = Theme({"orange": "#e14b00", "grey": "#474946"})
 
 # Early localization support
 __localization_file = "data/en_ui.json"
-__loc_pattern = re.compile(r"\$([a-zA-Z0-9_]+)")
+__loc_pattern = re.compile(r"\$([a-zA-Z0-9_]+)(?:\|([^|]*)\|)?")
 __loc_data = {}
 with open(__localization_file, encoding="utf-8-sig") as f:
     try:
@@ -70,7 +70,8 @@ def clean_text(string: str) -> str:
 
     def replacer(_match: re.Match[str]) -> str:
         key = _match.group(1)
-        return __loc_data.get(key, _match.group(0))
+        fallback = _match.group(2)
+        return __loc_data.get(key, fallback if fallback is not None else _match.group(0))
 
     return __loc_pattern.sub(replacer, content)
 
