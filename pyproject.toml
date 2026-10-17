@@ -39,6 +39,7 @@ default-groups = "all"
 
 [tool.ruff]
 line-length = 120
+lint.ignore = ["C901"]
 lint.select = [
     "F",
     "E",
