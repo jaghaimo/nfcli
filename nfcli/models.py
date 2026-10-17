@@ -163,7 +163,8 @@ class Missile(Named, Printable):
     """Models content of a missile template."""
 
     def __init__(
-        self,designation: str,nickname: str,description: str,long_description: str,cost: int,body_key: str,reject_unvalidated: bool = False,
+        self,designation: str,nickname: str,description: str,long_description: str,cost: int,body_key: str,
+        reject_unvalidated: bool = False,
     ) -> None:
         super().__init__(body_key)
         self.designation = designation
@@ -403,7 +404,8 @@ class Fleet(Named, Printable):
         for reduction_level in range(1, 10):
             summary = self._summary(reduction_level)
             removed_percent = max(0, round(100 * (len(full_text) - len(summary)) / len(full_text)))
-            summary += f"\n-# setpoint ({reduction_level}/9), data removed ({removed_percent}%, {len(summary)}/{len(full_text)} chars, max {max_length})"
+            summary += f"\n-# setpoint ({reduction_level}/9), data removed ({removed_percent}%,"
+            "{len(summary)}/{len(full_text)} chars, max {max_length})"
             if len(summary) <= max_length:
                 return summary
 
