@@ -103,6 +103,22 @@ def get_ship(ship_data: dict, missile_lookup: dict | None = None, craft_lookup: 
 
 
 def get_missile(missile_data: dict) -> Missile:
+    missile_sockets = (missile_data.get("Sockets") or {}).get("MissileSocket") or []
+    if isinstance(missile_sockets, dict):
+        missile_sockets = [missile_sockets]
+    reject_unvalidated = False
+    for socket in missile_sockets:
+        installed_component = socket.get("InstalledComponent")
+        if not isinstance(installed_component, dict):
+            continue
+        active_seeker = any(
+            key.endswith(":type") and value == "ActiveSeekerSettings"
+            for key, value in installed_component.items()
+        )
+        if active_seeker and installed_component.get("RejectUnvalidated", "").lower() == "true":
+            reject_unvalidated = True
+            break
+
     return Missile(
         missile_data["Designation"],
         missile_data["Nickname"],
@@ -110,6 +126,7 @@ def get_missile(missile_data: dict) -> Missile:
         clean_text(missile_data["LongDescription"]),
         int(missile_data["Cost"]),
         missile_data["BodyKey"],
+        reject_unvalidated,
     )
 
 
@@ -170,7 +187,13 @@ def parse_fleet(xml_data: str) -> Fleet:
             missile = get_missile(missile_template)
             fleet.add_missile(missile)
 
-    craft_lookup = _build_craft_lookup(fleet_data.get("CraftTypes", {}))
+    craft_types = fleet_data.get("CraftTypes", {})
+    craft_lookup = _build_craft_lookup(craft_types)
+    if craft_types:
+        craft_templates = craft_types.get("CraftTemplate", [])
+        for craft_template in craft_templates:
+            craft = get_craft(craft_template)
+            fleet.add_craft(craft)
 
     logging.debug("Parsing ships.")
     for idx, ship_data in enumerate(fleet_data["Ships"]["Ship"]):

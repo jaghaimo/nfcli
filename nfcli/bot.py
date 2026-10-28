@@ -13,7 +13,7 @@ from discord.file import File
 from dotenv import load_dotenv
 
 from nfcli import determine_output_png, init_logger, load_path
-from nfcli.models import Lobbies
+from nfcli.models import Fleet, Lobbies
 from nfcli.parsers import parse_any, parse_mods
 from nfcli.printers import Printer
 from nfcli.sqlite import (
@@ -79,7 +79,10 @@ async def process_file(message: Message, xml_data: str, filename: str, with_flee
             all_files.append(File(filename, filename=os.path.basename(filename)))
         mod_deps = parse_mods(xml_data)
         mods = Printer.get_mods(mod_deps, "<", ">")
-        await message.reply(f"{entity.text}{mods}", files=all_files)
+        text = entity.text
+        if isinstance(entity, Fleet):
+            text = entity.text_for_limit(2000 - len(mods))
+        await message.reply(f"{text}{mods}", files=all_files)
         converted_file.close()
         os.unlink(tmp_file)
 
